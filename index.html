@@ -179,4 +179,20 @@ git stash
 we fix issue-101 ,switch dev
 
 abandom the unlucky branch
-git branch -D <name> 
+git branch -D <name>
+
+coperate with others
+
+step1: push your own work
+git push origin dev
+
+step2: resolve conflicts
+git pull 
+
+step3: push your commit 
+git push origin <name>
+
+step4: if you see no tracking information means that you dont have assolution with origin
+git branch --set-upstream-to <name> origin/<name>
+ 
+ 
