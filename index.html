@@ -158,4 +158,14 @@ crete feature is easy and simple
 
 fast-forward and no-ff
 
+note about branch
 
+note1: master is stable and use to publish not work
+note2: branch used to work and merged to master and master to publish tag
+
+git checkout -b dev
+...
+git checkout master
+git merge --no-ff -m "merge from dev with no-ff not fast-forward"
+git log --graph --pretty=oneline --abbrev-commit
+ 
