@@ -176,4 +176,40 @@ git stash
 if you want fix bug instancelly ,but you have not finsh work yet,cannot submit ,how do you do?
 git stash
 
-we fix issue-101 ,switch dev 
+we fix issue-101 ,switch dev
+
+abandom the unlucky branch
+git branch -D <name>
+
+coperate with others
+
+step1: push your own work
+git push origin dev
+
+step2: resolve conflicts
+git pull 
+
+step3: push your commit 
+git push origin <name>
+
+step4: if you see no tracking information means that you dont have assolution with origin
+git branch --set-upstream-to <name> origin/<name>
+ 
+show remote information
+git remote -v
+
+unless you push your branch ,or else others cannot see your code
+
+push local branch to remote
+git push origin name git pull
+
+create local branch and remote branch 
+git checkout -b branch_name origin/branch_name
+
+create relationship between local and remote
+git branch --set-upstream branch_name origin/branch_name
+
+pull lastest commit and resolve conflict 
+git pull
+
+ 
