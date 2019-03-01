@@ -68,3 +68,26 @@ git checkout -- index.html
   
 discard the commit 
 git reset --hard commit_id
+
+delete file
+
+case 1: delete the file from repository
+delete the file locally
+rm -rf test.txt
+delete the file from stage
+git rm test.txt
+add commit to delete from the repository
+git commit -m 'delete the file'
+
+case 2: delete the file by mistake
+recover the lateset file
+git checkout -- test.txt
+
+learn remote repository
+
+step1: crete ssh key
+ssh-keygen -t rsa -C "youremail@example.com"
+
+step2: add ssh
+copy id_rsa.pub to ssh key
+
