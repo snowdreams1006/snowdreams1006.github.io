@@ -195,4 +195,21 @@ git push origin <name>
 step4: if you see no tracking information means that you dont have assolution with origin
 git branch --set-upstream-to <name> origin/<name>
  
+show remote information
+git remote -v
+
+unless you push your branch ,or else others cannot see your code
+
+push local branch to remote
+git push origin name git pull
+
+create local branch and remote branch 
+git checkout -b branch_name origin/branch_name
+
+create relationship between local and remote
+git branch --set-upstream branch_name origin/branch_name
+
+pull lastest commit and resolve conflict 
+git pull
+
  
