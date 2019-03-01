@@ -226,4 +226,20 @@ git show tag_name
 
 create new tag with description
 git tag -a v0.1 -m "version 0.1 released" 1094sad
+
+delete local tag
+git tag -d tagname
+
+delete remote tags
+step1: delet local tag
+git tag -d tagname
+
+step2: delete remote tag
+git push origin :refs/tags/tagname
+
+push local tag
+git push origin tagname
+
+push all local tags
+git push origin --tags
  
