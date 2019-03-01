@@ -56,4 +56,15 @@ now git status show how to view status of file
 
 git trace commit not file itself
 
-git tracks changes of files  
+git tracks changes of files
+
+discard work directory that means you discard the changes and the change have not added to stage
+
+git checkout -- index.html
+
+discard stage that means you have added to stage but you still dont want commit repository
+git reset HEAD index.html
+git checkout -- index.html
+  
+discard the commit 
+git reset --hard commit_id
