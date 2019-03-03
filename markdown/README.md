@@ -160,6 +160,51 @@ markdown的列表支持有序列表和无序列表,并且支持列表间嵌套.
 
 ~~删除线~~
 
+## 分割线
+三个或三个以上的`-` `*`即可表示分割线
+
+示例:
+
+```
+---
+***
+```
+
+效果:
+
+---
+***
+
+## 图片
+![图片alt](图片src "图片title")
+
+其中,图片alt表示图片的解释文字,图片src是图片地址,支持本地路径和网络路径,图片title是图片的标题,可选.
+
+示例:
+
+```
+![preview.png](images/preview.png "preview.png")
+```
+
+效果:
+
+![preview.png](images/preview.png "preview.png")
+
+## 超链接
+[超链接text](超链接url "超链接title")
+
+其中,超链接text表示超链接的解释文字,超链接url支持本地路径和网络路径,超链接title是超链接的标题,可选.
+
+示例:
+
+```
+[https://snowdreams1006.github.io](https://snowdreams1006.github.io "snowdreams1006")
+```
+
+效果:
+
+[https://snowdreams1006.github.io](https://snowdreams1006.github.io "snowdreams1006")
+
 
 
 ``` 单行代码 ```
