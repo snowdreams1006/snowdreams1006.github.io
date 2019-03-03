@@ -4,8 +4,7 @@
 
 ## 学习笔记
 * [markdown](markdown/README.md)
-    * [知识速查](markdown/summary/common.md)
-* [git笔记](git/README.md)
+* [git](git/README.md)
     * [初识 git](git/base/about.md)
         * [安装](git/base/install.md)
         * [验证](git/base/ensure.md)
