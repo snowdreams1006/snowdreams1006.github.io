@@ -3,8 +3,8 @@
 * [简介](README.md)
 
 ## 学习笔记
-* [markdown](markdown/README.md)
-* [git](git/README.md)
+* [markdown快速入门](markdown/README.md)
+* [git基本教程](git/README.md)
     * [初识git](git/base/about.md)
         * [安装git](git/base/install.md)
         * [配置git](git/base/config.md)
