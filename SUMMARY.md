@@ -7,6 +7,7 @@
 * [git](git/README.md)
     * [初识 git](git/base/about.md)
         * [安装](git/base/install.md)
+        * [配置](git/base/config.md)
         * [验证](git/base/ensure.md)
     * [实战 git](git/use/common.md)
     * [知识速查](git/summary/common.md)
