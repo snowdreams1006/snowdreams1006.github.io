@@ -14,7 +14,7 @@
         * [基本概念](git/use/concept.md)
     * [知识速查](git/summary/common.md)
     * [常见问题FAQ](git/issue/README.md)
-* [java8特性速查](java8/README.md)
+* [java8新特性](java8/README.md)
     * [lambda表达式](java8/lombda.md)
     * [函数式编程](java8/function.md)
 * [其他](other/README.md)
