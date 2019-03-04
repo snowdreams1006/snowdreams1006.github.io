@@ -16,7 +16,7 @@
     * [常见问题FAQ](git/issue/README.md)
 * [java8新特性](java8/README.md)
     * [lambda表达式](java8/lambda.md)
-    * [函数式编程](java8/function.md)
+    * [函数式接口](java8/functionInterface.md)
 * [其他](other/README.md)
     * [联系作者](other/contact.md)
     * [捐赠支持](other/donate.md)
