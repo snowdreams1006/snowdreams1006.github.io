@@ -325,6 +325,81 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h1>
+<p><code>git</code> &#x76EE;&#x524D;&#x652F;&#x6301; Linux/Unix&#x3001;Solaris&#x3001;Mac&#x548C; Windows &#x5E73;&#x53F0;&#x4E0A;&#x8FD0;&#x884C;,&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x73AF;&#x5883;&#x9009;&#x62E9;&#x5B89;&#x88C5;.</p>
+<h2 id="linux-&#x7CFB;&#x7EDF;">Linux &#x7CFB;&#x7EDF;</h2>
+<p>linux &#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5927;&#x81F4;&#x6709;&#x4E24;&#x79CD;&#x9014;&#x5F84;,&#x4E00;&#x79CD;&#x662F;&#x5229;&#x7528;&#x5B89;&#x88C5;&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5B89;&#x88C5;,&#x53E6;&#x4E00;&#x79CD;&#x91C7;&#x7528;&#x6E90;&#x7801;&#x5305;&#x5B89;&#x88C5;&#x65B9;&#x5F0F;.</p>
+<p>&#x5B89;&#x88C5;&#x524D;&#x5148;&#x786E;&#x8BA4;&#x4E0B;&#x662F;&#x5426;&#x4E4B;&#x524D;&#x5DF2;&#x5B89;&#x88C5;&#x8FC7;,&#x5728;&#x547D;&#x4EE4;&#x884C;&#x7A97;&#x53E3;&#x8F93;&#x5165;<code>git --version</code> ,&#x5982;&#x679C;&#x6253;&#x5370;&#x51FA;&#x7248;&#x672C;&#x53F7;&#x5219;&#x8868;&#x793A;&#x5DF2;&#x5B89;&#x88C5;,&#x5426;&#x5219;&#x53C2;&#x8003;&#x4E00;&#x4E0B;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x5B89;&#x88C5;.</p>
+<p>&#x67E5;&#x770B; <code>git</code> &#x7248;&#x672C;</p>
+<pre><code>git --version
+</code></pre><h3 id="debianubuntu">Debian/Ubuntu</h3>
+<pre><code># &#x5B89;&#x88C5; git &#x4F9D;&#x8D56;
+apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
+  libz-dev libssl-dev
+
+# &#x5B89;&#x88C5; git
+apt-get install git
+
+# &#x67E5;&#x770B; git &#x7248;&#x672C;
+git --version
+</code></pre><h3 id="centosredhat">Centos/RedHat</h3>
+<pre><code># &#x5B89;&#x88C5; git &#x4F9D;&#x8D56;
+yum install curl-devel expat-devel gettext-devel \
+  openssl-devel zlib-devel
+
+# &#x5B89;&#x88C5; git
+yum -y install git
+
+# &#x67E5;&#x770B; git &#x7248;&#x672C;
+git --version
+</code></pre><blockquote>
+<p><code>git-core</code> &#x548C; <code>git</code> &#x5386;&#x53F2;&#x6E0A;&#x6E90;:</p>
+<p>&#x4EE5;&#x524D;&#x6709;&#x4E2A;&#x8F6F;&#x4EF6;&#x4E5F;&#x53EB;GIT(GNU Interactive Tools),&#x6240;&#x4EE5;<code>git</code>&#x53EA;&#x80FD;&#x53EB;<code>git-core</code>&#x4E86;,&#x540E;&#x6765;&#x7531;&#x4E8E;<code>git</code>&#x540D;&#x6C14;&#x5B9E;&#x5728;&#x592A;&#x5927;&#x4EE5;&#x81F3;&#x4E8E;<code>GNU Interactive Tools</code>&#x6539;&#x540D;&#x6210;<code>gnuit</code>,&#x800C;<code>git-core</code>&#x6B63;&#x5F0F;&#x6539;&#x4E3A;<code>git</code>.</p>
+</blockquote>
+<h3 id="&#x6E90;&#x7801;&#x5B89;&#x88C5;">&#x6E90;&#x7801;&#x5B89;&#x88C5;</h3>
+<p>&#x5148;&#x4ECE;<a href="http://git-scm.com/downloads" target="_blank">git &#x5B98;&#x7F51;</a>&#x4E0B;&#x8F7D;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x6E90;&#x7801;,&#x7136;&#x540E;&#x89E3;&#x538B;,&#x4F9D;&#x6B21;&#x8F93;&#x5165;&#xFF1A;<code>./config</code>,<code>make</code>, <code>sudo make install</code> &#x8FD9;&#x51E0;&#x4E2A;&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x5373;&#x53EF;.</p>
+<h4 id="debianubuntu">Debian/Ubuntu</h4>
+<pre><code># &#x5B89;&#x88C5; git &#x76F8;&#x5173;&#x4F9D;&#x8D56;
+apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
+  libz-dev libssl-dev
+
+# &#x4E0B;&#x8F7D;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x6E90;&#x7801;&#x5305;
+wget https://github.com/git/git/archive/v2.21.0.tar.gz
+
+# &#x89E3;&#x538B;
+tar -zxf v2.21.0.tar.gz
+
+# &#x5207;&#x6362;&#x5230; git&#x76EE;&#x5F55;
+cd git-2.21.0
+
+# &#x5B89;&#x88C5;
+make prefix=/usr/local all
+
+# &#x5B89;&#x88C5;
+sudo make prefix=/usr/local install
+</code></pre><h4 id="centosredhat">Centos/RedHat</h4>
+<pre><code># &#x5B89;&#x88C5; git &#x76F8;&#x5173;&#x4F9D;&#x8D56;
+yum install curl-devel expat-devel gettext-devel \
+  openssl-devel zlib-devel
+
+# &#x89E3;&#x538B;
+tar -zxf v2.21.0.tar.gz
+
+# &#x5207;&#x6362;&#x5230; git&#x76EE;&#x5F55;
+cd git-2.21.0
+
+# &#x5B89;&#x88C5;
+make prefix=/usr/local all
+
+# &#x5B89;&#x88C5;
+sudo make prefix=/usr/local install
+</code></pre><h2 id="windows-&#x7CFB;&#x7EDF;">Windows &#x7CFB;&#x7EDF;</h2>
+<p>&#x76F4;&#x63A5;&#x4ECE;<a href="http://git-scm.com/downloads" target="_blank">git &#x5B98;&#x7F51;</a>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;,&#x7136;&#x540E;&#x6309;&#x9ED8;&#x8BA4;&#x9009;&#x9879;&#x5B89;&#x88C5;&#x5373;&#x53EF;.
+&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;,&#x5728;&#x5F00;&#x59CB;&#x83DC;&#x5355;&#x91CC;&#x627E;&#x5230;<code>Git-&gt;Git Bash</code>,&#x5F39;&#x51FA;&#x547D;&#x4EE4;&#x884C;&#x7A97;&#x53E3;,&#x5219;&#x8BF4;&#x660E;&#x5B89;&#x88C5;&#x6210;&#x529F;&#xFF01;</p>
+<p><img src="../images/windows-install.jpg" alt="windows-install.jpg" title="windows-install.jpg"></p>
+<h2 id="mac-&#x7CFB;&#x7EDF;">Mac &#x7CFB;&#x7EDF;</h2>
+<p>&#x4E00;&#x822C;&#x6709;&#x4E24;&#x79CD;&#x5B89;&#x88C5;&#x65B9;&#x5F0F;,&#x4E00;&#x79CD;&#x662F;&#x5229;&#x7528; mac &#x7684;<code>homebrew</code>&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5B89;&#x88C5;<code>git</code>,&#x5177;&#x4F53;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x53C2;&#x8003;<a href="https://brew.sh/index_zh-cn" target="_blank">homebrew&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x5B89;&#x88C5;<code>xcode</code>&#x9ED8;&#x8BA4;&#x96C6;&#x6210;<code>git</code>,&#x9996;&#x5148;&#x4ECE; App Store&#x4E0B;&#x8F7D; <a href="https://itunes.apple.com/cn/app/xcode/id497799835?mt=12" target="_blank">xcode</a> ,&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#x8FD0;&#x884C;<code>Xcode</code>&#xFF0C;&#x9009;&#x62E9;&#x83DC;&#x5355;<code>Xcode-&gt;Preferences</code>&#xFF0C;&#x5728;&#x5F39;&#x51FA;&#x7A97;&#x53E3;&#x4E2D;&#x627E;&#x5230;<code>Downloads</code>&#xFF0C;&#x9009;&#x62E9;<code>Command Line Tools</code>&#xFF0C;&#x70B9;<code>Install</code>&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5B89;&#x88C5;&#x4E86;</p>
+<p><img src="../images/mac-xcode-install.jpeg" alt="mac-xcode-install.jpeg" title="mac-xcode-install.jpeg"></p>
 
                                 
                                 </section>
@@ -368,7 +443,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安装","level":"2.2.1.1","depth":3,"next":{"title":"验证","level":"2.2.1.2","depth":3,"path":"git/base/ensure.md","ref":"git/base/ensure.md","articles":[]},"previous":{"title":"初识 git","level":"2.2.1","depth":2,"path":"git/base/about.md","ref":"git/base/about.md","articles":[{"title":"安装","level":"2.2.1.1","depth":3,"path":"git/base/install.md","ref":"git/base/install.md","articles":[]},{"title":"验证","level":"2.2.1.2","depth":3,"path":"git/base/ensure.md","ref":"git/base/ensure.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/base/install.md","mtime":"2019-03-02T07:52:01.296Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-04T04:35:23.145Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"安装","level":"2.2.1.1","depth":3,"next":{"title":"验证","level":"2.2.1.2","depth":3,"path":"git/base/ensure.md","ref":"git/base/ensure.md","articles":[]},"previous":{"title":"初识 git","level":"2.2.1","depth":2,"path":"git/base/about.md","ref":"git/base/about.md","articles":[{"title":"安装","level":"2.2.1.1","depth":3,"path":"git/base/install.md","ref":"git/base/install.md","articles":[]},{"title":"验证","level":"2.2.1.2","depth":3,"path":"git/base/ensure.md","ref":"git/base/ensure.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/base/install.md","mtime":"2019-03-04T05:55:47.566Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-04T05:57:01.938Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
