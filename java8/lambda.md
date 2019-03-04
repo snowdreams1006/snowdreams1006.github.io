@@ -1,11 +1,12 @@
-# lambda表达式
+ # lambda表达式
 
-常规做法和 jdk8的 lambda 表达式比较
+下面通过对比 `java8` 之前的普通实现和 `java8` 引入`lambda` 表达式的实现,帮助读者快速了解代码差异性,眼见为实,赶紧开始吧!
 
-MinDemo 无输入有输出
+## 求给定数组最小值
+
 ```
 public static void main(String[] args) {
-    // jdk8-
+    // jdk8以前的实现
     int[] nums = {33, 55, -55, 90, -666, 90};
     int min = Integer.MAX_VALUE;
     for (int i : nums) {
@@ -15,11 +16,10 @@ public static void main(String[] args) {
     }
     System.out.println(min);
 
-    // jdk8+
+    // jdk8使用 lambda 表示是
     int min2 = IntStream.of(nums).parallel().min().getAsInt();
     System.out.println(min2);
 }
-
 ```
 
 小结
