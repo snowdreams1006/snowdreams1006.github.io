@@ -47,32 +47,51 @@ git --version
 
 #### Debian/Ubuntu
 ```
+# 安装 git 相关依赖
 apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
   libz-dev libssl-dev
 
-tar -zxf git-1.7.2.2.tar.gz
+# 下载指定版本源码包
+wget https://github.com/git/git/archive/v2.21.0.tar.gz
 
-cd git-1.7.2.2
+# 解压
+tar -zxf v2.21.0.tar.gz
 
+# 切换到 git目录
+cd git-2.21.0
+
+# 安装
 make prefix=/usr/local all
 
+# 安装
 sudo make prefix=/usr/local install  
 ```
+
 #### Centos/RedHat
 ```
-$ yum install curl-devel expat-devel gettext-devel \
+# 安装 git 相关依赖
+yum install curl-devel expat-devel gettext-devel \
   openssl-devel zlib-devel
 
-$ tar -zxf git-1.7.2.2.tar.gz
+# 解压
+tar -zxf v2.21.0.tar.gz
 
-$ cd git-1.7.2.2
+# 切换到 git目录
+cd git-2.21.0
 
-$ make prefix=/usr/local all
+# 安装
+make prefix=/usr/local all
 
-$ sudo make prefix=/usr/local install  
+# 安装
+sudo make prefix=/usr/local install  
 ```
 ## Windows 系统
 
 
 ## Mac 系统
+一般有两种安装方式,一种是利用 mac 的`homebrew`管理工具安装`git`,具体安装方法参考[homebrew官方文档](https://brew.sh/index_zh-cn)
+
+另一种方法安装`xcode`默认集成`git`,首先从 App Store下载 [xcode](https://itunes.apple.com/cn/app/xcode/id497799835?mt=12) ,下载完成后运行`Xcode`，选择菜单`Xcode->Preferences`，在弹出窗口中找到`Downloads`，选择`Command Line Tools`，点`Install`就可以完成安装了
+
+![mac-xcode-install.jpeg](../images/mac-xcode-install.jpeg "mac-xcode-install.jpeg")
 
