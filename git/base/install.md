@@ -1,5 +1,5 @@
 # 安装
-`git` 目前支持 Linux/Unix、Solaris、Mac和 Windows 平台上运行.
+`git` 目前支持 Linux/Unix、Solaris、Mac和 Windows 平台上运行,根据自身环境选择安装.
 
 ## Linux 系统
 linux 系统安装软件大致有两种途径,一种是利用安装包管理工具安装,另一种采用源码包安装方式.
@@ -85,8 +85,12 @@ make prefix=/usr/local all
 # 安装
 sudo make prefix=/usr/local install  
 ```
-## Windows 系统
 
+## Windows 系统
+直接从[git 官网](http://git-scm.com/downloads)下载安装程序,然后按默认选项安装即可.
+安装完成后,在开始菜单里找到`Git->Git Bash`,弹出命令行窗口,则说明安装成功！
+
+![windows-install.jpg](../images/windows-install.jpg "windows-install.jpg")
 
 ## Mac 系统
 一般有两种安装方式,一种是利用 mac 的`homebrew`管理工具安装`git`,具体安装方法参考[homebrew官方文档](https://brew.sh/index_zh-cn)
