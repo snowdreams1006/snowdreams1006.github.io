@@ -1,4 +1,4 @@
-# 安装
+# 安装git
 `git` 目前支持 Linux/Unix、Solaris、Mac和 Windows 平台上运行,根据自身环境选择安装.
 
 ## Linux 系统
