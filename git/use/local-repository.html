@@ -415,7 +415,51 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x672C;&#x5730;&#x4ED3;&#x5E93;">&#x672C;&#x5730;&#x4ED3;&#x5E93;</h1>
+<h2 id="&#x8981;&#x6C42;">&#x8981;&#x6C42;</h2>
+<ul>
+<li>&#x4E86;&#x89E3;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x7684;&#x6982;&#x5FF5;,&#x638C;&#x63E1;&#x521B;&#x5EFA;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x7684;&#x547D;&#x4EE4;</li>
+<li>&#x4F53;&#x9A8C;<code>git</code>&#x7684;&#x4E2A;&#x4EBA;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;,&#x5C06;&#x6587;&#x4EF6;&#x52A0;&#x5165;&#x5230;&#x7248;&#x672C;&#x63A7;&#x5236;&#x4E2D;</li>
+<li>&#x5B66;&#x4EE5;&#x81F4;&#x7528;,&#x4ECE;&#x793A;&#x4F8B;&#x80CC;&#x666F;&#x4E2D;&#x72EC;&#x7ACB;&#x63D0;&#x70BC;&#x51FA;&#x5173;&#x952E;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;</li>
+</ul>
+<h2 id="&#x80CC;&#x666F;">&#x80CC;&#x666F;</h2>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x4ED3;&#x5E93; <code>git init</code> </li>
+<li>&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x5206;&#x4E24;&#x6B65; <code>git add &lt;file&gt;</code> &#x548C; <code>git commit -m &lt;message&gt;</code></li>
+<li>&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;,&#x5927;&#x81F4;&#x4EE5;&#x4E0B;&#x6D41;&#x7A0B;</li>
+</ul>
+<pre><code># &#x5728;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x521B;&#x5EFA;&#x6307;&#x5B9A;&#x76EE;&#x5F55;
+mkdir demo
 
+# &#x5207;&#x6362;&#x81F3;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+cd demo
+
+# &#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x4ED3;&#x5E93;
+git init 
+
+# &#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;
+touch test.txt
+
+# &#x7F16;&#x8F91;&#x65B0;&#x6587;&#x4EF6;,&#x8F93;&#x5165; git test
+echo &quot;git test&quot; &gt; test.txt
+
+# &#x6DFB;&#x52A0;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;: &#x7B2C;&#x4E00;&#x6B65;&#x6307;&#x5B9A;&#x8981;&#x6DFB;&#x52A0;&#x7684;&#x6587;&#x4EF6;
+git add test.txt
+
+# &#x6DFB;&#x52A0;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;: &#x7B2C;&#x4E8C;&#x6B65;&#x6307;&#x5B9A;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5907;&#x6CE8;
+git commit -m &quot;add test.txt&quot;
+
+...
+
+# &#x7EE7;&#x7EED;&#x7F16;&#x8F91;&#x76EE;&#x6807;&#x6587;&#x4EF6;,&#x8FFD;&#x52A0; git init
+echo &quot;git init&quot; &gt;&gt; test.txt
+
+# &#x5C06;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;
+git add test.txt
+
+# &#x6DFB;&#x52A0;&#x672C;&#x6B21;&#x65B0;&#x589E;&#x6587;&#x4EF6;&#x7684;&#x5907;&#x6CE8;
+git commit -m &quot;add git init&quot;
+</code></pre>
                                 
                                 </section>
                             
@@ -458,7 +502,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"本地仓库","level":"2.2.2.1","depth":3,"next":{"title":"版本管理","level":"2.2.2.2","depth":3,"path":"git/use/version-manage.md","ref":"git/use/version-manage.md","articles":[]},"previous":{"title":"实战git","level":"2.2.2","depth":2,"path":"git/use/about.md","ref":"git/use/about.md","articles":[{"title":"本地仓库","level":"2.2.2.1","depth":3,"path":"git/use/local-repository.md","ref":"git/use/local-repository.md","articles":[]},{"title":"版本管理","level":"2.2.2.2","depth":3,"path":"git/use/version-manage.md","ref":"git/use/version-manage.md","articles":[]},{"title":"基本概念","level":"2.2.2.3","depth":3,"path":"git/use/concept.md","ref":"git/use/concept.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/use/local-repository.md","mtime":"2019-03-04T08:25:55.948Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-05T03:32:21.316Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"本地仓库","level":"2.2.2.1","depth":3,"next":{"title":"版本管理","level":"2.2.2.2","depth":3,"path":"git/use/version-manage.md","ref":"git/use/version-manage.md","articles":[]},"previous":{"title":"实战git","level":"2.2.2","depth":2,"path":"git/use/about.md","ref":"git/use/about.md","articles":[{"title":"本地仓库","level":"2.2.2.1","depth":3,"path":"git/use/local-repository.md","ref":"git/use/local-repository.md","articles":[]},{"title":"版本管理","level":"2.2.2.2","depth":3,"path":"git/use/version-manage.md","ref":"git/use/version-manage.md","articles":[]},{"title":"基本概念","level":"2.2.2.3","depth":3,"path":"git/use/concept.md","ref":"git/use/concept.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/use/local-repository.md","mtime":"2019-03-05T04:26:09.369Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-05T04:27:30.114Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
