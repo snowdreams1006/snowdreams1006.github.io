@@ -1,0 +1,581 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>lambda表达式 · 雪之梦</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="snowdreams1006">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="functionInterface.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://snowdreams1006.cn/" target="_blank" class="custom-link">我的网站</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">学习笔记</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../markdown/">
+            
+                <a href="../markdown/">
+            
+                    
+                    markdown快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    git基本教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../git/base/about.html">
+            
+                <a href="../git/base/about.html">
+            
+                    
+                    初识git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../git/base/install.html">
+            
+                <a href="../git/base/install.html">
+            
+                    
+                    安装git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2" data-path="../git/base/config.html">
+            
+                <a href="../git/base/config.html">
+            
+                    
+                    配置git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../git/use/about.html">
+            
+                <a href="../git/use/about.html">
+            
+                    
+                    实战git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../git/use/local-repository.html">
+            
+                <a href="../git/use/local-repository.html">
+            
+                    
+                    本地仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../git/use/version-manage.html">
+            
+                <a href="../git/use/version-manage.html">
+            
+                    
+                    版本管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.3" data-path="../git/use/concept.html">
+            
+                <a href="../git/use/concept.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../git/summary/common.html">
+            
+                <a href="../git/summary/common.html">
+            
+                    
+                    知识速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../git/issue/">
+            
+                <a href="../git/issue/">
+            
+                    
+                    常见问题FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    java8新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.3.1" data-path="lambda.html">
+            
+                <a href="lambda.html">
+            
+                    
+                    lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="functionInterface.html">
+            
+                <a href="functionInterface.html">
+            
+                    
+                    函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../other/contact.html">
+            
+                <a href="../other/contact.html">
+            
+                    
+                    联系作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../other/donate.html">
+            
+                <a href="../other/donate.html">
+            
+                    
+                    捐赠支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >lambda表达式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lambda&#x8868;&#x8FBE;&#x5F0F;">lambda&#x8868;&#x8FBE;&#x5F0F;</h1>
+<p>&#x4E0B;&#x9762;&#x901A;&#x8FC7;&#x5BF9;&#x6BD4; <code>java8</code> &#x4E4B;&#x524D;&#x7684;&#x666E;&#x901A;&#x5B9E;&#x73B0;&#x548C; <code>java8</code> &#x5F15;&#x5165;<code>lambda</code> &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5B9E;&#x73B0;,&#x5E2E;&#x52A9;&#x8BFB;&#x8005;&#x5FEB;&#x901F;&#x4E86;&#x89E3;&#x4EE3;&#x7801;&#x5DEE;&#x5F02;&#x6027;,&#x773C;&#x89C1;&#x4E3A;&#x5B9E;,&#x8D76;&#x7D27;&#x5F00;&#x59CB;&#x5427;!</p>
+<h2 id="&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;">&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;</h2>
+<pre><code>public static void main(String[] args) {
+    // &#x65B9;&#x6CD5;1: jdk8&#x4EE5;&#x524D;&#x7684;&#x5B9E;&#x73B0;
+    int[] nums = {33, 55, -55, 90, -666, 90};
+    int min = Integer.MAX_VALUE;
+    for (int i : nums) {
+        if (i &lt; min) {
+            min = i;
+        }
+    }
+    System.out.println(min);
+
+    // &#x65B9;&#x6CD5;2: jdk8&#x4F7F;&#x7528; lambda &#x8868;&#x8FBE;&#x5F0F;
+    int min2 = IntStream.of(nums).parallel().min().getAsInt();
+    System.out.println(min2);
+}
+</code></pre><p>&#x65B9;&#x6CD5;1&#x4F53;&#x73B0;&#x7684;&#x662F;<code>&#x547D;&#x4EE4;&#x5F0F;&#x7F16;&#x7A0B;</code>&#x7684;&#x601D;&#x7EF4;,&#x9700;&#x8981;&#x660E;&#x786E;&#x7F16;&#x7A0B;&#x7EC6;&#x8282;,&#x5982;&#x679C;&#x7EC6;&#x8282;&#x62FF;&#x634F;&#x4E0D;&#x51C6;,&#x90A3;&#x4E48;&#x7ED3;&#x679C;&#x81EA;&#x7136;&#x4E0D;&#x5BF9;.
+&#x800C;&#x65B9;&#x6CD5;2&#x5219;&#x662F;<code>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</code>,&#x53EA;&#x5173;&#x6CE8;&#x76EE;&#x6807;&#x548C;&#x7ED3;&#x679C;,&#x5FFD;&#x7565;&#x8FC7;&#x7A0B;,&#x601D;&#x8DEF;&#x6E05;&#x6670;&#x66F4;&#x5BB9;&#x6613;&#x7406;&#x89E3;.</p>
+<p><strong> &#x5C0F;&#x7ED3; </strong></p>
+<ul>
+<li><code>&#x547D;&#x4EE4;&#x5F0F;&#x7F16;&#x7A0B;</code> &#x5F3A;&#x8C03;&#x8FC7;&#x7A0B;,&#x6CE8;&#x91CD;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#x7EC6;&#x8282;,&#x4E00;&#x6B65;&#x9519;,&#x6EE1;&#x76D8;&#x7686;&#x8F93;!</li>
+<li><code>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</code> &#x5173;&#x6CE8;&#x7ED3;&#x679C;,&#x4E0D;&#x5728;&#x4E4E;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;,&#x5206;&#x914D;&#x4EFB;&#x52A1;&#x8BA9;&#x4E0B;&#x5C5E;&#x53BB;&#x5904;&#x7406;!</li>
+<li><code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x662F;<code>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</code> &#x7684;&#x91CD;&#x8981;&#x4F53;&#x73B0;,&#x7B80;&#x6D01;&#x6613;&#x4E8E;&#x7406;&#x89E3;.</li>
+</ul>
+<h2 id="&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;">&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;</h2>
+<pre><code>public static void main(String[] args) {
+    // &#x65B9;&#x6CD5;1: jdk8&#x4EE5;&#x524D;&#x4E00;&#x822C;&#x5199;&#x6CD5;
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            System.out.println(&quot;ok&quot;);
+        }
+    }).start();
+
+    // &#x65B9;&#x6CD5;2: jdk8&#x91C7;&#x7528; lambda &#x8868;&#x8FBE;&#x5F0F;&#x5199;&#x6CD5;
+    new Thread(() -&gt; System.out.println(&quot;ok&quot;)).start();
+}
+</code></pre><p>&#x4ECE;&#x4E0A;&#x4F8B;&#x53EF;&#x4EE5;&#x770B;&#x51FA;,&#x8FD9;&#x91CC;&#x7684;<code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#x6307;&#x5B9A;&#x63A5;&#x53E3;&#x7684;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;.</p>
+<p><strong> &#x5C0F;&#x7ED3; </strong></p>
+<ul>
+<li><code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x5B9E;&#x73B0;&#x6307;&#x5B9A;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x63A5;&#x53E3;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</li>
+<li><code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x7531;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x4EE5;&#x53CA;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x4E09;&#x90E8;&#x5206;&#x7EC4;&#x6210;,&#x4E0D;&#x5728;&#x4E4E;&#x65B9;&#x6CD5;&#x540D;.</li>
+</ul>
+<h2 id="&#x521D;&#x4F53;&#x9A8C;">&#x521D;&#x4F53;&#x9A8C;</h2>
+<pre><code>// &#x5B9A;&#x4E49;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x63A5;&#x53E3;
+interface TestInterface {
+    int doubleNum(int i);
+}
+
+public static void main(String[] args) {
+    // &#x65B9;&#x6CD5;1: &#x5B9E;&#x73B0;doubleNum&#x65B9;&#x6CD5;,&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x662F;&#x8F93;&#x5165;i&#x8FD4;&#x56DE; i*2,&#x6700;&#x7EC8;&#x5F97;&#x5230;&#x5B9E;&#x73B0;&#x4E86;&#x8BE5;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;
+    TestInterface i1 = i -&gt; i * 2;
+    System.out.println(i1.doubleNum(1));
+
+    // &#x65B9;&#x6CD5;2: &#x591A;&#x4E2A;&#x5165;&#x53C2;&#x65F6;&#x9700;&#x8981;&#x7528;()&#x5305;&#x56F4;&#x8D77;&#x6765;,&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5165;&#x53C2;&#x65F6;&#x53EF;&#x7701;&#x7565;,&#x89C1;&#x65B9;&#x6CD5;1
+    TestInterface i2 = (i) -&gt; i * 2;
+    System.out.println(i2.doubleNum(1));
+
+    // &#x65B9;&#x6CD5;3: &#x5165;&#x53C2;&#x53EF;&#x6307;&#x5B9A;&#x7C7B;&#x578B;,&#x6CA1;&#x6709;&#x660E;&#x786E;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x65F6;&#x81EA;&#x52A8;&#x63A8;&#x65AD;,&#x5982;&#x65B9;&#x6CD5;1&#x548C;&#x65B9;&#x6CD5;2&#x5747;&#x672A;&#x6307;&#x5B9A;&#x5165;&#x53C2;&#x7C7B;&#x578B;
+    TestInterface i3 = (int i) -&gt; i * 2;
+    System.out.println(i3.doubleNum(1));
+
+    // &#x65B9;&#x6CD5;4: &#x5B9E;&#x73B0;&#x4F53;&#x4E0D;&#x6B62;&#x4E00;&#x53E5;&#x4EE3;&#x7801;&#x65F6;,&#x9700;&#x8981;&#x7528;{}&#x5305;&#x56F4;&#x8D77;&#x6765;,&#x5E76;&#x5728;&#x5B9E;&#x73B0;&#x4F53;&#x5185;&#x90E8;&#x5904;&#x7406;&#x51FA;&#x53C2;,&#x5F53;&#x7136;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x4E2D;&#x4E5F;&#x53EF;&#x80FD;&#x5E76;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;
+    TestInterface i4 = (int i) -&gt; {
+        System.out.println(&quot;regular lambda expression&quot;);
+        return i * 2;
+    };
+    System.out.println(i4.doubleNum(1));
+}
+</code></pre><p><code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3;&#x6709;&#x4E14;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3;,&#x4F53;&#x73B0;&#x4E86; <code>java</code> &#x7684;&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;.</p>
+<p>&#x8FD9;&#x4E00;&#x70B9;&#x4E5F;&#x5F88;&#x597D;&#x7406;&#x89E3;,&#x5982;&#x679C;&#x4E0D;&#x6B62;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x5B9E;&#x73B0;,&#x90A3;&#x5B9E;&#x73B0;&#x7684;&#x5177;&#x4F53;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x5462;?&#x6240;&#x4EE5;&#x8FD9;&#x6837;&#x7684;&#x60C5;&#x51B5;&#x5728; ide &#x4E2D;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x63D0;&#x793A;.</p>
+<p>&#x6B64;&#x5916;,<code>java8</code> &#x5F15;&#x5165;&#x65B0;&#x7684;&#x6CE8;&#x89E3; <code>@FunctionInterface</code> &#x6765;&#x652F;&#x6301;<code>lambda &#x8868;&#x8FBE;&#x5F0F;</code>,&#x4E5F;&#x53EF;&#x7528;&#x4E8E;ide &#x81EA;&#x52A8;&#x63D0;&#x793A;.</p>
+<p>&#x800C;&#x4E0A;&#x4F8B;&#x4E2D;,&#x6211;&#x4EEC;&#x7684;&#x63A5;&#x53E3;&#x5E76;&#x6CA1;&#x6709;&#x6807;&#x6CE8;&#x8FC7;&#x8BE5;&#x6CE8;&#x89E3;,&#x4E0D;&#x662F;&#x4E5F;&#x80FD;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x5417;?&#x662F;&#x7684;,&#x786E;&#x5B9E;&#x662F;&#x8FD9;&#x6837;&#x7684;,&#x6240;&#x4EE5;<code>@FunctionInterface</code> &#x53EA;&#x662F;&#x58F0;&#x660E;&#x5F0F;&#x6CE8;&#x89E3;,&#x5E76;&#x6CA1;&#x6709;&#x5B9E;&#x9645;&#x4F5C;&#x7528;,&#x4E0D;&#x8FC7;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x6700;&#x597D;&#x52A0;&#x4E0A;<code>@FunctionInterface</code> &#x8BE5;&#x6CE8;&#x89E3;,&#x4E07;&#x4E00;&#x4EE5;&#x540E;&#x6709;&#x7528;&#x5462;?</p>
+<p><strong> &#x5C0F;&#x7ED3; </strong></p>
+<ul>
+<li><code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x6709; <code>@FunctionInterface</code> &#x6CE8;&#x89E3;,&#x5E76;&#x4E14;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x4E14;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;.</li>
+<li>&#x65E5;&#x5E38;&#x5DE5;&#x4F5C;&#x4E2D;&#x4E5F;&#x5E94;&#x8BE5;&#x5B66;&#x4E60;<code>&#x5355;&#x4E00;&#x804C;&#x8D23;&#x539F;&#x5219;</code>,&#x63A5;&#x53E3;&#x8BBE;&#x8BA1;&#x8981;&#x8DB3;&#x591F;&#x7EC6;,&#x65B9;&#x4FBF;&#x4F7F;&#x7528;<code>lambda &#x8868;&#x8FBE;&#x5F0F;</code>,&#x672F;&#x4E1A;&#x6709;&#x4E13;&#x653B;.</li>
+<li>&#x5229;&#x7528;&#x63A5;&#x53E3;&#x591A;&#x7EE7;&#x627F;&#x7279;&#x6027;,&#x505A;&#x5230;&#x63A5;&#x53E3;&#x7684;&#x96C6;&#x5927;&#x6210;&#x8005;.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: java8新特性">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="functionInterface.html" class="navigation navigation-next " aria-label="Next page: 函数式接口">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"lambda表达式","level":"2.3.1","depth":2,"next":{"title":"函数式接口","level":"2.3.2","depth":2,"path":"java8/functionInterface.md","ref":"java8/functionInterface.md","articles":[]},"previous":{"title":"java8新特性","level":"2.3","depth":1,"path":"java8/README.md","ref":"java8/README.md","articles":[{"title":"lambda表达式","level":"2.3.1","depth":2,"path":"java8/lambda.md","ref":"java8/lambda.md","articles":[]},{"title":"函数式接口","level":"2.3.2","depth":2,"path":"java8/functionInterface.md","ref":"java8/functionInterface.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"java8/lambda.md","mtime":"2019-03-04T14:05:01.031Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-05T01:42:54.563Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
