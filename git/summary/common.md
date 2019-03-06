@@ -86,11 +86,82 @@ git reset HEAD
 **示例** 
 
 ```
-git reset HEAD 
+git rm README.md
 ```
 
+## 移动文件 git mv <file_old> <file_new>
 
+移动或重命名文件,目录,软连接
 
+**示例** 
 
+```
+git mv README.md README_NEW.md
+```
 
+`commit push pull fetch merge` 的区别与含义:
+
+- `git commit` : 将本地修改过的文件提交到本地仓库中
+- `git push` : 将本地仓库的最新版本推送到远程库中
+- `git pull` : 从远程库获取最新版本到本地,并自动`merge`
+- `git fetch` : 从远程库获取最新版本到本地,不会自动`merge`
+- `git merge` : 将指定版本合并到当前分支
+
+## 分支管理
+
+### 创建分支 git branch <name>
+    
+**示例** 
+
+```
+git branch dev
+```
+
+### 切换分支 git checkout <name>
+
+**示例** 
+
+```
+git checkout dev
+```
+
+### 创建并切换分支 git checkout -b <name>
+
+**示例** 
+
+```
+git checkout -b feature
+```
+
+### 合并分支 git merge <name> 
+
+**示例** 
+
+```
+git merge dev
+```
+
+### 列出分支 git branch 
+
+**示例** 
+
+```
+git branch
+```
+
+### 删除分支 git branch -d <name> 
+
+**示例** 
+
+```
+git branch -d dev
+```
+
+### 合并分支 git merge <name> 
+
+**示例** 
+
+```
+git merge dev
+```
 
