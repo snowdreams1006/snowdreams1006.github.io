@@ -417,15 +417,39 @@
                                 <h1 id="&#x77E5;&#x8BC6;&#x901F;&#x67E5;">&#x77E5;&#x8BC6;&#x901F;&#x67E5;</h1>
 <h2 id="&#x521B;&#x5EFA;&#x7248;&#x672C;&#x5E93;">&#x521B;&#x5EFA;&#x7248;&#x672C;&#x5E93;</h2>
 <h3 id="&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;-git-init">&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; git init</h3>
-<p><strong>&#x573A;&#x666F;</strong></p>
 <p>&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x9879;&#x76EE;</p>
 <p><strong>&#x793A;&#x4F8B;</strong> </p>
 <pre><code>git init
-</code></pre><h2 id="&#x514B;&#x9686;&#x9879;&#x76EE;-git-clone">&#x514B;&#x9686;&#x9879;&#x76EE; git clone</h2>
-<p><strong>&#x573A;&#x666F;</strong></p>
+</code></pre><h3 id="&#x514B;&#x9686;&#x9879;&#x76EE;-git-clone">&#x514B;&#x9686;&#x9879;&#x76EE; git clone</h3>
 <p>&#x5C06;&#x5DF2;&#x6709;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x5230;&#x672C;&#x5730;</p>
 <p><strong>&#x793A;&#x4F8B;</strong> </p>
 <pre><code>git clone git@github.com:snowdreams1006/snowdreams1006.github.io.git
+</code></pre><h2 id="&#x6DFB;&#x52A0;&#x6587;&#x4EF6;-git-add">&#x6DFB;&#x52A0;&#x6587;&#x4EF6; git add</h2>
+<p>&#x5C06;&#x65B0;&#x6587;&#x4EF6;&#x6216;&#x5DF2;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x7F13;&#x5B58;&#x533A;</p>
+<p><strong>&#x793A;&#x4F8B;</strong> </p>
+<pre><code>git add README.md
+</code></pre><h2 id="&#x67E5;&#x770B;&#x72B6;&#x6001;-git-status">&#x67E5;&#x770B;&#x72B6;&#x6001; git status</h2>
+<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x548C;&#x4E0A;&#x6B21;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x6709;&#x4FEE;&#x6539;</p>
+<p><strong>&#x793A;&#x4F8B;</strong> </p>
+<pre><code>git status README.md
+</code></pre><h2 id="&#x6BD4;&#x8F83;&#x5DEE;&#x5F02;-git-diff">&#x6BD4;&#x8F83;&#x5DEE;&#x5F02; git diff</h2>
+<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x548C;&#x4E0A;&#x6B21;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;&#x7684;&#x5177;&#x4F53;&#x5DEE;&#x5F02;</p>
+<ul>
+<li>&#x5C1A;&#x672A;&#x7F13;&#x5B58;&#x7684;&#x4FEE;&#x6539;: <code>git diff</code></li>
+<li>&#x67E5;&#x770B;&#x5DF2;&#x7F13;&#x5B58;&#x4FEE;&#x6539;: <code>git diff --cached</code></li>
+<li>&#x67E5;&#x770B;&#x5DF2;&#x7F13;&#x5B58;&#x4E0E;&#x672A;&#x7F13;&#x5B58;&#x7684;&#x6240;&#x6709;&#x4FEE;&#x6539;: <code>git diff HEAD</code></li>
+<li>&#x663E;&#x793A;&#x6458;&#x8981;&#x800C;&#x975E;&#x6574;&#x4E2A;&#x5DEE;&#x5F02;: <code>git diff --stat</code></li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;</strong> </p>
+<pre><code>git diff README.md
+</code></pre><h2 id="&#x63D0;&#x4EA4;&#x6587;&#x4EF6;-git-commit">&#x63D0;&#x4EA4;&#x6587;&#x4EF6; git commit</h2>
+<p>&#x5C06;&#x7F13;&#x5B58;&#x533A;&#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x5230;&#x7248;&#x672C;&#x5E93;</p>
+<p><strong>&#x793A;&#x4F8B;</strong> </p>
+<pre><code>git commit -m &quot;remark&quot;
+</code></pre><h2 id="&#x53D6;&#x6D88;&#x5DF2;&#x7F13;&#x5B58;&#x5185;&#x5BB9;-git-reset-head">&#x53D6;&#x6D88;&#x5DF2;&#x7F13;&#x5B58;&#x5185;&#x5BB9; git reset HEAD</h2>
+<p>&#x5C06;&#x7F13;&#x5B58;&#x533A;&#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x5230;&#x7248;&#x672C;&#x5E93;</p>
+<p><strong>&#x793A;&#x4F8B;</strong> </p>
+<pre><code>git reset HEAD
 </code></pre>
                                 
                                 </section>
@@ -469,7 +493,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"知识速查","level":"2.2.3","depth":2,"next":{"title":"常见问题FAQ","level":"2.2.4","depth":2,"path":"git/issue/README.md","ref":"git/issue/README.md","articles":[]},"previous":{"title":"基本概念","level":"2.2.2.3","depth":3,"path":"git/use/concept.md","ref":"git/use/concept.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/summary/common.md","mtime":"2019-03-06T05:51:51.812Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T10:14:37.470Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"知识速查","level":"2.2.3","depth":2,"next":{"title":"常见问题FAQ","level":"2.2.4","depth":2,"path":"git/issue/README.md","ref":"git/issue/README.md","articles":[]},"previous":{"title":"基本概念","level":"2.2.2.3","depth":3,"path":"git/use/concept.md","ref":"git/use/concept.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/summary/common.md","mtime":"2019-03-06T11:08:35.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-06T11:09:47.240Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
