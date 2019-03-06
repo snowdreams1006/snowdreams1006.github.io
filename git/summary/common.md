@@ -171,4 +171,12 @@ git branch -d dev
 
 ## 提交日志 git log 
  
+查看纳入版本库的提交日志
+
+**示例** 
+
+```
+git log
+```
+
 
