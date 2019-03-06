@@ -77,5 +77,20 @@ git commit -m "remark"
 git reset HEAD 
 ```
 
+## 删除文件 git rm <file>
+
+- 从暂存区中移除且不保留在工作目录: `git rm <file>`
+- 强制从暂存区中移除且不保留在工作目录: `git rm -f <file>`
+- 从暂存区中移除但保留工作目录: `git rm --cached <file>`
+
+**示例** 
+
+```
+git reset HEAD 
+```
+
+
+
+
 
 
