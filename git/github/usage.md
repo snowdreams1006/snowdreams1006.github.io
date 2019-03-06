@@ -17,22 +17,24 @@
 
 ## 配置 github
 
-既然项目已经托管到 `github` 网站,那本地如何访问到远程仓库呢?
+既然项目已经托管到 `github` 网站,那本地如何访问到远程仓库呢?常用的方式有两种,一种是 `https` 方式,每次都需要输入密码,另外一种是 `ssh` 方式,只需要一次配置`ssh` 密钥对.
 
-一般本地仓库和远程 `github` 仓库之间是通过 `ssh` 加密传输信息的,所以我们需要先配置好验证信息:
+这里我们重点介绍最常用也是最方便的第二种 `ssh` 方式访问 `github` ,大致思路是本地生成密钥对,然后将公钥上传给 `github` 表明身份,之后本地再次推送给远程仓库时,`github` 自然就能识别到我们身份了.
 
 **第一步: 生成密钥对**
+
+默认情况下,会在当前用户目录下生成一对密钥对.
 
 ```
 ssh-keygen -t rsa -C "youremail@example.com"
 ```
 
-这里的邮箱 `youremail@example.com` 需要填写自己在 `github` 上注册邮箱,之后会提示输入路径和密码,一路回车确认采用默认值即可.正常的话会在当前用户目录下
+这里的邮箱 `youremail@example.com` 需要填写自己的 `github` 邮箱,之后会提示输入路径和密码,一路回车采用默认值即可,运行结束后会在当前用户目录下
 生成一对密钥对,包括公钥和私钥.其中公钥可以发送给任何人,而私钥千万不可泄露.
 
 **第二步: 复制公钥**
 
-在当前用户根目录下找到 `.ssh` 目录下有两个文件,一个是公钥 `id_rsa.pub` ,另一个是私钥 `id_rsa`,用记事本或者其他方式打开公钥文件,复制其中内容,准备粘贴到`github` 设置项.
+在当前用户根目录下打开 `.ssh` 目录,其中包括两个文件,一个是公钥 `id_rsa.pub` ,另一个是私钥 `id_rsa`,用记事本或者其他方式打开公钥文件,复制其中内容,准备粘贴到`github` 相关设置项.
 
 ```
 # 查看当前用户下的 ssh 目录
@@ -46,9 +48,12 @@ cat ~/.ssh/id_rsa.pub
 
 回到 `github`,点击头像(Acount),选择设置(Settings),再选择左侧的 SSH and GPG keys,点击右侧的NEW SSH Key,然后填写标题(Title),最好是有意义的名称,比如`youremail@example.com for github`,密钥(Key)填写上一边生成的公钥,一般是以`ssh-rsa` 开头的一大串字符,最后保存(Add SSH Key).
 
+![github-setting.png](images/github-setting.png)
+![github-ssh.png](images/github-ssh.png)
+
 **第四步: 验证 ssh**
 
-利用 ssh 协议测试一下是否能够访问`github`,如果出现成功提示的话,那就证明我们的配置没问题.
+利用 `ssh` 协议测试一下是否能够正常访问 `github` 网站,如果出现成功提示,那就证明我们的配置没问题.
 
 ```
 ssh -T git@github.com
@@ -56,9 +61,13 @@ ssh -T git@github.com
 
 ## 创建远程仓库
 
-在`github` 网页端新建远程仓库,例如`git-demo`,默认权限是公开的(public),也可以选择私有的(private),初始化 `README.md ` 文件和 `.gitignore` 文件以及选择开源协议这些都是可选的,视具体情况而定.
+登录 `github` 网站新建远程仓库(New Repository),例如`git-demo`,默认权限是公开的(public),也可以选择私有的(private),初始化 `README.md ` 文件和 `.gitignore` 文件以及选择开源协议这些都是可选的,视具体情况而定.
 
-刷新当前页面,应该能到看到已经创建好的`git-demo`仓库,接下来我们就可以将其克隆到本地电脑上开始开发了.
+![github-new-repository.png](images/github-new-repository.png)
+
+刷新当前页面,应该能到看到已创建好的`git-demo` 项目,接下来准备将其克隆到本地电脑.
+
+![github-repository.png](images/github-repository.png)
 
 ## 克隆到本地仓库
 
