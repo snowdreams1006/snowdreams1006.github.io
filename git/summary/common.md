@@ -110,7 +110,9 @@ git mv README.md README_NEW.md
 ## 分支管理
 
 ### 创建分支 git branch <name>
-    
+
+创建本地分支,但不自动切换新分支
+  
 **示例** 
 
 ```
@@ -118,6 +120,8 @@ git branch dev
 ```
 
 ### 切换分支 git checkout <name>
+
+切换到指定分支
 
 **示例** 
 
@@ -127,6 +131,8 @@ git checkout dev
 
 ### 创建并切换分支 git checkout -b <name>
 
+创建本地分支并自动切换到新分支
+
 **示例** 
 
 ```
@@ -134,6 +140,8 @@ git checkout -b feature
 ```
 
 ### 合并分支 git merge <name> 
+
+将指定分支合并到当前分支
 
 **示例** 
 
@@ -143,6 +151,8 @@ git merge dev
 
 ### 列出分支 git branch 
 
+列出本地全部分支
+
 **示例** 
 
 ```
@@ -151,17 +161,14 @@ git branch
 
 ### 删除分支 git branch -d <name> 
 
+删除指定分支
+
 **示例** 
 
 ```
 git branch -d dev
 ```
 
-### 合并分支 git merge <name> 
-
-**示例** 
-
-```
-git merge dev
-```
+## 提交日志 git log 
+ 
 
