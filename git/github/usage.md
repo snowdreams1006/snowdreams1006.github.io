@@ -1,2 +1,2 @@
-# github教程
+# github 教程
 
