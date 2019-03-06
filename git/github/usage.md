@@ -67,11 +67,11 @@ ssh -T git@github.com
 
 刷新当前页面,应该能到看到已创建好的`git-demo` 项目,接下来准备将其克隆到本地电脑.
 
-![github-repository.png](images/github-repository.png)
+![github-repository-created.png](images/github-repository-created.png)
 
 ## 克隆到本地仓库
 
-将远程项目克隆到本地工作空间,和之前本地仓库开发流程一样,`add commit status` 等等,唯一不同的是,本地仓库的最新版本需要推送到远程仓库中,只有这样其他小伙伴才能从远程仓库拉取最新版本,进而才能看到你的代码,彻底打破各自为政局面,实现团队协同开发.
+将远程项目克隆到本地工作空间,和之前本地仓库的开发流程一样,例如`add commit status` 等等,唯一不同的是,多了一步 `push` 命令,即本地仓库的最新版本需要推送给远程仓库中,只有这样其他小伙伴才能从远程仓库拉取最新版本,进而才能看到你的代码,因而打破各自为政局面,实现团队协同开发.
 
 ```
 # 克隆到本地仓库
@@ -91,7 +91,17 @@ git commit -m "add test.txt"
 git push origin master
 ```
 
-提交完成后,返回`github` 网页版,刷新当前项目`git-demo`,应该能看到我们刚刚提交了一个新文件`test.txt`.
+提交完成后,登录 `github` 网站,刷新当前项目 `git-demo` ,应该能看到我们刚刚提交的新文件`test.txt`.
+
+![github-repository-updated.png](images/github-repository-updated.png)
+
+## 添加仓库关联
+
+添加本地仓库和远程仓库之间关联,默认本地仓库分支名和远程仓库分支名相同
+
+```
+git remote add origin2 git@github.com:snowdreams1006/git-demo.git
+```
 
 ## 查看远程仓库
 
@@ -101,13 +111,17 @@ git push origin master
 git remote
 ```
 
+> 执行时加上`-v` 参数能够查看别名关联的具体地址,即 `git remote -v`
+
 ## 下载远程仓库
 
-从远程仓库下载最新分支数据,注意: 并不会和当前分支合并,需要手动执行`git merge` 命令.
+从远程仓库下载最新分支数据
 
 ```
 git fetch
 ```
+
+> 注意: 该命令并不会自动合并当前分支,如需要合并,需手动执行`git merge` 命令
 
 ## 拉取远程仓库
 
@@ -116,6 +130,8 @@ git fetch
 ```
 git pull
 ```
+
+> git pull 相当于 git fetch + git merge
 
 ## 推送远程分支
 
