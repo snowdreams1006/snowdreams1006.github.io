@@ -149,16 +149,6 @@ git checkout -b feature
 git merge dev
 ```
 
-### 列出分支 git branch 
-
-列出本地全部分支
-
-**示例** 
-
-```
-git branch
-```
-
 ### 删除分支 git branch -d <name> 
 
 删除指定分支
@@ -167,6 +157,16 @@ git branch
 
 ```
 git branch -d dev
+```
+
+### 列出分支 git branch 
+
+列出本地全部分支
+
+**示例** 
+
+```
+git branch
 ```
 
 ## 提交日志 git log 
@@ -179,4 +179,54 @@ git branch -d dev
 git log
 ```
 
+## 标签管理
 
+### 创建标签 git tag -a <name>
+
+创建标签并提交备注
+  
+**示例** 
+
+```
+git tag -a v1.0.0
+```
+
+### 追加标签 git tag -a <name> <commit>
+
+追加标签并更新备注
+  
+**示例** 
+
+```
+git tag -a v0.9.0 6ad8956bc09a6a62c731711eabe796690aa6471c
+```
+
+### 删除分支 git tag -d <name> 
+
+删除指定分支
+
+**示例** 
+
+```
+git tag -d v1.0.0
+```
+
+### 查看分支 git show <name> 
+
+查看指定分支
+
+**示例** 
+
+```
+git show v1.0.0
+```
+
+### 列出标签 git tag 
+
+列出本地全部标签
+
+**示例** 
+
+```
+git tag
+```
