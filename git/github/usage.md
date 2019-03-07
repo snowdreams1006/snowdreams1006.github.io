@@ -2,9 +2,11 @@
 
 `github` 作为目前流行的开源社区,是平时工作学习的好帮手,学会如何用好 `github` 网站能够帮助我们更好分享代码或者与其他开发人员合作.
 
+![github](../images/github.png)
+
 ## 注册 github 账号
 
-首先准备好邮箱和密码,然后在 [github 官网](https://github.com)注册新账号,和大多数网站类似的注册流程,唯一注意的是你要想好注册类型,针对个人用户来说,一般无外乎个人账号和项目账号两种,比如 [snowdreams1006](https://github.com/snowdreams1006) 就认为是个人账号,而这种 [security-plus](https://github.com/snowdreams1006) 认为是项目账号.
+首先准备好邮箱和密码,然后在 [github 官网](https://github.com)注册新账号,和大多数网站类似的注册流程,唯一注意的是你要想好注册类型,针对个人用户来说,一般无外乎个人账号和项目账号两种,比如 [snowdreams1006](https://github.com/snowdreams1006) 就认为是个人账号,而这种 [security-plus](https://github.com/security-plus) 认为是项目账号.
 
 其实这两种账号对于 `github` 来说是一样的,不像是个人账号同企业账号的差异那么大,那为什么称个人账号和项目账号呢?
 是因为,大多数个人开发者名下会有多款开源作品,这些作品既可以全部挂载在某一个开发者账号下面,也可以单独挂载某一个开发者账号下面,如果此时的账号名恰好是项目名岂不是清晰多了?
@@ -14,6 +16,8 @@
 除此之外项目账号还有一个好处,利用 `github` 的静态网站托管服务可以免费快速搭建项目官网,只要创建一个`snowdreams1006.github.io` 的项目,那么这个项目就可以作为静态网站的源码项目了,访问 [https://snowdreams1006.github.io](https://snowdreams1006.github.io) 就能看到项目官网了!
 
 >注意: snowdreams1006仅仅是笔者用户名,实际需要替换成读者的用户名
+
+![snowdreams1006.github.io](../images/snowdreams1006.github.io.png)
 
 ## 配置 github
 
@@ -48,8 +52,8 @@ cat ~/.ssh/id_rsa.pub
 
 回到 `github`,点击头像(Acount),选择设置(Settings),再选择左侧的 SSH and GPG keys,点击右侧的NEW SSH Key,然后填写标题(Title),最好是有意义的名称,比如`youremail@example.com for github`,密钥(Key)填写上一边生成的公钥,一般是以`ssh-rsa` 开头的一大串字符,最后保存(Add SSH Key).
 
-![github-setting.png](images/github-setting.png)
-![github-ssh.png](images/github-ssh.png)
+![github-setting.png](../images/github-setting.png)
+![github-ssh.png](../images/github-ssh.png)
 
 **第四步: 验证 ssh**
 
@@ -63,11 +67,11 @@ ssh -T git@github.com
 
 登录 `github` 网站新建远程仓库(New Repository),例如`git-demo`,默认权限是公开的(public),也可以选择私有的(private),初始化 `README.md ` 文件和 `.gitignore` 文件以及选择开源协议这些都是可选的,视具体情况而定.
 
-![github-new-repository.png](images/github-new-repository.png)
+![github-new-repository.png](../images/github-new-repository.png)
 
 刷新当前页面,应该能到看到已创建好的`git-demo` 项目,接下来准备将其克隆到本地电脑.
 
-![github-repository-created.png](images/github-repository-created.png)
+![github-repository-created.png](../images/github-repository-created.png)
 
 ## 克隆到本地仓库
 
