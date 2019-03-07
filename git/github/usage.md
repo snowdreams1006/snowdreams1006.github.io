@@ -1,6 +1,6 @@
 # github 教程
 
-`github` 作为目前流行的开源社区,是平时工作学习的好帮手,学会如何用好 `github` 网站能够帮助我们更好分享代码或者与其他开发人员合作.
+`github` 是一个基于 `git` 的代码托管平台,是平时工作学习的好帮手,学会如何用好 `github` 网站能够帮助我们更好分享代码或者与其他开发人员合作.
 
 ![github](../images/github.png)
 
@@ -81,6 +81,9 @@ ssh -T git@github.com
 # 克隆到本地仓库
 git clone git@github.com:snowdreams1006/git-demo.git
 
+# 切换到当前项目
+cd git-demo
+
 # 创建新文件
 touch test.txt
 echo "add test.txt" > test.txt
@@ -97,7 +100,7 @@ git push origin master
 
 提交完成后,登录 `github` 网站,刷新当前项目 `git-demo` ,应该能看到我们刚刚提交的新文件`test.txt`.
 
-![github-repository-updated.png](images/github-repository-updated.png)
+![github-repository-updated.png](../images/github-repository-updated.png)
 
 ## 添加仓库关联
 
@@ -144,6 +147,8 @@ git pull
 ```
 git push origin master
 ```
+
+以上命令将本地 `master` 分支推送到 `origin` 远程仓库的 `master` 分支
 
 ## 删除远程仓库
 
