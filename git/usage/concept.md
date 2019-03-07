@@ -63,5 +63,3 @@
 - `git checkout HEAD <file>` 是版本库同时更新暂存区和工作区
 - `git rm --cached` 清空暂存区
 
-
-
