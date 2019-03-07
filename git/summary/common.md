@@ -107,6 +107,24 @@ git mv README.md README_NEW.md
 - `git fetch` : 从远程库获取最新版本到本地,不会自动`merge`
 - `git merge` : 将指定版本合并到当前分支
 
+## 替换本地改动
+
+丢弃当前文件修改内容,已添加到暂存区以及新文件都不会受到影响
+
+**示例** 
+
+```
+git checkout -- <file>
+```
+
+丢弃本地所有改动
+
+**示例** 
+
+```
+git reset --hard 
+```
+
 ## 分支管理
 
 ### 创建分支 git branch <name>
@@ -201,9 +219,9 @@ git tag -a v1.0.0
 git tag -a v0.9.0 6ad8956bc09a6a62c731711eabe796690aa6471c
 ```
 
-### 删除分支 git tag -d <name> 
+### 删除标签 git tag -d <name> 
 
-删除指定分支
+删除指定标签
 
 **示例** 
 
@@ -211,9 +229,9 @@ git tag -a v0.9.0 6ad8956bc09a6a62c731711eabe796690aa6471c
 git tag -d v1.0.0
 ```
 
-### 查看分支 git show <name> 
+### 查看标签 git show <name> 
 
-查看指定分支
+查看指定标签
 
 **示例** 
 
