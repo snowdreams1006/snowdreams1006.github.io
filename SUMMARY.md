@@ -13,6 +13,7 @@
         * [版本管理](git/usage/version-manage.md)
         * [基本概念](git/usage/concept.md)
     * [github 教程](git/github/usage.md)
+    * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
     * [常见问题](git/issue/README.md)
 * [gitbook 入门教程](gitbook/README.md)
