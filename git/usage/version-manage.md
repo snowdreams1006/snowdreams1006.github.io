@@ -1,10 +1,5 @@
 # 版本管理
 
-## 要求
-- 巩固上一节本地仓库的相关知识
-- 了解版本控制的相关概念和实际应用场景
-- 掌握如何进行版本控制,熟悉相关常用命令
-
 ## 背景
 
 在上一节中我们已经成功创建版本库并且已经添加`test.txt`等文件,这一节我们继续讲解如何进行版本控制.
@@ -73,66 +68,56 @@ index 729112f..989ce33 100644
 $ 
 ```
 
+`git diff` 命令即查看差异(difference),从输出结果可以看出我们在最后一行新增了`understand how git control version` 文字.
 
+通过`git status` 知道文件发生了改动,`git diff` 让我们看到了改动的细节,现在我们提交到版本库就放心多了,还记得上节课如何添加版本库的命令吗?
 
-```
-# 添加到本地仓库: 第二步指定添加文件备注
-git commit -m "add test.txt"
-```
+分两步操作: `git add <file>` 和 `git commit -m <remark>` 
 
-经过上述两步操作,`test.txt` 文件已经纳入到版本控制中了,这里你可能会有疑问了为什么需要`add` `commit`两步呢?
-因为`commit` 可以一次性提交很多文件,所以你可以多次`add`不同的文件,比如:
+第一步: `git add <file>`
 
 ```
-# 创建三个文件file1.txt file2.txt file3.txt
-touch file1.txt file2.txt file3.txt
-
-# 添加一个文件file1.txt
-git add file1.txt
-
-# 添加两个文件file2.txt file3.txt
-git add file2.txt file3.txt
-
-# 一次性提交全部文件
-git commit -m "add 3 files."
+$ git add test.txt
+$ 
 ```
+
+等一下,在执行 `git commit` 命令之前,我们再运行 `git status` 命令查看一下当前仓库状态:
+
+```
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    modified:   test.txt
+
+$ 
+```
+
+此时 `git status` 命令告诉我们 `test.txt` 文件已被修改等待提交,好了,那么接着第二步的commit吧!
+
+第二步: `git commit -m <remark>` 
+
+```
+# 提交到版本库并添加备注
+$ git commit -m "add understand how git control version"
+[master 36f234a] add understand how git control version
+ 1 file changed, 2 insertions(+)
+$ 
+```
+
+提交后,我们此时再次运行`git status` 命令查看当前仓库状态:
+
+```
+$ git status
+On branch master
+nothing to commit, working tree clean
+$ 
+```
+
+输出结果显示没有需要提价的改动,工作目录是干净的.
 
 ## 小结
-- 初始化本地仓库 `git init ` 
-- 添加文件到本地仓库分两步 `git add <file>` 和 `git commit -m <message>`
-- 实际工作中,大致以下流程
 
-```
-# 在工作空间创建指定目录
-mkdir demo
-
-# 切换至工作目录
-cd demo
-
-# 初始化本地仓库
-git init 
-
-# 创建新文件
-touch test.txt
-
-# 编辑新文件,输入 git test
-echo "git test" > test.txt
-
-# 添加到本地仓库: 第一步指定要添加的文件
-git add test.txt
-
-# 添加到本地仓库: 第二步指定添加文件备注
-git commit -m "add test.txt"
-
-...
-
-# 继续编辑目标文件,追加 git init
-echo "git init" >> test.txt
-
-# 将目标文件添加到本地仓库
-git add test.txt
-
-# 添加本次新增文件的备注
-git commit -m "add git init"
-
-```
+- 查看工作区状态 `git status`
+- 比较修改差异 `git diff`
