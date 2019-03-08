@@ -10,7 +10,8 @@
       }
   },
   "plugins": [
-    "github"
+    "github",
+    "pageview-count"
   ],
   "pluginsConfig": {
     "github": {
