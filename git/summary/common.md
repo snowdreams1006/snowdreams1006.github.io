@@ -2,15 +2,7 @@
 
 ## 创建 | Create
 
-### 克隆一个已存在仓库 | Clone an existing repository
-
-**语法 | Syntax**
-
-```
-git clone ssh://user@domain.com/repo.git
-```
-
-**示例 | Case**
+### 克隆一个已存在的仓库 | Clone an existing repository
 
 ```
 git clone git@github.com:snowdreams1006/snowdreams1006.github.io.git
@@ -18,17 +10,61 @@ git clone git@github.com:snowdreams1006/snowdreams1006.github.io.git
 
 ### 创建一个新的本地仓库 | Create a new local repository
 
-**语法 | Syntax**
-
 ```
 git init 
 ```
 
-**示例 | Case**
+
+## 本地更改 | Local Changes
+
+###  工作目录中已更改文件 | Changed files in your working directory
 
 ```
-git init 
+git status
 ```
+
+### 已追踪文件的更改 | Changes to tracked files
+
+```
+git diff 
+```
+
+### 添加当前全部更改到下次提交版本 | Add all current changes to next commit
+
+```
+git add . 
+```
+
+### 添加文件中某些更改到下次提交版本 | Add some changes in <file> to next commit
+
+```
+git add -p <file>
+```
+
+### 提交已追踪文件的全部本地更改 | Commit all local changes in tracked files
+
+```
+git commit -a
+```
+
+### 提交上一次暂存区更改 | Commit previously staged changes
+
+```
+git commit 
+```
+
+### 更改上次提交 | Change the last commit 
+> 没有更改已发布的提交 | Don't amend publishd commits!
+
+```
+git commit --amend
+```
+
+---
+
+# 知识速查
+
+## 创建版本库
 
 ### 初始化项目 git init 
 
