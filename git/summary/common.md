@@ -60,6 +60,28 @@ git commit
 git commit --amend
 ```
 
+
+## 提交历史 | Commit history
+
+### 显示全部提交,以最新的开头 | Show all commits,starting with newest
+
+```
+git log
+```
+
+### 显示某个文件一段时间内的更改 | Show changes over time for a specific file
+
+```
+git log -p <file>
+```
+
+### 某文件是谁在什么时候更改了什么内容 | Who changed what and when in <file>
+
+```
+git blame <file>
+```
+
+
 ---
 
 # 知识速查
