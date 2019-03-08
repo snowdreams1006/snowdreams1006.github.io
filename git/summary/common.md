@@ -121,6 +121,21 @@ git tag <tag-name>
 ```
 
 
+## 更新和发布 | Update & Publish
+
+### 列出当前全部已配置的远程仓库 | List all currently configured remotes
+
+```
+git remote -v
+```
+
+### 显示远程仓库信息 | Show information about a remote
+
+```
+git remote show <remote>
+```
+
+
 
 
 ---
