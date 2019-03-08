@@ -1,6 +1,34 @@
 # 知识速查
 
-## 创建版本库
+## 创建 | Create
+
+### 克隆一个已存在仓库 | Clone an existing repository
+
+**语法 | Syntax**
+
+```
+git clone ssh://user@domain.com/repo.git
+```
+
+**示例 | Case**
+
+```
+git clone git@github.com:snowdreams1006/snowdreams1006.github.io.git
+```
+
+### 创建一个新的本地仓库 | Create a new local repository
+
+**语法 | Syntax**
+
+```
+git init 
+```
+
+**示例 | Case**
+
+```
+git init 
+```
 
 ### 初始化项目 git init 
 
