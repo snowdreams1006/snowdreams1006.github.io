@@ -82,6 +82,47 @@ git blame <file>
 ```
 
 
+## 分支和标签 | Branches & Tags
+
+### 列出全部已存在的分支 | List all existing branches
+
+```
+git branch -av
+```
+
+### 切换到 HEAD 分支 | Switch HEAD branch
+
+```
+git checkout <branch>
+```
+
+### 基于当前 HEAD 创建新分支 | Create a new branch based on your curent HEAD
+
+```
+git branch <new-branch>
+```
+
+### 基于远程分支创建新的正在追踪分支 | Create a new tracking branch based on a remote branch
+
+```
+git checkout --track <remote/branch>
+```
+
+### 删除一个本地分支 | Delete a local branch
+
+```
+git branch -d <branch>
+```
+
+### 为当前提交打上标签 | Make the current commit with a tag
+
+```
+git tag <tag-name>
+```
+
+
+
+
 ---
 
 # 知识速查
