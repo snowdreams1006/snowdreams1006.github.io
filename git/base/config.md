@@ -10,6 +10,7 @@ git config --global user.email "example@example.com"
 因为Git是分布式版本控制系统,所以每个机器都必须自报家门:你的名字和Email地址.
 
 ## 配置文件
+
 `git` 提供`git config`工具,专门用来配置相应的工作环境变量,支持三种不同的位置.
 
 - `/etc/gitconfig`  配置文件 (优先级最低)
@@ -27,6 +28,7 @@ git config --global user.email "example@example.com"
 >每一级别的配置都会自动覆盖上级相同配置,当前项目配置优先于其余配置
 
 ## 查看配置
+
 如果要查看已有的配置信息,可以输入 `git config --list` 命令,如果看到重复变量名,表示来自不同配置文件(比如`/etc/gitconfig` 和 `~/.gitconfig`),实际上`git`会采用**最后一个**!
 
 ```
