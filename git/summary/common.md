@@ -271,7 +271,7 @@ Commiting often keeps your commits small and again helps you commit only related
 Moreover,it allows you to share your code more frequently with others.
 That way it's easier for everyone to integrate changes regularly and avoid having merge conflicts.Having few large commits and sharing them rarely.in contrast,makes it hard to solve conflicts.
 
-### 不要提价未完成工作 | DON'T COMMIT HALF-DONE WORK
+### 不要提交未完成工作 | DON'T COMMIT HALF-DONE WORK
 
 你应该仅提交已完成代码,这并不意外着提交前你不得不完成一个完整的,很大的功能分支.恰恰相反,将功能分支划分成很多逻辑块并且记得早一点,频繁些提交.
 如果仅仅是为了下班前仓库该有点什么就不要提交,如果你尝试提交仅仅是因为你需要一个干净的工作副本(检出分支,拉取更改),考虑使用 `git` 的 `stash` 特性. 
@@ -281,6 +281,16 @@ This doesn't mean you have to complete a whole ,large feature before commiting.
 Quite the contrary:split the feature's implementatiion into logical chunks and remember to commit early and often.
 But don't commit just to have something in the repository before leaving the ofice at the end of the day.
 If you're tempted to commit just because you need a clean working copy (to check out a branch,pull in changes ,etc.) consider using Git's <Stash> feature instead.
+
+### 提交前测试代码 | TEST CODE BEFORE YOU COMMIT
+
+抵制自以为已完成的提交.
+直接测试来确保它真的已完成并且没有副作用(显而易见的).
+当提交半成品到本地仓库时要求你不得不自我谅解,让你的代码进过测试对发布或者分享你的代码也很重要.
+
+Resist the temptation to commit something that you *think* is completed.
+Test it thoroughly to make sure it really is completed and has no side effect (as far as one can tell).
+While committing half-baked thing in your local repository only requires you to forgive yourself,having your code tested is even more important when it comes to publishing/sharing your code with others.
 
 
 
