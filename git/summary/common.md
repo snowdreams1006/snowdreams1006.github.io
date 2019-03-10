@@ -247,6 +247,19 @@ git reset --keep <commit>
 ```
 
 
+## 建议 | SUGGESTION
+
+### 提交相关更改 | COMMIT RELATED CHANGES
+
+提交应该是相关更改的包装,例如,修复两个不同的 bug 应该产生两个单独的提交.
+小的提交让其他开发者更容易理解此次更改,并且万一出错方便回滚.
+在暂存区这类工具以及暂存部分文件的能力下,git 很容易创建细粒度的提交.
+
+a commit should be a wrapper for related changes,
+For example,fixing two different bugs should produce two separete commits.
+Small commits make it easier for other developers to understand the changes and roll them back if something went wrong.
+With tools like the staging area and the ability to stage only parts of a file.
+Git makes it easy to create very granular commits.
 
 ---
 
