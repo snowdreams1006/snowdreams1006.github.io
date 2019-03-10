@@ -135,6 +135,43 @@ git remote -v
 git remote show <remote>
 ```
 
+### 添加<remote>的远程仓库 | Add new remote repository named <remote>
+
+```
+git remote add <shortname> <url>
+```
+
+### 下载来自<remote>远程仓库的所有更改但是不合并到 HEAD | Download all changes from <remote> but don't integrate into HEAD
+
+```
+git fetch <remote>
+```
+
+### 下载来自<remote>远程仓库指定分支的所有更改并且自动合并到 HEAD | Download changes and directly merge/integrate into HEAD
+
+```
+git pull <remote> <branch>
+```
+
+### 在<remote>远程仓库上发布本地更改 | Publish local changes on a remote
+
+```
+git push <remote> <branch>
+```
+
+### 在<remote>远程仓库上删除分支 | Delete a branch on the branch 
+
+```
+git branch -dr <remote/branch>
+```
+
+### 发布你的标签 | Publish your tags
+
+```
+git push --tags
+```
+
+
 
 
 
