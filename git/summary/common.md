@@ -271,6 +271,16 @@ Commiting often keeps your commits small and again helps you commit only related
 Moreover,it allows you to share your code more frequently with others.
 That way it's easier for everyone to integrate changes regularly and avoid having merge conflicts.Having few large commits and sharing them rarely.in contrast,makes it hard to solve conflicts.
 
+### 不要提价未完成工作 | DON'T COMMIT HALF-DONE WORK
+
+你应该仅提交已完成代码,这并不意外着提交前你不得不完成一个完整的,很大的功能分支.恰恰相反,将功能分支划分成很多逻辑块并且记得早一点,频繁些提交.
+如果仅仅是为了下班前仓库该有点什么就不要提交,如果你尝试提交仅仅是因为你需要一个干净的工作副本(检出分支,拉取更改),考虑使用 `git` 的 `stash` 特性. 
+
+You should only commit code when it's completed.
+This doesn't mean you have to complete a whole ,large feature before commiting.
+Quite the contrary:split the feature's implementatiion into logical chunks and remember to commit early and often.
+But don't commit just to have something in the repository before leaving the ofice at the end of the day.
+If you're tempted to commit just because you need a clean working copy (to check out a branch,pull in changes ,etc.) consider using Git's <Stash> feature instead.
 
 
 
