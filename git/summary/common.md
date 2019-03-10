@@ -208,6 +208,46 @@ git rm <resolved-file>
 ```
 
 
+## 撤销 | UNDO
+
+### 丢弃工作区全部更改 | Discard all local changes in your working directory
+
+```
+git reset --hard HEAD
+```
+
+### 丢弃指定文件的本地更改 | Discard local changes in a specific file
+
+```
+git checkout HEAD <file>
+```
+
+### 抵消一个提交(通过产生一个新的相反的提交) | Revert a commit (by producing a new commit with contrary changes)
+
+```
+git revert <file>
+```
+
+### 重置当前 HEAD 指针到上一个提交...然后丢弃自那以后的全部更改 | Reset your HEAD pointer to a previous commit ... and discard all changes since then
+
+```
+git reset --hard <commit>
+```
+
+### ...然后作为未缓存更改保存全部更改 | ... and preserve all changes as unstaged change
+
+```
+git reset <commit>
+```
+
+### ...然后保存未提交的本地更改 | ... and preserve all changes as unstaged change
+
+```
+git reset --keep <commit>
+```
+
+
+
 ---
 
 # 知识速查
