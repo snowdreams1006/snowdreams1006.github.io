@@ -172,7 +172,40 @@ git push --tags
 ```
 
 
+## 合并和变基 | MERGE & REBASE
 
+### 合并指定分支到你的 HEAD | Merge <branch> into your current HEAD
+
+```
+git merge <branch>
+```
+
+### 变基到当前HEAD | Rebase your current HEAD onto <branch>
+
+> 不要变基已发布的提交 | Don't rebase published commits!
+
+```
+git rebase <branch>
+```
+
+### 取消变基 | Abort a rebase
+
+```
+git rebase --abort
+```
+
+### 使用已配置的冲突工具去解决冲突 | Use your configured merge tool to solve conflicts
+
+```
+git mergetool
+```
+
+### 使用编辑器手工解决冲突然后(解决之后)标记文件已解决冲突 | Use your editor to manually solve conflicts and (after resolving) mark file as resolved
+
+```
+git add <resolved-file>
+git rm <resolved-file>
+```
 
 
 ---
