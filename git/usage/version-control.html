@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>实战 git · 雪之梦</title>
+        <title>版本控制 · 雪之梦</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="local-repository.html" />
+    <link rel="next" href="../github/usage.html" />
     
     
-    <link rel="prev" href="../base/config.html" />
+    <link rel="prev" href="concept.html" />
     
 
     </head>
@@ -194,7 +194,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.2" data-path="about.html">
+        <li class="chapter " data-level="2.2.2" data-path="about.html">
             
                 <a href="about.html">
             
@@ -260,7 +260,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2.5" data-path="version-control.html">
+        <li class="chapter active" data-level="2.2.2.5" data-path="version-control.html">
             
                 <a href="version-control.html">
             
@@ -481,7 +481,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >实战 git</a>
+        <a href="../.." >版本控制</a>
     </h1>
 </div>
 
@@ -496,23 +496,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5B9E;&#x6218;-git">&#x5B9E;&#x6218; git</h1>
-<p><code>git</code> &#x662F;&#x4E00;&#x6B3E;<strong>&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;</strong>,&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x6982;&#x62EC;: <strong>&#x4E0D;&#x8981;&#x628A;&#x9E21;&#x86CB;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x7BEE;&#x5B50;&#x91CC;</strong>,&#x4F60;&#x7684;&#x4E00;&#x4E3E;&#x4E00;&#x52A8;&#x90FD;&#x5728;&#x76D1;&#x89C6;&#x4E2D;.</p>
-<h2 id="&#x5B9E;&#x6218;&#x573A;&#x666F;">&#x5B9E;&#x6218;&#x573A;&#x666F;</h2>
-<p>&#x4F60;&#x4F5C;&#x4E3A;&#x67D0;&#x9879;&#x76EE;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x5458;&#x6216;&#x8005;&#x8D1F;&#x8D23;&#x4EBA;,&#x548C;&#x5C0F;&#x4F19;&#x4F34;&#x4EEC;&#x4E00;&#x8D77;&#x5F00;&#x53D1;,&#x5927;&#x5BB6;&#x65E2;&#x6709;&#x7740;&#x5404;&#x81EA;&#x5206;&#x5DE5;&#x4E92;&#x4E0D;&#x5E72;&#x6270;,&#x4E5F;&#x6709;&#x7740;&#x76F8;&#x4E92;&#x5408;&#x4F5C;,&#x6700;&#x7EC8;&#x6BCF;&#x4E2A;&#x4EBA;&#x7684;&#x52B3;&#x52A8;&#x6210;&#x679C;&#x6C47;&#x805A;&#x6210;&#x6700;&#x540E;&#x7684;&#x9879;&#x76EE;,&#x6109;&#x5FEB;&#x5B8C;&#x6210;&#x9879;&#x76EE;!</p>
-<h2 id="&#x8981;&#x6C42;">&#x8981;&#x6C42;</h2>
-<ul>
-<li>&#x7406;&#x89E3; <code>git</code> &#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;,&#x61C2;&#x5F97;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x5982;&#x4F55;&#x4EA4;&#x6D41;&#x5408;&#x4F5C;</li>
-<li>&#x638C;&#x63E1; <code>git</code> &#x5E38;&#x7528;&#x64CD;&#x4F5C;,&#x5DE5;&#x5177;&#x4E3A;&#x6211;&#x6240;&#x6709;,&#x8FDB;&#x800C;&#x63D0;&#x9AD8;&#x5DE5;&#x4F5C;&#x6548;&#x7387;</li>
-<li>&#x72EC;&#x5F53;&#x4E00;&#x9762;,&#x6700;&#x597D;&#x80FD;&#x591F;&#x72EC;&#x81EA;&#x89E3;&#x51B3;&#x4F7F;&#x7528;<code>git</code> &#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;</li>
-<li>&#x4E3B;&#x52A8;&#x5206;&#x4EAB;&#x7ECF;&#x9A8C;,&#x80FD;&#x591F;&#x6559;&#x4F1A;&#x522B;&#x4EBA;&#x5982;&#x4F55;&#x4F7F;&#x7528; <code>git</code> &#x66F4;&#x4E0A;&#x4E00;&#x5C42;&#x697C;</li>
-</ul>
-<h2 id="&#x63A8;&#x8350;">&#x63A8;&#x8350;</h2>
-<ul>
-<li>&#x6700;&#x597D;&#x7684;&#x6559;&#x7A0B;&#x5728;&#x5B98;&#x7F51; <a href="https://git-scm.com/" target="_blank">git &#x5B98;&#x7F51;</a></li>
-<li>&#x5728;&#x7EBF;&#x7EC3;&#x4E60;&#x5E38;&#x7528;&#x64CD;&#x4F5C; <a href="https://learngitbranching.js.org" target="_blank">Learning Git Branching</a></li>
-<li>&#x5ED6;&#x96EA;&#x5CF0;&#x7684;&#x5B98;&#x65B9;&#x7F51;&#x7AD9; <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank">git&#x6559;&#x7A0B;</a></li>
-</ul>
+                                <h1 id="&#x7248;&#x672C;&#x63A7;&#x5236;">&#x7248;&#x672C;&#x63A7;&#x5236;</h1>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053; <code>git</code> &#x662F;&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;,&#x6240;&#x4EE5;&#x79F0;&#x88AB;&#x63A7;&#x5236;&#x5BF9;&#x8C61;&#x662F;&#x7248;&#x672C;&#x672C;&#x8EAB;&#x6CA1;&#x9519;,&#x4F46;&#x662F;&#x4ECE;<code>git</code> &#x547D;&#x4EE4;&#x4E2D;&#x53D1;&#x73B0;,&#x5E76;&#x6CA1;&#x6709;&#x7248;&#x672C;&#x8FD9;&#x4E2A;&#x540D;&#x8BCD;,&#x6709;&#x7684;&#x53EA;&#x662F;<code>commit</code>,&#x6240;&#x4EE5;&#x524D;&#x51E0;&#x8282;&#x6211;&#x4E00;&#x76F4;&#x79F0;&#x5176;&#x4E3A;<strong>&#x63D0;&#x4EA4;</strong>.</p>
+<p>&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x540E;&#x7EED;&#x6559;&#x7A0B;&#x5F15;&#x53D1;&#x6B67;&#x4E49;,&#x7279;&#x610F;&#x8BF4;&#x660E;,&#x65E0;&#x8BBA;&#x662F;<strong>&#x7248;&#x672C;</strong>&#x4E5F;&#x597D;,<strong>&#x63D0;&#x4EA4;</strong>&#x4E5F;&#x7F62;,&#x90FD;&#x662F;&#x4E2D;&#x6587;&#x7FFB;&#x8BD1;&#x800C;&#x5DF2;,&#x4E0D;&#x5FC5;&#x592A;&#x8FC7;&#x8F83;&#x771F;,&#x76F4;&#x63A5;&#x539F;&#x6C41;&#x539F;&#x5473;&#x79F0;<code>commit</code>&#x4E5F;&#x53EF;&#x4EE5;&#x554A;!</p>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x5DF2;&#x638C;&#x63E1;&#x6682;&#x5B58;&#x533A;&#x7684;&#x76F8;&#x5173;&#x6982;&#x5FF5;,&#x7B80;&#x5355;&#x6765;&#x8BF4;,&#x6682;&#x5B58;&#x533A;&#x5C31;&#x662F;&#x66F4;&#x6539;&#x6587;&#x4EF6;&#x7684;&#x7F13;&#x5B58;&#x96C6;&#x5408;,&#x7B49;&#x5F85;&#x4E00;&#x6B21;&#x6027;&#x5168;&#x90E8;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;,&#x6B63;&#x56E0;&#x5982;&#x6B64;,&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x6279;&#x91CF;&#x64CD;&#x4F5C;&#x76F8;&#x5173;&#x6027;&#x6587;&#x4EF6;,&#x6253;&#x5305;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;,&#x8FD9;&#x6B63;&#x662F;&#x6682;&#x5B58;&#x533A;&#x7684;&#x72EC;&#x7279;&#x9B45;&#x529B;.</p>
+<p>&#x6211;&#x4EEC;&#x53CD;&#x590D;&#x5728;&#x8BF4; <code>git</code> &#x662F;&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;,&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x6982;&#x5FF5;&#x5DF2;&#x7ECF;&#x7C97;&#x7565;&#x8BB2;&#x8FC7;&#x591A;&#x6B21;&#x4E86;,&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x8BB2;&#x4E00;&#x4E0B;&#x7248;&#x672C;&#x63A7;&#x5236;,&#x8C08;&#x8C08; <code>git</code> &#x7684;&#x7248;&#x672C;&#x63A7;&#x5236;&#x548C;&#x5176;&#x4ED6;&#x7CFB;&#x7EDF;&#x7684;&#x7248;&#x672C;&#x63A7;&#x5236;&#x6709;&#x4EC0;&#x4E48;&#x4E0D;&#x540C;,&#x4E3A;&#x4EC0;&#x4E48; <code>git</code> &#x8FD9;&#x4E48;&#x4F18;&#x79C0;,&#x5982;&#x6B64;&#x6D41;&#x884C;?</p>
 
                                 
                                 </section>
@@ -540,12 +528,12 @@
 
             
                 
-                <a href="../base/config.html" class="navigation navigation-prev " aria-label="Previous page: 配置 git">
+                <a href="concept.html" class="navigation navigation-prev " aria-label="Previous page: 基本概念">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="local-repository.html" class="navigation navigation-next " aria-label="Next page: 本地仓库">
+                <a href="../github/usage.html" class="navigation navigation-next " aria-label="Next page: github 教程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -556,7 +544,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"实战 git","level":"2.2.2","depth":2,"next":{"title":"本地仓库","level":"2.2.2.1","depth":3,"path":"git/usage/local-repository.md","ref":"git/usage/local-repository.md","articles":[]},"previous":{"title":"配置 git","level":"2.2.1.2","depth":3,"path":"git/base/config.md","ref":"git/base/config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/about.md","mtime":"2019-03-07T14:30:22.256Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T13:32:21.539Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"版本控制","level":"2.2.2.5","depth":3,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"基本概念","level":"2.2.2.4","depth":3,"path":"git/usage/concept.md","ref":"git/usage/concept.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/version-control.md","mtime":"2019-03-11T13:31:39.097Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T13:32:21.539Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
