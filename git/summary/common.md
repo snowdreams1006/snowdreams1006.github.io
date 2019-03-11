@@ -312,9 +312,14 @@ The body of your message should provide detailed answers to the following questi
 
 Use the imperative ,present tense(`change`,not `changed` or `changes`) to be consistent with generated messages from commands like git merge.
 
+### 版本控制不是一个备份系统 | VERSION CONTROL IS NOT A BACKUP SYSTEM
 
+在远程服务器存有文件的备份是版本控制系统的一个很好副作用.但是你不应该将`VCS` 视为一个备份系统.
+当做版本控制时,你应该注意语义化提交,而不是死记硬背文件.
 
-
+Having your files backed up on a remote server is a nice side effect of having a version control system.
+But you should not use your `VCS` like it was a backup system.
+When doing version control,you should pay attention to committing semantically(see `related changes`) - you shouldn't just cram in files.
 
 
 ---
