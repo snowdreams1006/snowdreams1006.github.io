@@ -342,6 +342,25 @@ Git lets you pick from a lot of different workflows:long-running branches,topic 
 Which one you choose depends on a couple of factors:your project,your overall development and deployment workflows and (maybe most importantly ) on your and your teammate's personal preferences.
 However you choose to work,just make sure to agree on a common workflow that everyone follows.
 
+### 帮助和文档 | HELP & DOCUMENTATION 
+
+命令行下获取 `git` 帮助
+
+```
+git help <command>
+```
+
+Git help on the command line
+
+```
+git help <command>
+```
+
+### 免费在线资源 | FREE ONELINE RESOURCES
+
+- [http://www.git-tower.com/learn](http://www.git-tower.com/learn)
+- [http://rogerdudler.github.io/git-guide/](http://rogerdudler.github.io/git-guide/)
+- [http://www.git-scm.org/](http://www.git-scm.org/)
 
 
 
