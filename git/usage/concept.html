@@ -565,7 +565,46 @@ Untracked files:
 
 no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
 $
-</code></pre><h2 id="&#x56FE;&#x89E3;">&#x56FE;&#x89E3;</h2>
+</code></pre><p>&#x4ECE;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E2D;&#x5F97;&#x77E5;,<code>test.txt</code> &#x6587;&#x4EF6;&#x5DF2;&#x4FEE;&#x6539;(modified),&#x8FD8;&#x6CA1;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;,&#x800C;<code>newFile.txt</code> &#x6587;&#x4EF6;&#x8FD8;&#x6CA1;&#x88AB;&#x8DDF;&#x8E2A;(Untracked).</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x4F7F;&#x7528;<code>git add</code> &#x547D;&#x4EE4;&#x5C06; <code>test.txt</code> &#x548C; <code>newFile.txt</code> &#x90FD;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;,&#x518D;&#x7528; <code>git status</code> &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;:</p>
+<pre><code># &#x6DFB;&#x52A0; test.txt &#x6587;&#x4EF6;
+git add test.txt
+# &#x6DFB;&#x52A0; newFile.txt &#x6587;&#x4EF6;
+git add newFile.txt
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;
+git status
+On branch master
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+    new file:   newFile.txt
+    modified:   test.txt
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+    .DS_Store
+$
+</code></pre><p>&#x73B0;&#x5728;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x548C;&#x4E0A;&#x6B21;&#x5C31;&#x4E0D;&#x4E00;&#x6837;&#x4E86;,&#x663E;&#x793A;&#x7684;&#x662F;&#x5373;&#x5C06;&#x88AB;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5176;&#x4E2D;<code>newFile.txt</code> &#x662F;&#x65B0;&#x6587;&#x4EF6;(new file),<code>test.txt</code> &#x662F;&#x4FEE;&#x6539;&#x6587;&#x4EF6;(modified).</p>
+<p>&#x6240;&#x4EE5;,<code>git add</code> &#x547D;&#x4EE4;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x7684;&#x66F4;&#x6539;&#x6587;&#x4EF6;&#x4E34;&#x65F6;&#x653E;&#x5230;&#x6682;&#x5B58;&#x533A;&#x4E2D;,&#x7136;&#x540E;&#x6267;&#x884C;<code>git commit</code> &#x547D;&#x4EE4;&#x5C31;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027;&#x5C06;&#x6682;&#x5B58;&#x533A;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x63D0;&#x4EA4;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;.</p>
+<pre><code>$ git commit -m &quot;understand how stage works&quot;
+[master a5cd3fb] understand how stage works
+ 2 files changed, 2 insertions(+)
+ create mode 100644 newFile.txt
+$ git status
+On branch master
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+    .DS_Store
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+$
+</code></pre><p>&#x6682;&#x5B58;&#x533A;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;,&#x6240;&#x4EE5;&#x8FD0;&#x884C;<code>git status</code> &#x65F6;,&#x5DE5;&#x4F5C;&#x533A;&#x662F;&#x5E72;&#x51C0;&#x7684;,&#x5373;&#x6B64;&#x65F6;&#x6682;&#x5B58;&#x533A;&#x6CA1;&#x6709;&#x5185;&#x5BB9;&#x4E86;!</p>
+<blockquote>
+<p><code>.DS_Store</code> &#x662F; mac &#x7535;&#x8111;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;,&#x53EF;&#x4EE5;&#x6682;&#x4E0D;&#x7406;&#x4F1A;,&#x7B49;&#x5230;&#x540E;&#x9762;&#x7684;<code>.gitignore</code> &#x6587;&#x4EF6;&#x65F6;&#x518D;&#x5904;&#x7406;.</p>
+</blockquote>
+<h2 id="&#x56FE;&#x89E3;">&#x56FE;&#x89E3;</h2>
 <p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x5DE5;&#x4F5C;&#x533A;,&#x6682;&#x5B58;&#x533A;,&#x7248;&#x672C;&#x5E93;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;:</p>
 <p><img src="../images/relationship.jpg" alt="relationship"></p>
 <p>&#x56FE;&#x4E2D;&#x5DE6;&#x4FA7;&#x662F;&#x5DE5;&#x4F5C;&#x533A;,&#x53F3;&#x4FA7;&#x662F;&#x7248;&#x672C;&#x5E93;,&#x7248;&#x672C;&#x5E93;&#x4E2D;&#x6807;&#x8BB0;<code>index</code> &#x7684;&#x533A;&#x57DF;&#x662F;&#x6682;&#x5B58;&#x533A;,&#x6807;&#x8BB0; <code>master</code> &#x7684;&#x662F; <code>master</code> &#x5206;&#x652F;&#x6240;&#x4EE3;&#x8868;&#x7684;&#x76EE;&#x5F55;&#x6811;.</p>
@@ -648,7 +687,7 @@ $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基本概念","level":"2.2.2.4","depth":3,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"回到过去","level":"2.2.2.3","depth":3,"path":"git/usage/reset.md","ref":"git/usage/reset.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/concept.md","mtime":"2019-03-11T12:28:34.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T12:29:38.298Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基本概念","level":"2.2.2.4","depth":3,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"回到过去","level":"2.2.2.3","depth":3,"path":"git/usage/reset.md","ref":"git/usage/reset.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/concept.md","mtime":"2019-03-11T12:54:52.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T12:56:21.740Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
