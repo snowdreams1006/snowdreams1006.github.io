@@ -292,6 +292,11 @@ Resist the temptation to commit something that you *think* is completed.
 Test it thoroughly to make sure it really is completed and has no side effect (as far as one can tell).
 While committing half-baked thing in your local repository only requires you to forgive yourself,having your code tested is even more important when it comes to publishing/sharing your code with others.
 
+### 编写代码提交信息 | WRITE CODE COMMIT MESSAGE
+
+
+
+
 
 
 
