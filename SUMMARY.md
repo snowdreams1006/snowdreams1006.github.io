@@ -15,6 +15,7 @@
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
+    * [备忘录[译]](git/summary/cheatsheet-translation.md)
     * [常见问题](git/issue/README.md)
 * [gitbook 入门教程](gitbook/README.md)
 * [java8新特性](java8/README.md)
