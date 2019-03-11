@@ -31,6 +31,78 @@
 
 通俗地讲,文件更改可以多次添加到暂存区,即允许多次执行 `git add` 命令,然后一次性提交暂存区的全部更改到版本库,即只需要执行一次 `git commit` 命令即可.
 
+说说个人理解 `git` 为何分成三部分进行版本控制操作,二部分行不行?
+
+答案是肯定的,没有暂存区概念的 `svn` 同样可以进行版本控制,所以 `git` 增加暂存区必然是有存在的意外也就是所谓的好处的.
+
+第一,暂存区的概念允许将本地文件的更改添加进来,也就是说本地文件的更改只有添加到暂存区才能进行下一步的提交更改,所以说那些更改添加到暂存区是由开发者本人决定的,这其实有了一定灵活性,并不是所有的更改都需要被记录!
+
+第二,暂存区作为中间过程,暂存区的内容是打算提交更改的内容,也就是说暂存区可以视为一种临时缓存,用来记录预提交更改.实际工作中,新功能的开发并不是一蹴而就的,是由一系列的更改一起组成的,如果将这些更改分散开来单独提交,那势必会产生很多`commit`,如果等待全部工作完成再提交的话,解决了过多`commit`的问题,但是又遇到新问题就是你可能很长时间才能提交一次更改,失去了版本控制的意义.综上所述,暂存区的出现一种很好的解决方案,它允许将相关性代码添加在一起,方便后续提交更改时提交的都是相关性代码!
+
+第三,作为分布式版本控制系统,不像集中式控制系统那样,对网络强相关,失去网络的 `svn` 是没办法再进行版本控制的,但失去网络的 `git` 仍然可以进行版本控制,只不过不能远程操作了而已,不过这部分也是无可厚非的,正所谓"巧妇难为无米之炊",你总不能要求断网下继续访问百度吧!
+
+好了,我们继续回到 `git` 常用操作上,看一下工作区,暂存区和版本库三者如何协同工作的.
+
+首先,先修改`test.txt`文件.
+
+```
+# 查看 test.txt 文件内容
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+# 追加 how git work 到 test.txt 文件
+$ echo "how git work" >> test.txt
+# 再次查看 test.txt 文件内容
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+$ 
+```
+
+紧接着新建`newFile.txt` 并随便输入内容:
+
+```
+# 查看当前文件夹下全部文件
+$ ls .
+file1.txt   file2.txt   file3.txt   test.txt
+# 创建新文件 newFile.txt
+$ touch newFile.txt
+# 再次查看当前文件夹下全部文件
+$ ls
+file1.txt   file2.txt   file3.txt   newFile.txt test.txt
+# 输入 add newFile.txt 文件内容 到 newFile.txt 文件
+$ echo "add newFile.txt" > newFile.txt
+# 查看 newFile.txt 文件内容
+$ cat newFile.txt
+add newFile.txt
+$ 
+```
+
+现在运行`git status` 命令查看当前文件状态:
+
+```
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   test.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+    newFile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ 
+```
 
 ## 图解
 
