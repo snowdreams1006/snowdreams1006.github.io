@@ -549,20 +549,82 @@ Date:   Thu Mar 7 22:19:00 2019 +0800
 
     add understand how git control version
 </code></pre><p><strong>&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C; <code>git reset --hard HEAD^</code> </strong></p>
+<p>&#x5728;&#x64CD;&#x4F5C;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5148;&#x770B;&#x4E00;&#x4E0B;&#x5F53;&#x524D;&#x6587;&#x4EF6; <code>test.txt</code> &#x7684;&#x5185;&#x5BB9;:</p>
+<pre><code>$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+</code></pre><p>&#x73B0;&#x5728;&#x8BA9;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x56DE;&#x5230;&#x8FC7;&#x53BB;,&#x8FD0;&#x884C; <code>git reset --hard HEAD^</code> &#x547D;&#x4EE4;:</p>
 <pre><code>$ git reset --hard HEAD^
 HEAD is now at 2006f72 add 3 files.
 $
-</code></pre><p>&#x73B0;&#x5728;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;,<code>test.txt</code> &#x7684;&#x5185;&#x5BB9;:</p>
-<p>TODO</p>
-<p>sunpodeMacBook-Pro:demo sunpo$ cat test.txt
+</code></pre><p>&#x73B0;&#x5728;&#x8BA9;&#x6211;&#x4EEC;&#x518D;&#x770B;&#x4E00;&#x4E0B;,<code>test.txt</code> &#x7684;&#x5185;&#x5BB9;&#x6709;&#x6CA1;&#x6709;&#x88AB;&#x8FD8;&#x539F;:</p>
+<pre><code>$ cat test.txt
 git test
-git init</p>
-<p>&#x770B;&#x770B;readme.txt&#x7684;&#x5185;&#x5BB9;&#x662F;&#x4E0D;&#x662F;&#x7248;&#x672C;add distributed&#xFF1A;</p>
-<p>$ cat readme.txt
-Git is a distributed version control system.
-Git is free software.
-&#x679C;&#x7136;&#x88AB;&#x8FD8;&#x539F;&#x4E86;&#x3002;</p>
+git init
+</code></pre><p>&#x679C;&#x7136;&#x88AB;&#x8FD8;&#x539F;&#x4E86;!&#x8FD9;&#x5C31;&#x662F;<code>git</code>&#x7684;&#x795E;&#x5947;&#x4E4B;&#x5904;,&#x8BF4;&#x660E;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x80FD;&#x591F;&#x56DE;&#x5230;&#x8FC7;&#x53BB;&#x4E86;!</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5148;&#x7528;<code>git log</code> &#x67E5;&#x770B;&#x4E0B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;:</p>
+<pre><code>$ git log
+commit 2006f72ffe2ce2278b5974313b8598847cf445e4 (HEAD -&gt; master)
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Mar 5 13:27:46 2019 +0800
+
+    add 3 files.
+
+commit eaa4850070354ae987dc5108a9fd57fda9d64730
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Mar 5 12:18:57 2019 +0800
+
+    add git init
+
+commit 6ad8956bc09a6a62c731711eabe796690aa6471c
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Mar 5 12:17:51 2019 +0800
+
+    add test.txt
+$
+</code></pre><p>&#x548C;&#x4E0A;&#x6B21;&#x76F8;&#x6BD4;,&#x5C11;&#x4E86;&#x4E00;&#x6761;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;:</p>
+<pre><code>commit 36f234a60d858871f040cb0d7ca3e78251df82f7 (HEAD -&gt; master)
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Thu Mar 7 22:19:00 2019 +0800
+
+    add understand how git control version
+</code></pre><p>&#x8FD9;&#x6837;&#x662F;&#x6B63;&#x5E38;&#x7684;,&#x6BD5;&#x7ADF;&#x4F60;&#x5DF2;&#x7ECF;&#x5904;&#x4E8E; <em>&#x8FC7;&#x53BB;</em> &#x4E86;,&#x5F53;&#x7136;&#x770B;&#x4E0D;&#x5230; <em>&#x672A;&#x6765;</em> &#x7684;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;.</p>
+<p>&#x6B63;&#x5982;&#x5F71;&#x89C6;&#x7A7F;&#x8D8A;&#x5267;&#x90A3;&#x6837;,&#x4E3B;&#x4EBA;&#x516C;&#x610F;&#x5916;&#x7A7F;&#x8D8A;&#x8FC7;&#x53BB;,&#x603B;&#x662F;&#x60F3;&#x8981;&#x56DE;&#x5230;&#x672A;&#x6765;,&#x600E;&#x4E48;&#x529E;,&#x6CA1;&#x6709;&#x6CD5;&#x5668;&#x6CA1;&#x6709;&#x672A;&#x6765;&#x7684;&#x786E;&#x5207;&#x76EE;&#x6807;&#x600E;&#x4E48;&#x884C;?!</p>
+<p><code>git</code> &#x7684;&#x7A7F;&#x8D8A;&#x5267;&#x4E5F;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x4E00;&#x79CD;&#x6CD5;&#x5668;,&#x80FD;&#x51C6;&#x786E;&#x544A;&#x8BC9;&#x65F6;&#x5149;&#x673A;&#x628A;&#x6211;&#x4EEC;&#x5E26;&#x5230;&#x5177;&#x4F53;&#x7684;&#x90A3;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;,&#x5F53;&#x7136;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x672A;&#x6765;&#x65F6;&#x523B;,&#x8FC7;&#x53BB;&#x65F6;&#x523B;&#x4E5F;&#x884C;,&#x53CD;&#x6B63;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x51C6;&#x786E;&#x7684;&#x5750;&#x6807;.</p>
+<p>&#x806A;&#x660E;&#x7684;&#x4F60;&#x80AF;&#x5B9A;&#x5DF2;&#x7ECF;&#x731C;&#x6D4B;&#x5230;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x662F;&#x7531;<code>commit</code> &#x62C5;&#x4EFB;&#x7684;,&#x6240;&#x6709;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x8981;&#x627E;&#x5230;&#x672A;&#x6765;&#x7684;&#x65F6;&#x95F4;&#x70B9;,&#x4E5F;&#x5C31;&#x662F;<code>commit</code> id,&#x5C31;&#x662F;&#x90A3;&#x4E00;&#x957F;&#x4E32; hash &#x5B57;&#x7B26;&#x4E32;.</p>
+<p>&#x53EA;&#x8981;&#x5F53;&#x524D;&#x547D;&#x4EE4;&#x884C;&#x7A97;&#x53E3;&#x8FD8;&#x6CA1;&#x6709;&#x5173;&#x95ED;,&#x6162;&#x6162;&#x5F80;&#x4E0A;&#x7FFB;,&#x603B;&#x662F;&#x80FD;&#x627E;&#x5230;&#x5F53;&#x521D;&#x6211;&#x4EEC;&#x7684;&#x7A7F;&#x8D8A;&#x70B9;<code>commit</code>&#x7684;,&#x5373;<code>36f234a60d858871f040cb0d7ca3e78251df82f7</code></p>
+<p><strong>&#x56DE;&#x5230;&#x5F53;&#x521D;&#x63D0;&#x4EA4; <code>git reset --hard &lt;commit&gt;</code> </strong>
+&#x4E07;&#x4E8B;&#x4FF1;&#x5907;&#x53EA;&#x6B20;&#x4E1C;&#x98CE;,&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x5B9A;&#x4F4D;&#x5230;&#x672A;&#x6765;&#x5750;&#x6807;,&#x7B49;&#x5F85;&#x7A7F;&#x8D8A;&#x5230;&#x672A;&#x6765;!</p>
+<pre><code>$ git reset --hard 36f234a60d858871f040cb0d7ca3e78251df82f7
+HEAD is now at 36f234a add understand how git control version
+$
+</code></pre><p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x67E5;&#x770B; <code>test.txt</code> &#x5185;&#x5BB9;:</p>
+<pre><code>$ cat test.txt
+git test
+git init
+git diff
+understand how git control versi
+</code></pre><p>&#x679C;&#x7136;&#x6210;&#x529F;&#x7A7F;&#x8D8A;&#x56DE;&#x5230;&#x672A;&#x6765;!</p>
+<p>&#x4E0A;&#x8FF0;&#x7A7F;&#x8D8A;&#x56DE;&#x5230;&#x672A;&#x6765;&#x7684;&#x573A;&#x666F;&#x662F;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x76EE;&#x6807; <code>commit</code> ,&#x4E5F;&#x5C31;&#x662F;&#x5728;&#x5F53;&#x524D;&#x547D;&#x4EE4;&#x884C;&#x7A97;&#x53E3;&#x6CA1;&#x6709;&#x5173;&#x95ED;&#x7684;&#x60C5;&#x51B5;&#x4E0B;,&#x624B;&#x52A8;&#x67E5;&#x627E;&#x7A7F;&#x8D8A;&#x70B9; <code>commit</code>.&#x90A3;&#x5982;&#x679C;&#x547D;&#x4EE4;&#x884C;&#x7A97;&#x53E3;&#x5DF2;&#x5173;&#x95ED;&#x6216;&#x8005;&#x6CA1;&#x529E;&#x6CD5;&#x901A;&#x8FC7;&#x67E5;&#x9605;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x6765;&#x5B9A;&#x4F4D;&#x7A7F;&#x8D8A;&#x70B9; <code>commit</code> &#x60C5;&#x51B5;&#x4E0B;&#x600E;&#x4E48;&#x529E;&#x5462;?</p>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x662F;&#x6709;&#x8865;&#x6551;&#x63AA;&#x65BD;&#x7684;,<code>git</code> &#x63D0;&#x4F9B;&#x4E86;&#x547D;&#x4EE4;&#x5386;&#x53F2; <code>git reflog</code>,&#x8BB0;&#x5F55;&#x4E86;&#x6211;&#x4EEC;&#x64CD;&#x4F5C;&#x7684;&#x547D;&#x4EE4;&#x5386;&#x53F2;.</p>
+<p><strong>&#x7FFB;&#x9605;&#x5386;&#x53F2;&#x547D;&#x4EE4; <code>git  reflog</code> </strong></p>
+<pre><code>$ git reflog
+36f234a (HEAD -&gt; master) HEAD@{0}: reset: moving to 36f234a60d858871f040cb0d7ca3e78251df82f7
+2006f72 HEAD@{1}: reset: moving to HEAD^
+36f234a (HEAD -&gt; master) HEAD@{2}: commit: add understand how git control version
+2006f72 HEAD@{3}: commit: add 3 files.
+eaa4850 HEAD@{4}: commit: add git init
+6ad8956 HEAD@{5}: commit (initial): add test.txt
+</code></pre><p>&#x786E;&#x5B9E;&#x8BB0;&#x5F55;&#x4E86;&#x6211;&#x4EEC;&#x64CD;&#x4F5C;&#x7684;&#x5173;&#x952E;&#x547D;&#x4EE4;,&#x4ECE;&#x4E0A;&#x8FF0;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;,&#x7A7F;&#x8D8A;&#x70B9; <code>commit</code> &#x6B63;&#x662F;<code>36f234a60d858871f040cb0d7ca3e78251df82f7</code>,&#x5269;&#x4E0B;&#x7684;&#x4E8B;&#x60C5;&#x5E94;&#x8BE5;&#x4E0D;&#x5FC5;&#x591A;&#x8BF4;&#x4E86;&#x5427;!</p>
 <h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<ul>
+<li><code>HEAD</code> &#x662F;&#x5F53;&#x524D;&#x63D0;&#x4EA4;&#x7684;&#x6307;&#x9488;,&#x6307;&#x5411;&#x7684;&#x63D0;&#x4EA4;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x63D0;&#x4EA4;,&#x4E0A;&#x4E00;&#x4E2A;&#x63D0;&#x4EA4;&#x662F; <code>HEAD^</code>,&#x4E0A;&#x4E0A;&#x4E2A;&#x63D0;&#x4EA4;&#x662F; <code>HEAD^^</code>,&#x524D;100&#x4E2A;&#x63D0;&#x4EA4;&#x662F;<code>HEAD~100</code>.</li>
+<li><code>git log</code> &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,<code>git log --pretty=oneline</code> &#x7B80;&#x77ED;&#x5316;&#x8F93;&#x51FA;&#x63D0;&#x4EA4;&#x5386;&#x53F2;.</li>
+<li><code>git reflog</code> &#x67E5;&#x770B;&#x547D;&#x4EE4;&#x5386;&#x53F2;,&#x4EE5;&#x4FBF;&#x6211;&#x4EEC;&#x91CD;&#x62FE;&#x5173;&#x952E;&#x6B65;&#x9AA4;&#x4FE1;&#x606F;.</li>
+<li><code>git reset --hard &lt;commit&gt;</code> &#x7A7F;&#x8D8A;&#x5230;&#x6307;&#x5B9A;&#x63D0;&#x4EA4;,&#x6BD4;&#x5982;&#x4E0A;&#x4E00;&#x4E2A;&#x63D0;&#x4EA4;&#x5C31;&#x662F; <code>git reset --hard HEAD^</code> .</li>
+</ul>
 
                                 
                                 </section>
@@ -606,7 +668,7 @@ Git is free software.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"回到过去","level":"2.2.2.3","depth":3,"next":{"title":"基本概念","level":"2.2.2.4","depth":3,"path":"git/usage/concept.md","ref":"git/usage/concept.md","articles":[]},"previous":{"title":"版本管理","level":"2.2.2.2","depth":3,"path":"git/usage/version-manage.md","ref":"git/usage/version-manage.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/reset.md","mtime":"2019-03-11T07:49:32.056Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T07:50:30.881Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"回到过去","level":"2.2.2.3","depth":3,"next":{"title":"基本概念","level":"2.2.2.4","depth":3,"path":"git/usage/concept.md","ref":"git/usage/concept.md","articles":[]},"previous":{"title":"版本管理","level":"2.2.2.2","depth":3,"path":"git/usage/version-manage.md","ref":"git/usage/version-manage.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/reset.md","mtime":"2019-03-11T11:13:06.533Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T11:14:09.191Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
