@@ -332,6 +332,18 @@ Branching is one of Git's most powerful features-and this is not by accident:qui
 Branches are the perfect tool to help you avoid mixing up different lines of development.
 You should use branches extensively in your development workflows:for new features,bug fixes,ideas...
 
+### 认同工作流 | AGREE ON A WORKFLOW
+
+`Git` 允许你从大量不同的工作流中选择一个:长期运行的分支,主题分支,合并或变,基工作流...
+具体选择哪一个取决于一系列因素:你的项目,你的总体开发和部署工作流和(可能是最重要的)你和你的团队的个人偏好.
+不论你选择哪一个去工作,你需要确保准守一个大家都认同的工作流.
+
+Git lets you pick from a lot of different workflows:long-running branches,topic branches,merge or rebase,git-flow...
+Which one you choose depends on a couple of factors:your project,your overall development and deployment workflows and (maybe most importantly ) on your and your teammate's personal preferences.
+However you choose to work,just make sure to agree on a common workflow that everyone follows.
+
+
+
 
 ---
 
