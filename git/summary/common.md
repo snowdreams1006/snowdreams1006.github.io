@@ -321,6 +321,17 @@ Having your files backed up on a remote server is a nice side effect of having a
 But you should not use your `VCS` like it was a backup system.
 When doing version control,you should pay attention to committing semantically(see `related changes`) - you shouldn't just cram in files.
 
+### 利用分支 | USE BRANCHES
+
+分支是 `git` 最强大的特性之一,这不是偶然.
+从第一天开始快速而简单的分支就是一个核心需求.
+分支是帮助你避免弄混不同开发线的完美工具.
+在你的开发流程中应该广泛使用分支,像新功能,修复 bug,新想法...
+
+Branching is one of Git's most powerful features-and this is not by accident:quick and easy branching was a central requirement from day one.
+Branches are the perfect tool to help you avoid mixing up different lines of development.
+You should use branches extensively in your development workflows:for new features,bug fixes,ideas...
+
 
 ---
 
