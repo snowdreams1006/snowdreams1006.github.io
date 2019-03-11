@@ -485,19 +485,31 @@
                                 
                                 <h1 id="&#x57FA;&#x672C;&#x6982;&#x5FF5;">&#x57FA;&#x672C;&#x6982;&#x5FF5;</h1>
 <p>&#x4E86;&#x89E3;&#x5DE5;&#x4F5C;&#x533A;,&#x6682;&#x5B58;&#x533A;&#x548C;&#x7248;&#x672C;&#x5E93;&#x7684;&#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB;&#x6709;&#x52A9;&#x4E8E;&#x6211;&#x4EEC;&#x66F4;&#x597D;&#x7406;&#x89E3; <code>git</code> &#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;,&#x4E86;&#x89E3;&#x547D;&#x4EE4;&#x7684;&#x64CD;&#x4F5C;&#x610F;&#x56FE;.</p>
+<blockquote>
+<p><code>git</code> &#x548C;&#x5176;&#x4ED6;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x5982; <code>svn</code> &#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5C31;&#x662F;&#x6709;&#x6682;&#x5B58;&#x533A;&#x7684;&#x6982;&#x5FF5;.</p>
+</blockquote>
 <h2 id="&#x57FA;&#x672C;&#x6982;&#x5FF5;">&#x57FA;&#x672C;&#x6982;&#x5FF5;</h2>
 <ul>
-<li><strong>&#x5DE5;&#x4F5C;&#x533A;</strong></li>
+<li><strong>&#x5DE5;&#x4F5C;&#x533A; | Working Directory</strong></li>
 </ul>
 <p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x80FD;&#x770B;&#x5230;&#x7684;&#x76EE;&#x5F55;(&#x4E0D;&#x5305;&#x62EC;&#x9690;&#x85CF;&#x6587;&#x4EF6;),&#x4E5F;&#x5C31;&#x662F;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x521B;&#x5EFA;&#x7684;&#x76EE;&#x5F55;</p>
+<p><img src="../images/working-directory.png" alt="working-directory"></p>
 <ul>
-<li><strong>&#x6682;&#x5B58;&#x533A;</strong> </li>
+<li><strong>&#x6682;&#x5B58;&#x533A; | Stage</strong> </li>
 </ul>
 <p>&#x5DE5;&#x4F5C;&#x533A;&#x4E0B;&#x7684;&#x9690;&#x85CF;<code>.git</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;<code>.index</code>&#x6587;&#x4EF6;,&#x56E0;&#x6B64;&#x4E5F;&#x79F0;&#x4E3A;&#x7D22;&#x5F15;.</p>
 <ul>
-<li><strong>&#x7248;&#x672C;&#x5E93;</strong></li>
+<li><strong>&#x7248;&#x672C;&#x5E93; | Repository</strong></li>
 </ul>
 <p>&#x5DE5;&#x4F5C;&#x533A;&#x4E0B;&#x7684;&#x9690;&#x85CF;&#x76EE;&#x5F55;<code>.git</code>&#x76EE;&#x5F55;</p>
+<p><img src="../images/repository.png" alt="repository"></p>
+<p>&#x901A;&#x8FC7;&#x524D;&#x51E0;&#x8282;&#x6211;&#x4EEC;&#x77E5;&#x9053;,&#x5C06;&#x6587;&#x4EF6;&#x7EB3;&#x5165;&#x7248;&#x672C;&#x63A7;&#x5236;,&#x9700;&#x8981;&#x5206;&#x4E24;&#x6B65;&#x64CD;&#x4F5C;:</p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x6B65; <code>git add</code> &#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5C06;&#x6587;&#x4EF6;&#x66F4;&#x6539;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;.</li>
+<li>&#x7B2C;&#x4E8C;&#x6B65; <code>git commit</code> &#x63D0;&#x4EA4;&#x66F4;&#x6539;,&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5C06;&#x6682;&#x5B58;&#x533A;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x63D0;&#x4EA4;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;.</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>git init</code> &#x547D;&#x4EE4;&#x521D;&#x59CB;&#x5316;&#x521B;&#x5EFA; <code>git</code> &#x4ED3;&#x5E93;&#x65F6;,<code>git</code> &#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x552F;&#x4E00;&#x4E00;&#x4E2A; <code>master</code> &#x5206;&#x652F;,&#x9ED8;&#x8BA4;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x662F;&#x5728; <code>master</code> &#x5206;&#x652F;&#x4E0A;&#x8FDB;&#x884C;&#x7684;,&#x6240;&#x4EE5; <code>git commit</code> &#x5C31;&#x662F;&#x5F83; <code>master</code> &#x5206;&#x652F;&#x4E0A;&#x63D0;&#x4EA4;&#x66F4;&#x6539;&#x7684;.</p>
+<p>&#x901A;&#x4FD7;&#x5730;&#x8BB2;,&#x6587;&#x4EF6;&#x66F4;&#x6539;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;,&#x5373;&#x5141;&#x8BB8;&#x591A;&#x6B21;&#x6267;&#x884C; <code>git add</code> &#x547D;&#x4EE4;,&#x7136;&#x540E;&#x4E00;&#x6B21;&#x6027;&#x63D0;&#x4EA4;&#x6682;&#x5B58;&#x533A;&#x7684;&#x5168;&#x90E8;&#x66F4;&#x6539;&#x5230;&#x7248;&#x672C;&#x5E93;,&#x5373;&#x53EA;&#x9700;&#x8981;&#x6267;&#x884C;&#x4E00;&#x6B21; <code>git commit</code> &#x547D;&#x4EE4;&#x5373;&#x53EF;.</p>
 <h2 id="&#x56FE;&#x89E3;">&#x56FE;&#x89E3;</h2>
 <p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x5DE5;&#x4F5C;&#x533A;,&#x6682;&#x5B58;&#x533A;,&#x7248;&#x672C;&#x5E93;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;:</p>
 <p><img src="../images/relationship.jpg" alt="relationship"></p>
@@ -581,7 +593,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基本概念","level":"2.2.2.4","depth":3,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"回到过去","level":"2.2.2.3","depth":3,"path":"git/usage/reset.md","ref":"git/usage/reset.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/concept.md","mtime":"2019-03-07T13:39:40.430Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T11:14:09.191Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基本概念","level":"2.2.2.4","depth":3,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"回到过去","level":"2.2.2.3","depth":3,"path":"git/usage/reset.md","ref":"git/usage/reset.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/concept.md","mtime":"2019-03-11T12:02:14.452Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T12:02:55.789Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
