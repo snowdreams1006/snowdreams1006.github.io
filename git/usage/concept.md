@@ -104,6 +104,55 @@ no changes added to commit (use "git add" and/or "git commit -a")
 $ 
 ```
 
+从输出结果中得知,`test.txt` 文件已修改(modified),还没添加到暂存区,而`newFile.txt` 文件还没被跟踪(Untracked).
+
+现在我们使用`git add` 命令将 `test.txt` 和 `newFile.txt` 都添加到暂存区,再用 `git status` 查看文件状态:
+
+```
+# 添加 test.txt 文件
+git add test.txt
+# 添加 newFile.txt 文件
+git add newFile.txt
+# 查看文件状态
+git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    new file:   newFile.txt
+    modified:   test.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+$ 
+```
+
+现在输出结果和上次就不一样了,显示的是即将被提交文件,其中` newFile.txt` 是新文件(new file),`test.txt` 是修改文件(modified).
+
+所以,`git add` 命令作用是将需要提交的更改文件临时放到暂存区中,然后执行`git commit` 命令就可以一次性将暂存区的所有内容提交到当前分支.
+
+```
+$ git commit -m "understand how stage works"
+[master a5cd3fb] understand how stage works
+ 2 files changed, 2 insertions(+)
+ create mode 100644 newFile.txt
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ 
+```
+
+暂存区的所有内容提交到版本库,所以运行`git status` 时,工作区是干净的,即此时暂存区没有内容了!
+
+> `.DS_Store` 是 mac 电脑自动生成的文件,可以暂不理会,等到后面的`.gitignore` 文件时再处理.
+
 ## 图解
 
 下图展示了工作区,暂存区,版本库之间的关系:
