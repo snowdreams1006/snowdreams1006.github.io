@@ -294,6 +294,23 @@ While committing half-baked thing in your local repository only requires you to 
 
 ### 编写代码提交信息 | WRITE CODE COMMIT MESSAGE
 
+对你的更改以简短总结进行描述(达到50字符作为准则).
+以包括空白行作为分割下述内容.
+提交信息体应该提供下述问题的详细答案:
+
+- 此次更改的动机是什么?
+- 和上一个实现有什么不同?
+
+使用必要的现在时语态(更改,不是已更改,或者变更)和使用形如 `git merge` 命令生成的信息保持一致.
+
+Begin your message with short summary of your changes(up to 50 characters as a guideline).
+Separate it from the following body by including a blank line.
+The body of your message should provide detailed answers to the following questions:
+
+- What was the motivation for the change?
+- How does it differ from the previous implementation?
+
+Use the imperative ,present tense(`change`,not `changed` or `changes`) to be consistent with generated messages from commands like git merge.
 
 
 
