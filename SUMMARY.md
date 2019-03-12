@@ -14,6 +14,7 @@
         * [回到过去](git/usage/reset.md)
         * [基本概念](git/usage/concept.md)
         * [版本控制](git/usage/version-control.md)
+        * [撤销更改](git/usage/checkout-reset.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
