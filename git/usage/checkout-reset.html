@@ -557,7 +557,82 @@ index d31bdd2..56c76b7 100644
 -git tracks changes
 +git tracks changes of files
 $
-</code></pre><p>&#x8FD8;&#x8BB0;&#x5F97;&#x5728;&#x4E0A;&#x4E00;&#x8282;&#x4E2D;&#x6211;&#x4EEC;&#x8BB2;&#x89E3; <code>git</code> &#x7248;&#x672C;&#x63A7;&#x5236;&#x7684;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;,&#x4E3A;&#x4E86;&#x8BC1;&#x660E; <code>git</code> &#x7BA1;&#x7406;&#x7684;&#x662F;&#x66F4;&#x6539;&#x800C;&#x4E0D;&#x662F;&#x6587;&#x4EF6;&#x672C;&#x8EAB;,&#x6211;&#x4EEC;&#x7279;&#x610F;&#x5728;&#x7B2C;&#x4E8C;&#x6B21;&#x66F4;&#x6539;&#x65F6;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;,&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5148;&#x628A;&#x8FD9;&#x4E2A;&#x9057;&#x7559;&#x95EE;&#x9898;</p>
+</code></pre><p>&#x8FD8;&#x8BB0;&#x5F97;&#x5728;&#x4E0A;&#x4E00;&#x8282;&#x4E2D;&#x6211;&#x4EEC;&#x8BB2;&#x89E3; <code>git</code> &#x7248;&#x672C;&#x63A7;&#x5236;&#x7684;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;,&#x4E3A;&#x4E86;&#x8BC1;&#x660E; <code>git</code> &#x7BA1;&#x7406;&#x7684;&#x662F;&#x66F4;&#x6539;&#x800C;&#x4E0D;&#x662F;&#x6587;&#x4EF6;&#x672C;&#x8EAB;,&#x6211;&#x4EEC;&#x7279;&#x610F;&#x5728;&#x7B2C;&#x4E8C;&#x6B21;&#x66F4;&#x6539;&#x65F6;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;,&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5148;&#x628A;&#x8FD9;&#x4E2A;&#x9057;&#x7559;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x6389;.</p>
+<pre><code># &#x5DE5;&#x4F5C;&#x533A;&#x66F4;&#x6539;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;
+$ git add test.txt
+# &#x6682;&#x5B58;&#x533A;&#x5185;&#x5BB9;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x6CA1;&#x54ED;
+$ git commit -m &quot;git tracks changes of files&quot;
+[master b7bda05] git tracks changes of files
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;
+$ git status
+On branch master
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+    .DS_Store
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+$
+</code></pre><p>&#x73B0;&#x5728;&#x6B63;&#x5728;&#x52A0;&#x73ED;&#x52A0;&#x70B9;&#x5E72;&#x6D3B;,&#x4E00;&#x4E0D;&#x5C0F;&#x5FC3;&#x5C06;&#x5FC3;&#x4E2D;&#x7684;&#x4E0D;&#x6EE1;&#x8868;&#x9732;&#x51FA;&#x6765;&#x4E86;,&#x4E8E;&#x662F;&#x6709;&#x4E86;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;:</p>
+<pre><code># &#x610F;&#x5916;&#x66F4;&#x6539;&#x6B63;&#x662F;&#x8FD9;&#x4E48;&#x72AF;&#x50BB;&#x7684;&#x4E00;&#x53E5;&#x8BDD;
+$ echo &quot;My stupid boss still prefers svn&quot; &gt;&gt; test.txt
+# &#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5185;&#x5BB9;
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+My stupid boss still prefers svn
+$
+</code></pre><p>&#x867D;&#x7136;&#x5F3A;&#x6253;&#x7CBE;&#x795E;,&#x53EF;&#x8FD8;&#x662F;&#x5F88;&#x56F0;,&#x4E8E;&#x662F;&#x6253;&#x7B97;&#x559D;&#x676F;&#x5496;&#x5561;&#x63D0;&#x63D0;&#x795E;,&#x731B;&#x7136;&#x53D1;&#x73B0; <strong>stupid boss</strong> &#x53EF;&#x80FD;&#x4F1A;&#x8BA9;&#x4F60;&#x4E22;&#x6389;&#x8FD9;&#x4E2A;&#x6708;&#x7684;&#x5956;&#x91D1;!</p>
+<p>&#x6697;&#x81EA;&#x5E86;&#x5E78;,&#x5496;&#x5561;&#x679C;&#x7136;&#x662F;&#x4E2A;&#x597D;&#x4E1C;&#x897F;,&#x65E2;&#x7136;&#x53D1;&#x73B0;&#x4E86;&#x95EE;&#x9898;,&#x90A3;&#x5C31;&#x4E8B;&#x4E0D;&#x5B9C;&#x8FDF;&#x8D76;&#x7D27;&#x4FEE;&#x590D;,&#x56E0;&#x4E3A;&#x4E0D;&#x9002;&#x5B9C;&#x7684;&#x8BDD;&#x6B63;&#x662F; <strong>stupid boss</strong> ,&#x6240;&#x4EE5;&#x4F60;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x5220;&#x9664;,&#x4F46;&#x662F;&#x5047;&#x5982;&#x4F60;&#x8BF4;&#x4E86;&#x4E00;&#x5927;&#x5806;&#x4E0D;&#x5408;&#x9002;&#x7684;&#x8BDD;,&#x6216;&#x8005;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x65F6;&#x5F04;&#x9519;&#x4E86;,&#x8FD9;&#x5C31;&#x4E0D;&#x662F;&#x5220;&#x9664;&#x4E00;&#x4E24;&#x884C;&#x90A3;&#x4E48;&#x7B80;&#x5355;&#x4E86;!</p>
+<p>&#x65E2;&#x7136;&#x624B;&#x52A8;&#x89E3;&#x51B3;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;,&#x90A3;<code>git</code> &#x6709;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x65B9;&#x6CD5;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x7C7B;&#x95EE;&#x9898;&#x5462;?&#x5728;&#x5BFB;&#x6C42;<code>git</code> &#x5E2E;&#x52A9;&#x524D;,&#x9996;&#x5148;&#x518D;&#x770B;&#x4E00;&#x4E0B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x72B6;&#x6001;(<code>git status</code>).&#x6B63;&#x6240;&#x8C13;&quot;&#x77E5;&#x5DF1;&#x77E5;&#x5F7C;&#x65B9;&#x80FD;&#x767E;&#x6218;&#x767E;&#x80DC;&quot;,&#x8FD8;&#x662F;&#x770B;&#x4E00;&#x773C;&#x5427;!</p>
+<pre><code># &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;
+$ git status
+On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    modified:   test.txt
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+    .DS_Store
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+$
+</code></pre><p><code>git</code> &#x4E0D;&#x8D1F;&#x4F17;&#x671B;,&#x679C;&#x7136;&#x7ED9;&#x4E86;&#x6211;&#x4EEC;&#x5E0C;&#x671B;,<code>(use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</code> &#x8FD9;&#x53E5;&#x8BDD;&#x7684;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E22;&#x5F03;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x66F4;&#x6539;!</p>
+<p>&#x8111;&#x6D77;&#x4E2D;&#x5728;&#x5FEB;&#x901F;&#x56DE;&#x5FC6;&#x4E00;&#x4E0B;&#x5DE5;&#x4F5C;&#x533A;,&#x6682;&#x5B58;&#x533A;,&#x7248;&#x672C;&#x5E93;&#x4E09;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;,&#x5176;&#x5B9E;<code>git checkout -- &lt;file&gt;</code> &#x547D;&#x4EE4;&#x7684;&#x610F;&#x601D;&#x662F;&#x7528;&#x6682;&#x5B58;&#x533A;&#x7684;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x6389;&#x5DE5;&#x4F5C;&#x533A;&#x5185;&#x5BB9;,&#x56E0;&#x6B64;&#x4E5F;&#x5C31;&#x662F;&#x4E22;&#x5F03;&#x6389;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x66F4;&#x6539;&#x4E86;.</p>
+<p>&#x4E8B;&#x4E0D;&#x5B9C;&#x8FDF;,&#x8FD0;&#x884C; <code>git checkout -- &lt;file&gt;</code> &#x547D;&#x4EE4;&#x8BD5;&#x8BD5;&#x770B;&#x5427;:</p>
+<pre><code># &#x4E22;&#x5F03;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x66F4;&#x6539;
+$ git checkout -- test.txt
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5185;&#x5BB9;: My stupid boss still prefers svn &#x7EC8;&#x4E8E;&#x4E0D;&#x89C1;&#x4E86;
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;
+$ git status
+On branch master
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+    .DS_Store
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+$
+</code></pre><p>&#x4E00;&#x987F;&#x64CD;&#x4F5C;&#x731B;&#x5982;&#x864E;,&#x64A4;&#x9500;&#x6389;&#x610F;&#x5916;&#x66F4;&#x6539;,&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x6B21;&#x7248;&#x672C;&#x63A7;&#x5236;&#x72B6;&#x6001;,&#x4E16;&#x754C;&#x5982;&#x6B64;&#x7F8E;&#x597D;...</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;: <code>git checkout -- &lt;file&gt;</code> &#x4E2D;&#x7684; <code>--</code> &#x81F3;&#x5173;&#x91CD;&#x8981;,&#x6CA1;&#x6709;&#x5B83;&#x5C31;&#x662F;<strong>&#x5207;&#x6362;&#x5206;&#x652F;</strong>&#x4E86;!</p>
+</blockquote>
 <ul>
 <li><strong>&#x573A;&#x666F;&#x4E8C;: &#x5DE5;&#x4F5C;&#x533A;&#x51FA;&#x73B0;&#x610F;&#x5916;&#x66F4;&#x6539;&#x4E14;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;,&#x4F46;&#x5C1A;&#x672A;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;</strong></li>
 </ul>
@@ -611,7 +686,7 @@ $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"撤销更改","level":"2.2.2.6","depth":3,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"版本控制","level":"2.2.2.5","depth":3,"path":"git/usage/version-control.md","ref":"git/usage/version-control.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/checkout-reset.md","mtime":"2019-03-12T03:13:13.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T08:41:27.007Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"撤销更改","level":"2.2.2.6","depth":3,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"版本控制","level":"2.2.2.5","depth":3,"path":"git/usage/version-control.md","ref":"git/usage/version-control.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/checkout-reset.md","mtime":"2019-03-13T02:28:38.703Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T02:29:17.038Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
