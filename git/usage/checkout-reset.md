@@ -8,7 +8,7 @@
 
 - **场景一: 工作区出现意外更改且尚未添加到暂存区**
 
-北京时间现在是凌晨两点半,你正在赶制一份工作报告,尽管心中一万个不愿意,还是不得不做.
+北京时间现在是晚上10点钟,你正在赶制一份工作报告,尽管心中一万个不愿意,还是不得不做.
 
 开始模拟意外更改前,先查看一下 `test.txt` 文件相关信息:
 
@@ -152,7 +152,129 @@ $
 
 - **场景二: 工作区出现意外更改且已经添加到暂存区,但尚未提交到版本库**
 
+时间一分一秒过去了,转眼间已经11点了,假设你不但写了一些胡话,还添加到暂存区了(`git add`).可想而知,这次意外比**场景一**要糟糕.
 
+```
+# 模拟正常提交(不然岂不是从场景一到场景二你什么都没做,那还能叫做赶制工作报告吗?!)
+$ echo "someone prefers svn,but i don't care it" >> test.txt
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+someone prefers svn,but i don't care it
+$ git add test.txt
+$ git commit -m "normal commit"
+[master ab1cbd2] normal commit
+ 1 file changed, 1 insertion(+)
+
+# 意外更改的前夕 
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+someone prefers svn,but i don't care it
+
+# 意外更改内容: my teammate is stupid too.
+$ echo "my teammate is stupid too." >> test.txt
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+someone prefers svn,but i don't care it
+my teammate is stupid too.
+
+# 意外操作: 将意外更改内容提交到暂存区
+$ git add test.txt 
+```
+
+不过庆幸的是,在提交到版本库(`git commit`)之前及时发现问题,还是看一下现在的文件状态(`git status`)吧!
+
+```
+# 查看文件状态: 救命稻草 (use "git reset HEAD <file>..." to unstage)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    modified:   test.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+
+$ 
+```
+
+`git` 同样告诉我们,可以使用 `git reset HEAD <file>` 命令撤销暂存区更改.
+
+其实 `git reset HEAD <file>` 命令是用版本库的内容替换掉暂存区的内容,也就是说原来暂存区的内容已被丢弃了!
+
+所以说这个命令并不会影响工作区内容,不如我们现在再看一眼工作区内容,方便执行 `git reset HEAD <file>` 命令后证实我们的结论.
+
+```
+# 查看文件内容: my teammate is stupid too.
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+someone prefers svn,but i don't care it
+my teammate is stupid too.
+$ 
+```
+
+迫不及待执行 `git reset HEAD <file>` 命令,先睹为快!
+
+```
+# 救命稻草: 版本库内容替换掉暂存区内容
+$ git reset HEAD test.txt
+Unstaged changes after reset:
+M   test.txt
+
+# 效果: 目标文件已修改但未添加到暂存区
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   test.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+# 目标文件内容: 仍然保持不变
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+someone prefers svn,but i don't care it
+my teammate is stupid too.
+$ 
+```
+
+现在**场景二**已经退化成**场景一**了,目标文件发生意外更改但还没添加到暂存区,如何撤销工作区更改,请参考**场景一**方法.
+
+> 执行 `git checkout -- test.txt` 命令即可
 
 - **场景三: 工作区出现意外更改不仅已添加到暂存区,还已提交到版本库,但尚未推送到远程仓库**
 
