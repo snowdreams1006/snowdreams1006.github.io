@@ -274,13 +274,138 @@ $
 
 现在**场景二**已经退化成**场景一**了,目标文件发生意外更改但还没添加到暂存区,如何撤销工作区更改,请参考**场景一**方法.
 
-> 执行 `git checkout -- test.txt` 命令即可
+> 提示:  `git checkout -- test.txt` 
 
 - **场景三: 工作区出现意外更改不仅已添加到暂存区,还已提交到版本库,但尚未推送到远程仓库**
 
+时间不紧不慢地已经到凌晨了,困意越来越浓,洋洋洒洒写下几千字的工作报告,总算是写完了,添加到暂存区(`git add`),提交到版本库(`git commit`)一气呵成,等等,好像有什么不对劲,难免会犯糊涂,这不又发生意外了!
 
+```
+# 衔接场景二
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+someone prefers svn,but i don't care it
+
+# 正常提交一
+$ echo "i love working,work makes me happy" >> test.txt
+$ git add test.txt
+$ git commit -m "encourage myself"
+[master a44cf7a] encourage myself
+ 1 file changed, 1 insertion(+)
+
+# 正常提交二
+$ echo "fix 110 bugs,so happy" >> test.txt
+$ git add test.txt
+$ git commit -m "fix bugs"
+[master c66399d] fix bugs
+ 1 file changed, 1 insertion(+)
+sunpodeMacBook-Pro:demo sunpo$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+# 意外更改: hate to work overtime
+$ echo "hate to work overtime" >> test.txt
+$ git add test.txt
+$ git commit -m "test.txt"
+[master c965724] test.txt
+ 1 file changed, 1 insertion(+)
+ $ 
+```
+
+天妒英才,加班加点做事情,本想赢得老板的赏识,没想到最后一句话"hate to work overtime"让所有的努力都付之一炬,怎么办?
+
+死马当活马医,还是照例看看`git status` 能提供什么建议吧!
+
+```
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ 
+```
+
+没有提供任何意见能帮助我们撤销意外更改,先别慌,容我深思三秒钟...
+
+既然意外更改已经提交到版本库,那么应该用什么内容替换版本库内容呢?有了,既然最新版本库不可用,那上一个版本库内容可用的啊,完全可以用上一个版本库内容替换最新版本库内容,真乃"天生我材必有用"!
+
+```
+# 当前文件内容: 闯祸的"hate to work overtime"
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+someone prefers svn,but i don't care it
+i love working,work makes me happy
+fix 110 bugs,so happy
+hate to work overtime
+
+# 版本回退: 回到过去假装什么都没发生过
+$ git reset --hard HEAD^
+HEAD is now at c66399d fix bugs
+sunpodeMacBook-Pro:demo sunpo$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+# 岁月静好,一切似乎都没发生过
+$ cat test.txt
+git test
+git init
+git diff
+understand how git control version
+how git work
+git tracks changes of files
+someone prefers svn,but i don't care it
+i love working,work makes me happy
+fix 110 bugs,so happy
+
+# 当前文件状态
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    .DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ 
+```
+
+详情请参考[回到过去](./reset.md),时空穿越之旅就是这么方便哈!
+
+> 提示: `git reset --hard HEAD^`
 
 - **场景四: 工作区出现意外更改不仅已添加到暂存区,还提交到版本库,还已推送到远程仓库**
 
+场景一到场景三都是本地仓库,所有的文件更改只能本机访问,小伙伴也好,上级领导也罢都无法查看到你本地更改,但是一旦你推送到远程仓库了,那么其他人就能查看你的更改了!
+
+正常的提交更改还好,怕就怕这种"stupid boss"被领导看到就不好了,那应该怎么办?暂时还是自求多福吧!
 
 ## 小结
+
+- 丢弃工作区更改: `git checkout -- <file>` 
+- 丢弃暂存区更改: `git reset HEAD <file>` 
+- 丢弃本地版本库更改: `git reset --hard HEAD^` 
+- 丢弃远程版本库更改: 自求多福
+
