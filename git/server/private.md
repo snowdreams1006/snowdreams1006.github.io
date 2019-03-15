@@ -31,6 +31,15 @@ groupadd git
 
 # 新增 git 用户并归属于 git 用户组
 useradd git -g git
+
+# 禁用 git 用户登录 shell
+编辑 /etc/passwd
+
+git:x:1001:1001:,,,:/home/git:/bin/bash
+
+更改为
+
+git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
 ```
 
 ## 收集 git 公钥
@@ -58,6 +67,8 @@ touch .ssh/authorized_keys
 chmod 744 .ssh/authorized_keys
 ```
 
+如果团队规模不大,那么上述方案完全可行,如果团队规模几百上千人,通过手动收集每个人的公钥再上传到服务器统一管理就有点力不从心了,这时候推荐 [gitosis](https://github.com/res0nat0r/gitosis) 决这一问题.
+
 ## 初始化 git 仓库
 
 同样我们和`github` 网站类比,在 `github` 创建仓库时都会在当前账号下创建项目,完整的访问路径大概是这样的: `git@github.com:snowdreams1006/git-demo.git`,从中我们可以看出项目仓库都有一个前缀即命名空间,这和上一步操作是不是很类似,上一步收集 `git` 公钥时我们也有统一的目录,这次也不例外.
@@ -77,15 +88,24 @@ chown git:git repos/
 # 切换到 repos 目录
 cd repos
 
-# 初始化 git 仓库
+# 初始化 git 裸仓库
 git init --bare git-demo.git
 
 # 更改 git-demo.git 仓库属主
 chown -R git:git git-demo.git
 ```
 
+> 这里搭建git服务器仅为了共享,不考虑用户直接登录该服务器上使用 git 将其作为工作区这一情况
+
 经过上述操作,我们成功在远程服务器部署了 `git` 服务,并且创建了 `git-demo` 测试项目,实际访问路径大概是这样的
 `git@snowdreams1006.cn:/home/git/repos/git-demo.git`
+
+## 访问授权
+
+总是存在一些公司不仅视源代码为生命,还视员工为窃贼,抑或是深受`svn`毒害,要求在版本控制系统中设置一套完善的权限控制体系,具体到每个账号对每个项目的每个目录是否有读写权限.
+然而 `git` 天生并不支持权限控制,这一点和其出身有关,本来就是为了开源而生,并不关心所有人的提交.
+不过这并不意味着 `git` 无法实现权限控制功能,因为 `git` 支持钩子函数(`hook`) ,所以在服务器端编写一系列的脚本控制提交行为,从而实现权限控制.详情请参考 [gitolite](https://github.com/sitaramc/gitolite)
+
 
 ## 本地克隆远程仓库
 
@@ -100,3 +120,9 @@ git clone git@snowdreams1006.cn:/home/git/repos/git-demo.git
 > git-指的是 git 用户,snowdreams1006.cn-指的是远程主机域名或ip,/home/git/repos-指的是 git 仓库的目录,git-demo.git-指的是项目名称
 
 现在我们已经成功搭建好自己的 `git`私服了,是不是很简单呢?有没有对 `git` 和 `github` 进一步理解?欢迎大家一起探讨!
+
+## 小结
+
+- `git` 私服就是无 web 界面的简化版 `github`
+- 小团队人工收集用户公钥,大团队使用 [gitosis](https://github.com/res0nat0r/gitosis)
+- 实现类似 `svn` 那样的权限控制请使用 [gitolite](https://github.com/sitaramc/gitolite)
