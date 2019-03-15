@@ -22,7 +22,7 @@
 
 ## 创建分支
 
-创建 `dev` 分支,列出分支.
+创建 `dev` 分支,列出分支已验证是否创建成功
 
 ```
 # 创建分支
@@ -38,5 +38,128 @@ $
 
 ![git-on-master.png](../images/git-on-master.png)
 
+## 切换分支
 
+切换到新分支以便在分支上开展工作
 
+```
+# 切换分支
+$ git checkout dev
+Switched to branch 'dev'
+# 列出分支
+$ git branch
+* dev
+  master
+$
+```
+
+![git-on-dev.png](../images/git-on-dev.png)
+
+现在,我们在 `dev` 分支上奋笔疾书,先后提交两个版本后完成分支开发工作:
+
+```
+# 查看当前文件列表
+$ ls
+LICENSE     README.md   test.txt
+# 查看目标文件内容
+$ cat test.txt
+add test.txt
+see https://snowdreams1006.github.io/git/usage/remote-repository.html
+
+# 第一个版本: learn git branch
+$ echo "learn git branch" >> test.txt
+$ git add test.txt
+$ git commit -m "learn git branch"
+[dev 9c30e50] learn git branch
+ 1 file changed, 1 insertion(+)
+
+# 第二个版本: see https://snowdreams1006.github.io/git/usage/branch-overview.html
+$ echo "see https://snowdreams1006.github.io/git/usage/branch-overview.html" >> test.txt
+$ git add test.txt
+sunpodeMacBook-Pro:git-demo sunpo$ git status
+On branch dev
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    modified:   test.txt
+
+$ git commit -m "see https://snowdreams1006.github.io/git/usage/branch-overview.html"
+[dev 413a4d1] see https://snowdreams1006.github.io/git/usage/branch-overview.html
+ 1 file changed, 1 insertion(+)
+```
+
+![git-on-dev-commit1.png](../images/git-on-dev-commit1.png)
+![git-on-dev-commit2.png](../images/git-on-dev-commit2.png)
+
+此时,再从 `dev` 分支切换回 `master` 分支,合并`dev`分支前看一下当前文件内容:
+
+```
+# 切换回 master 分支
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+sunpodeMacBook-Pro:git-demo sunpo$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+# 查看当前文件列表
+$ ls
+LICENSE     README.md   test.txt
+# 查看文件内容: 无 dev 分支更改
+$ cat test.txt
+add test.txt
+see https://snowdreams1006.github.io/git/usage/remote-repository.html
+$ 
+```
+
+![git-checkout-master.png](../images/git-checkout-master.png)
+
+## 合并分支
+
+切换回 `master` 分支并没有我们在 `dev` 分支的更改,因为两条时间线是独立的,现在合并 `dev` 分支,再看一下当前文件内容:
+
+```
+# 合并 dev 分支
+$ git merge dev
+Updating b3d8193..413a4d1
+Fast-forward
+ test.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+# 查看文件内容: 已经存在 dev 分支的更改!
+$ cat test.txt
+add test.txt
+see https://snowdreams1006.github.io/git/usage/remote-repository.html
+learn git branch
+see https://snowdreams1006.github.io/git/
+```
+
+![git-merge-dev.png](../images/git-merge-dev.png)
+
+## 删除分支
+
+合并分支后,`dev` 分支的历史使命已经完成,应该及时清空不必要分支.
+
+```
+# 删除 dev 分支
+$ git branch -d dev
+Deleted branch dev (was 413a4d1).
+
+# 列出当前分支: 只剩下 master 分支
+$ git branch
+* master
+$ 
+```
+
+![git-branch-d-dev.png](../images/git-branch-d-dev.png)
+
+以上场景包括了分支的常用操作,创建分支(`git branch <name>`),切换分支(`git checkout <name>`),删除分支(`git branch -d <name>`)一系列操作十分流畅,因此 `git` 鼓励我们大量使用分支!
+
+## 小结
+
+- 列出分支 `git branch`
+- 创建分支 `git branch <name>` 
+- 切换分支 `git checkout <name>`
+- 创建并切换分支 `git checkout -b <name>`
+- 合并指定分支到当前分支 `git merge <name>`
+- 删除分支 `git branch -d <name>`   
