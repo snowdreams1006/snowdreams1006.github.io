@@ -17,6 +17,8 @@
         * [撤销更改](git/usage/checkout-reset.md)
         * [删除文件](git/usage/delete.md)
         * [远程仓库](git/usage/remote-repository.md)
+        * [分支管理](git/usage/branch-manage.md)
+            * [分支总览](git/usage/branch-overview.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
