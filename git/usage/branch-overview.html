@@ -579,7 +579,7 @@
 <p><img src="../images/git-branch.gif" alt="git-branch.gif"></p>
 <p>&#x4E0B;&#x9762;&#x8BE6;&#x89E3;&#x5206;&#x652F;&#x76F8;&#x5173;&#x547D;&#x4EE4;</p>
 <h2 id="&#x521B;&#x5EFA;&#x5206;&#x652F;">&#x521B;&#x5EFA;&#x5206;&#x652F;</h2>
-<p>&#x521B;&#x5EFA; <code>dev</code> &#x5206;&#x652F;,&#x5217;&#x51FA;&#x5206;&#x652F;.</p>
+<p>&#x521B;&#x5EFA; <code>dev</code> &#x5206;&#x652F;,&#x5217;&#x51FA;&#x5206;&#x652F;&#x5DF2;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x521B;&#x5EFA;&#x6210;&#x529F;</p>
 <pre><code># &#x521B;&#x5EFA;&#x5206;&#x652F;
 $git branch dev
 # &#x5217;&#x51FA;&#x5206;&#x652F;
@@ -591,6 +591,103 @@ $
 <p>* <code>master</code> &#x524D;&#x9762;&#x7684; * &#x6807;&#x8BB0;&#x8868;&#x660E;&#x5F53;&#x524D;&#x4ECD;&#x7136;&#x5904;&#x4E8E; <code>master</code> &#x5206;&#x652F;</p>
 </blockquote>
 <p><img src="../images/git-on-master.png" alt="git-on-master.png"></p>
+<h2 id="&#x5207;&#x6362;&#x5206;&#x652F;">&#x5207;&#x6362;&#x5206;&#x652F;</h2>
+<p>&#x5207;&#x6362;&#x5230;&#x65B0;&#x5206;&#x652F;&#x4EE5;&#x4FBF;&#x5728;&#x5206;&#x652F;&#x4E0A;&#x5F00;&#x5C55;&#x5DE5;&#x4F5C;</p>
+<pre><code># &#x5207;&#x6362;&#x5206;&#x652F;
+$ git checkout dev
+Switched to branch &apos;dev&apos;
+# &#x5217;&#x51FA;&#x5206;&#x652F;
+$ git branch
+* dev
+  master
+$
+</code></pre><p><img src="../images/git-on-dev.png" alt="git-on-dev.png"></p>
+<p>&#x73B0;&#x5728;,&#x6211;&#x4EEC;&#x5728; <code>dev</code> &#x5206;&#x652F;&#x4E0A;&#x594B;&#x7B14;&#x75BE;&#x4E66;,&#x5148;&#x540E;&#x63D0;&#x4EA4;&#x4E24;&#x4E2A;&#x7248;&#x672C;&#x540E;&#x5B8C;&#x6210;&#x5206;&#x652F;&#x5F00;&#x53D1;&#x5DE5;&#x4F5C;:</p>
+<pre><code># &#x67E5;&#x770B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5217;&#x8868;
+$ ls
+LICENSE     README.md   test.txt
+# &#x67E5;&#x770B;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x5185;&#x5BB9;
+$ cat test.txt
+add test.txt
+see https://snowdreams1006.github.io/git/usage/remote-repository.html
+
+# &#x7B2C;&#x4E00;&#x4E2A;&#x7248;&#x672C;: learn git branch
+$ echo &quot;learn git branch&quot; &gt;&gt; test.txt
+$ git add test.txt
+$ git commit -m &quot;learn git branch&quot;
+[dev 9c30e50] learn git branch
+ 1 file changed, 1 insertion(+)
+
+# &#x7B2C;&#x4E8C;&#x4E2A;&#x7248;&#x672C;: see https://snowdreams1006.github.io/git/usage/branch-overview.html
+$ echo &quot;see https://snowdreams1006.github.io/git/usage/branch-overview.html&quot; &gt;&gt; test.txt
+$ git add test.txt
+sunpodeMacBook-Pro:git-demo sunpo$ git status
+On branch dev
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+    modified:   test.txt
+
+$ git commit -m &quot;see https://snowdreams1006.github.io/git/usage/branch-overview.html&quot;
+[dev 413a4d1] see https://snowdreams1006.github.io/git/usage/branch-overview.html
+ 1 file changed, 1 insertion(+)
+</code></pre><p><img src="../images/git-on-dev-commit1.png" alt="git-on-dev-commit1.png">
+<img src="../images/git-on-dev-commit2.png" alt="git-on-dev-commit2.png"></p>
+<p>&#x6B64;&#x65F6;,&#x518D;&#x4ECE; <code>dev</code> &#x5206;&#x652F;&#x5207;&#x6362;&#x56DE; <code>master</code> &#x5206;&#x652F;,&#x5408;&#x5E76;<code>dev</code>&#x5206;&#x652F;&#x524D;&#x770B;&#x4E00;&#x4E0B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5185;&#x5BB9;:</p>
+<pre><code># &#x5207;&#x6362;&#x56DE; master &#x5206;&#x652F;
+$ git checkout master
+Switched to branch &apos;master&apos;
+Your branch is up to date with &apos;origin/master&apos;.
+sunpodeMacBook-Pro:git-demo sunpo$ git status
+On branch master
+Your branch is up to date with &apos;origin/master&apos;.
+
+nothing to commit, working tree clean
+# &#x67E5;&#x770B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5217;&#x8868;
+$ ls
+LICENSE     README.md   test.txt
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5185;&#x5BB9;: &#x65E0; dev &#x5206;&#x652F;&#x66F4;&#x6539;
+$ cat test.txt
+add test.txt
+see https://snowdreams1006.github.io/git/usage/remote-repository.html
+$
+</code></pre><p><img src="../images/git-checkout-master.png" alt="git-checkout-master.png"></p>
+<h2 id="&#x5408;&#x5E76;&#x5206;&#x652F;">&#x5408;&#x5E76;&#x5206;&#x652F;</h2>
+<p>&#x5207;&#x6362;&#x56DE; <code>master</code> &#x5206;&#x652F;&#x5E76;&#x6CA1;&#x6709;&#x6211;&#x4EEC;&#x5728; <code>dev</code> &#x5206;&#x652F;&#x7684;&#x66F4;&#x6539;,&#x56E0;&#x4E3A;&#x4E24;&#x6761;&#x65F6;&#x95F4;&#x7EBF;&#x662F;&#x72EC;&#x7ACB;&#x7684;,&#x73B0;&#x5728;&#x5408;&#x5E76; <code>dev</code> &#x5206;&#x652F;,&#x518D;&#x770B;&#x4E00;&#x4E0B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5185;&#x5BB9;:</p>
+<pre><code># &#x5408;&#x5E76; dev &#x5206;&#x652F;
+$ git merge dev
+Updating b3d8193..413a4d1
+Fast-forward
+ test.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5185;&#x5BB9;: &#x5DF2;&#x7ECF;&#x5B58;&#x5728; dev &#x5206;&#x652F;&#x7684;&#x66F4;&#x6539;!
+$ cat test.txt
+add test.txt
+see https://snowdreams1006.github.io/git/usage/remote-repository.html
+learn git branch
+see https://snowdreams1006.github.io/git/
+</code></pre><p><img src="../images/git-merge-dev.png" alt="git-merge-dev.png"></p>
+<h2 id="&#x5220;&#x9664;&#x5206;&#x652F;">&#x5220;&#x9664;&#x5206;&#x652F;</h2>
+<p>&#x5408;&#x5E76;&#x5206;&#x652F;&#x540E;,<code>dev</code> &#x5206;&#x652F;&#x7684;&#x5386;&#x53F2;&#x4F7F;&#x547D;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;,&#x5E94;&#x8BE5;&#x53CA;&#x65F6;&#x6E05;&#x7A7A;&#x4E0D;&#x5FC5;&#x8981;&#x5206;&#x652F;.</p>
+<pre><code># &#x5220;&#x9664; dev &#x5206;&#x652F;
+$ git branch -d dev
+Deleted branch dev (was 413a4d1).
+
+# &#x5217;&#x51FA;&#x5F53;&#x524D;&#x5206;&#x652F;: &#x53EA;&#x5269;&#x4E0B; master &#x5206;&#x652F;
+$ git branch
+* master
+$
+</code></pre><p><img src="../images/git-branch-d-dev.png" alt="git-branch-d-dev.png"></p>
+<p>&#x4EE5;&#x4E0A;&#x573A;&#x666F;&#x5305;&#x62EC;&#x4E86;&#x5206;&#x652F;&#x7684;&#x5E38;&#x7528;&#x64CD;&#x4F5C;,&#x521B;&#x5EFA;&#x5206;&#x652F;(<code>git branch &lt;name&gt;</code>),&#x5207;&#x6362;&#x5206;&#x652F;(<code>git checkout &lt;name&gt;</code>),&#x5220;&#x9664;&#x5206;&#x652F;(<code>git branch -d &lt;name&gt;</code>)&#x4E00;&#x7CFB;&#x5217;&#x64CD;&#x4F5C;&#x5341;&#x5206;&#x6D41;&#x7545;,&#x56E0;&#x6B64; <code>git</code> &#x9F13;&#x52B1;&#x6211;&#x4EEC;&#x5927;&#x91CF;&#x4F7F;&#x7528;&#x5206;&#x652F;!</p>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<ul>
+<li>&#x5217;&#x51FA;&#x5206;&#x652F; <code>git branch</code></li>
+<li>&#x521B;&#x5EFA;&#x5206;&#x652F; <code>git branch &lt;name&gt;</code> </li>
+<li>&#x5207;&#x6362;&#x5206;&#x652F; <code>git checkout &lt;name&gt;</code></li>
+<li>&#x521B;&#x5EFA;&#x5E76;&#x5207;&#x6362;&#x5206;&#x652F; <code>git checkout -b &lt;name&gt;</code></li>
+<li>&#x5408;&#x5E76;&#x6307;&#x5B9A;&#x5206;&#x652F;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F; <code>git merge &lt;name&gt;</code></li>
+<li>&#x5220;&#x9664;&#x5206;&#x652F; <code>git branch -d &lt;name&gt;</code>   </li>
+</ul>
 
                                 
                                 </section>
@@ -634,7 +731,7 @@ $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"分支总览","level":"2.2.2.9.1","depth":4,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"分支管理","level":"2.2.2.9","depth":3,"path":"git/usage/branch-manage.md","ref":"git/usage/branch-manage.md","articles":[{"title":"分支总览","level":"2.2.2.9.1","depth":4,"path":"git/usage/branch-overview.md","ref":"git/usage/branch-overview.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/branch-overview.md","mtime":"2019-03-15T08:25:10.004Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-15T08:26:06.620Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"分支总览","level":"2.2.2.9.1","depth":4,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"分支管理","level":"2.2.2.9","depth":3,"path":"git/usage/branch-manage.md","ref":"git/usage/branch-manage.md","articles":[{"title":"分支总览","level":"2.2.2.9.1","depth":4,"path":"git/usage/branch-overview.md","ref":"git/usage/branch-overview.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/branch-overview.md","mtime":"2019-03-15T11:58:48.616Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-15T12:00:01.344Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
