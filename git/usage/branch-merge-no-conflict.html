@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>删除文件 · 雪之梦</title>
+        <title>无冲突合并 · 雪之梦</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="remote-repository.html" />
+    <link rel="next" href="../github/usage.html" />
     
     
-    <link rel="prev" href="checkout-reset.html" />
+    <link rel="prev" href="branch-overview.html" />
     
 
     </head>
@@ -331,7 +331,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.2.7" data-path="delete.html">
+        <li class="chapter " data-level="2.2.2.7" data-path="delete.html">
             
                 <a href="delete.html">
             
@@ -384,7 +384,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2.9.2" data-path="branch-merge-no-conflict.html">
+        <li class="chapter active" data-level="2.2.2.9.2" data-path="branch-merge-no-conflict.html">
             
                 <a href="branch-merge-no-conflict.html">
             
@@ -610,7 +610,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >删除文件</a>
+        <a href="../.." >无冲突合并</a>
     </h1>
 </div>
 
@@ -625,123 +625,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5220;&#x9664;&#x6587;&#x4EF6;">&#x5220;&#x9664;&#x6587;&#x4EF6;</h1>
-<p>&#x56DE;&#x5FC6;&#x4E00;&#x4E0B;&#x6587;&#x4EF6;&#x7684;&#x5E38;&#x89C1;&#x64CD;&#x4F5C;,&#x65B0;&#x589E;&#x6587;&#x4EF6;,&#x4FEE;&#x6539;&#x6587;&#x4EF6;,&#x5220;&#x9664;&#x6587;&#x4EF6;&#x7B49;,&#x65B0;&#x589E;&#x548C;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x90FD;&#x5355;&#x72EC;&#x8BA8;&#x8BBA;&#x8FC7;,&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x5220;&#x9664;&#x6587;&#x4EF6;.</p>
-<p>&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x8BF4;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x8FD8;&#x4E0D;&#x7B80;&#x5355;&#x554A;,&#x76F4;&#x63A5; <code>rm -rf &lt;file&gt;</code> &#x5373;&#x53EF;,&#x4F46;&#x662F;&#x8FD9;&#x4EC5;&#x4EC5;&#x662F;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x88AB;&#x5220;&#x9664;&#x4E86;,&#x5BF9;&#x4E8E; <code>git</code> &#x6765;&#x8BF4;,&#x6587;&#x4EF6;&#x5E76;&#x6CA1;&#x6709;&#x88AB;&#x5220;&#x9664;.</p>
-<p>&#x8FD8;&#x8BB0;&#x5F97;&#x6211;&#x4EEC;&#x5F00;&#x7BC7;&#x4ECB;&#x7ECD;<code>git</code> &#x65F6;&#x5C31;&#x8BF4;&#x8FC7;,<code>&#x4E00;&#x5207;&#x64CD;&#x4F5C;&#x7686;&#x7248;&#x672C;</code> ,&#x5BF9;&#x4E8E;&#x65B0;&#x589E;&#x662F;&#x4E00;&#x4E2A;&#x7248;&#x672C;,&#x4FEE;&#x6539;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x7248;&#x672C;,&#x5C31;&#x8FDE;&#x5220;&#x9664;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x7248;&#x672C;.</p>
-<p>&#x4E0B;&#x9762;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B; <code>git</code> &#x4E2D;&#x5982;&#x4F55;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5427;!</p>
-<h2 id="&#x80CC;&#x666F;">&#x80CC;&#x666F;</h2>
-<pre><code># &#x67E5;&#x770B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5217;&#x8868;
-$ ls
-file1.txt   file2.txt   file3.txt   newFile.txt test.txt
-# &#x65B0;&#x5EFA;&#x5F85;&#x5220;&#x9664;&#x6587;&#x4EF6;
-$ touch delete.txt
-# &#x518D;&#x6B21;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5217;&#x8868;,&#x786E;&#x4FDD;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#x6210;&#x529F;
-$ ls
-delete.txt  file2.txt   newFile.txt
-file1.txt   file3.txt   test.txt
-# &#x67E5;&#x770B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x65B0;&#x6587;&#x4EF6; `delete.txt` &#x8FD8;&#x6CA1;&#x88AB;&#x8DDF;&#x8E2A;
-$ git status
-On branch master
-Untracked files:
-  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-
-    .DS_Store
-    delete.txt
-
-nothing added to commit but untracked files present (use &quot;git add&quot; to track)
-# &#x6DFB;&#x52A0;&#x65B0;&#x6587;&#x4EF6; `delete.txt`
-$ git add delete.txt
-# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x5DF2;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;,&#x5F85;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;
-$ git status
-On branch master
-Changes to be committed:
-  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
-
-    new file:   delete.txt
-
-Untracked files:
-  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-
-    .DS_Store
-
-# &#x63D0;&#x4EA4;&#x65B0;&#x6587;&#x4EF6; `delete.txt`
-$ git commit -m &quot;add delete.txt&quot;
-[master 7df386a] add delete.txt
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 delete.txt
-# &#x518D;&#x6B21;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x5DF2;&#x7ECF;&#x6CA1;&#x6709;&#x65B0;&#x6587;&#x4EF6; `delete.txt` &#x7684;&#x66F4;&#x6539;&#x4FE1;&#x606F;
-$ git status
-On branch master
-Untracked files:
-  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-
-    .DS_Store
-
-nothing added to commit but untracked files present (use &quot;git add&quot; to track)
-$
-</code></pre><p>&#x4EE5;&#x4E0A;&#x64CD;&#x4F5C;,&#x6211;&#x4EEC;&#x7B80;&#x5355;&#x521B;&#x5EFA; <code>delete.txt</code> &#x6587;&#x4EF6;,&#x6DFB;&#x52A0;(<code>git add</code>)&#x5E76;&#x63D0;&#x4EA4;(<code>git commit</code>) &#x8BE5;&#x6587;&#x4EF6;,&#x5B8C;&#x6210;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#x540E;,&#x5F00;&#x59CB;&#x5220;&#x9664;&#x6587;&#x4EF6;!</p>
-<pre><code># &#x5220;&#x9664;&#x524D;&#x6587;&#x4EF6;&#x5217;&#x8868;
-$ ls
-delete.txt  file2.txt   newFile.txt
-file1.txt   file3.txt   test.txt
-# &#x5220;&#x9664;&#x521A;&#x521A;&#x521B;&#x5EFA;&#x7684;&#x6587;&#x4EF6; `delete.txt`
-$ rm delete.txt
-# &#x5220;&#x9664;&#x540E;&#x6587;&#x4EF6;&#x5217;&#x8868;
-$ ls
-file1.txt   file2.txt   file3.txt   newFile.txt test.txt
-# &#x5F53;&#x524D;&#x6587;&#x4EF6;&#x72B6;&#x6001;: `delete.txt` &#x6587;&#x4EF6;&#x5DF2;&#x88AB;&#x5220;&#x9664;,&#x4E14;&#x672A;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;
-$ git status
-On branch master
-Changes not staged for commit:
-  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
-  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
-
-    deleted:    delete.txt
-
-Untracked files:
-  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-
-    .DS_Store
-
-no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
-$
-</code></pre><p>&#x672C;&#x5730;&#x5220;&#x9664; <code>delete.txt</code> &#x6587;&#x4EF6;&#x540E;,&#x518D;&#x6B21;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001; <code>git status</code> &#x53D1;&#x73B0; <code>git</code> &#x7ED9;&#x4E86;&#x6211;&#x4EEC;&#x4E24;&#x6761;&#x5EFA;&#x8BAE;,&#x5176;&#x4E2D;&#x4E00;&#x6761; <code>git checkout -- &lt;file&gt;</code> &#x6211;&#x4EEC;&#x5F88;&#x719F;&#x6089;,&#x5C31;&#x662F;&#x4E22;&#x5F03;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x66F4;&#x6539;,&#x6B64;&#x65F6;&#x6B64;&#x666F;&#x4E0B;&#x5982;&#x679C;&#x4E22;&#x5F03;&#x5220;&#x9664;&#x64CD;&#x4F5C;,&#x76F8;&#x5F53;&#x4E8E;&#x64A4;&#x9500;&#x5220;&#x9664;,&#x96BE;&#x602A;&#x8BF4;&#x5220;&#x9664;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x5462;!</p>
-<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x91CD;&#x70B9;&#x6765;&#x770B;&#x7B2C;&#x4E00;&#x6761;&#x5EFA;&#x8BAE; <code>git add/rm &lt;file&gt;</code> ,<code>rm</code> &#x662F; <code>remove</code> &#x5355;&#x8BCD;&#x7684;&#x7F29;&#x5199;,&#x5373;&#x5220;&#x9664;&#x6587;&#x4EF6;.</p>
-<pre><code># &#x5220;&#x9664;&#x6587;&#x4EF6;
-$ git rm delete.txt
-rm &apos;delete.txt&apos;
-# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: `delete.txt` &#x6587;&#x4EF6;&#x5F85;&#x63D0;&#x4EA4;
-$ git status
-On branch master
-Changes to be committed:
-  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
-
-    deleted:    delete.txt
-
-Untracked files:
-  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-
-    .DS_Store
-
-# &#x63D0;&#x4EA4;&#x6587;&#x4EF6;
-$ git commit -m &quot;remove delete.txt&quot;
-[master 6298070] remove delete.txt
- 1 file changed, 0 insertions(+), 0 deletions(-)
- delete mode 100644 delete.txt
-# &#x518D;&#x6B21;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;
-$ git status
-On branch master
-Untracked files:
-  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-
-    .DS_Store
-
-nothing added to commit but untracked files present (use &quot;git add&quot; to track)
-$
-</code></pre><p>&#x5220;&#x9664;&#x6587;&#x4EF6;&#x548C;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x7C7B;&#x4F3C;,&#x90FD;&#x662F;&#x4E00;&#x6B21;<code>commit</code> ,&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7684;&#x4EFB;&#x4F55;&#x66F4;&#x6539;&#x90FD;&#x8981;&#x6DFB;&#x52A0;&#x5230;&#x6682;&#x5B58;&#x533A;,&#x7136;&#x540E;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;.</p>
+                                <h1 id="&#x65E0;&#x51B2;&#x7A81;&#x5408;&#x5E76;">&#x65E0;&#x51B2;&#x7A81;&#x5408;&#x5E76;</h1>
+<p>&#x5982;&#x679C;&#x8DB3;&#x591F;&#x5E78;&#x8FD0;&#x7684;&#x8BDD;,&#x56E2;&#x961F;&#x6210;&#x5458;&#x4E92;&#x4E0D;&#x5F71;&#x54CD;,&#x5F7C;&#x6B64;&#x76F8;&#x5B89;&#x65E0;&#x4E8B;,&#x5927;&#x5BB6;&#x5404;&#x81EA;&#x57FA;&#x4E8E; <code>master</code> &#x5206;&#x652F;&#x7684;&#x67D0;&#x4E2A; <code>commit</code> &#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x5206;&#x652F;,&#x5E73;&#x65F6;&#x5728;&#x5206;&#x652F;&#x4E0A;&#x72EC;&#x7ACB;&#x5DE5;&#x4F5C;,&#x7B49;&#x5230;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#x518D;&#x5408;&#x5E76; <code>merge</code> &#x5230; <code>master</code> &#x5206;&#x652F;,&#x8FD9;&#x6837;&#x4E00;&#x6837; <code>master</code> &#x4F5C;&#x4E3A;&#x5404;&#x4E2A;&#x529F;&#x80FD;&#x7684;&#x96C6;&#x5927;&#x6210;&#x8005;,&#x6700;&#x7EC8;&#x5B8C;&#x6210;&#x9879;&#x76EE;.</p>
+<h2 id="&#x9ED8;&#x8BA4;&#x5408;&#x5E76;-git-merge">&#x9ED8;&#x8BA4;&#x5408;&#x5E76; <code>git merge</code></h2>
+<h2 id="&#x63D0;&#x4EA4;&#x5408;&#x5E76;-git-merge---no-ff">&#x63D0;&#x4EA4;&#x5408;&#x5E76; <code>git merge --no-ff</code></h2>
 <h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
-<p>&#x5220;&#x9664;&#x6587;&#x4EF6;&#x548C;&#x65B0;&#x589E;&#x6587;&#x4EF6;&#x7C7B;&#x4F3C;&#x903B;&#x8F91;,<code>git rm</code> &#x5220;&#x9664;&#x6587;&#x4EF6;&#x540E;,&#x4F9D;&#x7136;&#x9700;&#x8981; <code>git commit</code> &#x63D0;&#x4EA4;&#x7248;&#x672C;.</p>
 
                                 
                                 </section>
@@ -769,12 +657,12 @@ $
 
             
                 
-                <a href="checkout-reset.html" class="navigation navigation-prev " aria-label="Previous page: 撤销更改">
+                <a href="branch-overview.html" class="navigation navigation-prev " aria-label="Previous page: 分支总览">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="remote-repository.html" class="navigation navigation-next " aria-label="Next page: 远程仓库">
+                <a href="../github/usage.html" class="navigation navigation-next " aria-label="Next page: github 教程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -785,7 +673,7 @@ $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"删除文件","level":"2.2.2.7","depth":3,"next":{"title":"远程仓库","level":"2.2.2.8","depth":3,"path":"git/usage/remote-repository.md","ref":"git/usage/remote-repository.md","articles":[]},"previous":{"title":"撤销更改","level":"2.2.2.6","depth":3,"path":"git/usage/checkout-reset.md","ref":"git/usage/checkout-reset.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/delete.md","mtime":"2019-03-13T07:14:42.084Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-16T11:47:31.866Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"无冲突合并","level":"2.2.2.9.2","depth":4,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"分支总览","level":"2.2.2.9.1","depth":4,"path":"git/usage/branch-overview.md","ref":"git/usage/branch-overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/branch-merge-no-conflict.md","mtime":"2019-03-16T11:47:00.652Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-16T11:47:31.866Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
