@@ -22,6 +22,7 @@
         * [远程仓库](git/usage/remote-repository.md)
         * [分支管理](git/usage/branch-manage.md)
             * [分支总览](git/usage/branch-overview.md)
+            * [无冲突合并](git/usage/branch-merge-no-conflict.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
