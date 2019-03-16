@@ -1,4 +1,4 @@
-# markdown 快速入门
+# markdown 快速入门 
 
 `markdown` 不止是 `HTML` 的简化版,更重要的是 `txt` 的升级版,`word` 的轻量版,是笔记的最佳载体.
 
