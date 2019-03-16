@@ -6,6 +6,7 @@
 * [markdown 快速入门](markdown/README.md)
     * [掘金入门指南](markdown/juejin.md)
     * [慕课网语法演示](markdown/imooc.md)
+    * [HBuilderX语法帮助](markdown/HBuilderX.md)
 * [git 入门教程](git/README.md)
     * [初识 git](git/base/about.md)
         * [安装 git](git/base/install.md)
