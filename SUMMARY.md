@@ -4,6 +4,7 @@
 
 ## 学习笔记
 * [markdown 快速入门](markdown/README.md)
+    * [掘金入门指南](markdown/juejin.md)
 * [git 入门教程](git/README.md)
     * [初识 git](git/base/about.md)
         * [安装 git](git/base/install.md)
