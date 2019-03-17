@@ -84,53 +84,35 @@
 
 ![juejin-snowdreams1006.png](./images/juejin-snowdreams1006.png)
 
-### 慕课网手记 [https://www.imooc.com/article](https://www.imooc.com/article)
+### 7. 慕课网手记 [https://www.imooc.com/article](https://www.imooc.com/article)
 
-`慕课网` 有着丰富的免费教学视频,手记功能只是慕课网的一个单独模块,正所谓"成也萧何败萧何",相比其他专业博客平台还有着不少的差距!
+丰富的免费教学视频,正所谓"成也萧何败萧何",手记模块相比其他专业平台还有着不少的差距,`SEO` 一般.
 
 ![imooc-index.png](./images/imooc-index.png)
 
-#### 近期文章
-
-文章需要审核,然而周六周日无人审核,预期浏览量应该也很少,手记功能更多像是为了学习教学视频而写的笔记,不太像专门写的博客.
+文章需要审核,手记功能更像是配套教学视频而诞生的笔记,不太像专门博客.
 
 ![imooc-snowdreams1006.png](./images/imooc-snowdreams1006.png)
 
-#### 小结
+### 8. 微信公众号 [https://mp.weixin.qq.com/](https://mp.weixin.qq.com/)
 
-新产品需要磨练,配合教学视频的手机更受欢迎,毕竟可以为付费视频引流嘛!
-
-### 微信公众号 [https://mp.weixin.qq.com/](https://mp.weixin.qq.com/)
-
-微信公众号目前仅支持富文本编辑器,而平时写博客时大多采用 `markdown` 格式,要么重新排版布局,要么另辟蹊径.笔者采用 `markdown here` 插件将 `markdown` 格式转换成富文本格式,然后微调其中的链接和图片,基本上就完成公众号布局了.
+目前仅支持富文本编辑器,依靠粉丝流量,碎片化阅读体验,`SEO` 几乎没有.
 
 ![wechat-index.png](./images/wechat-index.png)
 
-#### 近期文章
-
-由于微信公众号的闭环,如果没有粉丝,那肯定没有阅读量.
+需要花费精力运营公众号,限定当天阅读量和"在看"数,如果没有粉丝,那肯定没有阅读量.
 
 ![wechat-snowdreams1006.png](./images/wechat-snowdreams1006.png)
 
-#### 小结
+### 9. B站专栏 [https://www.bilibili.com/](https://www.bilibili.com/)
 
-自媒体的天堂
-
-### B站专栏 [https://www.bilibili.com/](https://www.bilibili.com/)
-
-偶然机会发现B站开通了专栏可以投稿,于是乎投稿了博客,噩梦开始,不支持`markdown`,要求各种头图,审核,修改限制...
+弹幕视频网站,开通专栏投稿,目前仅支持富文本编辑器,不适合博客,`SEO` 可忽略.
 
 ![bilibili-index.png](./images/bilibili-index.png)
 
-#### 近期文章
-
-适合放松,不适合学习性质博客,既来之,则安之.
+适合视频教程,暂不适合博客且投稿专栏限制较多,毕竟不是专业做博客的平台,谁让我误入了呢!
 
 ![bilibili-snowdreams1006.png](./images/bilibili-snowdreams1006.png)
-
-#### 小结
-
-适合弹幕视频
 
 ## 总结
 
