@@ -54,7 +54,7 @@
 
 ### 开源中国 [https://www.oschina.net/](https://www.oschina.net/)
 
-值得一说的是,有中国版的 `github` -- `码云` ,文章如果被官方推荐了,阅读量会有保证,否则寥寥无几!
+值得一说的是,是中国版的 `github`,文章如果被官方推荐了,阅读量会有保证,否则寥寥无几!
 
 ![oschina-index.png](./images/oschina-index.png)
 
@@ -85,10 +85,44 @@
 
 `简书` 的**日更计划**配合**简书钻**和**简书贝**等虚拟货币鼓励持续创作,即使初期没什么阅读量,坚持下去也能优化下搜索引擎!
 
+### 思否 [https://segmentfault.com/](https://segmentfault.com/)
+
+有人说,`segmentfault` 是中国版的 `StackOverFlow`,专注于**技术问答**社区.
+
+![segmentfault-index.png](./images/segmentfault-index.png)
+
+#### 近期博客
+
+作者本人限制推荐和浏览,首次发布专栏需要审核,阅读量基本上5个左右,强调点赞数量.
+
+![segmentfault-snowdreams1006.png](./images/segmentfault-snowdreams1006.png)
+
+#### 小结
+
+界面清新美观,值得写技术文章.
+
+### 掘金 [https://juejin.im/timeline](https://juejin.im/timeline)
+
+是近年来异军突起的博客平台,页面布局类似微博那种时间流模式,**掘金小册子**是重要变现方式之一!
+
+![juejin-index.png](./images/juejin-index.png)
+
+#### 近期博客
+
+优质博客有机会推荐首页,文章阅读量一般,重点展示点赞量,但 `seo` 很差,基本搜不要掘金文章.
+
+![juejin-snowdreams1006.png](./images/juejin-snowdreams1006.png)
+
+#### 小结
+
+值得写优质文章,**掘金小册子**是一款不错的产品.
+
 ## 总结
 
 - `csdn` 阅读量稳定
 - `博客园` 样式陈旧,无手机端
 - `开源中国` 适合优质博客
 - `简书` 文艺性创作
+- `思否` 技术问答社区
+- `掘金` 博客平台
 
