@@ -26,11 +26,11 @@
 
 ### 1. CSDN [https://www.csdn.net/](https://www.csdn.net/)
 
-`SEO` 优化不错,阅读量稳定,网页端阅读体验一般,手机端干净清爽,对新手比较友好,阅读量相对稳定.
+`SEO` 优化不错,阅读量稳定,网页端阅读体验一般,手机端干净清爽,阅读量相对稳定.
 
 ![csdn-index.png](./images/csdn-index.png)
 
-不限制作者本人点赞,统计本人浏览记录,突出阅读数和评论数.
+不限制作者本人点赞,统计本人浏览记录,突出阅读数,其次是评论数和点赞数.
 
 ![csdn-snowdreams1006.png](./images/csdn-snowdreams1006.png)
 
@@ -40,7 +40,7 @@
 
 ![cnblogs-index.png](./images/cnblogs-index.png)
 
-限制作者本人推荐,不统计本人浏览记录,突出推荐数和阅读量,其次是评论数.
+限制作者本人推荐,不统计本人浏览记录,突出推荐数,其次是阅读量和评论数.
 
 ![cnblogs-snowdreams1006.png](./images/cnblogs-snowdreams1006.png)
 
@@ -50,26 +50,19 @@
 
 ![oschina-index.png](./images/oschina-index.png)
 
-限制作者本人点赞,不统计本人浏览记录,突出访问量和评论数,其次是点赞数.
+限制作者本人点赞,不统计本人浏览记录,突出访问量,其次评论数和点赞数.
 
 ![oschina-snowdreams1006.png](./images/oschina-snowdreams1006.png)
 
-### 简书 [https://www.jianshu.com/](https://www.jianshu.com/)
+### 4. 简书 [https://www.jianshu.com/](https://www.jianshu.com/)
 
-严格来讲,`简书` 并不是技术博客平台,更多的是自媒体平台,不过越来越多的程序员喜欢在 `简书` 上创作,也不失是一种选择.
+文艺范的自媒体平台,简洁优美文艺性十足,`SEO` 优化不错,**日更活动**鼓励持续更新,**简书钻**和**简书贝**等虚拟货币增添写作乐趣!
 
 ![jianshu-index.png](./images/jianshu-index.png)
 
-#### 近期博客
-
-`简书` 鼓励创作,**日更活动**更是吸引不少人持续更新,更有**简书钻**和**简书贝**等虚拟货币增添不少乐趣!
-同样限制作者本人点赞和浏览,没人点赞的话,阅读量基本没有!
+限制作者本人点赞,不统计本人浏览记录,突出简书钻,其次阅读量,评论数和点赞数.
 
 ![jianshu-snowdreams1006.png](./images/jianshu-snowdreams1006.png)
-
-#### 小结
-
-`简书` 的**日更计划**配合**简书钻**和**简书贝**等虚拟货币鼓励持续创作,即使初期没什么阅读量,坚持下去也能优化下搜索引擎!
 
 ### 思否 [https://segmentfault.com/](https://segmentfault.com/)
 
