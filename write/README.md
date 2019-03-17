@@ -44,21 +44,15 @@
 
 ![cnblogs-snowdreams1006.png](./images/cnblogs-snowdreams1006.png)
 
-### 开源中国 [https://www.oschina.net/](https://www.oschina.net/)
+### 3. 开源中国 [https://www.oschina.net/](https://www.oschina.net/)
 
-值得一说的是,是中国版的 `github`,文章如果被官方推荐了,阅读量会有保证,否则寥寥无几!
+国内版 `github` ,高质量文章可能会被推荐至首页,否则阅读量几乎为零.
 
 ![oschina-index.png](./images/oschina-index.png)
 
-#### 近期博客
-
-限制本人点赞和浏览,无缘首页,因此无人问津,权当一种渠道了.
+限制作者本人点赞,不统计本人浏览记录,突出访问量和评论数,其次是点赞数.
 
 ![oschina-snowdreams1006.png](./images/oschina-snowdreams1006.png)
-
-#### 小结
-
-没什么技术含量的文章或者同质化文章基本上不会被推荐首页的,没什么阅读量权当自娱自乐了!
 
 ### 简书 [https://www.jianshu.com/](https://www.jianshu.com/)
 
