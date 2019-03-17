@@ -30,7 +30,7 @@
 
 ![csdn-index.png](./images/csdn-index.png)
 
-不限制作者本人点赞,统计本人浏览记录,突出阅读数,其次是评论数和点赞数.
+不限制作者本人点赞,重复统计本人浏览记录,突出**阅读数**,其次是评论数和点赞数.
 
 ![csdn-snowdreams1006.png](./images/csdn-snowdreams1006.png)
 
@@ -40,7 +40,7 @@
 
 ![cnblogs-index.png](./images/cnblogs-index.png)
 
-限制作者本人推荐,不统计本人浏览记录,突出推荐数,其次是阅读量和评论数.
+限制作者本人推荐,不统计本人浏览记录,突出**推荐数**,其次是阅读量和评论数.
 
 ![cnblogs-snowdreams1006.png](./images/cnblogs-snowdreams1006.png)
 
@@ -50,7 +50,7 @@
 
 ![oschina-index.png](./images/oschina-index.png)
 
-限制作者本人点赞,不统计本人浏览记录,突出访问量,其次评论数和点赞数.
+限制作者本人点赞,不统计本人浏览记录,突出**访问量**,其次评论数和点赞数.
 
 ![oschina-snowdreams1006.png](./images/oschina-snowdreams1006.png)
 
@@ -60,41 +60,29 @@
 
 ![jianshu-index.png](./images/jianshu-index.png)
 
-限制作者本人点赞,不统计本人浏览记录,突出简书钻,其次阅读量,评论数和点赞数.
+限制作者本人点赞,不统计本人浏览记录,突出**简书钻**,其次阅读量,评论数和点赞数.
 
 ![jianshu-snowdreams1006.png](./images/jianshu-snowdreams1006.png)
 
-### 思否 [https://segmentfault.com/](https://segmentfault.com/)
+### 5. 思否 [https://segmentfault.com/](https://segmentfault.com/)
 
-有人说,`segmentfault` 是中国版的 `StackOverFlow`,专注于**技术问答**社区.
+国内版`Stack OverFlow`,专注于**技术问答**,界面风格绿色清新,`SEO` 优化不错,但忽略阅读量.
 
 ![segmentfault-index.png](./images/segmentfault-index.png)
 
-#### 近期博客
-
-作者本人限制推荐和浏览,首次发布专栏需要审核,阅读量基本上5个左右,强调点赞数量.
+限制作者本人点赞,不统计本人浏览记录,首次发布专栏需要审核,突出**投票数**,其次是收藏数,最后是阅读数.
 
 ![segmentfault-snowdreams1006.png](./images/segmentfault-snowdreams1006.png)
 
-#### 小结
+### 6. 掘金 [https://juejin.im/timeline](https://juejin.im/timeline)
 
-界面清新美观,值得写技术文章.
-
-### 掘金 [https://juejin.im/timeline](https://juejin.im/timeline)
-
-是近年来异军突起的博客平台,页面布局类似微博那种时间流模式,**掘金小册子**是重要变现方式之一!
+异军突起,风头正盛,时间流布局,**掘金小册子**是一大亮点,但`SEO` 很差!
 
 ![juejin-index.png](./images/juejin-index.png)
 
-#### 近期博客
-
-优质博客有机会推荐首页,文章阅读量一般,重点展示点赞量,但 `seo` 很差,基本搜不要掘金文章.
+不限制作者本人点赞,不重复统计本人浏览记录,突出**点赞数**,其次是评论数,最后是阅读量.
 
 ![juejin-snowdreams1006.png](./images/juejin-snowdreams1006.png)
-
-#### 小结
-
-值得写优质文章,**掘金小册子**是一款不错的产品.
 
 ### 慕课网手记 [https://www.imooc.com/article](https://www.imooc.com/article)
 
