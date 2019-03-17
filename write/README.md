@@ -133,6 +133,38 @@
 
 新产品需要磨练,配合教学视频的手机更受欢迎,毕竟可以为付费视频引流嘛!
 
+### 微信公众号 [https://mp.weixin.qq.com/](https://mp.weixin.qq.com/)
+
+微信公众号目前仅支持富文本编辑器,而平时写博客时大多采用 `markdown` 格式,要么重新排版布局,要么另辟蹊径.笔者采用 `markdown here` 插件将 `markdown` 格式转换成富文本格式,然后微调其中的链接和图片,基本上就完成公众号布局了.
+
+![wechat-index.png](./images/wechat-index.png)
+
+#### 近期文章
+
+由于微信公众号的闭环,如果没有粉丝,那肯定没有阅读量.
+
+![wechat-snowdreams1006.png](./images/wechat-snowdreams1006.png)
+
+#### 小结
+
+自媒体的天堂
+
+### B站专栏 [https://www.bilibili.com/](https://www.bilibili.com/)
+
+偶然机会发现B站开通了专栏可以投稿,于是乎投稿了博客,噩梦开始,不支持`markdown`,要求各种头图,审核,修改限制...
+
+![bilibili-index.png](./images/bilibili-index.png)
+
+#### 近期文章
+
+适合放松,不适合学习性质博客,既来之,则安之.
+
+![bilibili-snowdreams1006.png](./images/bilibili-snowdreams1006.png)
+
+#### 小结
+
+适合弹幕视频
+
 ## 总结
 
 - `csdn` 阅读量稳定
@@ -141,6 +173,8 @@
 - `简书` 文艺性创作
 - `思否` 技术问答社区
 - `掘金` 博客平台
-- `慕课网手记` 免费教学视频的配套笔记
+- `慕课网手记` 教学视频配套笔记
+- `微信公众号` 个人公众号
+- `B站` 我大概是疯了
 
 
