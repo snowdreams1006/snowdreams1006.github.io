@@ -277,4 +277,9 @@ fun();
 那考考你,你猜当前文档是如何书写的,看看你的答案和我实际书写规则是否一致呢!
 >答案请参考[snowdreams1006.github.io](https://github.com/snowdreams1006/snowdreams1006.github.io)
 
+## 参考文献
+
+- [https://daringfireball.net/projects/markdown/syntax](https://daringfireball.net/projects/markdown/syntax)
+- [http://www.markdown.cn/](http://www.markdown.cn-/)
+
 
