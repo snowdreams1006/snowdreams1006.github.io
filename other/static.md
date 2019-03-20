@@ -36,7 +36,7 @@
     + [git 入门教程之分支管理](https://blog.csdn.net/weixin_38171180/article/details/88655760) 阅读数`10`,点赞`1`,评论数`0`,收藏数`0`.
 
 |CSDN博客|阅读数|点赞|评论数|收藏|
-|:-|:-:|:-:|:-:|:-:|:-:|
+|:-|:-:|:-:|:-:|:-:|
 |[git 入门教程之远程仓库](https://blog.csdn.net/weixin_38171180/article/details/88633659)|26|1|0|0|
 |[git 入门教程之删除文件](https://blog.csdn.net/weixin_38171180/article/details/88615229)|42|1|0|0|  
 |[git 入门教程之撤销更改](https://blog.csdn.net/weixin_38171180/article/details/88594097)|48|1|0|0|
@@ -61,7 +61,7 @@
     + [git 入门教程之分支管理](https://www.cnblogs.com/snowdreams1006/p/10556818.html) 推荐`0`,反对`0`,阅读`7`,评论`0`.
 
 |博客园随笔|推荐|反对|阅读|评论|
-|:-|:-:|:-:|:-:|:-:|:-:|
+|:-|:-:|:-:|:-:|:-:|
 |[git 入门教程之远程仓库](https://www.cnblogs.com/snowdreams1006/p/10550550.html)|0|0|21|0|
 |[git 入门教程之删除文件](https://www.cnblogs.com/snowdreams1006/p/10545870.html)|0|0|92|0|
 |[git 入门教程之撤销更改](https://www.cnblogs.com/snowdreams1006/p/10541362.html)|1|0|102|0|
@@ -79,12 +79,36 @@
 |[git 入门教程之1分钟快速了解 git](https://blog.csdn.net/weixin_38171180/article/details/88231246)|0|0|12|0|
 |[markdown 快速入门](https://www.cnblogs.com/snowdreams1006/p/10505902.html)|0|0|172|0|
 
+- [掘金][juejin] 
+  * `16`原创,`4`关注者,19`点赞数,`269`阅读数,`0`评论数.
+  * 今日更新
+    + [git 入门教程之分支总览](https://juejin.im/post/5c9050076fb9a070cd5692c7) 点赞`1`,阅读`4`,评论`0`.
+    + [git 入门教程之分支管理](https://juejin.im/post/5c904fc26fb9a070c40ac2a2) 点赞`1`,阅读`5`,评论`0`.
 
+|掘金专栏|点赞|阅读|评论|
+|:-|:-:|:-:|:-:|
+|[git 入门教程之远程仓库](https://juejin.im/post/5c8eff6e51882545d7558d48)|1|6|0|
+|[git 入门教程之删除文件](https://juejin.im/post/5c8eff426fb9a0710250376f)|1|1|0|
+|[git 入门教程之撤销更改](https://juejin.im/post/5c8eff126fb9a070fb36f201)|1|1|0|
+|[git 入门教程之版本控制](https://juejin.im/post/5c8efed56fb9a0710d65c826)|1|2|0|
+|[git 入门教程之基本概念](https://juejin.im/post/5c8efe5b6fb9a070b24b07bd)|1|3|0|
+|[git 入门教程之回到过去](https://juejin.im/post/5c8efe1e6fb9a071035481af)|1|2|0|
+|[git 入门教程之版本管理](https://juejin.im/post/5c8efde96fb9a070f12572da)|1|4|0|
+|[git 入门教程之本地仓库](https://juejin.im/post/5c8efdaf6fb9a070d4199859)|4|184|0|
+|[git 入门教程之实战](https://juejin.im/post/5c8efd4c6fb9a070c40abfb2)|1|2|0|
+|[git 入门教程之配置 git](https://juejin.im/post/5c8db5b96fb9a049d442b9a5)|1|17|0|
+|[git 入门教程之安装 git](https://juejin.im/post/5c8db578e51d456a0758be63)|1|11|0|
+|[git 入门教程之初识git](https://juejin.im/post/5c8c8a936fb9a04a10302f96)|1|9|0|
+|[git 入门教程之1分钟快速了解 git](https://juejin.im/post/5c8c8a076fb9a049f1551860)|1|4|0|
+|[markdown 快速入门](https://juejin.im/post/5c8c87206fb9a049ae08cb77)|1|6|0|
 
 <!-- 链接引用 -->
 [jianshu]: https://www.jianshu.com/u/577b0d76ab87 "snowdreams1006的简书主页"
 [csdn]: https://blog.csdn.net/weixin_38171180 "snowdreams1006的CSDN博客"
 [cnblogs]: https://www.cnblogs.com/snowdreams1006/ "snowdreams1006的博客园"
+[juejin]: https://juejin.im/user/582d5cb667f356006331e586 "snowdreams1006的掘金"
+
+
 
 
 
