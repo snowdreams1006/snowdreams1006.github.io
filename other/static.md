@@ -156,28 +156,29 @@
 |[markdown 快速入门之掘金入门指南](https://segmentfault.com/a/1190000018528557)|17|0|0|
 |[markdown 快速入门](https://segmentfault.com/a/1190000018528519)|18|0|0|
 
-- [慕课手记][imooc] 
+- [慕课手记][imooc] : 程序员的梦工厂
   * `16`手记,41615`经验,`14`积分,`1`粉丝.
   * 今日更新
-    + [git 入门教程之分支总览](https://www.imooc.com/article/283357) 阅读`47`,推荐`1`,评论`0`,收藏`0`.
-    + [git 入门教程之分支管理](https://www.imooc.com/article/283356) 阅读`45`,推荐`1`,评论`0`,收藏`0`.
+    + [git 入门教程之分支总览](https://www.imooc.com/article/283439) 阅读`22`,推荐`1`,评论`0`,收藏`0`.
 
 |慕课手记|阅读|推荐|评论|收藏|
 |:-|:-:|:-:|:-:|:-:|
-|[git 入门教程之远程仓库](https://www.imooc.com/article/283277)|57|1|0|0|
-|[git 入门教程之删除文件](https://www.imooc.com/article/283276)|68|1|0|0|
-|[git 入门教程之撤销更改](https://www.imooc.com/article/283275)|55|1|0|0|
-|[git 入门教程之版本控制](https://www.imooc.com/article/283274)|54|1|0|0|
-|[git 入门教程之基本概念](https://www.imooc.com/article/283273)|47|1|0|0|
-|[git 入门教程之回到过去](https://www.imooc.com/article/283272)|42|1|0|0|
-|[git 入门教程之版本管理](https://www.imooc.com/article/283271)|35|1|0|0|
-|[git 入门教程之本地仓库](https://www.imooc.com/article/283270)|37|1|0|0|
-|[git 入门教程之实战](https://www.imooc.com/article/283268)|37|1|0|0|
-|[git 入门教程之配置 git](https://www.imooc.com/article/283229)|35|1|0|0|
-|[git 入门教程之安装 git](https://www.imooc.com/article/283228)|43|1|0|0|
-|[git 入门教程之初识git](https://www.imooc.com/article/283207)|8|1|0|0|
-|[git 入门教程之1分钟快速了解 git](https://www.imooc.com/article/283206)|6|1|0|0|
-|[markdown 快速入门](https://www.imooc.com/article/283205)|9|1|0|0|
+|[git 入门教程之分支总览](https://www.imooc.com/article/283357)|59|1|0|0|
+|[git 入门教程之分支管理](https://www.imooc.com/article/283356)|58|1|0|0|
+|[git 入门教程之远程仓库](https://www.imooc.com/article/283277)|60|1|0|0|
+|[git 入门教程之删除文件](https://www.imooc.com/article/283276)|74|1|0|0|
+|[git 入门教程之撤销更改](https://www.imooc.com/article/283275)|58|1|0|0|
+|[git 入门教程之版本控制](https://www.imooc.com/article/283274)|57|1|0|0|
+|[git 入门教程之基本概念](https://www.imooc.com/article/283273)|50|1|0|0|
+|[git 入门教程之回到过去](https://www.imooc.com/article/283272)|44|1|0|0|
+|[git 入门教程之版本管理](https://www.imooc.com/article/283271)|38|1|0|0|
+|[git 入门教程之本地仓库](https://www.imooc.com/article/283270)|42|1|0|0|
+|[git 入门教程之实战](https://www.imooc.com/article/283268)|44|1|0|0|
+|[git 入门教程之配置 git](https://www.imooc.com/article/283229)|37|1|0|0|
+|[git 入门教程之安装 git](https://www.imooc.com/article/283228)|44|1|0|0|
+|[git 入门教程之初识git](https://www.imooc.com/article/283207)|11|1|0|0|
+|[git 入门教程之1分钟快速了解 git](https://www.imooc.com/article/283206)|7|1|0|0|
+|[markdown 快速入门](https://www.imooc.com/article/283205)|10|1|0|0|
 
 ## 2019-03-19 
 
@@ -233,7 +234,7 @@
 |[git 入门教程之1分钟快速了解 git](https://blog.csdn.net/weixin_38171180/article/details/88231246)|59|1|0|0|
 |[markdown 快速入门](https://blog.csdn.net/weixin_38171180/article/details/88220138)|62|1|0|0|
 
-- [博客园][cnblogs] 
+- [博客园][cnblogs] : 代码改变世界
   * `16`随笔,`0`文章,`4`粉丝,`4`评论.
   * 今日更新
     + [git 入门教程之分支总览](https://www.cnblogs.com/snowdreams1006/p/10556820.html) 推荐`0`,反对`0`,阅读`117`,评论`0`.
@@ -258,8 +259,8 @@
 |[git 入门教程之1分钟快速了解 git](https://blog.csdn.net/weixin_38171180/article/details/88231246)|0|0|12|0|
 |[markdown 快速入门](https://www.cnblogs.com/snowdreams1006/p/10505902.html)|0|0|172|0|
 
-- [掘金][juejin] 
-  * `16`原创,`4`关注者,19`点赞数,`269`阅读数,`0`评论数.
+- [掘金][juejin] : 相信技术的力量
+  * `16`原创,`4`关注者,`19`点赞数,`269`阅读数,`0`评论数.
   * 今日更新
     + [git 入门教程之分支总览](https://juejin.im/post/5c9050076fb9a070cd5692c7) 点赞`1`,阅读`4`,评论`0`.
     + [git 入门教程之分支管理](https://juejin.im/post/5c904fc26fb9a070c40ac2a2) 点赞`1`,阅读`5`,评论`0`.
@@ -281,8 +282,8 @@
 |[git 入门教程之1分钟快速了解 git](https://juejin.im/post/5c8c8a076fb9a049f1551860)|1|4|0|
 |[markdown 快速入门](https://juejin.im/post/5c8c87206fb9a049ae08cb77)|1|6|0|
 
-- [开源中国][oschina] 
-  * `17`博文,`1`推荐,2`粉丝,`0`积分,`186`访问.
+- [开源中国][oschina] : 为开发者服务
+  * `17`博文,`1`推荐,`2`粉丝,`0`积分,`186`访问.
   * 今日更新
     + [git 入门教程之分支总览](https://my.oschina.net/snowdreams1006/blog/3024382) 字数`1238`,阅读`257`,收藏`9`,点赞`0`,评论`0`.
     + [git 入门教程之分支管理](https://my.oschina.net/snowdreams1006/blog/3024372) 字数`1418`,阅读`2`,收藏`0`,点赞`0`,评论`0`.
@@ -305,8 +306,8 @@
 |[markdown 快速入门之掘金入门指南](https://my.oschina.net/snowdreams1006/blog/3023383)|708|0|0|0|0|
 |[markdown 快速入门](https://my.oschina.net/snowdreams1006/blog/3023379)|1343|2|0|0|0|
 
-- [segmentfault][segmentfault] 
-  * `17`文章,`2`粉丝,`5`声望.
+- [segmentfault][segmentfault] : 创造属于开发者的时代
+  * `17`文章,`0`粉丝,`5`声望.
   * 今日更新
     + [git 入门教程之分支总览](https://segmentfault.com/a/1190000018567919) 阅读`35`,点赞`1`,收藏`1`.
     + [git 入门教程之分支管理](https://segmentfault.com/a/1190000018567748) 阅读`20`,点赞`0`,收藏`0`.
@@ -329,8 +330,8 @@
 |[markdown 快速入门之掘金入门指南](https://segmentfault.com/a/1190000018528557)|16|0|0|
 |[markdown 快速入门](https://segmentfault.com/a/1190000018528519)|17|0|0|
 
-- [慕课手记][imooc] 
-  * `16`手记,41615`经验,`14`积分,`1`粉丝.
+- [慕课手记][imooc] :程序员的梦工厂
+  * `16`手记,`41615`经验,`14`积分,`1`粉丝.
   * 今日更新
     + [git 入门教程之分支总览](https://www.imooc.com/article/283357) 阅读`47`,推荐`1`,评论`0`,收藏`0`.
     + [git 入门教程之分支管理](https://www.imooc.com/article/283356) 阅读`45`,推荐`1`,评论`0`,收藏`0`.
@@ -351,7 +352,6 @@
 |[git 入门教程之初识git](https://www.imooc.com/article/283207)|8|1|0|0|
 |[git 入门教程之1分钟快速了解 git](https://www.imooc.com/article/283206)|6|1|0|0|
 |[markdown 快速入门](https://www.imooc.com/article/283205)|9|1|0|0|
-
 
 <!-- 链接引用 -->
 [jianshu]: https://www.jianshu.com/u/577b0d76ab87 "snowdreams1006的简书主页"
