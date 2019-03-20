@@ -31,14 +31,60 @@
 
 - [CSDN][csdn] 
   * `18`原创,`1`粉丝,`17`喜欢,`0`评论,`906`访问,`199`积分,`109万+`排名.
-  * 日更`15`天,简书钻内容奖励`+0.120`,投票奖励`+0.080`,排名`128493`,排名变化`+690`.
   * 今日更新
     + [git 入门教程之分支总览](https://blog.csdn.net/weixin_38171180/article/details/88655785) 阅读数`8`,点赞`1`,评论数`0`,收藏数`0`.
     + [git 入门教程之分支管理](https://blog.csdn.net/weixin_38171180/article/details/88655760) 阅读数`10`,点赞`1`,评论数`0`,收藏数`0`.
+
+|CSDN博客|阅读数|点赞|评论数|收藏|
+|:-|:-:|:-:|:-:|:-:|:-:|
+|[git 入门教程之远程仓库](https://blog.csdn.net/weixin_38171180/article/details/88633659)|26|1|0|0|
+|[git 入门教程之删除文件](https://blog.csdn.net/weixin_38171180/article/details/88615229)|42|1|0|0|  
+|[git 入门教程之撤销更改](https://blog.csdn.net/weixin_38171180/article/details/88594097)|48|1|0|0|
+|[git 入门教程之版本控制](https://blog.csdn.net/weixin_38171180/article/details/88566376)|49|1|0|0|
+|[git 入门教程之基本概念](https://blog.csdn.net/weixin_38171180/article/details/88547531)|48|1|0|0|
+|[git 入门教程之回到过去](https://blog.csdn.net/weixin_38171180/article/details/88525949)|50|1|0|0|
+|[git 入门教程之版本管理](https://blog.csdn.net/weixin_38171180/article/details/88414522)|58|1|0|0|
+|[git 入门教程之本地仓库](https://blog.csdn.net/weixin_38171180/article/details/88390279)|61|1|0|0|
+|[git 入门教程之实战](https://blog.csdn.net/weixin_38171180/article/details/88390244)|66|1|0|0|
+|[git 入门教程之配置 git](https://blog.csdn.net/weixin_38171180/article/details/88380468)|62|1|0|0|
+|[git 入门教程之安装 git](https://blog.csdn.net/weixin_38171180/article/details/88369555)|64|1|0|0|
+|[git 入门教程之 git 私服搭建教程](https://blog.csdn.net/weixin_38171180/article/details/88353019)|72|1|0|0|
+|[git 入门教程之github 教程](https://blog.csdn.net/weixin_38171180/article/details/88297565)|88|1|0|0|
+|[git 入门教程之初识git](https://blog.csdn.net/weixin_38171180/article/details/88231534)|53|1|0|0|
+|[git 入门教程之1分钟快速了解 git](https://blog.csdn.net/weixin_38171180/article/details/88231246)|59|1|0|0|
+|[markdown 快速入门](https://blog.csdn.net/weixin_38171180/article/details/88220138)|62|1|0|0|
+
+- [博客园][cnblogs] 
+  * `16`随笔,`0`文章,`4`粉丝,`4`评论.
+  * 今日更新
+    + [git 入门教程之分支总览](https://www.cnblogs.com/snowdreams1006/p/10556820.html) 推荐`0`,反对`0`,阅读`117`,评论`0`.
+    + [git 入门教程之分支管理](https://www.cnblogs.com/snowdreams1006/p/10556818.html) 推荐`0`,反对`0`,阅读`7`,评论`0`.
+
+|博客园随笔|推荐|反对|阅读|评论|
+|:-|:-:|:-:|:-:|:-:|:-:|
+|[git 入门教程之远程仓库](https://www.cnblogs.com/snowdreams1006/p/10550550.html)|0|0|21|0|
+|[git 入门教程之删除文件](https://www.cnblogs.com/snowdreams1006/p/10545870.html)|0|0|92|0|
+|[git 入门教程之撤销更改](https://www.cnblogs.com/snowdreams1006/p/10541362.html)|1|0|102|0|
+|[git 入门教程之版本控制](https://www.cnblogs.com/snowdreams1006/p/10535174.html)|0|0|163|0|
+|[git 入门教程之基本概念](https://www.cnblogs.com/snowdreams1006/p/10528705.html)|1|0|239|2|
+|[git 入门教程之回到过去](https://www.cnblogs.com/snowdreams1006/p/10521172.html)|0|0|16|0|
+|[git 入门教程之版本管理](https://www.cnblogs.com/snowdreams1006/p/10514757.html)|0|0|17|0|
+|[git 入门教程之本地仓库](https://www.cnblogs.com/snowdreams1006/p/10509428.html)|0|0|20|0|
+|[git 入门教程之实战](https://www.cnblogs.com/snowdreams1006/p/10509423.html)|0|0|85|0|
+|[git 入门教程之 git 私服搭建教程](https://www.cnblogs.com/snowdreams1006/p/10506143.html)|0|0|16|0|
+|[git 入门教程之github 教程](https://www.cnblogs.com/snowdreams1006/p/10506140.html)|0|0|21|0|
+|[git 入门教程之配置 git](https://www.cnblogs.com/snowdreams1006/p/10506129.html)|0|0|17|2|
+|[git 入门教程之安装 git](https://www.cnblogs.com/snowdreams1006/p/10506122.html)|0|0|28|0|
+|[git 入门教程之初识git](https://www.cnblogs.com/snowdreams1006/p/10505957.html)|0|0|14|0|
+|[git 入门教程之1分钟快速了解 git](https://blog.csdn.net/weixin_38171180/article/details/88231246)|0|0|12|0|
+|[markdown 快速入门](https://www.cnblogs.com/snowdreams1006/p/10505902.html)|0|0|172|0|
+
 
 
 <!-- 链接引用 -->
 [jianshu]: https://www.jianshu.com/u/577b0d76ab87 "snowdreams1006的简书主页"
 [csdn]: https://blog.csdn.net/weixin_38171180 "snowdreams1006的CSDN博客"
+[cnblogs]: https://www.cnblogs.com/snowdreams1006/ "snowdreams1006的博客园"
+
 
 
