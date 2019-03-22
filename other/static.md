@@ -86,52 +86,54 @@
 |[markdown 快速入门](https://www.cnblogs.com/snowdreams1006/p/10505902.html)|0|0|178|0|
 
 - [掘金][juejin] : 相信技术的力量
-  * `17`原创,`4`关注者,`20`点赞数,`295`阅读数,`0`评论数.
+  * `18`原创,`4`关注者,`21`点赞数,`340`阅读数,`0`评论数.
   * 今日更新
-    + [git 入门教程之冲突合并](https://juejin.im/post/5c91f242e51d456d6a18ef57) 点赞`1`,阅读`2`,评论`0`.
+    + [git 入门教程之分支策略](https://juejin.im/post/5c92cdcbe51d4522c414463c) 点赞`1`,阅读`5`,评论`0`.
 
 |掘金专栏|点赞|阅读|评论|
 |:-|:-:|:-:|:-:|
+|[git 入门教程之冲突合并](https://juejin.im/post/5c91f242e51d456d6a18ef57)|1|3|0|
 |[git 入门教程之分支总览](https://juejin.im/post/5c9050076fb9a070cd5692c7)|1|7|0|
 |[git 入门教程之分支管理](https://juejin.im/post/5c904fc26fb9a070c40ac2a2)|1|6|0|
 |[git 入门教程之远程仓库](https://juejin.im/post/5c8eff6e51882545d7558d48)|1|7|0|
 |[git 入门教程之删除文件](https://juejin.im/post/5c8eff426fb9a0710250376f)|1|2|0|
 |[git 入门教程之撤销更改](https://juejin.im/post/5c8eff126fb9a070fb36f201)|1|2|0|
 |[git 入门教程之版本控制](https://juejin.im/post/5c8efed56fb9a0710d65c826)|1|3|0|
-|[git 入门教程之基本概念](https://juejin.im/post/5c8efe5b6fb9a070b24b07bd)|1|4|0|
+|[git 入门教程之基本概念](https://juejin.im/post/5c8efe5b6fb9a070b24b07bd)|1|5|0|
 |[git 入门教程之回到过去](https://juejin.im/post/5c8efe1e6fb9a071035481af)|1|3|0|
 |[git 入门教程之版本管理](https://juejin.im/post/5c8efde96fb9a070f12572da)|1|5|0|
-|[git 入门教程之本地仓库](https://juejin.im/post/5c8efdaf6fb9a070d4199859)|4|200|0|
+|[git 入门教程之本地仓库](https://juejin.im/post/5c8efdaf6fb9a070d4199859)|4|233|0|
 |[git 入门教程之实战](https://juejin.im/post/5c8efd4c6fb9a070c40abfb2)|1|3|0|
-|[git 入门教程之配置 git](https://juejin.im/post/5c8db5b96fb9a049d442b9a5)|1|18|0|
+|[git 入门教程之配置 git](https://juejin.im/post/5c8db5b96fb9a049d442b9a5)|1|21|0|
 |[git 入门教程之安装 git](https://juejin.im/post/5c8db578e51d456a0758be63)|1|12|0|
-|[git 入门教程之初识git](https://juejin.im/post/5c8c8a936fb9a04a10302f96)|1|10|0|
-|[git 入门教程之1分钟快速了解 git](https://juejin.im/post/5c8c8a076fb9a049f1551860)|1|5|0|
+|[git 入门教程之初识git](https://juejin.im/post/5c8c8a936fb9a04a10302f96)|1|11|0|
+|[git 入门教程之1分钟快速了解 git](https://juejin.im/post/5c8c8a076fb9a049f1551860)|1|6|0|
 |[markdown 快速入门](https://juejin.im/post/5c8c87206fb9a049ae08cb77)|1|7|0|
 
 - [开源中国][oschina] : 为开发者服务
-  * `18`博文,`1`推荐,`3`粉丝,`0`积分,`160`访问.
+  * `19`博文,`2`推荐,`4`粉丝,`0`积分,`222`访问.
   * 今日更新
-    + [git 入门教程之冲突合并](https://my.oschina.net/snowdreams1006/blog/3025200) 字数`1237`,阅读`2`,收藏`0`,点赞`0`,评论`0`.
+    + [git 入门教程之分支策略](https://my.oschina.net/snowdreams1006/blog/3025459) 字数`1411`,阅读`126`,收藏`10`,点赞`2`,评论`0`.
 
 |开源中国博文|字数|阅读|收藏|点赞|评论|
 |:-|:-:|:-:|:-:|:-:|:-:|
-|[git 入门教程之分支总览](https://my.oschina.net/snowdreams1006/blog/3024382)|1238|317|12|0|3|
-|[git 入门教程之分支管理](https://my.oschina.net/snowdreams1006/blog/3024372)|1418|3|0|0|0|
-|[git 入门教程之远程仓库](https://my.oschina.net/snowdreams1006/blog/3023909)|851|2|0|0|0|
-|[git 入门教程之删除文件](https://my.oschina.net/snowdreams1006/blog/3023907)|982|0|0|0|0|
-|[git 入门教程之撤销更改](https://my.oschina.net/snowdreams1006/blog/3023905)|2927|2|0|0|0|
-|[git 入门教程之版本控制](https://my.oschina.net/snowdreams1006/blog/3023873)|1967|1|0|0|0|
-|[git 入门教程之基本概念](https://my.oschina.net/snowdreams1006/blog/3023859)|2084|1|0|0|0|
-|[git 入门教程之回到过去](https://my.oschina.net/snowdreams1006/blog/3023843)|2064|1|0|0|0|
-|[git 入门教程之版本管理](https://my.oschina.net/snowdreams1006/blog/3023835)|705|1|0|0|0|
-|[git 入门教程之本地仓库](https://my.oschina.net/snowdreams1006/blog/3023832)|1351|1|0|0|0|
-|[git 入门教程之实战](https://my.oschina.net/snowdreams1006/blog/3023821)|342|1|0|0|0|
-|[git 入门教程之配置 git](https://my.oschina.net/snowdreams1006/blog/3023578)|440|1|0|0|0|
-|[git 入门教程之安装 git](https://my.oschina.net/snowdreams1006/blog/3023572)|648|1|0|0|0|
-|[git 入门教程之初识git](https://my.oschina.net/snowdreams1006/blog/3023391)|1491|1|0|0|0|
-|[git 入门教程之1分钟快速了解 git](https://my.oschina.net/snowdreams1006/blog/3023388)|504|1|0|0|0|
-|[markdown 快速入门之掘金入门指南](https://my.oschina.net/snowdreams1006/blog/3023383)|708|0|0|0|0|
+|[git 入门教程之冲突合并](https://my.oschina.net/snowdreams1006/blog/3025200)|1237|10|1|0|0|
+|[git 入门教程之分支总览](https://my.oschina.net/snowdreams1006/blog/3024382)|1238|445|20|0|3|
+|[git 入门教程之分支管理](https://my.oschina.net/snowdreams1006/blog/3024372)|1418|5|0|0|0|
+|[git 入门教程之远程仓库](https://my.oschina.net/snowdreams1006/blog/3023909)|851|4|0|0|0|
+|[git 入门教程之删除文件](https://my.oschina.net/snowdreams1006/blog/3023907)|982|1|0|0|0|
+|[git 入门教程之撤销更改](https://my.oschina.net/snowdreams1006/blog/3023905)|2927|3|0|0|0|
+|[git 入门教程之版本控制](https://my.oschina.net/snowdreams1006/blog/3023873)|1967|2|0|0|0|
+|[git 入门教程之基本概念](https://my.oschina.net/snowdreams1006/blog/3023859)|2084|2|0|0|0|
+|[git 入门教程之回到过去](https://my.oschina.net/snowdreams1006/blog/3023843)|2064|2|0|0|0|
+|[git 入门教程之版本管理](https://my.oschina.net/snowdreams1006/blog/3023835)|705|2|0|0|0|
+|[git 入门教程之本地仓库](https://my.oschina.net/snowdreams1006/blog/3023832)|1351|2|0|0|0|
+|[git 入门教程之实战 git](https://my.oschina.net/snowdreams1006/blog/3023821)|342|3|0|0|0|
+|[git 入门教程之配置 git](https://my.oschina.net/snowdreams1006/blog/3023578)|440|2|0|0|0|
+|[git 入门教程之安装 git](https://my.oschina.net/snowdreams1006/blog/3023572)|648|3|0|0|0|
+|[git 入门教程之初识git](https://my.oschina.net/snowdreams1006/blog/3023391)|1491|3|0|0|0|
+|[git 入门教程之1分钟快速了解 git](https://my.oschina.net/snowdreams1006/blog/3023388)|504|5|0|0|0|
+|[markdown 快速入门之掘金入门指南](https://my.oschina.net/snowdreams1006/blog/3023383)|708|1|0|0|0|
 |[markdown 快速入门](https://my.oschina.net/snowdreams1006/blog/3023379)|1343|3|0|0|0|
 
 - [segmentfault][segmentfault] : 创造属于开发者的时代
