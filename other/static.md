@@ -137,53 +137,55 @@
 |[markdown 快速入门](https://my.oschina.net/snowdreams1006/blog/3023379)|1343|3|0|0|0|
 
 - [segmentfault][segmentfault] : 创造属于开发者的时代
-  * `18`文章,`0`粉丝,`5`声望.
+  * `19`文章,`0`粉丝,`5`声望.
   * 今日更新
-    + [git 入门教程之冲突合并](https://segmentfault.com/a/1190000018587960) 阅读`19`,点赞`0`,收藏`0`.
+    + [git 入门教程之分支策略](https://segmentfault.com/a/1190000018594726) 阅读`32`,点赞`0`,收藏`0`.
 
 |思否文章|阅读|点赞|收藏|
 |:-|:-:|:-:|:-:|
-|[git 入门教程之分支总览](https://segmentfault.com/a/1190000018567919)|37|1|1|
-|[git 入门教程之分支管理](https://segmentfault.com/a/1190000018567748)|22|0|0|
-|[git 入门教程之远程仓库](https://segmentfault.com/a/1190000018555041)|35|0|0|
-|[git 入门教程之删除文件](https://segmentfault.com/a/1190000018554162)|25|0|0|
-|[git 入门教程之撤销更改](https://segmentfault.com/a/1190000018553927)|25|0|0|
-|[git 入门教程之版本控制](https://segmentfault.com/a/1190000018553911)|23|0|0|
-|[git 入门教程之基本概念](https://segmentfault.com/a/1190000018553708)|27|0|0|
-|[git 入门教程之回到过去](https://segmentfault.com/a/1190000018553604)|40|0|0|
-|[git 入门教程之版本管理](https://segmentfault.com/a/1190000018553527)|26|0|0|
-|[git 入门教程之本地仓库](https://segmentfault.com/a/1190000018553406)|29|0|0|
-|[git 入门教程之实战](https://segmentfault.com/a/1190000018552900)|24|0|0|
-|[git 入门教程之配置 git](https://segmentfault.com/a/1190000018533687)|35|0|0|
-|[git 入门教程之安装 git](https://segmentfault.com/a/1190000018533651)|29|0|0|
-|[git 入门教程之初识git](https://segmentfault.com/a/1190000018528699)|28|0|0|
-|[git 入门教程之1分钟快速了解 git](https://segmentfault.com/a/1190000018528619)|28|0|0|
-|[markdown 快速入门之掘金入门指南](https://segmentfault.com/a/1190000018528557)|17|0|0|
-|[markdown 快速入门](https://segmentfault.com/a/1190000018528519)|18|0|0|
+|[git 入门教程之冲突合并](https://segmentfault.com/a/1190000018594726)|23|0|0|
+|[git 入门教程之分支总览](https://segmentfault.com/a/1190000018567919)|41|1|1|
+|[git 入门教程之分支管理](https://segmentfault.com/a/1190000018567748)|31|0|0|
+|[git 入门教程之远程仓库](https://segmentfault.com/a/1190000018555041)|46|0|0|
+|[git 入门教程之删除文件](https://segmentfault.com/a/1190000018554162)|29|0|0|
+|[git 入门教程之撤销更改](https://segmentfault.com/a/1190000018553927)|32|0|0|
+|[git 入门教程之版本控制](https://segmentfault.com/a/1190000018553911)|27|0|0|
+|[git 入门教程之基本概念](https://segmentfault.com/a/1190000018553708)|33|0|0|
+|[git 入门教程之回到过去](https://segmentfault.com/a/1190000018553604)|53|0|0|
+|[git 入门教程之版本管理](https://segmentfault.com/a/1190000018553527)|28|0|0|
+|[git 入门教程之本地仓库](https://segmentfault.com/a/1190000018553406)|32|0|0|
+|[git 入门教程之实战](https://segmentfault.com/a/1190000018552900)|26|0|0|
+|[git 入门教程之配置 git](https://segmentfault.com/a/1190000018533687)|39|0|0|
+|[git 入门教程之安装 git](https://segmentfault.com/a/1190000018533651)|36|0|0|
+|[git 入门教程之初识git](https://segmentfault.com/a/1190000018528699)|32|0|0|
+|[git 入门教程之1分钟快速了解 git](https://segmentfault.com/a/1190000018528619)|33|0|0|
+|[markdown 快速入门之掘金入门指南](https://segmentfault.com/a/1190000018528557)|19|0|0|
+|[markdown 快速入门](https://segmentfault.com/a/1190000018528519)|21|0|0|
 
 - [慕课手记][imooc] : 程序员的梦工厂
-  * `16`手记,41615`经验,`14`积分,`1`粉丝.
+  * `18`手记,`41615`经验,`17`积分,`1`粉丝.
   * 今日更新
-    + [git 入门教程之分支总览](https://www.imooc.com/article/283439) 阅读`22`,推荐`1`,评论`0`,收藏`0`.
+    + [git 入门教程之分支策略](https://www.imooc.com/article/283469) 阅读`37`,推荐`1`,评论`0`,收藏`0`.
 
 |慕课手记|阅读|推荐|评论|收藏|
 |:-|:-:|:-:|:-:|:-:|
-|[git 入门教程之分支总览](https://www.imooc.com/article/283357)|59|1|0|0|
-|[git 入门教程之分支管理](https://www.imooc.com/article/283356)|58|1|0|0|
-|[git 入门教程之远程仓库](https://www.imooc.com/article/283277)|60|1|0|0|
-|[git 入门教程之删除文件](https://www.imooc.com/article/283276)|74|1|0|0|
-|[git 入门教程之撤销更改](https://www.imooc.com/article/283275)|58|1|0|0|
-|[git 入门教程之版本控制](https://www.imooc.com/article/283274)|57|1|0|0|
-|[git 入门教程之基本概念](https://www.imooc.com/article/283273)|50|1|0|0|
-|[git 入门教程之回到过去](https://www.imooc.com/article/283272)|44|1|0|0|
-|[git 入门教程之版本管理](https://www.imooc.com/article/283271)|38|1|0|0|
-|[git 入门教程之本地仓库](https://www.imooc.com/article/283270)|42|1|0|0|
-|[git 入门教程之实战](https://www.imooc.com/article/283268)|44|1|0|0|
-|[git 入门教程之配置 git](https://www.imooc.com/article/283229)|37|1|0|0|
-|[git 入门教程之安装 git](https://www.imooc.com/article/283228)|44|1|0|0|
-|[git 入门教程之初识git](https://www.imooc.com/article/283207)|11|1|0|0|
-|[git 入门教程之1分钟快速了解 git](https://www.imooc.com/article/283206)|7|1|0|0|
-|[markdown 快速入门](https://www.imooc.com/article/283205)|10|1|0|0|
+|[git 入门教程之冲突合并](https://www.imooc.com/article/283439)|101|1|0|0|
+|[git 入门教程之分支总览](https://www.imooc.com/article/283357)|88|1|0|0|
+|[git 入门教程之分支管理](https://www.imooc.com/article/283356)|81|1|0|0|
+|[git 入门教程之远程仓库](https://www.imooc.com/article/283277)|71|1|0|0|
+|[git 入门教程之删除文件](https://www.imooc.com/article/283276)|85|1|0|0|
+|[git 入门教程之撤销更改](https://www.imooc.com/article/283275)|68|1|0|0|
+|[git 入门教程之版本控制](https://www.imooc.com/article/283274)|70|1|0|0|
+|[git 入门教程之基本概念](https://www.imooc.com/article/283273)|61|1|0|0|
+|[git 入门教程之回到过去](https://www.imooc.com/article/283272)|57|1|0|0|
+|[git 入门教程之版本管理](https://www.imooc.com/article/283271)|45|1|0|0|
+|[git 入门教程之本地仓库](https://www.imooc.com/article/283270)|50|1|0|0|
+|[git 入门教程之实战](https://www.imooc.com/article/283268)|51|1|0|0|
+|[git 入门教程之配置 git](https://www.imooc.com/article/283229)|43|1|0|0|
+|[git 入门教程之安装 git](https://www.imooc.com/article/283228)|49|1|0|0|
+|[git 入门教程之初识git](https://www.imooc.com/article/283207)|14|1|0|0|
+|[git 入门教程之1分钟快速了解 git](https://www.imooc.com/article/283206)|10|1|0|0|
+|[markdown 快速入门](https://www.imooc.com/article/283205)|18|1|0|0|
 
 
 ## 2019-03-20
