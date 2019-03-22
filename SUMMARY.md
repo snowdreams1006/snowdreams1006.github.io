@@ -25,6 +25,7 @@
             * [分支总览](git/usage/branch-overview.md)
             * [冲突合并](git/usage/branch-merge-with-conflict.md)
             * [分支策略](git/usage/branch-strategy.md)
+            * [紧急修复](git/usage/branch-emergency-fixbug.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
