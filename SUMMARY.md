@@ -41,10 +41,6 @@
     * [markdown转富文本](write/markdown2richText.md)
 * [其他](other/README.md)
     * [历史统计](other/static.md)
-        * [2019-03-22](other/static/2019-03-22.md)
-        * [2019-03-21](other/static/2019-03-21.md)
-        * [2019-03-20](other/static/2019-03-20.md)
-        * [2019-03-19](other/static/2019-03-19.md)
     * [联系作者](other/contact.md)
     * [捐赠支持](other/donate.md)
 

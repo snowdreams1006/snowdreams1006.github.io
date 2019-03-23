@@ -196,6 +196,3 @@ $ git log --pretty=oneline --graph --abbrev-commit
 2. 主干分支接收已转移好的目标分支工作成果 : `git rebase <branch>`
 
 
-
-
-
