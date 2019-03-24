@@ -27,6 +27,7 @@
             * [分支策略](git/usage/branch-strategy.md)
             * [紧急修复](git/usage/branch-emergency-fixbug.md)
             * [变基合并](git/usage/branch-rebase.md)
+            * [协同开发](git/usage/branch-remote.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
