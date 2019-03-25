@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>冲突合并 · 雪之梦</title>
+        <title>本地和远程仓库的本质 · 雪之梦</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="branch-strategy.html" />
+    <link rel="next" href="../github/usage.html" />
     
     
-    <link rel="prev" href="branch-overview.html" />
+    <link rel="prev" href="branch-remote.html" />
     
 
     </head>
@@ -397,7 +397,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.2.9.2" data-path="branch-merge-with-conflict.html">
+        <li class="chapter " data-level="2.2.2.9.2" data-path="branch-merge-with-conflict.html">
             
                 <a href="branch-merge-with-conflict.html">
             
@@ -462,7 +462,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2.9.7" data-path="local-remote-repository.html">
+        <li class="chapter active" data-level="2.2.2.9.7" data-path="local-remote-repository.html">
             
                 <a href="local-remote-repository.html">
             
@@ -746,7 +746,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >冲突合并</a>
+        <a href="../.." >本地和远程仓库的本质</a>
     </h1>
 </div>
 
@@ -761,136 +761,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x51B2;&#x7A81;&#x5408;&#x5E76;">&#x51B2;&#x7A81;&#x5408;&#x5E76;</h1>
-<p>&#x5982;&#x679C;&#x8DB3;&#x591F;&#x5E78;&#x8FD0;&#x7684;&#x8BDD;,&#x56E2;&#x961F;&#x6210;&#x5458;&#x4E92;&#x4E0D;&#x5F71;&#x54CD;,&#x5F7C;&#x6B64;&#x76F8;&#x5B89;&#x65E0;&#x4E8B;,&#x5927;&#x5BB6;&#x5404;&#x81EA;&#x57FA;&#x4E8E; <code>master</code> &#x5206;&#x652F;&#x7684;&#x67D0;&#x4E2A; <code>commit</code> &#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x5206;&#x652F;,&#x5E73;&#x65F6;&#x5728;&#x5206;&#x652F;&#x4E0A;&#x72EC;&#x7ACB;&#x5DE5;&#x4F5C;,&#x7B49;&#x5230;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#x518D;&#x5408;&#x5E76; <code>merge</code> &#x5230; <code>master</code> &#x5206;&#x652F;,&#x8FD9;&#x6837;&#x4E00;&#x6837; <code>master</code> &#x4F5C;&#x4E3A;&#x5404;&#x4E2A;&#x529F;&#x80FD;&#x7684;&#x96C6;&#x5927;&#x6210;&#x8005;,&#x6700;&#x7EC8;&#x5B8C;&#x6210;&#x9879;&#x76EE;.</p>
-<p>&#x7136;&#x800C;&#x4E8B;&#x60C5;&#x603B;&#x4E0D;&#x662F;&#x4E00;&#x5E06;&#x98CE;&#x987A;&#x7684;,&#x56E2;&#x961F;&#x534F;&#x4F5C;&#x65F6;&#x7531;&#x4E8E;&#x610F;&#x89C1;&#x4E0D;&#x540C;,&#x9047;&#x5230;&#x51B2;&#x7A81;&#x7B80;&#x76F4;&#x662F;&#x5BB6;&#x5E38;&#x4FBF;&#x996D;,&#x65E2;&#x7136;&#x65E0;&#x6CD5;&#x56DE;&#x907F;&#x51B2;&#x7A81;,&#x5F53;&#x51B2;&#x7A81;&#x53D1;&#x751F;&#x65F6;&#x5982;&#x4F55;&#x5E94;&#x8BE5;&#x5462;?</p>
-<h2 id="&#x80CC;&#x666F;">&#x80CC;&#x666F;</h2>
-<p>&#x57FA;&#x4E8E; <code>master</code> &#x5206;&#x652F;&#x4E0A;&#x7684;&#x67D0;&#x4E2A; <code>commit</code> ,&#x65B0;&#x529F;&#x80FD;&#x7531;&#x6B64;&#x7EE7;&#x7EED;&#x5F00;&#x53D1;: </p>
-<pre><code>echo &quot;git commit c1&quot; &gt;&gt; test.txt
-$ git add test.txt
-$ git commit -m &quot;git commit c1&quot;
-</code></pre><p><img src="../images/git-commit-c1.png" alt="git-commit-c1.png"></p>
-<p>&#x65B0;&#x529F;&#x80FD;&#x5206;&#x652F;&#x547D;&#x540D;&#x4E3A; <code>feature</code> ,&#x4F7F;&#x7528;<code>git checkout -b &lt;name&gt;</code> &#x521B;&#x5EFA;&#x5206;&#x652F;&#x5E76;&#x5207;&#x6362;:</p>
-<pre><code>$git checkout -b feature
-Switched to a new branch &apos;feature&apos;
-$
-</code></pre><p><img src="../images/git-checkout-feature.png" alt="git-checkout-feature.png"></p>
-<p>&#x5728;&#x65B0;&#x529F;&#x80FD; <code>feature</code> &#x5206;&#x652F;&#x4E0A;&#x5F00;&#x53D1;&#x65B0;&#x529F;&#x80FD;,&#x5E76;&#x63D0;&#x4EA4;:</p>
-<pre><code>$ echo &quot;git commit c2&quot; &gt;&gt; test.txt
-$ git add test.txt
-$ git commit -m &quot;git commit c2&quot;
-[feature 0fe95f8] git commit c2
- 1 file changed, 1 insertion(+)
-$
-</code></pre><p><img src="../images/git-commit-c2.png" alt="git-commit-c2.png"></p>
-<p>&#x65E0;&#x8BBA;&#x65B0;&#x529F;&#x80FD; <code>feature</code> &#x662F;&#x5426;&#x5F00;&#x53D1;&#x5B8C;&#x6BD5;,&#x56E2;&#x961F;&#x7684;&#x5176;&#x4ED6;&#x6210;&#x5458;&#x5747;&#x6709;&#x53EF;&#x80FD;&#x5904;&#x4E8E; <code>master</code> &#x5206;&#x652F;&#x5E76;&#x505A;&#x76F8;&#x5E94;&#x66F4;&#x6539;:</p>
-<pre><code>$ git checkout master
-Switched to branch &apos;master&apos;
-Your branch is ahead of &apos;origin/master&apos; by 3 commits.
-  (use &quot;git push&quot; to publish your local commits)
-</code></pre><p><img src="../images/git-checkout-master-c1.png" alt="git-checkout-master-c1.png"></p>
-<p>&#x5176;&#x4ED6;&#x6210;&#x5458;&#x5BF9;&#x65B0;&#x529F;&#x80FD;&#x6709;&#x7740;&#x81EA;&#x5DF1;&#x7684;&#x770B;&#x6CD5;,&#x4E8E;&#x662F;&#x4E5F;&#x63D0;&#x4EA4;&#x4E86;&#x7248;&#x672C;,&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x63D0;&#x4EA4;&#x7684;&#x662F; <code>git commit c2</code>,&#x800C;&#x6B64;&#x65F6;<code>master</code> &#x5206;&#x652F;&#x63D0;&#x4EA4;&#x7684;&#x662F;<code>git commit c3</code>,&#x663E;&#x7136;&#x6211;&#x4EEC;&#x4E24;&#x4E2A;&#x4EBA;&#x7684;&#x610F;&#x89C1;&#x4E0D;&#x4E00;&#x81F4;!</p>
-<pre><code>$ echo &quot;git commit c3&quot; &gt;&gt; test.txt
-$ git add test.txt
-$ git commit -m &quot;git commit c3&quot;
-[master 0949cc3] git commit c3
- 1 file changed, 1 insertion(+)
-$
-</code></pre><p><img src="../images/git-commit-c3.png" alt="git-commit-c3.png"></p>
-<p>&#x6B63;&#x5728;&#x6B64;&#x65F6;,<code>feature</code> &#x5206;&#x652F;&#x7684;&#x65B0;&#x529F;&#x80FD;&#x5DF2;&#x5F00;&#x53D1;&#x5B8C;&#x6BD5;&#x5E76;&#x4E3B;&#x52A8;&#x5207;&#x6362;&#x56DE; <code>master</code> &#x5206;&#x652F;,&#x51C6;&#x5907;&#x5408;&#x5E76; <code>feature</code>
- &#x5206;&#x652F;.</p>
-<pre><code># &#x5408;&#x5E76; feature &#x5206;&#x652F;
-$ git merge feature
-Auto-merging test.txt
-CONFLICT (content): Merge conflict in test.txt
-Automatic merge failed; fix conflicts and then commit the result.
-$
-</code></pre><p>&#x7531;&#x4E8E;&#x9879;&#x76EE;&#x6210;&#x5458;&#x6C9F;&#x901A;&#x4E0D;&#x7545;&#x6216;&#x8005;&#x610F;&#x89C1;&#x4E0D;&#x4E00;&#x81F4;,&#x5BFC;&#x81F4;&#x4E86;&#x4EE3;&#x7801;&#x51B2;&#x7A81;,<code>git</code> &#x4F5C;&#x4E3A;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;,&#x81EA;&#x7136;&#x65E0;&#x6CD5;&#x89E3;&#x51B3;&#x8FD9;&#x7C7B;&#x95EE;&#x9898;,&#x603B;&#x4E0D;&#x80FD;&#x64C5;&#x81EA;&#x505A;&#x4E3B;&#x629B;&#x5F03;&#x540E;&#x6765;&#x7684;&#x66F4;&#x6539;&#x5427;&#x6216;&#x8005;&#x629B;&#x5F03;&#x5206;&#x652F;&#x66F4;&#x6539;?&#x6240;&#x4EE5; <code>git</code>
-&#x53EA;&#x8D1F;&#x8D23;&#x629B;&#x51FA;&#x95EE;&#x9898;,&#x7B49;&#x5F85;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x5458;&#x53BB;&#x89E3;&#x51B3;&#x95EE;&#x9898;.</p>
-<p>&#x65E2;&#x7136;&#x662F;&#x4EBA;&#x7684;&#x95EE;&#x9898;,&#x90A3;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x6211;&#x4EEC;&#x5230;&#x5E95;&#x662F;&#x54EA;&#x91CC;&#x4E0D;&#x4E00;&#x81F4;,&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x4EA7;&#x751F;&#x51B2;&#x7A81;?</p>
-<pre><code># &#x67E5;&#x770B;&#x72B6;&#x6001;
-$ git status
-On branch master
-Your branch is ahead of &apos;origin/master&apos; by 4 commits.
-  (use &quot;git push&quot; to publish your local commits)
-
-You have unmerged paths.
-  (fix conflicts and run &quot;git commit&quot;)
-  (use &quot;git merge --abort&quot; to abort the merge)
-
-Unmerged paths:
-  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
-
-    both modified:   test.txt
-
-no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
-# &#x6BD4;&#x8F83;&#x5DEE;&#x5F02;
-$ git diff 
-diff --cc test.txt
-index 6e00f87,0f95fd7..0000000
---- a/test.txt
-+++ b/test.txt
-@@@ -3,4 -3,4 +3,8 @@@ see https://snowdreams1006.github.io/gi
-  learn git branch
-  see https://snowdreams1006.github.io/git/usage/branch-overview.html
-  git commit c1
-++&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
- +git commit c3
-++=======
-+ git commit c2
-++&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature
-</code></pre><p>&#x548C;&#x6211;&#x4EEC;&#x9884;&#x671F;&#x4E00;&#x6837;,<code>test.txt</code> &#x6587;&#x4EF6;&#x4EA7;&#x751F;&#x4E86;&#x51B2;&#x7A81;,&#x5F53;&#x524D; <code>HEAD</code> &#x6307;&#x5411;&#x7684;&#x63D0;&#x4EA4;&#x5373; <code>master</code> &#x5206;&#x652F;&#x662F; <code>git commit c3</code> ,&#x800C; <code>feature</code> &#x5206;&#x652F;&#x662F; <code>git commit c2</code>,&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x540C;&#x4E00;&#x884C;&#x5185;&#x5BB9;&#x53D1;&#x751F;&#x4E0D;&#x540C;&#x7684;&#x66F4;&#x6539;,<code>git</code> &#x4E0D;&#x77E5;&#x9053;&#x4E5F;&#x4E0D;&#x5E94;&#x8BE5;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x5904;&#x7406;.</p>
-<pre><code># &#x67E5;&#x770B;&#x5185;&#x5BB9;
-$ cat test.txt
-add test.txt
-see https://snowdreams1006.github.io/git/usage/remote-repository.html
-learn git branch
-see https://snowdreams1006.github.io/git/usage/branch-overview.html
-git commit c1
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-git commit c3
-=======
-git commit c2
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature
-</code></pre><p><code>git</code> &#x7528; <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> &#x6807;&#x8BB0;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x51B2;&#x7A81;&#x5F00;&#x59CB;,<code>=======</code> &#x6807;&#x8BB0;&#x5206;&#x652F;&#x5206;&#x5272;&#x7EBF;,<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> &#x6807;&#x8BB0;&#x53E6;&#x4E00;&#x4E2A;&#x5206;&#x652F;&#x7ED3;&#x675F;.</p>
-<p>&#x7ECF;&#x8FC7;&#x51B2;&#x7A81;&#x53CC;&#x65B9;&#x7684;&#x8BA8;&#x8BBA;&#x540E;,&#x5F7C;&#x6B64;&#x95F4;&#x8FBE;&#x6210;&#x59A5;&#x534F;,&#x51B3;&#x5B9A;&#x4FEE;&#x6539;&#x6210;<code>git commit c2 and c3</code> ,&#x4FEE;&#x6539;&#x540E;&#x7EE7;&#x7EED;&#x63D0;&#x4EA4;:</p>
-<pre><code># &#x7F16;&#x8F91;&#x51B2;&#x7A81;&#x6587;&#x4EF6;,&#x6309;&#x7167;&#x534F;&#x5546;&#x4E00;&#x81F4;&#x7684;&#x5185;&#x5BB9;&#x4FEE;&#x6539;&#x6587;&#x4EF6;
-$ vim test.txt
-# &#x5C06;&#x51B2;&#x7A81;&#x5185;&#x5BB9;&#x66F4;&#x6539;&#x4E3A; git commit c2 and c3
-$ cat test.txt
-add test.txt
-see https://snowdreams1006.github.io/git/usage/remote-repository.html
-learn git branch
-see https://snowdreams1006.github.io/git/usage/branch-overview.html
-git commit c1
-git commit c2 and c3
-$ git add test.txt
-$ git commit -m &quot;fix conflict&quot;
-[master 3b8f434] fix conflict
-</code></pre><p>&#x51B2;&#x7A81;&#x5DF2;&#x7ECF;&#x89E3;&#x51B3;,&#x73B0;&#x5728;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x4F7F;&#x7528;<code>git log --graph</code> &#x56FE;&#x5F62;&#x5316;&#x5C55;&#x793A;&#x63D0;&#x4EA4;&#x5386;&#x53F2;:</p>
-<pre><code># &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x65E5;&#x5FD7;
-$ git log --pretty=oneline --graph
-*   3b8f434013caa8c27fade4c59d7aa2ee2c079636 (HEAD -&gt; master) fix conflict
-|\  
-| * 0fe95f871b371834d30ea17faa82f84b7d67672b (feature) git commit c2
-* | 0949cc319e099d554795d03c69ee38923af00d6c git commit c3
-|/  
-* 5c482cd9965b9dfd4f273b43b240ed7db66167a8 git commit c1
-* 413a4d1d2aab5ab85b6097d4b9f81cb5601c3b26 see https://snowdreams1006.github.io/git/usage/branch-overview.html
-* 9c30e50248b773e38b032477a859e87abe7c1bb0 learn git branch
-* b3d8193bbcb9f76c47e831e3e212f2405ae09f93 (origin/master, origin/HEAD) see https://snowdreams1006.github.io/git/usage/remote-repository.html
-* 8e625640348a47ac922409a1ecb4c844385582aa add test.txt
-* 9b196aab5bc87eeb11709c9eef35fca283e05c61 Initial commit
-$
-</code></pre><p><img src="../images/git-merge-with-conflict.png" alt="git-merge-with-conflict.png"></p>
-<p>&#x6700;&#x540E;,&#x5220;&#x9664;&#x65B0;&#x529F;&#x80FD;&#x5206;&#x652F; <code>feature</code> ,&#x4E0D;&#x7528;&#x7684;&#x5206;&#x652F;&#x53CA;&#x65F6;&#x6E05;&#x7406;&#x5E72;&#x51C0;,&#x9700;&#x8981;&#x65F6;&#x518D;&#x521B;&#x5EFA;&#x5206;&#x652F;.</p>
-<pre><code>$ git branch -d feature
-</code></pre><h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
-<ul>
-<li>&#x65E0;&#x6CD5;&#x675C;&#x7EDD;&#x51B2;&#x7A81;&#x7684;&#x53D1;&#x751F;,&#x4EE3;&#x7801;&#x4E0A;&#x7684;&#x51B2;&#x7A81;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4EBA;&#x4E3A;&#x56E0;&#x7D20;&#x9020;&#x6210;&#x7684;&#x51B2;&#x7A81;.</li>
-<li>&#x89E3;&#x51B3;&#x51B2;&#x7A81;&#x9700;&#x8981;&#x6709;&#x5173;&#x53CC;&#x65B9;&#x534F;&#x5546;&#x89E3;&#x51B3;,&#x4E0D;&#x53EF;&#x80FD;&#x72EC;&#x81EA;&#x89E3;&#x51B3;&#x51B2;&#x7A81;,&#x9664;&#x975E;&#x4F60;&#x629B;&#x5F03;&#x81EA;&#x6211;,&#x5B8C;&#x5168;&#x4EE5;&#x5BF9;&#x65B9;&#x4E3A;&#x51C6;.</li>
-<li>&#x4F7F;&#x7528; <code>git log --graph</code> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x56FE;&#x8868;&#x5316;&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x6291;&#x6216; <code>git log --pretty=oneline --graph</code> </li>
-</ul>
+                                <h1 id="&#x672C;&#x5730;&#x548C;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x672C;&#x8D28;">&#x672C;&#x5730;&#x548C;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x672C;&#x8D28;</h1>
+<p><strong>&#x672C;&#x5730;&#x4ED3;&#x5E93;</strong>&#x548C;<strong>&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</strong>&#x672C;&#x8D28;&#x4E0A;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x4E0D;&#x540C;,&#x53EA;&#x662F;&#x5B58;&#x653E;&#x7248;&#x672C;&#x5E93;&#x7684;&#x4E3B;&#x673A;&#x7535;&#x8111;&#x4E0D;&#x540C;&#x800C;&#x5DF2;,&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#x975E;&#x5F97;&#x662F; <code>github</code> &#x90A3;&#x79CD;&#x4E13;&#x95E8;&#x7684;&quot;&#x4E2D;&#x592E;&#x670D;&#x52A1;&#x5668;&quot;,&#x751A;&#x81F3;&#x5C40;&#x57DF;&#x7F51;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x7535;&#x8111;&#x4E5F;&#x53EF;&#x4EE5;&#x5145;&#x5F53;&quot;&#x4E2D;&#x592E;&#x670D;&#x52A1;&#x5668;&quot;&#x7684;&#x89D2;&#x8272;,&#x56E0;&#x4E3A;&#x5B83;&#x5B58;&#x5728;&#x7684;&#x6700;&#x521D;&#x76EE;&#x7684;&#x53EA;&#x662F;&#x65B9;&#x4FBF;&#x5927;&#x5BB6;<strong>&#x4EA4;&#x6362;&#x5F7C;&#x6B64;&#x7684;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;</strong>&#x800C;&#x5DF2;!</p>
+<p>&#x7406;&#x89E3;<strong>&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;</strong>&#x7684;<strong>&#x5E73;&#x7B49;&#x6027;</strong>&#x8FD9;&#x4E00;&#x70B9;&#x5F88;&#x91CD;&#x8981;,&#x662F;&#x533A;&#x522B;<strong>&#x96C6;&#x4E2D;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;</strong>&#x7684;&#x552F;&#x4E00;&#x4F9D;&#x636E;.&#x53EA;&#x4E0D;&#x8FC7;&#x4E00;&#x822C;&#x6765;&#x8BF4;,&#x6211;&#x4EEC;&#x4E60;&#x60EF;&#x4E8E;&#x4F7F;&#x7528; <code>github</code> &#x6765;&#x4F5C;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&quot;&#x4E2D;&#x592E;&#x670D;&#x52A1;&#x5668;&quot;&#x6216;&#x8005;&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x79C1;&#x670D;&#x6765;&#x5145;&#x5F53;&quot;&#x4E2D;&#x592E;&#x670D;&#x52A1;&#x5668;&quot;.</p>
+<p>&#x6240;&#x4EE5;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x548C;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;&#x57FA;&#x672C;&#x884C;&#x4E3A;&#x662F;&#x4E00;&#x81F4;&#x7684;,&#x4F46;&#x7EA6;&#x5B9A;&#x4FD7;&#x6210;&#x7684;&#x89C4;&#x5B9A;&#x662F;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x4E00;&#x822C;&#x4E0D;&#x76F4;&#x63A5;&#x53C2;&#x4E0E;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x5DE5;&#x4F5C;,&#x800C;&#x662F;&#x4F5C;&#x4E3A;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;&#x6258;&#x7BA1;&#x4E2D;&#x5FC3;.</p>
+<blockquote>
+<p>&#x67D0;&#x4E9B;&#x81EA;&#x52A8;&#x5316;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x73AF;&#x5883;&#x4E2D;&#x4E5F;&#x53EF;&#x80FD;&#x4F1A;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;,&#x8FD9;&#x65F6;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5C31;&#x771F;&#x7684;&#x548C;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x6CA1;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x4E86;!</p>
+</blockquote>
+<h2 id="&#x4E2A;&#x4EBA;&#x5F00;&#x53D1;&#x7684;&#x4E00;&#x822C;&#x6D41;&#x7A0B;">&#x4E2A;&#x4EBA;&#x5F00;&#x53D1;&#x7684;&#x4E00;&#x822C;&#x6D41;&#x7A0B;</h2>
+<h3 id="git-init--&#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x9879;&#x76EE;"><code>git init</code> : &#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x9879;&#x76EE;</h3>
+<p>&#x5C06;&#x672C;&#x5730;&#x9879;&#x76EE;&#x521D;&#x59CB;&#x5316; <code>git</code> &#x9879;&#x76EE;,&#x76F4;&#x63A5;&#x8868;&#x73B0;&#x4E3A;&#x8BE5;&#x9879;&#x76EE;&#x540C;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#x591A;&#x4E86; <code>.git</code> &#x9690;&#x85CF;&#x76EE;&#x5F55;,&#x5176;&#x5B58;&#x50A8;&#x7740; <code>git</code> &#x7248;&#x672C;&#x5E93;&#x76F8;&#x5173;&#x4FE1;&#x606F;.</p>
+<h3 id="git-clone--&#x514B;&#x9686;&#x8FDC;&#x7A0B;&#x9879;&#x76EE;"><code>git clone</code> : &#x514B;&#x9686;&#x8FDC;&#x7A0B;&#x9879;&#x76EE;</h3>
+<h3 id="git-add--&#x6DFB;&#x52A0;&#x6587;&#x4EF6;"><code>git add</code> : &#x6DFB;&#x52A0;&#x6587;&#x4EF6;</h3>
+<h3 id="git-commit--&#x63D0;&#x4EA4;&#x6587;&#x4EF6;"><code>git commit</code> : &#x63D0;&#x4EA4;&#x6587;&#x4EF6;</h3>
+<h3 id="git-push--&#x63A8;&#x9001;&#x6587;&#x4EF6;"><code>git push</code> : &#x63A8;&#x9001;&#x6587;&#x4EF6;</h3>
+<h3 id="git-branch-branch--&#x521B;&#x5EFA;&#x672C;&#x5730;&#x5206;&#x652F;"><code>git branch &lt;branch&gt;</code> : &#x521B;&#x5EFA;&#x672C;&#x5730;&#x5206;&#x652F;</h3>
+<h3 id="git-checkout-branch--&#x5207;&#x6362;&#x672C;&#x5730;&#x5206;&#x652F;"><code>git checkout &lt;branch&gt;</code> : &#x5207;&#x6362;&#x672C;&#x5730;&#x5206;&#x652F;</h3>
+<h3 id="git-merge-branch--&#x5408;&#x5E76;&#x672C;&#x5730;&#x5206;&#x652F;"><code>git merge &lt;branch&gt;</code> : &#x5408;&#x5E76;&#x672C;&#x5730;&#x5206;&#x652F;</h3>
+<h3 id="git-fetch--&#x6293;&#x53D6;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"><code>git fetch</code> : &#x6293;&#x53D6;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</h3>
+<h3 id="git-pull--&#x62C9;&#x53D6;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"><code>git pull</code> : &#x62C9;&#x53D6;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</h3>
+<h3 id="git-rebase--&#x5237;&#x65B0;&#x57FA;&#x7840;&#x7248;&#x672C;"><code>git rebase</code> : &#x5237;&#x65B0;&#x57FA;&#x7840;&#x7248;&#x672C;</h3>
+<h2 id="&#x5207;&#x6362;&#x5230;&#x56E2;&#x961F;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x5207;&#x6362;&#x5230;&#x56E2;&#x961F;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h2>
+<h2 id="&#x4E2A;&#x4EBA;&#x6216;&#x56E2;&#x961F;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x6DF1;&#x5165;&#x5206;&#x6790;">&#x4E2A;&#x4EBA;&#x6216;&#x56E2;&#x961F;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x6DF1;&#x5165;&#x5206;&#x6790;</h2>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
 
                                 
                                 </section>
@@ -918,12 +811,12 @@ $
 
             
                 
-                <a href="branch-overview.html" class="navigation navigation-prev " aria-label="Previous page: 分支总览">
+                <a href="branch-remote.html" class="navigation navigation-prev " aria-label="Previous page: 协同开发">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="branch-strategy.html" class="navigation navigation-next " aria-label="Next page: 分支策略">
+                <a href="../github/usage.html" class="navigation navigation-next " aria-label="Next page: github 教程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -934,7 +827,7 @@ $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"冲突合并","level":"2.2.2.9.2","depth":4,"next":{"title":"分支策略","level":"2.2.2.9.3","depth":4,"path":"git/usage/branch-strategy.md","ref":"git/usage/branch-strategy.md","articles":[]},"previous":{"title":"分支总览","level":"2.2.2.9.1","depth":4,"path":"git/usage/branch-overview.md","ref":"git/usage/branch-overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/branch-merge-with-conflict.md","mtime":"2019-03-16T13:41:45.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-25T07:52:29.448Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"本地和远程仓库的本质","level":"2.2.2.9.7","depth":4,"next":{"title":"github 教程","level":"2.2.3","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},"previous":{"title":"协同开发","level":"2.2.2.9.6","depth":4,"path":"git/usage/branch-remote.md","ref":"git/usage/branch-remote.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦"},"file":{"path":"git/usage/local-remote-repository.md","mtime":"2019-03-24T16:31:41.492Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-25T07:52:29.448Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

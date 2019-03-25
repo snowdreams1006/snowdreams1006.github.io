@@ -28,6 +28,7 @@
             * [紧急修复](git/usage/branch-emergency-fixbug.md)
             * [变基合并](git/usage/branch-rebase.md)
             * [协同开发](git/usage/branch-remote.md)
+            * [本地和远程仓库的本质](git/usage/local-remote-repository.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
@@ -42,6 +43,6 @@
     * [markdown转富文本](write/markdown2richText.md)
 * [其他](other/README.md)
     * [历史统计](other/static.md)
-    * [联系作者](other/contact.md)
+    * [关于作者](other/me.md)
     * [捐赠支持](other/donate.md)
 
