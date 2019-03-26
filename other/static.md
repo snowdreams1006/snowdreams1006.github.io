@@ -10,6 +10,7 @@
 - [segmentfault][segmentfault] : `24`文章,`0`粉丝,`14`声望,`817`阅读量,`4`点赞数.
 - [慕课手记][imooc] : `23`手记,`41895`经验,`45`积分,`4`粉丝.
 - [B站专栏][bilibili] : `138`阅读量`+34`,`2`评论`0`,`25`点赞`+2`,`4`收藏`0`,`1`投币`0`.
+- [微信公众号][weixin] : `20`文章,`36`阅读,`0`转发,`0`收藏,`6`用户,`2`新增,`0`取关.
 
 ## 2019-03-25
 
@@ -75,3 +76,4 @@
 [segmentfault]: https://segmentfault.com/blog/snowdreams1006 "雪之梦技术驿站"
 [imooc]: https://www.imooc.com/u/5224488/articles "雪之梦技术驿站"
 [bilibili]: https://member.bilibili.com/v2#/upload-manager/text "雪之梦技术驿站"
+[weixin]: https://mp.weixin.qq.com/cgi-bin/home?t=home/index&token=1838407560&lang=zh_CN "雪之梦技术驿站"
