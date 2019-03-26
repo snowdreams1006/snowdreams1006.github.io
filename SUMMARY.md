@@ -29,6 +29,7 @@
             * [变基合并](git/usage/branch-rebase.md)
             * [协同开发](git/usage/branch-remote.md)
             * [本地和远程仓库的本质](git/usage/local-remote-repository.md)
+        * [里程碑式标签](git/usage/tag.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
