@@ -31,6 +31,7 @@
             * [本地和远程仓库的本质](git/usage/local-remote-repository.md)
         * [里程碑式标签](git/usage/tag.md)
     * [个性化 git](git/custom/about.md)
+    * [忽略文件](git/custom/ignore.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [知识速查](git/summary/common.md)
