@@ -61,9 +61,21 @@ somepath
 
 > 运行 `git help ignore` 命令查看帮助文档
 
-## 创建 `.gitignore` 文件
+## 三种设置方式
 
-评估好需要忽略的文件后,下面就需要如何写入这些配置信息了,庆幸的是,网上[https://github.com/github/gitignore](https://github.com/github/gitignore) 有现成的示例,因此我们还是做搬运工吧!
+`git` 设置忽略文件有三种方式,如下:
+
+- 全局配置文件(`~/.gitignore`),执行 `git config --global core.excludesfile ~/.gitignore` 命令后适用于所有的版本库.
+- 远程配置文件(`$PWD/.gitignore`),编辑 `.gitignore` 文件后适用于远程和本地版本库.
+- 本地配置文件(`$PWD/.git/info/exlude`),编辑 `$PWD/.git/info/exlude` 文件后适用于本地版本库.
+
+## 最常用方式
+
+三种设置方式中,第二种最为常见,另外两种大致一样,重点在于配置文件如何编写.
+
+### 创建 `.gitignore` 文件
+
+参考在线示例以及基本语法编写自定义忽略规则
 
 ```
 # General
@@ -71,58 +83,15 @@ somepath
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
 # Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db
 ehthumbs_vista.db
-
-# Dump file
-*.stackdump
-
-# Folder config file
-[Dd]esktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
 ```
 
-> `gitignore` 开源项目提供了丰富的 `.gitignore` 文件示例,只需要组合下就形成自己的文件了.
+### 提交 `.gitignore` 文件
 
-## 提交 `.gitignore` 文件
-
-忽略文件规则设置完毕后,可以将该文件也提交到版本库,这样在其他电脑上也能应用相同的忽略规则.
+忽略文件规则配置完毕后,需要将该文件**提交到版本库**,这样在其他电脑上也能应用相同的忽略规则.
 
 ```
 # 添加 `.gitignore` 
@@ -135,23 +104,8 @@ git commit -m "add .gitignore"
 git push origin master
 ```
 
-## 验证忽略效果
+### 验证忽略效果
 
 新建 `.gitignore` 文件中已忽略的文件,运行 `git status` 命令,如果提示 `working directory clean`,那么说明忽略文件的配置已经生效,如果工作区不干净,很遗憾,忽略文件配置可能并未生效,需要检查下哪里配置错了.
 
-如果配置文件没写好将本应该提交到版本库的文件忽略了,正常提交时会发现,这个文件怎么死活提交不了,此时命令行提示说可能被忽略了,强制添加使用 `-f` 参数,这种情况算是`.gitignore` 配置文件误伤了.
-
-运行 `git check-ignore` 命令检查是哪个配置规则写错了,从而我们能够方便定位到是哪一条规则配置得有问题.
-
-- `.gitignore` 文件可以忽略自己,被忽略的文件仅针对未被跟踪的文件清单.
-- 若忽略已提交版本库文件,可先删除版本库文件并恢复到未被跟踪文件状态,再设置到忽略文件配置.
-
-
-
-## 小结
-
-- 忽略某些文件,需要新建 `.gitignore` 配置文件
-- `.gitignore` 文件本身需要提交到版本库
-- `git check-ignore` 检查配置规则 
-
-
+运行 `git check-ignore` 命令检查是哪个配置规则写错了,从而我们能够更正相应的配置规则.
