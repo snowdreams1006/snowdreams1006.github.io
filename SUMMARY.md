@@ -38,6 +38,7 @@
     * [备忘录[译]](git/summary/cheatsheet-translation.md)
     * [常见问题](git/issue/README.md)
 * [gitbook 入门教程](gitbook/README.md)
+
 * [java8新特性](java8/README.md)
     * [lambda表达式](java8/lambda.md)
     * [函数式接口](java8/functionInterface.md)
