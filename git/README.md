@@ -22,3 +22,5 @@
 - 有网无网均可工作,数据交换不需再相互拷贝;
 - 人人平等的开放环境,有机会贡献自己的智慧;
 
+> 本书发表在 [https://snowdreams1006.github.io/git/](https://snowdreams1006.github.io/git/)
+
