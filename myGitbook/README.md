@@ -4,7 +4,7 @@
 
 `gitbook` 支持输出静态网页和电子书等多种格式,其中默认输出静态网页格式.
 
-`gitbook` 不仅支持本地构建电子书,而且可以托管在 `gitbook` 官网上,并享受在线发布和托管图书的便利,完整的文档请参考 [toolchain.gitbook.com][legacy.gitbook.com] .
+`gitbook` 不仅支持本地构建电子书,而且可以托管在 `gitbook` 官网上,并享受在线发布和托管图书的便利,完整的文档请参考 [gitbook 新版文档(需翻墙)][docs.gitbook.com] 或 [gitbook 旧版文档(不需翻墙)][toolchain.gitbook.com]
 
 ## 适用场景
 
@@ -13,6 +13,24 @@
 既适合具有一定编程经验的**软件开发从业者**,也适用于**不满足传统书写**方式的文学创作者.
 
 简而言之,`gitbook` 可以**条理清晰**地整理出零碎知识,打造专属你自己的**电子书**,漂亮的主题,丰富的插件让你的知识变得从此与众不同!
+
+`git + markdown = gitbook`,其中 `git` 可以管理书籍内容的变更,并将其托管到云端实现团队协作,而 `markdown` 简洁的语法特点,使得我们不必关心布局排版问题,专注创作,重拾写作乐趣!
+
+> 如果你还不了解 `git` 和 `markdown` 相关知识,赶紧去学习 [markdown 快速入门](https://snowdreams1006.github.io/markdown/) 和 [git 入门教程](https://snowdreams1006.github.io/git/) 吧!
+
+## 先睹为快
+
+### gitbook 教程
+
+![gitbook-preview.png](./images/gitbook-preview.png)
+
+### gitbook 官网
+
+![gitbook-www.png](./images/gitbook-www.png)
+
+### gitbook 文档
+
+![gitbook-doc.png](./images/gitbook-doc.png)
 
 ## 参考文档
 
@@ -23,10 +41,7 @@
 - [git 官网][git-scm.com]
 - [github 官网][github.com]
 
->新版需要翻墙,旧版不需要翻墙
-
-
-
+>`gitbook` 新版需要翻墙,旧版不需要翻墙
 
 <!-- 链接引用 -->
 [www.gitbook.com]: https://www.gitbook.com/ "https://www.gitbook.com/"
