@@ -4,7 +4,7 @@
 
 `gitbook` 支持输出静态网页和电子书等多种格式,其中默认输出静态网页格式.
 
-`gitbook` 不仅支持本地构建电子书,而且可以托管在 `gitbook` 官网上,并享受在线发布和托管图书的便利,完整的文档请参考 [gitbook 新版文档(需翻墙)][docs.gitbook.com] 或 [gitbook 旧版文档(不需翻墙)][toolchain.gitbook.com]
+`gitbook` 不仅支持本地构建电子书,而且可以托管在 `gitbook` 官网上,并享受在线发布和托管图书的便利,完整的文档请参考 [gitbook 新版文档(需FQ)][docs.gitbook.com] 或 [gitbook 旧版文档(不需FQ)][toolchain.gitbook.com]
 
 ## 适用场景
 
@@ -41,17 +41,12 @@
 - [git 官网][git-scm.com]
 - [github 官网][github.com]
 
->`gitbook` 新版需要翻墙,旧版不需要翻墙
+>`gitbook` 新版需要FQ,旧版不需要FQ
 
 <!-- 链接引用 -->
 [www.gitbook.com]: https://www.gitbook.com/ "https://www.gitbook.com/"
 [legacy.gitbook.com]: https://legacy.gitbook.com/ "https://legacy.gitbook.com/"
-
 [docs.gitbook.com]: https://docs.gitbook.com/ "https://docs.gitbook.com/"
 [toolchain.gitbook.com]: https://toolchain.gitbook.com/ "https://toolchain.gitbook.com/"
-
 [git-scm.com]: https://git-scm.com/ "https://git-scm.com/"
 [github.com]: https://github.com/ "https://github.com/"
-
-
-
