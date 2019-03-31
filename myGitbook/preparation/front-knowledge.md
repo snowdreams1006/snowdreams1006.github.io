@@ -94,15 +94,53 @@
 
 ![雪之梦技术驿站的头像](https://avatars0.githubusercontent.com/u/23238267?s=400&u=c60a9628495b4bfb4c6ee1a7bba8e3a8d265ca96&v=4)
 
+### 代码
+
+代码分为单行代码和多行代码,其中多行代码也叫做代码块.
+
+大多数 `markdown` 编辑器均支持代码格式,富文本编辑器支持度不一样,有的支持单行代码有的支持代码块.
+
+#### 单行代码
+
+> 语法格式：<code>\`</code> + `单行代码` + <code>\`</code>
+
+示例:
+
+```
+`code`
+```
+ 
+效果:
+
+`code`
+
+#### 多行代码
+
+> 语法格式：<code>\`\`\`</code> + `多行代码` + <code>\`\`\`</code>
 
 
+示例:
+
+<pre>
+```
+function fun(){
+ echo "这是一句非常牛逼的代码";
+}
+fun();
+```
+</pre>
+
+效果:
+
+``` 
+function fun(){
+  echo "这是一句非常牛逼的代码";
+}
+fun();
+```
 
 
-
-
-
-
-> 详情请参考 [markdown 快速入门](https://snowdreams1006.github.io/markdown/)
+> 富文本支持语法指的是 `markdown` 渲染后的内容能否正常显示,并不是指 `markdown`语法本身能够正常渲染,详情请参考 [markdown 快速入门](https://snowdreams1006.github.io/markdown/)
 
 
 ## `git` 基本知识
