@@ -124,7 +124,6 @@
 
 > 语法格式：<code>\`\`\`</code> + `多行代码` + <code>\`\`\`</code>
 
-
 示例:
 
 <pre>
@@ -166,7 +165,6 @@ fun();
 ``` 
 git init
 ```
-
 
 ### 克隆项目 
 
@@ -263,5 +261,6 @@ git diff
 ```
 git log
 ```
+
 
 > 上述仅介绍了 `git` 的简单命令,实际使用情况远不止这些,更多详情请参考 [git 入门教程](https://snowdreams1006.github.io/git/)
