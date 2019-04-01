@@ -41,7 +41,7 @@
     * [准备阶段](myGitbook/preparation/README.md)
         * [前置知识](myGitbook/preparation/front-knowledge.md)
         * [环境要求](myGitbook/preparation/environmental-requirements.md)
-    * [实战阶段](myGitbook/front-knowledge.md)
+    * [快速体验](myGitbook/experience/preview.md)
         * [目录结构](myGitbook/directory-structure.md)
         * [基本配置](myGitbook/basic-configuration.md)
         * [基本操作](myGitbook/basic-operation.md)
