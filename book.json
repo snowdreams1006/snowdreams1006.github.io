@@ -12,11 +12,49 @@
   "plugins": [
     "github",
     "pageview-count",
-    "mermaid-gb3"
+    "mermaid-gb3",
+    "-lunr", 
+    "-search", 
+    "search-plus",
+    "splitter",
+    "-sharing", 
+    "sharing-plus",
+    "expandable-chapters-small",
+    "anchor-navigation-ex",
+    "edit-link",
+    "copy-code-button"
   ],
   "pluginsConfig": {
     "github": {
       "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+    },
+    "sharing": {
+       "douban": true,
+       "facebook": false,
+       "google": false,
+       "hatenaBookmark": false,
+       "instapaper": false,
+       "line": false,
+       "linkedin": false,
+       "messenger": false,
+       "pocket": false,
+       "qq": true,
+       "qzone": true,
+       "stumbleupon": false,
+       "twitter": false,
+       "viber": false,
+       "vk": false,
+       "weibo": true,
+       "whatsapp": false,
+       "all": [
+           "facebook", "google", "twitter",
+           "weibo", "instapaper", "linkedin",
+           "pocket", "stumbleupon"
+       ]
+   },
+   "edit-link": {
+      "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",
+      "label": "编辑本页"
     }
   }
 }
