@@ -266,14 +266,53 @@
 }
 {% endchart %}
 
+### B站专栏
+
+> [B站专栏][bilibili] : https://space.bilibili.com/236627025
+
+{% chart %}
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            ["x","2019-04-01","2019-04-02"],
+            ["粉丝",1,1],
+            ["阅读量",179,184],
+            ["投稿",34,35],
+            ["点赞",32,33],
+            ["收藏",6,6],
+            ["投币",1,1]
+        ],
+        "axes": {
+            "粉丝": "y2"
+        }
+    },
+    "axis": {
+      x: {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      y2: {
+        show: true,
+        label: {
+          text: '粉丝',
+          position: 'outer-middle'
+        }
+      }
+    }
+}
+{% endchart %}
+
 
 
 
 
 <!-- 链接引用 -->
 
-[imooc]: https://www.imooc.com/u/5224488/articles "雪之梦技术驿站"
-[bilibili]: https://member.bilibili.com/v2#/upload-manager/text "雪之梦技术驿站"
+
+
 [weixin]: https://mp.weixin.qq.com/ "雪之梦技术驿站"
 
 ### 2019-04-02
@@ -282,14 +321,11 @@
 
 
 
-
-- [B站专栏][bilibili] : `184`阅读量`+5`,`2`评论`0`,`33`点赞`+1`,`6`收藏`0`,`1`投币`0`.
 - [微信公众号][weixin] : `26`阅读,`3`转发,`0`收藏,`7`用户,`0`新增,`0`取关.
 
 ### 2019-04-01
 
 
-- [慕课手记][imooc] : `32`手记,`42365`经验,`107`积分,`8`粉丝.
 - [B站专栏][bilibili] : `179`阅读量`+7`,`2`评论`0`,`32`点赞`+1`,`6`收藏`0`,`1`投币`0`.
 - [微信公众号][weixin] : `41`阅读,`0`转发,`0`收藏,`7`用户,`0`新增,`0`取关.
 
@@ -474,5 +510,5 @@
 [oschina]: https://my.oschina.net/snowdreams1006 "雪之梦技术驿站"
 [segmentfault]: https://segmentfault.com/blog/snowdreams1006 "雪之梦技术驿站"
 [imooc]: https://www.imooc.com/u/5224488/articles "雪之梦技术驿站"
-[bilibili]: https://member.bilibili.com/v2#/upload-manager/text "雪之梦技术驿站"
+[bilibili]: https://space.bilibili.com/236627025 "雪之梦技术驿站"
 [weixin]: https://mp.weixin.qq.com/ "雪之梦技术驿站"
