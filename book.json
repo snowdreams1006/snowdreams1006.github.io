@@ -62,16 +62,16 @@
     "chart": {
       "type": "c3"
     },
-    "favicon": "/images/favicon.ico",
-    "appleTouchIconPrecomposed152": "/images/favicon-152x152.png",
-    "output": "/images/favicon.ico",
+    "favicon": "images/favicon.ico",
+    "appleTouchIconPrecomposed152": "images/apple-touch-icon-precomposed-152.png",
+    "output": "_book",
     "donate": {
       "wechat": "https://security-plus.github.io/static/image/wechat.jpg",
       "alipay": "https://security-plus.github.io/static/image/alipay.jpg",
-      "title": "捐赠",
-      "button": "我要捐赠",
-      "alipayText": "支付宝捐赠",
-      "wechatText": "微信捐赠"
+      "title": "赏",
+      "button": "捐赠",
+      "alipayText": "支付宝",
+      "wechatText": "微信"
     }
   }
 }
