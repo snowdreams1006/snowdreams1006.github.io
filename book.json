@@ -22,7 +22,10 @@
     "expandable-chapters-small",
     "anchor-navigation-ex",
     "edit-link",
-    "copy-code-button"
+    "copy-code-button",
+    "chart",
+    "favicon-plus",
+    "donate"
   ],
   "pluginsConfig": {
     "github": {
@@ -55,6 +58,20 @@
    "edit-link": {
       "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",
       "label": "编辑本页"
+    },
+    "chart": {
+      "type": "c3"
+    },
+    "favicon": "/images/favicon.ico",
+    "appleTouchIconPrecomposed152": "/images/favicon-152x152.png",
+    "output": "/images/favicon.ico",
+    "donate": {
+      "wechat": "https://security-plus.github.io/static/image/wechat.jpg",
+      "alipay": "https://security-plus.github.io/static/image/alipay.jpg",
+      "title": "捐赠",
+      "button": "我要捐赠",
+      "alipayText": "支付宝捐赠",
+      "wechatText": "微信捐赠"
     }
   }
 }
