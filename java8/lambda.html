@@ -26,11 +26,23 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -1086,14 +1098,14 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lambda&#x8868;&#x8FBE;&#x5F0F;">lambda&#x8868;&#x8FBE;&#x5F0F;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#lambda&#x8868;&#x8FBE;&#x5F0F;"><b>1. </b>lambda&#x8868;&#x8FBE;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;"><b>1.1. </b>&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;"><b>1.2. </b>&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;</a></li><li><span class="title-icon "></span><a href="#&#x521D;&#x4F53;&#x9A8C;"><b>1.3. </b>&#x521D;&#x4F53;&#x9A8C;</a></li></ul></ul></div><a href="#lambda&#x8868;&#x8FBE;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="lambda&#x8868;&#x8FBE;&#x5F0F;"><a name="lambda&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#lambda&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. lambda&#x8868;&#x8FBE;&#x5F0F;</h1>
 <p>&#x4E0B;&#x9762;&#x901A;&#x8FC7;&#x5BF9;&#x6BD4; <code>java8</code> &#x4E4B;&#x524D;&#x7684;&#x666E;&#x901A;&#x5B9E;&#x73B0;&#x548C; <code>java8</code> &#x5F15;&#x5165;<code>lambda</code> &#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5B9E;&#x73B0;,&#x5E2E;&#x52A9;&#x8BFB;&#x8005;&#x5FEB;&#x901F;&#x4E86;&#x89E3;&#x4EE3;&#x7801;&#x5DEE;&#x5F02;&#x6027;,&#x773C;&#x89C1;&#x4E3A;&#x5B9E;,&#x8D76;&#x7D27;&#x5F00;&#x59CB;&#x5427;!</p>
-<h2 id="&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;">&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;</h2>
+<h2 id="&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;"><a name="&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6C42;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;</h2>
 <pre><code>public static void main(String[] args) {
     // &#x65B9;&#x6CD5;1: jdk8&#x4EE5;&#x524D;&#x7684;&#x5B9E;&#x73B0;
     int[] nums = {33, 55, -55, 90, -666, 90};
@@ -1117,7 +1129,7 @@
 <li><code>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</code> &#x5173;&#x6CE8;&#x7ED3;&#x679C;,&#x4E0D;&#x5728;&#x4E4E;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;,&#x5206;&#x914D;&#x4EFB;&#x52A1;&#x8BA9;&#x4E0B;&#x5C5E;&#x53BB;&#x5904;&#x7406;!</li>
 <li><code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x662F;<code>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</code> &#x7684;&#x91CD;&#x8981;&#x4F53;&#x73B0;,&#x7B80;&#x6D01;&#x6613;&#x4E8E;&#x7406;&#x89E3;.</li>
 </ul>
-<h2 id="&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;">&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;</h2>
+<h2 id="&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;"><a name="&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;</h2>
 <pre><code>public static void main(String[] args) {
     // &#x65B9;&#x6CD5;1: jdk8&#x4EE5;&#x524D;&#x4E00;&#x822C;&#x5199;&#x6CD5;
     new Thread(new Runnable() {
@@ -1136,7 +1148,7 @@
 <li><code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x5B9E;&#x73B0;&#x6307;&#x5B9A;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x63A5;&#x53E3;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</li>
 <li><code>lambda &#x8868;&#x8FBE;&#x5F0F;</code> &#x7531;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x4EE5;&#x53CA;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x4E09;&#x90E8;&#x5206;&#x7EC4;&#x6210;,&#x4E0D;&#x5728;&#x4E4E;&#x65B9;&#x6CD5;&#x540D;.</li>
 </ul>
-<h2 id="&#x521D;&#x4F53;&#x9A8C;">&#x521D;&#x4F53;&#x9A8C;</h2>
+<h2 id="&#x521D;&#x4F53;&#x9A8C;"><a name="&#x521D;&#x4F53;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x4F53;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x521D;&#x4F53;&#x9A8C;</h2>
 <pre><code>// &#x5B9A;&#x4E49;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x63A5;&#x53E3;
 interface TestInterface {
     int doubleNum(int i);
@@ -1215,7 +1227,7 @@ public static void main(String[] args) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"lambda表达式","level":"2.4.1","depth":2,"next":{"title":"函数式接口","level":"2.4.2","depth":2,"path":"java8/functionInterface.md","ref":"java8/functionInterface.md","articles":[]},"previous":{"title":"java8新特性","level":"2.4","depth":1,"path":"java8/README.md","ref":"java8/README.md","articles":[{"title":"lambda表达式","level":"2.4.1","depth":2,"path":"java8/lambda.md","ref":"java8/lambda.md","articles":[]},{"title":"函数式接口","level":"2.4.2","depth":2,"path":"java8/functionInterface.md","ref":"java8/functionInterface.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006的技术小屋"},"file":{"path":"java8/lambda.md","mtime":"2019-03-04T14:05:01.031Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-02T07:47:59.208Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"lambda表达式","level":"2.4.1","depth":2,"next":{"title":"函数式接口","level":"2.4.2","depth":2,"path":"java8/functionInterface.md","ref":"java8/functionInterface.md","articles":[]},"previous":{"title":"java8新特性","level":"2.4","depth":1,"path":"java8/README.md","ref":"java8/README.md","articles":[{"title":"lambda表达式","level":"2.4.1","depth":2,"path":"java8/lambda.md","ref":"java8/lambda.md","articles":[]},{"title":"函数式接口","level":"2.4.2","depth":2,"path":"java8/functionInterface.md","ref":"java8/functionInterface.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006的技术小屋"},"file":{"path":"java8/lambda.md","mtime":"2019-03-04T14:05:01.031Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-02T08:41:12.794Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1238,23 +1250,31 @@ public static void main(String[] args) {
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
