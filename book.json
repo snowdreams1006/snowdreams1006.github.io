@@ -11,7 +11,8 @@
   },
   "plugins": [
     "github",
-    "pageview-count"
+    "pageview-count",
+    "mermaid-gb3"
   ],
   "pluginsConfig": {
     "github": {

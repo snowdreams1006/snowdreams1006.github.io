@@ -1,0 +1,32 @@
+{
+  "name": "snowdreams1006.github.io",
+  "version": "1.0.0",
+  "description": "snowdreams1006",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-mermaid": "^0.0.9",
+    "gitbook-plugin-mermaid-gb3": "^2.1.0",
+    "gitbook-plugin-pageview-count": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowdreams1006/snowdreams1006.github.io.git"
+  },
+  "keywords": [
+    "snowdreams1006",
+    "git",
+    "markdown",
+    "gitbook"
+  ],
+  "author": "snowdreams1006",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snowdreams1006/snowdreams1006.github.io/issues"
+  },
+  "homepage": "https://github.com/snowdreams1006/snowdreams1006.github.io#readme"
+}
