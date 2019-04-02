@@ -53,8 +53,38 @@ graph LR
 
 ### 各大平台特点
 
+- [抖音](https://www.douyin.com/platform/home)
+- [今日头条](https://mp.toutiao.com/profile_v3/index)
+- [微信公众号](https://mp.weixin.qq.com)
+- [知乎](https://www.zhihu.com/)
+- [新浪博客](http://blog.sina.com.cn/)
+- [简书](https://www.jianshu.com/)
+- [大鱼号](https://mp.dayu.com/)
+- [百家号](https://baijiahao.baidu.com/)
+- [搜狐自媒体](https://mp.sohu.com)
+- [熊掌号](https://xiongzhang.baidu.com)
+- [一点资讯](https://mp.yidianzixun.com/)
+
+> 抖音分为商家版和个人版,成立专门团队,越专业越成功!
+
+![other-transformation-platform-features.png](./images/other-transformation-platform-features.png)
 
 ### 到底如何写内容
+
+![other-transformation-how-to-write.png](./images/other-transformation-how-to-write.png)
+
+#### 标题的重要性
+
+1. 字数在20字以内
+2. 出乎意料
+3. 带数字
+4. 给人感觉像故事或干货
+
+![other-transformation-write-title.png](./images/other-transformation-write-title.png)
+
+#### 人格化定位
+
+#### 引导转发和分享
 
 ### 如何把流量快速变现
 
