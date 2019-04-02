@@ -1,5 +1,14 @@
 # 快速体验
 
+本文主要介绍三种使用 `gitbook` 的方式,分别是 `gitbook` 命令行工具,`Gitbook Editor` 官方编辑器和 `gitbook.com` 官网.
+
+总体来说,三种途径适合各自不同的人群,找到适合自己的方式就好,基本操作流程都是一样的.
+
+- 命令行工具更适合具备编程经验开发者,具有简单高效易整合等特点.
+- 编辑器更适合无任何编程经验的文学创作者,不熟悉 `markdown` 语法,不熟悉 `git` 工作流,这种情况下也推荐使用图形化操作的编辑器.
+- 官网适合想要快速体验 `gitbook` 效果的萌新,只有觉得物超所值才能有动力搭建 `gitbook` 开发环境,不是吗?
+
+> 当然,如果你想访问官网的话,你可能需要学会科学上网,网址见文章结尾.
 
 ## `gitbook` 命令行
 
@@ -162,8 +171,8 @@ $ gitbook serve
 
 由于受网络因素所限,暂时不分享这部分知识了,简单来说就是在线编辑并发布电子书,这一点和 `github` 的代码托管服务类似.
 
-- [gitbook 新版官网(需要FQ)](https://www.gitbook.com/)
-- [gitbook 旧版官网(无需FQ)](https://legacy.gitbook.com)
+- [gitbook 新版官网(需要FQ)](https://www.gitbook.com/) : https://www.gitbook.com/
+- [gitbook 旧版官网(无需FQ)](https://legacy.gitbook.com) : https://legacy.gitbook.com
 
 ## 小结
 
