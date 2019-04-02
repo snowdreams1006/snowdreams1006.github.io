@@ -12,12 +12,17 @@
         
         
     
+    
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
                 
             
                 
@@ -48,6 +53,9 @@
         
     
         
+    
+
+
     
 
         
@@ -981,7 +989,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.6.1" data-path="../other/static.html">
+        <li class="chapter " data-level="2.6.1" data-path="../other/transformation.html">
+            
+                <a href="../other/transformation.html">
+            
+                    
+                    程序员转型之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="../other/static.html">
             
                 <a href="../other/static.html">
             
@@ -994,7 +1015,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6.2" data-path="../other/me.html">
+        <li class="chapter " data-level="2.6.3" data-path="../other/me.html">
             
                 <a href="../other/me.html">
             
@@ -1007,7 +1028,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6.3" data-path="../other/donate.html">
+        <li class="chapter " data-level="2.6.4" data-path="../other/donate.html">
             
                 <a href="../other/donate.html">
             
@@ -1190,34 +1211,42 @@ n\in\mathbb N$ &#x662F;&#x901A;&#x8FC7; Euler integral</p>
 \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.</p>
 <p>$$</p>
 <h2 id="&#x63D2;&#x5165;&#x7518;&#x7279;&#x56FE;">&#x63D2;&#x5165;&#x7518;&#x7279;&#x56FE;</h2>
-<pre><code class="lang-mermaid">gantt
+<div class="mermaid">
+gantt
         dateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to mermaid
         section &#x73B0;&#x6709;&#x4EFB;&#x52A1;
         &#x5DF2;&#x5B8C;&#x6210;               :done,    des1, 2014-01-06,2014-01-08
         &#x8FDB;&#x884C;&#x4E2D;               :active,  des2, 2014-01-09, 3d
         &#x8BA1;&#x5212;&#x4E2D;               :         des3, after des2, 5d
-</code></pre>
+</div>
+
+
 <h2 id="&#x63D2;&#x5165;uml&#x56FE;">&#x63D2;&#x5165;UML&#x56FE;</h2>
-<pre><code class="lang-mermaid">sequenceDiagram
+<div class="mermaid">
+sequenceDiagram
 &#x5F20;&#x4E09; -&gt;&gt; &#x674E;&#x56DB;: &#x4F60;&#x597D;&#xFF01;&#x674E;&#x56DB;, &#x6700;&#x8FD1;&#x600E;&#x4E48;&#x6837;?
 &#x674E;&#x56DB;--&gt;&gt;&#x738B;&#x4E94;: &#x4F60;&#x6700;&#x8FD1;&#x600E;&#x4E48;&#x6837;&#xFF0C;&#x738B;&#x4E94;&#xFF1F;
 &#x674E;&#x56DB;--x &#x5F20;&#x4E09;: &#x6211;&#x5F88;&#x597D;&#xFF0C;&#x8C22;&#x8C22;!
 &#x674E;&#x56DB;-x &#x738B;&#x4E94;: &#x6211;&#x5F88;&#x597D;&#xFF0C;&#x8C22;&#x8C22;!
-Note right of &#x738B;&#x4E94;: &#x674E;&#x56DB;&#x60F3;&#x4E86;&#x5F88;&#x957F;&#x65F6;&#x95F4;, &#x6587;&#x5B57;&#x592A;&#x957F;&#x4E86;&lt;br/&gt;&#x4E0D;&#x9002;&#x5408;&#x653E;&#x5728;&#x4E00;&#x884C;.
+Note right of &#x738B;&#x4E94;: &#x674E;&#x56DB;&#x60F3;&#x4E86;&#x5F88;&#x957F;&#x65F6;&#x95F4;, &#x6587;&#x5B57;&#x592A;&#x957F;&#x4E86;<br>&#x4E0D;&#x9002;&#x5408;&#x653E;&#x5728;&#x4E00;&#x884C;.
 
 &#x674E;&#x56DB;--&gt;&gt;&#x5F20;&#x4E09;: &#x6253;&#x91CF;&#x7740;&#x738B;&#x4E94;...
 &#x5F20;&#x4E09;-&gt;&gt;&#x738B;&#x4E94;: &#x5F88;&#x597D;... &#x738B;&#x4E94;, &#x4F60;&#x600E;&#x4E48;&#x6837;?
-</code></pre>
+</div>
+
 <h2 id="&#x63D2;&#x5165;mermaid&#x6D41;&#x7A0B;&#x56FE;">&#x63D2;&#x5165;Mermaid&#x6D41;&#x7A0B;&#x56FE;</h2>
-<pre><code class="lang-mermaid">graph LR
+<div class="mermaid">
+graph LR
 A[&#x957F;&#x65B9;&#x5F62;] -- &#x94FE;&#x63A5; --&gt; B((&#x5706;))
 A --&gt; C(&#x5706;&#x89D2;&#x957F;&#x65B9;&#x5F62;)
 B --&gt; D{&#x83F1;&#x5F62;}
 C --&gt; D
-</code></pre>
+</div>
+
 <h2 id="&#x63D2;&#x5165;flowchart&#x6D41;&#x7A0B;&#x56FE;">&#x63D2;&#x5165;Flowchart&#x6D41;&#x7A0B;&#x56FE;</h2>
-<pre><code class="lang-mermaid">flowchat
+<div class="mermaid">
+flowchat
 st=&gt;start: &#x5F00;&#x59CB;
 e=&gt;end: &#x7ED3;&#x675F;
 op=&gt;operation: &#x6211;&#x7684;&#x64CD;&#x4F5C;
@@ -1226,8 +1255,7 @@ cond=&gt;condition: &#x786E;&#x8BA4;&#xFF1F;
 st-&gt;op-&gt;cond
 cond(yes)-&gt;e
 cond(no)-&gt;op
-</code></pre>
-
+</div>
                                 
                                 </section>
                             
@@ -1270,12 +1298,13 @@ cond(no)-&gt;op
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"csdn帮助文档","level":"2.1.4","depth":2,"next":{"title":"git 入门教程","level":"2.2","depth":1,"path":"git/README.md","ref":"git/README.md","articles":[{"title":"初识 git","level":"2.2.1","depth":2,"path":"git/base/about.md","ref":"git/base/about.md","articles":[{"title":"安装 git","level":"2.2.1.1","depth":3,"path":"git/base/install.md","ref":"git/base/install.md","articles":[]},{"title":"配置 git","level":"2.2.1.2","depth":3,"path":"git/base/config.md","ref":"git/base/config.md","articles":[]}]},{"title":"实战 git","level":"2.2.2","depth":2,"path":"git/usage/about.md","ref":"git/usage/about.md","articles":[{"title":"本地仓库","level":"2.2.2.1","depth":3,"path":"git/usage/local-repository.md","ref":"git/usage/local-repository.md","articles":[]},{"title":"版本管理","level":"2.2.2.2","depth":3,"path":"git/usage/version-manage.md","ref":"git/usage/version-manage.md","articles":[]},{"title":"回到过去","level":"2.2.2.3","depth":3,"path":"git/usage/reset.md","ref":"git/usage/reset.md","articles":[]},{"title":"基本概念","level":"2.2.2.4","depth":3,"path":"git/usage/concept.md","ref":"git/usage/concept.md","articles":[]},{"title":"版本控制","level":"2.2.2.5","depth":3,"path":"git/usage/version-control.md","ref":"git/usage/version-control.md","articles":[]},{"title":"撤销更改","level":"2.2.2.6","depth":3,"path":"git/usage/checkout-reset.md","ref":"git/usage/checkout-reset.md","articles":[]},{"title":"删除文件","level":"2.2.2.7","depth":3,"path":"git/usage/delete.md","ref":"git/usage/delete.md","articles":[]},{"title":"远程仓库","level":"2.2.2.8","depth":3,"path":"git/usage/remote-repository.md","ref":"git/usage/remote-repository.md","articles":[]},{"title":"分支管理","level":"2.2.2.9","depth":3,"path":"git/usage/branch-manage.md","ref":"git/usage/branch-manage.md","articles":[{"title":"分支总览","level":"2.2.2.9.1","depth":4,"path":"git/usage/branch-overview.md","ref":"git/usage/branch-overview.md","articles":[]},{"title":"冲突合并","level":"2.2.2.9.2","depth":4,"path":"git/usage/branch-merge-with-conflict.md","ref":"git/usage/branch-merge-with-conflict.md","articles":[]},{"title":"分支策略","level":"2.2.2.9.3","depth":4,"path":"git/usage/branch-strategy.md","ref":"git/usage/branch-strategy.md","articles":[]},{"title":"紧急修复","level":"2.2.2.9.4","depth":4,"path":"git/usage/branch-emergency-fixbug.md","ref":"git/usage/branch-emergency-fixbug.md","articles":[]},{"title":"变基合并","level":"2.2.2.9.5","depth":4,"path":"git/usage/branch-rebase.md","ref":"git/usage/branch-rebase.md","articles":[]},{"title":"协同开发","level":"2.2.2.9.6","depth":4,"path":"git/usage/branch-remote.md","ref":"git/usage/branch-remote.md","articles":[]},{"title":"本地和远程仓库的本质","level":"2.2.2.9.7","depth":4,"path":"git/usage/local-remote-repository.md","ref":"git/usage/local-remote-repository.md","articles":[]}]},{"title":"里程碑式标签","level":"2.2.2.10","depth":3,"path":"git/usage/tag.md","ref":"git/usage/tag.md","articles":[]}]},{"title":"个性化 git","level":"2.2.3","depth":2,"path":"git/custom/about.md","ref":"git/custom/about.md","articles":[]},{"title":"忽略文件","level":"2.2.4","depth":2,"path":"git/custom/ignore.md","ref":"git/custom/ignore.md","articles":[]},{"title":"github 教程","level":"2.2.5","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},{"title":"git 私服搭建教程","level":"2.2.6","depth":2,"path":"git/server/private.md","ref":"git/server/private.md","articles":[]},{"title":"知识速查","level":"2.2.7","depth":2,"path":"git/summary/common.md","ref":"git/summary/common.md","articles":[]},{"title":"备忘录[译]","level":"2.2.8","depth":2,"path":"git/summary/cheatsheet-translation.md","ref":"git/summary/cheatsheet-translation.md","articles":[]},{"title":"常见问题","level":"2.2.9","depth":2,"path":"git/issue/README.md","ref":"git/issue/README.md","articles":[]}]},"previous":{"title":"HBuilderX语法帮助","level":"2.1.3","depth":2,"path":"markdown/HBuilderX.md","ref":"markdown/HBuilderX.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"pageview-count":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006的技术小屋"},"file":{"path":"markdown/csdn.md","mtime":"2019-03-17T12:52:48.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-02T01:25:06.520Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"csdn帮助文档","level":"2.1.4","depth":2,"next":{"title":"git 入门教程","level":"2.2","depth":1,"path":"git/README.md","ref":"git/README.md","articles":[{"title":"初识 git","level":"2.2.1","depth":2,"path":"git/base/about.md","ref":"git/base/about.md","articles":[{"title":"安装 git","level":"2.2.1.1","depth":3,"path":"git/base/install.md","ref":"git/base/install.md","articles":[]},{"title":"配置 git","level":"2.2.1.2","depth":3,"path":"git/base/config.md","ref":"git/base/config.md","articles":[]}]},{"title":"实战 git","level":"2.2.2","depth":2,"path":"git/usage/about.md","ref":"git/usage/about.md","articles":[{"title":"本地仓库","level":"2.2.2.1","depth":3,"path":"git/usage/local-repository.md","ref":"git/usage/local-repository.md","articles":[]},{"title":"版本管理","level":"2.2.2.2","depth":3,"path":"git/usage/version-manage.md","ref":"git/usage/version-manage.md","articles":[]},{"title":"回到过去","level":"2.2.2.3","depth":3,"path":"git/usage/reset.md","ref":"git/usage/reset.md","articles":[]},{"title":"基本概念","level":"2.2.2.4","depth":3,"path":"git/usage/concept.md","ref":"git/usage/concept.md","articles":[]},{"title":"版本控制","level":"2.2.2.5","depth":3,"path":"git/usage/version-control.md","ref":"git/usage/version-control.md","articles":[]},{"title":"撤销更改","level":"2.2.2.6","depth":3,"path":"git/usage/checkout-reset.md","ref":"git/usage/checkout-reset.md","articles":[]},{"title":"删除文件","level":"2.2.2.7","depth":3,"path":"git/usage/delete.md","ref":"git/usage/delete.md","articles":[]},{"title":"远程仓库","level":"2.2.2.8","depth":3,"path":"git/usage/remote-repository.md","ref":"git/usage/remote-repository.md","articles":[]},{"title":"分支管理","level":"2.2.2.9","depth":3,"path":"git/usage/branch-manage.md","ref":"git/usage/branch-manage.md","articles":[{"title":"分支总览","level":"2.2.2.9.1","depth":4,"path":"git/usage/branch-overview.md","ref":"git/usage/branch-overview.md","articles":[]},{"title":"冲突合并","level":"2.2.2.9.2","depth":4,"path":"git/usage/branch-merge-with-conflict.md","ref":"git/usage/branch-merge-with-conflict.md","articles":[]},{"title":"分支策略","level":"2.2.2.9.3","depth":4,"path":"git/usage/branch-strategy.md","ref":"git/usage/branch-strategy.md","articles":[]},{"title":"紧急修复","level":"2.2.2.9.4","depth":4,"path":"git/usage/branch-emergency-fixbug.md","ref":"git/usage/branch-emergency-fixbug.md","articles":[]},{"title":"变基合并","level":"2.2.2.9.5","depth":4,"path":"git/usage/branch-rebase.md","ref":"git/usage/branch-rebase.md","articles":[]},{"title":"协同开发","level":"2.2.2.9.6","depth":4,"path":"git/usage/branch-remote.md","ref":"git/usage/branch-remote.md","articles":[]},{"title":"本地和远程仓库的本质","level":"2.2.2.9.7","depth":4,"path":"git/usage/local-remote-repository.md","ref":"git/usage/local-remote-repository.md","articles":[]}]},{"title":"里程碑式标签","level":"2.2.2.10","depth":3,"path":"git/usage/tag.md","ref":"git/usage/tag.md","articles":[]}]},{"title":"个性化 git","level":"2.2.3","depth":2,"path":"git/custom/about.md","ref":"git/custom/about.md","articles":[]},{"title":"忽略文件","level":"2.2.4","depth":2,"path":"git/custom/ignore.md","ref":"git/custom/ignore.md","articles":[]},{"title":"github 教程","level":"2.2.5","depth":2,"path":"git/github/usage.md","ref":"git/github/usage.md","articles":[]},{"title":"git 私服搭建教程","level":"2.2.6","depth":2,"path":"git/server/private.md","ref":"git/server/private.md","articles":[]},{"title":"知识速查","level":"2.2.7","depth":2,"path":"git/summary/common.md","ref":"git/summary/common.md","articles":[]},{"title":"备忘录[译]","level":"2.2.8","depth":2,"path":"git/summary/cheatsheet-translation.md","ref":"git/summary/cheatsheet-translation.md","articles":[]},{"title":"常见问题","level":"2.2.9","depth":2,"path":"git/issue/README.md","ref":"git/issue/README.md","articles":[]}]},"previous":{"title":"HBuilderX语法帮助","level":"2.1.3","depth":2,"path":"markdown/HBuilderX.md","ref":"markdown/HBuilderX.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006的技术小屋"},"file":{"path":"markdown/csdn.md","mtime":"2019-03-17T12:52:48.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-02T07:39:47.754Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1285,6 +1314,10 @@ cond(no)-&gt;op
     
         
         <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
         
     
         
@@ -1311,6 +1344,8 @@ cond(no)-&gt;op
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
