@@ -115,15 +115,98 @@
 }
 {% endchart %}
 
+### 掘金
+
+> [掘金][juejin] : https://juejin.im/user/582d5cb667f356006331e586
+
+{% chart %}
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            ["x","2019-04-01","2019-04-02"],
+            ["关注者",4,5],
+            ["阅读数",402,500],
+            ["原创",31,32],
+            ["点赞数",36,38]
+        ],
+        "axes": {
+            "关注者": "y2"
+        }
+    },
+    "axis": {
+      x: {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      y2: {
+        show: true,
+        label: {
+          text: '关注者',
+          position: 'outer-middle'
+        }
+      }
+    }
+}
+{% endchart %}
+
+### 开源中国
+
+> [开源中国][oschina] : https://my.oschina.net/snowdreams1006
+
+{% chart %}
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            ["x","2019-04-01","2019-04-02"],
+            ["粉丝",12,13],
+            ["访问量",2,336],
+            ["博文",33,34],
+            ["推荐",6,7],
+            ["积分",5,5]
+        ],
+        "axes": {
+            "粉丝": "y2"
+        }
+    },
+    "axis": {
+      x: {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      y2: {
+        show: true,
+        label: {
+          text: '粉丝',
+          position: 'outer-middle'
+        }
+      }
+    }
+}
+{% endchart %}
 
 
 
 
+
+
+
+<!-- 链接引用 -->
+
+[segmentfault]: https://segmentfault.com/blog/snowdreams1006 "雪之梦技术驿站"
+[imooc]: https://www.imooc.com/u/5224488/articles "雪之梦技术驿站"
+[bilibili]: https://member.bilibili.com/v2#/upload-manager/text "雪之梦技术驿站"
+[weixin]: https://mp.weixin.qq.com/ "雪之梦技术驿站"
 
 ### 2019-04-02
 
-- [博客园][cnblogs] : `32`随笔,`0`文章,`17`粉丝,`16`评论,`4096`阅读数.
-- [掘金][juejin] : `32`原创,`5`关注者,`38`点赞数,`500`阅读数.
+
+
 - [开源中国][oschina] : `34`博文,`7`推荐,`13`粉丝,`5`积分,`329`访问.
 - [segmentfault][segmentfault] : `34`文章,`1`粉丝,`43`声望,`1483`阅读量,`13`点赞数.
 - [慕课手记][imooc] : `33`手记,`42387`经验,`118`积分,`8`粉丝.`3794`阅读量,`3`点赞数.
