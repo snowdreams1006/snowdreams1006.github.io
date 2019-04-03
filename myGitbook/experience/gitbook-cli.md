@@ -490,9 +490,23 @@ en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, 
 
 ### `LANGS.md` 语言文件[可选]
 
+支持国际化编写图书,一种语言一个单独子目录,同样地,将语言文件放到根目录下.
+
+示例:
+
+```
+* [English](en/)
+* [French](fr/)
+* [Español](es/)
+```
+
 ### 章节小结
 
+开发初始阶段运行 `gitbook init` 命令按照 `SUMMARY.md` 文件内容自动创建对应目录结构,编写各自文件内容后运行 `gitbook serve` 启动本地服务实时预览效果.
 
+开发到一定程度后打算发布服务,再运行 `gitbook build` 输出到 `_book/` 目录,别忘了配置 `book.json` 文件,然后就可以将 `_book/` 文件夹整个扔到 `nginx` 等静态服务器上,这样就能联网访问你的电子书了.
+
+是不是很简单,后续还会有如何发布与导出等相关教程,今天先到这里,下次见!
 
 
 
