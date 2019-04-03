@@ -7,7 +7,6 @@
 > [慕课手记][imooc] : https://www.imooc.com/u/5224488/articles
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -42,7 +41,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-imooc-201904.png](./images/other-static-imooc-201904.png)
@@ -52,7 +50,6 @@
 > [简书][jianshu] : https://www.jianshu.com/u/577b0d76ab87
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -87,7 +84,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-jianshu-201904.png](./images/other-static-jianshu-201904.png)
@@ -97,7 +93,6 @@
 > [CSDN][csdn] : https://blog.csdn.net/weixin_38171180
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -132,7 +127,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-csdn-201904.png](./images/other-static-csdn-201904.png)
@@ -142,7 +136,6 @@
 > [博客园][cnblogs] : https://www.cnblogs.com/snowdreams1006/
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -176,7 +169,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-cnblogs-201904.png](./images/other-static-cnblogs-201904.png)
@@ -186,7 +178,6 @@
 > [掘金][juejin] : https://juejin.im/user/582d5cb667f356006331e586
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -220,7 +211,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-juejin-201904.png](./images/other-static-juejin-201904.png)
@@ -230,7 +220,6 @@
 > [思否][segmentfault] : https://segmentfault.com/blog/snowdreams1006
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -265,7 +254,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-segmentfault-201904.png](./images/other-static-segmentfault-201904.png)
@@ -275,7 +263,6 @@
 > [开源中国][oschina] : https://my.oschina.net/snowdreams1006
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -310,7 +297,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-oschina-201904.png](./images/other-static-oschina-201904.png)
@@ -320,7 +306,6 @@
 > [B站专栏][bilibili] : https://space.bilibili.com/236627025
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -356,7 +341,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
@@ -366,7 +350,6 @@
 > [微信公众号][weixin] : https://mp.weixin.qq.com/
 
 ```
-{% chart %}
 {
     "data": {
         "x": "x",
@@ -402,7 +385,6 @@
       }
     }
 }
-{% endchart %}
 ```
 
 ![other-static-weixin-201904.png](./images/other-static-weixin-201904.png)
