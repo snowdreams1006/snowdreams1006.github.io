@@ -135,7 +135,7 @@
 
 > [博客园][cnblogs] : https://www.cnblogs.com/snowdreams1006/
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -169,9 +169,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-cnblogs-201904.png](./images/other-static-cnblogs-201904.png)
+![other-static-cnblogs-201904.png](./images/other-static-cnblogs-201904.png)
 
 ### 掘金
 
