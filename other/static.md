@@ -305,7 +305,7 @@
 
 > [B站专栏][bilibili] : https://space.bilibili.com/236627025
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -341,9 +341,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
+![other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
 
 ### 微信公众号
 
