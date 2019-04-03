@@ -312,15 +312,160 @@ en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, 
 
 #### `root` 根目录
 
+> 指定存放 `gitbook` 文件(除了`book.json`文件本身)的根目录
+
+示例:
+
+```
+"root": "."
+```
+
 #### `links` 侧边栏链接
+
+> 左侧导航栏添加链接,支持外链
+
+示例;
+
+```
+"links": {
+    "sidebar": {
+        "我的网站": "https://snowdreams1006.cn/"
+    }
+}
+```
 
 #### `styles` 自定义样式
 
+> 自定义全局样式
+
+示例:
+
+```
+"styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+}
+```
+
 #### `plugins` 插件
+
+> 配置额外的插件列表,添加新插件项后需要运行 `gitbook install` 安装到当前项目.
+
+`gitbook` 默认自带5个插件,分别是:
+
+- `highlight` 语法高亮插件
+- `search` 搜索插件
+- `sharing` 分享插件
+- `font-settings` 字体设置插件
+- `livereload` 热加载插件
+
+> 后续会介绍一些常用插件,如需获取更多插件请访问[官网插件市场](https://plugins.gitbook.com/)
+
+示例:
+
+```
+"plugins": [
+    "github",
+    "pageview-count",
+    "mermaid-gb3",
+    "-lunr", 
+    "-search", 
+    "search-plus",
+    "splitter",
+    "-sharing", 
+    "sharing-plus",
+    "expandable-chapters-small",
+    "anchor-navigation-ex",
+    "edit-link",
+    "copy-code-button",
+    "chart",
+    "favicon-plus",
+    "donate"
+]
+```
 
 #### `pluginsConfig` 插件配置
 
+> 安装插件的相应配置项,具体有哪些配置项是由插件本身提供的,应访问插件官网进行查询.
+
+```
+"pluginsConfig": {
+    "github": {
+      "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+    },
+    "sharing": {
+       "douban": true,
+       "facebook": false,
+       "google": false,
+       "hatenaBookmark": false,
+       "instapaper": false,
+       "line": false,
+       "linkedin": false,
+       "messenger": false,
+       "pocket": false,
+       "qq": true,
+       "qzone": true,
+       "stumbleupon": false,
+       "twitter": false,
+       "viber": false,
+       "vk": false,
+       "weibo": true,
+       "whatsapp": false,
+       "all": [
+           "facebook", "google", "twitter",
+           "weibo", "instapaper", "linkedin",
+           "pocket", "stumbleupon"
+       ]
+   },
+   "edit-link": {
+      "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",
+      "label": "编辑本页"
+    },
+    "chart": {
+      "type": "c3"
+    },
+    "favicon": "/images/favicon.ico",
+    "appleTouchIconPrecomposed152": "/images/apple-touch-icon-precomposed-152.png",
+    "output": "_book",
+    "donate": {
+      "wechat": "/images/wechat.jpg",
+      "alipay": "/images/alipay.jpg",
+      "title": "赏",
+      "button": "捐赠",
+      "alipayText": "支付宝",
+      "wechatText": "微信"
+    }
+}
+```
+ 
 #### `structure` 目录结构配置
+
+> 指定`README.md`,`SUMMARY.md`,`GLOSSARY.md` 和 `LANGS.md` **文件名称**.
+
+|配置项|描述|
+|-|-|
+|`structure.readme`|`readme` 文件名(默认值是 `README.md`)|
+|`structure.summary`|`summary` 文件名(默认值是 `SUMMARY.md`)|
+|`structure.glossary`|`glossary` 文件名(默认值是 `GLOSSARY.md`)|
+|`structure.languages`|`languages` 文件名(默认值是 `LANGS.md`)|
+
+#### `pdf` 配置
+
+> 定制 `pdf` 输出格式,可能需要安装 `ebook-convert` 等相关插件
+
+|配置项|描述|
+|-|-|
+|`pdf.pageNumbers`|添加页码(默认值是 `true` )|
+|`pdf.fontSize`|字体大小(默认值是 `12` )|
+|`pdf.fontFamily`|字体集(默认值是 `Arial` )|
+|`pdf.paperSize`|页面尺寸(默认值是 `a4` ),支持`a0`,`a1`,`a2`,`a3`,`a4`,`a5`,`a6`,`b0`,`b1`,`b2`,`b3`,`b4`,`b5`,`b6`,`legal`,`letter`|
+|`pdf.margin.top`|上边界(默认值是 `56` )|
+|`pdf.margin.bottom`|下边界(默认值是 `56` )|
+|`pdf.margin.left`|左边界(默认值是 `62` )|
+|`pdf.margin.right`|右边界(默认值是 `62` )|
 
 ### `GLOSSARY.md` 词汇表文件[可选]
 
