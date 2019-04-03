@@ -349,18 +349,16 @@
 
 > [微信公众号][weixin] : https://mp.weixin.qq.com/
 
-```
+{% chart %}
 {
     "data": {
         "x": "x",
         "columns": [
-            ["x","2019-04-01","2019-04-02"],
-            ["粉丝",7,7],
-            ["阅读量",45,49],
-            ["文章",34,35],
-            ["点赞",13,14],
-            ["收藏",0,0],
-            ["转发",3,0]
+            ["x","2019-04-01","2019-04-02","2019-04-03"],
+            ["粉丝",7,7,7],
+            ["阅读量",45,49,53],
+            ["文章",30,31,32],
+            ["点赞",13,14,15]
         ],
         "axes": {
             "粉丝": "y2"
@@ -385,9 +383,9 @@
       }
     }
 }
-```
+{% endchart %}
 
-![other-static-weixin-201904.png](./images/other-static-weixin-201904.png)
+[other-static-weixin-201904.png](./images/other-static-weixin-201904.png)
 
 ## 2019年03月
 
@@ -527,4 +525,4 @@
 [segmentfault]: https://segmentfault.com/blog/snowdreams1006 "雪之梦技术驿站"
 [imooc]: https://www.imooc.com/u/5224488/articles "雪之梦技术驿站"
 [bilibili]: https://space.bilibili.com/236627025 "雪之梦技术驿站"
-[weixin]: https://mp.weixin.qq.com/ "雪之梦技术驿站"
+[weixin]: https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=641790288 "雪之梦技术驿站"
