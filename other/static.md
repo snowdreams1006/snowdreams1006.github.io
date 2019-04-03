@@ -177,7 +177,7 @@
 
 > [掘金][juejin] : https://juejin.im/user/582d5cb667f356006331e586
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -211,15 +211,15 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-juejin-201904.png](./images/other-static-juejin-201904.png)
+![other-static-juejin-201904.png](./images/other-static-juejin-201904.png)
 
 ### 思否
 
 > [思否][segmentfault] : https://segmentfault.com/blog/snowdreams1006
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -254,15 +254,15 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-segmentfault-201904.png](./images/other-static-segmentfault-201904.png)
+![other-static-segmentfault-201904.png](./images/other-static-segmentfault-201904.png)
 
 ### 开源中国
 
 > [开源中国][oschina] : https://my.oschina.net/snowdreams1006
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -297,9 +297,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-oschina-201904.png](./images/other-static-oschina-201904.png)
+![other-static-oschina-201904.png](./images/other-static-oschina-201904.png)
 
 ### B站专栏
 
