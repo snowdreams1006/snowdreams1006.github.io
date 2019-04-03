@@ -70,6 +70,9 @@ info: loading plugin "theme-default"... OK
 info: found 1 pages 
 info: found 0 asset files 
 info: >> generation finished with success in 1.2s ! 
+
+Starting server ...
+Serving book on http://localhost:4000
 ```
 
 ![gitbook-serve-preview.png](../images/gitbook-serve-preview.png)
