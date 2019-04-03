@@ -2,7 +2,47 @@
 
 ## 2019年04月
 
-### 慕课手记
+### 全网统计
+
+```
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            ["x","2019-04-01","2019-04-02","2019-04-03"],
+            ["粉丝",58,60,59],
+            ["阅读",13809,14757,15707]
+        ],
+        "axes": {
+            "粉丝": "y2"
+        },
+        "types": {
+            "粉丝": "bar"
+        }
+    },
+    "axis": {
+      x: {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      y2: {
+        show: true,
+        label: {
+          text: '粉丝',
+          position: 'outer-middle'
+        }
+      }
+    }
+}
+```
+
+![other-static-overview-201904.png](./images/other-static-overview-201904.png)
+
+### 平台统计
+
+#### 慕课手记
 
 > [慕课手记][imooc] : https://www.imooc.com/u/5224488/articles
 
@@ -45,7 +85,7 @@
 
 ![other-static-imooc-201904.png](./images/other-static-imooc-201904.png)
 
-### 简书
+#### 简书
 
 > [简书][jianshu] : https://www.jianshu.com/u/577b0d76ab87
 
@@ -88,7 +128,7 @@
 
 ![other-static-jianshu-201904.png](./images/other-static-jianshu-201904.png)
 
-### CSDN
+#### CSDN
 
 > [CSDN][csdn] : https://blog.csdn.net/weixin_38171180
 
@@ -131,7 +171,7 @@
 
 ![other-static-csdn-201904.png](./images/other-static-csdn-201904.png)
 
-### 博客园
+#### 博客园
 
 > [博客园][cnblogs] : https://www.cnblogs.com/snowdreams1006/
 
@@ -173,7 +213,7 @@
 
 ![other-static-cnblogs-201904.png](./images/other-static-cnblogs-201904.png)
 
-### 掘金
+#### 掘金
 
 > [掘金][juejin] : https://juejin.im/user/582d5cb667f356006331e586
 
@@ -215,7 +255,7 @@
 
 ![other-static-juejin-201904.png](./images/other-static-juejin-201904.png)
 
-### 思否
+#### 思否
 
 > [思否][segmentfault] : https://segmentfault.com/blog/snowdreams1006
 
@@ -258,7 +298,7 @@
 
 ![other-static-segmentfault-201904.png](./images/other-static-segmentfault-201904.png)
 
-### 开源中国
+#### 开源中国
 
 > [开源中国][oschina] : https://my.oschina.net/snowdreams1006
 
@@ -301,7 +341,7 @@
 
 ![other-static-oschina-201904.png](./images/other-static-oschina-201904.png)
 
-### B站专栏
+#### B站专栏
 
 > [B站专栏][bilibili] : https://space.bilibili.com/236627025
 
@@ -345,7 +385,7 @@
 
 ![other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
 
-### 微信公众号
+#### 微信公众号
 
 > [微信公众号][weixin] : https://mp.weixin.qq.com/
 
