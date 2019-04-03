@@ -153,11 +153,174 @@ $
 
 ### `README.md` 首页文件[必须]
 
+编辑 `README.md` 文件,随便写点内容并启动本地服务(`gitbook serve`)实时预览效果.
+
+![gitbook-experience-cli-readme.png](../images/gitbook-experience-cli-readme.png)
+
 ### `SUMMARY.md` 概括文件[必须]
+
+先停止本地服务,编辑章节目录结构,然后重新再初始化(`gitbook init`)自动创建相应目录.
+
+![gitbook-experience-cli-summary.gif](../images/gitbook-experience-cli-summary.gif)
 
 ### `_book` 输出目录[可选]
 
+执行 `gitbook build` 或 `gitbook serve` 命令后会自动生成静态网页.
+
+```
+# 构建电子书
+$ gitbook build
+info: 7 plugins are installed 
+info: 6 explicitly listed 
+info: loading plugin "highlight"... OK 
+info: loading plugin "search"... OK 
+info: loading plugin "lunr"... OK 
+info: loading plugin "sharing"... OK 
+info: loading plugin "fontsettings"... OK 
+info: loading plugin "theme-default"... OK 
+info: found 5 pages 
+info: found 0 asset files 
+info: >> generation finished with success in 0.7s ! 
+
+# 查看输出目录
+$ tree _book/
+_book/
+├── first
+│   ├── 01.html
+│   └── 02.html
+├── first.html
+├── gitbook
+│   ├── fonts
+│   │   └── fontawesome
+│   │       ├── FontAwesome.otf
+│   │       ├── fontawesome-webfont.eot
+│   │       ├── fontawesome-webfont.svg
+│   │       ├── fontawesome-webfont.ttf
+│   │       ├── fontawesome-webfont.woff
+│   │       └── fontawesome-webfont.woff2
+│   ├── gitbook-plugin-fontsettings
+│   │   ├── fontsettings.js
+│   │   └── website.css
+│   ├── gitbook-plugin-highlight
+│   │   ├── ebook.css
+│   │   └── website.css
+│   ├── gitbook-plugin-lunr
+│   │   ├── lunr.min.js
+│   │   └── search-lunr.js
+│   ├── gitbook-plugin-search
+│   │   ├── lunr.min.js
+│   │   ├── search-engine.js
+│   │   ├── search.css
+│   │   └── search.js
+│   ├── gitbook-plugin-sharing
+│   │   └── buttons.js
+│   ├── gitbook.js
+│   ├── images
+│   │   ├── apple-touch-icon-precomposed-152.png
+│   │   └── favicon.ico
+│   ├── style.css
+│   └── theme.js
+├── index.html
+├── search_index.json
+└── second.html
+
+10 directories, 28 files
+$ 
+```
+
 ### `book.json` 配置文件[可选]
+
+在根目录下新建 `book.json` 配置文件,完整的支持项请参考[官方文档](https://toolchain.gitbook.com/config.html),下面仅列举常用的一些配置项.
+
+![gitbook-experience-cli-book-config.png](../images/gitbook-experience-cli-book-config.png)
+
+#### `title` 标题
+
+> 书籍的标题
+
+示例:
+
+```
+"title": "雪之梦技术驿站"
+```
+
+#### `author` 作者
+
+> 书籍的作者
+
+示例:
+
+```
+"author": "snowdreams1006"
+```
+
+#### `description` 描述
+
+> 书籍的简要描述
+
+示例:
+
+```
+  "description": "雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考."
+```
+
+#### `isbn` 国际标准书号
+
+> 书籍的国际标准书号
+
+示例:
+
+```
+  "isbn": "978-0-13-601970-1"
+```
+
+> 选填,请参考 [ISBN Search](https://isbnsearch.org/)
+
+#### `language` 语言
+
+> 支持语言项: 默认英语(`en`),设置成简体中文(`zh-hans`)
+
+```
+en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, uk, vi, zh-hans, zh-tw
+```
+
+示例:
+
+```
+"language": "zh-hans"
+```
+
+#### `direction` 阅读顺序
+
+> 阅读顺序,支持从右到左(`rtl`)或从左到右(`ltr`),默认值取决于语言值.
+
+示例:
+
+```
+"direction" : "ltr"
+```
+
+#### `gitbook` 版本
+
+> 指定 `gitbook` 版本,支持[SemVer规范](http://semver.org/),接受类似于 `>=3.2.3` 的条件.
+
+示例:
+
+```
+"gitbook": "3.2.3"
+```
+
+#### `root` 根目录
+
+#### `links` 侧边栏链接
+
+#### `styles` 自定义样式
+
+#### `plugins` 插件
+
+#### `pluginsConfig` 插件配置
+
+#### `structure` 目录结构配置
 
 ### `GLOSSARY.md` 词汇表文件[可选]
 
