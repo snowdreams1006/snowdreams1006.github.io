@@ -92,7 +92,7 @@
 
 > [CSDN][csdn] : https://blog.csdn.net/weixin_38171180
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -127,9 +127,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-csdn-201904.png](./images/other-static-csdn-201904.png)
+![other-static-csdn-201904.png](./images/other-static-csdn-201904.png)
 
 ### 博客园
 
