@@ -6,7 +6,7 @@
 
 > [慕课手记][imooc] : https://www.imooc.com/u/5224488/articles
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -41,15 +41,15 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-imooc-201904.png](./images/other-static-imooc-201904.png)
+![other-static-imooc-201904.png](./images/other-static-imooc-201904.png)
 
 ### 简书
 
 > [简书][jianshu] : https://www.jianshu.com/u/577b0d76ab87
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -84,9 +84,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-jianshu-201904.png](./images/other-static-jianshu-201904.png)
+![other-static-jianshu-201904.png](./images/other-static-jianshu-201904.png)
 
 ### CSDN
 
@@ -349,7 +349,7 @@
 
 > [微信公众号][weixin] : https://mp.weixin.qq.com/
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -383,9 +383,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-weixin-201904.png](./images/other-static-weixin-201904.png)
+![other-static-weixin-201904.png](./images/other-static-weixin-201904.png)
 
 ## 2019年03月
 
