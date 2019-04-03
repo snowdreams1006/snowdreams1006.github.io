@@ -2,6 +2,47 @@
 
 ## 2019年04月
 
+### 慕课手记
+
+> [慕课手记][imooc] : https://www.imooc.com/u/5224488/articles
+
+{% chart %}
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            ["x","2019-04-01","2019-04-02"],
+            ["粉丝",8,8],
+            ["阅读量",3704,3794],
+            ["手记",32,33],
+            ["点赞数",3,3],
+            ["积分",107,118]
+        ],
+        "axes": {
+            "粉丝": "y2"
+        },
+        "types": {
+            "粉丝": "bar"
+        }
+    },
+    "axis": {
+      x: {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      y2: {
+        show: true,
+        label: {
+          text: '粉丝',
+          position: 'outer-middle'
+        }
+      }
+    }
+}
+{% endchart %}
+
 ### 简书
 
 > [简书][jianshu] : https://www.jianshu.com/u/577b0d76ab87
@@ -164,47 +205,6 @@
 }
 {% endchart %}
 
-### 开源中国
-
-> [开源中国][oschina] : https://my.oschina.net/snowdreams1006
-
-{% chart %}
-{
-    "data": {
-        "x": "x",
-        "columns": [
-            ["x","2019-04-01","2019-04-02"],
-            ["粉丝",12,13],
-            ["访问量",2496,2831],
-            ["博文",33,34],
-            ["推荐",6,7],
-            ["积分",5,5]
-        ],
-        "axes": {
-            "粉丝": "y2"
-        },
-        "types": {
-            "粉丝": "bar"
-        }
-    },
-    "axis": {
-      x: {
-        "type": "timeseries",
-        "tick": {
-            "format": "%Y-%m-%d"
-        }
-      },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
-        }
-      }
-    }
-}
-{% endchart %}
-
 ### 思否
 
 > [思否][segmentfault] : https://segmentfault.com/blog/snowdreams1006
@@ -246,9 +246,9 @@
 }
 {% endchart %}
 
-### 慕课手记
+### 开源中国
 
-> [慕课手记][imooc] : https://www.imooc.com/u/5224488/articles
+> [开源中国][oschina] : https://my.oschina.net/snowdreams1006
 
 {% chart %}
 {
@@ -256,11 +256,11 @@
         "x": "x",
         "columns": [
             ["x","2019-04-01","2019-04-02"],
-            ["粉丝",8,8],
-            ["阅读量",3704,3794],
-            ["手记",32,33],
-            ["点赞数",3,3],
-            ["积分",107,118]
+            ["粉丝",12,13],
+            ["访问量",2496,2831],
+            ["博文",33,34],
+            ["推荐",6,7],
+            ["积分",5,5]
         ],
         "axes": {
             "粉丝": "y2"
