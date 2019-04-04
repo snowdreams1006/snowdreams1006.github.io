@@ -44,7 +44,7 @@
     * [快速体验](myGitbook/experience/preview.md)
         * [gitbook-cli 命令行操作](myGitbook/experience/gitbook-cli.md)
         * [gitbook-editor 编辑器操作](myGitbook/experience/gitbook-editor.md)
-        * [gitbook 官网操作](myGitbook/experience/gitbook-com.md)
+        * [gitbook.com 官网操作](myGitbook/experience/gitbook-com.md)
     * [高级进阶](myGitbook/front-knowledge.md)
         * [高级配置](myGitbook/advanced-configuration.md)
         * [高级操作](myGitbook/advanced-operation.md)
