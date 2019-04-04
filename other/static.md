@@ -21,17 +21,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
@@ -66,17 +66,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
@@ -109,17 +109,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
@@ -152,17 +152,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
@@ -194,17 +194,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
@@ -236,17 +236,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '关注者',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "关注者,
+          "position": "outer-middle"
         }
       }
     }
@@ -279,17 +279,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
@@ -322,17 +322,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
@@ -366,17 +366,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
@@ -408,17 +408,17 @@
         }
     },
     "axis": {
-      x: {
+      "x": {
         "type": "timeseries",
         "tick": {
             "format": "%Y-%m-%d"
         }
       },
-      y2: {
-        show: true,
-        label: {
-          text: '粉丝',
-          position: 'outer-middle'
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝,
+          "position": "outer-middle"
         }
       }
     }
