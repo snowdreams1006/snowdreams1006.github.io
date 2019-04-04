@@ -1,6 +1,6 @@
 # gitbook-editor 编辑器操作
 
-亲测,目前已不再支持旧版 [gitbook-editor](https://legacy.gitbook.com/editor) 编辑器,而官网也没有相应的新版编辑器,如果哪位找到了新版编辑器还望告知!
+亲测,目前已**不再支持**旧版 [gitbook-editor](https://legacy.gitbook.com/editor) 编辑器,而官网也没有相应的新版编辑器,如果哪位找到了新版编辑器,还望告知!
 
 ![gitbook-experience-editor-signup-new.png](../images/gitbook-experience-editor-signup-new.png)
 
