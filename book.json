@@ -68,8 +68,8 @@
     "donate": {
       "wechat": "/images/wechat.jpg",
       "alipay": "/images/alipay.jpg",
-      "title": "赏",
-      "button": "捐赠",
+      "title": "",
+      "button": "赏",
       "alipayText": "支付宝",
       "wechatText": "微信"
     }
