@@ -302,7 +302,7 @@
 
 > [开源中国][oschina] : https://my.oschina.net/snowdreams1006
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -337,15 +337,15 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-oschina-201904.png](./images/other-static-oschina-201904.png)
+![other-static-oschina-201904.png](./images/other-static-oschina-201904.png)
 
 #### B站专栏
 
 > [B站专栏][bilibili] : https://member.bilibili.com/v2#/upload-manager/text
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -381,15 +381,15 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
+![other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
 
 #### 腾讯云社区
 
 > [腾讯云社区][tencent-cloud] : https://cloud.tencent.com/developer/user/2952369/activities
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -423,9 +423,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-tencent-cloud-201904.png](./images/other-static-tencent-cloud-201904.png)
+![other-static-tencent-cloud-201904.png](./images/other-static-tencent-cloud-201904.png)
 
 ## 2019年03月
 
