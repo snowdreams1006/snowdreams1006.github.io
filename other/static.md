@@ -175,16 +175,16 @@
 
 > [博客园][cnblogs] : https://www.cnblogs.com/snowdreams1006/
 
-```
+{% chart %}
 {
     "data": {
         "x": "x",
         "columns": [
-            ["x","2019-04-01","2019-04-02","2019-04-03"],
-            ["粉丝",17,17,17],
-            ["阅读数",3889,4096,4207],
-            ["随笔",31,32,33],
-            ["评论数",16,16,16]
+            ["x","2019-04-01","2019-04-02","2019-04-03","2019-04-04"],
+            ["粉丝",17,17,17,18],
+            ["阅读数",3889,4096,4207,4388],
+            ["随笔",31,32,33,34],
+            ["评论数",16,16,16,16]
         ],
         "axes": {
             "粉丝": "y2"
@@ -203,15 +203,15 @@
       "y2": {
         "show": "true",
         "label": {
-          "text": "粉丝,
+          "text": "粉丝",
           "position": "outer-middle"
         }
       }
     }
 }
-```
+{% endchart %}
 
-![other-static-cnblogs-201904.png](./images/other-static-cnblogs-201904.png)
+[other-static-cnblogs-201904.png](./images/other-static-cnblogs-201904.png)
 
 #### 掘金
 
