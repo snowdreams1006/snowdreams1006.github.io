@@ -190,5 +190,24 @@ $ gitbook epub --log=debug
 
 > 可能需要安装 `ebook-convert` 相关插件,详情见相关系列教程.
 
+### `gitbook mobi` 输出 `mobi` 电子书
+
+> 语法格式: `gitbook mobi [book] [output]`
+
+示例:
+
+```
+# 默认输出到当前项目
+$ gitbook mobi 
+
+# 指定输出文件 `/Users/sunpo/Desktop/book.mobi`
+$ gitbook mobi ./ /Users/sunpo/Desktop/book.mobi
+
+# 指定输出日志级别: `debug`
+$ gitbook mobi --log=debug
+```
+
+> 可能需要安装 `ebook-convert` 相关插件,详情见相关系列教程.
+
 
 
