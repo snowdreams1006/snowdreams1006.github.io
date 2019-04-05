@@ -259,17 +259,17 @@
 
 > [思否][segmentfault] : https://segmentfault.com/blog/snowdreams1006
 
-```
+{% chart %}
 {
     "data": {
         "x": "x",
         "columns": [
-            ["x","2019-04-01","2019-04-02","2019-04-03"],
-            ["粉丝",1,1,1],
-            ["阅读量",1382,1483,1548],
-            ["文章",33,34,35],
-            ["点赞数",12,12,13],
-            ["声望",43,43,43]
+            ["x","2019-04-01","2019-04-02","2019-04-03","2019-04-04"],
+            ["粉丝",1,1,1,1],
+            ["阅读量",1382,1483,1548,1676],
+            ["文章",33,34,35,36],
+            ["点赞数",12,12,13,13],
+            ["声望",43,43,43,43]
         ],
         "axes": {
             "粉丝": "y2"
@@ -288,15 +288,15 @@
       "y2": {
         "show": "true",
         "label": {
-          "text": "粉丝,
+          "text": "粉丝",
           "position": "outer-middle"
         }
       }
     }
 }
-```
+{% endchart %}
 
-![other-static-segmentfault-201904.png](./images/other-static-segmentfault-201904.png)
+[other-static-segmentfault-201904.png](./images/other-static-segmentfault-201904.png)
 
 #### 开源中国
 
