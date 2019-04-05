@@ -89,7 +89,7 @@
 
 > [简书][jianshu] : https://www.jianshu.com/u/577b0d76ab87
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -124,15 +124,15 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-jianshu-201904.png](./images/other-static-jianshu-201904.png)
+![other-static-jianshu-201904.png](./images/other-static-jianshu-201904.png)
 
 #### CSDN
 
 > [CSDN][csdn] : https://blog.csdn.net/weixin_38171180
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -167,9 +167,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-csdn-201904.png](./images/other-static-csdn-201904.png)
+![other-static-csdn-201904.png](./images/other-static-csdn-201904.png)
 
 #### 博客园
 
