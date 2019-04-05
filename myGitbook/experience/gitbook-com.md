@@ -117,7 +117,7 @@
 
 此时心里在想,万一点进 `github` ,随手就是一个 `star` 呢?哈哈!
 
-![gitbook-experience-gitbook-com-integration-github-sync-button.png](../images/gitbook-experience-gitbook-com-integration-github-sync-button.png)
+![gitbook-experience-gitbook-com-integration-github-sync-button.jpg](../images/gitbook-experience-gitbook-com-integration-github-sync-button.jpg)
 
 #### 等待内容导入
 
