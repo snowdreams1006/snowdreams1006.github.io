@@ -385,20 +385,20 @@
 
 [other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
 
-#### 微信公众号
+#### 腾讯云社区
 
-> [微信公众号][weixin] : https://mp.weixin.qq.com/
+> [腾讯云社区][tencent-cloud] : https://cloud.tencent.com/developer/user/2952369/activities
 
-```
+{% chart %}
 {
     "data": {
         "x": "x",
         "columns": [
-            ["x","2019-04-01","2019-04-02","2019-04-03"],
-            ["粉丝",7,7,7],
-            ["阅读量",45,49,53],
-            ["文章",30,31,32],
-            ["点赞",13,14,15]
+            ["x","2019-04-04"],
+            ["粉丝",13],
+            ["阅读量",1192],
+            ["文章",34],
+            ["点赞",107]
         ],
         "axes": {
             "粉丝": "y2"
@@ -417,15 +417,15 @@
       "y2": {
         "show": "true",
         "label": {
-          "text": "粉丝,
+          "text": "粉丝",
           "position": "outer-middle"
         }
       }
     }
 }
-```
+{% endchart %}
 
-![other-static-weixin-201904.png](./images/other-static-weixin-201904.png)
+[other-static-tencent-cloud-201904.png](./images/other-static-tencent-cloud-201904.png)
 
 ## 2019年03月
 
@@ -566,3 +566,5 @@
 [imooc]: https://www.imooc.com/u/5224488/articles "雪之梦技术驿站"
 [bilibili]: https://member.bilibili.com/v2#/upload-manager/text "雪之梦技术驿站"
 [weixin]: https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=641790288 "雪之梦技术驿站"
+[tencent-cloud]: https://cloud.tencent.com/developer/user/2952369/activities "雪之梦技术驿站"
+
