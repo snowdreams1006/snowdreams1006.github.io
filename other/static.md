@@ -4,14 +4,14 @@
 
 ### 全网统计
 
-```
+{% chart %}
 {
     "data": {
         "x": "x",
         "columns": [
-            ["x","2019-04-01","2019-04-02","2019-04-03"],
-            ["粉丝",58,60,59],
-            ["阅读",13809,14757,15707]
+            ["x","2019-04-01","2019-04-02","2019-04-03","2019-04-04"],
+            ["粉丝",58,60,59,69],
+            ["阅读",13809,14757,15707,18521]
         ],
         "axes": {
             "粉丝": "y2"
@@ -30,15 +30,15 @@
       "y2": {
         "show": "true",
         "label": {
-          "text": "粉丝,
+          "text": "粉丝",
           "position": "outer-middle"
         }
       }
     }
 }
-```
+{% endchart %}
 
-![other-static-overview-201904.png](./images/other-static-overview-201904.png)
+[other-static-overview-201904.png](./images/other-static-overview-201904.png)
 
 ### 平台统计
 
