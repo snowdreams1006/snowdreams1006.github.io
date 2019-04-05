@@ -343,20 +343,20 @@
 
 #### B站专栏
 
-> [B站专栏][bilibili] : https://space.bilibili.com/236627025
+> [B站专栏][bilibili] : https://member.bilibili.com/v2#/upload-manager/text
 
-```
+{% chart %}
 {
     "data": {
         "x": "x",
         "columns": [
-            ["x","2019-04-01","2019-04-02","2019-04-03"],
-            ["粉丝",1,1,1],
-            ["阅读量",179,184,190],
-            ["投稿",32,33,34],
-            ["点赞",32,33,34],
-            ["收藏",6,6,6],
-            ["投币",1,1,1]
+            ["x","2019-04-01","2019-04-02","2019-04-03","2019-04-04"],
+            ["粉丝",1,1,1,1],
+            ["阅读量",179,184,190,196],
+            ["投稿",32,33,34,36],
+            ["点赞",32,33,34,36],
+            ["收藏",6,6,6,6],
+            ["投币",1,1,1,1]
         ],
         "axes": {
             "粉丝": "y2"
@@ -375,15 +375,15 @@
       "y2": {
         "show": "true",
         "label": {
-          "text": "粉丝,
+          "text": "粉丝",
           "position": "outer-middle"
         }
       }
     }
 }
-```
+{% endchart %}
 
-![other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
+[other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
 
 #### 微信公众号
 
@@ -564,5 +564,5 @@
 [oschina]: https://my.oschina.net/snowdreams1006 "雪之梦技术驿站"
 [segmentfault]: https://segmentfault.com/blog/snowdreams1006 "雪之梦技术驿站"
 [imooc]: https://www.imooc.com/u/5224488/articles "雪之梦技术驿站"
-[bilibili]: https://space.bilibili.com/236627025 "雪之梦技术驿站"
+[bilibili]: https://member.bilibili.com/v2#/upload-manager/text "雪之梦技术驿站"
 [weixin]: https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=641790288 "雪之梦技术驿站"
