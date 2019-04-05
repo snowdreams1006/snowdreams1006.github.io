@@ -46,7 +46,7 @@
 
 > [慕课手记][imooc] : https://www.imooc.com/u/5224488/articles
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -81,9 +81,9 @@
       } 
     }
 }
-{% endchart %}
+```
 
-[other-static-imooc-201904.png](./images/other-static-imooc-201904.png)
+![other-static-imooc-201904.png](./images/other-static-imooc-201904.png)
 
 #### 简书
 
