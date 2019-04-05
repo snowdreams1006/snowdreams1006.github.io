@@ -169,5 +169,26 @@ $ gitbook pdf ./ /Users/sunpo/Desktop/book.pdf
 $ gitbook pdf --log=debug
 ```
 
-> 可能需要安装 `ebook-convert` 相关插件
+> 可能需要安装 `ebook-convert` 相关插件,详情见相关系列教程.
+
+### `gitbook epub` 输出 `epub` 电子书
+
+> 语法格式: `gitbook epub [book] [output]`
+
+示例:
+
+```
+# 默认输出到当前项目
+$ gitbook epub 
+
+# 指定输出文件 `/Users/sunpo/Desktop/book.epub`
+$ gitbook epub ./ /Users/sunpo/Desktop/book.epub
+
+# 指定输出日志级别: `debug`
+$ gitbook epub --log=debug
+```
+
+> 可能需要安装 `ebook-convert` 相关插件,详情见相关系列教程.
+
+
 
