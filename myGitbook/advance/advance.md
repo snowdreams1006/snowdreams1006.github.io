@@ -135,5 +135,21 @@ $ gitbook install /Users/sunpo/Desktop/gitbook-demo
 $ gitbook install  --log=debug
 ```
 
+### `gitbook parse` 解析电子书
+
+> 语法格式: `gitbook parse [book]`
+
+示例:
+
+```
+# 解析并输出当前项目的 `debug` 级别日志信息
+$ gitbook parse 
+
+# 解析并输出指定项目的 `/Users/sunpo/Desktop/gitbook-demo` 的 `debug` 级别日志信息
+$ gitbook install /Users/sunpo/Desktop/gitbook-demo
+
+# 安装当前项目所需插件且指定日志输出级别: `debug`
+$ gitbook install  --log=debug
+```
 
 
