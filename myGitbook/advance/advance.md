@@ -94,11 +94,11 @@ $
 # 默认输出到 `_book/` 目录
 $ gitbook build 
 
-# 指定输出目录 `/Users/sunpo/Desktop/book`
-$ gitbook build ./ /Users/sunpo/Desktop/book
+# 指定输出目录 `/Users/sunpo/Desktop/book/`
+$ gitbook build ./ /Users/sunpo/Desktop/book/
 
 # 指定输出格式 `json`
-$ gitbook build  --format=json
+$ gitbook build --format=json
 ```
 
 ### `gitbook serve` 启动本地服务器
@@ -111,11 +111,11 @@ $ gitbook build  --format=json
 # 默认服务端口: `4000`,热部署端口: `35729`
 $ gitbook serve 
 
-# 指定输出目录 `/Users/sunpo/Desktop/book`
-$ gitbook serve ./ /Users/sunpo/Desktop/book
+# 指定输出目录 `/Users/sunpo/Desktop/book/`
+$ gitbook serve ./ /Users/sunpo/Desktop/book/
 
 # 指定服务端口: `5000` 和热部署端口: `45729`
-$ gitbook serve  --port=5000 --lrport=45729
+$ gitbook serve --port=5000 --lrport=45729
 ```
 
 ### `gitbook install` 安装插件
@@ -128,11 +128,11 @@ $ gitbook serve  --port=5000 --lrport=45729
 # 安装当前项目所需插件
 $ gitbook install 
 
-# 安装指定项目所需插件 `/Users/sunpo/Desktop/gitbook-demo`
-$ gitbook install /Users/sunpo/Desktop/gitbook-demo
+# 安装指定项目所需插件 `/Users/sunpo/Desktop/gitbook-demo/`
+$ gitbook install /Users/sunpo/Desktop/gitbook-demo/
 
 # 安装当前项目所需插件且指定日志输出级别: `debug`
-$ gitbook install  --log=debug
+$ gitbook install --log=debug
 ```
 
 ### `gitbook parse` 解析电子书
@@ -145,11 +145,29 @@ $ gitbook install  --log=debug
 # 解析并输出当前项目的 `debug` 级别日志信息
 $ gitbook parse 
 
-# 解析并输出指定项目的 `/Users/sunpo/Desktop/gitbook-demo` 的 `debug` 级别日志信息
-$ gitbook install /Users/sunpo/Desktop/gitbook-demo
+# 解析并输出指定项目的 `/Users/sunpo/Desktop/gitbook-demo/` 的 `debug` 级别日志信息
+$ gitbook parse /Users/sunpo/Desktop/gitbook-demo/
 
-# 安装当前项目所需插件且指定日志输出级别: `debug`
-$ gitbook install  --log=debug
+# 解析并输出当前项目的 `info` 级别日志信息
+$ gitbook parse --log=info
 ```
 
+### `gitbook pdf` 输出 `PDF` 电子书
+
+> 语法格式: `gitbook pdf [book] [output]`
+
+示例:
+
+```
+# 默认输出到当前项目
+$ gitbook pdf 
+
+# 指定输出文件 `/Users/sunpo/Desktop/book.pdf`
+$ gitbook pdf ./ /Users/sunpo/Desktop/book.pdf
+
+# 指定输出日志级别: `debug`
+$ gitbook pdf --log=debug
+```
+
+> 可能需要安装 `ebook-convert` 相关插件
 
