@@ -26,7 +26,8 @@
     "chart",
     "favicon-plus",
     "donate",
-    "advanced-emoji"
+    "advanced-emoji",
+    "disqus"
   ],
   "pluginsConfig": {
     "github": {
@@ -73,6 +74,9 @@
       "button": "赏",
       "alipayText": "支付宝",
       "wechatText": "微信"
+    },
+    "disqus": {
+      "shortName": "snowdreams1006"
     }
   }
 }
