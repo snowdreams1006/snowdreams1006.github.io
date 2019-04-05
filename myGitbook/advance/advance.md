@@ -38,6 +38,86 @@ $ gitbook --help
 $
 ```
 
+### `gitbook ls` 列出本地安装版本
+
+> 语法格式: `gitbook ls`
+
+示例:
+
+```
+# 列出本地已安装 `gitbook` 版本
+$ gitbook ls 
+```
+
+### `gitbook current` 列出当前使用版本
+
+> 语法格式: `gitbook current`
+
+示例:
+
+```
+# 列出当前正在使用的 `gitbook` 版本
+$ gitbook current 
+```
+
+### `gitbook ls-remote` 列出远程可用版本
+
+> 语法格式: `gitbook ls-remote`
+
+示例:
+
+```
+# 列出远程可用的 `gitbook` 版本
+$ gitbook ls-remote 
+```
+
+### `gitbook fetch` 安装指定版本
+
+> 语法格式: `gitbook fetch [version]`
+
+示例:
+
+```
+# 下载并安装指定的 `gitbook` 版本
+$ gitbook fetch 2.6.9
+```
+
+### `gitbook alias` 指定文件夹别名
+
+> 语法格式: `gitbook alias [folder] [version]`
+
+示例:
+
+```
+# 下载并安装指定的 `gitbook` 版本
+$ gitbook alias /Users/sunpo/Desktop/book/gitbook/ 1.0.0
+```
+
+### `gitbook uninstall` 卸载指定版本
+
+> 语法格式: `gitbook uninstall [version]`
+
+示例:
+
+```
+# 卸载指定的 `gitbook` 版本
+$ gitbook uninstall 2.6.9
+```
+
+### `gitbook update` 更新指定版本
+
+> 语法格式: `gitbook update [tag]`
+
+示例:
+
+```
+# 默认更新到最新的 `gitbook` 版本
+$ gitbook update 
+
+# 更新到指定的 `gitbook` 版本
+$ gitbook update 2.6.9
+```
+
 ## 列出 `gitbook` 可用命令
 
 > 语法格式: `gitbook help`
@@ -81,8 +161,6 @@ $ gitbook help
 
 $ 
 ```
-
-## 一些常用命令
 
 ### `gitbook build` 构建电子书
 
