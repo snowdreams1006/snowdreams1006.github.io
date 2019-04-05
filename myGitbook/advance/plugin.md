@@ -12,9 +12,7 @@
 
 ![gitbook-plugin-npm-preview.png](./images/gitbook-plugin-npm-preview.png)
 
-## 安装流程
-
-### `npm` 安装后再 `gitbook` 安装
+## `npm` 安装后再 `gitbook` 安装
 
 > 语法格式: `npm install gitbook-plugin-<name>`
 
@@ -35,7 +33,7 @@ $ gitbook install
 
 > `npm` 安装速度慢的话,可以使用 `cnpm` 加速安装(`npm install cnpm`),表情插件下载地址 [Advanced Emoji](https://www.npmjs.com/package/gitbook-plugin-advanced-emoji)
 
-### `gitbook` 直接安装
+## `gitbook` 直接安装
 
 > 语法格式: `gitbook install`
 
@@ -52,7 +50,7 @@ $ gitbook install
 
 > 表情插件下载地址 [Advanced Emoji](https://plugins.gitbook.com/plugin/advanced-emoji)
 
-### 插件示例
+## 插件示例
 
 [Advanced Emoji表情列表](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
