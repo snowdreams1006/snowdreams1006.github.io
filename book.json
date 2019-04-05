@@ -25,7 +25,8 @@
     "copy-code-button",
     "chart",
     "favicon-plus",
-    "donate"
+    "donate",
+    "advanced-emoji"
   ],
   "pluginsConfig": {
     "github": {
