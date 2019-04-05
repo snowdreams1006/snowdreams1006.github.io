@@ -345,18 +345,18 @@
 
 > [B站专栏][bilibili] : https://member.bilibili.com/v2#/upload-manager/text
 
-```
+{% chart %}
 {
     "data": {
         "x": "x",
         "columns": [
-            ["x","2019-04-01","2019-04-02","2019-04-03","2019-04-04"],
-            ["粉丝",1,1,1,1],
-            ["阅读量",179,184,190,196],
-            ["投稿",32,33,34,36],
-            ["点赞",32,33,34,36],
-            ["收藏",6,6,6,6],
-            ["投币",1,1,1,1]
+            ["x","2019-04-01","2019-04-02","2019-04-03","2019-04-04","2019-04-05"],
+            ["粉丝",1,1,1,1,1],
+            ["阅读量",179,184,190,196,196],
+            ["投稿",32,33,34,36,38],
+            ["点赞",32,33,34,36,38],
+            ["收藏",6,6,6,6,6],
+            ["投币",1,1,1,1,1]
         ],
         "axes": {
             "粉丝": "y2"
@@ -381,24 +381,24 @@
       }
     }
 }
-```
+{% endchart %}
 
-![other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
+[other-static-bilibili-201904.png](./images/other-static-bilibili-201904.png)
 
 #### 腾讯云社区
 
 > [腾讯云社区][tencent-cloud] : https://cloud.tencent.com/developer/user/2952369/activities
 
-```
+{% chart %}
 {
     "data": {
         "x": "x",
         "columns": [
-            ["x","2019-04-04"],
-            ["粉丝",13],
-            ["阅读量",1192],
-            ["文章",34],
-            ["点赞",107]
+            ["x","2019-04-04","2019-04-05"],
+            ["粉丝",13,13],
+            ["阅读量",1192,1561],
+            ["文章",34,34],
+            ["点赞",107,108]
         ],
         "axes": {
             "粉丝": "y2"
@@ -423,9 +423,9 @@
       }
     }
 }
-```
+{% endchart %}
 
-![other-static-tencent-cloud-201904.png](./images/other-static-tencent-cloud-201904.png)
+[other-static-tencent-cloud-201904.png](./images/other-static-tencent-cloud-201904.png)
 
 ## 2019年03月
 
