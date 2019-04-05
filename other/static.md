@@ -4,7 +4,7 @@
 
 ### 全网统计
 
-{% chart %}
+```
 {
     "data": {
         "x": "x",
@@ -36,9 +36,9 @@
       }
     }
 }
-{% endchart %}
+```
 
-[other-static-overview-201904.png](./images/other-static-overview-201904.png)
+![other-static-overview-201904.png](./images/other-static-overview-201904.png)
 
 ### 平台统计
 
