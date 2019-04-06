@@ -192,6 +192,16 @@ $ gitbook serve
 
 ![gitbook-plugin-github-preview.png](./images/gitbook-plugin-github-preview.png)
 
+## `search-plus` 中文搜索插件
+
+## `splitter` 分割线插件
+
+## `sharing-plus` 增强分享插件
+
+## `donate` 捐赠插件
+
+## `copy-code-button` 复制代码插件
+
 
 
 
