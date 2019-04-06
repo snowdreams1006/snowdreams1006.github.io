@@ -4,11 +4,15 @@
 
 [discus](https://disqus.com/) 是一款集成**评论**的插件,可以为静态网站添加动态评论,让你的网站动起来!
 
-![gitbook-plugin-disqus-preview.png](./images/gitbook-plugin-disqus-preview.png)
+![gitbook-plugin-disqus-success-with-FQ.png](./images/gitbook-plugin-disqus-success-with-FQ.png)
 
 > 遗憾的是,`discus` 插件只有 FQ 才能正常使用,暂时没找到其他较好的替代方案.
 
 ### 注册 `disqus.com` 账号
+
+`gitbook` 集成 `disqus` 插件中最重要的配置项就是注册 `disqus.com` 网站唯一标识.
+
+![gitbook-plugin-disqus-preview.png](./images/gitbook-plugin-disqus-preview.png)
 
 #### 注册并绑定域名
 
@@ -52,12 +56,53 @@
  
 ![gitbook-plugin-disqus-complete.png](./images/gitbook-plugin-disqus-complete.png)
 
-### 安装 `disqus` 插件
+### 安装并配置 `disqus` 插件
+
+上一步我们已经获取到唯一的标识: `snowdreams1006` ,接下来可以继续配置 `disqus`  插件了.
 
 [https://plugins.gitbook.com/plugin/disqus](https://plugins.gitbook.com/plugin/disqus)
 
+#### 激活插件配置
+
+在 `book.json` 中配置 `disqus` 插件,根据实际情况修改成自己的缩写名称(`shortName`).
+
+示例:
+
+```
+{
+    "plugins": ["disqus"],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "snowdreams1006"
+        }
+    }
+}
+```
+
+#### 安装 `disqus` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+#### 测试 `disqus` 插件
+
+示例:
+
+```
+$ gitbook serve
+```
+
+正常情况下(FQ),`disqus` 插件已经成功集成到 `gitbook` 网站了,因此推送到实际服务器上时看到的效果是这样的.
+
+![gitbook-plugin-disqus-success-with-FQ.png](./images/gitbook-plugin-disqus-success-with-FQ.png)
+
+如果你不具备条件(FQ),那么你看到的仍然是这样的.
+
+![gitbook-plugin-disqus-success-without-FQ.png](./images/gitbook-plugin-disqus-success-without-FQ.png)
 
 
 
-
-
+ 
