@@ -60,7 +60,7 @@
 
 上一步我们已经获取到唯一的标识: `snowdreams1006` ,接下来可以继续配置 `disqus`  插件了.
 
-[https://plugins.gitbook.com/plugin/disqus](https://plugins.gitbook.com/plugin/disqus)
+[链接地址](https://plugins.gitbook.com/plugin/disqus): https://plugins.gitbook.com/plugin/disqus 
 
 #### 激活插件配置
 
@@ -107,6 +107,8 @@ $ gitbook serve
 
 如果希望将网页源码暴露出去并接受公众的监督校准的话,使用[edit-link插件](https://plugins.gitbook.com/plugin/edit-link)可以直接链接到源码文件.
 
+[链接地址](https://plugins.gitbook.com/plugin/edit-link): https://plugins.gitbook.com/plugin/edit-link
+
 ![gitbook-plugin-edit-link-preview.gif](./images/gitbook-plugin-edit-link-preview.gif)
 
 ### 激活插件配置
@@ -117,7 +119,6 @@ $ gitbook serve
 
 ```
 {
-    "gitbook": "2.0.1",
     "plugins": ["edit-link"],
     "pluginsConfig": {
         "edit-link": {
@@ -136,7 +137,7 @@ $ gitbook serve
 $ gitbook install
 ```
 
-### 测试 `edit-lin` 插件
+### 测试 `edit-link` 插件
 
 如果不能正常跳转到源码文件,多次试验后重新更改 `edit-link.base` 节点内容,重新 `gitbook serve` 即可正常跳转源码文件.
 
@@ -147,6 +148,52 @@ $ gitbook serve
 ```
 
 ![gitbook-plugin-edit-link-preview.png](./images/gitbook-plugin-edit-link-preview.png)
+
+## `github` 插件
+
+添加 `github` 图标链接,方便直接跳转到 `github` 指定仓库.
+
+[链接地址](https://plugins.gitbook.com/plugin/github): https://plugins.gitbook.com/plugin/github
+
+![gitbook-plugin-github-preview.png](./images/gitbook-plugin-github-preview.png)
+
+### 激活插件配置
+
+在 `book.json` 中配置 `github` 插件,详细说明请参考 [github 插件](https://plugins.gitbook.com/plugin/github).
+
+示例:
+
+```
+{
+    "plugins": ["github"],
+    "pluginsConfig": {
+        "github": {
+          "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+        }
+    }
+}
+```
+
+### 安装 `github` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `github` 插件
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-github-preview.png](./images/gitbook-plugin-github-preview.png)
+
+
+
 
 
 
