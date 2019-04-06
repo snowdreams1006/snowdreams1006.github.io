@@ -103,6 +103,51 @@ $ gitbook serve
 
 ![gitbook-plugin-disqus-success-without-FQ.png](./images/gitbook-plugin-disqus-success-without-FQ.png)
 
+## `edit-link` 编辑链接插件
+
+如果希望将网页源码暴露出去并接受公众的监督校准的话,使用[edit-link插件](https://plugins.gitbook.com/plugin/edit-link)可以直接链接到源码文件.
+
+![gitbook-plugin-edit-link-preview.gif](./images/gitbook-plugin-edit-link-preview.gif)
+
+### 激活插件配置
+
+在 `book.json` 中配置 `edit-link` 插件,详细说明请参考 [edit-link 插件](https://plugins.gitbook.com/plugin/edit-link).
+
+示例:
+
+```
+{
+    "gitbook": "2.0.1",
+    "plugins": ["edit-link"],
+    "pluginsConfig": {
+        "edit-link": {
+          "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",
+          "label": "编辑本页"
+        }
+    }
+}
+```
+
+### 安装 `edit-link` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `edit-lin` 插件
+
+如果不能正常跳转到源码文件,多次试验后重新更改 `edit-link.base` 节点内容,重新 `gitbook serve` 即可正常跳转源码文件.
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-edit-link-preview.png](./images/gitbook-plugin-edit-link-preview.png)
+
 
 
  

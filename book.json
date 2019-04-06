@@ -56,8 +56,8 @@
            "weibo", "instapaper", "linkedin",
            "pocket", "stumbleupon"
        ]
-   },
-   "edit-link": {
+    },
+    "edit-link": {
       "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",
       "label": "编辑本页"
     },
