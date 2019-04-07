@@ -64,12 +64,12 @@
     "chart": {
       "type": "c3"
     },
-    "favicon": "/images/favicon.ico",
-    "appleTouchIconPrecomposed152": "/images/apple-touch-icon-precomposed-152.png",
+    "favicon": "/favicon.ico",
+    "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png",
     "output": "_book",
     "donate": {
-      "wechat": "/images/wechat.jpg",
-      "alipay": "/images/alipay.jpg",
+      "wechat": "/wechat.jpg",
+      "alipay": "/alipay.jpg",
       "title": "",
       "button": "赏",
       "alipayText": "支付宝",
