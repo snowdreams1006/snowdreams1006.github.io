@@ -68,16 +68,9 @@ H~2~O is是液体。
 链接
 ---------------------------
 
-链接: [link](https://mp.csdn.net).
+链接: [https://snowdreams1006.github.io](https://snowdreams1006.github.io).
 
-图片: ![Alt](https://avatar.csdn.net/7/7/B/1_ralf_hx163com.jpg)
-
-带尺寸的图片: ![Alt](https://avatar.csdn.net/7/7/B/1_ralf_hx163com.jpg =30x30)
-
-居中的图片: ![Alt](https://avatar.csdn.net/7/7/B/1_ralf_hx163com.jpg#pic_center)
-
-居中并且带尺寸的图片: ![Alt](https://avatar.csdn.net/7/7/B/1_ralf_hx163com.jpg#pic_center =30x30)
-
+图片: ![雪之梦技术驿站的头像](https://upload.jianshu.io/users/upload_avatars/16648241/57aebe62-b5b5-491a-a9fd-f994d5be7dda.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240)
 
 代码片
 ---------------------------

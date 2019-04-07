@@ -93,12 +93,12 @@
 示例:
 
 ```
-![雪之梦技术驿站的头像](https://avatars0.githubusercontent.com/u/23238267?s=400&u=c60a9628495b4bfb4c6ee1a7bba8e3a8d265ca96&v=4)
+![雪之梦技术驿站的头像](https://upload.jianshu.io/users/upload_avatars/16648241/57aebe62-b5b5-491a-a9fd-f994d5be7dda.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240)
 ```
 
 效果:
 
-![雪之梦技术驿站的头像](https://avatars0.githubusercontent.com/u/23238267?s=400&u=c60a9628495b4bfb4c6ee1a7bba8e3a8d265ca96&v=4)
+![雪之梦技术驿站的头像](https://upload.jianshu.io/users/upload_avatars/16648241/57aebe62-b5b5-491a-a9fd-f994d5be7dda.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240)
 
 ### 代码
 
@@ -261,6 +261,5 @@ git diff
 ```
 git log
 ```
-
 
 > 上述仅介绍了 `git` 的简单命令,实际使用情况远不止这些,更多详情请参考 [git 入门教程](https://snowdreams1006.github.io/git/)
