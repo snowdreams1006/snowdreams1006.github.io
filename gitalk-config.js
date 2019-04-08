@@ -4,6 +4,7 @@ var gitalk = new Gitalk({
   "repo": "snowdreams1006.github.io",
   "owner": "snowdreams1006",
   "admin": ["snowdreams1006"],
-  "id": window.location.pathname
+  "id": window.location.pathname,
+  "distractionFreeMode": false
 });
 gitalk.render("gitalk-container");
