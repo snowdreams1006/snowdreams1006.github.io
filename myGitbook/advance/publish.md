@@ -138,6 +138,8 @@ $ git push -u origin master
 # 生成静态网站
 $ gitbook build
 
+# 复制到项目根目录
+$ cp -r _book/* .
 
 
 ```
