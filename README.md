@@ -19,3 +19,20 @@
 - 知识重在分享才有价值,鼓励知识传播与分享,创造收益更有价值;
 - 因本人能力有限,如有出入,敬请指正,请联系我[snowdreams1006](https://github.com/snowdreams1006/)
 
+{% if site.gitalk.enable %}
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+    <script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: "3f62415a283d19cbd696
+",
+        clientSecret: "aed0e1db0620bf5d0e3a3f0225f801997ad74e58",
+        repo: "snowdreams1006.github.io",
+        owner: "snowdreams1006",
+        admin: ["snowdreams1006"],
+        id: "README"
+    });
+    gitalk.render('gitalk-container');
+</script>
+{% endif %}
