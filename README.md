@@ -30,6 +30,6 @@
         owner: "snowdreams1006",
         admin: ["snowdreams1006"]
     });
-    gitalk.render('gitalk-container');
+    gitalk.render("gitalk-container");
 </script>
 
