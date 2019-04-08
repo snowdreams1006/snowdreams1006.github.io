@@ -77,7 +77,7 @@
     },
     "tbfed-pagefooter": {
       "copyright":"&copy snowdreams1006",
-      "modify_label": "该文件修订时间：",
+      "modify_label": "文件修订时间：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     }
   }
