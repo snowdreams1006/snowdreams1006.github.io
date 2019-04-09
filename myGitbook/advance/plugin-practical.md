@@ -285,7 +285,7 @@ gitalk.render("gitalk-container");
 
 聪明的你或许已经想到了,解铃还须系铃人,当然是向推荐给我插件的大牛提问了!
 
-他确实提供了一种思路,以下是网友**@八一菜刀**原话:
+他确实提供了一种思路,以下是网友[@八一菜刀](https://my.oschina.net/u/254762)原话:
 
 > 文档里面我用的是tbfed-pagefooter插件，不过我是在本地使用gitbook install后重写了该插件的js，无非就是在js里面加一段Gitalk的调用代码，这样使用gitbook build命令的时候，所有的页面都会有Gitalk的评论调用
 
