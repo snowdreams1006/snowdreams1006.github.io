@@ -1,6 +1,14 @@
 # 实用插件
 
-插件介绍没有什么顺序,可以按照目录大纲直接寻找感兴趣的插件.
+插件没有什么逻辑顺序,大家可以按照目录大纲直接定位到感兴趣的插件部分阅读即可.
+
+更多插件正在陆续更新中,敬请期待...
+
+## 最新更新插件
+
+- `tbfed-pagefooter` 版权页脚插件
+- `gitalk` 评论插件
+- `search-plus` 中文搜索插件
 
 > `gitalk` 评论插件并不是 `gitbook` 插件,因而集成方式和一般的插件安装方式不同!
 
@@ -502,15 +510,6 @@ $ gitbook serve
 ```
 
 ![gitbook-plugin-search-plus-preview.png](./images/gitbook-plugin-search-plus-preview.png)
-
-## `splitter` 分割线插件
-
-## `sharing-plus` 增强分享插件
-
-## `donate` 捐赠插件
-
-## `copy-code-button` 复制代码插件
-
 
 
 
