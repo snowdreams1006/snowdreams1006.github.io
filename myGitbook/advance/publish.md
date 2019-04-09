@@ -141,8 +141,15 @@ $ gitbook build
 # 复制到项目根目录
 $ cp -r _book/* .
 
+# 添加到本地版本库
+$ git add .
+$ git commit -m "publish"
 
+# 推送到远程仓库
+$ git push origin master
 ```
+
+> 现在登录 `github` 网站看一下静态网站是否成功上传以及访问主页站点或项目站点看一下最新内容是否成功渲染吧!
 
 ## 小结
 
