@@ -1,5 +1,58 @@
 # 实用插件
 
+插件介绍没有什么顺序,可以按照目录大纲直接寻找感兴趣的插件.
+
+> `gitalk` 评论插件并不是 `gitbook` 插件,因而集成方式和一般的插件安装方式不同!
+
+## `tbfed-pagefooter` 版权页脚插件
+
+如果希望将网页源码暴露出去并接受公众的监督校准的话,使用[edit-link插件](https://plugins.gitbook.com/plugin/edit-link)可以直接链接到源码文件.
+
+[链接地址](https://plugins.gitbook.com/plugin/tbfed-pagefooter): https://plugins.gitbook.com/plugin/tbfed-pagefooter
+
+![gitbook-plugin-tbfed-pagefooter-preview.png](./images/gitbook-plugin-tbfed-pagefooter-preview.png)
+
+### 激活插件配置
+
+在 `book.json` 中配置 `tbfed-pagefooter` 插件,详细说明请参考 [tbfed-pagefooter 插件](https://plugins.gitbook.com/plugin/tbfed-pagefooter).
+
+示例:
+
+```
+{
+    "plugins": ["tbfed-pagefooter"],
+    "pluginsConfig": {
+        "tbfed-pagefooter": {
+          "copyright":"&copy snowdreams1006",
+          "modify_label": "文件修订时间：",
+          "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    }
+}
+```
+
+### 安装 `tbfed-pagefooter` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `tbfed-pagefooter` 插件
+
+启动本地服务后,每个页面的页脚处都会自动生成版权信息以及当前文件的最后更新时间.
+
+> 功能慎用: 如果文档频繁更新适合生成最后更新时间,如果长时间不更新文档,岂不是最后更新时间还是几年前,给读者的感觉像是不再维护了一样!
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-tbfed-pagefooter-preview.png](./images/gitbook-plugin-tbfed-pagefooter-preview.png)
+
 ## `disqus` 评论插件
 
 [discus](https://disqus.com/) 是一款集成**评论**的插件,可以为静态网站添加动态评论,让你的网站动起来!
@@ -407,6 +460,48 @@ $ gitbook serve
 ![gitbook-plugin-github-preview.png](./images/gitbook-plugin-github-preview.png)
 
 ## `search-plus` 中文搜索插件
+
+默认的 `search` 搜索插件是不支持中文搜索的,而 `search-plus` 则功能更强大些,两者不能共存,需要禁用或移除 `search` 插件.
+
+[链接地址](https://plugins.gitbook.com/plugin/search-plus): https://plugins.gitbook.com/plugin/search-plus
+
+![gitbook-plugin-search-plus-preview.png](./images/gitbook-plugin-search-plus-preview.png)
+
+### 激活插件配置
+
+在 `book.json` 中配置 `github` 插件,详细说明请参考 [github 插件](https://plugins.gitbook.com/plugin/search-plus).
+
+示例:
+
+```
+{
+    "plugins": [
+      "-lunr", 
+      "-search", 
+      "search-plus"
+    ]
+}
+```
+
+### 安装 `search-plus` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `search-plus` 插件
+
+测试是否能够进行中文搜索,如果不能,请确保已移除默认的 `"lunr"` 和 `"search"` 插件.
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-search-plus-preview.png](./images/gitbook-plugin-search-plus-preview.png)
 
 ## `splitter` 分割线插件
 
