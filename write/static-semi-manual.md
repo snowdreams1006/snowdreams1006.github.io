@@ -92,9 +92,211 @@
 
 我的需求很简单,编写一个 `csv` 处理的工具类能够实现基本的写入和读取操作即可,说到工具类当然首选现成的开源工具了.
 
+说到开源工具,脑海中第一个闪现的是 `Apache Commons` 工具类,所以先去 `maven` 上搜一下有没有 `csv` 相关的工具类.
 
+[在线搜索 commons-csv](https://mvnrepository.com/search?q=commons-csv)
 
+![maven-search-csv.png](./images/maven-search-csv.png)
 
+天不负我!果然有 `csv` 相关工具类,下面就开始研究如何调用吧!
 
+集成 `commons-csv` 工具类
 
+```
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.6</version>
+</dependency>
+```
+
+编写工具类
+
+```
+/**
+ * 写入csv文件
+ *
+ * @param data     数据内容
+ * @param filePath 文件路径
+ * @throws IOException
+ **/
+public static void writeCsv(List<String[]> data, String filePath) throws IOException {
+    FileWriter fw = new FileWriter(new File(filePath));
+    final CSVPrinter printer = CSVFormat.EXCEL.print(fw);
+    printer.printRecords(data);
+    printer.flush();
+    printer.close();
+}
+
+/**
+ * 读取csv文件
+ *
+ * @param filePath 文件路径
+ * @return CSVRecord 迭代对象
+ * @throws IOException
+ **/
+public static Iterable<CSVRecord> readCSV(String filePath) throws IOException {
+    InputStream inputStream = new FileInputStream(filePath);
+    InputStreamReader isr = new InputStreamReader(inputStream);
+    Iterable<CSVRecord> records = CSVFormat.EXCEL.parse(isr);
+    return records;
+}
+
+/**
+ * 测试写入并读取csv 文件
+ */
+private static void testWriteAndRead() throws IOException {
+    //写入数据
+    List<String[]> data = new ArrayList<String[]>();
+    data.add(new String[]{"张三", "18", "3000"});
+    data.add(new String[]{"李四", "20", "4000"});
+    data.add(new String[]{"王二", "25", "5000"});
+
+    //写入文件路径
+    String path = "/Users/sunpo/Downloads/testWriteAndRead.csv";
+
+    //写入 csv 文件
+    writeCsv(data, path);
+
+    //读取文件
+    Iterable<CSVRecord> records = readCSV(path);
+    for (CSVRecord record : records) {
+        for (String string : record) {
+            System.out.print(string);
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+}
+```
+
+简单编写 `java` 工具类测试写入并读取功能
+
+![test-write-read-csv.png](./images/test-write-read-csv.png)
+
+测试结果真实可用,工具类基本功能编写完成.
+
+![test-write-read-csv-result.png](./images/test-write-read-csv-result.png)
+
+那现在就要解决实际问题,再看一下当前慕课网手记的格式
+
+```
+148浏览 2推荐 0评论
+204浏览 2推荐 0评论
+181浏览 2推荐 0评论
+```
+
+分析上述内容格式有以下特点:
+
+- 内容数据一行一条数据,可能需要换行符问题
+- 每一行数据以空格分割,可分割成数组或列表再处理
+- 已分割后的列表项包括了有效数据和文字说明,可能需要过滤出有效数据
+
+按照上述分析结果,开始 `coding` 逐个解决,下面展示下关键代码.
+
+按照空格将每一行数据分割成列表
+
+```
+List<String> row = StringTools.splitToListString(string, " ");
+```
+
+> `StringTools.splitToListString` 方式是笔者封装的分割字符串方法,目的将字符串按照指定分隔符分割成字符串列表
+
+处理分割后字符串列表并过来出有效数据
+
+```
+String readCountWithDescString = row.get(0);
+String readCountString = StringUtils.substringBefore(readCountWithDescString, "浏览");
+
+String recommendCountWithDescString = row.get(1);
+String recommendCountString = StringUtils.substringBefore(recommendCountWithDescString, "推荐");
+
+String commentCountWithDescString = row.get(2);
+String commentCountString = StringUtils.substringBefore(commentCountWithDescString, "评论");
+```
+
+> `StringUtils.substringBefore` 方法也是`Apache Commons` 工具类,具体来源于 `org.apache.commons.lang3` ,下述涉及到的 `StringUtils` 静态方法 也是,不再单独说明.
+
+接下来最后一步,统计分析
+
+```
+//浏览数
+int readCount = 0;
+//推荐数
+int recommendCount = 0;
+//评论数
+int commentCount = 0;
+
+readCount += Integer.parseInt(readCountString);
+recommendCount += Integer.parseInt(recommendCountString);
+commentCount += Integer.parseInt(commentCountString);
+```
+
+如此一来,三步已经解决,现在运行以下统计方法,看一下真实效果如何.
+
+```
+/**
+ * 统计慕课手记
+ *
+ * @throws IOException
+ */
+private static void countImooc() throws IOException {
+    //昨日统计数据
+    String yesterday = DateFormatUtils.format(DateUtils.addDays(new Date(), -1), "yyyyMMdd");
+    String path = String.format("/Users/sunpo/Documents/workspace/count/imooc-%s.csv", yesterday);
+
+    //总行数
+    int allRows = 0;
+    //有效行数
+    int allValidRows = 0;
+    //当前行是否有效
+    boolean isValidRow = true;
+    //浏览数
+    int readCount = 0;
+    //推荐数
+    int recommendCount = 0;
+    //评论数
+    int commentCount = 0;
+
+    Iterable<CSVRecord> records = readCSV(path);
+    for (CSVRecord record : records) {
+        allRows++;
+
+        for (String string : record) {
+            System.out.println(string);
+
+            if (StringUtils.isBlank(string)) {
+                isValidRow = false;
+                break;
+            }
+
+            List<String> row = StringTools.splitToListString(string, " ");
+
+            String readCountWithDescString = row.get(0);
+            String readCountString = StringUtils.substringBefore(readCountWithDescString, "浏览");
+
+            String recommendCountWithDescString = row.get(1);
+            String recommendCountString = StringUtils.substringBefore(recommendCountWithDescString, "推荐");
+
+            String commentCountWithDescString = row.get(2);
+            String commentCountString = StringUtils.substringBefore(commentCountWithDescString, "评论");
+
+            readCount += Integer.parseInt(readCountString);
+            recommendCount += Integer.parseInt(recommendCountString);
+            commentCount += Integer.parseInt(commentCountString);
+        }
+
+        if (isValidRow) {
+            allValidRows++;
+        }
+        isValidRow = true;
+    }
+    System.out.println();
+    System.out.println(String.format("[慕课手记] 一共读取%d行,有效行: allValidRows = %d ,其中浏览数: readCount = %d ,推荐数: recommendCount = %d ,评论数: commentCount = %d", allRows, allValidRows, readCount, recommendCount, commentCount));
+    System.out.println();
+}
+```
+
+![imooc-statics-result.png](./images/imooc-statics-result.png)
 
