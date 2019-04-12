@@ -943,6 +943,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.5.4" data-path="../write/faq.html">
+            
+                <a href="../write/faq.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1104,41 +1117,44 @@
 <blockquote>
 <p><a href="https://www.imooc.com/u/5224488/articles" title="&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;" target="_blank">&#x6155;&#x8BFE;&#x624B;&#x8BB0;</a> : <a href="https://www.imooc.com/u/5224488/articles" target="_blank">https://www.imooc.com/u/5224488/articles</a></p>
 </blockquote>
-<pre><code>{
-    &quot;data&quot;: {
-        &quot;x&quot;: &quot;x&quot;,
-        &quot;columns&quot;: [
-            [&quot;x&quot;,&quot;2019-04-01&quot;,&quot;2019-04-02&quot;,&quot;2019-04-03&quot;,&quot;2019-04-04&quot;,&quot;2019-04-05&quot;,&quot;2019-04-06&quot;,&quot;2019-04-07&quot;,&quot;2019-04-08&quot;,&quot;2019-04-09&quot;,&quot;2019-04-10&quot;],
-            [&quot;&#x7C89;&#x4E1D;&quot;,8,8,8,9,9,9,9,9,9,9],
-            [&quot;&#x9605;&#x8BFB;&#x91CF;&quot;,3508,3645,3650,4356,4528,4864,5276,5593,5872,5912],
-            [&quot;&#x624B;&#x8BB0;&quot;,32,33,34,36,38,39,40,41,42,42],
-            [&quot;&#x63A8;&#x8350;&quot;,36,36,37,39,41,42,48,49,50,50],
-            [&quot;&#x79EF;&#x5206;&quot;,107,118,118,130,130,141,152,173,173,173]
+<p><div>
+                    <div id="plugin-chart-1"></div>
+                    <script>c3.generate({"bindto":"#plugin-chart-1",
+    "data": {
+        "x": "x",
+        "columns": [
+            ["x","2019-04-01","2019-04-02","2019-04-03","2019-04-04","2019-04-05","2019-04-06","2019-04-07","2019-04-08","2019-04-09","2019-04-10","2019-04-11"],
+            ["粉丝",8,8,8,9,9,9,9,9,9,9,9],
+            ["阅读量",3508,3645,3650,4356,4528,4864,5276,5593,5872,5912,6271],
+            ["手记",32,33,34,36,38,39,40,41,42,42,44],
+            ["推荐",36,36,37,39,41,42,48,49,50,50,52],
+            ["积分",107,118,118,130,130,141,152,173,173,173,194]
         ],
-        &quot;axes&quot;: {
-            &quot;&#x7C89;&#x4E1D;&quot;: &quot;y2&quot;
+        "axes": {
+            "粉丝": "y2"
         },
-        &quot;types&quot;: {
-            &quot;&#x7C89;&#x4E1D;&quot;: &quot;bar&quot;
+        "types": {
+            "粉丝": "bar"
         }
     },
-    &quot;axis&quot;: {
-      &quot;x&quot;: {
-        &quot;type&quot;: &quot;timeseries&quot;,
-        &quot;tick&quot;: {
-            &quot;format&quot;: &quot;%Y-%m-%d&quot;
+    "axis": {
+      "x": {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
         }
       },
-      &quot;y2&quot;: {
-        &quot;show&quot;: &quot;true&quot;,
-        &quot;label&quot;: { 
-          &quot;text&quot;: &quot;&#x7C89;&#x4E1D;&quot;,
-          &quot;position&quot;: &quot;outer-middle&quot;
+      "y2": {
+        "show": "true",
+        "label": { 
+          "text": "粉丝",
+          "position": "outer-middle"
         }
       } 
     }
-}
-</code></pre><p><img src="images/other-static-imooc-201904.png" alt="other-static-imooc-201904.png"></p>
+});</script>
+                </div></p>
+<p><a href="images/other-static-imooc-201904.png">other-static-imooc-201904.png</a></p>
 <h4 id="&#x7B80;&#x4E66;"><a name="&#x7B80;&#x4E66;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4E66;</h4>
 <blockquote>
 <p><a href="https://www.jianshu.com/u/577b0d76ab87" title="&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;" target="_blank">&#x7B80;&#x4E66;</a> : <a href="https://www.jianshu.com/u/577b0d76ab87" target="_blank">https://www.jianshu.com/u/577b0d76ab87</a></p>
@@ -1578,7 +1594,7 @@
 </ul>
 <!-- 链接引用 -->
 <footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 all right reserved&#xFF0C;powered by snowdreams1006</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2019-04-11 08:06:20
+2019-04-12 12:49:23
 </span></footer>
 
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
@@ -1630,7 +1646,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"历史统计","level":"2.6.2","depth":2,"next":{"title":"关于作者","level":"2.6.3","depth":2,"path":"other/me.md","ref":"other/me.md","articles":[]},"previous":{"title":"程序员转型之路","level":"2.6.1","depth":2,"path":"other/transformation.md","ref":"other/transformation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-plus","donate","advanced-emoji","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"output":"_book","github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":"/favicon.ico","pageview-count":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考."},"file":{"path":"other/static.md","mtime":"2019-04-11T00:06:20.989Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-12T01:45:05.901Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"历史统计","level":"2.6.2","depth":2,"next":{"title":"关于作者","level":"2.6.3","depth":2,"path":"other/me.md","ref":"other/me.md","articles":[]},"previous":{"title":"程序员转型之路","level":"2.6.1","depth":2,"path":"other/transformation.md","ref":"other/transformation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-plus","donate","advanced-emoji","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"output":"_book","github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":"/favicon.ico","pageview-count":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考."},"file":{"path":"other/static.md","mtime":"2019-04-12T04:49:23.249Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-12T04:53:03.554Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
