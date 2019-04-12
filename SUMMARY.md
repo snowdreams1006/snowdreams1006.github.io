@@ -58,6 +58,7 @@
     * [markdown和富文本](write/markdownOrRichText.md)
     * [markdown转富文本](write/markdown2richText.md)
     * [半手动版数据统计](write/static-semi-manual.md)
+    * [常见问题](write/faq.md)
 * [其他](other/README.md)
     * [程序员转型之路](other/transformation.md)
     * [历史统计](other/static.md)

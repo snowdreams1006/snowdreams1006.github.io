@@ -314,7 +314,6 @@ $
 
 截取重要片段,原来是电子书构建前动态增加了 `html` 片段啊,这就好办了!
 
-
 ```
 hooks: {
     'page:before': function(page) {
