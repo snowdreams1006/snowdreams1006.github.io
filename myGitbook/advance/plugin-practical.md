@@ -314,6 +314,7 @@ $
 
 截取重要片段,原来是电子书构建前动态增加了 `html` 片段啊,这就好办了!
 
+
 ```
 hooks: {
     'page:before': function(page) {
@@ -327,12 +328,12 @@ hooks: {
         var _c = this.options.pluginsConfig['tbfed-pagefooter']['copyright'];
         _copy = _c ? _c + ' all right reserved，' + _copy : _copy;
       }
-      var _copy = '<span class="copyright">'+_copy+'</span>'
+      var _copy = '<span class="copyright">'+_copy+'</span>';
       var str = ' \n\n<footer class="page-footer">' + _copy +
         '<span class="footer-modification">' +
         _label +
         '\n{{file.mtime | date("' + _format +
-        '")}}\n</span></footer>'
+        '")}}\n</span></footer>';
 
       str += '\n\n<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">'+
       '\n\n<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>'+
@@ -342,7 +343,7 @@ hooks: {
       page.content = page.content + str;
       return page;
     }
-  },
+}
 ```
 
 看懂基本原理后顺便修改了版权说明以及修订时间格式,然后追加了集成 `gitalk` 的相关代码.
