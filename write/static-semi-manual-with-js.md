@@ -469,4 +469,137 @@
 }
 {% endchart %}
  
+## js 抓取分析数据
+
+下面以 `chrome` 浏览器为例,说明如何利用默认控制台抓取关键数据,本文需要一定的 `jQuery` 基础.
+
+### 慕课手记
+
+在目标页面右键选择**检查**选项,打开默认开发者控制台,点击最左侧的**小鼠标箭头**,然后选中关键数据,比如浏览量.
+
+此时,开发者控制台自动滚动到**元素**(Elements)选项卡,在目标数据上右键点击**复制**(Copy),接着点击复制选择器(Copy selector),现在已经定位到阅读量的节点.
+
+![imooc-copy-selector.png](./images/imooc-copy-selector.png)
+
+点击**控制台**(Console)选项卡,并且将选择器更改成 `jQuery` 选择器,即`$("复制的选择器").text()`,现在在控制台直接输出内容,看一下能否抓取到浏览量吧!
+
+![imooc-paste-jQuery-selector.png](./images/imooc-paste-jQuery-selector.png)
+
+现在已经成功定位到指定元素,而我们要统计的是全部文章的阅读量,因此需要定位到全部元素.
+
+```js
+$("#articlesList > div:nth-child(1) > div.item-btm.clearfix > div > div:nth-child(1) > em").text();
+```
+
+简单分析下文章结构结合选择器分析,可以得知, 浏览,推荐和评论三者文档基本一致,唯一不同之处就是**排列顺序**而已,因此想要准确定位到浏览数,需要定位到第一个元素,推荐量则是第二个元素,因此类推.
+
+```html
+<div class="r right-info">
+    <div class="favorite l">
+        <i class="icon sns-thumb-up-outline"></i><em> 83浏览</em>
+    </div>
+    <div class="favorite l">
+        <i class="icon sns-thumb-up-outline"></i><em> 1推荐</em>
+    </div>
+    <div class=" l">
+        <i class="icon sns-comment"></i><em> 0评论</em>
+    </div>    
+</div>
+```
+
+弄清楚基本文档结构后,开始着手改造选择器使其定位到全部文章的浏览量,我们做如下改造.
+
+```js
+$("#articlesList div:nth-child(1) > em").text();
+```
+
+仅仅保留头部和尾部,再去掉中间部分 `> div:nth-child(1) > div.item-btm.clearfix > div >` ,这样就轻松定位到全部元素的浏览量了,是不是很简单?
+
+![imooc-modify-jQuery-selector.png](./images/imooc-modify-jQuery-selector.png)
+
+看到控制台输出结果,心里瞬间踏实了,这不刚好是**第一页**全部文章的浏览量吗?观察输出内容格式可知,我们需要将整个字符串按照**空格**分割成字符串数组.
+
+需要注意的是,行首还有一个空格哟,因此在分割成字符串数组前,我们先将行首的空格去除掉.
+
+```js
+// 去除空格前:" 83浏览 91浏览 114浏览 150浏览 129浏览 175浏览 222浏览 173浏览 225浏览 200浏览 201浏览 217浏览 291浏览 202浏览 229浏览 184浏览 226浏览 155浏览 153浏览 211浏览"
+
+$("#articlesList div:nth-child(1) > em").text().trim();
+
+// 去除空格后: "83浏览 91浏览 114浏览 150浏览 129浏览 175浏览 222浏览 173浏览 225浏览 200浏览 201浏览 217浏览 291浏览 202浏览 229浏览 184浏览 226浏览 155浏览 153浏览 211浏览"
+```
+
+现在我们再将这整个字符串按照空格分割成字符串数组.
+
+```js
+// 分割字符串前: "83浏览 91浏览 114浏览 150浏览 129浏览 175浏览 222浏览 173浏览 225浏览 200浏览 201浏览 217浏览 291浏览 202浏览 229浏览 184浏览 226浏览 155浏览 153浏览 211浏览"
+
+$("#articlesList div:nth-child(1) > em").text().trim().split(" ");
+
+// 分割字符串后: ["83浏览", "91浏览", "114浏览", "150浏览", "129浏览", "175浏览", "222浏览", "173浏览", "225浏览", "200浏览", "201浏览", "217浏览", "291浏览", "202浏览", "229浏览", "184浏览", "226浏览", "155浏览", "153浏览", "211浏览"]
+```
+
+现在我们已经够将整个字符串分割成一个个小的字符串,下面需要再将`83浏览`中的`浏览`去掉,仅仅保留数字`83`.
+
+```js
+$.each($("#articlesList div:nth-child(1) > em").text().trim().split(" "),function(idx,ele){
+     console.log(ele.substr(0,ele.lastIndexOf("浏览")));
+});
+```
+
+![imooc-split-ele-read.png](./images/imooc-split-ele-read.png)
+
+现在我们已经抓取到真正的浏览量,接下来就比较简单了,直接将这些浏览量进行累加即可,需要注意的是,这里的浏览数还是字符串类型,需要转换成数字类型才能进行累加运算哟!
+
+```js
+//阅读量
+var readCount = 0;
+$.each($("#articlesList div:nth-child(1) > em").text().trim().split(" "),function(idx,ele){
+     readCount += parseInt(ele.substr(0,ele.lastIndexOf("浏览")));
+});
+console.log("阅读量: " + readCount);
+```
+![imooc-read-count.png](./images/imooc-read-count.png)
+
+#### 小结
+
+我们以 `chrome` 浏览器为例,讲解了如何利用自带的控制台工具抓取关键数据,从页面结构分析入口,一步一个脚印提取有效数据,最终从一条数据变成多条数据,进而实现数据的累加统计.
+
+总体来说,还是比较简单的,并不需要太多的基础知识,但还是稍微总结其中涉及到的 `jQuery` 知识点吧!
+
+- 定位到具体元素: `$("这里是复制的选择器")`
+- 定位到具体元素内容: `$("这里是复制的选择器").text()`
+- 去除字符串首尾空格: `$("这里是复制的选择器").text().trim()`
+- 将字符串按照**空格**分割成字符串数组: `$("这里是复制的选择器").text().trim().split(" ")`
+- 截取字符串指定部分: `ele.substr(0,ele.lastIndexOf("浏览")`
+- 将字符串转化成数字类型: `parseInt(ele.substr(0,ele.lastIndexOf("浏览")));`
+- 变量累加求和: `readCount += parseInt(ele.substr(0,ele.lastIndexOf("浏览")));`
+
+下面是完整的示例:
+
+```js
+//阅读量
+var readCount = 0;
+$.each($("#articlesList div:nth-child(1) > em").text().trim().split(" "),function(idx,ele){
+     readCount += parseInt(ele.substr(0,ele.lastIndexOf("浏览")));
+});
+console.log("阅读量: " + readCount);
+
+//推荐量
+var recommendCount = 0;
+$.each($("#articlesList div:nth-child(2) > em").text().trim().split(" "),function(idx,ele){
+     recommendCount += parseInt(ele.substr(0,ele.lastIndexOf("推荐")));
+});
+console.log("推荐量: " + recommendCount);
+
+//评论量
+var commendCount = 0;
+$.each($("#articlesList div:nth-child(3) > em").text().trim().split(" "),function(idx,ele){
+     commendCount += parseInt(ele.substr(0,ele.lastIndexOf("评论")));
+});
+console.log("评论量: " + commendCount);
+```
+ 
+
+
 
