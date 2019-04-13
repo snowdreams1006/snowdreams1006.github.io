@@ -559,6 +559,7 @@ $.each($("#articlesList div:nth-child(1) > em").text().trim().split(" "),functio
 });
 console.log("阅读量: " + readCount);
 ```
+
 ![imooc-read-count.png](./images/imooc-read-count.png)
 
 #### 小结
