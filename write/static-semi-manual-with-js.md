@@ -575,7 +575,7 @@ console.log("阅读量: " + readCount);
 - 将字符串转化成数字类型: `parseInt(ele.substr(0,ele.lastIndexOf("浏览")));`
 - 变量累加求和: `readCount += parseInt(ele.substr(0,ele.lastIndexOf("浏览")));`
 
-下面是完整的示例:
+完整示例:
 
 ```js
 //阅读量
@@ -599,7 +599,140 @@ $.each($("#articlesList div:nth-child(3) > em").text().trim().split(" "),functio
 });
 console.log("评论量: " + commendCount);
 ```
- 
 
+### 简书
+
+简书的文章数据不一定很规整,比如有的发布文章还没有简书钻,所以阅读量的排列顺序就是不确定的,这一点不像前面介绍的慕课手记,但是简书的关键数据前面是有小图标的,因此我们可以利用图标定位到旁边的数据.
+
+![jianshu-selector-analysis.png](./images/jianshu-selector-analysis.png)
+
+按照前面介绍的步骤,我们仍然定位到阅读量,然而 `#note-44847909 > div > div > a:nth-child(2) > i` 却不能直接使用,因为我们刚刚分析了,简书不能利用顺序定位只能用图标辅助定位.
+
+所以,还是先看看文档结构,尝试着直接定位到全部的**阅读量小图标**.
+
+![jianshu-locate-icon.png](./images/jianshu-locate-icon.png)
+
+经过分析文章结构,我们可以很轻松定位到全部阅读小图标,当然这是一个元素数组,并不是字符串数组哟!
+
+```js
+$("#list-container .ic-list-read")
+```
+
+接下来我们看一下能否正确定位到每一个小图标,进而定位到小图标左侧的阅读量.
+
+![jianshu-each-icon.png](./images/jianshu-each-icon.png)
+
+现在我们已经能够定位到全部的阅读量小图标,现在思考如何定位到旁边的真正阅读量呢?
+
+```html
+<div class="meta">
+    <span class="jsd-meta">
+      <i class="iconfont ic-paid1"></i> 0.2
+    </span>
+    <a target="_blank" href="/p/3441940065b5">
+        <i class="iconfont ic-list-read"></i> 2
+    </a>        
+    <a target="_blank" href="/p/3441940065b5#comments">
+      <i class="iconfont ic-list-comments"></i> 0
+    </a>      
+    <span><i class="iconfont ic-list-like"></i> 1</span>
+    <span class="time" data-shared-at="2019-04-12T10:39:57+08:00">昨天 10:39</span>
+</div>
+```
+
+分析文章结构,我们发现阅读量是小图标的父节点的内容,这一下就简单了,我们顺藤摸瓜定位到父节点自然就能定位到阅读量了!
+
+```js
+$("#list-container .ic-list-read").each(function(idx,ele){
+    console.log($(ele).parent().text().trim());
+});
+```
+
+![jianshu-locate-read.png](./images/jianshu-locate-read.png)
+
+现在既然已经能够定位到阅读量,那么首先累加求和就很简单了.
+
+```js
+//阅读量
+var readCount = 0;
+$("#list-container .ic-list-read").each(function(idx,ele){
+    readCount += parseInt($(ele).parent().text().trim());
+});
+console.log("阅读量: " + readCount);
+```
+
+![jianshu-read-count-preview.png](./images/jianshu-read-count-preview.png)
+
+#### 小结
+
+首先分析文章基本结构发现,简书的阅读量需要定位到阅读量小图标,进而定位到父节点,然后父节点的内容才是真正的阅读量.
+
+定位到真正的阅读量后,一切问题迎刃而解,总结一下新增 `jQuery` 知识点.
+
+定位到当前节点的父节点: `$(ele).parent()`
+
+完整示例:
+
+```js
+//阅读量
+var readCount = 0;
+$("#list-container .ic-list-read").each(function(idx,ele){
+    readCount += parseInt($(ele).parent().text().trim());
+});
+console.log("阅读量: " + readCount);
+
+//评论量
+var commendCount = 0;
+$("#list-container .ic-list-comments").each(function(idx,ele){
+    commendCount += parseInt($(ele).parent().text().trim());
+});
+console.log("评论量: " + commendCount);
+
+//喜欢量
+var recommendCount = 0;
+$("#list-container .ic-list-like").each(function(idx,ele){
+    recommendCount += parseInt($(ele).parent().text().trim());
+});
+console.log("喜欢量: " + recommendCount);
+```
+
+### 博客园
+
+博客园的文章列表比较复古,传统的 `table` 布局,是这几个平台中最简单的,基本上不同怎么介绍.
+
+![cnblogs-selector-analysis.png](./images/cnblogs-selector-analysis.png)
+
+复制到阅读量选择器: `#post-row-10694598 > td:nth-child(4)` 此时再结合文章结构,因此我们可以得到全部文章的阅读量选择器.
+
+```js
+$("#post_list td:nth-child(4)")
+```
+
+接下来需要遍历数组,看看能否抓取到当前页面全部文章的阅读量.
+
+```js
+$("#post_list td:nth-child(4)").each(function(idx,ele){
+    console.log($(ele).text().trim());
+});
+```
+
+![cnblogs-each-read.png](./images/cnblogs-each-read.png)
+
+成功抓取到阅读量,现在开始累加当前页面全部文章的阅读量.
+
+```js
+//阅读数
+var readCount = 0;
+$("#post_list td:nth-child(4)").each(function(idx,ele){
+    readCount += parseInt($(ele).text().trim());
+});
+console.log("阅读数: " + readCount);
+```
+
+![cnblogs-read-count-preview.png](./images/cnblogs-read-count-preview.png)
+
+#### 小结
+
+中规中矩的传统 `table` 布局,只需要顺序定位到具体的元素即可,需要注意的是,博客园文章页面采用了分页,如果需要统计全部文章的阅读量,需要将每页的阅读量手动累加计算.
 
 
