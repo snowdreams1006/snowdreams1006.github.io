@@ -735,4 +735,105 @@ console.log("阅读数: " + readCount);
 
 中规中矩的传统 `table` 布局,只需要顺序定位到具体的元素即可,需要注意的是,博客园文章页面采用了分页,如果需要统计全部文章的阅读量,需要将每页的阅读量手动累加计算.
 
+完整示例:
 
+```js
+//评论数
+var commendCount = 0;
+$("#post_list td:nth-child(3)").each(function(idx,ele){
+    commendCount += parseInt($(ele).text().trim());
+});
+console.log("评论数: " + commendCount);
+
+//阅读数
+var readCount = 0;
+$("#post_list td:nth-child(4)").each(function(idx,ele){
+    readCount += parseInt($(ele).text().trim());
+});
+console.log("阅读数: " + readCount);
+```
+
+### 腾讯云社区
+
+大致分析腾讯云社区的文章结构,基本上和简书结构差不多,既可以像简书那种采用图标定位方式,也可以像慕课网和博客园那种直接顺序定位.
+
+为了较为精准的定位,现在采用图标定位方式来获取阅读量.
+
+![cloud-tencent-selector-analysis.png](./images/cloud-tencent-selector-analysis.png)
+
+```
+#react-root > div:nth-child(1) > div.J-body.com-body.with-bg > section > div > section > div > div.com-log-list > section:nth-child(1) > section > div > div > span > span
+```
+
+既然要根据图标定位,我们需要分析图标和阅读量的关系.
+
+```html
+<div class="com-operations com-article-panel-operations">
+    <span class="com-opt-link">
+        <i class="com-i-view"></i>
+        <span class="text">76</span>
+    </span>
+    <a href="javascript:;" class="com-opt-link">
+        <i class="com-i-like"></i>
+        <span class="text">3</span>
+    </a>
+</div>
+```
+
+因此,我们需要做如下改造才能定位到与阅读量.
+
+```js
+$("#react-root .com-i-view").each(function(idx,ele){
+    console.log($(ele).next().text().trim());
+});
+```
+
+![cloud-tencent-each-read.png](./images/cloud-tencent-each-read.png)
+
+定位到阅读量,接下来就是简单的数据累加求和了.
+
+```js
+//阅读量
+var readCount = 0;
+$("#react-root .com-i-view").each(function(idx,ele){
+    readCount += parseInt($(ele).next().text().trim());
+});
+console.log("阅读量: " + readCount);
+```
+
+![cloud-tencent-read-count-preview.png](./images/cloud-tencent-read-count-preview.png)
+
+#### 小结
+
+腾讯云社区和简书一样,采用的分页叠加模式,因此需要统计全部文章的话,只需要一直滚动直到加载出全部文章即可.
+
+总结一下涉及到的新增 `jQuery` 知识点: 
+
+获取当前节点的下一个节点: `$(ele).next()`
+
+完整示例:
+
+```js
+//阅读量
+var readCount = 0;
+$("#react-root .com-i-view").each(function(idx,ele){
+    readCount += parseInt($(ele).next().text().trim());
+});
+console.log("阅读量: " + readCount);
+
+//点赞量
+var recommendCount = 0;
+$("#react-root .com-i-like").each(function(idx,ele){
+    recommendCount += parseInt($(ele).next().text().trim());
+});
+console.log("点赞量: " + recommendCount);
+```
+
+## 小结
+
+本文通过 `jQuery` 方式直接抓取文章数据,简单方便,学习成本低,能够快速上手.
+
+慕课网和博客园的文章列表存在分页,如果需要统计全部文章浏览量,需要将每一页的文章累加,直到最后一页.
+简书和腾讯云社区的文章列表虽然也有分支,但会自动累加,所以统计全部文章时只需要先等全部文章加载完毕,再利用 `js` 脚本一次性统计即可.
+
+好了,本次分享到此结束,如果你觉得本文对你有所帮助,欢迎分享让更多人看到哦,对了,上一篇文章也是解决统计问题的,不过使用的是 `java` 读取 `csv` 文件方式,如果有兴趣,也可以[看一看](https://snowdreams1006.github.io/static-semi-manual-with-csv.html).
