@@ -27,7 +27,8 @@
     "favicon-plus",
     "donate",
     "advanced-emoji",
-    "tbfed-pagefooter"
+    "tbfed-pagefooter",
+    "theme-api"
   ],
   "pluginsConfig": {
     "github": {
@@ -79,6 +80,9 @@
       "copyright":"&copy snowdreams1006",
       "modify_label": "文件修订时间：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
-    }
+    },
+    "theme-api": {
+            "theme": "dark"
+        }
   }
 }
