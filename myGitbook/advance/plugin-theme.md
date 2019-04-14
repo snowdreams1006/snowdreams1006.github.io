@@ -131,3 +131,99 @@ This will appear for both JavaScript and Go.
 ### theme-faq 插件
 
 > [插件地址](https://plugins.gitbook.com/plugin/theme-faq): https://plugins.gitbook.com/plugin/theme-faq
+
+`theme-faq` 可以帮助我们构建问答中心,预设好常见问题以及相应答案模式,同时为了方便搜索到问题或答案,一般需要搜索插件的配合.
+
+示例:
+
+```json
+{
+    "plugins": [
+        "theme-faq",
+        "-fontsettings",
+        "-sharing",
+        "-search", 
+        "search-plus"
+    ]
+}
+```
+
+> 帮助中心没有工具栏,因此涉及到工具类的插件一律失效或主动移除,同时默认搜索插件也会失效.
+
+语法:
+
+- 增加文章间的关联
+
+```
+---
+related:
+    - some/other/page.md
+    - another_related_article.md
+ 
+---
+ 
+Content of my article!
+```
+
+> 在当前页面底部显示延伸阅读,支持 `yaml` 语法关联到其他页面.
+
+- 增加头部 `logo`
+
+```
+{% extends template.self %}
+ 
+{% block faq_header_brand %}
+<img src="https://mywebsite.com/logo.png" height="30" />
+{% endblock %}
+```
+
+> 新建 `_layouts/website/page.html` 文件,用于扩展当前主题插件来增加自定义 `logo`.
+
+- 增加导航栏链接
+
+```
+{% extends template.self %}
+ 
+{% block faq_menu %}
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="#">Contact us</a></li>
+    <li><a href="#">Return to SuperWebsite</a></li>
+</ul>
+{% endblock %}
+```
+
+> 新建 `_layouts/website/page.html` 文件,用于扩展当前主题插件来增加自定义导航栏链接.
+
+示例:
+
+```html
+{% extends template.self %}
+ 
+{% block faq_header_brand %}
+<img src="https://upload.jianshu.io/users/upload_avatars/16648241/57aebe62-b5b5-491a-a9fd-f994d5be7dda.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" />
+{% endblock %}
+
+{% extends template.self %}
+ 
+{% block faq_menu %}
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="https://snowdreams1006.github.io/other/me.html">联系我</a></li>
+    <li><a href="https://snowdreams1006.github.io/">返回主页</a></li>
+</ul>
+{% endblock %}
+```
+
+> 新建 `_layouts/website/page.html` 文件,增加自定义 `logo` 和导航栏链接.
+
+效果:
+
+![gitbook-theme-faq.png](./images/gitbook-theme-faq.png)
+
+## 小结
+
+本节主要讲解了常用的三种文档模式,其中 `default` 主题插件,适合一般的博客类网站或静态网站,`api` 主题插件适合接口文档的编写,`faq` 主题插件则适合帮助中心.
+
+三种主题插件分别对应不同的应用场景,默认情况下使用的是 `default` 主题插件,平时介绍的大多数功能插件也大多适合这种主题,另外两种主题可能就不能很好兼容第三方插件,需要亲身体验.
+
+
+
