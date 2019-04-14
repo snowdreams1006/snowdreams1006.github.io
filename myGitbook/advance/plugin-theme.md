@@ -118,10 +118,6 @@ This will appear for both JavaScript and Go.
 
 效果:
 
-![gitbook-theme-api.png](./images/gitbook-theme-api.png)
-
-> 如果仅仅从普通文章模式切换到 `api` 文档模式,并没有太大变换.
-
 ![gitbook-theme-api.gif](./images/gitbook-theme-api.gif)
 
 > 添加 `api` 相关方法后的文档效果,正常会两列显示并在右上角增加语言切换工具.
