@@ -22,7 +22,17 @@
 
 > 项目源码 [snowdreams1006.github.io](https://github.com/snowdreams1006/snowdreams1006.github.io),项目官网 [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/)
 
+[![github.io.snowdreams1006.png](./images/github.io.snowdreams1006.png)](https://snowdreams1006.github.io/)
+
+> 点击图片会自动跳转到 [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/)
+
 ## 第三方平台
+
+这里列举了常逛的第三方平台,将从新手视觉看待各家平台特点,试图分析各家平台特点从而决定是否适合自身.
+
+一家之言,仅供各位参考.
+
+> 排名不分顺序,只是笔者文章依次同步的顺序而已.
 
 ### 1. CSDN [https://www.csdn.net/](https://www.csdn.net/)
 
