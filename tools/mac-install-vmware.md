@@ -25,6 +25,16 @@
 
 换言之,只要有一台真实的物理机,通过软件我们就可以模拟出任意操作系统,这种软件就是我们接下来要介绍的 `vmware` .
 
+## 虚拟机的使用场景
+
+作为软件开发者,尽管很多语言支持跨平台运行,但是为了检验真实效果,我们需要运行到不同的环境中,比如`windows` 和 `linux` 系统的差异就不是一星半点!
+
+或者为了教程的完整性,需要在各个平台测试运行后才能放心讲解某个知识点,不然别人按照教程发现运行不了,既浪费了别人的时间,又惹得人家不高兴,好心办坏事,大家都不好受.
+
+所以,多个系统是刚需,如果真实环境中能够提供的话,那么自然不需要虚拟机.
+
+只有实际情况下,不能提供真实的多种操作系统的情况下,我们才使用虚拟机技术来模拟不同的操作系统.
+
 ## 为什么是 `vmware`
 
 通过软件模拟实现虚拟机目标,关键在于软件能力如何,所以选择哪一款软件直接决定了我们的虚拟机性能如何.
@@ -77,18 +87,79 @@
 
 双击安装 `VMware-Fusion-11.0.3-12992109.dmg` 软件,接下来**一路允许**按照提示操作即可.
 
+双击安装,因为软件源不是从 `App Store` 下载的,所以苹果默认策略不允许安装第三方来源.
+
+既然询问是否打开软件,当然打开,不然怎么安装呢?
+
+![vm-install-dbclick.png](./images/vm-install-dbclick.png)
+
+然而,还是太年轻,尽管刚才已经选择打开软件,然而苹果怕是担心我们不小心安装了有害应用吧?还是需要再问我们一遍,你确定要安装吗?我确定!我怎么知道是你本人?你输入管理员密码试试,密码正确我就让你安装.
+
+![vm-install-open-granted.png](./images/vm-install-open-granted.png)
+
+千呼万呼使出来,你终于相信我是我了,安装进行中...
+
+![vm-install-installing.png](./images/vm-install-installing.png)
+
+安装到一定程度时,会让我们输入产品密钥进行激活,否则只能试用30天,到期会再次提醒输入密钥,接下来我们来获取序列号.
+
+![vm-install-waitfor-activecode.png](./images/vm-install-waitfor-activecode.png)
+
 ### 打开 `KeyMaker` 软件
 
 双击运行 `KeyMaker.app` ,弹出一系列序列号,随意选择某一行的序列号复制到上一步安装`VMware-Fusion` 的产品密钥并验证.
+
+```
+Some good serial numbers..
+
+KGLWE-VA5KZ-D1QHT-2R51Q-ZKQVV
+VTZMD-ZYTKX-D1ZCR-C6QCZ-QZZEV
+GQZX9-ZFX3T-Z1Z6Y-AFPCW-ZZ5GZ
+THQQR-00TZQ-81L0R-10LEG-G2ZTZ
+P1VXR-GFNGC-R1JJR-JXG3T-PQ7XT
+ZXYXY-VMTKZ-Y1YCX-7MQ9X-MQQ6V
+
+
+Here another one
+GK9QC-9KEM4-V1VAQ-P8JEP-MK77V
+Greets to Corby
+```
+
+随便复制一个序列号,继续正常安装.
+
+![vm-install-activecode.png](./images/vm-install-activecode.png)
+
+输入产品密钥后基本上就是 `vmware` 用户,除非你不同意它的产品协议,当然同意了!
+
+![vm-install-item-accepted.png](./images/vm-install-item-accepted.png)
+
+本以为安装到此结束,没想到还想要获取辅助功能权限,没办法,既然你想要,那我就给你啊,保不齐缺胳膊少腿的.
+
+![vm-install-accessible-asked.png](./images/vm-install-accessible-asked.png)
+
+和安装相同,不是你选择允许苹果就允许,仍然需要你提供管理员密码以此确保主观操作意愿.
+
+![vm-install-accessible-will-grant.png](./images/vm-install-accessible-will-grant.png)
+
+授予辅助功能权限,并再次锁定该项操作,可以与想的是,以后有应用想要申请辅助功能,必须经过管理员同意才可以,为了安全需要这么多步骤,好吧.
+
+![vm-install-accessible-granted.png](./images/vm-install-accessible-granted.png)
+
+我只想安安静静使用 `vmware` 产品,不希望使用数据被上传收集,当然也有点小担心,毕竟也不是正儿八经的用户,所以才不加入体验计划呢!
+
+![vm-install-complete.png](./images/vm-install-complete.png)
 
 ### 验证 `vmware` 软件
 
 在访达或启动台中找到 `VMware-Fusion` 软件单击启动,测试能否正常运行软件.
 
+![vm-install-os.png](./images/vm-install-os.png)
 
 ## 小结
 
-本节主要介绍了什么是虚拟机,虚拟机的适用场景以及如何安装虚拟机,下一节我们将介绍如何给虚拟机加点料,让虚拟机派上练武之地!
+本节主要介绍了什么是虚拟机,虚拟机的使用场景以及如何安装虚拟机,下一节我们将介绍如何给虚拟机加点料,让虚拟机派上练武之地!
+
+![vm-overview-preview.png](./images/vm-overview-preview.png)
 
 
 
