@@ -55,7 +55,7 @@
     * [lambda表达式](java8/lambda.md)
     * [函数式接口](java8/functionInterface.md)
 * [工具资源](tools/README.md)
-    * [给mac装上虚拟机](tools/mac-install-vmware.md)
+    * [给mac装个虚拟机](tools/mac-install-vmware.md)
     * [给虚拟机装个windows](tools/vmware-install-windows.md)
     * [给虚拟机装个centos](tools/vmware-install-centos.md)
     * [给虚拟机装个ubantu](tools/vmware-install-ubuntu.md)
