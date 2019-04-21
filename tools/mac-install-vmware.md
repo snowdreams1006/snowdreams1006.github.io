@@ -75,6 +75,10 @@
 
 ### 下载软件以及序列号生成工具
 
+![vm-qrcode-download.jpeg](./images/vm-qrcode-download.jpeg)
+
+> 链接: https://pan.baidu.com/s/1D0LL_muZ_YEbmgS4A6l3pw 提取码: ti8v 复制这段内容后打开百度网盘手机App，操作更方便哦
+
 - `VMware-Fusion-11.0.3-12992109.dmg` [必选] 安装软件
 
 > `vmware` 软件是收费软件,有一段时间的试用期,这里采用序列号激活方式,有条件的话,建议支持下正版.
