@@ -2,7 +2,7 @@
 
 * [简介](README.md)
 
-## 学习笔记
+## 入门教程
 * [markdown 快速入门](markdown/README.md)
     * [掘金入门指南](markdown/juejin.md)
     * [慕课网语法演示](markdown/imooc.md)
@@ -54,6 +54,8 @@
 * [java8新特性](java8/README.md)
     * [lambda表达式](java8/lambda.md)
     * [函数式接口](java8/functionInterface.md)
+
+## 学习笔记
 * [工具资源](tools/README.md)
     * [给mac装个虚拟机](tools/mac-install-vmware.md)
     * [给虚拟机装个windows](tools/vmware-install-windows.md)
