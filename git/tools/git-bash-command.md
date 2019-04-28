@@ -21,7 +21,9 @@
 所以,"我"是计算机的用户,哪天警察检查身份证时,需要自报家门,如果你都不知道你的名字那岂不是闹笑话了？
 
 ```bash
+snowdreams1006@home MINGW64 ~
 $ whoami
+snowdreams1006
 ```
 
 ## 哲学第二问: 我在哪
@@ -38,7 +40,9 @@ $ whoami
 试想一下,如果没有心灵的港湾,灵魂和身体该如何安放?如果没有家目录,数据默认存放到哪里去？多个用户之间的数据怎么保证相对隔离？
 
 ```bash
+snowdreams1006@home MINGW64 ~
 $ echo ~
+/c/Users/snowdreams1006
 ```
 
 ## 哲学第三问: 我要干什么
@@ -66,7 +70,8 @@ $ echo ~
 立下明确目标,坚定不移前往目的地,工作目录已创建,第一步已经迈出去,接下来准备前往新创建的工作目录,搭建好我们自己的高楼大厦.
 
 ```bash
-$ mkdir /f/private/git-bash-demo
+snowdreams1006@home MINGW64 ~
+$ mkdir /g/workpace/git-bash-demo
 ```
 
 ### 飘洋过海来看你: 切换目录
@@ -78,7 +83,8 @@ $ mkdir /f/private/git-bash-demo
 现实世界中出发到工作地点,可以坐高铁,坐轮船,坐飞机等多种交通方式任你挑选,在计算机世界中前往工作目录就很简单,只要明确知道工作目录,一条命令瞬间直达！
 
 ```bash
-$ cd /f/private/git-bash-demo
+snowdreams1006@home MINGW64 ~
+$ cd /g/workpace/git-bash-demo
 ```
 
 ### 惊鸿一瞥初相见: 打印目录
@@ -90,7 +96,9 @@ $ cd /f/private/git-bash-demo
 非家目录的其他目录都是工作目录,确认工作目录是目标目录后就可以正式投入紧张有序的工作生活中了,准备好了吗？
 
 ```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 $ pwd
+/g/workpace/git-bash-demo
 ```
 
 ### 回头四顾心茫然: 列出文件
@@ -102,6 +110,7 @@ $ pwd
 空荡荡的房子提醒着自己,万丈高楼平地起,创业道路孤独而艰辛！
 
 ```
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 $ ls
 ```
 
@@ -112,6 +121,7 @@ $ ls
 身体是革命的本钱,即将开始废寝忘食的创业之旅,在高强度的工作来临之前,先检查一下保温杯在不在,在的话,洗一洗,不在的话,先去买一个再洗一洗.
 
 ```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 $ touch cup.txt
 ```
 
@@ -122,6 +132,7 @@ $ touch cup.txt
 保温杯中泡枸杞,第一步先往保温杯中加入枸杞,如果有其他东西先倾倒然后再加入枸杞,否则直接加入枸杞.
 
 ```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 $ echo "medlar" > cup.txt
 ```
 
@@ -134,6 +145,7 @@ $ echo "medlar" > cup.txt
 保温杯中已有枸杞,第二步开始倒水准备泡枸杞茶,枸杞自然不能倾倒出去,不然就叫做白开水不能叫做枸杞茶了.
 
 ```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 $ echo "water" >> cup.txt
 ```
 
@@ -146,7 +158,10 @@ $ echo "water" >> cup.txt
 要看到文件的全部内容正如要看到枸杞茶整体一样,后续操作视观察结果而定.
 
 ```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 $ cat cup.txt
+medlar
+water
 ```
 
 ### 枸杞茶要再调整： 追加并查看文件
@@ -154,9 +169,16 @@ $ cat cup.txt
 枸杞差不多,浓度有点大,需要再加一点水,为了控制加入量,还要再品一下枸杞茶.
 
 ```
+# 追加文件内容
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 $ echo "more water" >> cup.txt
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 
+# 查看文件内容
 $ cat cup.txt
+medlar
+water
+more water
 ```
 
 ### 三更灯火五更鸡: 编辑文件
@@ -189,4 +211,14 @@ $ vim goal.txt
 - `ctrl + u` : 上翻半页.
 - `/<string>` : 查找<string>字符串
 
+
+```markdown
+## learning markdown
+
+## learning git
+
+## learning gitbook
+
+## sharing java8
+```
 
