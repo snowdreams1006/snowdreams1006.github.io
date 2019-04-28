@@ -34,6 +34,7 @@
     * [忽略文件](git/custom/ignore.md)
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
+    * [Git Bash 常用命令](git/tools/git-bash-command.md)
     * [知识速查](git/summary/common.md)
     * [备忘录[译]](git/summary/cheatsheet-translation.md)
     * [常见问题](git/issue/README.md)
