@@ -211,8 +211,11 @@ $ vim goal.txt
 - `ctrl + u` : 上翻半页.
 - `/<string>` : 查找<string>字符串
 
+编辑后的目标,学习 `markdown` ,学习 `git` ,学习 `gitbook` ,分享 `java` 知识等等,目标远大,撸起袖子加油干吧！
 
-```markdown
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ cat goal.txt
 ## learning markdown
 
 ## learning git
@@ -222,3 +225,82 @@ $ vim goal.txt
 ## sharing java8
 ```
 
+### 撸起袖子加油干: 查看开头
+
+> `head [OPTION] [FILE]` : `head` 翻译为"头",即打印文件前十行内容.
+
+我们立下的目标暂时只有四行,为了掩饰效果,临时录入更多无意义的计划,这部分并不属于我们的目标.
+
+```bash
+echo "万丈高楼平地起: 创建目录" >> goal.txt
+echo "飘洋过海来看你: 切换目录" >> goal.txt
+echo "惊鸿一瞥初相见: 打印目录" >> goal.txt
+echo "回头四顾心茫然: 列出文件" >> goal.txt
+echo "保温杯中泡枸杞: 创建文件" >> goal.txt
+echo "枸杞茶中加枸杞: 覆盖输入" >> goal.txt
+echo "枸杞茶中倒热水: 追加输入" >> goal.txt
+echo "枸杞茶要慢慢品: 查看文件" >> goal.txt
+```
+
+现在 `goal.txt` 文件不止十行,而是十六行数据,足够我们演示效果.
+
+在泡枸杞茶最后一步中,我们需要品茶以此确定枸杞和热水搭配是否合理,使用 `cat` 命令帮我们查看文件全部内容,如果我们不需要查看全部,只需要查看前十条的话,就需要另外的命令.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ cat goal.txt
+## learning markdown
+
+## learning git
+
+## learning gitbook
+
+## sharing java8
+
+万丈高楼平地起: 创建目录
+飘洋过海来看你: 切换目录
+惊鸿一瞥初相见: 打印目录
+回头四顾心茫然: 列出文件
+保温杯中泡枸杞: 创建文件
+枸杞茶中加枸杞: 覆盖输入
+枸杞茶中倒热水: 追加输入
+枸杞茶要慢慢品: 查看文件
+```
+
+查看目标清单中的前十条记录,而不显示全部记录.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ head goal.txt
+## learning markdown
+
+## learning git
+
+## learning gitbook
+
+## sharing java8
+
+万丈高楼平地起: 创建目录
+飘洋过海来看你: 切换目录
+```
+
+### 不思进取后十名: 查看结尾
+
+> `tail [OPTION] [FILE]` : `tail` 翻译为"尾",即打印文件后十行内容.
+
+如果查看文件是目标文件 `goal.txt` 还好,目标再小也不应被歧视,如果是成绩文件或者绩效文件,难免会被比较,打上"不思进取"的标签.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ tail goal.txt
+## sharing java8
+
+万丈高楼平地起: 创建目录
+飘洋过海来看你: 切换目录
+惊鸿一瞥初相见: 打印目录
+回头四顾心茫然: 列出文件
+保温杯中泡枸杞: 创建文件
+枸杞茶中加枸杞: 覆盖输入
+枸杞茶中倒热水: 追加输入
+枸杞茶要慢慢品: 查看文件
+```
