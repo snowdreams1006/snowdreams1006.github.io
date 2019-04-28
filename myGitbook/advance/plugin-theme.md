@@ -85,36 +85,16 @@
 
 - 方法区
 
-<pre>
-{% method %}
-    方法区: 接口说明
-{% endmethod %}
-</pre>
+![gitbook-theme-api-method.png](./images/gitbook-theme-api-method.png)
 
 - 语法区
 
-<pre>
-{% sample lang="特定语言" %}
+![gitbook-theme-api-grammar.png](./images/gitbook-theme-api-grammar.png)
 
-{% common %}
-</pre>
 
 示例:
 
-<pre>
-% method -%}
-## Simple method
-
-{% sample lang="js" -%}
-This text will only appear for JavaScript.
-
-{% sample lang="go" -%}
-This text will only appear for Go.
-
-{% common -%}
-This will appear for both JavaScript and Go.
-{% endmethod %}
-</pre>
+![gitbook-theme-api-example.png](./images/gitbook-theme-api-example.png)
 
 
 效果:
@@ -166,51 +146,20 @@ Content of my article!
 
 - 增加头部 `logo`
 
-<pre>
-{% extends template.self %}
- 
-{% block faq_header_brand %}
-<img src="https://mywebsite.com/logo.png" height="30" />
-{% endblock %}
-</pre>
+![gitbook-theme-faq-grammar-header.png](./images/gitbook-theme-faq-grammar-header.png)
 
 
 > 新建 `_layouts/website/page.html` 文件,用于扩展当前主题插件来增加自定义 `logo`.
 
 - 增加导航栏链接
 
-<pre>
-{% extends template.self %}
- 
-{% block faq_menu %}
-<ul class="nav navbar-nav navbar-right">
-    <li><a href="#">Contact us</a></li>
-    <li><a href="#">Return to SuperWebsite</a></li>
-</ul>
-{% endblock %}
-</pre>
-
+![gitbook-theme-faq-grammar-link.png](./images/gitbook-theme-faq-grammar-link.png)
 
 > 新建 `_layouts/website/page.html` 文件,用于扩展当前主题插件来增加自定义导航栏链接.
 
 示例:
 
-<pre>
-{% extends template.self %}
- 
-{% block faq_header_brand %}
-<img src="https://upload.jianshu.io/users/upload_avatars/16648241/57aebe62-b5b5-491a-a9fd-f994d5be7dda.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" />
-{% endblock %}
-
-{% extends template.self %}
- 
-{% block faq_menu %}
-<ul class="nav navbar-nav navbar-right">
-    <li><a href="https://snowdreams1006.github.io/other/me.html">联系我</a></li>
-    <li><a href="https://snowdreams1006.github.io/">返回主页</a></li>
-</ul>
-{% endblock %}    
-</pre>
+![gitbook-theme-faq-example.png](./images/gitbook-theme-faq-example.png)
 
 > 新建 `_layouts/website/page.html` 文件,增加自定义 `logo` 和导航栏链接.
 
