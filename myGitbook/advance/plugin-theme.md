@@ -85,24 +85,24 @@
 
 - 方法区
 
-```
+<pre>
 {% method %}
     方法区: 接口说明
 {% endmethod %}
-```
+</pre>
 
 - 语法区
 
-```
+<pre>
 {% sample lang="特定语言" %}
 
 {% common %}
-```
+</pre>
 
 示例:
 
-```
-{% method -%}
+<pre>
+% method -%}
 ## Simple method
 
 {% sample lang="js" -%}
@@ -114,7 +114,8 @@ This text will only appear for Go.
 {% common -%}
 This will appear for both JavaScript and Go.
 {% endmethod %}
-```
+</pre>
+
 
 效果:
 
@@ -165,19 +166,20 @@ Content of my article!
 
 - 增加头部 `logo`
 
-```
+<pre>
 {% extends template.self %}
  
 {% block faq_header_brand %}
 <img src="https://mywebsite.com/logo.png" height="30" />
 {% endblock %}
-```
+</pre>
+
 
 > 新建 `_layouts/website/page.html` 文件,用于扩展当前主题插件来增加自定义 `logo`.
 
 - 增加导航栏链接
 
-```
+<pre>
 {% extends template.self %}
  
 {% block faq_menu %}
@@ -186,13 +188,14 @@ Content of my article!
     <li><a href="#">Return to SuperWebsite</a></li>
 </ul>
 {% endblock %}
-```
+</pre>
+
 
 > 新建 `_layouts/website/page.html` 文件,用于扩展当前主题插件来增加自定义导航栏链接.
 
 示例:
 
-```html
+<pre>
 {% extends template.self %}
  
 {% block faq_header_brand %}
@@ -206,8 +209,8 @@ Content of my article!
     <li><a href="https://snowdreams1006.github.io/other/me.html">联系我</a></li>
     <li><a href="https://snowdreams1006.github.io/">返回主页</a></li>
 </ul>
-{% endblock %}
-```
+{% endblock %}    
+</pre>
 
 > 新建 `_layouts/website/page.html` 文件,增加自定义 `logo` 和导航栏链接.
 
@@ -220,6 +223,3 @@ Content of my article!
 本节主要讲解了常用的三种文档模式,其中 `default` 主题插件,适合一般的博客类网站或静态网站,`api` 主题插件适合接口文档的编写,`faq` 主题插件则适合帮助中心.
 
 三种主题插件分别对应不同的应用场景,默认情况下使用的是 `default` 主题插件,平时介绍的大多数功能插件也大多适合这种主题,另外两种主题可能就不能很好兼容第三方插件,需要亲身体验.
-
-
-
