@@ -304,3 +304,83 @@ $ tail goal.txt
 枸杞茶中倒热水: 追加输入
 枸杞茶要慢慢品: 查看文件
 ```
+
+### 优雅的写作格式: markdown 格式
+
+> `markdown` 是一种轻量型的文本标记语言,是无文本 `txt` 的增强版，是超文本 `html` 的精简版,是二进制 `word` 的替代版,带给你全新的写作体验.
+
+刚刚立下的目标文件的第一条就是学习 `markdown` ,那什么是 `mardown` 以及我们为什么要学习 `markdown` 呢？
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+# 前一条记录: -n 1，前五条记录: -n 5
+$ head -n 1 goal.txt
+## learning markdown
+```
+
+`markdown` 是一种标记语言,常用于书写文章,小巧轻量,不必记住令人眼花缭乱的按钮摆放位置,也不像记事本那种毫无格式,只需记住有限几个特殊字符就能输出漂亮美观的文件效果！
+
+比如当前文章的书写格式就是 `markdown` 语言,这就是基本的展示效果,是不是很强大呢?
+
+和其他文本文档一样, `markdown` 文件也有自己的后缀名 `.md`,比如该文章的文件名 `git-bash-command.md`.
+
+迫不及待想要学习 `markdown` 了呢?
+
+别急,学习需要规划,我们再专门新建目录用于存放 `markdown` 学习笔记.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+# 创建目录: 参考"万丈高楼平地起"章节
+$ mkdir markdown
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+# 列出文件: 参考"回头四顾心茫然"章节
+$ ls
+cup.txt  goal.txt  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+# 切换目录: 参考"飘洋过海来看你"章节
+$ cd markdown
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/markdown
+# 打印目录: 参考"惊鸿一瞥初相见"章节
+$ pwd
+/g/workpace/git-bash-demo/markdown
+```
+
+先学习下 `markdown` 中标题和列表如何书写,想要了解更多请参考我专门介绍 `makdown` 的[系列文章](https://snowdreams1006.github.io/markdown/).
+
+- 标题
+
+> 语法格式: `#` + `空格` + `文本` ,`#` 表示一级标题,`##` 表示二级标题,`###` 表示三级标题,以此类推,最多支持六级标题.
+
+示例:
+
+```markdown
+# 标题1
+## 标题2
+```
+
+* 有序列表
+
+> 语法格式：`数字` + `.` + `空格` + `文本`
+
+示例:
+
+```
+1. 有序列表1 
+2. 有序列表2 
+3. 有序列表3 
+```
+
+- 无序列表
+
+> 语法格式：'`- 或 * 或 +`' + `空格` + `文本`
+
+示例:
+
+```
+- 无序列表1 
+* 无序列表2 
++ 无序列表3 
+```
