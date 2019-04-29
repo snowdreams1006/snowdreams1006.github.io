@@ -422,3 +422,52 @@ $ cat markdown.md
 `typora` [编辑器](https://typora.io/),支持多平台,	`windows` ,`mac` 和 `linux`,别具一格的首页.
 
 ![git-markdown-typora.gif](../images/git-markdown-typora.gif)
+
+...
+
+接着继续学习 `markdown` 的基本知识,介绍下如何显示图片以及超链接。
+
+- 链接
+
+> 语法格式：`[显示文本]` + `(链接地址)`
+
+示例:
+
+```
+[https://snowdreams1006.github.io](https://snowdreams1006.github.io/)
+```
+
+- 图片
+
+> 语法格式：`!` + `[图片标题]` + `(图片地址)`
+
+示例:
+
+```
+![雪之梦技术驿站的头像](https://upload.jianshu.io/users/upload_avatars/16648241/57aebe62-b5b5-491a-a9fd-f994d5be7dda.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240)
+```
+
+点滴积累也是进步,记得要把这次的学习笔记保存到我们之前的 `markdown.md` 文件中哟！
+
+![git-bash-tail-markdown.png](../images/git-bash-tail-markdown.png)
+
+正所谓"温故而知新可以为师矣",笔记不仅要写还要经常看,于是在刚刚的笔记上做些修改添加自己的理解.
+
+![git-bash-tail-markdown-learn.png](../images/git-bash-tail-markdown-learn.png)
+
+果然是一次愉快的学习体验,真的是活学活用啊,孺子可教也！
+
+隔壁小伙伴听说你最近在学 `markdown` ，想借你**老师**留下的笔记看看,于是你好心找一下课堂笔记打算发给他.
+
+等一等,对方需要的是课件资料并不包含你自己理解那部分笔记哟,怎么办?
+
+那就以当前笔记为基础再复制一份笔记,然后删掉自己理解的那部分笔记呗！
+
+- 请给我拷贝课件: 复制文件
+
+> `cp [OPTION] [-T] SOURCE DEST` : `copy` 的缩写,即复制文件.
+
+![git-bash-cp.png](../images/git-bash-cp.png)
+
+既然对方明确要求课件而不是自己的笔记,那把自己的那部分内容手动清除掉呗!
+
