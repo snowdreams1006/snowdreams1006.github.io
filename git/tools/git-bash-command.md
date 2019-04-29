@@ -473,6 +473,10 @@ $ cat markdown.md
 
 ## 常用命令
 
+`git bash` 命令行终端内置命令比 `windows` 默认的 `cmd` 命令行窗口强大多了,除了支持一般的命令外,还支持简单的 `linux` 命令.
+
+如果仅仅操作文本,`git bash`足以满足日常文增删该查需求,如果追求类 `linux` 命令行体验,推荐下载[babun](https://babun.github.io).
+
 - 常用内置命令
 
 ```bash
