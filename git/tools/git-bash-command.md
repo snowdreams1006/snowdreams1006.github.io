@@ -471,3 +471,83 @@ $ cat markdown.md
 
 既然对方明确要求课件而不是自己的笔记,那把自己的那部分内容手动清除掉呗!
 
+## 常用命令
+
+- 常用内置命令
+
+```bash
+# 打印当前登陆用户
+$ whoami
+
+# 打印当前目录路径,其中 `/` 表示根目录,`~` 表示家目录.
+$ pwd
+
+# 查看当前目录下所有文件(夹)
+$ ls 
+
+# 切换指定目录,其中 `cd` 不带任何参数直接切换到家目录,`../` 表示上一级目录
+$ cd  切换目录
+
+# 新建指定目录
+$ mkdir DIRECTORY 
+
+# 新建指定文件
+$ touch FILE
+
+# 编辑指定文件
+$ vim FILE
+
+# 查看指定文件
+$ cat FILE
+
+# 查看指定文件开头部分,默认前十行.
+$ head FILE
+
+# 查看指定文件结尾部分,默认后十行.
+$ tail FILE
+
+# 查看操作历史
+$ history
+
+# 复制文件
+$ cp SOURCE DEST
+
+# 移动文件
+$ mv SOURCE DEST
+
+# 删除文件
+$ rm FILE
+
+# 删除文件夹
+$ rmdir DIRECTORY
+
+# 特殊字符: `tab` 自动补全命令,`esc` 退出编辑模式，`>` 覆盖重定向,`>>` 追加重定向.
+
+# 远程登录服务器
+$ ssh DESTINATION
+
+# 发起网络请求
+$ curl URL
+```
+
+- `git` 基本命令
+
+```bash
+# 初始化本地项目
+$ git init 
+
+# 添加文件到缓存区
+$ git add FILE
+
+# 提交文件到版本库
+$ git commit 
+
+# 查看文件状态
+$ git status
+
+# 查看提交日志
+$ git log
+
+# 查看操作历史
+$ git reflog
+```
