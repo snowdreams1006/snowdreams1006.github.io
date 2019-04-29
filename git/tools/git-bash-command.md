@@ -413,4 +413,12 @@ $ cat markdown.md
 
 ### 恪尽职责的网盘: git
 
+经过上述内容引导发现 `markdown` 语法确实在某些场景下很好用,于是乎下定决心开始踏上学习 `markdown` 之旅.
 
+工欲善其事必先利其器,本着小白初体验心态,还是先安装一个可视化的编辑器吧!
+
+> 实际上,`markdown` 很常用,主流编辑器基本都有相应插件,比如 `idea`,`vs code` 和 `sublime`等.
+
+`typora` [编辑器](https://typora.io/),支持多平台,	`windows` ,`mac` 和 `linux`,别具一格的首页.
+
+![git-markdown-typora.gif](../images/git-markdown-typora.gif)
