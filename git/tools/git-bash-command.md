@@ -588,6 +588,54 @@ $ cat goal.md
 
 - 版本控制我来了: 初始化
 
+> `git init` : 即初始化本地项目.
+
+如何将文件放到网盘管理,正如如何将鸡蛋放到篮子中,首先要有篮子,这里我们将 `git-bash-demo` 父目录充当我们的篮子.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ pwd
+/g/workpace/git-bash-demo
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ git init
+Initialized empty Git repository in G:/workpace/git-bash-demo/.git/
+```
+
+好记性不如烂笔头,像我们学习 `markdown` 那样,我们也创建专门的目录用于存放 `git` 笔记.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo (master)
+$ ls
+cup.txt  goal.md  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo (master)
+$ mkdir git
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo (master)
+$ ls
+cup.txt  git/  goal.md  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo (master)
+$ cd git
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ ls
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ touch git.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ ls
+git.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ echo "first step : git init" > git.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ cat git.md
+first step : git init
+```
 
 
 
