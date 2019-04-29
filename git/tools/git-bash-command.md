@@ -109,7 +109,7 @@ $ pwd
 
 空荡荡的房子提醒着自己,万丈高楼平地起,创业道路孤独而艰辛！
 
-```
+```bash
 snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
 $ ls
 ```
@@ -477,19 +477,9 @@ $ cat markdown.md
 
 经过一阵子的学习了解到更多 `markdown` 知识,于是课件加上自己的笔记越来越多,小白已经渐渐远去,大神正在向我们招手...
 
-```bash
-$ tail markdown.md
-示例:
+![git-bash-tail-learn02.png](../images/git-bash-tail-learn02.png)
 
-<pre>
-```
-function fun(){
- echo "这是一句非常牛逼的代码";
-}
-fun();
-```
-</pre>
-```
+- 省心尽责的网盘: 版本控制系统
 
 上次帮助了隔壁的小伙伴,一传十十传百,又有其他小伙伴求课件了,听说认真好学的你还做了笔记,也有人要笔记,事情有点复杂啊.
 
@@ -517,9 +507,86 @@ fun();
 
 当然,我们现在讲解的只是其中之一,那就是**分布式版本控制系统**.
 
+- 千呼万唤始出来: `git`
+
 说到分布式版本控制系统,不得不提的就是 `git` --- 最先进最流行的分布式版本控制系统.
 
-`git` 是分布式版本控制系统家族的璀璨明星,免费开源,支持 `windows` ,`mac` 以及 `linux`.
+`git` 是分布式版本控制系统家族的璀璨明星,免费开源,支持 `windows` ,`mac` 以及 `linux` 等平台.
+
+下面以 `windows` 电脑为例,介绍下 `git` 的安装和使用.
+
+...
+
+现在我们又不经意间学习了 `git` ,这不刚好是我们的第二个目标?
+
+纳尼,你说目标是啥?竟然忘记了最初的目标.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/markdown
+$ ls
+courseware.md  markdown.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/markdown
+$ cd ../
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ ls
+cup.txt  goal.txt  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ head goal.txt
+## learning markdown
+
+## learning git
+
+## learning gitbook
+
+## sharing java8
+
+万丈高楼平地起: 创建目录
+飘洋过海来看你: 切换目录
+```
+
+关于学习 `markdown` 的目标已经完成,学以致用不如动手改造下目标文件 `goal.txt` 重命名 `goal.md` .
+
+- 改头换面化个妆: 移动文件
+
+> `mv [OPTION] [-T] SOURCE DEST` : `move file` 的缩写,即移动文件.
+
+正常来说换工作一般会工作地点,当然升职这种换工作但工作地点可能并没有改变,反映到计算机世界中,移动文件本是更改工作目录,如果工作目录没有改变,只是修改个后缀名也未尝不可.
+
+```bash
+$ ls
+cup.txt  goal.txt  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ mv goal.txt goal.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ ls
+cup.txt  goal.md  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ cat goal.md
+## learning markdown
+
+## learning git
+
+## learning gitbook
+
+## sharing java8
+
+万丈高楼平地起: 创建目录
+飘洋过海来看你: 切换目录
+惊鸿一瞥初相见: 打印目录
+回头四顾心茫然: 列出文件
+保温杯中泡枸杞: 创建文件
+枸杞茶中加枸杞: 覆盖输入
+枸杞茶中倒热水: 追加输入
+枸杞茶要慢慢品: 查看文件
+```
+
+- 版本控制我来了: 初始化
 
 
 
