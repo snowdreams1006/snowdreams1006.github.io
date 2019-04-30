@@ -1156,8 +1156,46 @@ Date:   Tue Apr 30 11:16:19 2019 +0800
 
 叫什么名字,好像是"回流",于是经过千百次的尝试终于记起来命令,原来是 `git reflog` ,出发吧,皮卡丘!
 
+```
+# 翻阅命令: 目前所处的版本号是 `08cbe61`,上一个版本号是 `0b0657b`,然后回到了 `08cbe61` .
+$ git reflog
+08cbe61 (HEAD -> master) HEAD@{0}: reset: moving to 08cbe61c2a635ec6f70ae7a50842ae308cd95fee
+0b0657b HEAD@{1}: commit: git is so easy
+08cbe61 (HEAD -> master) HEAD@{2}: commit (initial): add git learn note
+```
+
+看来学习不能只追求够用啊,需要救命时还是要靠附加技能啊.
+
+```bash
+# 重置版本: 穿越回未来,看到 "git is so easy" 放心多了,我应该回来了吧?
+$ git reset --hard 0b0657b
+HEAD is now at 0b0657b git is so easy
+
+# 查看文件内容: 我张汉三又回来了!
+$ cat git.md
+git 的基本流程
+1. `git init` 初始化项目,创建本地网盘.
+2. `git add` 添加文件,挑选出待上传到网盘的文件,准备上传.
+3. `git commit` 提交文件,将已目标文件上传到网盘进行备份.
+4. `git status` 查看文件状态,本地网盘创建完毕后随时随地呼唤小秘书查看文件状态.
+5. `git log` 查看提交历史,同一个文件运行多次上传,每一次的文件都能识别,总览上传记录.
+6. `git reflog` 查看回流历史,存储重要操作命令结果,高级进阶必备知识点.
 
 
+git is so easy
+```
+
+经过这次穿越之旅,再也不敢轻视任何一个知识点了,以后保不齐都是救命的附加技能啊,赶紧把这条感悟追加到 `git.md` 学习笔记中去!
+
+```bash
+# `git reflog` 可以大概理解为 `reference log` 记做日志的参考日志,这样下次就不要绞尽脑汁回忆 `reflog` "回流"了!
+$ echo "git reflog help us to back to fulture" >> git.md
+```
+
+亲爱的小伙伴们,`git` 的学习之旅暂时告一段落,有没有掌握 `git` 命令行的基本操作呢?
+
+如果想要了解关于 `git` 的相关知识,可以参考 [git 入门教程](https://snowdreams1006.github.io/git/) 系列文章哟,当然这篇文章就是其中一篇呢!
+ 
 ## 常用命令
 
 `git bash` 命令行终端内置命令比 `windows` 默认的 `cmd` 命令行窗口强大多了,除了支持一般的命令外,还支持简单的 `linux` 命令.
