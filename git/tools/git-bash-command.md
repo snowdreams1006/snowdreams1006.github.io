@@ -994,6 +994,168 @@ Date:   Tue Apr 30 11:16:19 2019 +0800
 
 > `git checkout` : 即检出文件,切换到指定版本状态.
 
+假如你正在学习 `git` 知识,认真跟着教程边练习边做笔记,学着学着犯困了趴在电脑上睡着了,于是笔记变成了下面这样了.
+
+```bash
+$ cat git.md
+git 的基本流程
+1. `git init` 初始化项目,创建本地网盘.
+2. `git add` 添加文件,挑选出待上传到网盘的文件,准备上传.
+3. `git commit` 提交文件,将已目标文件上传到网盘进行备份.
+4. `git status` 查看文件状态,本地网盘创建完毕后随时随地呼唤小秘书查看文件状态.
+5. `git log` 查看提交历史,同一个文件运行多次上传,每一次的文件都能识别,总览上传记录.
+6. `git reflog` 查看回流历史,存储重要操作命令结果,高级进阶必备知识点.
+
+
+git is so easy
+
+lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+
+,pasdad,;qwd;lq\we1233333333333333333333333333333333333,;qwe
+qwewewewewewewewewewewewewewewewewewewewewewewewewewewewe
+```
+
+很显然,下面的内容绝对是无意之举,碰到键盘乱按的,这时候怎么删除无意义的文字呢?
+
+当然你可以选择手动删除,当然是一种方法但不是优雅的方法,下面介绍下 `git` 对这种情况的解决方案.
+
+还记得我们的小助手吗,有事没事问问它能给我们什么意见就对了,`git status` 闪亮登场!
+
+```bash
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   git.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+工作目录的文件发生修改后,如果是正确的修改那我们运行的都是 `git add` 命令,假如是意外内容的话(比如这次瞌睡打盹产生的乱码),肯定就不能采纳第一种建议了.
+
+第二种建议说使用 `git checkout -- <file>` 来丢弃工作目录的更改,不妨试一下会发生什么吧!
+
+```
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 丢弃工作区更改: 恢复到最近一次版本管理状态
+$ git checkout -- git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 查看文件状态: 工作区是干净的,就像我们执行完 `git commit`命令一样.
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 查看文件内容: 神奇回到了上次文件状态
+$ cat git.md
+git 的基本流程
+1. `git init` 初始化项目,创建本地网盘.
+2. `git add` 添加文件,挑选出待上传到网盘的文件,准备上传.
+3. `git commit` 提交文件,将已目标文件上传到网盘进行备份.
+4. `git status` 查看文件状态,本地网盘创建完毕后随时随地呼唤小秘书查看文件状态.
+5. `git log` 查看提交历史,同一个文件运行多次上传,每一次的文件都能识别,总览上传记录.
+6. `git reflog` 查看回流历史,存储重要操作命令结果,高级进阶必备知识点.
+
+
+git is so easy
+```
+
+仅仅需要 `git checkout -- <file>` 一条命令就能轻松撤销文件更改,`so easy!`
+
+- 穿越到过去看看: 回到过去
+
+> `git reset --hard <commit>` : 即重置到某个版本.
+
+正如之前不经意间提到的版本概念,每一次提交文件都会产生一长串无意义的字符串,那个字符串就是版本号.
+
+`git` 实现的网盘功能可不是百度云网盘,普通的网盘只能保存最新文件,相同名称的文件不允许再次上传会被自动替换或者重命名.
+
+然而,`git` 却可以多次保存文件,比如我们的学习笔记 `git.md` 就不止保存过一次,现在看一下该文件的提交历史吧!
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+$ git log
+# 第二次提交记录: 当时写下了git is so easy
+commit 0b0657b7db02f1f5c6e8d5ac3f1307156c15ce08 (HEAD -> master)
+Author: snowdreams1006 <snowdreams1006@163.com>
+Date:   Tue Apr 30 11:55:07 2019 +0800
+
+    git is so easy
+
+# 第一次提交记录: 当时记录了git 的学习笔记
+commit 08cbe61c2a635ec6f70ae7a50842ae308cd95fee
+Author: snowdreams1006 <snowdreams1006@163.com>
+Date:   Tue Apr 30 11:16:19 2019 +0800
+
+    add git learn note
+```
+
+你可能会问了,记录了这么多版本历史有什么用呢?
+
+用处可大了,比如我们可以穿越到第一次提交记录的那一刻去,感受怀念一下旧时光.
+
+```bash
+# 重置版本: 穿越到第一次的版本号,`08cbe61c2a635ec6f70ae7a50842ae308cd95fee` 即 `git log` 告诉我们的版本号.
+$ git reset --hard 08cbe61c2a635ec6f70ae7a50842ae308cd95fee
+HEAD is now at 08cbe61 add git learn note
+```
+
+发生什么了,我是谁,我在哪?现在是2019年还是公元220年?
+
+小助手你在哪,快帮我看看现在是什么状态.
+
+```bash
+# 查看文件状态: 报告老板,工作区很干净,没有发生文件更改哟!
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+小助手也没有给我满意的回复,自己动手丰衣足食,我还是自己看看周围有什么人吧!
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 查看当前目录下文件: 原来我还在 `git` 目录下,这里还有我的学习笔记 `git.md` 呢!
+$ ls
+git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 查看文件内容: 我的笔记内容不是最新的了,原来的"git is so easy"不见了,我竟然真的回到了过去!
+$ cat git.md
+git 的基本流程
+1. `git init` 初始化项目,创建本地网盘.
+2. `git add` 添加文件,挑选出待上传到网盘的文件,准备上传.
+3. `git commit` 提交文件,将已目标文件上传到网盘进行备份.
+4. `git status` 查看文件状态,本地网盘创建完毕后随时随地呼唤小秘书查看文件状态.
+5. `git log` 查看提交历史,同一个文件运行多次上传,每一次的文件都能识别,总览上传记录.
+6. `git reflog` 查看回流历史,存储重要操作命令结果,高级进阶必备知识点.
+```
+
+抱着四处逛逛的心态,看一下当初的风景,逛累了回去吧!
+
+怎么来的就怎么回去,原路返回一直是最保险的,自信心爆棚的说: 要先查看一下版本号,然后运行`git reset --hard <commit>` 穿越回未来!
+
+```bash
+# 查看提交历史: 心态崩了,放声大哭:现在的我看不到未来的版本号,那我如何穿越啊...
+$ git log
+commit 08cbe61c2a635ec6f70ae7a50842ae308cd95fee (HEAD -> master)
+Author: snowdreams1006 <snowdreams1006@163.com>
+Date:   Tue Apr 30 11:16:19 2019 +0800
+
+    add git learn note
+```
+
+真的是叫天天不应叫地地不灵,本来是想回到过去旅游观光的,现在手头上没有了未来的坐标如何穿越回去啊?
+
+哭了三天三夜,调整好心态,求人不如求己,努力回想下平生所学看看有什么别的方法能穿越回未来?
+
+记得当初介绍 `git log` 命令时还介绍一个相似的命令,当时说高级进阶必备,现在不知道能不能用着.
+
+叫什么名字,好像是"回流",于是经过千百次的尝试终于记起来命令,原来是 `git reflog` ,出发吧,皮卡丘!
+
 
 
 ## 常用命令
