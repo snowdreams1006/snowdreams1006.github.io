@@ -6,6 +6,8 @@
 
 接下来我们逐步探讨下两个世界的关联,顺便学习下 `Git Bash` 支持的常用命令以及 `git` 的基本操作.
 
+![git-win-install-succesfully.png](../images/git-win-install-succesfully.png)
+
 ## 哲学第一问: 我是谁
 
 现实生活中我们每个人都有名字,身份以及责任.正是由**自我和他人**一起构成了"我是谁"这一基本问题: 是儿子,是丈夫,是父亲,是社会中的一份子.
@@ -519,7 +521,21 @@ $ cat markdown.md
 
 下面以 `windows` 电脑为例,介绍下 `git` 的安装和使用.
 
-...
+![git-win-download.png](../images/git-win-download.png)
+
+> 官网下载地址: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+
+正常的话,按照默认选择安装即可,请确保 `Git Bash Here` 前面的复选框已勾选,否则无法提供命令行终端.
+
+![git-win-install-tools.png](../images/git-win-install-tools.png)
+
+接下来一切按照默认选项安装,安装模拟终端类型时请选择第一种 `Mintty` 以保证环境一致性.
+
+![git-win-install-mintty.png](../images/git-win-install-mintty.png)
+
+安装成功后桌面或者右键会出现 `Git Bash` 图标或选项,打开终端,输入 `git --version`如果能正常输出版本信息,那就说明安装成功了!
+
+![git-win-install-succesfully.png](../images/git-win-install-succesfully.png)
 
 现在我们又不经意间学习了 `git` ,这不刚好是我们的第二个目标?
 
