@@ -1219,7 +1219,16 @@ Connection to github.com closed.
 `curl` 就是这么一种工具,在命令行下也可以访问互联网资源,由于默认是将互联网资源下载到本地,因此又被成为**命令行下载工具**.
 
 ```bash
+# 将百度首页下载到 `baidu.html` 文件,配合管道符 `>` 实现文件内容的重定向 
+$ curl http://baidu.com > baidu.html
+```
 
+### 查看已运行命令: 历史
+
+> `history` : 翻译为"历史",即查看历史命令
+
+```bash
+$ history
 ```
 
 ## 常用命令
