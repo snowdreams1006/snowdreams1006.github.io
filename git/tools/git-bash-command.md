@@ -806,6 +806,25 @@ nothing to commit, working tree clean
 
 `working tree clean` 告诉我们现在工作区很干净,这里的工作区可以简单理解为当前所处的工作目录.
 
+- 告诉我你的历史: 提交历史
+
+> `git log` : 即查看提交历史,每一次的提交都能记得清清楚楚,不然怎么配得上兢兢业业上班中的标题.
+
+每一次的提交都是一个版本,一段时间后提交历史会越来越多,查看提交历史时想要知道当初提交的基本信息就要看上一步 `git commit -m <message>` 提供的备注信息.
+
+```bash
+$ git log
+# 版本号: `128d0d0367096c41a6716ff30b4aec5876239343`,每一次提交都会产生唯一的版本号,作为提交记录的标识.
+commit 128d0d0367096c41a6716ff30b4aec5876239343 (HEAD -> master)
+# 提交作者的信息,`snowdreams1006` 是用户名,`snowdreams1006@163.com` 是邮箱,是安装 `git` 后配置的信息.
+Author: snowdreams1006 <snowdreams1006@163.com>
+Date:   Tue Apr 30 09:44:39 2019 +0800
+
+# 提交备注: `init git-bash-demo`
+    init git-bash-demo
+```
+
+
 
 ## 常用命令
 
