@@ -637,6 +637,107 @@ $ cat git.md
 first step : git init
 ```
 
+- 知己知彼看状态: 查看状态
+
+> `git status` : 即查看文件状态
+
+正所谓"知己知彼方能百战不殆",随时了解文件状态才能做到心中有数,从而更好地进行版本管理.
+
+所谓"版本",可以理解为现实世界中的不同时空那一刻的"状态",文件的版本则是记录了文件的历史状态.
+
+`git status` 命令告诉我们文件状态以及能够智能猜预测我们下一步操作,好比身边的小秘书一样.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ git status
+# 在 `master` 分支上,暂时不用理解分支概念,默认处于该分支
+On branch master
+
+# 目前还没有提交,`commit` 翻译"提交",即"版本",表示文件的不同历史时刻下的当时的状态
+No commits yet
+
+# 未被追踪的文件: 好比文件上传到网盘一样,`git init` 创建本地网盘,但还没添加文件到网盘中.
+Untracked files:
+	# (使用 `git add <file>` 来包含将要被添加的文件: 智能预测提示我们下一步应该添加下述文件)
+  (use "git add <file>..." to include in what will be committed)
+
+        ../.swp
+        ../cup.txt
+        ./
+        ../goal.md
+        ../markdown/
+
+# 没有已添加文件需要提交,但是目前有未被追踪文件(使用 `git add` 去追踪文件变化): 再次提示我们运行 `git add` 命令追踪文件.
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+- 整装待命入队列: 添加文件
+
+> `git add <file>` ： 即添加文件,表示跟踪文件变化,即将加入版本控制系统.
+
+如果将文件上传到网盘中,首先需要确定好需要上传的文件列表,然后才是上传文件的具体操作.
+
+`git add <file>` 做的就是挑选出需要上传文件的清单列表,追踪到这些文件的变化以便下一步一次性全部上传!
+
+```bash
+$ git add ../cup.txt ./ ../goal.md ../markdown/
+warning: LF will be replaced by CRLF in cup.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in git/git.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in goal.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in markdown/courseware.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in markdown/markdown.md.
+The file will have its original line endings in your working directory
+```
+
+在命令行操作中的基本哲学理念是"没有消息就是好消息",输入命令没有任何反馈的话,操作一般都成功了,如果操作失败都会有报错提示的.
+
+虽然我们是在 `windows` 电脑上演示命令行操作,但命令行的逻辑不像 `windows` 可视化操作那样,新建文件会提示新建成功,移动文件也会提示移动成功,而命令行逻辑确实 `linux` 系统那一套逻辑.
+
+**没有消息就是好消息**,在命令行交互的过程中可能没有那么多操作反馈,因而要求我们熟知命令作用,清楚明白自己在干什么!
+
+既然 `git add <file>` 没有消息反馈就说明我们操作成功了,下一步我们应该运行什么命令才能将这些目标问价添加到网盘呢?
+
+外事不决问谷歌,内事不决问百度,而我们却有一个智能小秘书---`git status` ,大多数情况下提供了足够多的信息告诉我们下一步操作.
+
+- 又见智能小秘书: 查看文件状态
+
+刚刚我们运行 `git add` 命令添加了一些目标文件,故意留下了 `../.swp` 文件,这种名字一看就算不是我们主动创建的文件,八成是系统或者编辑器什么的自动创建的,因而我们不需要备份这文件.
+
+此时运行 `git status` 命令告诉我们目标文件已添加但还没提交,此时可以撤销(`unstage`)到未添加状态,还有一个文件未被追踪提示我们可以使用 `git add` 添加到待提交文件列表中.
+
+```bash
+$ git status
+# 仍然处于 `master` 主干分支
+On branch master
+
+# 目前仍然没有提交(版本)
+No commits yet
+
+# 即将要被提交的更改: `Changes` 翻译为更改，`committed` 翻译为被提交,即文件的更改将要被提交,提示我们下一步操作是提交文件
+Changes to be committed:
+	# (使用 `git rm --cached <file>` 来清空缓存: 注意 `unstage` 并不是 `commit` ，所以并不是提交操作而是撤销操作,即下述文件既可以进行下一步提交也可以回到上一步撤销文件.)
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   ../cup.txt
+        new file:   git.md
+        new file:   ../goal.md
+        new file:   ../markdown/courseware.md
+        new file:   ../markdown/markdown.md
+
+# 未被追踪的文件列表: 使用 `git add <file>...` 添加文件
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../.swp
+
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+
+```
 
 
 ## 常用命令
