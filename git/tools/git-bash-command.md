@@ -709,6 +709,8 @@ The file will have its original line endings in your working directory
 
 此时运行 `git status` 命令告诉我们目标文件已添加但还没提交,此时可以撤销(`unstage`)到未添加状态,还有一个文件未被追踪提示我们可以使用 `git add` 添加到待提交文件列表中.
 
+目前为止,文件经历了两个阶段,最初尚未被追踪状态,使用 `git add` 命令添加文件转变成已追踪状态,此时再次运行 `git status` 提示我们已追踪到文件变化还未被提交,因此我们可以预测有一种命令能够提交文件,但是这个命令是谁呢?
+
 ```bash
 $ git status
 # 仍然处于 `master` 主干分支
@@ -738,6 +740,45 @@ Untracked files:
 snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
 
 ```
+
+- 不想见就删了吧: 删除文件
+
+> `rm [OPTION] [FILE]` : `remove` 翻译为"删除",即删除问价.
+
+上一步中运行 `git add` 后再次运行 `git status` 命令没有提示我们如何进行提交文件操作,只告诉我们 `git rm --cached <file>` 来撤销已被追踪的文件,可能是由于还有文件 `../.swp` 文件没有被追踪,所以小助手猜想我们可能还没操作完毕,故而没有告诉我们如何提交?
+
+不想见它就删了吧,通过命令行命令删除这个令人讨厌的家伙,看看会发生什么事情.
+
+```bash
+$ rm ../.swp
+```
+
+依然没有消息反馈,应该删除成功了吧,看一下该文件还在不在以及当前文件的状态如何.
+
+```bash
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ ls
+git.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   ../cup.txt
+        new file:   git.md
+        new file:   ../goal.md
+        new file:   ../markdown/courseware.md
+        new file:   ../markdown/markdown.md
+```
+
+好吧,依然没有告诉我们提交文件的命令,只有只能亲自动手直接告诉你，这个命令就是 `git commit` ,估计你也猜个八九不离十,毕竟 `commit` 出现频率如此之高!
+
+
 
 
 ## 常用命令
