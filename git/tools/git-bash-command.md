@@ -855,14 +855,88 @@ $ git reflog
 ```bash
 $ echo "git 的基本流程" > git.md
 $ echo "1. `git init` 初始化项目,创建本地网盘." >> git.md
-$ echo "2. `git add` 添加文件,挑选出待上传到网盘的文件,准备上传.
-" >> git.md
+$ echo "2. `git add` 添加文件,挑选出待上传到网盘的文件,准备上传." >> git.md
 $ echo "3. `git commit` 提交文件,将已目标文件上传到网盘进行备份." >> git.md
 $ echo "4. `git status` 查看文件状态,本地网盘创建完毕后随时随地呼唤小秘书查看文件状态." >> git.md
 $ echo "5. `git log` 查看提交历史,同一个文件运行多次上传,每一次的文件都能识别,总览上传记录." >> git.md
-$ echo "6. `git reflog` 查看回流历史,存储重要操作命令结果,高级进阶必备知识点.
-" >> git.md
+$ echo "6. `git reflog` 查看回流历史,存储重要操作命令结果,高级进阶必备知识点." >> git.md
 ```
+
+小笔记已经保存,现在开始将文件保存到网盘中,再次体验下 `git` 的工作流程,准备好了吗?
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 列出当前文件: 当前工作目录位于 `git` 目录,存在学习笔记 `git.md`.
+$ ls
+git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 查看文件状态: 学习笔记 `git.md` 尚未被追踪,提示我们可以使用 `git add` 命令添加进来.
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        git.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 添加文件: 将学习笔记 `git.md` 添加到追踪文件清单.
+$ git add git.md
+warning: LF will be replaced by CRLF in git.md.
+The file will have its original line endings in your working directory
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 再次查看文件状态: 此时学习笔记 `git.md` 已添加到跟踪文件清单,显示这是一个新文件,如需提交可运行 `git commit` 提交到本地仓库.
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   git.md
+
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 提交文件: 将跟踪文件清单的更改全部提交到本地仓库,此时跟踪清单只有我们的学习笔记 `git.md` ,所以显示只有一个文件被改变.
+$ git commit -m "add git learn note"
+[master (root-commit) 08cbe61] add git learn note
+ 1 file changed, 9 insertions(+)
+ create mode 100644 git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 再次查看文件状态: 文件已经全部提交到本地版本库,相当于网盘已经有最新文件了.
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+一次新增文件之旅就这么轻松愉快,赶紧记到笔记鼓励下自己吧!
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+$ echo "git is so easy" >> git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+$ cat git.md
+git 的基本流程
+1. `git init` 初始化项目,创建本地网盘.
+2. `git add` 添加文件,挑选出待上传到网盘的文件,准备上传.
+3. `git commit` 提交文件,将已目标文件上传到网盘进行备份.
+4. `git status` 查看文件状态,本地网盘创建完毕后随时随地呼唤小秘书查看文件状态.
+5. `git log` 查看提交历史,同一个文件运行多次上传,每一次的文件都能识别,总览上传记录.
+6. `git reflog` 查看回流历史,存储重要操作命令结果,高级进阶必备知识点.
+
+
+git is so easy
+```
+
 
 
 ## 常用命令
