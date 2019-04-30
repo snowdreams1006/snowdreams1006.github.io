@@ -937,6 +937,63 @@ git 的基本流程
 git is so easy
 ```
 
+每一次文件内容发生重大更改时都应该被记录以便后续查看当时文件状态,那现在也提交到本地仓库吧!
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 查看文件状态: 和以往不同的是,这次小助手给我们提供了两个建议,`git add` 和 `git checkout` ,其中 `git add` 是更新将要提交文件的内容,而 `git checkout` 则是丢弃本次更改内容.
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   git.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+
+# 添加文件: 按照上一步提示,我们希望的是准备提交文件,因此运行 `git add` 命令进行添加文件.
+$ git add git.md
+warning: LF will be replaced by CRLF in git.md.
+The file will have its original line endings in your working directory
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+
+# 提交文件: 和往常一样,每一次的提交都要有提交备注,方便查看提交历史时提醒自己文件内容.
+$ git commit -m "git is so easy"
+[master 0b0657b] git is so easy
+ 1 file changed, 1 insertion(+)
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 再次查看文件状态: 正如我们所料,小助手告诉我们工作区是干净的,这表示目标文件都已添加到版本库中,接下来让恪尽职责的 `git` 帮我们管理文件吧.
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# 查看提交历史: 提交历史按照时间倒排顺序依次显示,最新的提交历史在终端的上面,有我们的提交备注等信息.
+$ git log
+commit 0b0657b7db02f1f5c6e8d5ac3f1307156c15ce08 (HEAD -> master)
+Author: snowdreams1006 <snowdreams1006@163.com>
+Date:   Tue Apr 30 11:55:07 2019 +0800
+
+    git is so easy
+
+commit 08cbe61c2a635ec6f70ae7a50842ae308cd95fee
+Author: snowdreams1006 <snowdreams1006@163.com>
+Date:   Tue Apr 30 11:16:19 2019 +0800
+
+    add git learn note
+```
+
+目前为止,这种操作好像和普通的网盘没有什么不同,选择文件,添加文件,那我为什么要使用 `git` 呢?
+
+- 开启时间穿梭机: 版本控制
+
+> `git checkout` : 即检出文件,切换到指定版本状态.
+
 
 
 ## 常用命令
