@@ -421,11 +421,15 @@ $ cat markdown.md
 
 `typora` [编辑器](https://typora.io/),支持多平台,	`windows` ,`mac` 和 `linux`,别具一格的首页.
 
-![git-markdown-typora.gif](../images/git-markdown-typora.gif)
+![git-markdown-typora-preview.png](../images/git-markdown-typora-preview.png)
 
-...
+安装没有特殊的注意事项,正常安装就可以了,安装完毕后可以选择打开已有 `markdown` 文件.
 
-接着继续学习 `markdown` 的基本知识,介绍下如何显示图片以及超链接。
+实时渲染,所见即所得,左侧是文件列表,右侧是内容编辑器,喜欢的话赶紧入手吧!
+
+![git-markdown-typora-writing.png](../images/git-markdown-typora-writing.png)
+
+装备好编辑器后,我们接着继续学习 `markdown` 的基本知识,介绍下如何显示图片以及超链接。
 
 - 链接
 
@@ -1195,7 +1199,7 @@ $ echo "git reflog help us to back to fulture" >> git.md
 亲爱的小伙伴们,`git` 的学习之旅暂时告一段落,有没有掌握 `git` 命令行的基本操作呢?
 
 如果想要了解关于 `git` 的相关知识,可以参考 [git 入门教程](https://snowdreams1006.github.io/git/) 系列文章哟,当然这篇文章就是其中一篇呢!
- 
+
 ### 登录到远程服务器: 远程登录
 
 > `ssh DESTINATION` : `secure shell` 的缩写,即安全的 `shell` 终端. 
