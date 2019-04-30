@@ -1196,6 +1196,32 @@ $ echo "git reflog help us to back to fulture" >> git.md
 
 如果想要了解关于 `git` 的相关知识,可以参考 [git 入门教程](https://snowdreams1006.github.io/git/) 系列文章哟,当然这篇文章就是其中一篇呢!
  
+### 登录到远程服务器: 远程登录
+
+> `ssh DESTINATION` : `secure shell` 的缩写,即安全的 `shell` 终端. 
+
+正常情况下 `windows` 系统自带 `cmd` 终端是不支持 `ssh` 方式登录 `linux` 服务器的,如果想要远程登录 `linux` 服务器一般需要安装第三方工具,但 `git bash` 命令行却支持`ssh`.
+
+```bash
+# 登录 github: 正常输入用户名密码或者秘钥等可以登录到远程 `linux` 服务器.
+$ ssh git@github.com
+PTY allocation request failed on channel 0
+Hi snowdreams1006! You've successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
+```
+
+### 访问互联网资源: 网络请求
+
+> `curl URL` : `CommandLine Uniform Resource Locator` 的缩写,即命令行下载工具.
+
+互联网的资源一般都有专属链接,通过浏览器我们可以访问网页,但是在命令行下没有浏览器又想访问互联网资源该怎么办?
+
+`curl` 就是这么一种工具,在命令行下也可以访问互联网资源,由于默认是将互联网资源下载到本地,因此又被成为**命令行下载工具**.
+
+```bash
+
+```
+
 ## 常用命令
 
 `git bash` 命令行终端内置命令比 `windows` 默认的 `cmd` 命令行窗口强大多了,除了支持一般的命令外,还支持简单的 `linux` 命令.
