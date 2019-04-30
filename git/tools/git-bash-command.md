@@ -8,6 +8,8 @@
 
 ![git-win-install-succesfully.png](../images/git-win-install-succesfully.png)
 
+> 如果还没有安装 `git` 环境,请参考进行 [https://snowdreams1006.github.io/git/base/install.html](https://snowdreams1006.github.io/git/base/install.html) 或者参考**千呼万唤始出来**章节进行安装.
+
 ## 哲学第一问: 我是谁
 
 现实生活中我们每个人都有名字,身份以及责任.正是由**自我和他人**一起构成了"我是谁"这一基本问题: 是儿子,是丈夫,是父亲,是社会中的一份子.
@@ -611,6 +613,17 @@ $ cat goal.md
 > `git init` : 即初始化本地项目.
 
 如何将文件放到网盘管理,正如如何将鸡蛋放到篮子中,首先要有篮子,这里我们将 `git-bash-demo` 父目录充当我们的篮子.
+
+正式使用 `git` 打造本地网盘前,我们还需要设置下用户名和邮箱,这一步相当于自报家门,这样 `git` 才知道现在是谁在用.
+
+> 还记得我是谁吗? `whoami` 就是你在计算机中的用户名,这里的 `git` 用户名可以使自定义的用户名.
+
+```bash
+$ git config --global user.name "your username"
+$ git config --global user.email "example@example.com"
+```
+
+现在运行 `git init` 命令,开始打造本地网盘,开启版本控制之旅!
 
 ```bash
 snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
@@ -1337,3 +1350,15 @@ $ git log
 # 查看操作历史
 $ git reflog
 ```
+
+## 小结
+
+我们以现实世界和计算机世界对比分析,在命令行终端工具下通过命令试图介绍计算机哲学,顺便学习了常用的命令.
+
+比如简单的文件增删改查,相信你现在无鼠标操作也能创建文件,删除文件以及复制修改文件了吧?
+
+基本的命令除了解决日常所需外,还在于和其他工具的配合,比如我们使用的命令行终端是 `git bash` ,这是安装	`git` 服务时安装的辅助性工具,帮助我们在命令行下进行版本控制.
+
+只有熟悉基本的命令后才能更好的理解 `git` 的工作流程,图形化工具或插件也有很多,每一种都有自己的操作风格,相信熟悉了命令后再去学习图形化工具操作也不会太费事.
+
+希望本文对你理解计算机或者说学习 `git` 能够带来些许帮助,如有不当描述,欢迎指出补充.
