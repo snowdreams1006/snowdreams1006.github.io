@@ -778,7 +778,33 @@ Changes to be committed:
 
 好吧,依然没有告诉我们提交文件的命令,只有只能亲自动手直接告诉你，这个命令就是 `git commit` ,估计你也猜个八九不离十,毕竟 `commit` 出现频率如此之高!
 
+- 兢兢业业上班中: 提交文件
 
+> `git commit` : 即提交文件,将已跟踪的文件清单变化全部提交到版本库.
+
+`git add` 命令帮助我们打包好待上传文件,`git commit` 命令则执行上传操作,现在文件已经加入本地网盘了,妈妈再也不用担心文件丢失了呢!
+
+```bash
+# 提交文件并添加备注信息,其中 `-m` 是 `-message` 的缩写,表示备注信息
+$ git commit -m "init git-bash-demo"
+[master (root-commit) 128d0d0] init git-bash-demo
+ 4 files changed, 59 insertions(+)
+ create mode 100644 cup.txt
+ create mode 100644 git/git.md
+ create mode 100644 goal.txt
+ create mode 100644 markdown/markdown.md
+```
+
+现在已经提交了文件,我们再次请来小秘书查看一下当前文件状态.
+
+```bash
+$ git status
+On branch master
+# 没有什么文件需要提交,工作区很干净.
+nothing to commit, working tree clean
+```
+
+`working tree clean` 告诉我们现在工作区很干净,这里的工作区可以简单理解为当前所处的工作目录.
 
 
 ## 常用命令
