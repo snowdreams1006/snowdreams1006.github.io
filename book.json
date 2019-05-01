@@ -6,7 +6,8 @@
   "gitbook": "3.2.3",
   "links": {
       "sidebar": {
-          "我的网站": "https://snowdreams1006.cn/"
+          "我的网站": "https://snowdreams1006.cn/",
+          "mygitalk": "https://snowdreams1006.github.io/gitbook-plugin-mygitalk/"
       }
   },
   "plugins": [
