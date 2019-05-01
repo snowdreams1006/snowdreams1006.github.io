@@ -68,6 +68,12 @@
     * [csv半手动数据统计](write/static-semi-manual-with-csv.md)
     * [js半手动数据统计](write/static-semi-manual-with-js.md)
     * [常见问题](write/faq.md)
+
+## 开源项目
+* [security-plus](https://security-plus.github.io/)
+* [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
+
+## 程序人生    
 * [其他](other/README.md)
     * [程序员转型之路](other/transformation.md)
     * [历史统计](other/static.md)
