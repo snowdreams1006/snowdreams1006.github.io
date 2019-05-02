@@ -35,6 +35,7 @@
     * [github 教程](git/github/usage.md)
     * [git 私服搭建教程](git/server/private.md)
     * [git bash 常用命令](git/tools/git-bash-command.md)
+    * [git bash 复杂关系](git/tools/git-bash-relationship.md)
     * [知识速查](git/summary/common.md)
     * [备忘录[译]](git/summary/cheatsheet-translation.md)
     * [常见问题](git/issue/README.md)
@@ -73,7 +74,7 @@
 * [security-plus](https://security-plus.github.io/)
 * [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
 
-## 程序人生    
+## 程序人生
 * [其他](other/README.md)
     * [程序员转型之路](other/transformation.md)
     * [历史统计](other/static.md)
