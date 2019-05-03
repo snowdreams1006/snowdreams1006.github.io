@@ -162,11 +162,15 @@ G:.
 
 上述介绍文字虽然看起来并不起眼,毕竟我们安装 `windows` 程序时基本上都是下一步下一步就完成了安装,但是作为重点理解为什么 `git bash` 不支持 `tree` 命令,我们有必要好好研究这段话.
 
+![git-bash-mintty-msys2.png](../images/git-bash-mintty-msys2.png)
+
 - `git bash` 是命令行工具没错,但是模拟终端实际上是 `MinTTY` ,所以与其说 `git bash` 不支持某些`linux` 命令,不如说为什么安装的 `MinTTY` 终端不支持.
 - `MinTTY` 是一种**模拟终端**,是 `MSYS2` 的默认终端.
 - 调用 `Windows` 程序时必须通过 `winpty` 开头才能在 `MinTTY` 终端正常工作.
 
 > 通过上述分析,我们得到了一条重要线索: `MinTTY` 终端和 `MinTTY` 系统.
+
+安装过程中仅能获取到这些有效信息,那么安装完成后能否提供更多细节呢?
 
 
 
