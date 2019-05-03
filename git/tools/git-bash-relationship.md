@@ -14,6 +14,8 @@
 
 这两兄弟一个像 `linux` ,一个像 `windows` ,虽然是一母同生,性格长相却千差万别,不过确实是双胞胎兄弟哟!
 
+### 图形化操作工具
+
 首先登场的是 `Windows` 系统所喜闻乐见的图形化工具,`git gui` 闪亮登场!
 
 ![git-bash-gui-gibberish.png](../images/git-bash-gui-gibberish.png)
@@ -31,6 +33,8 @@
 ![git-bash-gui-operation.gif](../images/git-bash-gui-operation.gif)
 
 > 依次点击扫描(`Rescan`) -> 暂存已更改(`Stage Changed`) -> 停止广播(`Sign Off`) -> 提交(`Commit`),完成一次文件修改后的提交操作.
+
+### 命令行操作工具
 
 其次登场的是 `linux` 小伙伴很熟悉的命令行操作方式,唤醒方式和上述工具的方式基本一致,选中项目的根路径**右键**选择`Git Bash Here` 跳出命令行窗口.
 
@@ -54,6 +58,8 @@
 
 ![git-bash-github-git.png](../images/git-bash-github-git.png)
 
+### `Git` 和 `Git for Windows`
+
 最初 `git` 只支持 `linux` 操作系统,后来 `windows` 系统也慢慢支持了,只不过这种支持并不是 `git` 官方所为,而是**微软**团队进行移植整合的产品.
 
 ![git-bash-github-gitforwindows.png](../images/git-bash-github-gitforwindows.png)
@@ -68,6 +74,8 @@
 - `Git for Windows` 组织项目大部分来源于其他开源项目,也就是说将 `Git` 移植到 `Windows` 系统背后需要很多技术支持.
 
 > `Git` 本身是 `linux` 系统的软件,所以类 `linux` 系统的 `mac` 是**天然支持**的,而差异比较大的 `Windows` **无法天然支持**,所以 `Git for Windows` 组织移植了 `Git` ,从而实现了**变相支持**.	
+
+### 图形化工具还是命令行工具
 
 学习 `git` 或是工作所需,或是开源精神所驱使,不管出于怎样的目的,只要是想要学习 `git` ,那第一步已经迈出去,接下来的日子里我们都在构建自己的知识库.
 
@@ -100,11 +108,15 @@
 
 > 三月春风正得意,忽遇阵雨摧花枝.曾以为不会再用到 `cmd` 命令行,事实证明 `git bash` 并不是万能的.
 
-命令行操作最直观的好处就是高效简单,手不必离开键盘,持续输入不被打断.
+命令行操作最直观的好处就是高效简单,手不必离开键盘,持续不断的输入不被打断.
+
+当然这也是很多人使用命令行的原因之一,除此之外,熟悉命令行操作后还可以帮助我们更好编写批处理文件.
 
 正所谓"工欲善其事必先利其器",使用命令行操作需要有顺手的命令行工具,而 `windows` 自带的 `cmd` 命令行工具功能太弱了,并且和基本的 `linux` 体验根本不一致.
 
 所以,基本上不会使用 `cmd` 命令行,而安装 `git` 时恰巧给我们提供了 `git bash` 命令行工具,不仅可以用它操作 `git` ,日常工作中使用它也是绰绰有余.
+
+### 三月春风正得意
 
 比如,我们使用 `cmd` 和 `git bash` 打开指定目录,看一下两者的表现自然明白为什么要使用 `git bash` ?
 
@@ -125,6 +137,8 @@
 所以,当 `git` 提供的 `git bash` 命令行工具能满足日常管理所需时自然不会再考虑 `cmd` 命令行.
 
 毕竟,`git bash` 不仅操作界面漂亮而且功能体验也不错,提供了基本的 `bash` 功能足够应付日常开发需求.
+
+### 忽遇阵雨摧花枝
 
 然而,长此以往潜意识中认为 `git bash` 能够完全替代 `cmd`,但是这种想法是不对的！
 
@@ -152,13 +166,17 @@ G:.
 
 > 圣贤告诉我们要"只知其然知其所以然",为什么 `git bash` 不支持 `tree` 命令?
 
+### 重走当年长征路
+
 重温当初走过的路,试图从安装 `git` 时能否找到蛛丝马迹,大多数情况下我们是采用安装 `git` 顺带集成的`git bash` 命令行工具.
 
 下载安装的无关截图这里就不展示了,一步一步重新安装 `git` 时看到了一点蛛丝马迹.
 
 ![git-bash-setup-terminal.png](../images/git-bash-setup-terminal.png)
 
-`MinTTY` 是 `MSYS2` 的默认终端,`git bash` 将使用 `MinTTY `作为终端模拟器,如有需要调用`Windows` 程序必须通过 `winpty` 才能正常工作.
+> 原文: Git Bash will use MinTTY as terminal emulator, which sports a resizable window, non-rectangular selections and a Unicode font. Windows console programs(such as interactive Python) must be launched via' winpty' to work in MinTTY.
+
+> 翻译: `MinTTY` 是 `MSYS2` 的默认终端,`git bash` 将使用 `MinTTY `作为终端模拟器,如有需要调用`Windows` 程序必须通过 `winpty` 才能正常工作.
 
 上述介绍文字虽然看起来并不起眼,毕竟我们安装 `windows` 程序时基本上都是下一步下一步就完成了安装,但是作为重点理解为什么 `git bash` 不支持 `tree` 命令,我们有必要好好研究这段话.
 
@@ -169,6 +187,8 @@ G:.
 - 调用 `Windows` 程序时必须通过 `winpty` 开头才能在 `MinTTY` 终端正常工作.
 
 > 通过上述分析,我们得到了一条重要线索: `MinTTY` 终端和 `MinTTY` 系统.
+
+### 总结经验有感悟
 
 安装过程中仅能获取到这些有效信息,那么安装完成后能否提供更多细节呢?
 
@@ -187,6 +207,8 @@ G:.
 - `git bash` 内置 `mintty` 终端,从而实现类似于 `linux` 命令行的开发体验.
 - `mintty` 是 `mysys2` 的默认终端,猜测 `mysys2` 大概是类似于 `linux` 这种操作系统吧.
 - `mintty` 是基于 `putty` 二次开发的产品,运行 `windows` 控制台程序时必须通过 `winpty` 调用,暂时无法猜测 `winpty` 是什么性质的产品.
+
+### 抓住线索再出发
 
 先不管那么多,先去看看 `mintty` 的官网,发现更多细节吧!
 
