@@ -26,6 +26,12 @@
 
 解决好中文乱码显示问题,现在演示下 `git` 的基本工作流.
 
+![git-bash-gui-operation.gif](../images/git-bash-gui-operation.gif)
+
+> 依次点击扫描(`Rescan`) -> 暂存已更改(`Stage Changed`) -> 停止广播(`Sign Off`) -> 提交(`Commit`),完成一次文件修改后的提交操作.
+
+其次登场的是 `linux` 小伙伴很熟悉的命令行操作方式,唤醒方式和上述工具的方式基本一致,选中项目的根路径**右键**选择`Git Bash Here` 跳出命令行窗口.
+
 
 
 
