@@ -150,5 +150,15 @@ G:.
 
 ## 探求庐山真面目
 
-> 回到起点,重温当初走过的路.
+> 圣贤告诉我们要"只知其然知其所以然",为什么 `git bash` 不支持 `tree` 命令?
+
+重温当初走过的路,试图从安装 `git` 时能否找到蛛丝马迹,大多数情况下我们是采用安装 `git` 顺带集成的`git bash` 命令行工具.
+
+下载安装的无关截图这里就不展示了,一步一步重新安装 `git` 时看到了一点蛛丝马迹.
+
+![git-bash-setup-terminal.png](../images/git-bash-setup-terminal.png)
+
+`MinTTY` 是 `MSYS2` 的默认终端,`git bash` 将使用 `MinTTY `作为终端模拟器,如有需要调用`Windows` 程序必须通过 `winpty` 才能正常工作.
+
+
 
