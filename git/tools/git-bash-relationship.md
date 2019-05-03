@@ -36,15 +36,13 @@
 
 > `git --version` 查看 `git` 版本,`git status` 查看文件状态,`git add` 添加文件,`git commit` 提交文件.
 
-`windows` 在安装 `git` 时会默认安装这些工具,主要是帮助我们更好的使用 `git` ,因而推荐集成这些扩展工具.
+现在两兄弟分别登台亮相,向大家展示了基本的操作流程,虽然操作方式不同,但最终目的确实一致的,这一下应该认同他们俩确实是亲兄弟了吧.
 
-当然,如果你足够熟悉 `git` 也不必安装扩展工具,仅仅安装最基础最核心的 `git` 服务即可.
+下面我们重点讨论下 `git bash` 命令行工具,看 `git` + `bash` 会擦除什么样的火花,让我们重新认识一下这个**陌生的老朋友**.
 
-或者,你有更好的替代方案,比如更好用的命令行工具或更智能好用的图形化工具,不论处于何种目的,大神都不是一蹴而就的,小白大多数选择的还是默认选项.
+![git-bash-windows.png](../images/git-bash-windows.png)
 
-所以,下面我们将重新梳理一遍 `git bash` 命令行,重新认识一下**陌生的老朋友**.
-
-> `git bash` 大多数是通过 `git` 服务 [https://git-scm.com/download/win](https://git-scm.com/download/win) 集成安装,或者单独安装 [http://git-for-windows.github.io/](http://git-for-windows.github.io/).
+> `git bash` 命令行工具大多数情况下是通过安装 [git](https://git-scm.com/download/win) 时进行集成安装的,当然也不排除[单独安装](http://git-for-windows.github.io/)的可能性.
 
 ## 回忆那年初相见
 
