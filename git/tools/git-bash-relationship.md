@@ -50,7 +50,24 @@
 
 > 时光不老,我们不散,`git bash` 陪我们一起走过难忘的那一段路.
 
-`git` 是 `linux` 的缔造者开发出的一款分布式版本控制系统,最初是为了更好的服务 `linux` 系统的开发,后来逐渐风靡全球,成为当今世界上最先进最流行的**分布式版本控制系统**.
+`git` 是 `linux` 的缔造者开发出的一款**分布式版本控制系统**,最初是为了 `linux` 系统的多人协同开发,后来逐渐风靡全球,如今已成为**最先进最流行**的**分布式版本控制系统**.
+
+![git-bash-github-git.png](../images/git-bash-github-git.png)
+
+最初 `git` 只支持 `linux` 操作系统,后来 `windows` 系统也慢慢支持了,只不过这种支持并不是 `git` 官方所为,而是**微软**团队进行移植整合的产品.
+
+![git-bash-github-gitforwindows.png](../images/git-bash-github-gitforwindows.png)
+
+> `git` 是分布式版本控制系统,源代码托管在 `github` 网站,`github` 是知名度很高的在线代码托管平台.
+
+从上述两张图中,我们不难得出以下结论.
+
+- `Git` 的官网是[https://git-scm.com](https://git-scm.com),`Git` 组织主要负责维护 `git` 项目和 `git-scm` 网站.
+- `Git for Windows` 的官网是[https://gitforwindows.org/](https://gitforwindows.org/),`Git for Windows` 组织项目明显多了不少,不仅要维护`Git` 还要提供移植 `Git` 所需的一系列后勤支持.
+- `Git` 支持 `Windows` 本身的行为来源于 `Git for Windows` 组织,并不是 `Git` 天然支持的功能.
+- `Git for Windows` 组织项目大部分来源于其他开源项目,也就是说将 `Git` 移植到 `Windows` 系统背后需要很多技术支持.
+
+> `Git` 本身是 `linux` 系统的产品服务,所以类 `linux` 系统的 `mac` 是**天然支持**的,差异比较大的 `Windows` 无法天然支持,所以由 `Git for Windows` 组织移植 `Git` 进行**变相支持**.	
 
 学习 `git` 或是工作所需,或是开源精神所驱使,不管出于怎样的目的,只要是想要学习 `git` ,那第一步已经迈出去,接下来的日子里我们都在构建自己的知识库.
 
