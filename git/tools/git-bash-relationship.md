@@ -172,6 +172,97 @@ G:.
 
 安装过程中仅能获取到这些有效信息,那么安装完成后能否提供更多细节呢?
 
+![git-bash-mintty-about.png](../images/git-bash-mintty-about.png)
 
+> 点击 `git bash` 图标或者右键唤起菜单项(`Option...`),查看关于(`About`)软件介绍.
 
+简介的正上方标题是 `mintty` 而不是`git bash` ,这也验证了安装 `git bash` 时配置的模拟器确实是 `mintty` .
+
+`mintty` 在很大程度上基于 `PuTTY` ,其中 `mintty` 的项目官网是 [http://mintty.github.io/](http://mintty.github.io/).
+
+现在我们又多了一条线索,`mintty` 是基于 `putty` 二次开发的产品,并且既然 `mintty` 的官网地址是使用 `github` 的 `github page` 搭建的,从而可以猜测出 `mintty` 源代码八成也托管在 `github`.
+
+再次整理下目前积累的线索:
+
+- `git bash` 内置 `mintty` 终端,从而实现类似于 `linux` 命令行的开发体验.
+- `mintty` 是 `mysys2` 的默认终端,猜测 `mysys2` 大概是类似于 `linux` 这种操作系统吧.
+- `mintty` 是基于 `putty` 二次开发的产品,运行 `windows` 控制台程序时必须通过 `winpty` 调用,暂时无法猜测 `winpty` 是什么性质的产品.
+
+先不管那么多,先去看看 `mintty` 的官网,发现更多细节吧!
+
+![git-bash-mintty.github.io.png](../images/git-bash-mintty.github.io.png)
+
+官网介绍带我们了解了更多细节,一步一步解读,看看 `mintty` 到底是什么鬼?
+
+> Mintty is a terminal emulator for Cygwin, MSYS or Msys2, and derived projects, and for WSL.
+
+`mintty` 是 `cygwin` ,`msys` 或者 `msys2` 的终端模拟器,是派生项目,为了 `wsl` .
+
+言简意赅的自我描述向我们展示了三个重点,首先是终端模拟器,其次是 `cygwin` ,还有 `msys` 和 `msys2` ,最后是 `wsl` .
+
+一下子暴露出这么多陌生名词并且分别给出了链接,看起来他们并不简单,当然现在还不是了解他们的最佳时间,当务之急,还是先看看 `mintty` 官网向我们传达了什么有价值的信息吧!
+
+> Xterm-compatible terminal emulation, coverage of DEC VT300 series terminal features and more.
+
+- 兼容 `Xterm` 终端模拟器,覆盖 `DEC VT300` 系列终端功能等.
+
+又冒出两个陌生名词,不过这两个好像并不重要,只不过是说 `mintty` 是终端模拟器并且兼容 `Xterm` 和`DEC VT300`模拟器.
+
+这条信息的价值不是很大,我们早已经知道 `mintty` 是一种终端模拟器了,至于和其他模拟器兼容性如何并不是很关心.
+
+![git-bash-options-terminal.png](../images/git-bash-options-terminal.png)
+
+> Running in Cygwin, MSYS(2), midipix. Also hosting WSL.
+> Running on Windows XP, Windows 7, Windows 10.
+
+- 运行在 `cygwin` ,`msys(2)` 和 `midipix` ,并且托管在 `wsl` .
+- 运行在 `Windows xp`,`Windows 7` 和 `Windows 10` .
+
+这段话证明了我们两个猜想,`msys` 是操作系统以及 `wsl` 很重要,已经是第二次出现了.
+
+> Mintty works on all Windows versions from Windows XP onwards. Similarly to other Cygwin/MSYS terminals based on pseudo terminal ("pty") devices, however, mintty is not a full replacement for the Windows Console window (by default running the Windows Command Processor / command prompt / cmd.exe). While native console programs with simple text output usually work fine, interactive programs often have problems, although sometimes there are workarounds. See the Wiki section about Input/Output interaction for hints, especially on the winpty wrapper.
+
+- `mintty` 是一种终端模拟器,在 `windows` 上运行地不错,和其他基于 `pseudo terminal ("pty")` 的终端模拟器类似,并不能完全替代 `Windows` 控制台.**简单文本输出**的原生控制台程序可以正常工作,但交互式程序则会遇到问题.更多详情请查看 `winpty` 包装器.
+
+这段话满是干货,官宣直接验证本文开篇结论,`git bash` 并不能完全替代 `cmd`.其次就是频繁出现的`winpty` 到底是什么,不仅安装 `git` 时出现了,现在又出现了.
+
+看来也是很重要的一个名词,毕竟给出相关链接的名词都不是简单名词.
+
+> In Cygwin, it is installed as the default "Cygwin Terminal". 
+For MSYS (old), select the msys-mintty package in the installer. (Or from MinGW, install the package with mingw-get install mintty.) 
+For MSYS2, mintty is installed by default, or it can be installed later with the command pacman -S mintty.
+
+- `mintty` 还是 `cygwin` 系统的默认终端,`msys` 系统安装 `msys-mintty` 进行安装 `mintty`(或者`MinGW` 通过 `mingw-get install mintty` 进行安装),`MSYS2` 通过 `pacman -S mintty` 安装.
+
+这段话向我们展示了各个操作系统如何安装 `mintty`,虽然大部分情况下默认已安装,但还是提供了手动安装的解决方案(当然都是通过包管理工具方式进行安装).
+
+看起来和我们无关,因为安装 `git bash` 时已安装了 `mintty` 了啊,自然不需要再手动安装.
+
+但是,仔细想一想这篇文章之所以存在不正是因为 `git bash` 命令行没有提供 `tree` 命令吗?
+
+既然没有提供 `tree` 命令,那我们手动安装就好了吧?
+
+可是,事情远远没有这么简单,`linux` 系统中安装第三方命令大概分为两种途径,一种是包管理工具,另外一种是源码编译方式.
+
+那么作为 `windows` 系统的 `git bash` 也能如此扩展第三方命令吗?
+
+答案是不能!
+
+因为 `mintty` 本身就是通过包管理工具安装的,证明我们是没有包管理工具可以扩展第三方命令,正如人可以造房子,但是已造好的房子还能自己造桌子椅子吗?
+
+源码编译的方式能否扩展第三方命令呢?对于这部分不敢妄自猜测,可能可以也可能不可以.
+
+可以的原因在于 `linux` 进行源码安装时依赖的是 `c` 环境进行编译安装,如果 `windows` 系统也安装 `c` 环境进行编译应该也能成功.
+
+不可以的原因在于 `windows` 毕竟不是 `linux` ,底层差异还是非常大的,可能无法支持全部 `linux` 特性,不然 `git` 移植过程中也不必维护那么多项目才能提供背后技术支持.
+
+不管怎么样,可以预见的是,即使通过编译安装的方式能够扩展第三方命令,但过程想必十分复杂,自然不是我等小白能够轻松扩展的.
+
+所以两种扩展途径基本上都不能扩展第三方命令,真的需要扩展命令的话,要么安装完整的坏境使其带有相应的**包管理**工具,要么源码编译安装并支持 `windows` 系统.
+
+简单回顾一下 `mintty` 官网传达出的有价值信息点有哪些?
+
+- `mintty` 是 `cygwin` ,`msys(2)` 的默认终端模拟器,托管于 `wsl`.
+- `mintty` 兼容`Xterm` 模拟器,是一种**伪终端**,调用原生控制台程序时需要借助 `winpty` 进行包装.
+- `mintty` 只是终端,不具备**包管理**功能,可能无法扩展第三方命令.
 
