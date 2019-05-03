@@ -2,9 +2,7 @@
 
 > 曾以为 `git bash` 能够**完全取代** `cmd` ,谁知道 `cmd` 却投给我一个鄙视的眼神!
 
-`git bash` 虽然可以在一定程度上代替 `windows` 自带的 `cmd` 命令行，但并不能**完全替代 ** `cmd` 命令行.
-
-`cmd` 对 `git bash`
+`git bash` 确实能够在一定程度上替代 `cmd` ,但是默认安装的 `git bash` 命令行工具并不能彻底取代 `cmd` ,难怪 `cmd` 听说要让自己退休,会呵呵一笑了!
 
 ![ git-bash-comtempt-cmd.jpg](../images/git-bash-comtempt-cmd.jpg)
 
