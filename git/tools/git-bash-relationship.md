@@ -216,13 +216,13 @@ G:.
 
 官网介绍带我们了解了更多细节,一步一步解读,看看 `mintty` 到底是什么鬼?
 
-> Mintty is a terminal emulator for Cygwin, MSYS or Msys2, and derived projects, and for WSL.
+> 原文: Mintty is a terminal emulator for Cygwin, MSYS or Msys2, and derived projects, and for WSL.
 
-`mintty` 是 `cygwin` ,`msys` 或者 `msys2` 的终端模拟器,是派生项目,为了 `wsl` .
+> 翻译: `mintty` 是 `cygwin` ,`msys` 或者 `msys2` 的终端模拟器,是派生项目,为了 `wsl` .
 
 言简意赅的自我描述向我们展示了三个重点,首先是终端模拟器,其次是 `cygwin` ,还有 `msys` 和 `msys2` ,最后是 `wsl` .
 
-一下子暴露出这么多陌生名词并且分别给出了链接,看起来他们并不简单,当然现在还不是了解他们的最佳时间,当务之急,还是先看看 `mintty` 官网向我们传达了什么有价值的信息吧!
+一下子暴露出这么多陌生名词并且分别给出了链接,看起来他们并不简单,当然现在还不是了解他们的最佳时间,当务之急还是先看看 `mintty` 官网向我们传达了什么有价值的信息吧!
 
 > Xterm-compatible terminal emulation, coverage of DEC VT300 series terminal features and more.
 
@@ -287,4 +287,34 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 - `mintty` 是 `cygwin` ,`msys(2)` 的默认终端模拟器,托管于 `wsl`.
 - `mintty` 兼容`Xterm` 模拟器,是一种**伪终端**,调用原生控制台程序时需要借助 `winpty` 进行包装.
 - `mintty` 只是终端,不具备**包管理**功能,可能无法扩展第三方命令.
+
+### 跟随线索刨到底 
+
+> 刨根要问底儿,只有知道是什么才能更好地回答为什么.
+
+刚才研究 `minty` 官网时留下了几个特殊名词,`Cygwin` 和 `MSYS(2)` 系统以及 `WSL`.
+
+根据上文的猜测,`Cygwin` 和 `MSYS(2)` 应该都是一种操作系统,那么暂时先不深究他们之间有什么关系,现在先看看 `WSL` 是怎么回事?
+
+> 项目地址: [https://github.com/mintty/wsltty](https://github.com/mintty/wsltty)
+
+![git-bash-wsltty.png](../images/git-bash-wsltty.png)
+
+> 原文: Mintty as a terminal for WSL (Windows Subsystem for Linux).
+
+> 翻译: `Mintty` 是为 `WSL` 而生的终端,`WSL` 是实现 `Linux` 系统体验的 `Windows` 的子系统.
+
+由此可见,`Mintty` 的最终目的是打造 `Windows` 上的 `linux` 体验,本质还是 `Windows` 系统.
+
+`wsltty` 项目没有提供更多细节供我们继续参考,但是却给我们留下一条线索,`wsltty` 和 `mintty` 同属于 `mintty` 组织项目.
+
+不知道这种命名有没有什么内在联系,`wsltty` 去掉后面的 `tty` 是 `wsl` ,而 `wsl` 是 `Windows Subsystem for Linux` 的缩写.
+
+那么 `mintty` 去掉后面的 `tty` 剩下就是 `min` ,又是什么单词的缩写呢?
+
+暂时不得而知,既然已经来到 `mintty` 的组织账号,那我们不妨顺便看一下 `mintty` 本身项目.
+
+![git-bash-mintty-github.png](../images/git-bash-mintty-github.png)
+
+仅仅是简单的项目介绍,并没有额外信息,看来 `WSL` 这条线索到此为止了.
 
