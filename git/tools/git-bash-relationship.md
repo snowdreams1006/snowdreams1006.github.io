@@ -10,7 +10,23 @@
 
 `windows` 小伙伴们在学习 `git` 时不知道有没有接触过 `git bash` 命令行工具？
 
-反正我是接触过并且仍然在一直在使用中,`git bash` 命令行工具是 `windows` 系统安装 `git` 服务时默认安装的扩展工具,它的异卵双胞胎兄弟是 `git gui` 图形化工具.
+反正我是接触过并且仍然在一直在使用中,因为 `git bash` 命令行工具是 `windows` 系统安装 `git` 服务时**默认安装**的扩展工具,它还有一个异卵双胞胎兄弟是 `git gui` 图形化工具.
+
+这两兄弟一个像 `linux` ,一个像 `windows` ,虽然是一母同生,性格长相却千差万别,不过确实是双胞胎兄弟哟!
+
+首先登场的是 `Windows` 系统所喜闻乐见的图形化工具,`git gui` 闪亮登场!
+
+![git-bash-gui-gibberish.png](../images/git-bash-gui-gibberish.png)
+
+不是说好闪亮登场的吗,怎么右侧文件区是乱码?别急,简单设置下编码方式就能正常显示中文了.
+
+![git-bash-gui-encoding-utf8.png](../images/git-bash-gui-encoding-utf8.png)
+
+> 在菜单栏选择编辑(`Edit`),然后选择选项(`Options...`),在设置页面左侧中间部分选择文件编码格式(`Default File Content Encoding`) 修改(`Change`)成 `utf-8`.
+
+解决好中文乱码显示问题,现在演示下 `git` 的基本工作流:添加并提交文件.
+
+
 
 `windows` 在安装 `git` 时会默认安装这些工具,主要是帮助我们更好的使用 `git` ,因而推荐集成这些扩展工具.
 
