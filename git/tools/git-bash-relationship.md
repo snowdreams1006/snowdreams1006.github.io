@@ -32,8 +32,9 @@
 
 其次登场的是 `linux` 小伙伴很熟悉的命令行操作方式,唤醒方式和上述工具的方式基本一致,选中项目的根路径**右键**选择`Git Bash Here` 跳出命令行窗口.
 
+![git-bash-bash-operation.gif](../images/git-bash-bash-operation.gif)
 
-
+> `git --version` 查看 `git` 版本,`git status` 查看文件状态,`git add` 添加文件,`git commit` 提交文件.
 
 `windows` 在安装 `git` 时会默认安装这些工具,主要是帮助我们更好的使用 `git` ,因而推荐集成这些扩展工具.
 
