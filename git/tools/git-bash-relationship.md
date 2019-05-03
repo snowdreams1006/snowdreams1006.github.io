@@ -1,6 +1,12 @@
 # git bash 复杂关系
 
-> 曾以为 `git bash` 能够**完全取代** `cmd` ,谁知道 `cmd` 投给我一个鄙视的眼神!
+> 曾以为 `git bash` 能够**完全取代** `cmd` ,谁知道 `cmd` 却投给我一个鄙视的眼神!
+
+`git bash` 虽然可以在一定程度上代替 `windows` 自带的 `cmd` 命令行，但并不能**完全替代 ** `cmd` 命令行.
+
+`cmd` 对 `git bash`
+
+![ git-bash-comtempt-cmd.jpg](../images/git-bash-comtempt-cmd.jpg)
 
 ## 你好陌生老朋友
 
@@ -17,7 +23,7 @@
 所以,下面我们将重新梳理一遍 `git bash` 命令行,重新认识一下**陌生的老朋友**.
 
 > `git bash` 大多数是通过 `git` 服务 [https://git-scm.com/download/win](https://git-scm.com/download/win) 集成安装,或者单独安装 [http://git-for-windows.github.io/](http://git-for-windows.github.io/).
- 
+
 ## 回忆那年初相见
 
 > 时光不老,我们不散,`git bash` 陪我们一起走过难忘的那一段路.
@@ -90,4 +96,8 @@
 没有命令的话,可以理解,至少应该提供包管理工具供我自由扩展命令吧？很抱歉,并没有找到类似的包管理工具.
 
 一味信任 `git bash` 直接导致的结果就是根本没有想到 `cmd` 自带的命令,事实上,`cmd` 是带有 `tree` 命令的.
+
+## 探求庐山真面目
+
+> 回到起点,重温当初走过的路.
 
