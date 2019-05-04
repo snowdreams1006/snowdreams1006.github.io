@@ -379,4 +379,7 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 > `Mintty` is a terminal emulator for `Cygwin`, `MSYS` or `Msys2`, and derived projects, and for `WSL`.
 
+![git-bash-mintty-summary.png](../images/git-bash-mintty-summary.png)
+
+
 
