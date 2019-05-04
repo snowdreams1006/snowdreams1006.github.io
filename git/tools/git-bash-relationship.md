@@ -332,7 +332,7 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 #### 线索之 `MSYS`
 
-> 适用于 `Windows` 的极简 `GNU`,官网: [http://mingw.org/wiki/MSYS](http://mingw.org/wiki/MSYS)
+> `MinGW` 适用于 `Windows` 的极简 `GNU`,官网: [http://mingw.org/wiki/MSYS](http://mingw.org/wiki/MSYS)
 
 ![git-bash-MSYS.png](../images/git-bash-MSYS.png)
 
@@ -358,4 +358,9 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 这里再次暴露了一个名词---`MinGW` ,但是我们可以猜测出 `MinGW` 应该和 `Cygwin` 一样是一种系统.
 
 #### 线索之 `MSYS2`
+
+> `MSYS2` 是 `Windows` 的软件发行版和构建平台,官网: [http://www.msys2.org/](http://www.msys2.org/)
+
+![git-bassh-MSYS2-homepage.png](../images/git-bassh-MSYS2-homepage.png)
+
 
