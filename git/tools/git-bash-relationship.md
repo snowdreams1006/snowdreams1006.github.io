@@ -390,6 +390,20 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 ### 新线索再次出发
 
+> `GNU` 操作系统,官网: [http://www.gnu.org/](http://www.gnu.org/)
 
+看到这里一切恍然大悟,原来 `GNU` 是自由软件运动,从而诞生了自由软件,进而有个自由操作系统.
 
+![git-bash-GNU.png](../images/git-bash-GNU.png)
 
+前面介绍的 `Cygwin` 和 `MSYS2` 以及 `MinGW` 应该都是自由操作系统,只不过这些系统旨在 `windows`
+系统上打造 `linux` ,从而获取到 `linux` 的体验.
+
+## 拨开迷雾见青天
+
+简单总结下 `git bash` 的朋友圈:
+
+- `GNU` 是 `GNU's Not Unix` 的**递归缩写**,是自由操作系统,包括一系列的自由软件.
+- `MinGW` 是 `Minimalist GNU for Windows` 的缩写,极简主义的 `GW`,基于 `Cygwin` 二次开发.
+- `Cygwin` 是自由系统,让你在 `Windows` 上获得 `linux` 的感觉.
+- `mintty` 是终端模拟器,是`MinGW` ,`MSYS2` 和 `Cygwin` 的默认终端,与原生控制台程序交互需要借助 `winpty` 封装调用.
