@@ -296,7 +296,9 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 根据上文的猜测,`Cygwin` 和 `MSYS(2)` 应该都是一种操作系统,那么暂时先不深究他们之间有什么关系,现在先看看 `WSL` 是怎么回事?
 
-> 项目地址: [https://github.com/mintty/wsltty](https://github.com/mintty/wsltty)
+#### 线索之 `WSL` 
+
+> `WSL` : `Windows Subsystem for Linux` 的缩写,项目地址: [https://github.com/mintty/wsltty](https://github.com/mintty/wsltty)
 
 ![git-bash-wsltty.png](../images/git-bash-wsltty.png)
 
@@ -317,4 +319,18 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 ![git-bash-mintty-github.png](../images/git-bash-mintty-github.png)
 
 仅仅是简单的项目介绍,并没有额外信息,看来 `WSL` 这条线索到此为止了.
+
+#### 线索之 `Cygwin` 
+
+> 在 `Windows` 上获得 `linux` 的感觉. 官网: [https://cygwin.com/](https://cygwin.com/)
+
+![git-bash-Cygwin.png](../images/git-bash-Cygwin.png)
+
+`Cygwin` 是 `GNU` 工具,在 `windows` 上获得 `linux` 的体验,但并不能运行原生 `linux` 程序,必须重新编译源代码才能在 `windows` 上运行.
+
+现在我们知道 `Cygwin` 是一种功能,用来在 `windows` 系统上获得 `linux` 的感觉,其中 `Cygwin` 源代码中涉及到 `GNU` 这这个陌生名词.
+
+#### 线索之 `MSYS`
+
+> 适用于 `Windows` 的极简 `GNU`,官网: [http://mingw.org/wiki/MSYS](http://mingw.org/wiki/MSYS)
 
