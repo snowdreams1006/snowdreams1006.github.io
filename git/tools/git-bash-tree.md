@@ -142,7 +142,7 @@ Options:
 
 帮助可大了去了,刨根问题找到了源头,问题自然迎刃而解!
 
-### 直接放弃吧!少年
+### 我劝少年放弃吧
 
 你确定不是在逗我?让我直接放弃?
 
@@ -344,7 +344,7 @@ cat: /c/Users/snowdreams1006/.bashrc: No such file or directory
 
 竟然配置文件都不存在?
 
-![git-bash-tree-wakeup.jpg](git-bash-tree-wakeup.jpg)
+![git-bash-tree-wakeup.jpg](../images/git-bash-tree-wakeup.jpg)
 
 当然不存在了啊!快醒醒,你是在 `Windows` 系统上并不是 `Linux` 系统,上哪给你弄这些配置文件去?
 
@@ -995,4 +995,32 @@ G:.
 ```
 
 亲测有效,通过设置别名的方式可以简化命令,从而实现在 `git bash` 中优雅调用 `tree` 命令.
+
+### 固执少年一意孤行
+
+> 少年既然不听劝,那我只好和你一起一意孤行.
+
+`git bash` 不支持 `tree` 命令,意味着 `mintty` 终端不支持 `tree` 命令,但 `mintty` 既然作为一款优秀的终端模拟器不可能不支持 `tree` 命令,否则 `cygwin` ,`msys2` 和 `mingw` 等系统不可能将其作为默认终端.
+
+回想起 `linux` 系统,最小化安装版也不支持 `tree` 命令,通过包管理工具自行扩展即可支持 `tree` 命令.
+
+因此,思路有两种,像 `linux` 那样通过包管理工具安装 `tree` 命令,或者通过源码编译方式扩展 `tree` 命令.
+
+第一种需要包管理工具,而`git bash` 使用的是 `mintty` 终端,并没有提供相应的包管理工具.
+所以想要通过包管理工具进行安装 `tree` 命令也是无路可走.
+
+还有一种源码编译安装方式,可以猜想到的是将会比较麻烦,不仅要安装 `c` 编译环境,还可能会面临如何移植到 `Windows` 环境的问题.
+
+恕再下先行一步,告辞!
+
+![git-bash-tree-bye.jpg](../images/git-bash-tree-bye.jpg)
+
+但是老司机怎么能收走就走,不是说好一起闯天下得嘛?
+
+好吧,留下网址请自行研究吧,如果研究好了记得告诉我哟!
+
+- 在 `mingw` ,`msys2` 或者 `cygwin` 系统上编译安装 `tree` 的 `c` 文件,最终生成 `tree.exe` 可执行文件.
+- 独立安装 `c` 编译环境,生成的 `tree.exe` 可执行文件再想办法兼容到 `git bash` 所支持的 `.exe` 类型,或许也不用转换.
+- 请参考 `linux` 系统的 `tree` 命令源码: [http://mama.indstate.edu/users/ice/tree/](http://mama.indstate.edu/users/ice/tree/)
+
 
