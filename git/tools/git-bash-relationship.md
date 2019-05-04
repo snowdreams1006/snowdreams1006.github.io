@@ -418,6 +418,15 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 > `mintty` 是 `GNU` 自由软件,是一种终端模拟器.
 
+## 知其然下次再见
+
+既然我们明白了 `git bash` 的相关知识,那么想要理解 `git bash` 为什么支持 `linux` 命令或者说为什么不支持某些 `linux` 命令已经有了大概印象.
+
+下次我们将以具体的实际例子分析,为什么 `git bash` 不支持 `tree` 命令以及如何才能在 `git bash` 使用 `tree` 命令.
+
+![git-bash-again.png](../images/git-bash-again.png)
+
+好了,感谢你的阅读,如果本文对你有所帮助,欢迎留言告诉我!
 
 
 
