@@ -334,3 +334,15 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 > 适用于 `Windows` 的极简 `GNU`,官网: [http://mingw.org/wiki/MSYS](http://mingw.org/wiki/MSYS)
 
+![git-bash-MSYS.png](../images/git-bash-MSYS.png)
+
+> 原文: SYS is a collection of GNU utilities such as bash, make, gawk and grep to allow building of applications and programs which depend on traditionally UNIX tools to be present. It is intended to supplement MinGW and the deficiencies of the cmd shell.
+
+> 翻译: `MSYS` 是一组GNU实用程序,如 `bash`，`make`，`gawk` 和 `grep` ,可以构建依赖于传统 `UNIX` 工具的应用程序和程序.它旨在补充 `MinGW` 和 `cmd shell` 的缺陷.
+
+- `MSYS` 是 `GNU` 工具集合,旨在补充 `MinGW` 和 `cmd shell` 的缺陷.
+
+> 原文: A common misunderstanding is MSYS is "UNIX on Windows", MSYS by itself does not contain a compiler or a C library, therefore does not give the ability to magically port UNIX programs over to Windows nor does it provide any UNIX specific functionality like case-sensitive filenames. Users looking for such functionality should look to Cygwin or Microsoft's Interix instead.
+
+> 翻译: 一个常见的误解是: `MSYS` 是 "Windows上的UNIX",`MSYS` 本身不包含编译器或C库,因此无法将 `UNIX` 程序神奇地移植到 `Windows`,也不提供任何 `UNIX`特 定功能，如大小写-敏感文件名.寻找此类功能的用户应该选择 `Cygwin` 或 `Microsoft` 的 `Interix`.
+
