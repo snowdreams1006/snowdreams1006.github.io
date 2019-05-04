@@ -354,5 +354,8 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 - `MSYS` 既提供整包安装,也可以使用 `mingw-get` 包管理功能单独下载.
 
+现在我们知道了 `MSYS` 是一套工具包,旨在补充 `MinGW` 和 `cmd shell` 的缺陷.
+这里再次暴露了一个名词---`MinGW` ,但是我们可以猜测出 `MinGW` 应该和 `Cygwin` 一样是一种系统.
 
+#### 线索之 `MSYS2`
 
