@@ -64,7 +64,7 @@ G:.
 
 ![git-bash-tree-mintty-homepage.png](../images/git-bash-tree-mintty-homepage.png)
 
-### `mintty` 的社交属性
+### `git bash` 和 `mintty` 关系
 
 `mintty` 是优秀的终端模拟器,不仅是其他系统上默认的终端,也是 `git bash` 的默认终端.
 
@@ -95,4 +95,10 @@ Options:
 如果想要自定义 `mintty` 终端,在 `git bash` 命令行界面右键选择选项设置即可打开设置页面.
 
 ![git-bash-tree-options.png](../images/git-bash-tree-options.png)
+
+### `mingw` 是什么
+
+> Minimalist GNU for Windows
+
+
 
