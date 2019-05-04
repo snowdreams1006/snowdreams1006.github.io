@@ -407,3 +407,17 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 - `MinGW` 是 `Minimalist GNU for Windows` 的缩写,极简主义的 `GW`,基于 `Cygwin` 二次开发.
 - `Cygwin` 是自由系统,让你在 `Windows` 上获得 `linux` 的感觉.
 - `mintty` 是终端模拟器,是`MinGW` ,`MSYS2` 和 `Cygwin` 的默认终端,与原生控制台程序交互需要借助 `winpty` 封装调用.
+
+现在总算弄清楚了 `git bash` 的朋友圈,再看一看 `git bash` 中他们在哪?
+
+![git-bash-MinGw4.png](../images/git-bash-MinGw4.png)
+
+> `MinGW64` 和 `MinGW32` 都是 `MinGW` 系统,分别对应 `Windows` 的64位和32位操作系统.
+
+![git-bash-mintty.png](../images/git-bash-mintty.png)
+
+> `mintty` 是 `GNU` 自由软件,是一种终端模拟器.
+
+
+
+
