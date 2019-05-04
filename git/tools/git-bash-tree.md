@@ -116,7 +116,64 @@ Options:
 
 ![git-bash-tree-gnu.png](../images/git-bash-tree-gnu.png)
 
+### 朋友圈关系梳理
 
+`git bash` 采用 `mintty` 作为终端模拟器,而 `mintty` 终端是 `mingw` ,`msys2` 和 `cygwin`的默认终端,这些"操作系统"或多或少都是 `GNU` 的一部分.
 
+`GNU` 是自由软件运动的成果,提出自由软件以及自由软件操作系统概念,源码开源发布.
+
+正因如此,江山代有才人出,前人栽树后人乘凉,`Cygwin` 作为 `GNU` 一员,提出了要在 `Windows` 打造出 `Linux` 的感觉,开发出一套完整的解决方案.
+
+或许由于这套方案太完整,功能齐全因而软件包体积庞大,因此 `MinGW` 和 `MSYS` 分别在其基于上进行精简重构,保留最简功能,发展出"极简主义的GNU".
+
+开源的力量是可持续的,慢慢的,这些操作系统的内置终端功能也被单独提取出来,`mintty` 作为他们的默认终端也逐渐独立提供终端模拟器服务,轻松和各个系统进行安装集成.
+
+说到开源,自然是少不了 `git` 的身影,分布式版本控制系统这种优秀工具应该造福全人类,然而 `git` 本身仅支持类 `Unix` 系统,并不提供 `WIndows` 系统的支持.
+
+`Git For Windows` 组织出手增加了 `git` 对 `Windows` 系统的支持,背后的技术多半离不开上述介绍的 `GNU` 操作系统.
+
+`Git Bash Here` 则是 `Git For Windows` 的命令行工具,使用的终端模拟器就是明星模拟器 `mintty`.
+
+![git-bash-mintty-summary.png](../images/git-bash-mintty-summary.png)
+
+## 回到正题
+
+弄清楚事情的来龙去脉后,对我们解决问题有什么帮助呢?
+
+帮助可大了去了,刨根问题找到了源头,问题自然迎刃而解!
+
+### 直接放弃吧!少年
+
+你确定不是在逗我?让我直接放弃?
+
+![git-bash-tree-abandon.jpg](../images/git-bash-tree-abandon.jpg)
+
+亲,真的抱歉呢,放弃是解决问题的最快途径!
+
+...
+
+谈一谈为什么要放弃?
+
+`git bash` 命令行使用的是 `mintty` 终端,而 `mintty` 终端并不能完全替代 `cmd` ,也没有提供包管理工具供我们扩展第三方命令.
+
+所以默认情况下,如果没有提供某些命令,那我们只好放弃在 `git bash` 命令行中使用这些命令.
+
+此路不通,自然会寻求其他解决途径,比如可以借助 `cmd` 命令行或者其他第三方软件等,没必要非要坚持使用`git bash`!
+
+既然本文是 `tree` 命令引发的讨论,那就谈点和主题有关的技能点,不然岂不是跑题了?
+
+#### `git bash` 调用 `cmd` 程序 
+ 
+`tree` 命令虽然 `git bash` 不提供,但是 `cmd` 却已经内置了.
+
+值得注意的是,`cmd` 提供的 `tree` 命令比较特殊,并不是常见的 `.exe` 结尾文件,而是 `.com` 结尾的文件.
+
+所以 `git bash` 中输入 `tree` 命令时,自身 `/usr/bin` 中没有 `tree.exe` 文件,而系统中也没有 `tree.exe` 命令,那么就会提示找不到命令了啊!
+
+- 手动补全命令后缀
+
+那么第一种调用方法便是补全后缀名,这样自然能够调用 `cmd` 的 `tree.com` 命令.
+
+![git-bash-tree-cmd.com.png](../images/git-bash-tree-cmd.com.png)
 
 
