@@ -98,7 +98,21 @@ Options:
 
 ### `mingw` 是什么
 
-> Minimalist GNU for Windows
+> `mingw` 是 `Minimalist GNU for Windows` 的缩写,是 `Microsoft Windows` 应用程序的极简主义开发环境.
+
+![git-bash-tree-mingw.png](../images/git-bash-tree-mingw.png)
+
+### `msys` 是什么
+
+> `MSYS` 是 `Minimal SYStem` 的缩写,是 `Bourne Shell` 命令行解释器系统.作为 `Microsoft` 的 `cmd.exe` 的替代品,它提供了一个通用的命令行环境,特别适合与 `MinGW` 一起使用,用于将许多开源应用程序移植到 `MS-Windows`平台; 它是 `Cygwin-1.3` 的轻量级分支，它包含一小部分 `Unix` 工具,可以帮助实现这一目标.
+
+### `cygin` 是什么
+
+> 大量 `GNU` 和开源工具,提供类似于 `Windows` 上的 `Linux` 发行版的功能.
+
+
+
+
 
 
 
