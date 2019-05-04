@@ -381,5 +381,15 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 ![git-bash-mintty-summary.png](../images/git-bash-mintty-summary.png)
 
+- `git bash` 选择 `mintty` 作为默认终端,而 `mintty` 本身又是 `msys2` 和 `cygwin` 的默认终端.
+- `msys` 是 `gnu` 工具集,旨在补充 `mingw` .
+- `msys2` 重写了 `msys` ,大部分基于 `cygwin` .
+- `cygwin` 也是 `gnu` 开源产品,让你在 `windows` 上获得 `linux` 的感觉.
+
+根据目前我们了解到的知识,已经大致了解了基本情况,一直频繁出现的 `gnu` 又是什么鬼?
+
+### 新线索再次出发
+
+
 
 
