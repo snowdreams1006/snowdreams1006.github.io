@@ -162,18 +162,36 @@ Options:
 
 既然本文是 `tree` 命令引发的讨论,那就谈点和主题有关的技能点,不然岂不是跑题了?
 
-#### `git bash` 调用 `cmd` 程序 
- 
 `tree` 命令虽然 `git bash` 不提供,但是 `cmd` 却已经内置了.
 
 值得注意的是,`cmd` 提供的 `tree` 命令比较特殊,并不是常见的 `.exe` 结尾文件,而是 `.com` 结尾的文件.
 
 所以 `git bash` 中输入 `tree` 命令时,自身 `/usr/bin` 中没有 `tree.exe` 文件,而系统中也没有 `tree.exe` 命令,那么就会提示找不到命令了啊!
 
-- 手动补全命令后缀
+#### 手动补全命令
 
 那么第一种调用方法便是补全后缀名,这样自然能够调用 `cmd` 的 `tree.com` 命令.
 
 ![git-bash-tree-cmd.com.png](../images/git-bash-tree-cmd.com.png)
+
+> `git bash` 并不识别 `.com` 后缀的命令,输入 `tree` 命令时以为是 `tree.exe` ,实际上 `tree` 命令应该是 `tree.com` 的简写.
+
+我擦,竟然出现乱码,根据我多年的开发经验来看,乱码问题多半是编码问题导致的,那么修改下终端的编码设置应该就能解决问题.
+
+![git-bash-tree-encoding-utf8.png](../images/git-bash-tree-encoding-utf8.png)
+
+> 在命令行窗口内右键弹出 `mintty` 终端的设置页面,选择文本(`Text`)中本地化(`Locale`)配置,选择中文简体(`zh_CN`),字符集(`Character set`)设置为`UTF-8`.
+
+![git-bash-tree-encoding-fail.png](../images/git-bash-tree-encoding-fail.png)
+
+瞬间被打脸,无论是原来的`git bash` 命令行窗口还是新开的命令行窗口,仍然还是乱码!
+
+然而,我是不会承认被打脸的,世人皆醉我独醒,肯定是 `bug`,哈哈!
+
+> 其实,中文乱码真的是 `bug` ,还是官方认可的 `bug` 哟,我并没有被打脸呢,后续会介绍.
+
+#### 调用 `cmd` 程序
+
+
 
 
