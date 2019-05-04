@@ -346,3 +346,4 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 > 翻译: 一个常见的误解是: `MSYS` 是 "Windows上的UNIX",`MSYS` 本身不包含编译器或C库,因此无法将 `UNIX` 程序神奇地移植到 `Windows`,也不提供任何 `UNIX`特 定功能，如大小写-敏感文件名.寻找此类功能的用户应该选择 `Cygwin` 或 `Microsoft` 的 `Interix`.
 
+- `MSYS` 并**不是windows上的Unix**,完整的解决方案应该选择 `Cygwin` 或 `Interix` 等.
