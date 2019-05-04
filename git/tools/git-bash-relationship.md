@@ -363,4 +363,9 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 ![git-bassh-MSYS2-homepage.png](../images/git-bassh-MSYS2-homepage.png)
 
+> 原文: At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software. It provides a bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.
+
+> 翻译: 其核心是基于现代 `Cygwin`（`POSIX` 兼容层）和 `MinGW-w64` 的 `MSYS`的独立重写,旨在与本机 `Windows` 软件实现更好的互操作性.它提供了一个 `bash shell`，`Autotools`,修订控制系统等,用于使用 `MinGW-w64` 工具链构建本机 `Windows` 应用程序.
+
+
 
