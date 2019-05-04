@@ -1,6 +1,4 @@
-[TOC]
-
-# git bash 复杂关系
+# git bash 背后朋友圈
 
 > 曾以为 `git bash` 能够**完全取代** `cmd` ,谁知道 `cmd` 却投给我一个鄙视的眼神!
 
