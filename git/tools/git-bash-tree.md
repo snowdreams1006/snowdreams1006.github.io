@@ -54,8 +54,45 @@ G:.
 
 这些问题必须等我们弄清楚 `mintty` 的朋友圈关系才能更好地解决上述问题,接下来简单科普下 `mintty` 的朋友圈.
 
-> 关于科普知识来源请参考上一篇文章: <<git bash 背后的朋友圈>>
+> 关于科普知识的来源,请参考上一篇文章: <<git bash 背后的朋友圈>>
 
-### `mintty` 是什么
+### `mintty` 究竟是什么
 
+> `Mintty` 是 `Cygwin`，`MSYS` 或 `Msys2` 的终端模拟器,派生项目和 `WSL`.
+
+`mintty` 开源终端模拟器,基于 `putty` 的终端仿真和 `Windows` 前端页面.
+
+![git-bash-tree-mintty-homepage.png](../images/git-bash-tree-mintty-homepage.png)
+
+### `mintty` 的社交属性
+
+`mintty` 是优秀的终端模拟器,不仅是其他系统上默认的终端,也是 `git bash` 的默认终端.
+
+```bash
+$ mintty --help
+Usage: mintty [OPTION]... [ PROGRAM [ARG]... | - ]
+
+Start a new terminal session running the specified program or the user's shell.
+If a dash is given instead of a program, invoke the shell as a login shell.
+
+Options:
+  -c, --config FILE     Load specified config file
+  -e, --exec            Treat remaining arguments as the command to execute
+  -h, --hold never|start|error|always  Keep window open after command finishes
+  -i, --icon FILE[,IX]  Load window icon from file, optionally with index
+  -l, --log FILE|-      Log output to file or stdout
+  -o, --option OPT=VAL  Override config file option with given value
+  -p, --position X,Y    Open window at specified coordinates
+  -s, --size COLS,ROWS  Set screen size in characters
+  -t, --title TITLE     Set window title (default: the invoked command)
+  -u, --utmp            Create a utmp entry
+  -w, --window normal|min|max|full|hide  Set initial window state
+      --class CLASS     Set window class name (default: mintty)
+  -H, --help            Display help and exit
+  -V, --version         Print version information and exit
+```
+
+如果想要自定义 `mintty` 终端,在 `git bash` 命令行界面右键选择选项设置即可打开设置页面.
+
+![git-bash-tree-options.png](../images/git-bash-tree-options.png)
 
