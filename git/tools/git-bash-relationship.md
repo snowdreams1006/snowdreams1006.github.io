@@ -367,5 +367,16 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 
 > 翻译: 其核心是基于现代 `Cygwin`（`POSIX` 兼容层）和 `MinGW-w64` 的 `MSYS`的独立重写,旨在与本机 `Windows` 软件实现更好的互操作性.它提供了一个 `bash shell`，`Autotools`,修订控制系统等,用于使用 `MinGW-w64` 工具链构建本机 `Windows` 应用程序.
 
+- `MSYS2` 基于 `MSYS` 的重写,核心基于 `Cygwin` ,使用 `MinGW-w64` 来构建应用程序.
+
+目前为止,我们已经了解了 `Cygwin` ,`MSYS` 和 `MSYS2` 系统,它们都是为了在 `Windows` 系统上获得类 `Unix` 操作体验,其中 `MSYS2` 是 `MSYS` 的升级版,`MSYS` 基于 `Cygwin` 
+
+这些系统都有自己的包安装工具,注意的是 `MSYS` 并不像 `MSYS2` 那样,它只是工具集,为了`MinGW` 提供扩展支持.
+
+### 整理线索朋友圈
+
+目前为止,我们以 `Mintty` 为中心,逐步分析了解了 `Cygwin` , `MSYS` 和 `MSYS2`,并且顺便了解下 `WSL` .
+
+> `Mintty` is a terminal emulator for `Cygwin`, `MSYS` or `Msys2`, and derived projects, and for `WSL`.
 
 
