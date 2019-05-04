@@ -347,3 +347,12 @@ For MSYS2, mintty is installed by default, or it can be installed later with the
 > 翻译: 一个常见的误解是: `MSYS` 是 "Windows上的UNIX",`MSYS` 本身不包含编译器或C库,因此无法将 `UNIX` 程序神奇地移植到 `Windows`,也不提供任何 `UNIX`特 定功能，如大小写-敏感文件名.寻找此类功能的用户应该选择 `Cygwin` 或 `Microsoft` 的 `Interix`.
 
 - `MSYS` 并**不是windows上的Unix**,完整的解决方案应该选择 `Cygwin` 或 `Interix` 等.
+
+> 原文: Up to MSYS 1.0.11, all components of MSYS were distributed in one single installer you downloaded and ran. While convenient, this made it difficult to update individual components. So, all the MSYS components are now available as separate downloads managed by mingw-get (see Getting_Started (currently alpha release).
+
+> 翻译: 在 `MSYS 1.0.11` 之前，`MSYS` 的所有组件都分布在您下载并运行的一个安装程序中.虽然方便,但这使得更新单个组件变得困难.因此,所有 `MSYS` 组件现在都可以作为 `mingw-get` 管理的单独下载提供（请参阅 `Getting_Started`（目前为 `alpha` 版）.
+
+- `MSYS` 既提供整包安装,也可以使用 `mingw-get` 包管理功能单独下载.
+
+
+
