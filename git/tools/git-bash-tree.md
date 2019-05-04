@@ -344,6 +344,8 @@ cat: /c/Users/snowdreams1006/.bashrc: No such file or directory
 
 竟然配置文件都不存在?
 
+![git-bash-tree-wakeup.jpg](git-bash-tree-wakeup.jpg)
+
 当然不存在了啊!快醒醒,你是在 `Windows` 系统上并不是 `Linux` 系统,上哪给你弄这些配置文件去?
 
 脑海中迅速闪现哲学基本问题: 我是谁,我在那,我在干什么?
@@ -965,3 +967,32 @@ E:.
         └─misc
 
 ```
+
+看到熟悉的 `./etc/bash.bashrc` 文件,顿时亲切不少,设置一下别名再说.
+
+```bash
+snowdreams1006@home MINGW64 /e/git
+$ echo "# Set alias for tree command" >> ./etc/bash.bashrc
+snowdreams1006@home MINGW64 /e/git
+$ echo "alias tree='winpty tree.com'" >> ./etc/bash.bashrc
+snowdreams1006@home MINGW64 /e/git
+$ source ./etc/bash.bashrc
+```
+
+现在测试一下能否正确打印出目录树:
+
+```bash
+snowdreams1006@home MINGW64 /e/git
+$ cd /g/sublime/test
+
+snowdreams1006@home MINGW64 /g/sublime/test
+$ tree
+卷 工作 的文件夹 PATH 列表
+卷序列号为 000000A3 CC3C:50D0
+G:.
+├─cmd
+└─git
+```
+
+亲测有效,通过设置别名的方式可以简化命令,从而实现在 `git bash` 中优雅调用 `tree` 命令.
+
