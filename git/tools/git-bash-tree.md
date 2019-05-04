@@ -56,7 +56,7 @@ G:.
 
 > 关于科普知识的来源,请参考上一篇文章: <<git bash 背后的朋友圈>>
 
-### `mintty` 究竟是什么
+### `mintty` 是什么
 
 > `Mintty` 是 `Cygwin`，`MSYS` 或 `Msys2` 的终端模拟器,派生项目和 `WSL`.
 
@@ -110,6 +110,11 @@ Options:
 
 ![git-bash-tree-cygwin.png](../images/git-bash-tree-cygwin.png)
 
+### `gnu` 是什么
+
+> `GNU` 是 `GNU's Not Unix` 的递归缩写,是自由软件操作系统. 
+
+![git-bash-tree-gnu.png](../images/git-bash-tree-gnu.png)
 
 
 
