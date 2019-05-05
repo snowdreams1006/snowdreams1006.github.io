@@ -1009,7 +1009,7 @@ G:.
 第一种需要包管理工具,而`git bash` 使用的是 `mintty` 终端,并没有提供相应的包管理工具.
 所以想要通过包管理工具进行安装 `tree` 命令也是无路可走.
 
-#### 包管理工具
+#### 包管理工具安装
 
 如果能够提供包管理工具,那么我们就可以像 `linux` 系统那样安装第三方命令一样,安装 `tree` 命令了.
 
@@ -1041,8 +1041,152 @@ bash: pacman: command not found
 
 ![git-bash-tree-gitforwindows-build-extra.png](../images/git-bash-tree-gitforwindows-build-extra.png)
 
+根据官方说明,安装后正在下载相关依赖,下载速度比较慢的话,请自行解决.
 
 ![git-bash-tree-cmd-downloading.png](../images/git-bash-tree-cmd-downloading.png)
+
+下载完成后,原来的 `cmd` 窗口会自动关闭并且打开新的 `git bash` 窗口.
+
+![git-bash-gitbash-install.png](../images/git-bash-gitbash-install.png)
+
+```bash
+Administrator@snowdreams1006 MINGW64 / (master)
+$ sdk help
+The 'sdk' shell function helps you to get up and running
+with the Git for Windows SDK. The available subcommands are:
+
+create-desktop-icon: install a desktop icon that starts the Git for
+    Windows SDK Bash.
+
+cd <project>: initialize/update a worktree and cd into it. Known projects:
+        git git-extra msys2-runtime installer build-extra
+        MINGW-packages MSYS2-packages mingw-w64-busybox mingw-w64-curl
+        mingw-w64-cv2pdb mingw-w64-git mingw-w64-git-credential-manager
+        mingw-w64-git-lfs mingw-w64-git-sizer mingw-w64-wintoast bash
+        curl gawk git-flow gnupg heimdal mintty nodejs openssh openssl
+        perl perl-HTML-Parser perl-Locale-Gettext perl-Net-SSLeay
+        perl-TermReadKey perl-XML-Parser perl-YAML-Syck subversion tig
+
+init <project>: initialize and/or update a worktree. Known projects
+    are the same as for the 'cd' command.
+
+build <project>: builds one of the following:
+        git-and-installer git git-extra msys2-runtime installer
+        mingw-w64-busybox mingw-w64-curl mingw-w64-cv2pdb mingw-w64-git
+        mingw-w64-git-credential-manager mingw-w64-git-lfs
+        mingw-w64-git-sizer mingw-w64-wintoast bash curl gawk
+        git-flow gnupg heimdal mintty nodejs openssh openssl
+        perl perl-HTML-Parser perl-Locale-Gettext perl-Net-SSLeay
+        perl-TermReadKey perl-XML-Parser perl-YAML-Syck subversion tig
+
+edit <file>: edit a well-known file. Well-known files are:
+        git-sdk.sh sdk.completion ReleaseNotes.md install.iss
+
+reload: reload the 'sdk' function.
+```
+
+现在安装完成后,我们再次打开 `Git for Windows` 的开发文档简介,从中不难发现该项目使用了 `MSYS2` 项目,那么问题迎刃而解.
+
+![git-bash-tree-gitforwindows-msys2.png](../images/git-bash-tree-gitforwindows-msys2.png)
+
+根据科普知识,我们知道 `MSYS2` 和 `MinGW` 都是操作系统,而 `Git For Windows` 将两者结合在一起,默认使用 `MSYS2` 的包管理工具.
+
+```bash
+Administrator@snowdreams1006 MINGW64 / (master)
+$ Pacman -h
+用法:  Pacman <操作> [...]
+操作:
+    Pacman {-h --help}
+    Pacman {-V --version}
+    Pacman {-D --database} <选项> <软件包>
+    Pacman {-F --files}    [选项] [软件包]
+    Pacman {-Q --query}    [选项] [软件包]
+    Pacman {-R --remove}   [选项] <软件包>
+    Pacman {-S --sync}     [选项] [软件包]
+    Pacman {-T --deptest}  [选项] [软件包]
+    Pacman {-U --upgrade}  [选项] <文件>
+
+使用 'Pacman {-h --help}' 及某个操作以查看可用选项
+```
+
+激动人心的时刻就要来临,在正式使用 `Pacman` 安装 `tree` 命令外,我们再次检查当前系统环境以确保没有 `git bash` 无法调用 `tree` 命令.
+
+```bash
+Administrator@snowdreams1006 MINGW64 / (master)
+$ tree
+bash: tree: 未找到命令
+```
+
+调用 `Pacman -S tree` 命令安装 `tree` 命令.
+
+```
+Administrator@snowdreams1006 MINGW64 / (master)
+$ Pacman -S tree
+正在解析依赖关系...
+正在查找软件包冲突...
+
+软件包 (1) tree-1.8.0-1
+
+下载大小:   0.05 MiB
+全部安装大小：  0.07 MiB
+
+:: 进行安装吗？ [Y/n] y
+警告：没有 /var/cache/pacman/pkg/ 缓存存在，正在创建...
+:: 正在获取软件包......
+ tree-1.8.0-1-x86_64       51.1 KiB   211K/s 00:00 [#####################] 100%
+(1/1) 正在检查密钥环里的密钥                       [#####################] 100%
+(1/1) 正在检查软件包完整性                         [#####################] 100%
+(1/1) 正在加载软件包文件                           [#####################] 100%
+(1/1) 正在检查文件冲突                             [#####################] 100%
+(1/1) 正在检查可用存储空间                         [#####################] 100%
+:: 正在处理软件包的变化...
+(1/1) 正在安装 tree      
+```
+
+验证安装成功,切换到测试目录调用 `tree` 命令真的打印出了目录树结构.
+
+```bash
+Administrator@snowdreams1006 MINGW64 / (master)
+$ pwd
+/
+
+Administrator@snowdreams1006 MINGW64 / (master)
+$ cd /f/workspace/test
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test
+$ tree
+.
+├── cmd
+└── gitbash
+
+2 directories, 0 files
+```
+
+`tree.exe` 文件确实已经存在,通过这样方式当然可以安装任意第三方命令了呢!
+
+```bash
+Administrator@snowdreams1006 MINGW64 / (master)
+$ pwd
+/
+
+Administrator@snowdreams1006 MINGW64 / (master)
+$ ls usr/bin/tree.exe
+usr/bin/tree.exe*
+
+Administrator@snowdreams1006 MINGW64 / (master)
+$ ls usr/bin/tree.exe
+usr/bin/tree.exe*
+```
+
+然而,事情还没有结束,虽然打印当前路径显示的是在 `/` ,但是如果从普通的 `git bash` 命令行窗口进入 `/`,发现他们并不一致!
+
+![git-bash-tree-gitbash-diff.png](../images/git-bash-tree-gitbash-diff.png)
+
+> 开发版左上角文字: `SDK-64`,普通版左上角: `MinGW64`.
+
+事情应该不至于这么复杂,我猜测如果进入到 `git sdk` 的安装目录,应该是一样的!
+
+![git-bash-tree-gitbash-in.png](../images/git-bash-tree-gitbash-in.png)
 
 #### 源码编译安装
 
