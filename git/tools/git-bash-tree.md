@@ -1009,12 +1009,29 @@ G:.
 第一种需要包管理工具,而`git bash` 使用的是 `mintty` 终端,并没有提供相应的包管理工具.
 所以想要通过包管理工具进行安装 `tree` 命令也是无路可走.
 
+#### 包管理工具
+
+如果能够提供包管理工具,那么我们就可以像 `linux` 系统那样安装第三方命令一样,安装 `tree` 命令了.
+
+首先想到的是 `mintty` 官网有没有相关说明,遗憾的是,`mintty` 本身一般是通过包管理工具安装的,单独的终端并没有包管理的环境,因此无法调用相关命令.
+
+![git-bash-tree-mintty-package.png](../images/git-bash-tree-mintty-package.png)
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace/test
+$ mingw-get
+bash: mingw-get: command not found
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test
+$ pacman
+bash: pacman: command not found
+```
+
+然而,小小的挫折是不会轻易放弃的,既然 `mintty` 官网不能提供有效的帮助,那我们回到最初安装 `git` 的地方,看一下 `git` 能否提供相关的包管理工具.
 
 
 
-
-
-
+#### 源码编译安装
 
 还有一种源码编译安装方式,可以猜想到的是将会比较麻烦,不仅要安装 `c` 编译环境,还可能会面临如何移植到 `Windows` 环境的问题.
 
