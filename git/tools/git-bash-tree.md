@@ -1343,8 +1343,40 @@ E:\GIT\?
 
 - `winpty tree.com` : 直接调用 `cmd` 内置 `tree.com` 命令.
 - `winpty cmd //c tree` : 通知 `cmd` 调用 `tree` 命令.
-- 安装`Git For Windows` 开发版,`Pacman -S tree` 安装 `tree` 命令,然后执行 `tree` 调用.
-- 复制已编译好的 `tree.exe` 文件到 `git bash` 安装目录下的 `/usr/bin` 目录,然后执行 `tree` 命令.
+- [安装](https://github.com/git-for-windows/build-extra/releases/download/git-sdk-1.0.7/git-sdk-installer-1.0.7-64.7z.exe) `Git For Windows` 开发版,`Pacman -S tree` 安装 `tree` 命令,然后执行 `tree` 调用.
+- [下载](https://sourceforge.net/projects/gnuwin32/files/tree/1.5.2.2/tree-1.5.2.2-bin.zip/download) 已编译好的 `tree.exe` 文件到 `git bash` 安装目录下的 `/usr/bin` 目录,然后执行 `tree` 命令.
 
 ## 回顾总结
 
+`Git` 本身并不支持 `Windows` 系统,`Git For Windows` 团队为了移植到 `Windows` 平台,付出了很多努力,最直观的感受就是提供了 `Git For Windows` 软件.
+
+由于 `Git for Windows` 的出色工作得到 `Git` 的官方认可,现在默认下载的 `Git` 就是来源于 `Git for Windows`.
+
+但 `Git` 底层是运行在类 `linux` 系统的,这种差异必然需要 `Windows` 到 `Linux` 的中间处理层进行转换.
+
+因此,`Git for Window` 背后的技术中涉及到大量的 `GNU` 自由软件操作系统和 `WSL` (`Windows Subsystem for Linux`) 的相关代码.
+
+正是由于背后千丝万缕的联系,为我们扩展 `git bash` 命令行提供了一些思路.
+
+基于 `Cygwin` 系统进行扩展,安装完整的操作系统,模拟出 `linux` 运行环境,在 `Windows` 上也能找到 `linux` 的感觉.
+
+当然,`Cygwin` 由于比较完整,体积也相当大,所以在此衍生出 `MSYS2` 和 `MinGW` 操作系统.
+
+殊途同归,他们的底层架构有些不同,但目的是一致的,都是在 `Windows` 上找到 `Linux` 的感觉,并且他们的终端命令行几乎都是 `mintty` .
+
+在终端中调用各自的包管理工具即可轻松扩展第三方命令,此外,由于他们大多数都有 `c` 编译环境,因此也可以选择重新编译安装.
+
+所以 `git bash` 命令行看起来下像是 `git` 官方支持,其实却是由 `Git for Windows` 组织独立维护的开源项目.
+
+默认 `Git for Windows` 没有提供包管理工具,开发版却默认集成了 `MSYS2` 环境.也就是说我们可以用 `Pacman` 来安装 `tree` 命令.
+
+最后稍微总结本文知识要点:
+
+- `git bash` 命令行并不能完全替代 `cmd` 命令,两者互补才能相得益彰.
+- `git bash` 命令行中调用 `cmd` 程序需要通过 `winpty` 调用,比如 `winpty tree.com`
+- `git bash` 默认安装程序无包管理工具等高级功能,如需扩展自定义命令应该下载`Git for Windows SDK`.
+- `git bash` 环境兼容 `MSYS2` ,`MinGW` ,`Cygwin` 等系列自由软件,其他类似系统的 `tree.exe` 可能并不支持.
+
+好了,说了这么多,小伙伴们 get 到如何在 `git  bash` 使用(扩展) `tree` 命令了吗?
+
+如有疑问,欢迎留言告诉我!
