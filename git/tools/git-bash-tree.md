@@ -1029,7 +1029,20 @@ bash: pacman: command not found
 
 然而,小小的挫折是不会轻易放弃的,既然 `mintty` 官网不能提供有效的帮助,那我们回到最初安装 `git` 的地方,看一下 `git` 能否提供相关的包管理工具.
 
+![git-bash-tree-download-gitforwindows.png](../images/git-bash-tree-download-gitforwindows.png)
 
+频繁出现 `Git For Windows` 名词,根据软件的命令规则,`Git for Windows` 可能是独立的软件,更何况 `git bash` 集成的终端也不是自身研发的终端而是第三方的 `mintty` 终端.
+
+所以,我们有理由相信 `Git for Windows` 是另外的团队在维护,而不是 `Git` 团队.
+
+![git-bash-tree-gitforwindows-dev.png](../images/git-bash-tree-gitforwindows-dev.png)
+
+> `git-for-windows` 官网: [https://gitforwindows.org/](https://gitforwindows.org/)
+
+![git-bash-tree-gitforwindows-build-extra.png](../images/git-bash-tree-gitforwindows-build-extra.png)
+
+
+![git-bash-tree-cmd-downloading.png](../images/git-bash-tree-cmd-downloading.png)
 
 #### 源码编译安装
 
