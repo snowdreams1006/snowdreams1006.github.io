@@ -1009,6 +1009,13 @@ G:.
 第一种需要包管理工具,而`git bash` 使用的是 `mintty` 终端,并没有提供相应的包管理工具.
 所以想要通过包管理工具进行安装 `tree` 命令也是无路可走.
 
+
+
+
+
+
+
+
 还有一种源码编译安装方式,可以猜想到的是将会比较麻烦,不仅要安装 `c` 编译环境,还可能会面临如何移植到 `Windows` 环境的问题.
 
 恕再下先行一步,告辞!
@@ -1017,10 +1024,37 @@ G:.
 
 但是老司机怎么能收走就走,不是说好一起闯天下得嘛?
 
-好吧,留下网址请自行研究吧,如果研究好了记得告诉我哟!
+然而,心有余而力不足,编译安装再到测试确实是不少挑战,最重要的是,电脑太卡了等不了.
+
+所以,收集到了一些资料方便有条件的小伙伴去研究吧!
+
+![git-bash-tree-homepage.png](../images/git-bash-tree-homepage.png)
+
+> 下载链接: [ftp://mama.indstate.edu/linux/tree/tree-1.8.0.tgz](ftp://mama.indstate.edu/linux/tree/tree-1.8.0.tgz)
 
 - 在 `mingw` ,`msys2` 或者 `cygwin` 系统上编译安装 `tree` 的 `c` 文件,最终生成 `tree.exe` 可执行文件.
 - 独立安装 `c` 编译环境,生成的 `tree.exe` 可执行文件再想办法兼容到 `git bash` 所支持的 `.exe` 类型,或许也不用转换.
 - 请参考 `linux` 系统的 `tree` 命令源码: [http://mama.indstate.edu/users/ice/tree/](http://mama.indstate.edu/users/ice/tree/)
 
+我觉得我还可以再坚持一会,虽然不能从头开始编译生成 `tree.exe` 可执行文件,但是研究了这么多朋友圈关系,足够我找到解决方案了.
+
+`tree` 命令的源码文件编译成 `tree.exe` 可执行文件比较费劲,但是可以找到已经编译好的文件啊.
+
+说道这里,不得不提一下神奇的 [sourceforge](https://sourceforge.net/) 网站,提供源码和下载网站.
+
+![git-bash-tree-sourceforge-homepage.png](../images/git-bash-tree-sourceforge-homepage.png)
+
+前面我们一直在说 `mintty` 终端模拟器也好,或者 `mingw` ,`msys2` 和 `cygwin` 操作系统也罢,他们或多或少和 `GNU` 有一些联系,而 `GNU` 是自由软件操作系统,源码会随程序一同发布.
+
+所以我们应该可以从 `sourceforge` 网站上找到些蛛丝马迹,说不定还有打包好的可执行文件呢,如果那样的话就不用我们手动编译安装了!
+
+![git-bash-tree-sourceforge-search.png](../images/git-bash-tree-sourceforge-search.png)
+
+功夫不负有心人,竟然真的找到了,搜索 `GNU` 发现了 `gnuwin32` 项目,完整提供了原生命令,其中就有我们需要的 `tree` 命令.
+
+![git-bash-tree-guwin-files.png](../images/git-bash-tree-guwin-files.png)
+
+> 下载链接: [https://sourceforge.net/projects/gnuwin32/files/tree/1.5.2.2/tree-1.5.2.2-bin.zip/download](https://sourceforge.net/projects/gnuwin32/files/tree/1.5.2.2/tree-1.5.2.2-bin.zip/download)
+
+于是下载二进制文件找到其中的 `/bin/tree.exe` 并将其复制到 `/git/usr/bin` 目录下,这样 `git bash` 本身就支持 `tree` 命令了.
 
