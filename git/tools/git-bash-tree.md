@@ -1058,3 +1058,33 @@ G:.
 
 于是下载二进制文件找到其中的 `/bin/tree.exe` 并将其复制到 `/git/usr/bin` 目录下,这样 `git bash` 本身就支持 `tree` 命令了.
 
+首先清除掉上一步设置的别名,防止干扰以确保此二进制文件真实有效.
+
+```bash
+snowdreams1006@home MINGW64 /g/sublime/test
+# 切换到 `git` 安装目录
+$ cd /e/git
+
+snowdreams1006@home MINGW64 /e/git
+# 编辑 `bash.bashrc` 配置文件,移除别名
+$ vim ./etc/bash.bashrc
+
+snowdreams1006@home MINGW64 /e/git
+# 查看配置文件内容,别名设置已移除
+$ tail ./etc/bash.bashrc
+[[ "$-" != *i* ]] && return
+
+# Set a default prompt of: user@host, MSYSTEM variable, and current_directory
+#PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[35m\]$MSYSTEM\[\e[0m\] \[\e[33m\]\w\[\e[0m\]\n\$ '
+
+# Uncomment to use the terminal colours set in DIR_COLORS
+# eval "$(dircolors -b /etc/DIR_COLORS)"
+
+# Fixup git-bash in non login env
+shopt -q login_shell || . /etc/profile.d/git-prompt.sh
+
+snowdreams1006@home MINGW64 /e/git
+# 刷新配置文件,使其立即生效
+$ source ./etc/bash.bashrc
+
+```
