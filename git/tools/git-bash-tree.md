@@ -1335,3 +1335,16 @@ E:\GIT\?
 
 虽然原生 `cmd` 自带的 `tree.com` 命令也能打印出目录结构树,但是和扩展的第三方 `tree.exe` 命令相比,可配置的选项实在太少,难怪固执少年会执意扩展 `tree` 命令.
 
+## 懒人直达
+
+如果想要在 `git bash` 命令行中调用 `tree` 命令,总结了下列几种方法.
+
+> 注意: 从上到下逐渐复杂,根据自己的情况自行选择.
+
+- `winpty tree.com` : 直接调用 `cmd` 内置 `tree.com` 命令.
+- `winpty cmd //c tree` : 通知 `cmd` 调用 `tree` 命令.
+- 安装`Git For Windows` 开发版,`Pacman -S tree` 安装 `tree` 命令,然后执行 `tree` 调用.
+- 复制已编译好的 `tree.exe` 文件到 `git bash` 安装目录下的 `/usr/bin` 目录,然后执行 `tree` 命令.
+
+## 回顾总结
+
