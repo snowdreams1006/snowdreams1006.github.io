@@ -27,10 +27,11 @@ $ git --version
 如果打印出 `node.js` 版本信息,则表示本机已安装 `node.js` 环境,跳过此步骤.
 
 ```
-$ node -v
+$ node --version
 ```
 
->`node.js` 安装配置教程请参考 [https://nodejs.org/](https://nodejs.org/en/)
+> `nodejs` 默认的包安装工具 `npm` 国内访问速度有点慢,安装完毕后建议 `npm install -g cnpm
+` 使用淘宝镜像源代替默认的 `npm` ,详细教程请参考官方 [https://nodejs.org/](https://nodejs.org/en/)
 
 ### 检查 `gitbook` 环境[必须]
 
@@ -39,7 +40,7 @@ $ node -v
 如果打印出 `gitbook` 和 `cli` 版本信息,则表示本机已安装 `gitbook` 环境,跳过此步骤.
 
 ```
-$ gitbook -V
+$ gitbook --version
 ```
 
 否则的话,本机可能并没有安装 `gitbook` 环境,则需要安装 `gitbook` 相关工具.
@@ -54,13 +55,13 @@ $ gitbook -V
 $ sudo npm install -g gitbook-cli
 ```
 
-> 全局安装的话,可能需要超级管理员权限,输入下相应密码即可继续安装,如无报错,则表示安装成功.
+> 如果使用 `cnpm` 安装的话,使用 `cnpm install -g gitbook-cli` 命令.
 
-安装成功后会带有 `gitbook` 命令,现在再次运行下 `gitbook -V` 查看版本信息.
+安装成功后会带有 `gitbook` 命令,现在再次运行下 `gitbook --version` 查看版本信息.
 
 ```
 # 打印出 `CLI` 和 `GitBook` 版本信息即可,安装版本可能已经大于 `2.3.2`
-$ gitbook -V
+$ gitbook --version
 CLI version: 2.3.2
 GitBook version: 3.2.3
 $ 
