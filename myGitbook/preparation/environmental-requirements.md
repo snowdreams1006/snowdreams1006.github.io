@@ -30,7 +30,7 @@ $ git --version
 $ node --version
 ```
 
-> `nodejs` 默认的包安装工具 `npm` 国内访问速度有点慢,安装完毕后建议 `npm install -g cnpm
+> `nodejs` 默认的包安装工具 `npm` 国内访问速度有点慢,安装完毕后建议 `npm install cnpm -g --registry=https://registry.npm.taobao.org
 ` 使用淘宝镜像源代替默认的 `npm` ,详细教程请参考官方 [https://nodejs.org/](https://nodejs.org/en/)
 
 ### 检查 `gitbook` 环境[必须]

@@ -54,6 +54,8 @@
             * [主题插件](myGitbook/advance/plugin-theme.md)
         * [导出电子书](myGitbook/advance/export.md)
         * [发布电子书](myGitbook/advance/publish.md)
+    * [常见问题](myGitbook/issue/README.md)
+        * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
 * [java8新特性](java8/README.md)
     * [lambda表达式](java8/lambda.md)
     * [函数式接口](java8/functionInterface.md)
