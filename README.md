@@ -21,7 +21,7 @@
 
 ## 说明
 
-本教程源码托管在 [snowdreams1006.github.io](https://github.com/snowdreams1006/snowdreams1006.github.io) ,在线访问地址 [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/)
+本教程源码托管在 [snowdreams1006.github.io](https://github.com/snowdreams1006/snowdreams1006.github.io) ,在线访问地址 [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/) 或者 [https://snowdreams1006.gitbook.io/index/](https://snowdreams1006.gitbook.io/index/)
 
 如果你觉得本教程对你有所帮助,请不吝 `Star`.
 如果你想贡献一份力量,欢迎提交 `Pull Request`.

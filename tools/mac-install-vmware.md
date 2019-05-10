@@ -1,4 +1,4 @@
-# 给mac装个虚拟机
+# 给mac装个vmware虚拟机
 
 `mac` 系统安装虚拟机目前有两种主流软件,一种是 `Parallels Desktop` ,另一种是 `vmware`.
 

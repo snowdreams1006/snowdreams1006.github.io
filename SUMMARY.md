@@ -62,10 +62,14 @@
 
 ## 学习笔记
 * [工具资源](tools/README.md)
-    * [给mac装个虚拟机](tools/mac-install-vmware.md)
-    * [给虚拟机装个windows](tools/vmware-install-windows.md)
-    * [给虚拟机装个centos](tools/vmware-install-centos.md)
-    * [给虚拟机装个ubantu](tools/vmware-install-ubuntu.md)
+    * [给mac装个vmware虚拟机](tools/mac-install-vmware.md)
+        * [给mac虚拟机装个windows](tools/mac-vmware-install-windows.md)
+        * [给mac虚拟机装个centos](tools/mac-vmware-install-centos.md)
+        * [给mac虚拟机装个ubantu](tools/mac-vmware-install-ubuntu.md)
+    * [给windows装个vmware虚拟机](tools/windows-install-vmware.md)
+        * [给windows虚拟机装个mac](tools/windows-vmware-install-mac.md)
+        * [给windows虚拟机装个centos](tools/windows-vmware-install-centos.md)
+        * [给windows虚拟机装个ubantu](tools/windows-vmware-install-ubuntu.md)
 * [如何写作](write/README.md)
     * [markdown和富文本](write/markdownOrRichText.md)
     * [markdown转富文本](write/markdown2richText.md)
