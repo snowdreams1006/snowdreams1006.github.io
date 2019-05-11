@@ -66,6 +66,7 @@
         * [给mac虚拟机装个ubantu](tools/mac-vmware-install-ubuntu.md)
     * [给windows装个vmware虚拟机](tools/windows-install-vmware.md)
         * [给windows虚拟机装个mac](tools/windows-vmware-install-mac.md)
+        * [给windows虚拟机装个windows](tools/windows-vmware-install-windows.md)
         * [给windows虚拟机装个centos](tools/windows-vmware-install-centos.md)
         * [给windows虚拟机装个ubantu](tools/windows-vmware-install-ubuntu.md)
 * [如何写作](write/README.md)
