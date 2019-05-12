@@ -136,19 +136,78 @@ round-trip min/avg/max/stddev = 345.485/366.021/405.924/28.220 ms
 
 现在我们已经弄清楚域名和 `ip` 的映射关系,接下来要做的事情就是告诉本机,不同的操作系统具体文件存放的地址可能有些不同,下面我们以 `Windows` 和 `Mac` 举例说明.
 
+```
+# github related website
+192.30.253.113 github.com
+151.101.185.194 github.global.ssl.fastly.net
+203.98.7.65 gist.github.com
+13.229.189.0 codeload.github.com
+185.199.109.153 desktop.github.com 
+185.199.108.153 guides.github.com  
+185.199.108.153 blog.github.com
+18.204.240.114 status.github.com
+185.199.108.153 developer.github.com
+185.199.108.153 services.github.com
+192.30.253.175 enterprise.github.com   
+34.195.49.195 education.github.com    
+185.199.108.153 pages.github.com  
+34.196.237.103 classroom.github.com
+```
+
 ### `windows` 
 
-> `C:\Windows\System32\drivers\etc\hosts`
+> 映射文件存放于: `C:\Windows\System32\drivers\etc\hosts`
 
-4. `ipconfig /flushdns` 刷新 `dns` 缓存
+- 打开 `hosts` 文件,将上述映射关系**追加**到文件末尾,保存并退出.
 
+![github-speedup-windows-hosts.png](./images/github-speedup-windows-hosts.png)
+
+> 如果由于权限不足,无法保存,可以复制到桌面再编辑文件,最后移动并替换到 `hosts` 文件.
+
+- 运行 `ipconfig /flushdns` 刷新 `dns` 缓存.
+
+![github-speedup-windows-ping](./images/github-speedup-windows-ping)
 
 ### `mac`
 
-> `/etc/hosts`
+> 映射文件存放于: `/etc/hosts`
 
+- 编辑 `hosts` 文件并追加上述映射关系.
 
-`sudo /etc/init.d/networking restart`
+```bash
+$ cat /etc/hosts
+# jetbrains
+0.0.0.0 account.jetbrains.com
+0.0.0.0 www.jetbrains.com
 
-sudo dscacheutil -flushcache
+# github related website
+192.30.253.113 github.com
+151.101.185.194 github.global.ssl.fastly.net
+203.98.7.65 gist.github.com
+13.229.189.0 codeload.github.com
+185.199.109.153 desktop.github.com 
+185.199.108.153 guides.github.com  
+185.199.108.153 blog.github.com
+18.204.240.114 status.github.com
+185.199.108.153 developer.github.com
+185.199.108.153 services.github.com
+192.30.253.175 enterprise.github.com   
+34.195.49.195 education.github.com    
+185.199.108.153 pages.github.com  
+34.196.237.103 classroom.github.com
+```
 
+- 运行 `sudo dscacheutil -flushcache` 刷新 `dns` 缓存.
+
+```bash
+$ ping github.com -c 3
+PING github.com (192.30.253.113): 56 data bytes
+64 bytes from 192.30.253.113: icmp_seq=0 ttl=41 time=395.808 ms
+64 bytes from 192.30.253.113: icmp_seq=1 ttl=41 time=306.919 ms
+64 bytes from 192.30.253.113: icmp_seq=2 ttl=41 time=298.188 ms
+
+--- github.com ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 298.188/333.638/395.808/44.105 ms
+$ 
+```
