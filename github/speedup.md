@@ -166,7 +166,7 @@ round-trip min/avg/max/stddev = 345.485/366.021/405.924/28.220 ms
 
 - 运行 `ipconfig /flushdns` 刷新 `dns` 缓存.
 
-![github-speedup-windows-ping](./images/github-speedup-windows-ping)
+![github-speedup-windows-ping.png](./images/github-speedup-windows-ping.png)
 
 ### `mac`
 
@@ -211,3 +211,10 @@ PING github.com (192.30.253.113): 56 data bytes
 round-trip min/avg/max/stddev = 298.188/333.638/395.808/44.105 ms
 $ 
 ```
+
+## 又到总结时间
+
+本文讲述了如何解决 `github.com` 网站访问速度慢的问题,通过修改本机的 `hosts` 文件来绕过 `dns` 解析,这种方法仅仅适用于能够访问网站只不过是访问速度慢这一现象.
+
+如果本身无法访问国外网啊
+ 
