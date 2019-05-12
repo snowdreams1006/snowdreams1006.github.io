@@ -38,9 +38,31 @@ round-trip min/avg/max/stddev = 345.485/366.021/405.924/28.220 ms
 
 ![github-speedup-ipaddress-domain.png](./images/github-speedup-ipaddress-domain.png)
 
+那到哪里去查询域名和 `ip` 的对应关系呢?
 
+想一想现实生活中,每个人都有自己的家,而这个家有具体的地址,也就是平时说的门牌号.
 
+当然,有些人名下不只有一个家,可以有很多房产都可以作为家.
 
+对应到计算机世界中,域名就是计算机中的个人用户,而域名的家就是 ip 地址.一个域名可以有多个 ip,但一个 ip 只能有一个域名.
+
+正所谓"一山不容二虎","卧榻之旁岂容他人酣睡",一家之主只能有一个!
+
+如果有人想要拜访您,肯定要有具体的地址才能到你家里做客,从你家到你家的地址这个过程可能是你告诉他的,也可能是他自己找别人打听到的消息.
+
+域名到 `ip` 地址的过程同样也需要找人询问,这个信息一般会存在 `dns` 服务商那里,就像我们的地址登记到相关政府机构一样.
+
+虽然相关机构的信息比较权威及时,但门槛有点高,不如问一下当地的消息通.
+
+互联网上的消息通更是数不胜数,这里推荐两个查询域名解析的网站.
+
+- [http://tool.chinaz.com/dns/](http://tool.chinaz.com/dns/)
+
+![github-speedup-chinaz-preview.png](./images/github-speedup-chinaz-preview.png)
+
+- [https://www.ipaddress.com/](https://www.ipaddress.com/)
+
+![github-speedup-ipaddress-preview.png](./images/github-speedup-ipaddress-preview.png)
 
 ```
 # github
