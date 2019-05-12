@@ -216,5 +216,24 @@ $
 
 本文讲述了如何解决 `github.com` 网站访问速度慢的问题,通过修改本机的 `hosts` 文件来绕过 `dns` 解析,这种方法仅仅适用于能够访问网站只不过是访问速度慢这一现象.
 
-如果本身无法访问国外网啊
- 
+如果本身无法访问国外网站,那么这种方法就不适用,可能需要另辟蹊径学习科学上网.
+
+最后再贴一下 `hosts` 文件内容:
+
+```
+# github related website
+192.30.253.113 github.com
+151.101.185.194 github.global.ssl.fastly.net
+203.98.7.65 gist.github.com
+13.229.189.0 codeload.github.com
+185.199.109.153 desktop.github.com 
+185.199.108.153 guides.github.com  
+185.199.108.153 blog.github.com
+18.204.240.114 status.github.com
+185.199.108.153 developer.github.com
+185.199.108.153 services.github.com
+192.30.253.175 enterprise.github.com   
+34.195.49.195 education.github.com    
+185.199.108.153 pages.github.com  
+34.196.237.103 classroom.github.com
+```
