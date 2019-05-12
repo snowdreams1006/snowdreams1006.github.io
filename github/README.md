@@ -1,8 +1,8 @@
-# github 教程
+# github 入门教程
 
 `github` 是一个基于 `git` 的代码托管平台,是平时工作学习的好帮手,学会如何用好 `github` 网站能够帮助我们更好分享代码或者与其他开发人员合作.
 
-![github](../images/github.png)
+![github](./images/github.png)
 
 ## 注册 github 账号
 
@@ -17,7 +17,7 @@
 
 >注意: snowdreams1006仅仅是笔者用户名,实际需要替换成读者的用户名
 
-![snowdreams1006.github.io](../images/snowdreams1006.github.io.png)
+![snowdreams1006.github.io](./images/snowdreams1006.github.io.png)
 
 ## 配置 github
 
@@ -52,8 +52,8 @@ cat ~/.ssh/id_rsa.pub
 
 回到 `github`,点击头像(Acount),选择设置(Settings),再选择左侧的 SSH and GPG keys,点击右侧的NEW SSH Key,然后填写标题(Title),最好是有意义的名称,比如`youremail@example.com for github`,密钥(Key)填写上一边生成的公钥,一般是以`ssh-rsa` 开头的一大串字符,最后保存(Add SSH Key).
 
-![github-setting.png](../images/github-setting.png)
-![github-ssh.png](../images/github-ssh.png)
+![github-setting.png](./images/github-setting.png)
+![github-ssh.png](./images/github-ssh.png)
 
 **第四步: 验证 ssh**
 
@@ -67,11 +67,11 @@ ssh -T git@github.com
 
 登录 `github` 网站新建远程仓库(New Repository),例如`git-demo`,默认权限是公开的(public),也可以选择私有的(private),初始化 `README.md ` 文件和 `.gitignore` 文件以及选择开源协议这些都是可选的,视具体情况而定.
 
-![github-new-repository.png](../images/github-new-repository.png)
+![github-new-repository.png](./images/github-new-repository.png)
 
 刷新当前页面,应该能到看到已创建好的`git-demo` 项目,接下来准备将其克隆到本地电脑.
 
-![github-repository-created.png](../images/github-repository-created.png)
+![github-repository-created.png](./images/github-repository-created.png)
 
 ## 克隆到本地仓库
 
@@ -100,7 +100,7 @@ git push origin master
 
 提交完成后,登录 `github` 网站,刷新当前项目 `git-demo` ,应该能看到我们刚刚提交的新文件`test.txt`.
 
-![github-repository-updated.png](../images/github-repository-updated.png)
+![github-repository-updated.png](./images/github-repository-updated.png)
 
 ## 添加仓库关联
 
