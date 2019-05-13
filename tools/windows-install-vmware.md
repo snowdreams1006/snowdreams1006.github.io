@@ -65,5 +65,24 @@
 
 > `Windows` 下载链接: [https://www.vmware.com/go/getworkstation-win](https://www.vmware.com/go/getworkstation-win)
 
+下载完毕后,双击 `VMware-workstation-full-15.0.4-12990004.exe` 进行默认安装,安装过程比较简单,以下动图仅供参考.
+
+![windows-vmware-install.gif](./images/windows-vmware-install.gif)
+
+> 产品密钥可以使用 [KeyGen.exe](./KeyGen.exe) 自动生成,也可以从下列密钥中随意挑选一个.
+
+```
+GF1T2-D8G97-M85MY-LDMNC-PZA96
+AV34H-DDG8L-48EXQ-CQZET-ZZUR2
+YY51H-FJXEQ-H85YQ-U5M5X-Q38D0
+VY74R-FXX81-085PQ-DMMQT-X2AF6
+VY10K-8WY03-H808Y-35YZE-NKKV2
+YY11K-8UY46-M88MP-VMYEE-MYAF6
+AA30K-27ZEL-480DQ-3DZ7C-MQKU4
+VV7N8-D2E41-M852Q-8EQEX-ZQRU0
+VC190-46W06-08E8P-TGQ5T-MLR8D
+AZ3NH-DQX9N-488RP-15ZXC-Q68VA
+```
+
 
 
