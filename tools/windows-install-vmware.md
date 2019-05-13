@@ -1,10 +1,10 @@
 # 给windows装个vmware虚拟机
 
-> 换个环境,换种心情.
-
 如果长时间处于同一种环境,慢慢得我们会觉得有些无聊,所以适当地出去走走看看外面的世界能带给我们不一样的体验.
 
 所以,何不出去走走,看看另一个世界?
+
+![windows-vmware-scenery.jpeg](./images/windows-vmware-scenery.jpeg)
 
 然而,平时需要工作很难抽身无所顾忌地潇洒走开,这是不是意味着无法离开,要画地为牢了呢?
 
@@ -19,6 +19,8 @@
 ## 如何换个新环境
 
 `Windows` 电脑想要体验另一种操作系统,最简单的方式莫过于借助**虚拟机**方式,何为**虚拟机**?
+
+> 虚拟机（Virtual Machine）指通过软件模拟的具有完整硬件系统功能,运行在一个完全隔离环境中的完整计算机系统.
 
 虚拟机,顾名思义就是虚拟的计算机,虚拟意味着并不是真正的,计算机意味着拥有普通电脑的基本功能.
 所以虚拟机要表达的意思就是说,创建一台并不是真实的计算机,但这种计算机却拥有普通计算机的基本能力.
@@ -40,5 +42,28 @@
 > 只有物理机的性能足够强劲,才建议安装虚拟机,否则的话,病怏怏的身体怎么承受得住活泼好动灵魂的折腾.
 
 ## 安装虚拟机软件
+
+市面上的虚拟机软件可选性有不少,而我主要介绍的是 `VMware` 软件的解决方案.
+
+> `VMware` 软件不仅支持 `Windows` 宿主机,也支持 `Mac` 宿主机,而且一直在用也挺好的.
+
+既然应认定了 `VMware` ,那还等什么,赶紧出来让我们看一眼吧!
+
+百度搜索 `vmware` 或者直接进入 [https://www.vmware.com/cn.html](https://www.vmware.com/cn.html) 即可访问 `vmware` 官网.
+
+![windows-vmware-index.png](./images/windows-vmware-index.png)
+
+> 如果无法访问,可能需要另辟蹊径,具体原因你猜猜看.
+
+打开 `下载 > 免费产品试用版和演示 > Workstation Pro` 查看下载页面.
+
+![windows-vmware-download-guide.png](./images/windows-vmware-download-guide.png)
+
+跳转到下载页面后,选择 `Windows` 版本,点击 [立即下载](https://www.vmware.com/go/getworkstation-win),耐心等待文件下载.
+
+![windows-vmware-download-preview.png](./images/windows-vmware-download-preview.png)
+
+> `Windows` 下载链接: [https://www.vmware.com/go/getworkstation-win](https://www.vmware.com/go/getworkstation-win)
+
 
 
