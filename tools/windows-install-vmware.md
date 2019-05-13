@@ -71,6 +71,8 @@
 
 > 产品密钥可以使用 [KeyGen.exe](./KeyGen.exe) 自动生成,也可以从下列密钥中随意挑选一个.
 
+![windows-vmware-generate.png](./images/windows-vmware-generate.png)
+
 ```
 GF1T2-D8G97-M85MY-LDMNC-PZA96
 AV34H-DDG8L-48EXQ-CQZET-ZZUR2
@@ -84,5 +86,27 @@ VC190-46W06-08E8P-TGQ5T-MLR8D
 AZ3NH-DQX9N-488RP-15ZXC-Q68VA
 ```
 
+现在 `vmware` 已经安装成功,接下来我们将创建新的虚拟机,开始真正的计算机换装旅行吧!
 
+![windows-vmware-install-success.png](./images/windows-vmware-install-success.png)
 
+在菜单栏依次点击 `帮助 > 关于` 确认一下是否注册成功.
+
+![windows-vmware-register-success.png](./images/windows-vmware-register-success.png)
+
+> 虽然提供激活码注册方式,但是还是想说有条件的小伙伴请支持正版!
+
+## 回顾总结
+
+本文主要介绍了什么是虚拟机和虚拟机的应用场景以及如何安装 `Vmware` 软件从而安装虚拟机.
+
+简单来说,虚拟机就是运行在本机上的一个虚拟独立的计算机,虽然不是真实的物理机,但是却拥有计算机的基本属性,不论是想在新电脑上瞎折腾还是想体验不同的操作系统,虚拟机都可以满足你的需求.
+
+值得注意的是,虚拟机虽好,不要贪多哟,毕竟虚拟机很占资源,如果宿主机本身不给力的话,虚拟机也很难流畅地运行.
+
+下节预告:
+
+-  给 windows 虚拟机装个 windows
+-  给 windows 虚拟机装个 centos
+-  给 windows 虚拟机装个 ubantu
+        
