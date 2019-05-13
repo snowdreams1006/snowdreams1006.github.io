@@ -62,9 +62,9 @@
 ## 学习笔记
 * [工具资源](tools/README.md)
     * [给 mac 装个 vmware 虚拟机](tools/mac-install-vmware.md)
-        * [给mac虚拟机装个 windows](tools/mac-vmware-install-windows.md)
-        * [给mac虚拟机装个 centos](tools/mac-vmware-install-centos.md)
-        * [给mac虚拟机装个 ubantu](tools/mac-vmware-install-ubuntu.md)
+        * [给 mac 虚拟机装个 windows](tools/mac-vmware-install-windows.md)
+        * [给 mac 虚拟机装个 centos](tools/mac-vmware-install-centos.md)
+        * [给 mac 虚拟机装个 ubantu](tools/mac-vmware-install-ubuntu.md)
     * [给 windows 装个 vmware 虚拟机](tools/windows-install-vmware.md)
         * [给 windows 虚拟机装个 mac](tools/windows-vmware-install-mac.md)
         * [给 windows 虚拟机装个 windows](tools/windows-vmware-install-windows.md)
