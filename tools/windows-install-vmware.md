@@ -69,10 +69,6 @@
 
 ![windows-vmware-install.gif](./images/windows-vmware-install.gif)
 
-> 产品密钥可以使用 [KeyGen.exe](./KeyGen.exe) 自动生成,也可以从下列密钥中随意挑选一个.
-
-![windows-vmware-generate.png](./images/windows-vmware-generate.png)
-
 ```
 GF1T2-D8G97-M85MY-LDMNC-PZA96
 AV34H-DDG8L-48EXQ-CQZET-ZZUR2
