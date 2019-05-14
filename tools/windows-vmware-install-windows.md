@@ -1,90 +1,130 @@
-# 给windows虚拟机装个windows
+# 给 windows 虚拟机装个 windows 
 
-前面我们介绍了如何在 `mac` 宿主机安装 `VMware` 虚拟机软件,本节我们将继续介绍如何给虚拟机安装 `windows` 镜像,切换不同的操作系统.
+前面我们已经介绍了如何在 `Windows` 宿主机安装 `VMware` 虚拟机,这节我们将利用安装好的 `VMware` 软件安装 `Windows` 系统.
 
-> `VMware` 软件是容器,镜像是内核,这里的镜像指的是操作系统.
+![windows-vmware-windows-success.png](./images/windows-vmware-windows-success.png)
+
+## 前情回顾
+
+虚拟机是相对于真实的物理机而言的概念,是在我们当前正在使用的计算机基础上,通过软件或硬件的方式创造的新的计算机.
+
+本文主要介绍的是 `VMware` 虚拟机,下载并安装 `VMware` 软件再安装操作系统即可模拟出另一台计算机的效果,这种模拟出来的计算机就是虚拟机.
+
+`VMware` 不仅支持 `Windows` 也支持 `Linux` ,对于 `Mac` 系统也是支持的,如需了解 `Mac` 宿主机如何安装使用虚拟机,可以参考[工具资源系列之给mac装个虚拟机](https://mp.weixin.qq.com/s/ToXjx06xlehHpsCcfOWliw).
+
+> `Windows` 物理机如何安装虚拟机请参考 [给 windows 装个 vmware 虚拟机](https://mp.weixin.qq.com/s/7_ZxBsxlMoCIr-Qcw1G8Qg)
 
 ## 下载镜像
 
-> [windows 操作系统下载](https://msdn.itellyou.cn/): https://msdn.itellyou.cn/
+`VMware` 为我们安装虚拟机提供了环境,真正的虚拟机到底是 `Windows` 系统还是 `Linux` 系统取决于我们要安装什么操作系统.
 
-![os-win7-download-preview.png](./images/os-win7-download-preview.png)
+安装操作系统最简单便捷的方式就是下载操作系统的镜像文件,`VMware` 识别到镜像文件后就会一步一步安装操作系统.
 
-按照实际需要选择适合自己的操作系统,这里选择的是 `win7 旗舰版` ,然后选择详情会弹出下载链接.
+所以我们第一步要做的就是寻找镜像文件,正所谓"知自知彼方能百战不殆",意味着首先要确定下我们到底要安装哪一个版本的操作系统?
 
-一般需要使用迅雷等第三方工具下载种子链接,大小一般在 `3g` 多,下载时间稍微比较久!
+`Windows` 操作系统有很多种,有 `Win7` ,`Win8` 和 `Win10` ,还有旗舰版和家庭版.
+
+如果我们购买真实的计算机,那肯定要好好考虑一下,毕竟金钱要花的有价值,然而我们要安装的虚拟机,并不收费,这么多版本我们可以任意挑选安装!
+
+如果有明确的目标,可以按照实际需求自行下载相应的操作系统;
+如果没有明确的目标,不妨和我一样安装一个和本机相似的虚拟机,一来操作比较熟悉,而来可以在虚拟机进行任意实验.
+
+所以,首先我要看一下本机的系统版本,因此我决定安装同款 `Win7` 旗舰版!
+
+![windows-vmware-windows-host-info.png](./images/windows-vmware-windows-host-info.png)
+
+> 选择 `我的电脑 > 右键属性 > 查看计算机的相关属性` ,我的电脑是 `Windows 7 旗舰版`
+
+现在已经明确了虚拟机的操作系统,那我们去哪里下载目标虚拟机的镜像文件呢?
+
+这里推荐一下 [https://msdn.itellyou.cn/](https://msdn.itellyou.cn/) 网站,方便使用,好评!
+
+![windows-vmware-windows-download-detail.png](./images/windows-vmware-windows-download-detail.png)
+
+- `Windows 7 Enterprise (x64) - DVD (Chinese-Simplified)` : 64 位企业版
+- `Windows 7 Enterprise (x86) - DVD (Chinese-Simplified)` : 32 位企业版
+- `Windows 7 Enterprise with Service Pack 1 (x64) - DVD (Chinese-Simplified) ` : 64 位企业版且带有`service package 1`
+- `Windows 7 Enterprise with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位企业版且带有`service package 1`
+- `Windows 7 Home Basic (x86) - DVD (Chinese-Simplified)` : 32 位家庭普通版
+- `Windows 7 Home Basic with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位家庭普通版且带有`service package 1`
+- `Windows 7 Home Premium (x64) - DVD (Chinese-Simplified)` : 64 位家庭高级版
+- `Windows 7 Home Premium (x86) - DVD (Chinese-Simplified)` : 32 位家庭高级版
+- `Windows 7 Home Premium with Service Pack 1 (x64) - DVD (Chinese-Simplified)` : 64 位家庭高级版且带有`service package 1`
+- `Windows 7 Home Premium with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位家庭高级版且带有`service package 1`
+- `Windows 7 Professional (x64) - DVD (Chinese-Simplified)` : 64 位专业版
+- `Windows 7 Professional (x86) - DVD (Chinese-Simplified)` : 32 位专业版
+- `Windows 7 Professional with Service Pack 1 (x64) - DVD (Chinese-Simplified)` : 64 位专业版且带有`service package 1` 
+- `Windows 7 Professional with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位专业版且带有`service package 1` 
+- `Windows 7 Professional with Service Pack 1, VL Build (x64) - DVD (Chinese-Simplified)` : 64 位专业版且带有`service package 1`,并基于 `VL` 进行构建.
+- `Windows 7 Professional with Service Pack 1, VL Build (x86) - DVD (Chinese-Simplified)` : 32 位专业版且带有`service package 1`,并基于 `VL` 进行构建.
+- `Windows 7 Professional, VL Build (x64) - DVD (Chinese-Simplified)` : 64 位专业版并基于 `VL` 进行构建.
+- `Windows 7 Professional, VL Build (x86) - DVD (Chinese-Simplified)` : 32 位专业版并基于 `VL` 进行构建.
+- `Windows 7 Starter (x86) - DVD (Chinese-Simplified)` : 32 位初级版
+- `Windows 7 Starter with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位初级版且带有`service package 1`
+- `Windows 7 Ultimate (x64) - DVD (Chinese-Simplified)` : 64 位旗舰版
+- `Windows 7 Ultimate (x86) - DVD (Chinese-Simplified)` : 32 位旗舰版
+- `Windows 7 Ultimate with Service Pack 1 (x64) - DVD (Chinese-Simplified)` : 64 位旗舰版且带有`service package 1` 
+- `Windows 7 Ultimate with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位旗舰版且带有`service package 1` 
+- `Windows Automated Installation Kit for Windows 7 and Windows Server 2008 R2 (x86, x64, ia64) - DVD (Chinese-Simplified)` : `Windows 7 and Windows Server 2008 R2 (x86, x64, ia64)` 自动安装包套件
+- `Windows Automated Installation Kit for Windows 7 and Windows Server 2008 R2 Service Pack 1 (x86, x64, ia64) - DVD (Chinese-Simplified)` : `Windows 7 and Windows Server 2008 R2 Service Pack 1 (x86, x64, ia64)` 自动安装包套件
+
+上述这么多的版本是不是让人有些眼花缭乱,具体版本之间有何差异以及自己适合哪一种请百度一下再理性分析!
+
+以下以 64 位旗舰版且带有服务包操作系统为例进行演示,主要是创建一个和宿主机一样的操作环境,方便后续进行秘密实验!
+
+> `cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso` 镜像文件,其中 `cn` 表示中文简体语言, `Windows_7` 表示 `Win7` 操作系统, `ultimate` 表示旗舰版,`sp1` 表示`service package 1` ,`x64` 表示 64 位操作系统,`dvd` 表示 `DVD` 安装方式,`677408` 应该是版本号,`.iso` 是镜像文件的后缀.
 
 ```
-ed2k://|file|cn_windows_7_ultimate_x64_dvd_x15-66043.iso|3341268992|7DD7FA757CE6D2DB78B6901F81A6907A|/
+ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B58548681854236C7939003B583A8078|/
 ```
 
-![os-win7-download-ed2k.png](./images/os-win7-download-ed2k.png)
+由于镜像文件本身比较大,因此推荐使用专业的下载工具进行,这里使用的是**迅雷**下载**磁力链接**.
 
-## 配置镜像
+![windows-vmware-windows-download-xunlei.png](./images/windows-vmware-windows-download-xunlei.png)
 
-> 准备好已下载的镜像文件: `cn_windows_7_ultimate_x64_dvd_x15-66043.iso` 
-
-打开 `VMware` 软件,选择 `文件->新建` 选项开始安装镜像文件.
-
-![os-win7-new-action.png](./images/os-win7-new-action.png)
-
-弹出安装配置界面,选择 `从光盘或镜像中安装` 选项,然后将已下载的镜像文件拖动到安装区进行识别.
-
-![os-win7-new-install.png](./images/os-win7-new-install.png)
-
-识别到镜像文件后选中该文件,点击 `继续` 准备下一步安装.
-
-![os-win7-new-selected.png](./images/os-win7-new-selected.png)
-
-配置账号信息以及产品密钥等信息,暂时不需要激活的话,也可以不填写产品密钥.
-
-![os-win7-new-config.png](./images/os-win7-new-config.png)
-
-集成方式选择 `更加独立` ,然后点击 `继续`.
-
-![os-win7-new-integration.png](./images/os-win7-new-integration.png)
-
-提示下载 `VMware Tools` 工具,如果可以的话,最好还是先下载,也可以安装完毕后再手动下载.
-
-![os-win7-new-tools.png](./images/os-win7-new-tools.png)
-
-确认配置信息无误后,点击 `完成` ,等待镜像安装,,,
-
-![os-win7-new-complete.png](./images/os-win7-new-complete.png)
+> 镜像文件: `cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso` ,其中后缀是 `.iso` ,前往**不要解压**! **不要解压**! **不要解压**!
 
 ## 安装镜像
 
-人生若只如初见,远远望见熟悉的背影,便确定了你就是我要安装的操作系统.
+> 准备好已下载的镜像文件: `cn_windows_7_ultimate_x64_dvd_x15-66043.iso` 
 
-![os-win7-new-init.png](./images/os-win7-new-init.png)
+打开 `VMware` 软件,选择 `文件-> 创建新的虚拟机` 或者在主页中选择 `创建新的虚拟机` .
 
-期待花开,耐心等待你的文件复制进程.
+![windows-vmware-create.png](./images/windows-vmware-create.png)
 
-![os-win7-new-process-copy.png](./images/os-win7-new-process-copy.png)
+总体来说,安装过程比较简单,前面相关配置按照默认值即可,后面真正安装过程可能耗费时间比较长,耐心等待安装完成.
 
-花开花落又是一年,你说重启才能遇到最美的季节,那我便等待你的凤凰涅槃.
+![windows-vmware-windows-install.gif](./images/windows-vmware-windows-install.gif)
 
-![os-win7-new-process-restart.png](./images/os-win7-new-process-restart.png)
+`VMware` 仅能识别出镜像文件基本信息,具体版本信息还是需要手动校准,下载的镜像文件是 `Win7 旗舰版` ,因此安装版本也是 `Win7 旗舰版` .
 
-见证你的凤凰涅槃,期待你的浴火重生.
+![windows-vmware-windows-config-version.png](./images/windows-vmware-windows-config-version.png)
 
-![os-win7-new-process-restarting.png](./images/os-win7-new-process-restarting.png)
+一些列安装配置完毕后,还有最后一步配置确认操作,确认无误后点击 `完成` 就可以真正进行安装虚拟机了!
 
-浴火重生后的操作系统,还差最后一步就能欣赏你的容颜.
+![windows-vmware-windows-config-confirm.png](./images/windows-vmware-windows-config-confirm.png)
 
-![os-win7-new-process-complete.png](./images/os-win7-new-process-complete.png)
+安装过程中可能要求输入产品密钥以及设置用户,这些操作和新买计算机刚开机时操作一模一样,百度找一下相应版本的产品密钥即可,可以设置登录用户也可以不设置用户.
 
-千呼万唤始出来,犹抱琵琶半遮面,正在进行最后的准备桌面.
+至此,安装成功!
 
-![os-win7-new-process-prepare.png](./images/os-win7-new-process-prepare.png)
+![windows-vmware-windows-success.png](./images/windows-vmware-windows-success.png)
 
-终于等到你,还好我没放弃!
+> 安装虚拟机后,有啥秘密试验都可以在虚拟机上进行操作啦,再也不担心会不小心损坏物理机了呢!
 
-![os-win7-new-install-success.png](./images/os-win7-new-install-success.png)
+## 回忆总结
 
-## 小结
+`VMware` 软件提供了虚拟机环境,差一个操作系统就能创建出虚拟机,而这种操作系统大部分是 `.iso`镜像文件.
 
-总体来说,`mac` 系统安装 `windows` 镜像配置比较简单,基本上按照默认配置即可.
+镜像文件基本上至少 `3g` ,下载镜像文件也比较耗时,可以利用专业第三方下载工具进行下载.
 
-下载镜像时文件一般比较大,需要利用专门的第三方工具下载,比如本文提供的下载链接是种子文件,选择的第三方工具就是迅雷.
+虚拟机配置比较简单,采用推荐的默认值进行设置即可,除非你有特殊需求或者明白你正在设置的选项含义,否则不要随意更改推荐设置.
+
+安装虚拟机中途可能会多次重启虚拟机,请耐心等待,不要中断安装操作,完成后自会完成!
+
+- [工具资源系列之给windows装个虚拟机](https://mp.weixin.qq.com/s/7_ZxBsxlMoCIr-Qcw1G8Qg)
+- [工具资源系列之给mac装个虚拟机](https://mp.weixin.qq.com/s/ToXjx06xlehHpsCcfOWliw)
+- [工具资源系列之给mac虚拟机装个windows](https://mp.weixin.qq.com/s/FBuOI_LIm-o1lbKuSaTakw)
+
+> 如果觉得本文写的不错,欢迎点赞留言和转发哟!
 
