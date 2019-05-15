@@ -108,7 +108,7 @@ ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B585
 
 至此,安装成功!
 
-![windows-vmware-windows-host-info.png.png](./images/windows-vmware-windows-host-info.png.png)
+![windows-vmware-windows-install-info.png](./images/windows-vmware-windows-install-info.png)
 
 > 安装虚拟机后,有啥秘密试验都可以在虚拟机上进行操作啦,再也不担心会不小心损坏物理机了呢!
 
