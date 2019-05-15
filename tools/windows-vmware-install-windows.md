@@ -82,7 +82,7 @@ ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B585
 
 ![windows-vmware-windows-download-xunlei.png](./images/windows-vmware-windows-download-xunlei.png)
 
-> 镜像文件: `cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso` ,其中后缀是 `.iso` ,前往**不要解压**! **不要解压**! **不要解压**!
+> 镜像文件: `cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso` ,其中后缀是 `.iso` ,千万**不要解压**! **不要解压**! **不要解压**!
 
 ## 安装镜像
 
@@ -100,7 +100,7 @@ ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B585
 
 ![windows-vmware-windows-config-version.png](./images/windows-vmware-windows-config-version.png)
 
-一些列安装配置完毕后,还有最后一步配置确认操作,确认无误后点击 `完成` 就可以真正进行安装虚拟机了!
+一系列安装配置完毕后,还有最后一步配置确认操作,确认无误后点击 `完成` 就可以真正进行安装虚拟机了!
 
 ![windows-vmware-windows-config-confirm.png](./images/windows-vmware-windows-config-confirm.png)
 
@@ -108,7 +108,7 @@ ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B585
 
 至此,安装成功!
 
-![windows-vmware-windows-success.png](./images/windows-vmware-windows-success.png)
+![windows-vmware-windows-host-info.png.png](./images/windows-vmware-windows-host-info.png.png)
 
 > 安装虚拟机后,有啥秘密试验都可以在虚拟机上进行操作啦,再也不担心会不小心损坏物理机了呢!
 
