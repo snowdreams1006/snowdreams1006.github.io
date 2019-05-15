@@ -33,6 +33,8 @@
     * [个性化 git](git/custom/about.md)
     * [忽略文件](git/custom/ignore.md)
     * [git 私服搭建教程](git/server/private.md)
+    * [git bash 常见命令](git/tools/git-bash-command.md)
+    * [git bash 朋友圈](git/tools/git-bash-relationship.md)
     * [git bash 竟然没有tree命令](git/tools/git-bash-tree.md)
     * [知识速查](git/summary/common.md)
     * [备忘录[译]](git/summary/cheatsheet-translation.md)
