@@ -1,0 +1,2595 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>git bash 常见命令 · 雪之梦技术驿站</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="snowdreams1006">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="git-bash-relationship.html" />
+    
+    
+    <link rel="prev" href="../server/private.html" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://snowdreams1006.cn/" target="_blank" class="custom-link">我的网站</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">入门教程</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../markdown/">
+            
+                <a href="../../markdown/">
+            
+                    
+                    markdown 快速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../markdown/juejin.html">
+            
+                <a href="../../markdown/juejin.html">
+            
+                    
+                    掘金入门指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../markdown/imooc.html">
+            
+                <a href="../../markdown/imooc.html">
+            
+                    
+                    慕课网语法演示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../markdown/HBuilderX.html">
+            
+                <a href="../../markdown/HBuilderX.html">
+            
+                    
+                    HBuilderX语法帮助
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../markdown/csdn.html">
+            
+                <a href="../../markdown/csdn.html">
+            
+                    
+                    csdn帮助文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    git 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../base/about.html">
+            
+                <a href="../base/about.html">
+            
+                    
+                    初识 git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../base/install.html">
+            
+                <a href="../base/install.html">
+            
+                    
+                    安装 git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2" data-path="../base/config.html">
+            
+                <a href="../base/config.html">
+            
+                    
+                    配置 git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../usage/about.html">
+            
+                <a href="../usage/about.html">
+            
+                    
+                    实战 git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../usage/local-repository.html">
+            
+                <a href="../usage/local-repository.html">
+            
+                    
+                    本地仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../usage/version-manage.html">
+            
+                <a href="../usage/version-manage.html">
+            
+                    
+                    版本管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.3" data-path="../usage/reset.html">
+            
+                <a href="../usage/reset.html">
+            
+                    
+                    回到过去
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.4" data-path="../usage/concept.html">
+            
+                <a href="../usage/concept.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.5" data-path="../usage/version-control.html">
+            
+                <a href="../usage/version-control.html">
+            
+                    
+                    版本控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.6" data-path="../usage/checkout-reset.html">
+            
+                <a href="../usage/checkout-reset.html">
+            
+                    
+                    撤销更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.7" data-path="../usage/delete.html">
+            
+                <a href="../usage/delete.html">
+            
+                    
+                    删除文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.8" data-path="../usage/remote-repository.html">
+            
+                <a href="../usage/remote-repository.html">
+            
+                    
+                    远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9" data-path="../usage/branch-manage.html">
+            
+                <a href="../usage/branch-manage.html">
+            
+                    
+                    分支管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.9.1" data-path="../usage/branch-overview.html">
+            
+                <a href="../usage/branch-overview.html">
+            
+                    
+                    分支总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.2" data-path="../usage/branch-merge-with-conflict.html">
+            
+                <a href="../usage/branch-merge-with-conflict.html">
+            
+                    
+                    冲突合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.3" data-path="../usage/branch-strategy.html">
+            
+                <a href="../usage/branch-strategy.html">
+            
+                    
+                    分支策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.4" data-path="../usage/branch-emergency-fixbug.html">
+            
+                <a href="../usage/branch-emergency-fixbug.html">
+            
+                    
+                    紧急修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.5" data-path="../usage/branch-rebase.html">
+            
+                <a href="../usage/branch-rebase.html">
+            
+                    
+                    变基合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.6" data-path="../usage/branch-remote.html">
+            
+                <a href="../usage/branch-remote.html">
+            
+                    
+                    协同开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.7" data-path="../usage/local-remote-repository.html">
+            
+                <a href="../usage/local-remote-repository.html">
+            
+                    
+                    本地和远程仓库的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.10" data-path="../usage/tag.html">
+            
+                <a href="../usage/tag.html">
+            
+                    
+                    里程碑式标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../custom/about.html">
+            
+                <a href="../custom/about.html">
+            
+                    
+                    个性化 git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../custom/ignore.html">
+            
+                <a href="../custom/ignore.html">
+            
+                    
+                    忽略文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../server/private.html">
+            
+                <a href="../server/private.html">
+            
+                    
+                    git 私服搭建教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.6" data-path="git-bash-command.html">
+            
+                <a href="git-bash-command.html">
+            
+                    
+                    git bash 常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="git-bash-relationship.html">
+            
+                <a href="git-bash-relationship.html">
+            
+                    
+                    git bash 朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="git-bash-tree.html">
+            
+                <a href="git-bash-tree.html">
+            
+                    
+                    git bash 竟然没有tree命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.9" data-path="../summary/common.html">
+            
+                <a href="../summary/common.html">
+            
+                    
+                    知识速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.10" data-path="../summary/cheatsheet-translation.html">
+            
+                <a href="../summary/cheatsheet-translation.html">
+            
+                    
+                    备忘录[译]
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.11" data-path="../issue/">
+            
+                <a href="../issue/">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../github/">
+            
+                <a href="../../github/">
+            
+                    
+                    github 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../github/speedup.html">
+            
+                <a href="../../github/speedup.html">
+            
+                    
+                    github 访问速度太慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../myGitbook/">
+            
+                <a href="../../myGitbook/">
+            
+                    
+                    gitbook 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../myGitbook/preparation/prepare.html">
+            
+                <a href="../../myGitbook/preparation/prepare.html">
+            
+                    
+                    准备阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1.1" data-path="../../myGitbook/preparation/front-knowledge.html">
+            
+                <a href="../../myGitbook/preparation/front-knowledge.html">
+            
+                    
+                    前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.1.2" data-path="../../myGitbook/preparation/environmental-requirements.html">
+            
+                <a href="../../myGitbook/preparation/environmental-requirements.html">
+            
+                    
+                    环境要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../myGitbook/experience/preview.html">
+            
+                <a href="../../myGitbook/experience/preview.html">
+            
+                    
+                    快速体验
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.2.1" data-path="../../myGitbook/experience/gitbook-cli.html">
+            
+                <a href="../../myGitbook/experience/gitbook-cli.html">
+            
+                    
+                    gitbook-cli 命令行操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2.2" data-path="../../myGitbook/experience/gitbook-editor.html">
+            
+                <a href="../../myGitbook/experience/gitbook-editor.html">
+            
+                    
+                    gitbook-editor 编辑器操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2.3" data-path="../../myGitbook/experience/gitbook-com.html">
+            
+                <a href="../../myGitbook/experience/gitbook-com.html">
+            
+                    
+                    gitbook.com 官网操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../../myGitbook/advance/advance.html">
+            
+                <a href="../../myGitbook/advance/advance.html">
+            
+                    
+                    高级进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.3.1" data-path="../../myGitbook/advance/plugin.html">
+            
+                <a href="../../myGitbook/advance/plugin.html">
+            
+                    
+                    插件介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.3.1.1" data-path="../../myGitbook/advance/plugin-practical.html">
+            
+                <a href="../../myGitbook/advance/plugin-practical.html">
+            
+                    
+                    实用插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.1.2" data-path="../../myGitbook/advance/plugin-theme.html">
+            
+                <a href="../../myGitbook/advance/plugin-theme.html">
+            
+                    
+                    主题插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.2" data-path="../../myGitbook/advance/export.html">
+            
+                <a href="../../myGitbook/advance/export.html">
+            
+                    
+                    导出电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.3" data-path="../../myGitbook/advance/publish.html">
+            
+                <a href="../../myGitbook/advance/publish.html">
+            
+                    
+                    发布电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../../myGitbook/issue/">
+            
+                <a href="../../myGitbook/issue/">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.4.1" data-path="../../myGitbook/issue/rm-output-directory.html">
+            
+                <a href="../../myGitbook/issue/rm-output-directory.html">
+            
+                    
+                    热加载失败治标之法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../java8/">
+            
+                <a href="../../java8/">
+            
+                    
+                    java8新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../java8/lambda.html">
+            
+                <a href="../../java8/lambda.html">
+            
+                    
+                    lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../../java8/functionInterface.html">
+            
+                <a href="../../java8/functionInterface.html">
+            
+                    
+                    函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">学习笔记</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../tools/">
+            
+                <a href="../../tools/">
+            
+                    
+                    工具资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../tools/mac-install-vmware.html">
+            
+                <a href="../../tools/mac-install-vmware.html">
+            
+                    
+                    给 mac 装个 vmware 虚拟机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../tools/mac-vmware-install-windows.html">
+            
+                <a href="../../tools/mac-vmware-install-windows.html">
+            
+                    
+                    给 mac 虚拟机装个 windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../tools/mac-vmware-install-centos.html">
+            
+                <a href="../../tools/mac-vmware-install-centos.html">
+            
+                    
+                    给 mac 虚拟机装个 centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../tools/mac-vmware-install-ubuntu.html">
+            
+                <a href="../../tools/mac-vmware-install-ubuntu.html">
+            
+                    
+                    给 mac 虚拟机装个 ubantu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../tools/windows-install-vmware.html">
+            
+                <a href="../../tools/windows-install-vmware.html">
+            
+                    
+                    给 windows 装个 vmware 虚拟机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../../tools/windows-vmware-install-mac.html">
+            
+                <a href="../../tools/windows-vmware-install-mac.html">
+            
+                    
+                    给 windows 虚拟机装个 mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="../../tools/windows-vmware-install-windows.html">
+            
+                <a href="../../tools/windows-vmware-install-windows.html">
+            
+                    
+                    给 windows 虚拟机装个 windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="../../tools/windows-vmware-install-centos.html">
+            
+                <a href="../../tools/windows-vmware-install-centos.html">
+            
+                    
+                    给 windows 虚拟机装个 centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="../../tools/windows-vmware-install-ubuntu.html">
+            
+                <a href="../../tools/windows-vmware-install-ubuntu.html">
+            
+                    
+                    给 windows 虚拟机装个 ubantu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../write/">
+            
+                <a href="../../write/">
+            
+                    
+                    如何写作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../write/markdownOrRichText.html">
+            
+                <a href="../../write/markdownOrRichText.html">
+            
+                    
+                    markdown 和富文本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../write/markdown2richText.html">
+            
+                <a href="../../write/markdown2richText.html">
+            
+                    
+                    markdown 转富文本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../write/static-semi-manual-with-csv.html">
+            
+                <a href="../../write/static-semi-manual-with-csv.html">
+            
+                    
+                    csv 半手动数据统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../write/static-semi-manual-with-js.html">
+            
+                <a href="../../write/static-semi-manual-with-js.html">
+            
+                    
+                    js 半手动数据统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../write/faq.html">
+            
+                <a href="../../write/faq.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开源项目</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <a target="_blank" href="https://security-plus.github.io/">
+            
+                    
+                    security-plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-plugin-mygitalk/">
+            
+                    
+                    gitbook-plugin-mygitalk
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">程序人生</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../other/">
+            
+                <a href="../../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../other/transformation.html">
+            
+                <a href="../../other/transformation.html">
+            
+                    
+                    程序员转型之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../other/static.html">
+            
+                <a href="../../other/static.html">
+            
+                    
+                    历史统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../other/me.html">
+            
+                <a href="../../other/me.html">
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../other/donate.html">
+            
+                <a href="../../other/donate.html">
+            
+                    
+                    捐赠支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >git bash 常见命令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#git-bash-&#x5E38;&#x89C1;&#x547D;&#x4EE4;"><b>1. </b>git bash &#x5E38;&#x89C1;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x54F2;&#x5B66;&#x7B2C;&#x4E00;&#x95EE;-&#x6211;&#x662F;&#x8C01;"><b>1.1. </b>&#x54F2;&#x5B66;&#x7B2C;&#x4E00;&#x95EE;: &#x6211;&#x662F;&#x8C01;</a></li><li><span class="title-icon "></span><a href="#&#x54F2;&#x5B66;&#x7B2C;&#x4E8C;&#x95EE;-&#x6211;&#x5728;&#x54EA;"><b>1.2. </b>&#x54F2;&#x5B66;&#x7B2C;&#x4E8C;&#x95EE;: &#x6211;&#x5728;&#x54EA;</a></li><li><span class="title-icon "></span><a href="#&#x54F2;&#x5B66;&#x7B2C;&#x4E09;&#x95EE;-&#x6211;&#x8981;&#x5E72;&#x4EC0;&#x4E48;"><b>1.3. </b>&#x54F2;&#x5B66;&#x7B2C;&#x4E09;&#x95EE;: &#x6211;&#x8981;&#x5E72;&#x4EC0;&#x4E48;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;-&#x521B;&#x5EFA;&#x76EE;&#x5F55;"><b>1.3.1. </b>&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;: &#x521B;&#x5EFA;&#x76EE;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;-&#x5207;&#x6362;&#x76EE;&#x5F55;"><b>1.3.2. </b>&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;: &#x5207;&#x6362;&#x76EE;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;-&#x6253;&#x5370;&#x76EE;&#x5F55;"><b>1.3.3. </b>&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;: &#x6253;&#x5370;&#x76EE;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;-&#x5217;&#x51FA;&#x6587;&#x4EF6;"><b>1.3.4. </b>&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;: &#x5217;&#x51FA;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;-&#x521B;&#x5EFA;&#x6587;&#x4EF6;"><b>1.3.5. </b>&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;: &#x521B;&#x5EFA;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;-&#x8986;&#x76D6;&#x8F93;&#x5165;"><b>1.3.6. </b>&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;: &#x8986;&#x76D6;&#x8F93;&#x5165;</a></li><li><span class="title-icon "></span><a href="#&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;-&#x8FFD;&#x52A0;&#x8F93;&#x5165;"><b>1.3.7. </b>&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;: &#x8FFD;&#x52A0;&#x8F93;&#x5165;</a></li><li><span class="title-icon "></span><a href="#&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;-&#x67E5;&#x770B;&#x6587;&#x4EF6;"><b>1.3.8. </b>&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;: &#x67E5;&#x770B;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x67B8;&#x675E;&#x8336;&#x8981;&#x518D;&#x8C03;&#x6574;&#xFF1A;-&#x8FFD;&#x52A0;&#x5E76;&#x67E5;&#x770B;&#x6587;&#x4EF6;"><b>1.3.9. </b>&#x67B8;&#x675E;&#x8336;&#x8981;&#x518D;&#x8C03;&#x6574;&#xFF1A; &#x8FFD;&#x52A0;&#x5E76;&#x67E5;&#x770B;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x4E09;&#x66F4;&#x706F;&#x706B;&#x4E94;&#x66F4;&#x9E21;-&#x7F16;&#x8F91;&#x6587;&#x4EF6;"><b>1.3.10. </b>&#x4E09;&#x66F4;&#x706F;&#x706B;&#x4E94;&#x66F4;&#x9E21;: &#x7F16;&#x8F91;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x64B8;&#x8D77;&#x8896;&#x5B50;&#x52A0;&#x6CB9;&#x5E72;-&#x67E5;&#x770B;&#x5F00;&#x5934;"><b>1.3.11. </b>&#x64B8;&#x8D77;&#x8896;&#x5B50;&#x52A0;&#x6CB9;&#x5E72;: &#x67E5;&#x770B;&#x5F00;&#x5934;</a></li><li><span class="title-icon "></span><a href="#&#x4E0D;&#x601D;&#x8FDB;&#x53D6;&#x540E;&#x5341;&#x540D;-&#x67E5;&#x770B;&#x7ED3;&#x5C3E;"><b>1.3.12. </b>&#x4E0D;&#x601D;&#x8FDB;&#x53D6;&#x540E;&#x5341;&#x540D;: &#x67E5;&#x770B;&#x7ED3;&#x5C3E;</a></li><li><span class="title-icon "></span><a href="#&#x4F18;&#x96C5;&#x7684;&#x5199;&#x4F5C;&#x4F53;&#x9A8C;-markdown"><b>1.3.13. </b>&#x4F18;&#x96C5;&#x7684;&#x5199;&#x4F5C;&#x4F53;&#x9A8C;: markdown</a></li><li><span class="title-icon "></span><a href="#&#x606A;&#x5C3D;&#x804C;&#x8D23;&#x7684;&#x7F51;&#x76D8;-git"><b>1.3.14. </b>&#x606A;&#x5C3D;&#x804C;&#x8D23;&#x7684;&#x7F51;&#x76D8;: git</a></li><li><span class="title-icon "></span><a href="#&#x767B;&#x5F55;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;-&#x8FDC;&#x7A0B;&#x767B;&#x5F55;"><b>1.3.15. </b>&#x767B;&#x5F55;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;: &#x8FDC;&#x7A0B;&#x767B;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;-&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;"><b>1.3.16. </b>&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;: &#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x5DF2;&#x8FD0;&#x884C;&#x547D;&#x4EE4;-&#x5386;&#x53F2;"><b>1.3.17. </b>&#x67E5;&#x770B;&#x5DF2;&#x8FD0;&#x884C;&#x547D;&#x4EE4;: &#x5386;&#x53F2;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b>1.4. </b>&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#&#x5C0F;&#x7ED3;"><b>1.5. </b>&#x5C0F;&#x7ED3;</a></li></ul></ul></div><a href="#git-bash-&#x5E38;&#x89C1;&#x547D;&#x4EE4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="git-bash-&#x5E38;&#x89C1;&#x547D;&#x4EE4;"><a name="git-bash-&#x5E38;&#x89C1;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#git-bash-&#x5E38;&#x89C1;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1. git bash &#x5E38;&#x89C1;&#x547D;&#x4EE4;</h1>
+<p>&#x4F17;&#x6240;&#x5468;&#x77E5;,&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x662F;&#x4E0D;&#x540C;&#x7684;,&#x4F46;&#x662F;&#x8BA1;&#x7B97;&#x673A;&#x4F5C;&#x4E3A;&#x4EBA;&#x7C7B;&#x5BF9;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x7684;&#x62BD;&#x8C61;&#x6A21;&#x62DF;,&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;,&#x5177;&#x5907;&#x4E86;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x7684;&#x57FA;&#x672C;&#x7279;&#x5F81;,&#x672C;&#x6587;&#x5C06;&#x4EE5;&#x54F2;&#x5B66;&#x89D2;&#x5EA6;&#x5BF9;&#x6BD4;&#x5206;&#x6790;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;,&#x8BD5;&#x56FE;&#x4EE5;&#x6D45;&#x663E;&#x6613;&#x61C2;&#x7684;&#x65B9;&#x5F0F;&#x611F;&#x53D7;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x7684;&#x8054;&#x7CFB;.</p>
+<p>&#x9996;&#x5148;&#x8BF7;&#x5148;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x54F2;&#x5B66;&#x7684;&#x57FA;&#x672C;&#x95EE;&#x9898;&#x95EE;&#x9898;: &#x6211;&#x662F;&#x8C01;,&#x6211;&#x5728;&#x54EA;&#x4EE5;&#x53CA;&#x6211;&#x8981;&#x5E72;&#x4EC0;&#x4E48;?</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x9010;&#x6B65;&#x63A2;&#x8BA8;&#x4E0B;&#x4E24;&#x4E2A;&#x4E16;&#x754C;&#x7684;&#x5173;&#x8054;,&#x987A;&#x4FBF;&#x5B66;&#x4E60;&#x4E0B; <code>Git Bash</code> &#x652F;&#x6301;&#x7684;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x4EE5;&#x53CA; <code>git</code> &#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;.</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-f66c91f886edc894.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-win-install-succesfully.png"></p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x8FD8;&#x6CA1;&#x6709;&#x5B89;&#x88C5; <code>git</code> &#x73AF;&#x5883;,&#x8BF7;&#x53C2;&#x8003;&#x8FDB;&#x884C; <a href="https://snowdreams1006.github.io/git/base/install.html" target="_blank">https://snowdreams1006.github.io/git/base/install.html</a> &#x6216;&#x8005;&#x53C2;&#x8003;<strong>&#x5343;&#x547C;&#x4E07;&#x5524;&#x59CB;&#x51FA;&#x6765;</strong>&#x7AE0;&#x8282;&#x8FDB;&#x884C;&#x5B89;&#x88C5;.</p>
+</blockquote>
+<h2 id="&#x54F2;&#x5B66;&#x7B2C;&#x4E00;&#x95EE;-&#x6211;&#x662F;&#x8C01;"><a name="&#x54F2;&#x5B66;&#x7B2C;&#x4E00;&#x95EE;-&#x6211;&#x662F;&#x8C01;" class="anchor-navigation-ex-anchor" href="#&#x54F2;&#x5B66;&#x7B2C;&#x4E00;&#x95EE;-&#x6211;&#x662F;&#x8C01;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x54F2;&#x5B66;&#x7B2C;&#x4E00;&#x95EE;: &#x6211;&#x662F;&#x8C01;</h2>
+<p>&#x73B0;&#x5B9E;&#x751F;&#x6D3B;&#x4E2D;&#x6211;&#x4EEC;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x6709;&#x540D;&#x5B57;,&#x8EAB;&#x4EFD;&#x4EE5;&#x53CA;&#x8D23;&#x4EFB;.&#x6B63;&#x662F;&#x7531;<strong>&#x81EA;&#x6211;&#x548C;&#x4ED6;&#x4EBA;</strong>&#x4E00;&#x8D77;&#x6784;&#x6210;&#x4E86;&quot;&#x6211;&#x662F;&#x8C01;&quot;&#x8FD9;&#x4E00;&#x57FA;&#x672C;&#x95EE;&#x9898;: &#x662F;&#x513F;&#x5B50;,&#x662F;&#x4E08;&#x592B;,&#x662F;&#x7236;&#x4EB2;,&#x662F;&#x793E;&#x4F1A;&#x4E2D;&#x7684;&#x4E00;&#x4EFD;&#x5B50;.</p>
+<p>&#x4F46;&#x662F;,&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x4E2D;,<strong>&#x6211;</strong>&#x53C8;&#x662F;&#x8C01;&#x5462;?</p>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x662F;&#x865A;&#x62DF;&#x4E16;&#x754C;,&#x6709;&#x7684;&#x53EA;&#x662F;&#x51B0;&#x51B7;&#x51B7;&#x7684;&#x7A0B;&#x5E8F;&#x548C;&#x6570;&#x636E;,&#x6709;&#x9650;&#x7684;&#x4EBA;&#x673A;&#x4EA4;&#x4E92;&#x624D;&#x521B;&#x9020;&#x4E86;&quot;&#x6211;&quot;,&#x6240;&#x4EE5;&#x5F04;&#x6E05;&#x695A;&quot;&#x6211;&#x662F;&#x8C01;&quot;&#x7684;&#x95EE;&#x9898;&#x81F3;&#x5173;&#x91CD;&#x8981;.</p>
+<blockquote>
+<p><code>whoami</code> : <code>who am i</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x6253;&#x5370;&#x51FA;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;.</p>
+</blockquote>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x4E2D;,&quot;&#x6211;&quot;&#x8868;&#x73B0;&#x4E3A;&#x4E00;&#x4E2A;&#x8D26;&#x53F7;,&#x7528;&#x6237;&#x540D;&#x662F;&#x552F;&#x4E00;&#x6807;&#x8BC6;.&#x5728;&#x8FD9;&#x4E2A;&#x4E16;&#x754C;&#x4E0A;&#x4E0D;&#x6B62;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x540C;&#x4E00;&#x53F0;&#x7535;&#x8111;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x8D26;&#x53F7;.</p>
+<p>&#x6240;&#x4EE5;,&quot;&#x6211;&quot;&#x662F;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x7528;&#x6237;,&#x54EA;&#x5929;&#x8B66;&#x5BDF;&#x68C0;&#x67E5;&#x8EAB;&#x4EFD;&#x8BC1;&#x65F6;,&#x9700;&#x8981;&#x81EA;&#x62A5;&#x5BB6;&#x95E8;,&#x5982;&#x679C;&#x4F60;&#x90FD;&#x4E0D;&#x77E5;&#x9053;&#x4F60;&#x7684;&#x540D;&#x5B57;&#x90A3;&#x5C82;&#x4E0D;&#x662F;&#x95F9;&#x7B11;&#x8BDD;&#x4E86;&#xFF1F;</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 ~
+$ whoami
+snowdreams1006
+</code></pre>
+<h2 id="&#x54F2;&#x5B66;&#x7B2C;&#x4E8C;&#x95EE;-&#x6211;&#x5728;&#x54EA;"><a name="&#x54F2;&#x5B66;&#x7B2C;&#x4E8C;&#x95EE;-&#x6211;&#x5728;&#x54EA;" class="anchor-navigation-ex-anchor" href="#&#x54F2;&#x5B66;&#x7B2C;&#x4E8C;&#x95EE;-&#x6211;&#x5728;&#x54EA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x54F2;&#x5B66;&#x7B2C;&#x4E8C;&#x95EE;: &#x6211;&#x5728;&#x54EA;</h2>
+<p>&#x4E0D;&#x8BBA;&#x662F;&#x6B66;&#x4FA0;&#x5C0F;&#x8BF4;&#x4E3B;&#x89D2;&#x7A81;&#x7136;&#x5931;&#x5FC6;&#x8FD8;&#x662F;&#x88AB;&#x7ED1;&#x67B6;&#x6865;&#x6BB5;,&#x7B2C;&#x4E00;&#x53E5;&#x603B;&#x662F;&#xFF1A; &quot;&#x6211;&#x662F;&#x8C01;&#xFF1F;&#x8FD9;&#x662F;&#x54EA;&#xFF1F;&quot;&#x6216;&#x8005;&quot;&#x4F60;&#x662F;&#x8C01;&#xFF1F;&#x8FD9;&#x662F;&#x54EA;&#xFF1F;&quot;.</p>
+<p>&#x4E0D;&#x4EC5;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4EBA;&#x5F88;&#x591A;,&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x7684;&#x7528;&#x6237;&#x4E5F;&#x4E0D;&#x6B62;&#x4E00;&#x4E2A;,&#x76EE;&#x5F55;&#x66F4;&#x662F;&#x6570;&#x4E0D;&#x80DC;&#x6570;.
+&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x7B2C;&#x4E8C;&#x4E2A;&#x95EE;&#x9898;&#x5C31;&#x8981;&#x63A2;&#x8BA8;&#x4E00;&#x4E0B;&quot;&#x6211;&#x5728;&#x54EA;&quot;&#x7684;&#x57FA;&#x672C;&#x95EE;&#x9898;.</p>
+<blockquote>
+<p><code>echo ~</code> : <code>echo</code> &#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x56DE;&#x58F0;&quot;,&#x76F4;&#x63A5;&#x8868;&#x73B0;&#x4E3A;&#x8F93;&#x51FA;&#x67D0;&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;,<code>~</code> &#x4EE3;&#x8868;&#x7528;&#x6237;&#x7684;&quot;&#x5BB6;&quot;&#x76EE;&#x5F55;,&#x5373;&#x8F93;&#x51FA;&#x5BB6;&#x76EE;&#x5F55;.</p>
+</blockquote>
+<p>&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4E2D;&#x6211;&#x4EEC;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x5BB6;,&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x4E5F;&#x4E0D;&#x4F8B;&#x5916;.&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x5BB6;&#x76EE;&#x5F55;</p>
+<p>&#x8BD5;&#x60F3;&#x4E00;&#x4E0B;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5FC3;&#x7075;&#x7684;&#x6E2F;&#x6E7E;,&#x7075;&#x9B42;&#x548C;&#x8EAB;&#x4F53;&#x8BE5;&#x5982;&#x4F55;&#x5B89;&#x653E;?&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5BB6;&#x76EE;&#x5F55;,&#x6570;&#x636E;&#x9ED8;&#x8BA4;&#x5B58;&#x653E;&#x5230;&#x54EA;&#x91CC;&#x53BB;&#xFF1F;&#x591A;&#x4E2A;&#x7528;&#x6237;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x600E;&#x4E48;&#x4FDD;&#x8BC1;&#x76F8;&#x5BF9;&#x9694;&#x79BB;&#xFF1F;</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 ~
+$ <span class="hljs-built_in">echo</span> ~
+/c/Users/snowdreams1006
+</code></pre>
+<h2 id="&#x54F2;&#x5B66;&#x7B2C;&#x4E09;&#x95EE;-&#x6211;&#x8981;&#x5E72;&#x4EC0;&#x4E48;"><a name="&#x54F2;&#x5B66;&#x7B2C;&#x4E09;&#x95EE;-&#x6211;&#x8981;&#x5E72;&#x4EC0;&#x4E48;" class="anchor-navigation-ex-anchor" href="#&#x54F2;&#x5B66;&#x7B2C;&#x4E09;&#x95EE;-&#x6211;&#x8981;&#x5E72;&#x4EC0;&#x4E48;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x54F2;&#x5B66;&#x7B2C;&#x4E09;&#x95EE;: &#x6211;&#x8981;&#x5E72;&#x4EC0;&#x4E48;</h2>
+<p>&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4E2D;,&#x6BCF;&#x4E2A;&#x4EBA;&#x51FA;&#x751F;&#x540E;&#x4F1A;&#x6162;&#x6162;&#x957F;&#x5927;,&#x6216;&#x4E00;&#x76F4;&#x7559;&#x5728;&#x5BB6;&#x4E61;&#x6216;&#x5916;&#x51FA;&#x95EF;&#x8361;,&#x7EC8;&#x5176;&#x4E00;&#x751F;&#xFF0C;&#x751F;&#x4E0D;&#x5E26;&#x6765;&#xFF0C;&#x6B7B;&#x4E0D;&#x5E26;&#x53BB;.</p>
+<p>&#x5176;&#x4E2D;&#x6700;&#x76F4;&#x89C2;&#x8868;&#x73B0;&#x4E3A;&#x6BCF;&#x4E2A;&#x4EBA;&#x57FA;&#x672C;&#x4E0A;&#x90FD;&#x8981;&#x5DE5;&#x4F5C;,&#x4ECE;&#x800C;&#x7EF4;&#x6301;&#x751F;&#x6D3B;,&#x7EE7;&#x800C;&#x521B;&#x9020;&#x793E;&#x4F1A;&#x4EF7;&#x503C;.&#x4E0D;&#x8BBA;&#x662F;&#x5F53;&#x5730;&#x5C31;&#x4E1A;&#x8FD8;&#x662F;&#x5916;&#x51FA;&#x5C31;&#x4E1A;,&#x6211;&#x4EEC;&#x4E0A;&#x73ED;&#x7684;&#x5730;&#x70B9;&#x88AB;&#x79F0;&#x4E3A;<strong>&#x5DE5;&#x4F5C;&#x5730;&#x70B9;</strong>.</p>
+<p>&#x5BB6;&#x53EA;&#x6709;&#x4E00;&#x4E2A;,&#x5DE5;&#x4F5C;&#x5730;&#x70B9;&#x5374;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;,&#x53EF;&#x4EE5;&#x6362;&#x5DE5;&#x4F5C;&#x6362;&#x5DE5;&#x4F5C;&#x5730;&#x70B9;,&#x4F46;&#x662F;&#x6C38;&#x8FDC;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BB6;,&#x662F;&#x6545;&#x4E61;,&#x662F;&#x51FA;&#x751F;&#x5730;,&#x662F;&#x5FC3;&#x7075;&#x7684;&#x6E2F;&#x6E7E;.</p>
+<p>&#x5982;&#x679C;&#x8FD9;&#x79CD;&#x573A;&#x666F;&#x53CD;&#x6620;&#x5230;&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;,&#x53C8;&#x662F;&#x600E;&#x6837;&#x4E00;&#x756A;&#x573A;&#x666F;&#x5462;?</p>
+<p>&#x65E2;&#x7136;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x6253;&#x4EA4;&#x9053;,&#x4E0D;&#x8BBA;&#x4EC0;&#x4E48;&#x4EA4;&#x4E92;&#x65B9;&#x5F0F;,&#x6700;&#x7EC8;&#x90FD;&#x65E0;&#x5916;&#x4E4E;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;.&#x8F93;&#x5165;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x6295;&#x5165;,&#x8F93;&#x51FA;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x4EA7;&#x51FA;.</p>
+<p>&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7684;&#x6570;&#x636E;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;,&#x662F;&#x4EE5;&#x6587;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;&#x6709;&#x7EC4;&#x7EC7;&#x5730;&#x4FDD;&#x5B58;&#x8D77;&#x6765;,&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x76EE;&#x5F55;&#x5C31;&#x662F;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;,&#x4E0D;&#x662F;&#x81EA;&#x5DF1;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#x7684;&#x5176;&#x4ED6;&#x76EE;&#x5F55;&#x90FD;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;.</p>
+<p>&#x8FD9;&#x6837;&#x770B;&#x8D77;&#x6765;,&#x539F;&#x6765;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x6362;&#x5DE5;&#x4F5C;&#x7ADF;&#x7136;&#x8FD9;&#x4E48;&#x5BB9;&#x6613;,<strong>&#x4E0D;&#x662F;&#x5BB6;&#x76EE;&#x5F55;&#x7684;&#x5176;&#x4ED6;&#x76EE;&#x5F55;&#x90FD;&#x662F;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</strong>.</p>
+<h3 id="&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;-&#x521B;&#x5EFA;&#x76EE;&#x5F55;"><a name="&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;-&#x521B;&#x5EFA;&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;-&#x521B;&#x5EFA;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;: &#x521B;&#x5EFA;&#x76EE;&#x5F55;</h3>
+<blockquote>
+<p><code>mkdir [OPTION] DIRECTORY</code> : <code>make directory</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x521B;&#x5EFA;&#x76EE;&#x5F55;.</p>
+</blockquote>
+<p>&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;,&#x8BA1;&#x7B97;&#x673A;&#x4EBA;&#x751F;&#x521A;&#x521A;&#x8D77;&#x6B65;,&#x9700;&#x8981;&#x642D;&#x5EFA;&#x597D;&#x5927;&#x53A6;&#x7684;&#x57FA;&#x7840;&#x6846;&#x67B6;,&#x7136;&#x540E;&#x518D;&#x5F80;&#x91CC;&#x9762;&#x4E00;&#x70B9;&#x4E00;&#x70B9;&#x52A0;&#x4E1C;&#x897F;,&#x7EC8;&#x5C06;&#x53D8;&#x6210;&#x6469;&#x5929;&#x5927;&#x53A6;&#xFF01;</p>
+<p>&#x7ACB;&#x4E0B;&#x660E;&#x786E;&#x76EE;&#x6807;,&#x575A;&#x5B9A;&#x4E0D;&#x79FB;&#x524D;&#x5F80;&#x76EE;&#x7684;&#x5730;,&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x5DF2;&#x521B;&#x5EFA;,&#x7B2C;&#x4E00;&#x6B65;&#x5DF2;&#x7ECF;&#x8FC8;&#x51FA;&#x53BB;,&#x63A5;&#x4E0B;&#x6765;&#x51C6;&#x5907;&#x524D;&#x5F80;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;,&#x642D;&#x5EFA;&#x597D;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x9AD8;&#x697C;&#x5927;&#x53A6;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 ~
+$ mkdir /g/workpace/git-bash-demo
+</code></pre>
+<h3 id="&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;-&#x5207;&#x6362;&#x76EE;&#x5F55;"><a name="&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;-&#x5207;&#x6362;&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;-&#x5207;&#x6362;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;: &#x5207;&#x6362;&#x76EE;&#x5F55;</h3>
+<blockquote>
+<p><code>cd [-L|[-P [-e]] [-@]] [dir]</code> : <code>change directory</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x5207;&#x6362;&#x76EE;&#x5F55;.</p>
+</blockquote>
+<p>&#x65E2;&#x7136;&#x9009;&#x62E9;&#x4E86;&#x524D;&#x65B9;,&#x4FBF;&#x53EA;&#x987E;&#x98CE;&#x96E8;&#x517C;&#x7A0B;.&#x5FC3;&#x4E2D;&#x7684;&#x5927;&#x53A6;&#x84DD;&#x56FE;&#x7B49;&#x5F85;&#x53BB;&#x5B9E;&#x73B0;,&#x4E0D;&#x8BBA;&#x662F;&#x4ECE;&#x5BB6;&#x76EE;&#x5F55;&#x51FA;&#x53D1;&#x8FD8;&#x662F;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x51FA;&#x53D1;,&#x65E2;&#x7136;&#x76EE;&#x6807;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;,&#x63A5;&#x4E0B;&#x6765;&#x5982;&#x4F55;&#x51FA;&#x53D1;&#x4FBF;&#x4E0D;&#x662F;&#x592A;&#x9EBB;&#x70E6;&#x7684;&#x4E8B;&#x60C5;&#x4E86;.</p>
+<p>&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4E2D;&#x51FA;&#x53D1;&#x5230;&#x5DE5;&#x4F5C;&#x5730;&#x70B9;,&#x53EF;&#x4EE5;&#x5750;&#x9AD8;&#x94C1;,&#x5750;&#x8F6E;&#x8239;,&#x5750;&#x98DE;&#x673A;&#x7B49;&#x591A;&#x79CD;&#x4EA4;&#x901A;&#x65B9;&#x5F0F;&#x4EFB;&#x4F60;&#x6311;&#x9009;,&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x4E2D;&#x524D;&#x5F80;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x5C31;&#x5F88;&#x7B80;&#x5355;,&#x53EA;&#x8981;&#x660E;&#x786E;&#x77E5;&#x9053;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;,&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x77AC;&#x95F4;&#x76F4;&#x8FBE;&#xFF01;</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 ~
+$ <span class="hljs-built_in">cd</span> /g/workpace/git-bash-demo
+</code></pre>
+<h3 id="&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;-&#x6253;&#x5370;&#x76EE;&#x5F55;"><a name="&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;-&#x6253;&#x5370;&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;-&#x6253;&#x5370;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. &#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;: &#x6253;&#x5370;&#x76EE;&#x5F55;</h3>
+<blockquote>
+<p><code>pwd [-LPW]</code> : <code>print working directory</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x6253;&#x5370;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;.</p>
+</blockquote>
+<p>&#x521D;&#x6B21;&#x6765;&#x5230;&#x65B0;&#x7684;&#x5DE5;&#x4F5C;&#x5730;&#x70B9;,&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x5C31;&#x662F;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x4EE5;&#x4FBF;&#x786E;&#x8BA4;&#x6F02;&#x6D0B;&#x8FC7;&#x6D77;&#x7684;&#x7ECF;&#x5386;&#x6CA1;&#x6709;&#x767D;&#x8D39;&#x3002;</p>
+<p>&#x975E;&#x5BB6;&#x76EE;&#x5F55;&#x7684;&#x5176;&#x4ED6;&#x76EE;&#x5F55;&#x90FD;&#x662F;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;,&#x786E;&#x8BA4;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x662F;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x6B63;&#x5F0F;&#x6295;&#x5165;&#x7D27;&#x5F20;&#x6709;&#x5E8F;&#x7684;&#x5DE5;&#x4F5C;&#x751F;&#x6D3B;&#x4E2D;&#x4E86;,&#x51C6;&#x5907;&#x597D;&#x4E86;&#x5417;&#xFF1F;</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ <span class="hljs-built_in">pwd</span>
+/g/workpace/git-bash-demo
+</code></pre>
+<h3 id="&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;-&#x5217;&#x51FA;&#x6587;&#x4EF6;"><a name="&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;-&#x5217;&#x51FA;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;-&#x5217;&#x51FA;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. &#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;: &#x5217;&#x51FA;&#x6587;&#x4EF6;</h3>
+<blockquote>
+<p><code>ls [OPTION] [FILE]</code> : <code>list file</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x5217;&#x51FA;&#x6587;&#x4EF6;.</p>
+</blockquote>
+<p>&#x521A;&#x521A;&#x8FDB;&#x5165;&#x65B0;&#x73AF;&#x5883;,&#x672C;&#x60F3;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x5468;&#x56F4;&#x73AF;&#x5883;&#x548C;&#x540C;&#x4E8B;&#x6253;&#x4E2A;&#x62DB;&#x547C;,&#x84E6;&#x7136;&#x53D1;&#x73B0;: &#x5468;&#x56F4;&#x7A7A;&#x65E0;&#x4E00;&#x4EBA;.</p>
+<p>&#x7A7A;&#x8361;&#x8361;&#x7684;&#x623F;&#x5B50;&#x63D0;&#x9192;&#x7740;&#x81EA;&#x5DF1;,&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;,&#x521B;&#x4E1A;&#x9053;&#x8DEF;&#x5B64;&#x72EC;&#x800C;&#x8270;&#x8F9B;&#xFF01;</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ ls
+</code></pre>
+<h3 id="&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;-&#x521B;&#x5EFA;&#x6587;&#x4EF6;"><a name="&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;-&#x521B;&#x5EFA;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;-&#x521B;&#x5EFA;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.5. &#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;: &#x521B;&#x5EFA;&#x6587;&#x4EF6;</h3>
+<blockquote>
+<p><code>touch [OPTION] [FILE]</code> : &#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x89E6;&#x6478;&quot;,&#x6709;&#x5219;&#x6539;&#x4E4B;&#x65E0;&#x5219;&#x65B0;&#x589E;,&#x5373;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#x5219;&#x66F4;&#x65B0;&#x6743;&#x9650;&#x548C;&#x4FEE;&#x6539;&#x65F6;&#x95F4;,&#x5426;&#x5219;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;.</p>
+</blockquote>
+<p>&#x8EAB;&#x4F53;&#x662F;&#x9769;&#x547D;&#x7684;&#x672C;&#x94B1;,&#x5373;&#x5C06;&#x5F00;&#x59CB;&#x5E9F;&#x5BDD;&#x5FD8;&#x98DF;&#x7684;&#x521B;&#x4E1A;&#x4E4B;&#x65C5;,&#x5728;&#x9AD8;&#x5F3A;&#x5EA6;&#x7684;&#x5DE5;&#x4F5C;&#x6765;&#x4E34;&#x4E4B;&#x524D;,&#x5148;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x4FDD;&#x6E29;&#x676F;&#x5728;&#x4E0D;&#x5728;,&#x5728;&#x7684;&#x8BDD;,&#x6D17;&#x4E00;&#x6D17;,&#x4E0D;&#x5728;&#x7684;&#x8BDD;,&#x5148;&#x53BB;&#x4E70;&#x4E00;&#x4E2A;&#x518D;&#x6D17;&#x4E00;&#x6D17;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ touch cup.txt
+</code></pre>
+<h3 id="&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;-&#x8986;&#x76D6;&#x8F93;&#x5165;"><a name="&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;-&#x8986;&#x76D6;&#x8F93;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;-&#x8986;&#x76D6;&#x8F93;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.6. &#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;: &#x8986;&#x76D6;&#x8F93;&#x5165;</h3>
+<blockquote>
+<p><code>&gt;</code> : &#x8986;&#x76D6;&#x8F93;&#x5165;,&#x4E0D;&#x8BBA;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5DF2;&#x6709;&#x5185;&#x5BB9;,&#x65B0;&#x5185;&#x5BB9;&#x76F4;&#x63A5;&#x8986;&#x76D6;&#x539F;&#x6587;&#x4EF6;&#x5185;&#x5BB9;.</p>
+</blockquote>
+<p>&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;,&#x7B2C;&#x4E00;&#x6B65;&#x5148;&#x5F80;&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x52A0;&#x5165;&#x67B8;&#x675E;,&#x5982;&#x679C;&#x6709;&#x5176;&#x4ED6;&#x4E1C;&#x897F;&#x5148;&#x503E;&#x5012;&#x7136;&#x540E;&#x518D;&#x52A0;&#x5165;&#x67B8;&#x675E;,&#x5426;&#x5219;&#x76F4;&#x63A5;&#x52A0;&#x5165;&#x67B8;&#x675E;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;medlar&quot;</span> &gt; cup.txt
+</code></pre>
+<blockquote>
+<p><code>echo</code> &quot;medlar&quot; &#x5373;&#x8F93;&#x51FA;&#x67B8;&#x675E;,<code>&gt;</code> &#x662F;&#x91CD;&#x5B9A;&#x5411;&#x64CD;&#x4F5C;,&#x5C06;&#x4E0A;&#x4E00;&#x6B65;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x5F53;&#x505A;&#x4E0B;&#x4E00;&#x6B65;&#x7684;&#x8F93;&#x5165;&#x53C2;&#x6570;,<code>cup.txt</code> &#x662F;&#x4FDD;&#x6E29;&#x676F;,&#x56E0;&#x6B64;&#x8BE5;&#x7EC4;&#x5408;&#x547D;&#x4EE4;&#x8868;&#x793A;&#x5C06;&#x67B8;&#x675E;&#x5012;&#x5165;&#x4FDD;&#x6E29;&#x676F;.</p>
+</blockquote>
+<h3 id="&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;-&#x8FFD;&#x52A0;&#x8F93;&#x5165;"><a name="&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;-&#x8FFD;&#x52A0;&#x8F93;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;-&#x8FFD;&#x52A0;&#x8F93;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.7. &#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;: &#x8FFD;&#x52A0;&#x8F93;&#x5165;</h3>
+<blockquote>
+<p><code>&gt;&gt;</code> : &#x8FFD;&#x52A0;&#x8F93;&#x5165;,&#x5728;&#x539F;&#x6709;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x65B0;&#x5185;&#x5BB9;,&#x65B0;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x8986;&#x76D6;&#x539F;&#x6587;&#x4EF6;&#x5185;&#x5BB9;.</p>
+</blockquote>
+<p>&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x5DF2;&#x6709;&#x67B8;&#x675E;,&#x7B2C;&#x4E8C;&#x6B65;&#x5F00;&#x59CB;&#x5012;&#x6C34;&#x51C6;&#x5907;&#x6CE1;&#x67B8;&#x675E;&#x8336;,&#x67B8;&#x675E;&#x81EA;&#x7136;&#x4E0D;&#x80FD;&#x503E;&#x5012;&#x51FA;&#x53BB;,&#x4E0D;&#x7136;&#x5C31;&#x53EB;&#x505A;&#x767D;&#x5F00;&#x6C34;&#x4E0D;&#x80FD;&#x53EB;&#x505A;&#x67B8;&#x675E;&#x8336;&#x4E86;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;water&quot;</span> &gt;&gt; cup.txt
+</code></pre>
+<h3 id="&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;-&#x67E5;&#x770B;&#x6587;&#x4EF6;"><a name="&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;-&#x67E5;&#x770B;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;-&#x67E5;&#x770B;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.8. &#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;: &#x67E5;&#x770B;&#x6587;&#x4EF6;</h3>
+<blockquote>
+<p><code>cat [OPTION] [FILE]</code> : <code>concatenate</code> &#x7684;&#x7F29;&#x5199;,&#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x8FDE;&#x63A5;&quot;,&#x5373;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5185;&#x5BB9;.</p>
+</blockquote>
+<p>&#x67B8;&#x675E;&#x53EA;&#x9700;&#x4E00;&#x70B9;&#x70B9;,&#x6E29;&#x6C34;&#x9002;&#x91CF;,&#x4E0D;&#x591A;&#x4E5F;&#x4E0D;&#x5C11;&#x624D;&#x662F;&#x6700;&#x597D;,&#x6700;&#x597D;&#x4EB2;&#x81EA;&#x54C1;&#x5C1D;&#x4E00;&#x4E0B;&#x624D;&#x80FD;&#x51B3;&#x5B9A;&#x5982;&#x4F55;&#x7EE7;&#x7EED;&#x8C03;&#x6574;.</p>
+<p>&#x8981;&#x770B;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x5168;&#x90E8;&#x5185;&#x5BB9;&#x6B63;&#x5982;&#x8981;&#x770B;&#x5230;&#x67B8;&#x675E;&#x8336;&#x6574;&#x4F53;&#x4E00;&#x6837;,&#x540E;&#x7EED;&#x64CD;&#x4F5C;&#x89C6;&#x89C2;&#x5BDF;&#x7ED3;&#x679C;&#x800C;&#x5B9A;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ cat cup.txt
+medlar
+water
+</code></pre>
+<h3 id="&#x67B8;&#x675E;&#x8336;&#x8981;&#x518D;&#x8C03;&#x6574;&#xFF1A;-&#x8FFD;&#x52A0;&#x5E76;&#x67E5;&#x770B;&#x6587;&#x4EF6;"><a name="&#x67B8;&#x675E;&#x8336;&#x8981;&#x518D;&#x8C03;&#x6574;&#xFF1A;-&#x8FFD;&#x52A0;&#x5E76;&#x67E5;&#x770B;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x67B8;&#x675E;&#x8336;&#x8981;&#x518D;&#x8C03;&#x6574;&#xFF1A;-&#x8FFD;&#x52A0;&#x5E76;&#x67E5;&#x770B;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.9. &#x67B8;&#x675E;&#x8336;&#x8981;&#x518D;&#x8C03;&#x6574;&#xFF1A; &#x8FFD;&#x52A0;&#x5E76;&#x67E5;&#x770B;&#x6587;&#x4EF6;</h3>
+<p>&#x67B8;&#x675E;&#x5DEE;&#x4E0D;&#x591A;,&#x6D53;&#x5EA6;&#x6709;&#x70B9;&#x5927;,&#x9700;&#x8981;&#x518D;&#x52A0;&#x4E00;&#x70B9;&#x6C34;,&#x4E3A;&#x4E86;&#x63A7;&#x5236;&#x52A0;&#x5165;&#x91CF;,&#x8FD8;&#x8981;&#x518D;&#x54C1;&#x4E00;&#x4E0B;&#x67B8;&#x675E;&#x8336;.</p>
+<pre><code># &#x8FFD;&#x52A0;&#x6587;&#x4EF6;&#x5185;&#x5BB9;
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ echo &quot;more water&quot; &gt;&gt; cup.txt
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5185;&#x5BB9;
+$ cat cup.txt
+medlar
+water
+more water
+</code></pre><h3 id="&#x4E09;&#x66F4;&#x706F;&#x706B;&#x4E94;&#x66F4;&#x9E21;-&#x7F16;&#x8F91;&#x6587;&#x4EF6;"><a name="&#x4E09;&#x66F4;&#x706F;&#x706B;&#x4E94;&#x66F4;&#x9E21;-&#x7F16;&#x8F91;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x66F4;&#x706F;&#x706B;&#x4E94;&#x66F4;&#x9E21;-&#x7F16;&#x8F91;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.10. &#x4E09;&#x66F4;&#x706F;&#x706B;&#x4E94;&#x66F4;&#x9E21;: &#x7F16;&#x8F91;&#x6587;&#x4EF6;</h3>
+<blockquote>
+<p><code>vim [OPTION] [FILE]</code> : <code>Vi IMproved</code> &#x7684;&#x7F29;&#x5199;,<code>vi = VIsual = Very Inconvenient</code> &#x662F;&#x547D;&#x4EE4;&#x884C;&#x7F16;&#x8F91;&#x5DE5;&#x5177;,<code>vim</code> &#x5373; <code>vi</code> &#x7684;&#x589E;&#x5F3A;&#x7248;,&#x7F16;&#x8F91;&#x6587;&#x4EF6;.</p>
+</blockquote>
+<p>&#x5148;&#x8BBE;&#x5B9A;&#x6574;&#x4F53;&#x76EE;&#x6807;,&#x505A;&#x597D;&#x5168;&#x5C40;&#x6027;&#x8BA1;&#x5212;,&#x7136;&#x540E;&#x518D;&#x662F;&#x6839;&#x636E;&#x76EE;&#x6807;&#x786E;&#x5B9A;&#x8BE6;&#x7EC6;&#x5177;&#x4F53;&#x7684;&#x5DE5;&#x4F5C;&#x5B89;&#x6392;.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5728;&#x547D;&#x4EE4;&#x884C;&#x7F16;&#x8F91;&#x5668;&#x4E2D;&#x7F16;&#x8F91; goal.txt &#x6587;&#x4EF6;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;.</span>
+$ vim goal.txt
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x7F16;&#x8F91;&#x5668;&#x540E;&#x7684;&#x57FA;&#x672C;&#x547D;&#x4EE4;</p>
+<ul>
+<li><code>i</code> : <code>insert</code> &#x7684;&#x7F29;&#x5199;,&#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x63D2;&#x5165;&quot;,&#x5373;&#x5207;&#x6362;&#x5230;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;.</li>
+<li><code>esc</code> : <code>escape</code> &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x9003;&#x8DD1;&quot;,&#x5373;&#x5207;&#x6362;&#x5230;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;.</li>
+<li><code>:w</code> &#xFF1A; <code>write</code> &#x7684;&#x7F29;&#x5199;,&#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x4FDD;&#x5B58;&quot;,&#x5373;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x5185;&#x5BB9;.</li>
+<li><code>:q</code> : <code>quit</code> &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x9000;&#x51FA;&quot;,&#x5373;&#x9000;&#x51FA; <code>vim</code> &#x7F16;&#x8F91;&#x5668;.</li>
+<li><code>:wq</code> : <code>write and quit</code> &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x4FDD;&#x5B58;&#x5E76;&#x9000;&#x51FA;&quot;,&#x5373;&#x4FDD;&#x5B58;&#x5E76;&#x9000;&#x51FA; <code>vim</code> &#x7F16;&#x8F91;&#x5668;.</li>
+<li><code>:q!</code> : <code>quit force</code> &#x7684;&#x7F29;&#x5199;,&#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x5F3A;&#x5236;&#x9000;&#x51FA;&quot;,&#x5373;&#x4E0D;&#x63D0;&#x793A;&#x672A;&#x4FDD;&#x5B58;&#x5F3A;&#x5236;&#x9000;&#x51FA;.</li>
+<li><code>gg</code> : &#x5B9A;&#x4F4D;&#x5230;&#x6587;&#x4EF6;&#x5F00;&#x5934;.</li>
+<li><code>G</code> &#xFF1A; &#x5B9A;&#x4F4D;&#x5230;&#x6587;&#x4EF6;&#x7ED3;&#x5C3E;.</li>
+<li><code>yy</code> : &#x590D;&#x5236;&#x6574;&#x884C;.</li>
+<li><code>dd</code> : &#x526A;&#x5207;&#x6574;&#x884C;.</li>
+<li><code>p</code> : &#x7C98;&#x8D34;.</li>
+<li><code>u</code> : &#x64A4;&#x9500;.</li>
+<li><code>ctrl + f</code> : &#x4E0B;&#x7FFB;&#x6574;&#x9875;.</li>
+<li><code>ctrl + b</code> : &#x4E0A;&#x7FFB;&#x6574;&#x9875;.</li>
+<li><code>ctrl + d</code> : &#x4E0B;&#x7FFB;&#x534A;&#x9875;.</li>
+<li><code>ctrl + u</code> : &#x4E0A;&#x7FFB;&#x534A;&#x9875;.</li>
+<li><code>/&lt;string&gt;</code> : &#x67E5;&#x627E;<string>&#x5B57;&#x7B26;&#x4E32;</string></li>
+</ul>
+<p>&#x7F16;&#x8F91;&#x540E;&#x7684;&#x76EE;&#x6807;,&#x5B66;&#x4E60; <code>markdown</code> ,&#x5B66;&#x4E60; <code>git</code> ,&#x5B66;&#x4E60; <code>gitbook</code> ,&#x5206;&#x4EAB; <code>java</code> &#x77E5;&#x8BC6;&#x7B49;&#x7B49;,&#x76EE;&#x6807;&#x8FDC;&#x5927;,&#x64B8;&#x8D77;&#x8896;&#x5B50;&#x52A0;&#x6CB9;&#x5E72;&#x5427;&#xFF01;</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ cat goal.txt
+<span class="hljs-comment">## learning markdown</span>
+
+<span class="hljs-comment">## learning git</span>
+
+<span class="hljs-comment">## learning gitbook</span>
+
+<span class="hljs-comment">## sharing java8</span>
+</code></pre>
+<h3 id="&#x64B8;&#x8D77;&#x8896;&#x5B50;&#x52A0;&#x6CB9;&#x5E72;-&#x67E5;&#x770B;&#x5F00;&#x5934;"><a name="&#x64B8;&#x8D77;&#x8896;&#x5B50;&#x52A0;&#x6CB9;&#x5E72;-&#x67E5;&#x770B;&#x5F00;&#x5934;" class="anchor-navigation-ex-anchor" href="#&#x64B8;&#x8D77;&#x8896;&#x5B50;&#x52A0;&#x6CB9;&#x5E72;-&#x67E5;&#x770B;&#x5F00;&#x5934;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.11. &#x64B8;&#x8D77;&#x8896;&#x5B50;&#x52A0;&#x6CB9;&#x5E72;: &#x67E5;&#x770B;&#x5F00;&#x5934;</h3>
+<blockquote>
+<p><code>head [OPTION] [FILE]</code> : <code>head</code> &#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x5934;&quot;,&#x5373;&#x6253;&#x5370;&#x6587;&#x4EF6;&#x524D;&#x5341;&#x884C;&#x5185;&#x5BB9;.</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x7ACB;&#x4E0B;&#x7684;&#x76EE;&#x6807;&#x6682;&#x65F6;&#x53EA;&#x6709;&#x56DB;&#x884C;,&#x4E3A;&#x4E86;&#x63A9;&#x9970;&#x6548;&#x679C;,&#x4E34;&#x65F6;&#x5F55;&#x5165;&#x66F4;&#x591A;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x8BA1;&#x5212;,&#x8FD9;&#x90E8;&#x5206;&#x5E76;&#x4E0D;&#x5C5E;&#x4E8E;&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x6807;.</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;: &#x521B;&#x5EFA;&#x76EE;&#x5F55;&quot;</span> &gt;&gt; goal.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;: &#x5207;&#x6362;&#x76EE;&#x5F55;&quot;</span> &gt;&gt; goal.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;: &#x6253;&#x5370;&#x76EE;&#x5F55;&quot;</span> &gt;&gt; goal.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;: &#x5217;&#x51FA;&#x6587;&#x4EF6;&quot;</span> &gt;&gt; goal.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;: &#x521B;&#x5EFA;&#x6587;&#x4EF6;&quot;</span> &gt;&gt; goal.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;: &#x8986;&#x76D6;&#x8F93;&#x5165;&quot;</span> &gt;&gt; goal.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;: &#x8FFD;&#x52A0;&#x8F93;&#x5165;&quot;</span> &gt;&gt; goal.txt
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;: &#x67E5;&#x770B;&#x6587;&#x4EF6;&quot;</span> &gt;&gt; goal.txt
+</code></pre>
+<p>&#x73B0;&#x5728; <code>goal.txt</code> &#x6587;&#x4EF6;&#x4E0D;&#x6B62;&#x5341;&#x884C;,&#x800C;&#x662F;&#x5341;&#x516D;&#x884C;&#x6570;&#x636E;,&#x8DB3;&#x591F;&#x6211;&#x4EEC;&#x6F14;&#x793A;&#x6548;&#x679C;.</p>
+<p>&#x5728;&#x6CE1;&#x67B8;&#x675E;&#x8336;&#x6700;&#x540E;&#x4E00;&#x6B65;&#x4E2D;,&#x6211;&#x4EEC;&#x9700;&#x8981;&#x54C1;&#x8336;&#x4EE5;&#x6B64;&#x786E;&#x5B9A;&#x67B8;&#x675E;&#x548C;&#x70ED;&#x6C34;&#x642D;&#x914D;&#x662F;&#x5426;&#x5408;&#x7406;,&#x4F7F;&#x7528; <code>cat</code> &#x547D;&#x4EE4;&#x5E2E;&#x6211;&#x4EEC;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5168;&#x90E8;&#x5185;&#x5BB9;,&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x67E5;&#x770B;&#x5168;&#x90E8;,&#x53EA;&#x9700;&#x8981;&#x67E5;&#x770B;&#x524D;&#x5341;&#x6761;&#x7684;&#x8BDD;,&#x5C31;&#x9700;&#x8981;&#x53E6;&#x5916;&#x7684;&#x547D;&#x4EE4;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ cat goal.txt
+<span class="hljs-comment">## learning markdown</span>
+
+<span class="hljs-comment">## learning git</span>
+
+<span class="hljs-comment">## learning gitbook</span>
+
+<span class="hljs-comment">## sharing java8</span>
+
+&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;: &#x521B;&#x5EFA;&#x76EE;&#x5F55;
+&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;: &#x5207;&#x6362;&#x76EE;&#x5F55;
+&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;: &#x6253;&#x5370;&#x76EE;&#x5F55;
+&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;: &#x5217;&#x51FA;&#x6587;&#x4EF6;
+&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;: &#x521B;&#x5EFA;&#x6587;&#x4EF6;
+&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;: &#x8986;&#x76D6;&#x8F93;&#x5165;
+&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;: &#x8FFD;&#x52A0;&#x8F93;&#x5165;
+&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;: &#x67E5;&#x770B;&#x6587;&#x4EF6;
+</code></pre>
+<p>&#x67E5;&#x770B;&#x76EE;&#x6807;&#x6E05;&#x5355;&#x4E2D;&#x7684;&#x524D;&#x5341;&#x6761;&#x8BB0;&#x5F55;,&#x800C;&#x4E0D;&#x663E;&#x793A;&#x5168;&#x90E8;&#x8BB0;&#x5F55;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ head goal.txt
+<span class="hljs-comment">## learning markdown</span>
+
+<span class="hljs-comment">## learning git</span>
+
+<span class="hljs-comment">## learning gitbook</span>
+
+<span class="hljs-comment">## sharing java8</span>
+
+&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;: &#x521B;&#x5EFA;&#x76EE;&#x5F55;
+&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;: &#x5207;&#x6362;&#x76EE;&#x5F55;
+</code></pre>
+<h3 id="&#x4E0D;&#x601D;&#x8FDB;&#x53D6;&#x540E;&#x5341;&#x540D;-&#x67E5;&#x770B;&#x7ED3;&#x5C3E;"><a name="&#x4E0D;&#x601D;&#x8FDB;&#x53D6;&#x540E;&#x5341;&#x540D;-&#x67E5;&#x770B;&#x7ED3;&#x5C3E;" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x601D;&#x8FDB;&#x53D6;&#x540E;&#x5341;&#x540D;-&#x67E5;&#x770B;&#x7ED3;&#x5C3E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.12. &#x4E0D;&#x601D;&#x8FDB;&#x53D6;&#x540E;&#x5341;&#x540D;: &#x67E5;&#x770B;&#x7ED3;&#x5C3E;</h3>
+<blockquote>
+<p><code>tail [OPTION] [FILE]</code> : <code>tail</code> &#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x5C3E;&quot;,&#x5373;&#x6253;&#x5370;&#x6587;&#x4EF6;&#x540E;&#x5341;&#x884C;&#x5185;&#x5BB9;.</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x662F;&#x76EE;&#x6807;&#x6587;&#x4EF6; <code>goal.txt</code> &#x8FD8;&#x597D;,&#x76EE;&#x6807;&#x518D;&#x5C0F;&#x4E5F;&#x4E0D;&#x5E94;&#x88AB;&#x6B67;&#x89C6;,&#x5982;&#x679C;&#x662F;&#x6210;&#x7EE9;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x7EE9;&#x6548;&#x6587;&#x4EF6;,&#x96BE;&#x514D;&#x4F1A;&#x88AB;&#x6BD4;&#x8F83;,&#x6253;&#x4E0A;&quot;&#x4E0D;&#x601D;&#x8FDB;&#x53D6;&quot;&#x7684;&#x6807;&#x7B7E;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ tail goal.txt
+<span class="hljs-comment">## sharing java8</span>
+
+&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;: &#x521B;&#x5EFA;&#x76EE;&#x5F55;
+&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;: &#x5207;&#x6362;&#x76EE;&#x5F55;
+&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;: &#x6253;&#x5370;&#x76EE;&#x5F55;
+&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;: &#x5217;&#x51FA;&#x6587;&#x4EF6;
+&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;: &#x521B;&#x5EFA;&#x6587;&#x4EF6;
+&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;: &#x8986;&#x76D6;&#x8F93;&#x5165;
+&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;: &#x8FFD;&#x52A0;&#x8F93;&#x5165;
+&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;: &#x67E5;&#x770B;&#x6587;&#x4EF6;
+</code></pre>
+<h3 id="&#x4F18;&#x96C5;&#x7684;&#x5199;&#x4F5C;&#x4F53;&#x9A8C;-markdown"><a name="&#x4F18;&#x96C5;&#x7684;&#x5199;&#x4F5C;&#x4F53;&#x9A8C;-markdown" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x96C5;&#x7684;&#x5199;&#x4F5C;&#x4F53;&#x9A8C;-markdown"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.13. &#x4F18;&#x96C5;&#x7684;&#x5199;&#x4F5C;&#x4F53;&#x9A8C;: markdown</h3>
+<blockquote>
+<p><code>markdown</code> &#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x578B;&#x7684;&#x6587;&#x672C;&#x6807;&#x8BB0;&#x8BED;&#x8A00;,&#x662F;&#x65E0;&#x6587;&#x672C; <code>txt</code> &#x7684;&#x589E;&#x5F3A;&#x7248;&#xFF0C;&#x662F;&#x8D85;&#x6587;&#x672C; <code>html</code> &#x7684;&#x7CBE;&#x7B80;&#x7248;,&#x662F;&#x4E8C;&#x8FDB;&#x5236; <code>word</code> &#x7684;&#x66FF;&#x4EE3;&#x7248;,&#x5E26;&#x7ED9;&#x4F60;&#x5168;&#x65B0;&#x7684;&#x5199;&#x4F5C;&#x4F53;&#x9A8C;.</p>
+</blockquote>
+<p>&#x521A;&#x521A;&#x7ACB;&#x4E0B;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x5C31;&#x662F;&#x5B66;&#x4E60; <code>markdown</code> ,&#x90A3;&#x4EC0;&#x4E48;&#x662F; <code>mardown</code> &#x4EE5;&#x53CA;&#x6211;&#x4EEC;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5B66;&#x4E60; <code>markdown</code> &#x5462;&#xFF1F;</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+<span class="hljs-comment"># &#x524D;&#x4E00;&#x6761;&#x8BB0;&#x5F55;: -n 1&#xFF0C;&#x524D;&#x4E94;&#x6761;&#x8BB0;&#x5F55;: -n 5</span>
+$ head -n 1 goal.txt
+<span class="hljs-comment">## learning markdown</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x6587;&#x7AE0;&#x9700;&#x8981;&#x624B;&#x52A8;&#x540C;&#x6B65;&#x53D1;&#x8868;&#x5230;&#x5404;&#x5927;&#x7F51;&#x7EDC;&#x5E73;&#x53F0;,&#x7528;&#x4E66;&#x5199; <code>word</code> &#x90A3;&#x79CD;&#x4F53;&#x9A8C;&#x867D;&#x7136;&#x76F4;&#x89C2;,&#x4F46;&#x662F;&#x7F3A;&#x70B9;&#x662F;&#x9700;&#x8981;&#x8BB0;&#x4F4F;&#x5404;&#x5E73;&#x53F0;&#x5E03;&#x5C40;&#x6309;&#x94AE;&#x6446;&#x653E;&#x4F4D;&#x7F6E;,&#x60F3;&#x8981;&#x8FBE;&#x5230;&#x4E00;&#x81F4;&#x7684;&#x8F93;&#x51FA;&#x6548;&#x679C;,&#x6BCF;&#x4E2A;&#x5E73;&#x53F0;&#x90FD;&#x9700;&#x8981;&#x624B;&#x52A8;&#x8C03;&#x6574;&#x4EE5;&#x786E;&#x4FDD;&#x6700;&#x7EC8;&#x6548;&#x679C;&#x4E00;&#x81F4;&#x6027;.</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528; <code>markdown</code> &#x4F53;&#x9A8C;&#x6765;&#x4E66;&#x5199;&#x6587;&#x5B57;&#x5219;&#x5B8C;&#x5168;&#x4E0D;&#x4F1A;&#x6709;&#x8FD9;&#x79CD;&#x95EE;&#x9898;,&#x63D0;&#x524D;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5E76;&#x4E0D;&#x4F9D;&#x8D56;&#x5E73;&#x53F0;,&#x4F60;&#x53EF;&#x4EE5;&#x4E00;&#x5904;&#x7F16;&#x5199;,&#x968F;&#x5FC3;&#x6240;&#x6B32;&#x5230;&#x5904;&#x590D;&#x5236;&#x7C98;&#x8D34;!</p>
+<p>&#x65E2;&#x7136; <code>markdown</code> &#x8FD9;&#x4E48;&#x795E;&#x5947;,&#x8FD9;&#x79CD;&#x4F18;&#x96C5;&#x7684;&#x5199;&#x4F5C;&#x65B9;&#x5F0F;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x5462;?&#x5B66;&#x8D77;&#x6765;&#x771F;&#x7684;&#x4E00;&#x70B9;&#x90FD;&#x4E0D;&#x8D39;&#x4E8B;!</p>
+<p><code>markdown</code> &#x662F;&#x4E00;&#x79CD;&#x6807;&#x8BB0;&#x8BED;&#x8A00;,&#x5E38;&#x7528;&#x4E8E;&#x4E66;&#x5199;&#x6587;&#x7AE0;,&#x5C0F;&#x5DE7;&#x8F7B;&#x91CF;,&#x4E0D;&#x5FC5;&#x8BB0;&#x4F4F;&#x4EE4;&#x4EBA;&#x773C;&#x82B1;&#x7F2D;&#x4E71;&#x7684;&#x6309;&#x94AE;&#x6446;&#x653E;&#x4F4D;&#x7F6E;,&#x4E5F;&#x4E0D;&#x50CF;&#x8BB0;&#x4E8B;&#x672C;&#x90A3;&#x79CD;&#x6BEB;&#x65E0;&#x683C;&#x5F0F;,&#x53EA;&#x9700;&#x8BB0;&#x4F4F;&#x6709;&#x9650;&#x51E0;&#x4E2A;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x5C31;&#x80FD;&#x8F93;&#x51FA;&#x6F02;&#x4EAE;&#x7F8E;&#x89C2;&#x7684;&#x6587;&#x4EF6;&#x6548;&#x679C;&#xFF01;</p>
+<p>&#x6BD4;&#x5982;&#x5F53;&#x524D;&#x6587;&#x7AE0;&#x7684;&#x4E66;&#x5199;&#x683C;&#x5F0F;&#x5C31;&#x662F; <code>markdown</code> &#x8FDB;&#x884C;&#x7F16;&#x5199;,&#x6574;&#x4F53;&#x6548;&#x679C;&#x8FD8;&#x4E0D;&#x9519;,&#x8FD9;&#x6837;&#x770B;&#x8D77;&#x6765; <code>markdown</code> &#x662F;&#x4E0D;&#x662F;&#x5F88;&#x5F3A;&#x5927;&#x5462;?</p>
+<blockquote>
+<p>&#x548C;&#x5176;&#x4ED6;&#x6587;&#x672C;&#x6587;&#x6863;&#x4E00;&#x6837;, <code>markdown</code> &#x6587;&#x4EF6;&#x4E5F;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x540E;&#x7F00;&#x540D; <code>.md</code>,&#x6BD4;&#x5982;&#x8BE5;&#x6587;&#x7AE0;&#x7684;&#x6587;&#x4EF6;&#x540D; <code>git-bash-command.md</code>.</p>
+</blockquote>
+<p>&#x73B0;&#x5728;&#x4F60;&#x662F;&#x4E0D;&#x662F;&#x8FEB;&#x4E0D;&#x53CA;&#x5F85;&#x60F3;&#x8981;&#x5B66;&#x4E60; <code>markdown</code> &#x4E86;&#x5462;?</p>
+<p>&#x522B;&#x6025;,&#x5B66;&#x4E60;&#x9700;&#x8981;&#x89C4;&#x5212;,&#x6211;&#x4EEC;&#x518D;&#x4E13;&#x95E8;&#x65B0;&#x5EFA;&#x76EE;&#x5F55;&#x7528;&#x4E8E;&#x5B58;&#x653E; <code>markdown</code> &#x5B66;&#x4E60;&#x7B14;&#x8BB0;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x76EE;&#x5F55;: &#x53C2;&#x8003;&quot;&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;&quot;&#x7AE0;&#x8282;</span>
+$ mkdir markdown
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+<span class="hljs-comment"># &#x5217;&#x51FA;&#x6587;&#x4EF6;: &#x53C2;&#x8003;&quot;&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;&quot;&#x7AE0;&#x8282;</span>
+$ ls
+cup.txt  goal.txt  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+<span class="hljs-comment"># &#x5207;&#x6362;&#x76EE;&#x5F55;: &#x53C2;&#x8003;&quot;&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;&quot;&#x7AE0;&#x8282;</span>
+$ <span class="hljs-built_in">cd</span> markdown
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/markdown
+<span class="hljs-comment"># &#x6253;&#x5370;&#x76EE;&#x5F55;: &#x53C2;&#x8003;&quot;&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;&quot;&#x7AE0;&#x8282;</span>
+$ <span class="hljs-built_in">pwd</span>
+/g/workpace/git-bash-demo/markdown
+</code></pre>
+<p>&#x73B0;&#x5728;&#x8BA9;&#x6211;&#x4EEC;&#x5148;&#x5B66;&#x4E60;&#x4E0B; <code>markdown</code> &#x4E2D;&#x6807;&#x9898;&#x548C;&#x5217;&#x8868;&#x5982;&#x4F55;&#x4E66;&#x5199;,&#x60F3;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x8BF7;&#x53C2;&#x8003;&#x6211;&#x4E13;&#x95E8;&#x4ECB;&#x7ECD; <code>makdown</code> &#x7684;<a href="https://snowdreams1006.github.io/markdown/" target="_blank">&#x7CFB;&#x5217;&#x6587;&#x7AE0;</a>.</p>
+<ul>
+<li>&#x6807;&#x9898;</li>
+</ul>
+<blockquote>
+<p>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;: <code>#</code> + <code>&#x7A7A;&#x683C;</code> + <code>&#x6587;&#x672C;</code> ,<code>#</code> &#x8868;&#x793A;&#x4E00;&#x7EA7;&#x6807;&#x9898;,<code>##</code> &#x8868;&#x793A;&#x4E8C;&#x7EA7;&#x6807;&#x9898;,<code>###</code> &#x8868;&#x793A;&#x4E09;&#x7EA7;&#x6807;&#x9898;,&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;,&#x6700;&#x591A;&#x652F;&#x6301;&#x516D;&#x7EA7;&#x6807;&#x9898;.</p>
+</blockquote>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-markdown"><span class="hljs-section"># &#x6807;&#x9898;1</span>
+<span class="hljs-section">## &#x6807;&#x9898;2</span>
+</code></pre>
+<ul>
+<li>&#x6709;&#x5E8F;&#x5217;&#x8868;</li>
+</ul>
+<blockquote>
+<p>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;<code>&#x6570;&#x5B57;</code> + <code>.</code> + <code>&#x7A7A;&#x683C;</code> + <code>&#x6587;&#x672C;</code></p>
+</blockquote>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code>1. &#x6709;&#x5E8F;&#x5217;&#x8868;1 
+2. &#x6709;&#x5E8F;&#x5217;&#x8868;2 
+3. &#x6709;&#x5E8F;&#x5217;&#x8868;3
+</code></pre><ul>
+<li>&#x65E0;&#x5E8F;&#x5217;&#x8868;</li>
+</ul>
+<blockquote>
+<p>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;&apos;<code>- &#x6216; * &#x6216; +</code>&apos; + <code>&#x7A7A;&#x683C;</code> + <code>&#x6587;&#x672C;</code></p>
+</blockquote>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code>- &#x65E0;&#x5E8F;&#x5217;&#x8868;1 
+* &#x65E0;&#x5E8F;&#x5217;&#x8868;2 
++ &#x65E0;&#x5E8F;&#x5217;&#x8868;3
+</code></pre><p>&#x54C7;&#x585E;,&#x539F;&#x6765; <code>markdown</code> &#x8BED;&#x8A00;&#x7ADF;&#x7136;&#x5982;&#x4F55;&#x7B80;&#x6D01;,&#x5988;&#x5988;&#x518D;&#x4E5F;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x6211;&#x8BB0;&#x4E0D;&#x4F4F;&#x590D;&#x6742;&#x7684;&#x5E03;&#x5C40;&#x6309;&#x94AE;&#x4E86;&#xFF01;</p>
+<p>&#x7B14;&#x8BB0;&#x65F6;&#x95F4;&#x5230;,&#x8D76;&#x7D27;&#x5C06;&#x4E0A;&#x8FF0;&#x77E5;&#x8BC6;&#x70B9;&#x6574;&#x7406;&#x5230; <code>markdown</code> &#x76EE;&#x5F55;&#x4E0B;,&#x521B;&#x5EFA; <code>markdown.md</code> &#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x521A;&#x624D;&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/markdown
+<span class="hljs-comment"># &#x7F16;&#x8F91;&#x6587;&#x4EF6;: &#x53C2;&#x8003;&quot;&#x4E09;&#x66F4;&#x706F;&#x706B;&#x4E94;&#x66F4;&#x9E21;&quot;&#x7AE0;&#x8282; </span>
+$ vim markdown.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/markdown
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6587;&#x4EF6;: &#x53C2;&#x8003;&quot;&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;&quot;&#x7AE0;&#x8282; </span>
+$ cat markdown.md
+&#x5148;&#x5B66;&#x4E60;&#x4E0B; `markdown` &#x4E2D;&#x6807;&#x9898;&#x548C;&#x5217;&#x8868;&#x5982;&#x4F55;&#x4E66;&#x5199;,&#x60F3;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x8BF7;&#x53C2;&#x8003;&#x6211;&#x4E13;&#x95E8;&#x4ECB;&#x7ECD; `makdown` &#x7684;[&#x7CFB;&#x5217;&#x6587;&#x7AE0;](https://snowdreams1006.github.io/markdown/).
+
+...
+</code></pre>
+<h3 id="&#x606A;&#x5C3D;&#x804C;&#x8D23;&#x7684;&#x7F51;&#x76D8;-git"><a name="&#x606A;&#x5C3D;&#x804C;&#x8D23;&#x7684;&#x7F51;&#x76D8;-git" class="anchor-navigation-ex-anchor" href="#&#x606A;&#x5C3D;&#x804C;&#x8D23;&#x7684;&#x7F51;&#x76D8;-git"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.14. &#x606A;&#x5C3D;&#x804C;&#x8D23;&#x7684;&#x7F51;&#x76D8;: git</h3>
+<p>&#x7ECF;&#x8FC7;&#x4E0A;&#x8FF0;&#x5185;&#x5BB9;&#x5F15;&#x5BFC;&#x53D1;&#x73B0; <code>markdown</code> &#x8BED;&#x6CD5;&#x786E;&#x5B9E;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x5F88;&#x597D;&#x7528;,&#x4E8E;&#x662F;&#x4E4E;&#x4E0B;&#x5B9A;&#x51B3;&#x5FC3;&#x5F00;&#x59CB;&#x8E0F;&#x4E0A;&#x5B66;&#x4E60; <code>markdown</code> &#x4E4B;&#x65C5;.</p>
+<p>&#x5DE5;&#x6B32;&#x5584;&#x5176;&#x4E8B;&#x5FC5;&#x5148;&#x5229;&#x5176;&#x5668;,&#x672C;&#x7740;&#x5C0F;&#x767D;&#x521D;&#x4F53;&#x9A8C;&#x5FC3;&#x6001;,&#x8FD8;&#x662F;&#x5148;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x53EF;&#x89C6;&#x5316;&#x7684;&#x7F16;&#x8F91;&#x5668;&#x5427;!</p>
+<blockquote>
+<p>&#x5B9E;&#x9645;&#x4E0A;,<code>markdown</code> &#x5F88;&#x5E38;&#x7528;,&#x4E3B;&#x6D41;&#x7F16;&#x8F91;&#x5668;&#x57FA;&#x672C;&#x90FD;&#x6709;&#x76F8;&#x5E94;&#x63D2;&#x4EF6;,&#x6BD4;&#x5982; <code>idea</code>,<code>vs code</code> &#x548C; <code>sublime</code>&#x7B49;.</p>
+</blockquote>
+<p><code>typora</code> <a href="https://typora.io/" target="_blank">&#x7F16;&#x8F91;&#x5668;</a>,&#x652F;&#x6301;&#x591A;&#x5E73;&#x53F0;,    <code>windows</code> ,<code>mac</code> &#x548C; <code>linux</code>,&#x522B;&#x5177;&#x4E00;&#x683C;&#x7684;&#x9996;&#x9875;.</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-4b4c9245cc8cd028.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-markdown-typora-preview.png"></p>
+<p>&#x5B89;&#x88C5;&#x6CA1;&#x6709;&#x7279;&#x6B8A;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;,&#x6B63;&#x5E38;&#x5B89;&#x88C5;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;,&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#x540E;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6253;&#x5F00;&#x5DF2;&#x6709; <code>markdown</code> &#x6587;&#x4EF6;.</p>
+<p>&#x5B9E;&#x65F6;&#x6E32;&#x67D3;,&#x6240;&#x89C1;&#x5373;&#x6240;&#x5F97;,&#x5DE6;&#x4FA7;&#x662F;&#x6587;&#x4EF6;&#x5217;&#x8868;,&#x53F3;&#x4FA7;&#x662F;&#x5185;&#x5BB9;&#x7F16;&#x8F91;&#x5668;,&#x559C;&#x6B22;&#x7684;&#x8BDD;&#x8D76;&#x7D27;&#x5165;&#x624B;&#x5427;!</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-6618f2c1b4f3f3aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-markdown-typora-writing.png"></p>
+<p>&#x88C5;&#x5907;&#x597D;&#x7F16;&#x8F91;&#x5668;&#x540E;,&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x7EE7;&#x7EED;&#x5B66;&#x4E60; <code>markdown</code> &#x7684;&#x57FA;&#x672C;&#x77E5;&#x8BC6;,&#x4ECB;&#x7ECD;&#x4E0B;&#x5982;&#x4F55;&#x663E;&#x793A;&#x56FE;&#x7247;&#x4EE5;&#x53CA;&#x8D85;&#x94FE;&#x63A5;&#x3002;</p>
+<ul>
+<li>&#x94FE;&#x63A5;</li>
+</ul>
+<blockquote>
+<p>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;<code>[&#x663E;&#x793A;&#x6587;&#x672C;]</code> + <code>(&#x94FE;&#x63A5;&#x5730;&#x5740;)</code></p>
+</blockquote>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code>[https://snowdreams1006.github.io](https://snowdreams1006.github.io/)
+</code></pre><ul>
+<li>&#x56FE;&#x7247;</li>
+</ul>
+<blockquote>
+<p>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;<code>!</code> + <code>[&#x56FE;&#x7247;&#x6807;&#x9898;]</code> + <code>(&#x56FE;&#x7247;&#x5730;&#x5740;)</code></p>
+</blockquote>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code>![&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x7684;&#x5934;&#x50CF;](https://upload.jianshu.io/users/upload_avatars/16648241/57aebe62-b5b5-491a-a9fd-f994d5be7dda.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240)
+</code></pre><p>&#x70B9;&#x6EF4;&#x79EF;&#x7D2F;&#x4E5F;&#x662F;&#x8FDB;&#x6B65;,&#x8BB0;&#x5F97;&#x8981;&#x628A;&#x8FD9;&#x6B21;&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;&#x4FDD;&#x5B58;&#x5230;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7684; <code>markdown.md</code> &#x6587;&#x4EF6;&#x4E2D;&#x54DF;&#xFF01;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-740e964eeae4d219.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-bash-tail-markdown.png"></p>
+<p>&#x6B63;&#x6240;&#x8C13;&quot;&#x6E29;&#x6545;&#x800C;&#x77E5;&#x65B0;&#x53EF;&#x4EE5;&#x4E3A;&#x5E08;&#x77E3;&quot;,&#x7B14;&#x8BB0;&#x4E0D;&#x4EC5;&#x8981;&#x5199;&#x8FD8;&#x8981;&#x7ECF;&#x5E38;&#x770B;,&#x4E8E;&#x662F;&#x5728;&#x521A;&#x521A;&#x7684;&#x7B14;&#x8BB0;&#x4E0A;&#x505A;&#x4E9B;&#x4FEE;&#x6539;&#x6DFB;&#x52A0;&#x81EA;&#x5DF1;&#x7684;&#x7406;&#x89E3;.</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-7afa78d500f20549.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-bash-tail-markdown-learn.png"></p>
+<p>&#x679C;&#x7136;&#x662F;&#x4E00;&#x6B21;&#x6109;&#x5FEB;&#x7684;&#x5B66;&#x4E60;&#x4F53;&#x9A8C;,&#x771F;&#x7684;&#x662F;&#x6D3B;&#x5B66;&#x6D3B;&#x7528;&#x554A;,&#x5B7A;&#x5B50;&#x53EF;&#x6559;&#x4E5F;&#xFF01;</p>
+<p>&#x9694;&#x58C1;&#x5C0F;&#x4F19;&#x4F34;&#x542C;&#x8BF4;&#x4F60;&#x6700;&#x8FD1;&#x5728;&#x5B66; <code>markdown</code> &#xFF0C;&#x60F3;&#x501F;&#x4F60;<strong>&#x8001;&#x5E08;</strong>&#x7559;&#x4E0B;&#x7684;&#x7B14;&#x8BB0;&#x770B;&#x770B;,&#x4E8E;&#x662F;&#x4F60;&#x597D;&#x5FC3;&#x627E;&#x4E00;&#x4E0B;&#x8BFE;&#x5802;&#x7B14;&#x8BB0;&#x6253;&#x7B97;&#x53D1;&#x7ED9;&#x4ED6;.</p>
+<p>&#x7B49;&#x4E00;&#x7B49;,&#x5BF9;&#x65B9;&#x9700;&#x8981;&#x7684;&#x662F;&#x8BFE;&#x4EF6;&#x8D44;&#x6599;&#x5E76;&#x4E0D;&#x5305;&#x542B;&#x4F60;&#x81EA;&#x5DF1;&#x7406;&#x89E3;&#x90A3;&#x90E8;&#x5206;&#x7B14;&#x8BB0;&#x54DF;,&#x600E;&#x4E48;&#x529E;?</p>
+<p>&#x90A3;&#x5C31;&#x4EE5;&#x5F53;&#x524D;&#x7B14;&#x8BB0;&#x4E3A;&#x57FA;&#x7840;&#x518D;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#x7B14;&#x8BB0;,&#x7136;&#x540E;&#x5220;&#x6389;&#x81EA;&#x5DF1;&#x7406;&#x89E3;&#x7684;&#x90A3;&#x90E8;&#x5206;&#x7B14;&#x8BB0;&#x5457;&#xFF01;</p>
+<ul>
+<li>&#x8BF7;&#x7ED9;&#x6211;&#x62F7;&#x8D1D;&#x8BFE;&#x4EF6;: &#x590D;&#x5236;&#x6587;&#x4EF6;</li>
+</ul>
+<blockquote>
+<p><code>cp [OPTION] [-T] SOURCE DEST</code> : <code>copy</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x590D;&#x5236;&#x6587;&#x4EF6;.</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-80a30aa8b5678cb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-bash-cp.png"></p>
+<p>&#x65E2;&#x7136;&#x5BF9;&#x65B9;&#x660E;&#x786E;&#x8981;&#x6C42;&#x8BFE;&#x4EF6;&#x800C;&#x4E0D;&#x662F;&#x81EA;&#x5DF1;&#x7684;&#x7B14;&#x8BB0;,&#x90A3;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x90A3;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x624B;&#x52A8;&#x6E05;&#x9664;&#x6389;&#x5457;!</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-2372415b119323c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-bash-cp-modify.png"></p>
+<p>&#x6574;&#x7406;&#x597D;&#x8BFE;&#x4EF6;&#x540E;&#x53D1;&#x7ED9;&#x4E86;&#x5C0F;&#x4F19;&#x4F34;,&#x867D;&#x7136;&#x8F9B;&#x82E6;&#x70B9;&#x4F46;&#x662F;&#x5E2E;&#x52A9;&#x522B;&#x4EBA;&#x5FEB;&#x4E50;&#x81EA;&#x5DF1;,&#x8C01;&#x8BA9;&#x6211;&#x4EEC;&#x4E00;&#x76F4;&#x63A5;&#x53D7;&#x7684;&#x6559;&#x80B2;&#x5C31;&#x662F;&#x52A9;&#x4EBA;&#x4E3A;&#x4E50;&#x5462;&#xFF1F;</p>
+<p>&#x7ECF;&#x8FC7;&#x4E00;&#x9635;&#x5B50;&#x7684;&#x5B66;&#x4E60;&#x4E86;&#x89E3;&#x5230;&#x66F4;&#x591A; <code>markdown</code> &#x77E5;&#x8BC6;,&#x4E8E;&#x662F;&#x8BFE;&#x4EF6;&#x52A0;&#x4E0A;&#x81EA;&#x5DF1;&#x7684;&#x7B14;&#x8BB0;&#x8D8A;&#x6765;&#x8D8A;&#x591A;,&#x5C0F;&#x767D;&#x5DF2;&#x7ECF;&#x6E10;&#x6E10;&#x8FDC;&#x53BB;,&#x5927;&#x795E;&#x6B63;&#x5728;&#x5411;&#x6211;&#x4EEC;&#x62DB;&#x624B;...</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-b3168f3c0b731785.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-bash-tail-learn02.png"></p>
+<ul>
+<li>&#x7701;&#x5FC3;&#x5C3D;&#x8D23;&#x7684;&#x7F51;&#x76D8;: &#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;</li>
+</ul>
+<p>&#x4E0A;&#x6B21;&#x5E2E;&#x52A9;&#x4E86;&#x9694;&#x58C1;&#x7684;&#x5C0F;&#x4F19;&#x4F34;,&#x4E00;&#x4F20;&#x5341;&#x5341;&#x4F20;&#x767E;,&#x53C8;&#x6709;&#x5176;&#x4ED6;&#x5C0F;&#x4F19;&#x4F34;&#x6C42;&#x8BFE;&#x4EF6;&#x4E86;,&#x542C;&#x8BF4;&#x8BA4;&#x771F;&#x597D;&#x5B66;&#x7684;&#x4F60;&#x8FD8;&#x505A;&#x4E86;&#x7B14;&#x8BB0;,&#x4E5F;&#x6709;&#x4EBA;&#x8981;&#x7B14;&#x8BB0;,&#x4E8B;&#x60C5;&#x6709;&#x70B9;&#x590D;&#x6742;&#x554A;.</p>
+<p>&#x6709;&#x7684;&#x4EBA;&#x9700;&#x8981;&#x8BFE;&#x4EF6;,&#x6709;&#x7684;&#x4EBA;&#x9700;&#x8981;&#x7B14;&#x8BB0;,&#x5DF2;&#x9886;&#x53D6;&#x8D44;&#x6599;&#x7684;&#x4EBA;&#x8FD8;&#x60F3;&#x8981;&#x540E;&#x7EED;&#x66F4;&#x65B0;&#x80FD;&#x53CA;&#x65F6;&#x901A;&#x77E5;&#x5230;&#x4ED6;&#x4EEC;?</p>
+<p>&#x5982;&#x679C;&#x4ECD;&#x7136;&#x91C7;&#x7528;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x4FEE;&#x6539;&#x7684;&#x65B9;&#x5F0F;,&#x53EF;&#x60F3;&#x800C;&#x77E5;&#x662F;&#x591A;&#x4E48;&#x9EBB;&#x70E6;,&#x6E90;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#x7ED9;&#x5F20;&#x4E09;,&#x518D;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#x7ED9;&#x674E;&#x56DB;&#x5E76;&#x4E14;&#x8FD8;&#x8981;&#x53BB;&#x6389;&#x81EA;&#x5DF1;&#x7B14;&#x8BB0;&#x90E8;&#x5206;,&#x7ED9;&#x738B;&#x4E8C;&#x7684;&#x6587;&#x4EF6;&#x6BD4;&#x8F83;&#x8001;&#x8FD8;&#x6709;&#x518D;&#x5F04;&#x4E00;&#x4EFD;&#x65B0;&#x7684;&#x7ED9;&#x4ED6;...</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x8003;&#x8651;&#x6587;&#x4EF6;&#x7684;&#x5DEE;&#x5F02;&#x6027;&#x9700;&#x6C42;,&#x53EF;&#x4EE5;&#x5C06;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x4E2D;&#x518D;&#x5206;&#x4EAB;&#x7ED9;&#x9700;&#x8981;&#x7684;&#x5C0F;&#x4F19;&#x4F34;,&#x660E;&#x663E;&#x8FD9;&#x79CD;&#x7F51;&#x76D8;&#x5E76;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#x76EE;&#x524D;&#x95EE;&#x9898;.</p>
+<p>&#x56E0;&#x4E3A;&#x7F51;&#x76D8;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x65B0;&#x5907;&#x4EFD;,&#x4E0D;&#x80FD;&#x6EE1;&#x8DB3;&#x6587;&#x4EF6;&#x5DEE;&#x5F02;&#x6027;&#x7684;&#x9700;&#x6C42;&#x4E5F;&#x65E0;&#x6CD5;&#x7BA1;&#x7406;&#x6587;&#x4EF6;&#x5386;&#x53F2;&#x72B6;&#x6001;.</p>
+<p>&#x4E07;&#x4E00;&#x54EA;&#x6B21;&#x6574;&#x7406;&#x8BFE;&#x4EF6;&#x65F6;&#x9700;&#x8981;&#x5220;&#x9664;&#x7B14;&#x8BB0;&#x90E8;&#x5206;&#x65F6;,&#x4E00;&#x4E0D;&#x5C0F;&#x5FC3;&#x5FD8;&#x8BB0;&#x5907;&#x4EFD;&#x6E90;&#x6587;&#x4EF6;,&#x8BFE;&#x5802;&#x7B14;&#x8BB0;&#x5C31;&#x8FD9;&#x4E48;&#x4E22;&#x5931;&#x4E86;&#x5F88;&#x96BE;&#x518D;&#x627E;&#x56DE;&#x6765;&#x4E86;!</p>
+<p>&#x6240;&#x4EE5;,&#x5982;&#x679C;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x79CD;&#x5DE5;&#x5177;&#x80FD;&#x591F;&#x4E8B;&#x65E0;&#x5DE8;&#x7EC6;&#x5E2E;&#x6211;&#x4EEC;&#x8BB0;&#x5F55;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x8FD8;&#x80FD;&#x6709;&#x7F51;&#x76D8;&#x7BA1;&#x7406;&#x5E76;&#x5206;&#x4EAB;&#x7684;&#x529F;&#x80FD;&#x5C31;&#x80FD;&#x89E3;&#x51B3;&#x6211;&#x4EEC;&#x7684;&#x75DB;&#x70B9;&#x4E86;,&#x8FD9;&#x6837;&#x606A;&#x5C3D;&#x804C;&#x8D23;&#x7684;&#x7F51;&#x76D8;&#x8C01;&#x80FD;&#x4E0D;&#x559C;&#x6B22;?</p>
+<p>&#x4E8B;&#x5B9E;&#x4E0A;,&#x8FD9;&#x79CD;&#x5DE5;&#x5177;&#x786E;&#x5B9E;&#x5B58;&#x5728;&#x800C;&#x4E14;&#x4E0D;&#x4EC5;&#x4E00;&#x79CD;&#xFF01;</p>
+<p>&#x4E13;&#x4E1A;&#x672F;&#x8BED;&#x53EB;&#x505A;<strong>&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;</strong>,&#x5176;&#x4E2D;&#x5206;&#x4E3A;&#x96C6;&#x4E2D;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x548C;&#x5206;&#x5E03;&#x5F0F;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;,&#x533A;&#x522B;&#x5728;&#x4E8E;&#x9E21;&#x86CB;&#x662F;&#x5426;&#x5728;&#x4E00;&#x4E2A;&#x7BEE;&#x5B50;&#x4E2D;.</p>
+<p>&#x5982;&#x679C;&#x9E21;&#x86CB;&#x90FD;&#x5728;&#x4E00;&#x4E2A;&#x7BEE;&#x5B50;&#x4E2D;,&#x6BCD;&#x9E21;&#x65E0;&#x8BBA;&#x5728;&#x4F55;&#x5904;&#x4E0B;&#x86CB;,&#x9E21;&#x86CB;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x88AB;&#x6536;&#x96C6;&#x90FD;&#x4E00;&#x4E2A;&#x7BEE;&#x5B50;&#x4E2D;,&#x60F3;&#x8981;&#x5403;&#x9E21;&#x86CB;&#x65F6;&#x518D;&#x53BB;&#x8FD9;&#x4E2A;&#x7BEE;&#x5B50;&#x91CC;&#x62FF;,&#x8FD9;&#x5C31;&#x53EB;&#x505A;<strong>&#x96C6;&#x4E2D;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;</strong>.</p>
+<p>&#x5982;&#x679C;&#x9E21;&#x86CB;&#x4E0D;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x7BEE;&#x5B50;&#x4E2D;,&#x6BCD;&#x9E21;&#x4E0B;&#x7684;&#x9E21;&#x86CB;&#x88AB;&#x6536;&#x96C6;&#x5230;&#x9644;&#x8FD1;&#x7684;&#x7BEE;&#x5B50;&#x4E2D;,&#x9700;&#x8981;&#x5403;&#x9E21;&#x86CB;&#x65F6;&#x518D;&#x4ECE;&#x6700;&#x8FD1;&#x7684;&#x7BEE;&#x5B50;&#x4E2D;&#x53BB;&#x62FF;,&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5C31;&#x53EB;&#x505A;<strong>&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;</strong>.</p>
+<p>&#x96C6;&#x4E2D;&#x5F0F;&#x7684;&#x7279;&#x70B9;&#x5728;&#x4E8E;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;&#x7EDF;&#x4E00;&#x8C03;&#x5EA6;,&#x800C;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x7279;&#x70B9;&#x5728;&#x4E8E;&#x5206;&#x5F00;&#x7BA1;&#x7406;&#x7075;&#x6D3B;&#x9AD8;&#x6548;,&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x4E2D;&#x9009;&#x62E9;&#x54EA;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x5177;&#x4F53;&#x5206;&#x6790;.</p>
+<p>&#x5F53;&#x7136;,&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x8BB2;&#x89E3;&#x7684;&#x53EA;&#x662F;&#x5176;&#x4E2D;&#x4E4B;&#x4E00;,&#x90A3;&#x5C31;&#x662F;<strong>&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;</strong>.</p>
+<ul>
+<li>&#x5343;&#x547C;&#x4E07;&#x5524;&#x59CB;&#x51FA;&#x6765;: <code>git</code></li>
+</ul>
+<p>&#x8BF4;&#x5230;&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;,&#x4E0D;&#x5F97;&#x4E0D;&#x63D0;&#x7684;&#x5C31;&#x662F; <code>git</code> --- &#x6700;&#x5148;&#x8FDB;&#x6700;&#x6D41;&#x884C;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;.</p>
+<p><code>git</code> &#x662F;&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x5BB6;&#x65CF;&#x7684;&#x7480;&#x74A8;&#x660E;&#x661F;,&#x514D;&#x8D39;&#x5F00;&#x6E90;,&#x652F;&#x6301; <code>windows</code> ,<code>mac</code> &#x4EE5;&#x53CA; <code>linux</code> &#x7B49;&#x5E73;&#x53F0;.</p>
+<p>&#x4E0B;&#x9762;&#x4EE5; <code>windows</code> &#x7535;&#x8111;&#x4E3A;&#x4F8B;,&#x4ECB;&#x7ECD;&#x4E0B; <code>git</code> &#x7684;&#x5B89;&#x88C5;&#x548C;&#x4F7F;&#x7528;.</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-d8d231d8d41c814c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-win-download.png"></p>
+<blockquote>
+<p>&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://git-scm.com/download/win" target="_blank">https://git-scm.com/download/win</a></p>
+</blockquote>
+<p>&#x6B63;&#x5E38;&#x7684;&#x8BDD;,&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x9009;&#x62E9;&#x5B89;&#x88C5;&#x5373;&#x53EF;,&#x8BF7;&#x786E;&#x4FDD; <code>Git Bash Here</code> &#x524D;&#x9762;&#x7684;&#x590D;&#x9009;&#x6846;&#x5DF2;&#x52FE;&#x9009;,&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x63D0;&#x4F9B;&#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;.</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-2763fd5f8ffd095e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-win-install-tools.png"></p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x4E00;&#x5207;&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x9009;&#x9879;&#x5B89;&#x88C5;,&#x5B89;&#x88C5;&#x6A21;&#x62DF;&#x7EC8;&#x7AEF;&#x7C7B;&#x578B;&#x65F6;&#x8BF7;&#x9009;&#x62E9;&#x7B2C;&#x4E00;&#x79CD; <code>Mintty</code> &#x4EE5;&#x4FDD;&#x8BC1;&#x73AF;&#x5883;&#x4E00;&#x81F4;&#x6027;.</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-d927b5ac47289c09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-win-install-mintty.png"></p>
+<p>&#x5B89;&#x88C5;&#x6210;&#x529F;&#x540E;&#x684C;&#x9762;&#x6216;&#x8005;&#x53F3;&#x952E;&#x4F1A;&#x51FA;&#x73B0; <code>Git Bash</code> &#x56FE;&#x6807;&#x6216;&#x9009;&#x9879;,&#x6253;&#x5F00;&#x7EC8;&#x7AEF;,&#x8F93;&#x5165; <code>git --version</code>&#x5982;&#x679C;&#x80FD;&#x6B63;&#x5E38;&#x8F93;&#x51FA;&#x7248;&#x672C;&#x4FE1;&#x606F;,&#x90A3;&#x5C31;&#x8BF4;&#x660E;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x4E86;!</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/16648241-74430741dd4ebbd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git-win-install-succesfully.png"></p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53C8;&#x4E0D;&#x7ECF;&#x610F;&#x95F4;&#x5B66;&#x4E60;&#x4E86; <code>git</code> ,&#x8FD9;&#x4E0D;&#x521A;&#x597D;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x76EE;&#x6807;?</p>
+<p>&#x7EB3;&#x5C3C;,&#x4F60;&#x8BF4;&#x76EE;&#x6807;&#x662F;&#x5565;?&#x7ADF;&#x7136;&#x5FD8;&#x8BB0;&#x4E86;&#x6700;&#x521D;&#x7684;&#x76EE;&#x6807;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/markdown
+$ ls
+courseware.md  markdown.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/markdown
+$ <span class="hljs-built_in">cd</span> ../
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ ls
+cup.txt  goal.txt  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ head goal.txt
+<span class="hljs-comment">## learning markdown</span>
+
+<span class="hljs-comment">## learning git</span>
+
+<span class="hljs-comment">## learning gitbook</span>
+
+<span class="hljs-comment">## sharing java8</span>
+
+&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;: &#x521B;&#x5EFA;&#x76EE;&#x5F55;
+&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;: &#x5207;&#x6362;&#x76EE;&#x5F55;
+</code></pre>
+<p>&#x5173;&#x4E8E;&#x5B66;&#x4E60; <code>markdown</code> &#x7684;&#x76EE;&#x6807;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;,&#x5B66;&#x4EE5;&#x81F4;&#x7528;&#x4E0D;&#x5982;&#x52A8;&#x624B;&#x6539;&#x9020;&#x4E0B;&#x76EE;&#x6807;&#x6587;&#x4EF6; <code>goal.txt</code> &#x91CD;&#x547D;&#x540D; <code>goal.md</code> .</p>
+<ul>
+<li>&#x6539;&#x5934;&#x6362;&#x9762;&#x5316;&#x4E2A;&#x5986;: &#x79FB;&#x52A8;&#x6587;&#x4EF6;</li>
+</ul>
+<blockquote>
+<p><code>mv [OPTION] [-T] SOURCE DEST</code> : <code>move file</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x79FB;&#x52A8;&#x6587;&#x4EF6;.</p>
+</blockquote>
+<p>&#x6B63;&#x5E38;&#x6765;&#x8BF4;&#x6362;&#x5DE5;&#x4F5C;&#x4E00;&#x822C;&#x4F1A;&#x5DE5;&#x4F5C;&#x5730;&#x70B9;,&#x5F53;&#x7136;&#x5347;&#x804C;&#x8FD9;&#x79CD;&#x6362;&#x5DE5;&#x4F5C;&#x4F46;&#x5DE5;&#x4F5C;&#x5730;&#x70B9;&#x53EF;&#x80FD;&#x5E76;&#x6CA1;&#x6709;&#x6539;&#x53D8;,&#x53CD;&#x6620;&#x5230;&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x4E2D;,&#x79FB;&#x52A8;&#x6587;&#x4EF6;&#x672C;&#x662F;&#x66F4;&#x6539;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;,&#x5982;&#x679C;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x6CA1;&#x6709;&#x6539;&#x53D8;,&#x53EA;&#x662F;&#x4FEE;&#x6539;&#x4E2A;&#x540E;&#x7F00;&#x540D;&#x4E5F;&#x672A;&#x5C1D;&#x4E0D;&#x53EF;.</p>
+<pre><code class="lang-bash">$ ls
+cup.txt  goal.txt  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ mv goal.txt goal.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ ls
+cup.txt  goal.md  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ cat goal.md
+<span class="hljs-comment">## learning markdown</span>
+
+<span class="hljs-comment">## learning git</span>
+
+<span class="hljs-comment">## learning gitbook</span>
+
+<span class="hljs-comment">## sharing java8</span>
+
+&#x4E07;&#x4E08;&#x9AD8;&#x697C;&#x5E73;&#x5730;&#x8D77;: &#x521B;&#x5EFA;&#x76EE;&#x5F55;
+&#x98D8;&#x6D0B;&#x8FC7;&#x6D77;&#x6765;&#x770B;&#x4F60;: &#x5207;&#x6362;&#x76EE;&#x5F55;
+&#x60CA;&#x9E3F;&#x4E00;&#x77A5;&#x521D;&#x76F8;&#x89C1;: &#x6253;&#x5370;&#x76EE;&#x5F55;
+&#x56DE;&#x5934;&#x56DB;&#x987E;&#x5FC3;&#x832B;&#x7136;: &#x5217;&#x51FA;&#x6587;&#x4EF6;
+&#x4FDD;&#x6E29;&#x676F;&#x4E2D;&#x6CE1;&#x67B8;&#x675E;: &#x521B;&#x5EFA;&#x6587;&#x4EF6;
+&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x52A0;&#x67B8;&#x675E;: &#x8986;&#x76D6;&#x8F93;&#x5165;
+&#x67B8;&#x675E;&#x8336;&#x4E2D;&#x5012;&#x70ED;&#x6C34;: &#x8FFD;&#x52A0;&#x8F93;&#x5165;
+&#x67B8;&#x675E;&#x8336;&#x8981;&#x6162;&#x6162;&#x54C1;: &#x67E5;&#x770B;&#x6587;&#x4EF6;
+</code></pre>
+<ul>
+<li>&#x7248;&#x672C;&#x63A7;&#x5236;&#x6211;&#x6765;&#x4E86;: &#x521D;&#x59CB;&#x5316;</li>
+</ul>
+<blockquote>
+<p><code>git init</code> : &#x5373;&#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x9879;&#x76EE;.</p>
+</blockquote>
+<p>&#x5982;&#x4F55;&#x5C06;&#x6587;&#x4EF6;&#x653E;&#x5230;&#x7F51;&#x76D8;&#x7BA1;&#x7406;,&#x6B63;&#x5982;&#x5982;&#x4F55;&#x5C06;&#x9E21;&#x86CB;&#x653E;&#x5230;&#x7BEE;&#x5B50;&#x4E2D;,&#x9996;&#x5148;&#x8981;&#x6709;&#x7BEE;&#x5B50;,&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5C06; <code>git-bash-demo</code> &#x7236;&#x76EE;&#x5F55;&#x5145;&#x5F53;&#x6211;&#x4EEC;&#x7684;&#x7BEE;&#x5B50;.</p>
+<p>&#x6B63;&#x5F0F;&#x4F7F;&#x7528; <code>git</code> &#x6253;&#x9020;&#x672C;&#x5730;&#x7F51;&#x76D8;&#x524D;,&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E0B;&#x7528;&#x6237;&#x540D;&#x548C;&#x90AE;&#x7BB1;,&#x8FD9;&#x4E00;&#x6B65;&#x76F8;&#x5F53;&#x4E8E;&#x81EA;&#x62A5;&#x5BB6;&#x95E8;,&#x8FD9;&#x6837; <code>git</code> &#x624D;&#x77E5;&#x9053;&#x73B0;&#x5728;&#x662F;&#x8C01;&#x5728;&#x7528;.</p>
+<blockquote>
+<p>&#x8FD8;&#x8BB0;&#x5F97;&#x6211;&#x662F;&#x8C01;&#x5417;? <code>whoami</code> &#x5C31;&#x662F;&#x4F60;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x540D;,&#x8FD9;&#x91CC;&#x7684; <code>git</code> &#x7528;&#x6237;&#x540D;&#x53EF;&#x4EE5;&#x4F7F;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7528;&#x6237;&#x540D;.</p>
+</blockquote>
+<pre><code class="lang-bash">$ git config --global user.name <span class="hljs-string">&quot;your username&quot;</span>
+$ git config --global user.email <span class="hljs-string">&quot;example@example.com&quot;</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#x8FD0;&#x884C; <code>git init</code> &#x547D;&#x4EE4;,&#x5F00;&#x59CB;&#x6253;&#x9020;&#x672C;&#x5730;&#x7F51;&#x76D8;,&#x5F00;&#x542F;&#x7248;&#x672C;&#x63A7;&#x5236;&#x4E4B;&#x65C5;!</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ <span class="hljs-built_in">pwd</span>
+/g/workpace/git-bash-demo
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo
+$ git init
+Initialized empty Git repository <span class="hljs-keyword">in</span> G:/workpace/git-bash-demo/.git/
+</code></pre>
+<p>&#x597D;&#x8BB0;&#x6027;&#x4E0D;&#x5982;&#x70C2;&#x7B14;&#x5934;,&#x50CF;&#x6211;&#x4EEC;&#x5B66;&#x4E60; <code>markdown</code> &#x90A3;&#x6837;,&#x6211;&#x4EEC;&#x4E5F;&#x521B;&#x5EFA;&#x4E13;&#x95E8;&#x7684;&#x76EE;&#x5F55;&#x7528;&#x4E8E;&#x5B58;&#x653E; <code>git</code> &#x7B14;&#x8BB0;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo (master)
+$ ls
+cup.txt  goal.md  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo (master)
+$ mkdir git
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo (master)
+$ ls
+cup.txt  git/  goal.md  markdown/
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo (master)
+$ <span class="hljs-built_in">cd</span> git
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ ls
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ touch git.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ ls
+git.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;first step : git init&quot;</span> &gt; git.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ cat git.md
+first step : git init
+</code></pre>
+<ul>
+<li>&#x77E5;&#x5DF1;&#x77E5;&#x5F7C;&#x770B;&#x72B6;&#x6001;: &#x67E5;&#x770B;&#x72B6;&#x6001;</li>
+</ul>
+<blockquote>
+<p><code>git status</code> : &#x5373;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;</p>
+</blockquote>
+<p>&#x6B63;&#x6240;&#x8C13;&quot;&#x77E5;&#x5DF1;&#x77E5;&#x5F7C;&#x65B9;&#x80FD;&#x767E;&#x6218;&#x4E0D;&#x6B86;&quot;,&#x968F;&#x65F6;&#x4E86;&#x89E3;&#x6587;&#x4EF6;&#x72B6;&#x6001;&#x624D;&#x80FD;&#x505A;&#x5230;&#x5FC3;&#x4E2D;&#x6709;&#x6570;,&#x4ECE;&#x800C;&#x66F4;&#x597D;&#x5730;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x7BA1;&#x7406;.</p>
+<p>&#x6240;&#x8C13;&quot;&#x7248;&#x672C;&quot;,&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x65F6;&#x7A7A;&#x90A3;&#x4E00;&#x523B;&#x7684;&quot;&#x72B6;&#x6001;&quot;,&#x6587;&#x4EF6;&#x7684;&#x7248;&#x672C;&#x5219;&#x662F;&#x8BB0;&#x5F55;&#x4E86;&#x6587;&#x4EF6;&#x7684;&#x5386;&#x53F2;&#x72B6;&#x6001;.</p>
+<p><code>git status</code> &#x547D;&#x4EE4;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x6587;&#x4EF6;&#x72B6;&#x6001;&#x4EE5;&#x53CA;&#x80FD;&#x591F;&#x667A;&#x80FD;&#x731C;&#x9884;&#x6D4B;&#x6211;&#x4EEC;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;,&#x597D;&#x6BD4;&#x8EAB;&#x8FB9;&#x7684;&#x5C0F;&#x79D8;&#x4E66;&#x4E00;&#x6837;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ git status
+<span class="hljs-comment"># &#x5728; `master` &#x5206;&#x652F;&#x4E0A;,&#x6682;&#x65F6;&#x4E0D;&#x7528;&#x7406;&#x89E3;&#x5206;&#x652F;&#x6982;&#x5FF5;,&#x9ED8;&#x8BA4;&#x5904;&#x4E8E;&#x8BE5;&#x5206;&#x652F;</span>
+On branch master
+
+<span class="hljs-comment"># &#x76EE;&#x524D;&#x8FD8;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;,`commit` &#x7FFB;&#x8BD1;&quot;&#x63D0;&#x4EA4;&quot;,&#x5373;&quot;&#x7248;&#x672C;&quot;,&#x8868;&#x793A;&#x6587;&#x4EF6;&#x7684;&#x4E0D;&#x540C;&#x5386;&#x53F2;&#x65F6;&#x523B;&#x4E0B;&#x7684;&#x5F53;&#x65F6;&#x7684;&#x72B6;&#x6001;</span>
+No commits yet
+
+<span class="hljs-comment"># &#x672A;&#x88AB;&#x8FFD;&#x8E2A;&#x7684;&#x6587;&#x4EF6;: &#x597D;&#x6BD4;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x4E00;&#x6837;,`git init` &#x521B;&#x5EFA;&#x672C;&#x5730;&#x7F51;&#x76D8;,&#x4F46;&#x8FD8;&#x6CA1;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5230;&#x7F51;&#x76D8;&#x4E2D;.</span>
+Untracked files:
+    <span class="hljs-comment"># (&#x4F7F;&#x7528; `git add &lt;file&gt;` &#x6765;&#x5305;&#x542B;&#x5C06;&#x8981;&#x88AB;&#x6DFB;&#x52A0;&#x7684;&#x6587;&#x4EF6;: &#x667A;&#x80FD;&#x9884;&#x6D4B;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x4E0B;&#x4E00;&#x6B65;&#x5E94;&#x8BE5;&#x6DFB;&#x52A0;&#x4E0B;&#x8FF0;&#x6587;&#x4EF6;)</span>
+  (use <span class="hljs-string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="hljs-keyword">in</span> what will be committed)
+
+        ../.swp
+        ../cup.txt
+        ./
+        ../goal.md
+        ../markdown/
+
+<span class="hljs-comment"># &#x6CA1;&#x6709;&#x5DF2;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x63D0;&#x4EA4;,&#x4F46;&#x662F;&#x76EE;&#x524D;&#x6709;&#x672A;&#x88AB;&#x8FFD;&#x8E2A;&#x6587;&#x4EF6;(&#x4F7F;&#x7528; `git add` &#x53BB;&#x8FFD;&#x8E2A;&#x6587;&#x4EF6;&#x53D8;&#x5316;): &#x518D;&#x6B21;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x8FD0;&#x884C; `git add` &#x547D;&#x4EE4;&#x8FFD;&#x8E2A;&#x6587;&#x4EF6;.</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">&quot;git add&quot;</span> to track)
+</code></pre>
+<ul>
+<li>&#x6574;&#x88C5;&#x5F85;&#x547D;&#x5165;&#x961F;&#x5217;: &#x6DFB;&#x52A0;&#x6587;&#x4EF6;</li>
+</ul>
+<blockquote>
+<p><code>git add &lt;file&gt;</code> &#xFF1A; &#x5373;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x8868;&#x793A;&#x8DDF;&#x8E2A;&#x6587;&#x4EF6;&#x53D8;&#x5316;,&#x5373;&#x5C06;&#x52A0;&#x5165;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;.</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x5C06;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x4E2D;,&#x9996;&#x5148;&#x9700;&#x8981;&#x786E;&#x5B9A;&#x597D;&#x9700;&#x8981;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;,&#x7136;&#x540E;&#x624D;&#x662F;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x5177;&#x4F53;&#x64CD;&#x4F5C;.</p>
+<p><code>git add &lt;file&gt;</code> &#x505A;&#x7684;&#x5C31;&#x662F;&#x6311;&#x9009;&#x51FA;&#x9700;&#x8981;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x6E05;&#x5355;&#x5217;&#x8868;,&#x8FFD;&#x8E2A;&#x5230;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x7684;&#x53D8;&#x5316;&#x4EE5;&#x4FBF;&#x4E0B;&#x4E00;&#x6B65;&#x4E00;&#x6B21;&#x6027;&#x5168;&#x90E8;&#x4E0A;&#x4F20;!</p>
+<pre><code class="lang-bash">$ git add ../cup.txt ./ ../goal.md ../markdown/
+warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> cup.txt.
+The file will have its original line endings <span class="hljs-keyword">in</span> your working directory
+warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> git/git.md.
+The file will have its original line endings <span class="hljs-keyword">in</span> your working directory
+warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> goal.md.
+The file will have its original line endings <span class="hljs-keyword">in</span> your working directory
+warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> markdown/courseware.md.
+The file will have its original line endings <span class="hljs-keyword">in</span> your working directory
+warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> markdown/markdown.md.
+The file will have its original line endings <span class="hljs-keyword">in</span> your working directory
+</code></pre>
+<p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;&#x4E2D;&#x7684;&#x57FA;&#x672C;&#x54F2;&#x5B66;&#x7406;&#x5FF5;&#x662F;&quot;&#x6CA1;&#x6709;&#x6D88;&#x606F;&#x5C31;&#x662F;&#x597D;&#x6D88;&#x606F;&quot;,&#x8F93;&#x5165;&#x547D;&#x4EE4;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x53CD;&#x9988;&#x7684;&#x8BDD;,&#x64CD;&#x4F5C;&#x4E00;&#x822C;&#x90FD;&#x6210;&#x529F;&#x4E86;,&#x5982;&#x679C;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x90FD;&#x4F1A;&#x6709;&#x62A5;&#x9519;&#x63D0;&#x793A;&#x7684;.</p>
+<p>&#x867D;&#x7136;&#x6211;&#x4EEC;&#x662F;&#x5728; <code>windows</code> &#x7535;&#x8111;&#x4E0A;&#x6F14;&#x793A;&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;,&#x4F46;&#x547D;&#x4EE4;&#x884C;&#x7684;&#x903B;&#x8F91;&#x4E0D;&#x50CF; <code>windows</code> &#x53EF;&#x89C6;&#x5316;&#x64CD;&#x4F5C;&#x90A3;&#x6837;,&#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#x4F1A;&#x63D0;&#x793A;&#x65B0;&#x5EFA;&#x6210;&#x529F;,&#x79FB;&#x52A8;&#x6587;&#x4EF6;&#x4E5F;&#x4F1A;&#x63D0;&#x793A;&#x79FB;&#x52A8;&#x6210;&#x529F;,&#x800C;&#x547D;&#x4EE4;&#x884C;&#x903B;&#x8F91;&#x786E;&#x5B9E; <code>linux</code> &#x7CFB;&#x7EDF;&#x90A3;&#x4E00;&#x5957;&#x903B;&#x8F91;.</p>
+<p><strong>&#x6CA1;&#x6709;&#x6D88;&#x606F;&#x5C31;&#x662F;&#x597D;&#x6D88;&#x606F;</strong>,&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4EA4;&#x4E92;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x80FD;&#x6CA1;&#x6709;&#x90A3;&#x4E48;&#x591A;&#x64CD;&#x4F5C;&#x53CD;&#x9988;,&#x56E0;&#x800C;&#x8981;&#x6C42;&#x6211;&#x4EEC;&#x719F;&#x77E5;&#x547D;&#x4EE4;&#x4F5C;&#x7528;,&#x6E05;&#x695A;&#x660E;&#x767D;&#x81EA;&#x5DF1;&#x5728;&#x5E72;&#x4EC0;&#x4E48;!</p>
+<p>&#x65E2;&#x7136; <code>git add &lt;file&gt;</code> &#x6CA1;&#x6709;&#x6D88;&#x606F;&#x53CD;&#x9988;&#x5C31;&#x8BF4;&#x660E;&#x6211;&#x4EEC;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x4E86;,&#x4E0B;&#x4E00;&#x6B65;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x8FD0;&#x884C;&#x4EC0;&#x4E48;&#x547D;&#x4EE4;&#x624D;&#x80FD;&#x5C06;&#x8FD9;&#x4E9B;&#x76EE;&#x6807;&#x95EE;&#x4EF7;&#x6DFB;&#x52A0;&#x5230;&#x7F51;&#x76D8;&#x5462;?</p>
+<p>&#x5916;&#x4E8B;&#x4E0D;&#x51B3;&#x95EE;&#x8C37;&#x6B4C;,&#x5185;&#x4E8B;&#x4E0D;&#x51B3;&#x95EE;&#x767E;&#x5EA6;,&#x800C;&#x6211;&#x4EEC;&#x5374;&#x6709;&#x4E00;&#x4E2A;&#x667A;&#x80FD;&#x5C0F;&#x79D8;&#x4E66;---<code>git status</code> ,&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x63D0;&#x4F9B;&#x4E86;&#x8DB3;&#x591F;&#x591A;&#x7684;&#x4FE1;&#x606F;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;.</p>
+<ul>
+<li>&#x53C8;&#x89C1;&#x667A;&#x80FD;&#x5C0F;&#x79D8;&#x4E66;: &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;</li>
+</ul>
+<p>&#x521A;&#x521A;&#x6211;&#x4EEC;&#x8FD0;&#x884C; <code>git add</code> &#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x76EE;&#x6807;&#x6587;&#x4EF6;,&#x6545;&#x610F;&#x7559;&#x4E0B;&#x4E86; <code>../.swp</code> &#x6587;&#x4EF6;,&#x8FD9;&#x79CD;&#x540D;&#x5B57;&#x4E00;&#x770B;&#x5C31;&#x7B97;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x4E3B;&#x52A8;&#x521B;&#x5EFA;&#x7684;&#x6587;&#x4EF6;,&#x516B;&#x6210;&#x662F;&#x7CFB;&#x7EDF;&#x6216;&#x8005;&#x7F16;&#x8F91;&#x5668;&#x4EC0;&#x4E48;&#x7684;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x7684;,&#x56E0;&#x800C;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x5907;&#x4EFD;&#x8FD9;&#x6587;&#x4EF6;.</p>
+<p>&#x6B64;&#x65F6;&#x8FD0;&#x884C; <code>git status</code> &#x547D;&#x4EE4;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x5DF2;&#x6DFB;&#x52A0;&#x4F46;&#x8FD8;&#x6CA1;&#x63D0;&#x4EA4;,&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x64A4;&#x9500;(<code>unstage</code>)&#x5230;&#x672A;&#x6DFB;&#x52A0;&#x72B6;&#x6001;,&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x672A;&#x88AB;&#x8FFD;&#x8E2A;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>git add</code> &#x6DFB;&#x52A0;&#x5230;&#x5F85;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;&#x5217;&#x8868;&#x4E2D;.</p>
+<p>&#x76EE;&#x524D;&#x4E3A;&#x6B62;,&#x6587;&#x4EF6;&#x7ECF;&#x5386;&#x4E86;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;,&#x6700;&#x521D;&#x5C1A;&#x672A;&#x88AB;&#x8FFD;&#x8E2A;&#x72B6;&#x6001;,&#x4F7F;&#x7528; <code>git add</code> &#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x8F6C;&#x53D8;&#x6210;&#x5DF2;&#x8FFD;&#x8E2A;&#x72B6;&#x6001;,&#x6B64;&#x65F6;&#x518D;&#x6B21;&#x8FD0;&#x884C; <code>git status</code> &#x63D0;&#x793A;&#x6211;&#x4EEC;&#x5DF2;&#x8FFD;&#x8E2A;&#x5230;&#x6587;&#x4EF6;&#x53D8;&#x5316;&#x8FD8;&#x672A;&#x88AB;&#x63D0;&#x4EA4;,&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9884;&#x6D4B;&#x6709;&#x4E00;&#x79CD;&#x547D;&#x4EE4;&#x80FD;&#x591F;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x662F;&#x8C01;&#x5462;?</p>
+<pre><code class="lang-bash">$ git status
+<span class="hljs-comment"># &#x4ECD;&#x7136;&#x5904;&#x4E8E; `master` &#x4E3B;&#x5E72;&#x5206;&#x652F;</span>
+On branch master
+
+<span class="hljs-comment"># &#x76EE;&#x524D;&#x4ECD;&#x7136;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;(&#x7248;&#x672C;)</span>
+No commits yet
+
+<span class="hljs-comment"># &#x5373;&#x5C06;&#x8981;&#x88AB;&#x63D0;&#x4EA4;&#x7684;&#x66F4;&#x6539;: `Changes` &#x7FFB;&#x8BD1;&#x4E3A;&#x66F4;&#x6539;&#xFF0C;`committed` &#x7FFB;&#x8BD1;&#x4E3A;&#x88AB;&#x63D0;&#x4EA4;,&#x5373;&#x6587;&#x4EF6;&#x7684;&#x66F4;&#x6539;&#x5C06;&#x8981;&#x88AB;&#x63D0;&#x4EA4;,&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#x662F;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;</span>
+Changes to be committed:
+    <span class="hljs-comment"># (&#x4F7F;&#x7528; `git rm --cached &lt;file&gt;` &#x6765;&#x6E05;&#x7A7A;&#x7F13;&#x5B58;: &#x6CE8;&#x610F; `unstage` &#x5E76;&#x4E0D;&#x662F; `commit` &#xFF0C;&#x6240;&#x4EE5;&#x5E76;&#x4E0D;&#x662F;&#x63D0;&#x4EA4;&#x64CD;&#x4F5C;&#x800C;&#x662F;&#x64A4;&#x9500;&#x64CD;&#x4F5C;,&#x5373;&#x4E0B;&#x8FF0;&#x6587;&#x4EF6;&#x65E2;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x63D0;&#x4EA4;&#x4E5F;&#x53EF;&#x4EE5;&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x6B65;&#x64A4;&#x9500;&#x6587;&#x4EF6;.)</span>
+  (use <span class="hljs-string">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage)
+
+        new file:   ../cup.txt
+        new file:   git.md
+        new file:   ../goal.md
+        new file:   ../markdown/courseware.md
+        new file:   ../markdown/markdown.md
+
+<span class="hljs-comment"># &#x672A;&#x88AB;&#x8FFD;&#x8E2A;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;: &#x4F7F;&#x7528; `git add &lt;file&gt;...` &#x6DFB;&#x52A0;&#x6587;&#x4EF6;</span>
+Untracked files:
+  (use <span class="hljs-string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="hljs-keyword">in</span> what will be committed)
+
+        ../.swp
+
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+</code></pre>
+<ul>
+<li>&#x4E0D;&#x60F3;&#x89C1;&#x5C31;&#x5220;&#x4E86;&#x5427;: &#x5220;&#x9664;&#x6587;&#x4EF6;</li>
+</ul>
+<blockquote>
+<p><code>rm [OPTION] [FILE]</code> : <code>remove</code> &#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x5220;&#x9664;&quot;,&#x5373;&#x5220;&#x9664;&#x95EE;&#x4EF7;.</p>
+</blockquote>
+<p>&#x4E0A;&#x4E00;&#x6B65;&#x4E2D;&#x8FD0;&#x884C; <code>git add</code> &#x540E;&#x518D;&#x6B21;&#x8FD0;&#x884C; <code>git status</code> &#x547D;&#x4EE4;&#x6CA1;&#x6709;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;,&#x53EA;&#x544A;&#x8BC9;&#x6211;&#x4EEC; <code>git rm --cached &lt;file&gt;</code> &#x6765;&#x64A4;&#x9500;&#x5DF2;&#x88AB;&#x8FFD;&#x8E2A;&#x7684;&#x6587;&#x4EF6;,&#x53EF;&#x80FD;&#x662F;&#x7531;&#x4E8E;&#x8FD8;&#x6709;&#x6587;&#x4EF6; <code>../.swp</code> &#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x88AB;&#x8FFD;&#x8E2A;,&#x6240;&#x4EE5;&#x5C0F;&#x52A9;&#x624B;&#x731C;&#x60F3;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x8FD8;&#x6CA1;&#x64CD;&#x4F5C;&#x5B8C;&#x6BD5;,&#x6545;&#x800C;&#x6CA1;&#x6709;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x63D0;&#x4EA4;?</p>
+<p>&#x4E0D;&#x60F3;&#x89C1;&#x5B83;&#x5C31;&#x5220;&#x4E86;&#x5427;,&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x547D;&#x4EE4;&#x5220;&#x9664;&#x8FD9;&#x4E2A;&#x4EE4;&#x4EBA;&#x8BA8;&#x538C;&#x7684;&#x5BB6;&#x4F19;,&#x770B;&#x770B;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;.</p>
+<pre><code class="lang-bash">$ rm ../.swp
+</code></pre>
+<p>&#x4F9D;&#x7136;&#x6CA1;&#x6709;&#x6D88;&#x606F;&#x53CD;&#x9988;,&#x5E94;&#x8BE5;&#x5220;&#x9664;&#x6210;&#x529F;&#x4E86;&#x5427;,&#x770B;&#x4E00;&#x4E0B;&#x8BE5;&#x6587;&#x4EF6;&#x8FD8;&#x5728;&#x4E0D;&#x5728;&#x4EE5;&#x53CA;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x5982;&#x4F55;.</p>
+<pre><code class="lang-bash">snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ ls
+git.md
+
+snowdreams1006@home MINGW64 /g/workpace/git-bash-demo/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use <span class="hljs-string">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage)
+
+        new file:   ../cup.txt
+        new file:   git.md
+        new file:   ../goal.md
+        new file:   ../markdown/courseware.md
+        new file:   ../markdown/markdown.md
+</code></pre>
+<p>&#x597D;&#x5427;,&#x4F9D;&#x7136;&#x6CA1;&#x6709;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;&#x7684;&#x547D;&#x4EE4;,&#x53EA;&#x6709;&#x53EA;&#x80FD;&#x4EB2;&#x81EA;&#x52A8;&#x624B;&#x76F4;&#x63A5;&#x544A;&#x8BC9;&#x4F60;&#xFF0C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x5C31;&#x662F; <code>git commit</code> ,&#x4F30;&#x8BA1;&#x4F60;&#x4E5F;&#x731C;&#x4E2A;&#x516B;&#x4E5D;&#x4E0D;&#x79BB;&#x5341;,&#x6BD5;&#x7ADF; <code>commit</code> &#x51FA;&#x73B0;&#x9891;&#x7387;&#x5982;&#x6B64;&#x4E4B;&#x9AD8;!</p>
+<ul>
+<li>&#x5162;&#x5162;&#x4E1A;&#x4E1A;&#x4E0A;&#x73ED;&#x4E2D;: &#x63D0;&#x4EA4;&#x6587;&#x4EF6;</li>
+</ul>
+<blockquote>
+<p><code>git commit</code> : &#x5373;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5C06;&#x5DF2;&#x8DDF;&#x8E2A;&#x7684;&#x6587;&#x4EF6;&#x6E05;&#x5355;&#x53D8;&#x5316;&#x5168;&#x90E8;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;.</p>
+</blockquote>
+<p><code>git add</code> &#x547D;&#x4EE4;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x6253;&#x5305;&#x597D;&#x5F85;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;,<code>git commit</code> &#x547D;&#x4EE4;&#x5219;&#x6267;&#x884C;&#x4E0A;&#x4F20;&#x64CD;&#x4F5C;,&#x73B0;&#x5728;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x52A0;&#x5165;&#x672C;&#x5730;&#x7F51;&#x76D8;&#x4E86;,&#x5988;&#x5988;&#x518D;&#x4E5F;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x6587;&#x4EF6;&#x4E22;&#x5931;&#x4E86;&#x5462;!</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x63D0;&#x4EA4;&#x6587;&#x4EF6;&#x5E76;&#x6DFB;&#x52A0;&#x5907;&#x6CE8;&#x4FE1;&#x606F;,&#x5176;&#x4E2D; `-m` &#x662F; `-message` &#x7684;&#x7F29;&#x5199;,&#x8868;&#x793A;&#x5907;&#x6CE8;&#x4FE1;&#x606F;</span>
+$ git commit -m <span class="hljs-string">&quot;init git-bash-demo&quot;</span>
+[master (root-commit) 128d0d0] init git-bash-demo
+ 4 files changed, 59 insertions(+)
+ create mode 100644 cup.txt
+ create mode 100644 git/git.md
+ create mode 100644 goal.txt
+ create mode 100644 markdown/markdown.md
+</code></pre>
+<p>&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x63D0;&#x4EA4;&#x4E86;&#x6587;&#x4EF6;,&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x8BF7;&#x6765;&#x5C0F;&#x79D8;&#x4E66;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x72B6;&#x6001;.</p>
+<pre><code class="lang-bash">$ git status
+On branch master
+<span class="hljs-comment"># &#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x63D0;&#x4EA4;,&#x5DE5;&#x4F5C;&#x533A;&#x5F88;&#x5E72;&#x51C0;.</span>
+nothing to commit, working tree clean
+</code></pre>
+<p><code>working tree clean</code> &#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x5DE5;&#x4F5C;&#x533A;&#x5F88;&#x5E72;&#x51C0;,&#x8FD9;&#x91CC;&#x7684;&#x5DE5;&#x4F5C;&#x533A;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x4E3A;&#x5F53;&#x524D;&#x6240;&#x5904;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;.</p>
+<ul>
+<li>&#x544A;&#x8BC9;&#x6211;&#x4F60;&#x7684;&#x5386;&#x53F2;: &#x63D0;&#x4EA4;&#x5386;&#x53F2;</li>
+</ul>
+<blockquote>
+<p><code>git log</code> : &#x5373;&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x63D0;&#x4EA4;&#x90FD;&#x80FD;&#x8BB0;&#x5F97;&#x6E05;&#x6E05;&#x695A;&#x695A;,&#x4E0D;&#x7136;&#x600E;&#x4E48;&#x914D;&#x5F97;&#x4E0A;&#x5162;&#x5162;&#x4E1A;&#x4E1A;&#x4E0A;&#x73ED;&#x4E2D;&#x7684;&#x6807;&#x9898;.</p>
+</blockquote>
+<p>&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x63D0;&#x4EA4;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x7248;&#x672C;,&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x591A;,&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x65F6;&#x60F3;&#x8981;&#x77E5;&#x9053;&#x5F53;&#x521D;&#x63D0;&#x4EA4;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x5C31;&#x8981;&#x770B;&#x4E0A;&#x4E00;&#x6B65; <code>git commit -m &lt;message&gt;</code> &#x63D0;&#x4F9B;&#x7684;&#x5907;&#x6CE8;&#x4FE1;&#x606F;.</p>
+<pre><code class="lang-bash">$ git <span class="hljs-built_in">log</span>
+<span class="hljs-comment"># &#x7248;&#x672C;&#x53F7;: `128d0d0367096c41a6716ff30b4aec5876239343`,&#x6BCF;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x90FD;&#x4F1A;&#x4EA7;&#x751F;&#x552F;&#x4E00;&#x7684;&#x7248;&#x672C;&#x53F7;,&#x4F5C;&#x4E3A;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;&#x7684;&#x6807;&#x8BC6;.</span>
+commit 128d0d0367096c41a6716ff30b4aec5876239343 (HEAD -&gt; master)
+<span class="hljs-comment"># &#x63D0;&#x4EA4;&#x4F5C;&#x8005;&#x7684;&#x4FE1;&#x606F;,`snowdreams1006` &#x662F;&#x7528;&#x6237;&#x540D;,`snowdreams1006@163.com` &#x662F;&#x90AE;&#x7BB1;,&#x662F;&#x5B89;&#x88C5; `git` &#x540E;&#x914D;&#x7F6E;&#x7684;&#x4FE1;&#x606F;.</span>
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Apr 30 09:44:39 2019 +0800
+
+<span class="hljs-comment"># &#x63D0;&#x4EA4;&#x5907;&#x6CE8;: `init git-bash-demo`</span>
+    init git-bash-demo
+</code></pre>
+<ul>
+<li>&#x547D;&#x4EE4;&#x592A;&#x591A;&#x8BB0;&#x4E0D;&#x4F4F;: &#x64CD;&#x4F5C;&#x5386;&#x53F2;</li>
+</ul>
+<blockquote>
+<p><code>git reflog</code> : <code>reflog</code> &#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x56DE;&#x6D41;&quot;,&#x5373;&#x7FFB;&#x9605;&#x547D;&#x4EE4;.</p>
+</blockquote>
+<p>&#x7248;&#x672C;&#x53F7;&#x9ED8;&#x8BA4;&#x662F;&#x4E00;&#x4E32;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#x4E32;,&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5B9A;&#x4F4D;&#x786E;&#x5B9A;&#x552F;&#x4E00;&#x63D0;&#x4EA4;&#x7248;&#x672C;,&#x6240;&#x4EE5;&#x67E5;&#x627E;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x53F7;&#x65F6;&#x53EF;&#x4EE5;&#x7F29;&#x77ED;&#x53EA;&#x8981;&#x80FD;&#x627E;&#x5230;&#x7248;&#x672C;&#x53F7;&#x5C31;&#x53EF;&#x4EE5;.</p>
+<p>&#x6B63;&#x5982;&#x4E0B;&#x9762;&#x7684; <code>128d0d0</code> &#x4EE3;&#x8868;&#x7684;&#x7248;&#x672C;&#x53F7;&#x5C31;&#x662F; <code>128d0d0367096c41a6716ff30b4aec5876239343</code>.</p>
+<p><code>HEAD@{0}</code> &#x4F5C;&#x4E3A;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;&#x65F6;&#x5F88;&#x91CD;&#x8981;,&#x7B80;&#x5355;&#x57FA;&#x7840;&#x7684;&#x547D;&#x4EE4;&#x5E76;&#x4E0D;&#x4F1A;&#x7528;&#x5230;,&#x4F5C;&#x4E3A;&#x6269;&#x5C55;&#x77E5;&#x8BC6;&#x70B9;&#x4E86;&#x89E3;&#x5373;&#x53EF;.</p>
+<pre><code class="lang-bash">$ git reflog
+
+<span class="hljs-comment"># `128d0d0` &#x662F; `128d0d0367096c41a6716ff30b4aec5876239343` &#x7684;&#x524D;7&#x4F4D;,&#x7406;&#x8BBA;&#x4E0A;&#x80FD;&#x552F;&#x4E00;&#x5B9A;&#x4F4D;&#x5230;&#x67D0;&#x4E2A;&#x63D0;&#x4EA4;&#x7248;&#x672C;&#x5C31;&#x597D;,&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x7F29;&#x77ED;&#x7248;&#x672C;&#x53F7;.</span>
+128d0d0 (HEAD -&gt; master) HEAD@{0}: commit (initial): init git-bash-demo
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x56DE;&#x5FC6;&#x4E00;&#x4E0B; <code>git</code> &#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;,&#x6587;&#x4EF6;&#x662F;&#x5982;&#x4F55;&#x4E0A;&#x4F20;&#x5230;&#x672C;&#x5730;&#x7F51;&#x76D8;?</p>
+<ol>
+<li><code>git init</code> &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;,&#x521B;&#x5EFA;&#x672C;&#x5730;&#x7F51;&#x76D8;.</li>
+<li><code>git add</code> &#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x6311;&#x9009;&#x51FA;&#x5F85;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x7684;&#x6587;&#x4EF6;,&#x51C6;&#x5907;&#x4E0A;&#x4F20;.</li>
+<li><code>git commit</code> &#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5C06;&#x5DF2;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x8FDB;&#x884C;&#x5907;&#x4EFD;.</li>
+<li><code>git status</code> &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x672C;&#x5730;&#x7F51;&#x76D8;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x540E;&#x968F;&#x65F6;&#x968F;&#x5730;&#x547C;&#x5524;&#x5C0F;&#x79D8;&#x4E66;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;.</li>
+<li><code>git log</code> &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x591A;&#x6B21;&#x4E0A;&#x4F20;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x80FD;&#x8BC6;&#x522B;,&#x603B;&#x89C8;&#x4E0A;&#x4F20;&#x8BB0;&#x5F55;.</li>
+<li><code>git reflog</code> &#x67E5;&#x770B;&#x56DE;&#x6D41;&#x5386;&#x53F2;,&#x5B58;&#x50A8;&#x91CD;&#x8981;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x7ED3;&#x679C;,&#x9AD8;&#x7EA7;&#x8FDB;&#x9636;&#x5FC5;&#x5907;&#x77E5;&#x8BC6;&#x70B9;.</li>
+</ol>
+<p>&#x91CD;&#x8981;&#x77E5;&#x8BC6;&#x70B9;&#x6211;&#x90FD;&#x5E2E;&#x4F60;&#x603B;&#x7ED3;&#x597D;&#x4E86;,&#x8FD8;&#x4E0D;&#x62FF;&#x51FA;&#x5C0F;&#x672C;&#x672C;&#x8D76;&#x7D27;&#x8BB0;&#x4E0B;&#x6765;?</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;git &#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;&quot;</span> &gt; git.md
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;1. `git init` &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;,&#x521B;&#x5EFA;&#x672C;&#x5730;&#x7F51;&#x76D8;.&quot;</span> &gt;&gt; git.md
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;2. `git add` &#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x6311;&#x9009;&#x51FA;&#x5F85;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x7684;&#x6587;&#x4EF6;,&#x51C6;&#x5907;&#x4E0A;&#x4F20;.&quot;</span> &gt;&gt; git.md
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;3. `git commit` &#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5C06;&#x5DF2;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x8FDB;&#x884C;&#x5907;&#x4EFD;.&quot;</span> &gt;&gt; git.md
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;4. `git status` &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x672C;&#x5730;&#x7F51;&#x76D8;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x540E;&#x968F;&#x65F6;&#x968F;&#x5730;&#x547C;&#x5524;&#x5C0F;&#x79D8;&#x4E66;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;.&quot;</span> &gt;&gt; git.md
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;5. `git log` &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x591A;&#x6B21;&#x4E0A;&#x4F20;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x80FD;&#x8BC6;&#x522B;,&#x603B;&#x89C8;&#x4E0A;&#x4F20;&#x8BB0;&#x5F55;.&quot;</span> &gt;&gt; git.md
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;6. `git reflog` &#x67E5;&#x770B;&#x56DE;&#x6D41;&#x5386;&#x53F2;,&#x5B58;&#x50A8;&#x91CD;&#x8981;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x7ED3;&#x679C;,&#x9AD8;&#x7EA7;&#x8FDB;&#x9636;&#x5FC5;&#x5907;&#x77E5;&#x8BC6;&#x70B9;.&quot;</span> &gt;&gt; git.md
+</code></pre>
+<p>&#x5C0F;&#x7B14;&#x8BB0;&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;,&#x73B0;&#x5728;&#x5F00;&#x59CB;&#x5C06;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5230;&#x7F51;&#x76D8;&#x4E2D;,&#x518D;&#x6B21;&#x4F53;&#x9A8C;&#x4E0B; <code>git</code> &#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;,&#x51C6;&#x5907;&#x597D;&#x4E86;&#x5417;?</p>
+<pre><code class="lang-bash">Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x5217;&#x51FA;&#x5F53;&#x524D;&#x6587;&#x4EF6;: &#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4F4D;&#x4E8E; `git` &#x76EE;&#x5F55;,&#x5B58;&#x5728;&#x5B66;&#x4E60;&#x7B14;&#x8BB0; `git.md`.</span>
+$ ls
+git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x5B66;&#x4E60;&#x7B14;&#x8BB0; `git.md` &#x5C1A;&#x672A;&#x88AB;&#x8FFD;&#x8E2A;,&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; `git add` &#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x8FDB;&#x6765;.</span>
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use <span class="hljs-string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="hljs-keyword">in</span> what will be committed)
+
+        git.md
+
+nothing added to commit but untracked files present (use <span class="hljs-string">&quot;git add&quot;</span> to track)
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x6587;&#x4EF6;: &#x5C06;&#x5B66;&#x4E60;&#x7B14;&#x8BB0; `git.md` &#x6DFB;&#x52A0;&#x5230;&#x8FFD;&#x8E2A;&#x6587;&#x4EF6;&#x6E05;&#x5355;.</span>
+$ git add git.md
+warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> git.md.
+The file will have its original line endings <span class="hljs-keyword">in</span> your working directory
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x518D;&#x6B21;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x6B64;&#x65F6;&#x5B66;&#x4E60;&#x7B14;&#x8BB0; `git.md` &#x5DF2;&#x6DFB;&#x52A0;&#x5230;&#x8DDF;&#x8E2A;&#x6587;&#x4EF6;&#x6E05;&#x5355;,&#x663E;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;,&#x5982;&#x9700;&#x63D0;&#x4EA4;&#x53EF;&#x8FD0;&#x884C; `git commit` &#x63D0;&#x4EA4;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;.</span>
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use <span class="hljs-string">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage)
+
+        new file:   git.md
+
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x63D0;&#x4EA4;&#x6587;&#x4EF6;: &#x5C06;&#x8DDF;&#x8E2A;&#x6587;&#x4EF6;&#x6E05;&#x5355;&#x7684;&#x66F4;&#x6539;&#x5168;&#x90E8;&#x63D0;&#x4EA4;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;,&#x6B64;&#x65F6;&#x8DDF;&#x8E2A;&#x6E05;&#x5355;&#x53EA;&#x6709;&#x6211;&#x4EEC;&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0; `git.md` ,&#x6240;&#x4EE5;&#x663E;&#x793A;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x88AB;&#x6539;&#x53D8;.</span>
+$ git commit -m <span class="hljs-string">&quot;add git learn note&quot;</span>
+[master (root-commit) 08cbe61] add git learn note
+ 1 file changed, 9 insertions(+)
+ create mode 100644 git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x518D;&#x6B21;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5168;&#x90E8;&#x63D0;&#x4EA4;&#x5230;&#x672C;&#x5730;&#x7248;&#x672C;&#x5E93;,&#x76F8;&#x5F53;&#x4E8E;&#x7F51;&#x76D8;&#x5DF2;&#x7ECF;&#x6709;&#x6700;&#x65B0;&#x6587;&#x4EF6;&#x4E86;.</span>
+$ git status
+On branch master
+nothing to commit, working tree clean
+</code></pre>
+<p>&#x4E00;&#x6B21;&#x65B0;&#x589E;&#x6587;&#x4EF6;&#x4E4B;&#x65C5;&#x5C31;&#x8FD9;&#x4E48;&#x8F7B;&#x677E;&#x6109;&#x5FEB;,&#x8D76;&#x7D27;&#x8BB0;&#x5230;&#x7B14;&#x8BB0;&#x9F13;&#x52B1;&#x4E0B;&#x81EA;&#x5DF1;&#x5427;!</p>
+<pre><code class="lang-bash">Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;git is so easy&quot;</span> &gt;&gt; git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+$ cat git.md
+git &#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;
+1. `git init` &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;,&#x521B;&#x5EFA;&#x672C;&#x5730;&#x7F51;&#x76D8;.
+2. `git add` &#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x6311;&#x9009;&#x51FA;&#x5F85;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x7684;&#x6587;&#x4EF6;,&#x51C6;&#x5907;&#x4E0A;&#x4F20;.
+3. `git commit` &#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5C06;&#x5DF2;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x8FDB;&#x884C;&#x5907;&#x4EFD;.
+4. `git status` &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x672C;&#x5730;&#x7F51;&#x76D8;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x540E;&#x968F;&#x65F6;&#x968F;&#x5730;&#x547C;&#x5524;&#x5C0F;&#x79D8;&#x4E66;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;.
+5. `git <span class="hljs-built_in">log</span>` &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x591A;&#x6B21;&#x4E0A;&#x4F20;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x80FD;&#x8BC6;&#x522B;,&#x603B;&#x89C8;&#x4E0A;&#x4F20;&#x8BB0;&#x5F55;.
+6. `git reflog` &#x67E5;&#x770B;&#x56DE;&#x6D41;&#x5386;&#x53F2;,&#x5B58;&#x50A8;&#x91CD;&#x8981;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x7ED3;&#x679C;,&#x9AD8;&#x7EA7;&#x8FDB;&#x9636;&#x5FC5;&#x5907;&#x77E5;&#x8BC6;&#x70B9;.
+
+
+git is so easy
+</code></pre>
+<p>&#x6BCF;&#x4E00;&#x6B21;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x53D1;&#x751F;&#x91CD;&#x5927;&#x66F4;&#x6539;&#x65F6;&#x90FD;&#x5E94;&#x8BE5;&#x88AB;&#x8BB0;&#x5F55;&#x4EE5;&#x4FBF;&#x540E;&#x7EED;&#x67E5;&#x770B;&#x5F53;&#x65F6;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x90A3;&#x73B0;&#x5728;&#x4E5F;&#x63D0;&#x4EA4;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x5427;!</p>
+<pre><code class="lang-bash">Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x548C;&#x4EE5;&#x5F80;&#x4E0D;&#x540C;&#x7684;&#x662F;,&#x8FD9;&#x6B21;&#x5C0F;&#x52A9;&#x624B;&#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x5EFA;&#x8BAE;,`git add` &#x548C; `git checkout` ,&#x5176;&#x4E2D; `git add` &#x662F;&#x66F4;&#x65B0;&#x5C06;&#x8981;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;,&#x800C; `git checkout` &#x5219;&#x662F;&#x4E22;&#x5F03;&#x672C;&#x6B21;&#x66F4;&#x6539;&#x5185;&#x5BB9;.</span>
+$ git status
+On branch master
+Changes not staged <span class="hljs-keyword">for</span> commit:
+  (use <span class="hljs-string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)
+  (use <span class="hljs-string">&quot;git checkout -- &lt;file&gt;...&quot;</span> to discard changes <span class="hljs-keyword">in</span> working directory)
+
+        modified:   git.md
+
+no changes added to commit (use <span class="hljs-string">&quot;git add&quot;</span> and/or <span class="hljs-string">&quot;git commit -a&quot;</span>)
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x6587;&#x4EF6;: &#x6309;&#x7167;&#x4E0A;&#x4E00;&#x6B65;&#x63D0;&#x793A;,&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x7684;&#x662F;&#x51C6;&#x5907;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x56E0;&#x6B64;&#x8FD0;&#x884C; `git add` &#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;.</span>
+$ git add git.md
+warning: LF will be replaced by CRLF <span class="hljs-keyword">in</span> git.md.
+The file will have its original line endings <span class="hljs-keyword">in</span> your working directory
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+
+<span class="hljs-comment"># &#x63D0;&#x4EA4;&#x6587;&#x4EF6;: &#x548C;&#x5F80;&#x5E38;&#x4E00;&#x6837;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x63D0;&#x4EA4;&#x90FD;&#x8981;&#x6709;&#x63D0;&#x4EA4;&#x5907;&#x6CE8;,&#x65B9;&#x4FBF;&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x65F6;&#x63D0;&#x9192;&#x81EA;&#x5DF1;&#x6587;&#x4EF6;&#x5185;&#x5BB9;.</span>
+$ git commit -m <span class="hljs-string">&quot;git is so easy&quot;</span>
+[master 0b0657b] git is so easy
+ 1 file changed, 1 insertion(+)
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x518D;&#x6B21;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x6B63;&#x5982;&#x6211;&#x4EEC;&#x6240;&#x6599;,&#x5C0F;&#x52A9;&#x624B;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x5DE5;&#x4F5C;&#x533A;&#x662F;&#x5E72;&#x51C0;&#x7684;,&#x8FD9;&#x8868;&#x793A;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x90FD;&#x5DF2;&#x6DFB;&#x52A0;&#x5230;&#x7248;&#x672C;&#x5E93;&#x4E2D;,&#x63A5;&#x4E0B;&#x6765;&#x8BA9;&#x606A;&#x5C3D;&#x804C;&#x8D23;&#x7684; `git` &#x5E2E;&#x6211;&#x4EEC;&#x7BA1;&#x7406;&#x6587;&#x4EF6;&#x5427;.</span>
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;: &#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x6309;&#x7167;&#x65F6;&#x95F4;&#x5012;&#x6392;&#x987A;&#x5E8F;&#x4F9D;&#x6B21;&#x663E;&#x793A;,&#x6700;&#x65B0;&#x7684;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x5728;&#x7EC8;&#x7AEF;&#x7684;&#x4E0A;&#x9762;,&#x6709;&#x6211;&#x4EEC;&#x7684;&#x63D0;&#x4EA4;&#x5907;&#x6CE8;&#x7B49;&#x4FE1;&#x606F;.</span>
+$ git <span class="hljs-built_in">log</span>
+commit 0b0657b7db02f1f5c6e8d5ac3f1307156c15ce08 (HEAD -&gt; master)
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Apr 30 11:55:07 2019 +0800
+
+    git is so easy
+
+commit 08cbe61c2a635ec6f70ae7a50842ae308<span class="hljs-built_in">cd</span>95fee
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Apr 30 11:16:19 2019 +0800
+
+    add git learn note
+</code></pre>
+<p>&#x76EE;&#x524D;&#x4E3A;&#x6B62;,&#x8FD9;&#x79CD;&#x64CD;&#x4F5C;&#x597D;&#x50CF;&#x548C;&#x666E;&#x901A;&#x7684;&#x7F51;&#x76D8;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x4E0D;&#x540C;,&#x9009;&#x62E9;&#x6587;&#x4EF6;,&#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x90A3;&#x6211;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528; <code>git</code> &#x5462;?</p>
+<ul>
+<li>&#x5F00;&#x542F;&#x65F6;&#x95F4;&#x7A7F;&#x68AD;&#x673A;: &#x7248;&#x672C;&#x63A7;&#x5236;</li>
+</ul>
+<blockquote>
+<p><code>git checkout</code> : &#x5373;&#x68C0;&#x51FA;&#x6587;&#x4EF6;,&#x5207;&#x6362;&#x5230;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x72B6;&#x6001;.</p>
+</blockquote>
+<p>&#x5047;&#x5982;&#x4F60;&#x6B63;&#x5728;&#x5B66;&#x4E60; <code>git</code> &#x77E5;&#x8BC6;,&#x8BA4;&#x771F;&#x8DDF;&#x7740;&#x6559;&#x7A0B;&#x8FB9;&#x7EC3;&#x4E60;&#x8FB9;&#x505A;&#x7B14;&#x8BB0;,&#x5B66;&#x7740;&#x5B66;&#x7740;&#x72AF;&#x56F0;&#x4E86;&#x8DB4;&#x5728;&#x7535;&#x8111;&#x4E0A;&#x7761;&#x7740;&#x4E86;,&#x4E8E;&#x662F;&#x7B14;&#x8BB0;&#x53D8;&#x6210;&#x4E86;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x4E86;.</p>
+<pre><code class="lang-bash">$ cat git.md
+git &#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;
+1. `git init` &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;,&#x521B;&#x5EFA;&#x672C;&#x5730;&#x7F51;&#x76D8;.
+2. `git add` &#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x6311;&#x9009;&#x51FA;&#x5F85;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x7684;&#x6587;&#x4EF6;,&#x51C6;&#x5907;&#x4E0A;&#x4F20;.
+3. `git commit` &#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5C06;&#x5DF2;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x8FDB;&#x884C;&#x5907;&#x4EFD;.
+4. `git status` &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x672C;&#x5730;&#x7F51;&#x76D8;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x540E;&#x968F;&#x65F6;&#x968F;&#x5730;&#x547C;&#x5524;&#x5C0F;&#x79D8;&#x4E66;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;.
+5. `git <span class="hljs-built_in">log</span>` &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x591A;&#x6B21;&#x4E0A;&#x4F20;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x80FD;&#x8BC6;&#x522B;,&#x603B;&#x89C8;&#x4E0A;&#x4F20;&#x8BB0;&#x5F55;.
+6. `git reflog` &#x67E5;&#x770B;&#x56DE;&#x6D41;&#x5386;&#x53F2;,&#x5B58;&#x50A8;&#x91CD;&#x8981;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x7ED3;&#x679C;,&#x9AD8;&#x7EA7;&#x8FDB;&#x9636;&#x5FC5;&#x5907;&#x77E5;&#x8BC6;&#x70B9;.
+
+
+git is so easy
+
+lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+
+,pasdad,;qwd;lq\we1233333333333333333333333333333333333,;qwe
+qwewewewewewewewewewewewewewewewewewewewewewewewewewewewe
+</code></pre>
+<p>&#x5F88;&#x663E;&#x7136;,&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x7EDD;&#x5BF9;&#x662F;&#x65E0;&#x610F;&#x4E4B;&#x4E3E;,&#x78B0;&#x5230;&#x952E;&#x76D8;&#x4E71;&#x6309;&#x7684;,&#x8FD9;&#x65F6;&#x5019;&#x600E;&#x4E48;&#x5220;&#x9664;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x6587;&#x5B57;&#x5462;?</p>
+<p>&#x5F53;&#x7136;&#x4F60;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x624B;&#x52A8;&#x5220;&#x9664;,&#x5F53;&#x7136;&#x662F;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x4F46;&#x4E0D;&#x662F;&#x4F18;&#x96C5;&#x7684;&#x65B9;&#x6CD5;,&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x4E0B; <code>git</code> &#x5BF9;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;.</p>
+<p>&#x8FD8;&#x8BB0;&#x5F97;&#x6211;&#x4EEC;&#x7684;&#x5C0F;&#x52A9;&#x624B;&#x5417;,&#x6709;&#x4E8B;&#x6CA1;&#x4E8B;&#x95EE;&#x95EE;&#x5B83;&#x80FD;&#x7ED9;&#x6211;&#x4EEC;&#x4EC0;&#x4E48;&#x610F;&#x89C1;&#x5C31;&#x5BF9;&#x4E86;,<code>git status</code> &#x95EA;&#x4EAE;&#x767B;&#x573A;!</p>
+<pre><code class="lang-bash">$ git status
+On branch master
+Changes not staged <span class="hljs-keyword">for</span> commit:
+  (use <span class="hljs-string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)
+  (use <span class="hljs-string">&quot;git checkout -- &lt;file&gt;...&quot;</span> to discard changes <span class="hljs-keyword">in</span> working directory)
+
+        modified:   git.md
+
+no changes added to commit (use <span class="hljs-string">&quot;git add&quot;</span> and/or <span class="hljs-string">&quot;git commit -a&quot;</span>)
+</code></pre>
+<p>&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x7684;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x4FEE;&#x6539;&#x540E;,&#x5982;&#x679C;&#x662F;&#x6B63;&#x786E;&#x7684;&#x4FEE;&#x6539;&#x90A3;&#x6211;&#x4EEC;&#x8FD0;&#x884C;&#x7684;&#x90FD;&#x662F; <code>git add</code> &#x547D;&#x4EE4;,&#x5047;&#x5982;&#x662F;&#x610F;&#x5916;&#x5185;&#x5BB9;&#x7684;&#x8BDD;(&#x6BD4;&#x5982;&#x8FD9;&#x6B21;&#x778C;&#x7761;&#x6253;&#x76F9;&#x4EA7;&#x751F;&#x7684;&#x4E71;&#x7801;),&#x80AF;&#x5B9A;&#x5C31;&#x4E0D;&#x80FD;&#x91C7;&#x7EB3;&#x7B2C;&#x4E00;&#x79CD;&#x5EFA;&#x8BAE;&#x4E86;.</p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x5EFA;&#x8BAE;&#x8BF4;&#x4F7F;&#x7528; <code>git checkout -- &lt;file&gt;</code> &#x6765;&#x4E22;&#x5F03;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x7684;&#x66F4;&#x6539;,&#x4E0D;&#x59A8;&#x8BD5;&#x4E00;&#x4E0B;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x5427;!</p>
+<pre><code>Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# &#x4E22;&#x5F03;&#x5DE5;&#x4F5C;&#x533A;&#x66F4;&#x6539;: &#x6062;&#x590D;&#x5230;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x7248;&#x672C;&#x7BA1;&#x7406;&#x72B6;&#x6001;
+$ git checkout -- git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x5DE5;&#x4F5C;&#x533A;&#x662F;&#x5E72;&#x51C0;&#x7684;,&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x6267;&#x884C;&#x5B8C; `git commit`&#x547D;&#x4EE4;&#x4E00;&#x6837;.
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+# &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5185;&#x5BB9;: &#x795E;&#x5947;&#x56DE;&#x5230;&#x4E86;&#x4E0A;&#x6B21;&#x6587;&#x4EF6;&#x72B6;&#x6001;
+$ cat git.md
+git &#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;
+1. `git init` &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;,&#x521B;&#x5EFA;&#x672C;&#x5730;&#x7F51;&#x76D8;.
+2. `git add` &#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x6311;&#x9009;&#x51FA;&#x5F85;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x7684;&#x6587;&#x4EF6;,&#x51C6;&#x5907;&#x4E0A;&#x4F20;.
+3. `git commit` &#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5C06;&#x5DF2;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x8FDB;&#x884C;&#x5907;&#x4EFD;.
+4. `git status` &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x672C;&#x5730;&#x7F51;&#x76D8;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x540E;&#x968F;&#x65F6;&#x968F;&#x5730;&#x547C;&#x5524;&#x5C0F;&#x79D8;&#x4E66;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;.
+5. `git log` &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x591A;&#x6B21;&#x4E0A;&#x4F20;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x80FD;&#x8BC6;&#x522B;,&#x603B;&#x89C8;&#x4E0A;&#x4F20;&#x8BB0;&#x5F55;.
+6. `git reflog` &#x67E5;&#x770B;&#x56DE;&#x6D41;&#x5386;&#x53F2;,&#x5B58;&#x50A8;&#x91CD;&#x8981;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x7ED3;&#x679C;,&#x9AD8;&#x7EA7;&#x8FDB;&#x9636;&#x5FC5;&#x5907;&#x77E5;&#x8BC6;&#x70B9;.
+
+
+git is so easy
+</code></pre><p>&#x4EC5;&#x4EC5;&#x9700;&#x8981; <code>git checkout -- &lt;file&gt;</code> &#x4E00;&#x6761;&#x547D;&#x4EE4;&#x5C31;&#x80FD;&#x8F7B;&#x677E;&#x64A4;&#x9500;&#x6587;&#x4EF6;&#x66F4;&#x6539;,<code>so easy!</code></p>
+<ul>
+<li>&#x7A7F;&#x8D8A;&#x5230;&#x8FC7;&#x53BB;&#x770B;&#x770B;: &#x56DE;&#x5230;&#x8FC7;&#x53BB;</li>
+</ul>
+<blockquote>
+<p><code>git reset --hard &lt;commit&gt;</code> : &#x5373;&#x91CD;&#x7F6E;&#x5230;&#x67D0;&#x4E2A;&#x7248;&#x672C;.</p>
+</blockquote>
+<p>&#x6B63;&#x5982;&#x4E4B;&#x524D;&#x4E0D;&#x7ECF;&#x610F;&#x95F4;&#x63D0;&#x5230;&#x7684;&#x7248;&#x672C;&#x6982;&#x5FF5;,&#x6BCF;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x6587;&#x4EF6;&#x90FD;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x957F;&#x4E32;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#x4E32;,&#x90A3;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5C31;&#x662F;&#x7248;&#x672C;&#x53F7;.</p>
+<p><code>git</code> &#x5B9E;&#x73B0;&#x7684;&#x7F51;&#x76D8;&#x529F;&#x80FD;&#x53EF;&#x4E0D;&#x662F;&#x767E;&#x5EA6;&#x4E91;&#x7F51;&#x76D8;,&#x666E;&#x901A;&#x7684;&#x7F51;&#x76D8;&#x53EA;&#x80FD;&#x4FDD;&#x5B58;&#x6700;&#x65B0;&#x6587;&#x4EF6;,&#x76F8;&#x540C;&#x540D;&#x79F0;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x5141;&#x8BB8;&#x518D;&#x6B21;&#x4E0A;&#x4F20;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x66FF;&#x6362;&#x6216;&#x8005;&#x91CD;&#x547D;&#x540D;.</p>
+<p>&#x7136;&#x800C;,<code>git</code> &#x5374;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;,&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0; <code>git.md</code> &#x5C31;&#x4E0D;&#x6B62;&#x4FDD;&#x5B58;&#x8FC7;&#x4E00;&#x6B21;,&#x73B0;&#x5728;&#x770B;&#x4E00;&#x4E0B;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x5427;!</p>
+<pre><code class="lang-bash">Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+$ git <span class="hljs-built_in">log</span>
+<span class="hljs-comment"># &#x7B2C;&#x4E8C;&#x6B21;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;: &#x5F53;&#x65F6;&#x5199;&#x4E0B;&#x4E86;git is so easy</span>
+commit 0b0657b7db02f1f5c6e8d5ac3f1307156c15ce08 (HEAD -&gt; master)
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Apr 30 11:55:07 2019 +0800
+
+    git is so easy
+
+<span class="hljs-comment"># &#x7B2C;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;: &#x5F53;&#x65F6;&#x8BB0;&#x5F55;&#x4E86;git &#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;</span>
+commit 08cbe61c2a635ec6f70ae7a50842ae308<span class="hljs-built_in">cd</span>95fee
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Apr 30 11:16:19 2019 +0800
+
+    add git learn note
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#x4E86;,&#x8BB0;&#x5F55;&#x4E86;&#x8FD9;&#x4E48;&#x591A;&#x7248;&#x672C;&#x5386;&#x53F2;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5462;?</p>
+<p>&#x7528;&#x5904;&#x53EF;&#x5927;&#x4E86;,&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7A7F;&#x8D8A;&#x5230;&#x7B2C;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;&#x7684;&#x90A3;&#x4E00;&#x523B;&#x53BB;,&#x611F;&#x53D7;&#x6000;&#x5FF5;&#x4E00;&#x4E0B;&#x65E7;&#x65F6;&#x5149;.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x91CD;&#x7F6E;&#x7248;&#x672C;: &#x7A7F;&#x8D8A;&#x5230;&#x7B2C;&#x4E00;&#x6B21;&#x7684;&#x7248;&#x672C;&#x53F7;,`08cbe61c2a635ec6f70ae7a50842ae308cd95fee` &#x5373; `git log` &#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x7684;&#x7248;&#x672C;&#x53F7;.</span>
+$ git reset --hard 08cbe61c2a635ec6f70ae7a50842ae308<span class="hljs-built_in">cd</span>95fee
+HEAD is now at 08cbe61 add git learn note
+</code></pre>
+<p>&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E86;,&#x6211;&#x662F;&#x8C01;,&#x6211;&#x5728;&#x54EA;?&#x73B0;&#x5728;&#x662F;2019&#x5E74;&#x8FD8;&#x662F;&#x516C;&#x5143;220&#x5E74;?</p>
+<p>&#x5C0F;&#x52A9;&#x624B;&#x4F60;&#x5728;&#x54EA;,&#x5FEB;&#x5E2E;&#x6211;&#x770B;&#x770B;&#x73B0;&#x5728;&#x662F;&#x4EC0;&#x4E48;&#x72B6;&#x6001;.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;: &#x62A5;&#x544A;&#x8001;&#x677F;,&#x5DE5;&#x4F5C;&#x533A;&#x5F88;&#x5E72;&#x51C0;,&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x6587;&#x4EF6;&#x66F4;&#x6539;&#x54DF;!</span>
+$ git status
+On branch master
+nothing to commit, working tree clean
+</code></pre>
+<p>&#x5C0F;&#x52A9;&#x624B;&#x4E5F;&#x6CA1;&#x6709;&#x7ED9;&#x6211;&#x6EE1;&#x610F;&#x7684;&#x56DE;&#x590D;,&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x4E30;&#x8863;&#x8DB3;&#x98DF;,&#x6211;&#x8FD8;&#x662F;&#x81EA;&#x5DF1;&#x770B;&#x770B;&#x5468;&#x56F4;&#x6709;&#x4EC0;&#x4E48;&#x4EBA;&#x5427;!</p>
+<pre><code class="lang-bash">Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x6587;&#x4EF6;: &#x539F;&#x6765;&#x6211;&#x8FD8;&#x5728; `git` &#x76EE;&#x5F55;&#x4E0B;,&#x8FD9;&#x91CC;&#x8FD8;&#x6709;&#x6211;&#x7684;&#x5B66;&#x4E60;&#x7B14;&#x8BB0; `git.md` &#x5462;!</span>
+$ ls
+git.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/git-bash-demo/git (master)
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5185;&#x5BB9;: &#x6211;&#x7684;&#x7B14;&#x8BB0;&#x5185;&#x5BB9;&#x4E0D;&#x662F;&#x6700;&#x65B0;&#x7684;&#x4E86;,&#x539F;&#x6765;&#x7684;&quot;git is so easy&quot;&#x4E0D;&#x89C1;&#x4E86;,&#x6211;&#x7ADF;&#x7136;&#x771F;&#x7684;&#x56DE;&#x5230;&#x4E86;&#x8FC7;&#x53BB;!</span>
+$ cat git.md
+git &#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;
+1. `git init` &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;,&#x521B;&#x5EFA;&#x672C;&#x5730;&#x7F51;&#x76D8;.
+2. `git add` &#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x6311;&#x9009;&#x51FA;&#x5F85;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x7684;&#x6587;&#x4EF6;,&#x51C6;&#x5907;&#x4E0A;&#x4F20;.
+3. `git commit` &#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5C06;&#x5DF2;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x8FDB;&#x884C;&#x5907;&#x4EFD;.
+4. `git status` &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x672C;&#x5730;&#x7F51;&#x76D8;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x540E;&#x968F;&#x65F6;&#x968F;&#x5730;&#x547C;&#x5524;&#x5C0F;&#x79D8;&#x4E66;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;.
+5. `git <span class="hljs-built_in">log</span>` &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x591A;&#x6B21;&#x4E0A;&#x4F20;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x80FD;&#x8BC6;&#x522B;,&#x603B;&#x89C8;&#x4E0A;&#x4F20;&#x8BB0;&#x5F55;.
+6. `git reflog` &#x67E5;&#x770B;&#x56DE;&#x6D41;&#x5386;&#x53F2;,&#x5B58;&#x50A8;&#x91CD;&#x8981;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x7ED3;&#x679C;,&#x9AD8;&#x7EA7;&#x8FDB;&#x9636;&#x5FC5;&#x5907;&#x77E5;&#x8BC6;&#x70B9;.
+</code></pre>
+<p>&#x62B1;&#x7740;&#x56DB;&#x5904;&#x901B;&#x901B;&#x7684;&#x5FC3;&#x6001;,&#x770B;&#x4E00;&#x4E0B;&#x5F53;&#x521D;&#x7684;&#x98CE;&#x666F;,&#x901B;&#x7D2F;&#x4E86;&#x56DE;&#x53BB;&#x5427;!</p>
+<p>&#x600E;&#x4E48;&#x6765;&#x7684;&#x5C31;&#x600E;&#x4E48;&#x56DE;&#x53BB;,&#x539F;&#x8DEF;&#x8FD4;&#x56DE;&#x4E00;&#x76F4;&#x662F;&#x6700;&#x4FDD;&#x9669;&#x7684;,&#x81EA;&#x4FE1;&#x5FC3;&#x7206;&#x68DA;&#x7684;&#x8BF4;: &#x8981;&#x5148;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x7248;&#x672C;&#x53F7;,&#x7136;&#x540E;&#x8FD0;&#x884C;<code>git reset --hard &lt;commit&gt;</code> &#x7A7F;&#x8D8A;&#x56DE;&#x672A;&#x6765;!</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;: &#x5FC3;&#x6001;&#x5D29;&#x4E86;,&#x653E;&#x58F0;&#x5927;&#x54ED;:&#x73B0;&#x5728;&#x7684;&#x6211;&#x770B;&#x4E0D;&#x5230;&#x672A;&#x6765;&#x7684;&#x7248;&#x672C;&#x53F7;,&#x90A3;&#x6211;&#x5982;&#x4F55;&#x7A7F;&#x8D8A;&#x554A;...</span>
+$ git <span class="hljs-built_in">log</span>
+commit 08cbe61c2a635ec6f70ae7a50842ae308<span class="hljs-built_in">cd</span>95fee (HEAD -&gt; master)
+Author: snowdreams1006 &lt;snowdreams1006@163.com&gt;
+Date:   Tue Apr 30 11:16:19 2019 +0800
+
+    add git learn note
+</code></pre>
+<p>&#x771F;&#x7684;&#x662F;&#x53EB;&#x5929;&#x5929;&#x4E0D;&#x5E94;&#x53EB;&#x5730;&#x5730;&#x4E0D;&#x7075;,&#x672C;&#x6765;&#x662F;&#x60F3;&#x56DE;&#x5230;&#x8FC7;&#x53BB;&#x65C5;&#x6E38;&#x89C2;&#x5149;&#x7684;,&#x73B0;&#x5728;&#x624B;&#x5934;&#x4E0A;&#x6CA1;&#x6709;&#x4E86;&#x672A;&#x6765;&#x7684;&#x5750;&#x6807;&#x5982;&#x4F55;&#x7A7F;&#x8D8A;&#x56DE;&#x53BB;&#x554A;?</p>
+<p>&#x54ED;&#x4E86;&#x4E09;&#x5929;&#x4E09;&#x591C;,&#x8C03;&#x6574;&#x597D;&#x5FC3;&#x6001;,&#x6C42;&#x4EBA;&#x4E0D;&#x5982;&#x6C42;&#x5DF1;,&#x52AA;&#x529B;&#x56DE;&#x60F3;&#x4E0B;&#x5E73;&#x751F;&#x6240;&#x5B66;&#x770B;&#x770B;&#x6709;&#x4EC0;&#x4E48;&#x522B;&#x7684;&#x65B9;&#x6CD5;&#x80FD;&#x7A7F;&#x8D8A;&#x56DE;&#x672A;&#x6765;?</p>
+<p>&#x8BB0;&#x5F97;&#x5F53;&#x521D;&#x4ECB;&#x7ECD; <code>git log</code> &#x547D;&#x4EE4;&#x65F6;&#x8FD8;&#x4ECB;&#x7ECD;&#x4E00;&#x4E2A;&#x76F8;&#x4F3C;&#x7684;&#x547D;&#x4EE4;,&#x5F53;&#x65F6;&#x8BF4;&#x9AD8;&#x7EA7;&#x8FDB;&#x9636;&#x5FC5;&#x5907;,&#x73B0;&#x5728;&#x4E0D;&#x77E5;&#x9053;&#x80FD;&#x4E0D;&#x80FD;&#x7528;&#x7740;.</p>
+<p>&#x53EB;&#x4EC0;&#x4E48;&#x540D;&#x5B57;,&#x597D;&#x50CF;&#x662F;&quot;&#x56DE;&#x6D41;&quot;,&#x4E8E;&#x662F;&#x7ECF;&#x8FC7;&#x5343;&#x767E;&#x6B21;&#x7684;&#x5C1D;&#x8BD5;&#x7EC8;&#x4E8E;&#x8BB0;&#x8D77;&#x6765;&#x547D;&#x4EE4;,&#x539F;&#x6765;&#x662F; <code>git reflog</code> ,&#x51FA;&#x53D1;&#x5427;,&#x76AE;&#x5361;&#x4E18;!</p>
+<pre><code># &#x7FFB;&#x9605;&#x547D;&#x4EE4;: &#x76EE;&#x524D;&#x6240;&#x5904;&#x7684;&#x7248;&#x672C;&#x53F7;&#x662F; `08cbe61`,&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x53F7;&#x662F; `0b0657b`,&#x7136;&#x540E;&#x56DE;&#x5230;&#x4E86; `08cbe61` .
+$ git reflog
+08cbe61 (HEAD -&gt; master) HEAD@{0}: reset: moving to 08cbe61c2a635ec6f70ae7a50842ae308cd95fee
+0b0657b HEAD@{1}: commit: git is so easy
+08cbe61 (HEAD -&gt; master) HEAD@{2}: commit (initial): add git learn note
+</code></pre><p>&#x770B;&#x6765;&#x5B66;&#x4E60;&#x4E0D;&#x80FD;&#x53EA;&#x8FFD;&#x6C42;&#x591F;&#x7528;&#x554A;,&#x9700;&#x8981;&#x6551;&#x547D;&#x65F6;&#x8FD8;&#x662F;&#x8981;&#x9760;&#x9644;&#x52A0;&#x6280;&#x80FD;&#x554A;.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x91CD;&#x7F6E;&#x7248;&#x672C;: &#x7A7F;&#x8D8A;&#x56DE;&#x672A;&#x6765;,&#x770B;&#x5230; &quot;git is so easy&quot; &#x653E;&#x5FC3;&#x591A;&#x4E86;,&#x6211;&#x5E94;&#x8BE5;&#x56DE;&#x6765;&#x4E86;&#x5427;?</span>
+$ git reset --hard 0b0657b
+HEAD is now at 0b0657b git is so easy
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x5185;&#x5BB9;: &#x6211;&#x5F20;&#x6C49;&#x4E09;&#x53C8;&#x56DE;&#x6765;&#x4E86;!</span>
+$ cat git.md
+git &#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;
+1. `git init` &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;,&#x521B;&#x5EFA;&#x672C;&#x5730;&#x7F51;&#x76D8;.
+2. `git add` &#x6DFB;&#x52A0;&#x6587;&#x4EF6;,&#x6311;&#x9009;&#x51FA;&#x5F85;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x7684;&#x6587;&#x4EF6;,&#x51C6;&#x5907;&#x4E0A;&#x4F20;.
+3. `git commit` &#x63D0;&#x4EA4;&#x6587;&#x4EF6;,&#x5C06;&#x5DF2;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x7F51;&#x76D8;&#x8FDB;&#x884C;&#x5907;&#x4EFD;.
+4. `git status` &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;,&#x672C;&#x5730;&#x7F51;&#x76D8;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x540E;&#x968F;&#x65F6;&#x968F;&#x5730;&#x547C;&#x5524;&#x5C0F;&#x79D8;&#x4E66;&#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;.
+5. `git <span class="hljs-built_in">log</span>` &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x5386;&#x53F2;,&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x591A;&#x6B21;&#x4E0A;&#x4F20;,&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x80FD;&#x8BC6;&#x522B;,&#x603B;&#x89C8;&#x4E0A;&#x4F20;&#x8BB0;&#x5F55;.
+6. `git reflog` &#x67E5;&#x770B;&#x56DE;&#x6D41;&#x5386;&#x53F2;,&#x5B58;&#x50A8;&#x91CD;&#x8981;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x7ED3;&#x679C;,&#x9AD8;&#x7EA7;&#x8FDB;&#x9636;&#x5FC5;&#x5907;&#x77E5;&#x8BC6;&#x70B9;.
+
+
+git is so easy
+</code></pre>
+<p>&#x7ECF;&#x8FC7;&#x8FD9;&#x6B21;&#x7A7F;&#x8D8A;&#x4E4B;&#x65C5;,&#x518D;&#x4E5F;&#x4E0D;&#x6562;&#x8F7B;&#x89C6;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x77E5;&#x8BC6;&#x70B9;&#x4E86;,&#x4EE5;&#x540E;&#x4FDD;&#x4E0D;&#x9F50;&#x90FD;&#x662F;&#x6551;&#x547D;&#x7684;&#x9644;&#x52A0;&#x6280;&#x80FD;&#x554A;,&#x8D76;&#x7D27;&#x628A;&#x8FD9;&#x6761;&#x611F;&#x609F;&#x8FFD;&#x52A0;&#x5230; <code>git.md</code> &#x5B66;&#x4E60;&#x7B14;&#x8BB0;&#x4E2D;&#x53BB;!</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># `git reflog` &#x53EF;&#x4EE5;&#x5927;&#x6982;&#x7406;&#x89E3;&#x4E3A; `reference log` &#x8BB0;&#x505A;&#x65E5;&#x5FD7;&#x7684;&#x53C2;&#x8003;&#x65E5;&#x5FD7;,&#x8FD9;&#x6837;&#x4E0B;&#x6B21;&#x5C31;&#x4E0D;&#x8981;&#x7EDE;&#x5C3D;&#x8111;&#x6C41;&#x56DE;&#x5FC6; `reflog` &quot;&#x56DE;&#x6D41;&quot;&#x4E86;!</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;git reflog help us to back to fulture&quot;</span> &gt;&gt; git.md
+</code></pre>
+<p>&#x4EB2;&#x7231;&#x7684;&#x5C0F;&#x4F19;&#x4F34;&#x4EEC;,<code>git</code> &#x7684;&#x5B66;&#x4E60;&#x4E4B;&#x65C5;&#x6682;&#x65F6;&#x544A;&#x4E00;&#x6BB5;&#x843D;,&#x6709;&#x6CA1;&#x6709;&#x638C;&#x63E1; <code>git</code> &#x547D;&#x4EE4;&#x884C;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x5462;?</p>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x4E86;&#x89E3;&#x5173;&#x4E8E; <code>git</code> &#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;,&#x53EF;&#x4EE5;&#x53C2;&#x8003; <a href="https://snowdreams1006.github.io/git/" target="_blank">git &#x5165;&#x95E8;&#x6559;&#x7A0B;</a> &#x7CFB;&#x5217;&#x6587;&#x7AE0;&#x54DF;,&#x5F53;&#x7136;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x5C31;&#x662F;&#x5176;&#x4E2D;&#x4E00;&#x7BC7;&#x5462;!</p>
+<h3 id="&#x767B;&#x5F55;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;-&#x8FDC;&#x7A0B;&#x767B;&#x5F55;"><a name="&#x767B;&#x5F55;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;-&#x8FDC;&#x7A0B;&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x767B;&#x5F55;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;-&#x8FDC;&#x7A0B;&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.15. &#x767B;&#x5F55;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;: &#x8FDC;&#x7A0B;&#x767B;&#x5F55;</h3>
+<blockquote>
+<p><code>ssh DESTINATION</code> : <code>secure shell</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x5B89;&#x5168;&#x7684; <code>shell</code> &#x7EC8;&#x7AEF;. </p>
+</blockquote>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B; <code>windows</code> &#x7CFB;&#x7EDF;&#x81EA;&#x5E26; <code>cmd</code> &#x7EC8;&#x7AEF;&#x662F;&#x4E0D;&#x652F;&#x6301; <code>ssh</code> &#x65B9;&#x5F0F;&#x767B;&#x5F55; <code>linux</code> &#x670D;&#x52A1;&#x5668;&#x7684;,&#x5982;&#x679C;&#x60F3;&#x8981;&#x8FDC;&#x7A0B;&#x767B;&#x5F55; <code>linux</code> &#x670D;&#x52A1;&#x5668;&#x4E00;&#x822C;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;,&#x4F46; <code>git bash</code> &#x547D;&#x4EE4;&#x884C;&#x5374;&#x652F;&#x6301;<code>ssh</code>.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x767B;&#x5F55; github: &#x6B63;&#x5E38;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;&#x6216;&#x8005;&#x79D8;&#x94A5;&#x7B49;&#x53EF;&#x4EE5;&#x767B;&#x5F55;&#x5230;&#x8FDC;&#x7A0B; `linux` &#x670D;&#x52A1;&#x5668;.</span>
+$ ssh git@github.com
+PTY allocation request failed on channel 0
+Hi snowdreams1006! You<span class="hljs-string">&apos;ve successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
+</span></code></pre>
+<h3 id="&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;-&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;"><a name="&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;-&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;-&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.16. &#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;: &#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</h3>
+<blockquote>
+<p><code>curl URL</code> : <code>CommandLine Uniform Resource Locator</code> &#x7684;&#x7F29;&#x5199;,&#x5373;&#x547D;&#x4EE4;&#x884C;&#x4E0B;&#x8F7D;&#x5DE5;&#x5177;.</p>
+</blockquote>
+<p>&#x4E92;&#x8054;&#x7F51;&#x7684;&#x8D44;&#x6E90;&#x4E00;&#x822C;&#x90FD;&#x6709;&#x4E13;&#x5C5E;&#x94FE;&#x63A5;,&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7F51;&#x9875;,&#x4F46;&#x662F;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E0B;&#x6CA1;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x53C8;&#x60F3;&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;&#x8BE5;&#x600E;&#x4E48;&#x529E;?</p>
+<p><code>curl</code> &#x5C31;&#x662F;&#x8FD9;&#x4E48;&#x4E00;&#x79CD;&#x5DE5;&#x5177;,&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E0B;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;,&#x7531;&#x4E8E;&#x9ED8;&#x8BA4;&#x662F;&#x5C06;&#x4E92;&#x8054;&#x7F51;&#x8D44;&#x6E90;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;,&#x56E0;&#x6B64;&#x53C8;&#x88AB;&#x6210;&#x4E3A;<strong>&#x547D;&#x4EE4;&#x884C;&#x4E0B;&#x8F7D;&#x5DE5;&#x5177;</strong>.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5C06;&#x767E;&#x5EA6;&#x9996;&#x9875;&#x4E0B;&#x8F7D;&#x5230; `baidu.html` &#x6587;&#x4EF6;,&#x914D;&#x5408;&#x7BA1;&#x9053;&#x7B26; `&gt;` &#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x91CD;&#x5B9A;&#x5411; </span>
+$ curl http://baidu.com &gt; baidu.html
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x5DF2;&#x8FD0;&#x884C;&#x547D;&#x4EE4;-&#x5386;&#x53F2;"><a name="&#x67E5;&#x770B;&#x5DF2;&#x8FD0;&#x884C;&#x547D;&#x4EE4;-&#x5386;&#x53F2;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x5DF2;&#x8FD0;&#x884C;&#x547D;&#x4EE4;-&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.17. &#x67E5;&#x770B;&#x5DF2;&#x8FD0;&#x884C;&#x547D;&#x4EE4;: &#x5386;&#x53F2;</h3>
+<blockquote>
+<p><code>history</code> : &#x7FFB;&#x8BD1;&#x4E3A;&quot;&#x5386;&#x53F2;&quot;,&#x5373;&#x67E5;&#x770B;&#x5386;&#x53F2;&#x547D;&#x4EE4;</p>
+</blockquote>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">history</span>
+</code></pre>
+<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<p><code>git bash</code> &#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x6BD4; <code>windows</code> &#x9ED8;&#x8BA4;&#x7684; <code>cmd</code> &#x547D;&#x4EE4;&#x884C;&#x7A97;&#x53E3;&#x5F3A;&#x5927;&#x591A;&#x4E86;,&#x9664;&#x4E86;&#x652F;&#x6301;&#x4E00;&#x822C;&#x7684;&#x547D;&#x4EE4;&#x5916;,&#x8FD8;&#x652F;&#x6301;&#x7B80;&#x5355;&#x7684; <code>linux</code> &#x547D;&#x4EE4;.</p>
+<p>&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x64CD;&#x4F5C;&#x6587;&#x672C;,<code>git bash</code>&#x8DB3;&#x4EE5;&#x6EE1;&#x8DB3;&#x65E5;&#x5E38;&#x6587;&#x589E;&#x5220;&#x8BE5;&#x67E5;&#x9700;&#x6C42;,&#x5982;&#x679C;&#x8FFD;&#x6C42;&#x7C7B; <code>linux</code> &#x547D;&#x4EE4;&#x884C;&#x4F53;&#x9A8C;,&#x63A8;&#x8350;&#x4E0B;&#x8F7D;<a href="https://babun.github.io" target="_blank">babun</a>.</p>
+<blockquote>
+<p>Babun - a windows shell you will love !</p>
+</blockquote>
+<ul>
+<li>&#x5E38;&#x7528;&#x5185;&#x7F6E;&#x547D;&#x4EE4;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x6253;&#x5370;&#x5F53;&#x524D;&#x767B;&#x9646;&#x7528;&#x6237;</span>
+$ whoami
+
+<span class="hljs-comment"># &#x6253;&#x5370;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;,&#x5176;&#x4E2D; `/` &#x8868;&#x793A;&#x6839;&#x76EE;&#x5F55;,`~` &#x8868;&#x793A;&#x5BB6;&#x76EE;&#x5F55;.</span>
+$ <span class="hljs-built_in">pwd</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;(&#x5939;)</span>
+$ ls 
+
+<span class="hljs-comment"># &#x5207;&#x6362;&#x6307;&#x5B9A;&#x76EE;&#x5F55;,&#x5176;&#x4E2D; `cd` &#x4E0D;&#x5E26;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x5207;&#x6362;&#x5230;&#x5BB6;&#x76EE;&#x5F55;,`../` &#x8868;&#x793A;&#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;</span>
+$ <span class="hljs-built_in">cd</span>  &#x5207;&#x6362;&#x76EE;&#x5F55;
+
+<span class="hljs-comment"># &#x65B0;&#x5EFA;&#x6307;&#x5B9A;&#x76EE;&#x5F55;</span>
+$ mkdir DIRECTORY 
+
+<span class="hljs-comment"># &#x65B0;&#x5EFA;&#x6307;&#x5B9A;&#x6587;&#x4EF6;</span>
+$ touch FILE
+
+<span class="hljs-comment"># &#x7F16;&#x8F91;&#x6307;&#x5B9A;&#x6587;&#x4EF6;</span>
+$ vim FILE
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6307;&#x5B9A;&#x6587;&#x4EF6;</span>
+$ cat FILE
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x5F00;&#x5934;&#x90E8;&#x5206;,&#x9ED8;&#x8BA4;&#x524D;&#x5341;&#x884C;.</span>
+$ head FILE
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7ED3;&#x5C3E;&#x90E8;&#x5206;,&#x9ED8;&#x8BA4;&#x540E;&#x5341;&#x884C;.</span>
+$ tail FILE
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x64CD;&#x4F5C;&#x5386;&#x53F2;</span>
+$ <span class="hljs-built_in">history</span>
+
+<span class="hljs-comment"># &#x590D;&#x5236;&#x6587;&#x4EF6;</span>
+$ cp SOURCE DEST
+
+<span class="hljs-comment"># &#x79FB;&#x52A8;&#x6587;&#x4EF6;</span>
+$ mv SOURCE DEST
+
+<span class="hljs-comment"># &#x5220;&#x9664;&#x6587;&#x4EF6;</span>
+$ rm FILE
+
+<span class="hljs-comment"># &#x5220;&#x9664;&#x6587;&#x4EF6;&#x5939;</span>
+$ rmdir DIRECTORY
+
+<span class="hljs-comment"># &#x7279;&#x6B8A;&#x5B57;&#x7B26;: `tab` &#x81EA;&#x52A8;&#x8865;&#x5168;&#x547D;&#x4EE4;,`esc` &#x9000;&#x51FA;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF0C;`&gt;` &#x8986;&#x76D6;&#x91CD;&#x5B9A;&#x5411;,`&gt;&gt;` &#x8FFD;&#x52A0;&#x91CD;&#x5B9A;&#x5411;.</span>
+
+<span class="hljs-comment"># &#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#x670D;&#x52A1;&#x5668;</span>
+$ ssh DESTINATION
+
+<span class="hljs-comment"># &#x53D1;&#x8D77;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</span>
+$ curl URL
+</code></pre>
+<ul>
+<li><code>git</code> &#x57FA;&#x672C;&#x547D;&#x4EE4;</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x9879;&#x76EE;</span>
+$ git init 
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5230;&#x7F13;&#x5B58;&#x533A;</span>
+$ git add FILE
+
+<span class="hljs-comment"># &#x63D0;&#x4EA4;&#x6587;&#x4EF6;&#x5230;&#x7248;&#x672C;&#x5E93;</span>
+$ git commit 
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6587;&#x4EF6;&#x72B6;&#x6001;</span>
+$ git status
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x65E5;&#x5FD7;</span>
+$ git <span class="hljs-built_in">log</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x64CD;&#x4F5C;&#x5386;&#x53F2;</span>
+$ git reflog
+</code></pre>
+<h2 id="&#x5C0F;&#x7ED3;"><a name="&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x5C0F;&#x7ED3;</h2>
+<p>&#x6211;&#x4EEC;&#x4EE5;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x4E16;&#x754C;&#x5BF9;&#x6BD4;&#x5206;&#x6790;,&#x5728;&#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;&#x5DE5;&#x5177;&#x4E0B;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x8BD5;&#x56FE;&#x4ECB;&#x7ECD;&#x8BA1;&#x7B97;&#x673A;&#x54F2;&#x5B66;,&#x987A;&#x4FBF;&#x5B66;&#x4E60;&#x4E86;&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4;.</p>
+<p>&#x6BD4;&#x5982;&#x7B80;&#x5355;&#x7684;&#x6587;&#x4EF6;&#x589E;&#x5220;&#x6539;&#x67E5;,&#x76F8;&#x4FE1;&#x4F60;&#x73B0;&#x5728;&#x65E0;&#x9F20;&#x6807;&#x64CD;&#x4F5C;&#x4E5F;&#x80FD;&#x521B;&#x5EFA;&#x6587;&#x4EF6;,&#x5220;&#x9664;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x590D;&#x5236;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x4E86;&#x5427;?</p>
+<p>&#x57FA;&#x672C;&#x7684;&#x547D;&#x4EE4;&#x9664;&#x4E86;&#x89E3;&#x51B3;&#x65E5;&#x5E38;&#x6240;&#x9700;&#x5916;,&#x8FD8;&#x5728;&#x4E8E;&#x548C;&#x5176;&#x4ED6;&#x5DE5;&#x5177;&#x7684;&#x914D;&#x5408;,&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;&#x662F; <code>git bash</code> ,&#x8FD9;&#x662F;&#x5B89;&#x88C5;    <code>git</code> &#x670D;&#x52A1;&#x65F6;&#x5B89;&#x88C5;&#x7684;&#x8F85;&#x52A9;&#x6027;&#x5DE5;&#x5177;,&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E0B;&#x8FDB;&#x884C;&#x7248;&#x672C;&#x63A7;&#x5236;.</p>
+<p>&#x53EA;&#x6709;&#x719F;&#x6089;&#x57FA;&#x672C;&#x7684;&#x547D;&#x4EE4;&#x540E;&#x624D;&#x80FD;&#x66F4;&#x597D;&#x7684;&#x7406;&#x89E3; <code>git</code> &#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;,&#x56FE;&#x5F62;&#x5316;&#x5DE5;&#x5177;&#x6216;&#x63D2;&#x4EF6;&#x4E5F;&#x6709;&#x5F88;&#x591A;,&#x6BCF;&#x4E00;&#x79CD;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x64CD;&#x4F5C;&#x98CE;&#x683C;,&#x76F8;&#x4FE1;&#x719F;&#x6089;&#x4E86;&#x547D;&#x4EE4;&#x540E;&#x518D;&#x53BB;&#x5B66;&#x4E60;&#x56FE;&#x5F62;&#x5316;&#x5DE5;&#x5177;&#x64CD;&#x4F5C;&#x4E5F;&#x4E0D;&#x4F1A;&#x592A;&#x8D39;&#x4E8B;.</p>
+<p>&#x5E0C;&#x671B;&#x672C;&#x6587;&#x5BF9;&#x4F60;&#x7406;&#x89E3;&#x8BA1;&#x7B97;&#x673A;&#x6216;&#x8005;&#x8BF4;&#x5B66;&#x4E60; <code>git</code> &#x80FD;&#x591F;&#x5E26;&#x6765;&#x4E9B;&#x8BB8;&#x5E2E;&#x52A9;,&#x5982;&#x6709;&#x4E0D;&#x5F53;&#x63CF;&#x8FF0;,&#x6B22;&#x8FCE;&#x6307;&#x51FA;&#x8865;&#x5145;. </p>
+<footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 &#x7248;&#x6743;&#x6240;&#x6709;,&#x5982;&#x6709;&#x7591;&#x95EE;&#x8BF7;&#x8054;&#x7CFB;@snowdreams1006@163.com</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-05-15 08:37:48
+</span></footer>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script src="https://snowdreams1006.github.io/gitalk-config.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../server/private.html" class="navigation navigation-prev " aria-label="Previous page: git 私服搭建教程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="git-bash-relationship.html" class="navigation navigation-next " aria-label="Next page: git bash 朋友圈">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"git bash 常见命令","level":"2.2.6","depth":2,"next":{"title":"git bash 朋友圈","level":"2.2.7","depth":2,"path":"git/tools/git-bash-relationship.md","ref":"git/tools/git-bash-relationship.md","articles":[]},"previous":{"title":"git 私服搭建教程","level":"2.2.5","depth":2,"path":"git/server/private.md","ref":"git/server/private.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-plus","donate","advanced-emoji","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"output":"_book","github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":"/favicon.ico","pageview-count":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考."},"file":{"path":"git/tools/git-bash-command.md","mtime":"2019-05-15T00:37:48.812Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-15T01:33:39.913Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
