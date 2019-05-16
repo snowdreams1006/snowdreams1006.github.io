@@ -119,3 +119,8 @@ $RECYCLE.BIN/
 # package-lock.json
 package-lock.json
 
+# prepare for publish
+git/tools/git-bash-extend-up.md
+git/tools/git-bash-extend-middle.md
+git/tools/git-bash-extend-down.md
+    
