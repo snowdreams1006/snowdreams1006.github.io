@@ -36,6 +36,7 @@
     * [git bash 常见命令](git/tools/git-bash-command.md)
     * [git bash 朋友圈](git/tools/git-bash-relationship.md)
     * [git bash 竟然没有tree命令](git/tools/git-bash-tree.md)
+    * [git bash 扩展命令方式](git/tools/git-bash-extend.md)
     * [知识速查](git/summary/common.md)
     * [备忘录[译]](git/summary/cheatsheet-translation.md)
     * [常见问题](git/issue/README.md)
