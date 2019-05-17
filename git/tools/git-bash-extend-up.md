@@ -31,9 +31,124 @@
 
 既然两者都是命令行工具,那么为什么 `Git Bash` 要重复造轮子?直接用 `cmd` 不行吗?
 
+![git-bash-extend-up-gitbash-vs-cmd-git-command.png](../images/git-bash-extend-up-gitbash-vs-cmd-git-command.png)
 
+> 无论是 `Git Bash` 还是 `cmd` 命令行工具,两者均支持 `Git` 命令.
 
+既然已经重复造好了轮子,要么比原来的轮子强,要么和原来的轮子有些不一样,那么 `Git Bash` 轮子也理应如此!
 
+两者均支持 `Git` 命令,体现不出 `Git Bash` 轮子的优势,抛开 `Git` 命令不谈,作为命令行工具总有要支持的命令吧?
 
+那我们就比较一下 `Git Bash` 以及 `cmd` 命令对文件夹的基本操作吧!
 
+首先闪亮登场的是 `Git Bash` 命令行,在这次比赛中将创建 `git-bash` 文件夹以及相应的文件.
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace
+# 列出当前工作空间的文件目录
+$ ls
+backup/  private-cloud-backup/  snowdreams1006.github.io/
+
+Administrator@snowdreams1006 MINGW64 /f/workspace
+# 递归创建 `test/git-bash` 目录
+$ mkdir -p test/git-bash
+
+Administrator@snowdreams1006 MINGW64 /f/workspace
+# 切换到 `test/git-bash` 目录
+$ cd test/git-bash
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test/git-bash
+# 创建 `git-bash.md` 文件
+$ touch git-bash.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test/git-bash
+# 输出指定内容到 `git-bash.md` 文件
+$ echo "created by git bash" > git-bash.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test/git-bash
+# 查询 `git-bash.md` 文件内容
+$ cat git-bash.md
+created by git bash
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test/git-bash
+# 创建 `delete.md` 文件
+$ touch delete.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test/git-bash
+# 列出当前工作空间下的文件目录
+$ ls
+delete.md  git-bash.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test/git-bash
+# 删除 `delete.md` 文件
+$ rm delete.md
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test/git-bash
+# 列出当前工作空间下的文件目录
+$ ls
+git-bash.md
+```
+
+`git bash` 表演告一段落,现在上场的是 `cmd` ,让我们拭目以待!
+
+```bash
+# 列出当前工作空间的文件目录
+F:\workspace\test\cmd02>dir
+ 驱动器 F 中的卷是 常用
+ 卷的序列号是 62AE-62CA
+
+ F:\workspace\test\cmd02 的目录
+
+2019/05/17 周五  17:32    <DIR>          .
+2019/05/17 周五  17:32    <DIR>          ..
+               0 个文件              0 字节
+               2 个目录 94,247,124,992 可用字节
+
+# 递归创建 `test\cmd` 目录
+F:\workspace>mkdir test\cmd
+
+# 切换到 `test\cmd` 目录
+F:\workspace>cd test\cmd
+
+# 输出指定内容并创建 `cmd.md` 文件
+F:\workspace\test\cmd>echo "created by cmd" > cmd.md
+
+# 查询 `cmd.md` 文件内容
+F:\workspace\test\cmd>more cmd.md
+"created by cmd"
+
+# 创建 `delete.md` 文件
+F:\workspace\test\cmd>echo nul > delete.md
+
+# 列出当前工作空间下的文件目录
+F:\workspace\test\cmd>dir
+ 驱动器 F 中的卷是 常用
+ 卷的序列号是 62AE-62CA
+
+ F:\workspace\test\cmd 的目录
+
+2019/05/17 周五  17:39    <DIR>          .
+2019/05/17 周五  17:39    <DIR>          ..
+2019/05/17 周五  17:36                19 cmd.md
+2019/05/17 周五  17:39                 6 delete.md
+               2 个文件             25 字节
+               2 个目录 94,247,026,688 可用字节
+
+# 删除 `delete.md` 文件
+F:\workspace\test\cmd>del delete.md
+
+# 列出当前工作空间下的文件目录
+F:\workspace\test\cmd>dir
+ 驱动器 F 中的卷是 常用
+ 卷的序列号是 62AE-62CA
+
+ F:\workspace\test\cmd 的目录
+
+2019/05/17 周五  17:40    <DIR>          .
+2019/05/17 周五  17:40    <DIR>          ..
+2019/05/17 周五  17:36                19 cmd.md
+               1 个文件             19 字节
+               2 个目录 94,247,026,688 可用字节
+
+```
 
