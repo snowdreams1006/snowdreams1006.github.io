@@ -14,7 +14,6 @@
 
 ![git-bash-extend-up-setupconfig.png](../images/git-bash-extend-up-setupconfig.png)
 
-
 不论是命令行工具还是图形化工具,两者都是提供服务的一种方式,不应该是排他性而应该是互补性.
 
 当然,如果涉及到某些命令而恰恰有没有相应的图形化选项时,那么图形化工具就无能为力,正是命令行工具大显身手的好机会!
@@ -93,11 +92,11 @@ git-bash.md
 
 ```bash
 # 列出当前工作空间的文件目录
-F:\workspace\test\cmd02>dir
+F:\workspace\test\cmd>dir
  驱动器 F 中的卷是 常用
  卷的序列号是 62AE-62CA
 
- F:\workspace\test\cmd02 的目录
+ F:\workspace\test\cmd 的目录
 
 2019/05/17 周五  17:32    <DIR>          .
 2019/05/17 周五  17:32    <DIR>          ..
@@ -151,4 +150,32 @@ F:\workspace\test\cmd>dir
                2 个目录 94,247,026,688 可用字节
 
 ```
+
+`git bash` 和 `cmd` 两个命令行工具都顺利完成了此次比赛,虽然具体命令有些不同,但是殊途同归,条条大路通罗马,不是吗?
+
+|命令说明|`git bash`|`cmd`|
+|-|-|-|
+|查看帮助文档|`help`|`help`|
+|列出当前文件目录|`ls`|`dir`|
+|创建目录|`mkdir`|`mkdir`|
+|切换目录|`cd`|`cd`|
+|创建新文件|`touch <newFile>`|`echo "created by cmd" > newFile`|
+|删除文件|`rm <file>`|`del <file>`|
+
+如果你熟悉 `windows` 命令行语法那最好使用 `cmd` 命令行,如果你更熟悉 `linux` 命令行语法那建议使用 `git bash` 命令行.
+
+## `git bash` 为主,`cmd` 为辅
+
+正常情况下,命令行操作更适合 `linux` 用户,`windows` 用户更熟悉也更偏爱图形化工具吧!
+
+所以,假设我们都是 `linux` 用户,比较习惯于 `linux` 语法,想要在 `windows` 电脑上获得比较好的 `linux` 体验, 命令行首选 `git bash` 工具.
+
+其实,`git bash` 命令行内置的终端是 `mintty` ,而 `mintty` 终端模拟器并不能完全取代 `cmd` 命令行.
+
+![git-bash-mintty.png](../images/git-bash-mintty.png)
+
+> `git bash` 命令行终端内右键选择 `Options > About` 查看 `git bash` 的庐山真面目.
+> 
+> Mintty works on all Windows versions from Windows XP onwards. Similarly to other Cygwin/MSYS terminals based on pseudo terminal ("pty") devices, however, **mintty is not a full replacement for the Windows Console window** (by default running the Windows Command Processor / command prompt / cmd.exe). While native console programs with simple text output usually work fine, interactive programs often have problems, although sometimes there are workarounds. See the Wiki section about Input/Output interaction for hints, especially on the winpty wrapper.
+
 
