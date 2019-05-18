@@ -65,6 +65,8 @@
     * [函数式接口](java8/functionInterface.md)
 
 ## 学习笔记
+* [php 学习笔记](php/README.md)
+    * [搭建开发环境](php/php-setup-environment-mac.md)
 * [工具资源](tools/README.md)
     * [给 mac 装个 vmware 虚拟机](tools/mac-install-vmware.md)
         * [给 mac 虚拟机装个 windows](tools/mac-vmware-install-windows.md)
