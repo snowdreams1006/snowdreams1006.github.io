@@ -10,6 +10,14 @@
 
 > 默认情况下 `mac` 已经预装了 `apach` 服务,自然不用 `nginx` 服务器了.
 
+现在什么也没有配置的情况下,直接启动 `apache` 服务器看一下能否正常运行.
+
+```bash
+$ sudo apachectl start
+```
+
+![php-setup-environment-mac-apache-start.png](./images/php-setup-environment-mac-apache-start.png)
+
 ### 常用命令
 
 - 查看 `apache` 版本
@@ -181,3 +189,57 @@ $ tree /Library/WebServer/Documents
 
 `Mac` 系统一如既往内置了 `php` 环境,不用我们费心去安装 `php` 了,现在看一下 `php` 的基本信息吧!
 
+```
+$ php -version
+PHP 7.1.23 (cli) (built: Feb 22 2019 22:08:13) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+```
+
+`php` 是一种服务端脚本解释性语言,依赖于 `web` 服务器进行解析,所以 `php` 想要正常工作离不开上一步配置的 `apache` 服务器.
+
+还记得 `apache` 配置文件的位置吗?
+
+> `apache` 配置文件路径 : `/private/etc/apache2/httpd.conf`
+
+![php-setup-environment-mac-apache-integration-php.png](./images/php-setup-environment-mac-apache-integration-php.png)
+
+> 打开 `httpd.conf` 配置文件并搜索 `LoadModule php` 字符串,将前面的 `#` 去掉即可引入 `php` 支持,配置文件修改后记得重启才能生效哟!
+
+是时候展示真正的技术了,现在万事俱备只待测试 `php` 到底有没有配置成功?!
+
+在项目部署根目录下新建 `info.php` 测试文件,启动服务器后访问 [ 
+http://localhost/info.php]( 
+http://localhost/info.php) 如果能正常打印出 `php` 相关信息,那就证明 `php` 和 `apache` 整合无误,否则可能是某一步配置有误!
+
+```php
+<?php
+phpinfo();
+?>
+```
+
+![php-setup-environment-mac-apache-php-start.png](./images/php-setup-environment-mac-apache-php-start.png)
+
+## 持久化存储之 `mysql` 数
+
+`Mac` 系统并没有默认安装 `mysql` 服务,因此我们需要手动安装 `mysql` .
+
+一般来说,我们谈到 `mysql` 数据库指的是 `mysql` 的服务端,作为生产环境服务端足够了并不需要客户端.
+
+但是,日常开发中如果没有客户端我们很难直观管理数据,所以一般来说,我们还会安装 `mysql` 客户端,当然一般是各种功能强大的图形化工具.
+
+### `mysql` 服务端
+
+> 下载链接: [macOS 10.14 (x86, 64-bit), DMG Archive](https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.16-macos10.14-x86_64.dmg)
+
+![php-setup-environment-mac-mysql-server-download.png](./images/php-setup-environment-mac-mysql-server-download.png)
+
+和正常的软件安装一样,将安装文件移动到应用里即可完成,比 `Windows` 的下一步下一步安装还要方便快捷!
+
+安装完成后,可以在**系统偏好设置**中找到 `MySQL` 图标,查看管理 `mysql` 服务端.
+
+![php-setup-environment-mac-mysql-server-icon.png](./images/php-setup-environment-mac-mysql-server-icon.png)
+
+
+
+### `mysql` 客户端
