@@ -240,6 +240,115 @@ phpinfo();
 
 ![php-setup-environment-mac-mysql-server-icon.png](./images/php-setup-environment-mac-mysql-server-icon.png)
 
+点击 `MySQL` 图标,可以进行简单的设置以及重启服务等操作.
+
+![php-setup-environment-mac-mysql-server-running.png](./images/php-setup-environment-mac-mysql-server-running.png)
+
+但是如果想要在终端中**无痛**连接上 `mysql` 服务端,那么还需要一步设置**软链接**,类似于 `Windows` 的快捷方式.
+
+```
+$ sudo ln -fs /usr/local/mysql/bin/mysql /usr/local/bin/mysql
+```
+
+现在我们就可以在终端内愉快的连接上 `mysql` 服务端了呢!
+
+```bash
+# 登录 `mysql` 服务端
+$ mysql -u root -p 
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 29
+Server version: 5.7.24 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+# 查看当前数据库列表
+mysql> show databases;
++---------------------+
+| Database            |
++---------------------+
+| information_schema  |
+| mysql               |
+| performance_schema  |
+| security-plus       |
+| sys                 |
+| test                |
++---------------------+
+6 rows in set (0.00 sec)
+
+# 退出当前数据库会话
+mysql> exit
+Bye
+$ 
+```
+- 查看 `mysql` 服务端版本
+
+> 语法: `mysql --version`
+
+示例:
+
+```
+$ mysql --version
+mysql  Ver 14.14 Distrib 5.7.24, for macos10.14 (x86_64) using  EditLine wrapper
+```
+
+- 查看 `mysql` 服务端状态
+
+> 语法: `sudo /usr/local/mysql/support-files/mysql.server status`
+
+示例:
+
+```
+$ sudo /usr/local/mysql/support-files/mysql.server status
+ SUCCESS! MySQL running (73088)
+```
+
+- 启动 `mysql` 服务端
+
+> 语法: `sudo /usr/local/mysql/support-files/mysql.server start`
+
+示例:
+
+```
+$ sudo /usr/local/mysql/support-files/mysql.server start
+Starting MySQL
+. SUCCESS! 
+```
+
+- 停止 `mysql` 服务端
+
+> 语法: `sudo /usr/local/mysql/support-files/mysql.server stop`
+
+示例:
+
+```
+$ sudo /usr/local/mysql/support-files/mysql.server stop
+Shutting down MySQL
+.. SUCCESS! 
+```
+
+- 重启 `mysql` 服务端
+
+> 语法: `sudo /usr/local/mysql/support-files/mysql.server restart`
+
+示例:
+
+```
+$ sudo /usr/local/mysql/support-files/mysql.server restart
+Shutting down MySQL
+. SUCCESS! 
+Starting MySQL
+. SUCCESS! 
+```
+
+
+
 
 
 ### `mysql` 客户端
