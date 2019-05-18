@@ -191,11 +191,38 @@ $ tree
 
 ![git-bash-extend-middle-wget-welcome.png](../images/git-bash-extend-middle-wget-welcome.png)
 
+接受协议,勾选我同意,并下一步.
 
+![git-bash-extend-middle-wget-accept.png](../images/git-bash-extend-middle-wget-accept.png)
+
+选择安装的目标路径,切记一定要安装到 `Git\usr` 目录下!!!
+
+![git-bash-extend-middle-wget-destination-location.png](../images/git-bash-extend-middle-wget-destination-location.png)
+
+选择安装组件,默认选项即可.
+
+![git-bash-extend-middle-wget-setup-components.png](../images/git-bash-extend-middle-wget-setup-components.png)
+
+选择菜单目录,建议设置成 `Git\Wget` .
+
+![git-bash-extend-middle-wget-setup-menu.png](../images/git-bash-extend-middle-wget-setup-menu.png)
+
+选择附加任务,默认选项即可.
+
+![git-bash-extend-middle-wget-setup-additionnal-task.png](../images/git-bash-extend-middle-wget-setup-additionnal-task.png)
+
+确认安装信息,这里确认下安装目录是不是 `Git` 的安装位置下面的 `usr` 目录以及开始菜单目录是不是 `Git\Wget`.
+
+![git-bash-extend-middle-wget-setup-ready-install.png](../images/git-bash-extend-middle-wget-setup-ready-install.png)
+
+点击下一步,等待安装完成.
+
+![git-bash-extend-middle-wget-setup-finish.png](../images/git-bash-extend-middle-wget-setup-finish.png)
 
 安装完成后,再次查看 `Git Bash` 的 `usr/bin` 目录,发现 `wget.exe` 命令文件确实安装到该目录下.
 
-![git-bash-extend-middle-wget-bin.png](../images/git-bash-extend-middle-wget-bin.png)
+![git-bash-extend-middle-usr-wget-found.png](../images/git-bash-extend-middle-usr-wget-found.png)
+
 
 
 ### 源码文件
