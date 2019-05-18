@@ -82,7 +82,7 @@ F:.
 
 那么如果我们能够找到 `tree.exe` 文件并将该命令文件放到 `usr/bin` 目录下自然就能够正常调用 `tree` 命令了,但是我们又该去哪里找 `tree.exe` 文件呢?
 
-## 对症下药方能药到病除
+## 轻松扩展 `git bash` 命令(中)
 
 `tree.exe` 命令文件千千万,但是适合 `Git Bash` 命令行运行的却并不是全部文件.
 
@@ -223,7 +223,80 @@ $ tree
 
 ![git-bash-extend-middle-usr-wget-found.png](../images/git-bash-extend-middle-usr-wget-found.png)
 
+安装成功后,测试一下看看到底能不能正常运行吧!
 
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace/test
+# 当前文件目录,`tree` 调用的是刚刚扩展的 `tree` 命令
+$ tree
+.
+├── cmd
+│   └── cmd.md
+└── git-bash
+    └── git-bash.md
+
+2 directories, 2 files
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test
+# 直接输入 `wget` 出现中文乱码
+$ wget
+F:\Git\usr\bin\wget▒▒δָ▒▒ URL
+▒÷▒▒▒ F:\Git\usr\bin\wget [ѡ▒▒]... [URL]...
+
+▒볢▒▒ʹ▒á▒F:\Git\usr\bin\wget --help▒▒▒鿴▒▒▒▒▒ѡ▒
+SYSTEM_WGETRC = c:/progra~1/wget/etc/wgetrc
+syswgetrc = F:\Git\usr/etc/wgetrc
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test
+# 输入 `winpty wget www.baidu.com` 解决中文乱码问题并下载 `www.baidu.com` 网页
+$ winpty wget www.baidu.com
+SYSTEM_WGETRC = c:/progra~1/wget/etc/wgetrc
+syswgetrc = F:\Git\usr/etc/wgetrc
+--2019-05-18 14:03:47--  http://www.baidu.com/
+正在解析主机 www.baidu.com... 115.239.211.112, 115.239.210.27
+Connecting to www.baidu.com|115.239.211.112|:80... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度：2381 (2.3K) [text/html]
+Saving to: `index.html'
+
+100%[======================================>] 2,381       --.-K/s   in 0s
+
+2019-05-18 14:03:47 (87.2 MB/s) - `index.html' saved [2381/2381]
+
+
+Administrator@snowdreams1006 MINGW64 /f/workspace/test
+# 再次查看当前目录,`www.baidu.com` 网页已成功下载到当前目录.
+$ tree
+.
+├── cmd
+│   └── cmd.md
+├── git-bash
+│   └── git-bash.md
+└── index.html
+
+2 directories, 3 files
+```
 
 ### 源码文件
+
+按理说应该也可以编译成功,不过将源码编译成可执行的二进制文件可能比较费劲,因此暂无测试.
+
+如果小伙伴们感兴趣可以自行安装 `c` 环境编译安装试试看,编译成功后别忘了告诉我哟!
+
+## 未完待续最后一招
+
+现在我们已经学会了两种方式来扩展 `Git Bash` 命令,分别是调用 `cmd` 以及按需扩展指定命令.
+
+但是,这两种方法都有一定的局限性,方法一的局限性可以用方法二来解决,那方法二的局限性又体现在哪?
+
+方法二属于缺啥补啥,`Git Bash` 命令行没有 `tree` 命令,但 `WSL` 项目有编译好的 `tree` 二进制文件,所以直接拿来用即可.
+`Git Bash` 命令行没有 `wget` 命令,但 `WSL` 项目有 `wget` 的安装文件,所以我们安装集成到 `Git Bash` 即可.
+
+那如果 `WSL` 没有目标命令呢?或者说找不到相应的 `WSL` 的目标命令文件呢?
+
+难道就束手无策了吗?
+
+不不不,还有最后一招,此招一出,惊天动地,相信你再也不会说无法扩展 `Git Bash` 命令了!
+
+敬请期待下一篇文章---**轻松扩展 `git bash` 命令(下)**.
 
