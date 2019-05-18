@@ -187,3 +187,13 @@ $ tree
 
 > `wget-1.11.4-1-setup.exe` 下载地址: [https://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download](https://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download)
 
+双击可执行文件 `wget-1.11.4-1-setup.exe`,准备进行安装!
+
+
+安装完成后,再次查看 `Git Bash` 的 `usr/bin` 目录,发现 `wget.exe` 命令文件确实安装到该目录下.
+
+![git-bash-extend-middle-wget-bin.png](../images/git-bash-extend-middle-wget-bin.png)
+
+
+### 源码文件
+
