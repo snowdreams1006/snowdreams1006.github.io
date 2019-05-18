@@ -121,6 +121,8 @@ package-lock.json
 
 # prepare for publish
 git/tools/git-bash-extend-up-backup.md
+git/tools/git-bash-extend-middle-backup2.md
+git/tools/git-bash-extend-middle-backup.md
 # git/tools/git-bash-extend-up.md
 # git/tools/git-bash-extend-middle.md
 # git/tools/git-bash-extend-down.md
