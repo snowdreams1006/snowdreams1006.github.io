@@ -181,4 +181,9 @@ $ tree
 
 答案是: 不能!
 
+所以这一次我们不再采用复制二进制文件方式,而是安装软件形式进行扩展 `wget` 命令.
+
+![git-bash-extend-middle-files-wget.png](../images/git-bash-extend-middle-files-wget.png)
+
+> `wget-1.11.4-1-setup.exe` 下载地址: [https://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download](https://sourceforge.net/projects/gnuwin32/files/wget/1.11.4-1/wget-1.11.4-1-setup.exe/download)
 
