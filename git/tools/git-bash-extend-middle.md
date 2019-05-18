@@ -118,3 +118,67 @@ F:.
 
 > `tree-1.5.2.2-bin.zip` 下载地址: [https://sourceforge.net/projects/gnuwin32/files/tree/1.5.2.2/tree-1.5.2.2-bin.zip/download](https://sourceforge.net/projects/gnuwin32/files/tree/1.5.2.2/tree-1.5.2.2-bin.zip/download)
 
+### 二进制文件
+
+接下来的事情就比较简单了,将二进制文件 `tree-1.5.2.2-bin.zip` 解压,找到 `tree.exe` 文件并复制到 `Git` 的安装目录下面的 `usr/bin` 目录中即可支持 `tree` 命令.
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/Downloads/tree-1.5.2.2-bin
+# 解压 `tree-1.5.2.2-bin.zip` 文件,查看文件目录,`tree.exe` 位于 `bin` 目录下.
+$ winpty tree.com
+卷 常用 的文件夹 PATH 列表
+卷序列号为 62AE-62CA
+F:.
+├─bin
+├─contrib
+│  └─tree
+│      └─1.5.2.2
+│          ├─tree-1.5.2.2
+│          └─tree-1.5.2.2-src
+├─man
+│  └─cat1
+└─manifest
+```
+
+![git-bash-extend-middle-tree-copy.png](../images/git-bash-extend-middle-tree-copy.png)
+
+现在再次测试 `tree` 命令来一起见证奇迹吧!
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/Downloads/tree-1.5.2.2-bin
+# `tree` 命令等价于 `tree.exe` 命令,执行的正是我们刚刚扩展的 `tree-1.5.2.2-bin.zip` 二进制文件
+$ tree
+.
+├── bin
+│   └── tree.exe
+├── contrib
+│   └── tree
+│       └── 1.5.2.2
+│           ├── tree-1.5.2.2
+│           ├── tree-1.5.2.2-GnuWin32.README
+│           └── tree-1.5.2.2-src
+│               ├── CHANGES
+│               ├── INSTALL
+│               ├── LICENSE
+│               └── README
+├── man
+│   └── cat1
+│       └── tree.1.txt
+└── manifest
+    ├── tree-1.5.2.2-bin.mft
+    └── tree-1.5.2.2-bin.ver
+
+9 directories, 9 files
+```
+
+> `Git Bash` 扩展的 `tree` 命令的后缀名是 `.exe` ,而刚好能够识别,因此不必输入 `tree.exe` 命令.
+
+### 安装文件
+
+`tree` 命令本身比较简单,没有其他依赖,所以我们可以直接将二进制文件复制到目标目录中即可正常运行,但是有些命令依赖项比较多,简简单单复制二进制文件并不能正常运行.
+
+有兴趣的小伙伴们可以试试将 `wget` 的二进制文件复制到目标目录下,看一下能否正常运行 `wget` 命令?
+
+答案是: 不能!
+
+
