@@ -3,7 +3,7 @@
 * [简介](README.md)
 
 ## 入门教程
-* [markdown 快速入门](markdown/README.md)
+* [markdown 入门教程](markdown/README.md)
     * [掘金入门指南](markdown/juejin.md)
     * [慕课网语法演示](markdown/imooc.md)
     * [HBuilderX语法帮助](markdown/HBuilderX.md)
