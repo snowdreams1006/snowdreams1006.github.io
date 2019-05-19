@@ -19,6 +19,28 @@
 - 知识重在分享才有价值,鼓励知识传播与分享,创造收益更有价值;
 - 因本人能力有限,如有出入,敬请指正,请联系我 [snowdreams1006](https://github.com/snowdreams1006/)
 
+## 私信
+
+- 微信公众号 
+
+> 名称 : `雪之梦技术驿站`,微信号 : `snowdreams1006` 
+
+关注理由:
+
+开源的不开源的都会发布到微信公众号,不再局限于系列教程而是随性而为,展示真实的技术人生.
+
+![snowdreams1006-wechat-public.jpeg](snowdreams1006-wechat-public.jpeg)
+
+- 个人微信号
+
+> 名称 : `雪之梦技术驿站`,微信号 : `snowdreams1109`
+
+适用场景:
+
+如果三言两语很难阐释你遇到的问题,如果你是人见人爱的妹子,那么欢迎加我私人微信一起畅谈人生.
+
+![snowdreams1109-wechat-private.jpeg](snowdreams1109-wechat-private.jpeg)
+
 ## 说明
 
 本教程源码托管在 [snowdreams1006.github.io](https://github.com/snowdreams1006/snowdreams1006.github.io) ,在线访问地址 [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/) 或者 [https://snowdreams1006.gitbook.io/index/](https://snowdreams1006.gitbook.io/index/)
