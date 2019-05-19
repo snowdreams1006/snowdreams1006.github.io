@@ -849,4 +849,42 @@ Query OK, 1 row affected (0.01 sec)
 
 ### 编程连接
 
+如果没有更改过项目的部署路径,那么我们之前有个测试 `php` 环境的文件,即 `/Library/WebServer/Documents/info.php` ,现在我们继续编写该文件,通过编码的方式连接到 `mysql` 数据库.
+
+```php
+<?php
+
+$username="root";
+$userpass="root";
+$dbhost="127.0.0.1";
+$dbdatabase="test";
+
+// 连接到本地服务器
+$db=new mysqli($dbhost,$username,$userpass,$dbdatabase);
+$db->set_charset("utf8");
+if(mysqli_connect_error()){
+    echo "连接失败: " . mysqli_connect_error();
+    exit;
+}
+
+# 查询用户列表
+$result = $db->query("SELECT id,name FROM user");
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        echo var_dump($row). "<br>";
+    }
+} 
+
+# 关闭数据库连接
+$db->close();
+
+phpinfo();
+
+?>
+```
+
+现在再次启动 `apache` 服务器,访问 `http://localhost/info.php` 测试成功!
+
+![php-setup-environment-mac-php-mysql-connected.png](./images/php-setup-environment-mac-php-mysql-connected.png)
 
