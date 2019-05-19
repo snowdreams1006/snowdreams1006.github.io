@@ -70,7 +70,9 @@
 
 > 《Spring Cloud微服务实战》作者，SpringCloud中文社区创始人（bbs.springcloud.com.cn），Spring4All社区联合发起人（spring4all.com)
 
+- [大大的微笑](http://hushuang.me/)
 
+> 博客最核心的还是内容, 内容为王! 再华丽的简介也只是表象, 有内涵才是关键!
 
 
 
