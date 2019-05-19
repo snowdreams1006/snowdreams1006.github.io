@@ -433,7 +433,11 @@ $cfg['Servers'][$i]['host'] = '127.0.0.1';
 
 如果没有数据库提供持久化存储能力,那么 `php` 只能临时运行而没有记忆功能,所以想要记住网站大量信息自然离不开数据库.
 
-为了等下演示 `php` 集成 `mysql` 数据库,现在先创建一个测试数据库并插入一些测试数据.
+### 准备测数据
+
+为了接下来演示 `php` 集成 `mysql` 数据库,现在先创建一个测试数据库并插入一些测试数据.
+
+下面主要是通过终端方式进行操作,小伙伴们也可以使用上述安装的图形化工具进行可视化编辑.
 
 - 连接到本地服务器
 
@@ -676,16 +680,39 @@ $ tree /usr/local/mysql/bin
 ```bash
 $ /usr/local/mysql/bin/mysqldump --version
 mysqldump  Ver 10.13 Distrib 5.7.24, for macos10.14 (x86_64)
-
 ```
 
 不过这也太长了吧,肯定不是很不变,一劳永逸的方法是将 `/usr/local/mysql/bin` 加入到环境变量中就不用添加额外的路径信息了.
 
-> 
+还记得 `mysql` 服务端刚安装完毕,我们想要通过终端连接到本地数据库服务器时设置了 `mysql` 的软链接,所以才能直接使用 `mysql -u root -p` 进行登录.
+
+`mac` 的**软链接**方式相当于 `windows` 系统的**快捷方式**,只针对具体命令,现在需要 `mysqldump` 命令,继续使用软链接还要添加类似的快捷方式.
+
+```bash
+$ sudo ln -fs /usr/local/mysql/bin/mysql /usr/local/bin/mysql
+$ sudo ln -fs /usr/local/mysql/bin/mysqldump /usr/local/bin/mysqldump
+```
+
+实测可用,但是这并不是优雅的操作方式,`/usr/local/mysql/bin/` 目录下那么多命令,下次需要用到其他命令岂不是要设置很多软链接?
 
 ```bash
 $ mysqldump --version
 mysqldump  Ver 10.13 Distrib 5.7.24, for macos10.14 (x86_64)
+```
+
+所以,现在我们考虑将 `/usr/local/mysql/bin` 加入到系统环境变量中,这样一来就能一劳永逸不用频繁设置软链接了!
+
+![php-setup-environment-mac-mysql-path.png](./images/php-setup-environment-mac-mysql-path.png)
+
+```bash
+# mysql
+export PATH=$PATH:/usr/local/mysql/bin
+```
+
+设置完毕后下次重启电脑就会生效,或者运行下述命令立即生效.
+
+```bash
+$ source ~/.bash_profile
 ```
 
 
