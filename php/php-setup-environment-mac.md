@@ -433,7 +433,7 @@ $cfg['Servers'][$i]['host'] = '127.0.0.1';
 
 如果没有数据库提供持久化存储能力,那么 `php` 只能临时运行而没有记忆功能,所以想要记住网站大量信息自然离不开数据库.
 
-### 准备测数据
+### 准备数据
 
 为了接下来演示 `php` 集成 `mysql` 数据库,现在先创建一个测试数据库并插入一些测试数据.
 
@@ -624,7 +624,19 @@ mysql> select id,name from user;
 3 rows in set (0.00 sec)
 ```
 
-- 导出数据库
+- 退出数据库
+
+> 语法 : `exit`
+
+示例:
+
+```bash
+mysql> exit
+Bye
+$ 
+```
+
+- 导出数据
 
 > 语法 : `mysqldump -u <username> -p <databaseName> > exportName.sql`
 
@@ -734,7 +746,107 @@ $ mysqldump --version
 mysqldump  Ver 10.13 Distrib 5.7.24, for macos10.14 (x86_64)
 ```
 
+示例:
+
+```
+$ mysqldump -u root -p  test > database_test.sql;
+Enter password: 
+$
+```
+
+> 注意 : `mysqldump` 和 `mysql` 相互独立的命令行程序,并不是在 `mysql` 会话中执行的 `sql`.
+查看当前备份文件内容:
+
+```bash
+# 备份文件位于当前目录
+$ cat $(pwd)/database_test.sql
+```
+
+备份 `sql` 文件内容,可以直接复制执行.
+
+```sql
+-- MySQL dump 10.13  Distrib 5.7.24, for macos10.14 (x86_64)
+--
+-- Host: localhost    Database: test
+-- ------------------------------------------------------
+-- Server version   5.7.24
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户 id',
+  `name` varchar(45) NOT NULL DEFAULT '' COMMENT '姓名',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='用户表';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'snowdreams1006'),(2,'雪之梦技术驿站'),(3,'测试用户姓名');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-05-19 12:49:35
+```
+
+- 导入数据
+
+> 语法 : `source <mysqldump.sql>`
 
 示例:
 
-mysqldump -u root -p  test > database_test.sql
+```
+# 创建 `test_import` 数据库
+mysql> create database test_import;
+
+# 使用 `test_import` 数据库
+mysql> use test_import;
+
+# 导入 `database_test.sql` 文件
+mysql> source /Users/sunpo/Documents/workspace/snowdreams1006.github.io/database_test.sql
+```
+
+- 删除数据库
+
+> 语法 : `drop database <databaseName>`
+
+示例:
+
+```bash
+mysql> drop database test_import;
+Query OK, 1 row affected (0.01 sec)
+```
+
+### 编程连接
+
+
