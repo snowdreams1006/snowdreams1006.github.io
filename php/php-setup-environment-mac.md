@@ -347,8 +347,50 @@ Starting MySQL
 . SUCCESS! 
 ```
 
-
-
-
-
 ### `mysql` 客户端
+
+如果说生产环境没有 `mysql` 的图形化工具也就罢了,但是如果日常开发时也不没有图形化工具的话,那就真的太不方便了.
+
+这里推荐两个客户端工具,一个是人畜无害的 `Sequel Pro`,另一个则是 `php` 专属的 `phpMyAdmin`.
+
+- `BS` 架构的 `phpMyAdmin`
+
+> 下载地址: [phpMyAdmin](https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-all-languages.zip)
+
+`phpMyAdmin` 是一款 `web` 版数据款管理软件,可以在浏览器中在线访问,像访问你的网站一样访问数据库.
+
+![php-setup-environment-mac-mysql-client-phpMyAdmin.png](./images/php-setup-environment-mac-mysql-client-phpMyAdmin.png)
+
+下载完成后解压并重命名为 `phpMyAdmin`,然后移动到 `apache` 的项目部署路径下,如果没有更改过默认的部署路径,那么应该是 `/Library/WebServer/Documents` 目录.
+
+现在部署路径下不仅有个 `info.php` 文件还有 `phpMyAdmin` 文件夹.
+
+```bash
+# 仅仅显示两级文件目录
+$ tree -L 2
+.
+├── PoweredByMacOSX.gif
+├── PoweredByMacOSXLarge.gif
+├── index.html.en
+├── index.html.en~orig
+├── info.php
+└── phpMyAdmin
+    ├── CODE_OF_CONDUCT.md
+    ├── CONTRIBUTING.md
+    ├── export.php
+    ├── favicon.ico
+    ├── gis_data_editor.php
+    ├── import.php
+    ├── import_status.php
+    ├── index.php
+    ├── view_operations.php
+    └── yarn.lock
+
+11 directories, 108 files
+```
+
+移动完成后先复制一份 `config.sample.inc.php` 文件并重命名为 `config.inc.php` 文件.
+
+此文件为数据库的基本配置文件,记录着登陆了服务端所需要的账号信息,因此需要设置下 `mysql` 用户信息.
+
+
