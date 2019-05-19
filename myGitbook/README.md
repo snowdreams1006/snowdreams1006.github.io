@@ -4,7 +4,9 @@
 
 `gitbook` 支持输出静态网页和电子书等多种格式,其中默认输出静态网页格式.
 
-`gitbook` 不仅支持本地构建电子书,而且可以托管在 `gitbook` 官网上,并享受在线发布和托管图书的便利,完整的文档请参考 [gitbook 新版文档(需FQ)][docs.gitbook.com] 或 [gitbook 旧版文档(不需FQ)][toolchain.gitbook.com]
+`gitbook` 不仅支持本地构建电子书,而且可以托管在 `gitbook` 官网上,并享受在线发布和托管图书的便利,完整的文档请参考 [gitbook 新版文档(需FQ)][docs.gitbook.com] 或 ~~[gitbook 旧版文档(不需FQ)][toolchain.gitbook.com]~~
+
+> 目前 `gitbook` 旧版文档已经不可访问,特提供[压箱底存货](https://snowdreams1006.github.io/gitbook/)邀君共享
 
 ## 适用场景
 
@@ -37,11 +39,12 @@
 - [gitbook 官网(新)][www.gitbook.com]
 - [gitbook 官网(旧)][legacy.gitbook.com]
 - [gitbook 文档(新)][docs.gitbook.com]
-- [gitbook 文档(旧)][toolchain.gitbook.com]
+- ~~[gitbook 文档(旧)][toolchain.gitbook.com]~~
+- [gitbook 文档(存货)](https://snowdreams1006.github.io/gitbook/)
 - [git 官网][git-scm.com]
 - [github 官网][github.com]
 
->`gitbook` 新版需要FQ,旧版不需要FQ
+>`gitbook` 新版需要FQ,~~旧版不需要FQ~~,旧版暂不可用,可访问[压箱底存货](https://snowdreams1006.github.io/gitbook/). 
 
 <!-- 链接引用 -->
 [www.gitbook.com]: https://www.gitbook.com/ "https://www.gitbook.com/"
