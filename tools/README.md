@@ -18,23 +18,23 @@
 
 - [IRM Markdowner | 微信排版编辑器](https://md.ironmaxi.com/)
 
-> 微信公众号格式化工具: [https://github.com/hadeshe93/irm-markdowner](https://github.com/hadeshe93/irm-markdowner)
+> 微信公众号格式化工具 : [https://github.com/hadeshe93/irm-markdowner](https://github.com/hadeshe93/irm-markdowner)
 
 - [WeChat Format | 微信公众号排版编辑器](https://lab.lyric.im/wxformat/)
 
-> 微信公众号排版编辑器: [https://github.com/lyricat/wechat-format](https://github.com/lyricat/wechat-format)
+> 微信公众号排版编辑器 : [https://github.com/lyricat/wechat-format](https://github.com/lyricat/wechat-format)
 
 - [微信公众号格式化工具](http://blog.didispace.com/tools/online-markdown/)
 
-> 在线Markdown转换器: [https://github.com/dyc87112/online-markdown/](https://github.com/dyc87112/online-markdown/)
+> 在线Markdown转换器 : [https://github.com/dyc87112/online-markdown/](https://github.com/dyc87112/online-markdown/)
 
 -[图表秀帮助文档](http://www.tubiaoxiu.com/help/)
 
-> 最好用的在线图表制作网站: [https://www.tubiaoxiu.com/](https://www.tubiaoxiu.com/)
+> 最好用的在线图表制作网站 : [https://www.tubiaoxiu.com/](https://www.tubiaoxiu.com/)
 
 - [Learning Git Branching | 闯关游戏顺便学 git](https://learngitbranching.js.org/)
 
-> 游戏闯关中学习 git 常用技巧: [https://github.com/pcottle/learnGitBranching](https://github.com/pcottle/learnGitBranching)
+> 游戏闯关中学习 git 常用技巧 : [https://github.com/pcottle/learnGitBranching](https://github.com/pcottle/learnGitBranching)
 
 - [carbon | 源码转图片](https://carbon.now.sh/)
 
@@ -46,7 +46,11 @@
 
 - [Regexper | 正则表达式可视化工具](https://regexper.com/)
 
-> 正则表达式可视化工具: [https://gitlab.com/javallone/regexper-static](https://gitlab.com/javallone/regexper-static)
+> 正则表达式可视化工具 : [https://gitlab.com/javallone/regexper-static](https://gitlab.com/javallone/regexper-static)
+
+- [sourceforge | 开源软件托管平台](https://sourceforge.net/)
+
+> 完全开源和商业软件平台 : [https://sourceforge.net/](https://sourceforge.net/)
 
 ## 博客主页
 
@@ -62,11 +66,6 @@
 
 > 《Spring Cloud微服务实战》作者，SpringCloud中文社区创始人（bbs.springcloud.com.cn），Spring4All社区联合发起人（spring4all.com)
 
-## 学习灵感
-
-- [图标秀](http://www.tubiaoxiu.com/help/)
-
-> `gitbook` 编写的产品文档,条例非常清楚,功能介绍很全面,值得学习参考.
 
 
 
