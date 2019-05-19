@@ -62,7 +62,11 @@
 
 > 《Spring Cloud微服务实战》作者，SpringCloud中文社区创始人（bbs.springcloud.com.cn），Spring4All社区联合发起人（spring4all.com)
 
+## 学习灵感
 
+- [图标秀](http://www.tubiaoxiu.com/help/)
+
+> `gitbook` 编写的产品文档,条例非常清楚,功能介绍很全面,值得学习参考.
 
 
 
