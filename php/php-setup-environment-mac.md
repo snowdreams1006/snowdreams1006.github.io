@@ -480,7 +480,7 @@ mysql> show databases;
 
 - 创建测试数据库
 
-> 语法 : `create database <name>`
+> 语法 : `create database <databaseName>`
 
 示例:
 
@@ -503,5 +503,84 @@ mysql> show databases;
 +--------------------+
 6 rows in set (0.00 sec)
 ```
+
+- 列出当前数据表列表
+
+> 语法 : ` show tables`
+
+示例:
+
+```bash
+# 使用 `test` 测试数据库
+mysql> use test;
+Database changed
+
+# 列出当前全部数据表
+mysql> show tables;
+Empty set (0.00 sec)
+```
+
+- 创建测试数据表
+
+> 语法 : `create tabel <tableName> (<fieldName> <type>))`
+
+```bash
+# 创建 `user` 用户表
+mysql> CREATE TABLE `test`.`user` (
+       `id` BIGINT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '用户 id',
+       `name` VARCHAR(45) NOT NULL DEFAULT '' COMMENT '姓名',
+       PRIMARY KEY (`id`),
+       UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+     ENGINE = InnoDB
+     DEFAULT CHARACTER SET = utf8
+     COMMENT = '用户表';
+Query OK, 0 rows affected (0.01 sec)
+
+# 再次列出当前数据表列表
+mysql> show tables;
++----------------+
+| Tables_in_test |
++----------------+
+| user           |
++----------------+
+1 row in set (0.00 sec)
+```
+
+- 查看数据表结构
+
+> 语法 : `desc <tableName>`
+
+示例:
+
+```bash
+mysql> desc user;
++-------+---------------------+------+-----+---------+----------------+
+| Field | Type                | Null | Key | Default | Extra          |
++-------+---------------------+------+-----+---------+----------------+
+| id    | bigint(11) unsigned | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(45)         | NO   |     |         |                |
++-------+---------------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+```
+
+- 查看数据表创建语句
+
+> 语法 : `show create table <tableName>`
+
+示例:
+
+```bash
+mysql> show create table user \G
+*************************** 1. row ***************************
+       Table: user
+Create Table: CREATE TABLE `user` (
+  `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户 id',
+  `name` varchar(45) NOT NULL DEFAULT '' COMMENT '姓名',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表'
+1 row in set (0.00 sec)
+```
+
 
 
