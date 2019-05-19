@@ -715,6 +715,25 @@ export PATH=$PATH:/usr/local/mysql/bin
 $ source ~/.bash_profile
 ```
 
+为了测试环境变量是否生效,我们先删除原来的软链接.
+
+```
+$ rm -rf /usr/local/bin/mysql
+$ rm -rf /usr/local/bin/mysqldump
+```
+
+依然能够正常调用 `mysql` 相关命令.
+
+```
+# `mysql` 版本信息
+$ mysql --version
+mysql  Ver 14.14 Distrib 5.7.24, for macos10.14 (x86_64) using  EditLine wrapper
+
+# `mysqldump` 版本信息
+$ mysqldump --version
+mysqldump  Ver 10.13 Distrib 5.7.24, for macos10.14 (x86_64)
+```
+
 
 示例:
 
