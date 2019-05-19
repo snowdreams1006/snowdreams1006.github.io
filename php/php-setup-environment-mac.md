@@ -582,5 +582,113 @@ Create Table: CREATE TABLE `user` (
 1 row in set (0.00 sec)
 ```
 
+- 查询数据
+
+> 语法 : `select [fields] from tableName [where condition] [limit N][ offset M]`
+
+示例:
+
+```bash
+mysql> select id,name from user;
+Empty set (0.00 sec)
+```
+
+- 插入数据
+
+> 语法 : `insert into <tableName> ([fields]) VALUES ([values])`
+
+示例:
+
+```bash
+mysql> INSERT INTO `test`.`user` (`name`) VALUES ('snowdreams1006');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO `test`.`user` (`name`) VALUES ('雪之梦技术驿站');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO `test`.`user` (`name`) VALUES ('测试用户姓名');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select id,name from user;
++----+-----------------------+
+| id | name                  |
++----+-----------------------+
+|  1 | snowdreams1006        |
+|  2 | 雪之梦技术驿站        |
+|  3 | 测试用户姓名          |
++----+-----------------------+
+3 rows in set (0.00 sec)
+```
+
+- 导出数据库
+
+> 语法 : `mysqldump -u <username> -p <databaseName> > exportName.sql`
+
+备份数据用到的是 `mysqldump` 工具,默认情况下该命令位于 `/usr/local/mysql/bin` 目录下,正常情况下需要指定该路径才能调用 `mysqldump` 命令.
+
+```bash
+$ tree /usr/local/mysql/bin
+/usr/local/mysql/bin
+├── innochecksum
+├── lz4_decompress
+├── my_print_defaults
+├── myisam_ftdump
+├── myisamchk
+├── myisamlog
+├── myisampack
+├── mysql
+├── mysql_client_test_embedded
+├── mysql_config
+├── mysql_config_editor
+├── mysql_embedded
+├── mysql_install_db
+├── mysql_plugin
+├── mysql_secure_installation
+├── mysql_ssl_rsa_setup
+├── mysql_tzinfo_to_sql
+├── mysql_upgrade
+├── mysqladmin
+├── mysqlbinlog
+├── mysqlcheck
+├── mysqld
+├── mysqld-debug
+├── mysqld_multi
+├── mysqld_safe
+├── mysqldump
+├── mysqldumpslow
+├── mysqlimport
+├── mysqlpump
+├── mysqlshow
+├── mysqlslap
+├── mysqltest_embedded
+├── mysqlxtest
+├── perror
+├── replace
+├── resolve_stack_dump
+├── resolveip
+└── zlib_decompress
+
+0 directories, 38 files
+```
+
+所以,应该是如下命令才能调用 `mysqldump` 命令.
+
+```bash
+$ /usr/local/mysql/bin/mysqldump --version
+mysqldump  Ver 10.13 Distrib 5.7.24, for macos10.14 (x86_64)
+
+```
+
+不过这也太长了吧,肯定不是很不变,一劳永逸的方法是将 `/usr/local/mysql/bin` 加入到环境变量中就不用添加额外的路径信息了.
+
+> 
+
+```bash
+$ mysqldump --version
+mysqldump  Ver 10.13 Distrib 5.7.24, for macos10.14 (x86_64)
+```
 
 
+示例:
+
+mysqldump -u root -p  test > database_test.sql
