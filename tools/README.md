@@ -52,6 +52,10 @@
 
 > 完全开源和商业软件平台 : [https://sourceforge.net/](https://sourceforge.net/)
 
+- [Pandownload | 网盘下载神器](https://www.baiduwp.com/)
+
+> 在线解析百度网盘资源,加速下载不封号 : [https://www.baiduwp.com/](https://www.baiduwp.com/)
+
 ## 博客主页
 
 - [八一菜刀](http://www.xiaominfo.com/)
