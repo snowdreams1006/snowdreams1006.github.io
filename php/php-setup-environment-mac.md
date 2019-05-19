@@ -355,7 +355,7 @@ Starting MySQL
 
 - `BS` 架构的 `phpMyAdmin`
 
-> 下载地址: [phpMyAdmin](https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-all-languages.zip)
+> 下载地址 : [phpMyAdmin](https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-all-languages.zip)
 
 `phpMyAdmin` 是一款 `web` 版数据款管理软件,可以在浏览器中在线访问,像访问你的网站一样访问数据库.
 
@@ -391,6 +391,117 @@ $ tree -L 2
 
 移动完成后先复制一份 `config.sample.inc.php` 文件并重命名为 `config.inc.php` 文件.
 
-此文件为数据库的基本配置文件,记录着登陆了服务端所需要的账号信息,因此需要设置下 `mysql` 用户信息.
+执行 `vim /Library/WebServer/Documents/phpMyAdmin/config.inc.php` 搜索并编辑 `host` 节点内容,将 `localhost` 更改成 `127.0.0.1` .
+
+示例:
+
+```
+# 修改前
+$cfg['Servers'][$i]['host'] = 'localhost';
+
+# 修改后: 将 `localhost` 更改成 `127.0.0.1`
+$cfg['Servers'][$i]['host'] = '127.0.0.1';
+```
+
+![php-setup-environment-mac-mysql-client-phpMyAdmin-config.png](./images/php-setup-environment-mac-mysql-client-phpMyAdmin-config.png)
+
+重启 `apache` 服务,访问 [http://localhost/phpMyAdmin/](http://localhost/phpMyAdmin/) 开始登陆数据库吧!
+
+![php-setup-environment-mac-mysql-client-phpMyAdmin-login.png](./images/php-setup-environment-mac-mysql-client-phpMyAdmin-login.png)
+
+输入 `mysql` 的用户名和密码登录成功后就能管理本地数据库了.
+
+![php-setup-environment-mac-mysql-client-phpMyAdmin-database.png](./images/php-setup-environment-mac-mysql-client-phpMyAdmin-database.png)
+
+- `CS` 架构的 `Sequel Pro`
+
+> 下载地址 : [v1.1.2 OS X 10.6 or Higher](https://github.com/sequelpro/sequelpro/releases/download/release-1.1.2/sequel-pro-1.1.2.dmg)
+
+`Sequel Pro` 是简单易用的数据库管理工具,与上述的 `phpMyAdmin` 不同之处在于并不依赖 `php` 环境,可以独立安装部署.
+
+![php-setup-environment-mac-mysql-client-SequelPro.png](./images/php-setup-environment-mac-mysql-client-SequelPro.png)
+
+安装完成后输入数据库连接信息连接到本地数据库,参考信息如下.
+
+![php-setup-environment-mac-mysql-client-SequelPro-config.png](./images/php-setup-environment-mac-mysql-client-SequelPro-config.png)
+
+点击连接(`Connect`) 连接到本地服务器,由于刚才并没有选择数据库,因此登陆后需要选定数据库,这里根据实际情况选择即可.
+
+![php-setup-environment-mac-mysql-client-SequelPro-database.png](./images/php-setup-environment-mac-mysql-client-SequelPro-database.png)
+
+## `php` 集成 `mysql`
+
+如果没有数据库提供持久化存储能力,那么 `php` 只能临时运行而没有记忆功能,所以想要记住网站大量信息自然离不开数据库.
+
+为了等下演示 `php` 集成 `mysql` 数据库,现在先创建一个测试数据库并插入一些测试数据.
+
+- 连接到本地服务器
+
+> 语法 : `mysql -u <username> -p`
+
+示例: 
+
+```bash
+# 连接到本地数据库,用户名 `root`,密码自定义
+$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 109
+Server version: 5.7.24 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+```
+
+- 列出当前数据库列表
+
+> 语法 : `show databases`
+
+示例:
+
+```bash
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| security-plus      |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+```
+
+- 创建测试数据库
+
+> 语法 : `create database <name>`
+
+示例:
+
+```bash
+# 创建 `test` 数据库并指定编码格式为 `utf8`
+mysql> create database IF NOT EXISTS test default charset utf8 COLLATE utf8_general_ci;
+Query OK, 1 row affected (0.00 sec)
+
+# 再次查询当前数据库列表,新增 `test` 数据库
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| security-plus      |
+| sys                |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+```
 
 
