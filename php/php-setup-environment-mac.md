@@ -913,11 +913,11 @@ phpinfo();
 - `mysql` 二进制文件添加到系统环境变量 : `export PATH=$PATH:/usr/local/mysql/bin`
 - 刷新系统环境变量配置 : `source ~/.bash_profile`
 - `mysql` 命令添加软链接 : `sudo ln -fs /usr/local/mysql/bin/mysql /usr/local/bin/mysql`
+- 查看 `mysql` 服务器状态 : `sudo mysql.server status`
+- 启动 `mysql` 服务器 : `sudo mysql.server start`
+- 停止 `mysql` 服务器 : `sudo mysql.server stop`
+- 重启 `mysql` 服务器 : `sudo mysql.server restart`
 - 查看 `mysql` 版本信息 : `mysql --version`
-- 查看 `mysql` 服务器状态 : `mysql.server status`
-- 启动 `mysql` 服务器 : `mysql.server start`
-- 停止 `mysql` 服务器 : `mysql.server stop`
-- 重启 `mysql` 服务器 : `mysql.server restart`
 - 登录 `mysql` 服务器 : `mysql -u root -p`
 - 退出 `mysql` 服务器 : `exit`
 
