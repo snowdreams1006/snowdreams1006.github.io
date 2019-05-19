@@ -4,6 +4,8 @@
 
 `Mac` 系统默认集成了很多开发工具,其中就包括 `php` 所需要的一些软件工具.
 
+下面我们将搭建最简单的 `php` 开发环境,每一步都会验证上一步的操作结构,请一步一步跟我一起搭建吧!
+
 ## `web` 服务器之 `apache`
 
 `apache` 是一款 `web` 服务器,用于运行 `php` 文件,除了 `apache` 外也可以是 `nginx` 服务器.
@@ -888,3 +890,37 @@ phpinfo();
 
 ![php-setup-environment-mac-php-mysql-connected.png](./images/php-setup-environment-mac-php-mysql-connected.png)
 
+## 环境搭建要点总结
+
+`apache` 服务默认已安装,启动服务器后,在浏览器中访问 `http://localhost/` 会显示**It works!**,表明 `apache` 能正常使用.
+
+- 查看 `apache` 服务器版本 : `apachectl -v`
+- 启动 `apache` 服务器 : `sudo apachectl start`
+- 停止 `apache` 服务器 : `sudo apachectl stop`
+- 重启 `apache` 服务器 : `sudo apachectl restart`
+- `apache` 服务器安装路径 : `/private/etc/apache2`
+- `apache` 服务器部署路径 : `/Library/WebServer/Documents`
+
+`php` 服务默认已安装,集成到 `apache` 服务器只需要在 `/private/etc/apache2/httpd.conf` 配置文件中启用 `LoadModule php7_module libexec/apache2/libphp7.so` 模块即可,重启 `apache` 服务器即可支持 `php` 环境.
+
+- 查看 `php` 版本信息 : `php -version`
+- `php` 默认配置文件路径 : `/private/etc/php.ini.default`
+
+`mysql` 数据库默认没有安装,需要手动前往 `https://www.mysql.com/downloads/` 官网进行下载安装.
+
+如果需要在终端命令行内访问 `mysql` 服务端,最好将 `mysql` 的安装路径添加到系统环境中,或者添加软链接也可以.
+
+- `mysql` 安装路径 : `/usr/local/mysql`
+- 系统环境变量路径 : `~/.bash_profile`
+- `mysql` 二进制文件添加到系统环境变量 : `export PATH=$PATH:/usr/local/mysql/bin`
+- 刷新系统环境变量配置 : `source ~/.bash_profile`
+- `mysql` 命令添加软链接 : `sudo ln -fs /usr/local/mysql/bin/mysql /usr/local/bin/mysql`
+- 查看 `mysql` 版本信息 : `mysql --version`
+- 查看 `mysql` 服务器状态 : `mysql.server status`
+- 启动 `mysql` 服务器 : `mysql.server start`
+- 停止 `mysql` 服务器 : `mysql.server stop`
+- 重启 `mysql` 服务器 : `mysql.server restart`
+- 登录 `mysql` 服务器 : `mysql -u root -p`
+- 退出 `mysql` 服务器 : `exit`
+
+最后,`php` 不仅仅可以面向过程也可以面向对象,虽然是~~拍簧片~~,但真的很强大,魅力不小呢!
