@@ -6,7 +6,7 @@
 
 `gitbook` 不仅支持本地构建电子书,而且可以托管在 `gitbook` 官网上,并享受在线发布和托管图书的便利,完整的文档请参考 [gitbook 新版文档(需FQ)][docs.gitbook.com] 或 ~~[gitbook 旧版文档(不需FQ)][toolchain.gitbook.com]~~
 
-> 目前 `gitbook` 旧版文档已经不可访问,特提供[压箱底存货](https://snowdreams1006.github.io/gitbook/)邀君共享
+> 目前 `gitbook` 旧版文档已经不可访问,特提供[压箱底存货][gitbook-official]邀君共享
 
 ## 适用场景
 
@@ -40,16 +40,17 @@
 - [gitbook 官网(旧)][legacy.gitbook.com]
 - [gitbook 文档(新)][docs.gitbook.com]
 - ~~[gitbook 文档(旧)][toolchain.gitbook.com]~~
-- [gitbook 文档(存货)](https://snowdreams1006.github.io/gitbook/)
+- [gitbook 文档(存货)][gitbook-official]
 - [git 官网][git-scm.com]
 - [github 官网][github.com]
 
->`gitbook` 新版需要FQ,~~旧版不需要FQ~~,旧版暂不可用,可访问[压箱底存货](https://snowdreams1006.github.io/gitbook/). 
+>`gitbook` 新版需要FQ,~~旧版不需要FQ~~,旧版暂不可用,可访问[压箱底存货][gitbook-official]. 
 
 <!-- 链接引用 -->
 [www.gitbook.com]: https://www.gitbook.com/ "https://www.gitbook.com/"
 [legacy.gitbook.com]: https://legacy.gitbook.com/ "https://legacy.gitbook.com/"
 [docs.gitbook.com]: https://docs.gitbook.com/ "https://docs.gitbook.com/"
 [toolchain.gitbook.com]: https://toolchain.gitbook.com/ "https://toolchain.gitbook.com/"
+[gitbook-official]: https://snowdreams1006.github.io/gitbook-official/
 [git-scm.com]: https://git-scm.com/ "https://git-scm.com/"
 [github.com]: https://github.com/ "https://github.com/"

@@ -85,7 +85,7 @@
     * [常见问题](write/faq.md)
 
 ## 开源项目
-* [gitbook](https://snowdreams1006.github.io/gitbook/)
+* [gitbook-official](https://snowdreams1006.github.io/gitbook-official/)
 * [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
 * [security-plus](https://security-plus.github.io/)
 
