@@ -36,13 +36,13 @@
 
 > `gitbook` 搭建的 `Cocos Creator v2.0` 用户手册 [https://docs.cocos.com/creator/manual/zh/](https://docs.cocos.com/creator/manual/zh/)
 
-- [Gitbook 学习笔记](https://skyao.io/learning-gitbook/)
+- [OpenFalcon 产品文档](http://book.open-falcon.org/)
 
-> Sky/敖小剑 的 Gitbook 学习笔记 : [https://skyao.io/learning-gitbook/](https://skyao.io/learning-gitbook/)
+> OpenFalcon是一款企业级、高可用、可扩展的开源监控解决方案 : [http://book.open-falcon.org/](http://book.open-falcon.org/)
 
-- [GitBook文档（中文版）](https://chrisniael.gitbooks.io/gitbook-documentation/)
+- [azk docs/](http://docs.azk.io/)
 
-> 中文翻译,非常详细.
+> azk 是本地化开发的开源协调器 : [http://docs.azk.io/](http://docs.azk.io/)
 
 - [Learning Git Branching | 闯关游戏顺便学 git](https://learngitbranching.js.org/)
 
