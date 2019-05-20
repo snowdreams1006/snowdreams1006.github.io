@@ -32,6 +32,18 @@
 
 > 最好用的在线图表制作网站 : [https://www.tubiaoxiu.com/](https://www.tubiaoxiu.com/)
 
+- [Cocos Creator v2.0 用户手册](https://docs.cocos.com/creator/manual/zh/)
+
+> `gitbook` 搭建的 `Cocos Creator v2.0` 用户手册 [https://docs.cocos.com/creator/manual/zh/](https://docs.cocos.com/creator/manual/zh/)
+
+- [Gitbook 学习笔记](https://skyao.io/learning-gitbook/)
+
+> Sky/敖小剑 的 Gitbook 学习笔记 : [https://skyao.io/learning-gitbook/](https://skyao.io/learning-gitbook/)
+
+- [GitBook文档（中文版）](https://chrisniael.gitbooks.io/gitbook-documentation/)
+
+> 中文翻译,非常详细.
+
 - [Learning Git Branching | 闯关游戏顺便学 git](https://learngitbranching.js.org/)
 
 > 游戏闯关中学习 git 常用技巧 : [https://github.com/pcottle/learnGitBranching](https://github.com/pcottle/learnGitBranching)
@@ -74,7 +86,13 @@
 
 > 博客最核心的还是内容, 内容为王! 再华丽的简介也只是表象, 有内涵才是关键!
 
+- [敖小剑的博客](https://skyao.io/)
 
+> 敖小剑，资深码农，十六年软件开发经验，微服务专家，Service Mesh布道师，Servicemesher社区联合创始人。专注于基础架构，Cloud Native 拥护者，敏捷实践者，坚守开发一线打磨匠艺的架构师。曾在亚信、爱立信、唯品会等任职，对基础架构和微服务有过深入研究和实践.
+- [沈煜的博客](https://shenyu.me/)
 
+> 我叫沈煜，目前是个码农。上学的时候效仿业界大佬，整了个博客，那时候用的域名还不是现在用的这个，现在看到这个博客内容已经重新开始，不定期会写点什么，内容比较随意。
 
+- [Zhang Jikai的博客](http://blog.zhangjikai.com/)
 
+> 暂无个人介绍,来源于 gitbook 学习而关注.

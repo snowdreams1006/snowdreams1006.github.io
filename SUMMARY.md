@@ -60,6 +60,7 @@
         * [发布电子书](myGitbook/advance/publish.md)
     * [常见问题](myGitbook/issue/README.md)
         * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
+    * [更多学习笔记](myGitbook/reference/README.md)
 * [java8新特性](java8/README.md)
     * [lambda表达式](java8/lambda.md)
     * [函数式接口](java8/functionInterface.md)
