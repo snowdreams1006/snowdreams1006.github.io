@@ -368,3 +368,97 @@ Package arj removed
 
 这下局面瞬间清楚了,`git for windows` 并不是 `git` **原生支持**的 `windows` 版本,或者说 `windows` 系统的 `git` 是另外一个团队开发的,这个开发团队就是 `git for windows`.
 
+### 何不试试开发版
+
+[Git SCM for Windows](https://gitforwindows.org/)官网提供两种版本,一个就是平时使用的发布版本,另一个就是开发版本.
+
+既然发布版本没有提供包管理工具,自然我们只能寻求开发版本的帮助.
+
+- 跳转到开发版本的下载地址 [https://github.com/git-for-windows/build-extra/releases/tag/git-sdk-1.0.7](https://github.com/git-for-windows/build-extra/releases/tag/git-sdk-1.0.7),下载适合自己系统的版本.
+
+- 双击 `git-sdk-installer-1.0.7-64.7z.exe` 进行自动安装,安装时间相当长,没有一两个小时也得有小上午时间,安装期间可以接着做其他事情.
+
+- 安装完毕后可以进行自我测试,验证开发板是否比发布版更大更强.
+
+![git-bash-extend-down-gitforwindows-sdk-tree.png](../images/git-bash-extend-down-gitforwindows-sdk-tree.png)
+
+> 小试牛刀,应有尽有,`tree` 和 `wget` 等命令全都有!
+
+### 千呼万唤始出来
+
+`git for windows` 主要是由 `msys2` 和 `mingw` 等众多组件二次开发而来的`windows` 版本的 `git`.
+
+`msys2` 和 `mingw` 都是一种在 `windows` 系统上打造 `linux` 运行体验的解决方案,其中 `msys2` 是在 `msys` 基础上重构开发的项目,而 `msys2` 项目默认提供有包管理工具 `Pacman`.
+
+因此,`git for windows` 也可以使用 `Pacman` **包管理工具**进行依赖安装. 
+
+> 如需查看官方解释请查看 : [https://github.com/git-for-windows/build-extra](https://github.com/git-for-windows/build-extra)
+
+- 什么是包管理工具
+
+现代软件开发需要一种管理依赖关系的方式,即跟踪所需的软件库及其版本.
+
+> 例如,适用于 `Linux`的 `apt-get` 或者 `yum`,适用于 `MacOSX` 的 `homebrew`,适用于 `windows` 的某些第三方工具.
+
+`Git for Windows` 基于 `MSYS2`，它捆绑了 `Arch Linux` 的 `Pacman` 工具,因此接下来我们的包管理工具就是 `Pacman`.
+
+- 如何使用包管理工具
+
+如需在命令行中查看帮助文档,支持 `man Pacman` 和 `Pacman --help` 两种方式.
+
+```bash
+$ Pacman --help
+用法:  Pacman <操作> [...]
+操作:
+    Pacman {-h --help}
+    Pacman {-V --version}
+    Pacman {-D --database} <选项> <软件包>
+    Pacman {-F --files}    [选项] [软件包]
+    Pacman {-Q --query}    [选项] [软件包]
+    Pacman {-R --remove}   [选项] <软件包>
+    Pacman {-S --sync}     [选项] [软件包]
+    Pacman {-T --deptest}  [选项] [软件包]
+    Pacman {-U --upgrade}  [选项] <文件>
+
+使用 'Pacman {-h --help}' 及某个操作以查看可用选项
+```
+
+- 安装第三方包
+
+```bash
+# 下载默认版本
+pacman -S <package-name>
+
+# 下载最新版本
+pacman -Sy <package-name>
+```
+
+- 升级第三方包
+
+```bash
+# 升级到最新版本
+pacman -Syu <package-name>
+
+# 全部升级到最新版本
+pacman -Syu
+```
+
+- 删除第三方包
+
+```bash
+# 删除第三方包
+pacman -R <package-name>
+```
+
+- 列出第三方包
+
+```bash
+# 列出已安装的第三方包
+pacman -Q
+
+# 列出第三方包的内容
+pacman -Ql <package-name>
+
+# 查明文件属于哪一个包
+pacman -Qo <file-name>
+```
