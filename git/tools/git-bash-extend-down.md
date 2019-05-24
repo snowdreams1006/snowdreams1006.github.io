@@ -329,10 +329,42 @@ Package arj removed
 
 ## 忠贞不二,开发扩展
 
-方案一让我们另寻新欢,
+方案一让我们另寻新欢,方案二让我们坚持己见,面对问题不逃避而是想办法解决.
+
+再一次回忆一下需要解决的问题: `git bash` 命令行默认没有提供**包管理工具**以至于我们只能使用已集成的命令,所以不支持自定义扩展命令.
+
+### 解铃还须系铃人
+
+`git bash` 是 `git` 的命令行工具,而 `git` 原来仅仅支持 `linux` 系统,后来又支持了 `windows` ,值得注意的是,这种所谓的支持并不是原生支持,而是**变相支持**.
+
+如果你打开 `git` 的官网 [https://git-scm.com/download](https://git-scm.com/download),你会发现 `git` 也是跨平台的呢,竟然支持 `mac` ,`windows` 和 `linux` 三大主流操作系统!
+
+然而,真相却不是这样的,`windows` 平台的 `git` 其实不是真正的 `git`,或者说 `windows` 和另外两个并不是一家人.
+
+首先看一下 `Mac OS X` 的下载页面介绍,请注意源码地址: [https://github.com/git/git/](https://github.com/git/git/)
+
+![git-bash-extend-down-gitformac-download.png](../images/git-bash-extend-down-gitformac-download.png)
 
 
+源码托管于 `github`,是 `git` 组织下面的 `git` 项目,其项目地址是 [https://github.com/git/git/](https://github.com/git/git/)
 
+![git-bash-extend-down-gitformac-sourcecode.png](../images/git-bash-extend-down-gitformac-sourcecode.png)
 
+接下来我们再看一下 `Linux and Unix` 的下载页面,虽然下载页面推荐我们使用包管理工具进行安装,但仍然给我提供了源码地址: [https://www.kernel.org/pub/software/scm/git/](https://www.kernel.org/pub/software/scm/git/)
 
+![git-bash-extend-down-gitforlinux-download.png](../images/git-bash-extend-down-gitforlinux-download.png)
+
+虽然源码下载地址不是 `github`,但是我们却可以从项目地址中窥见一斑,仍然属于 `scm/git/` 项目,也是亲儿子.
+
+![git-bash-extend-down-gitforlinux-sourcecode.png](../images/git-bash-extend-down-gitforlinux-sourcecode.png)
+
+如果 `mac` 和 `linux` 是 `git` 原生支持的亲儿子,那么 `windows` 则是变相支持的干儿子.
+
+![git-bash-extend-down-gitforwindows-download.png](../images/git-bash-extend-down-gitforwindows-download.png)
+
+`windows` 和 `mac` 一样,源码同样托管在 `github`,但是地址却不一样!项目地址: [https://github.com/git-for-windows/git](https://github.com/git-for-windows/git)
+
+![git-bash-extend-down-gitforwindows-sourcecode.png](../images/git-bash-extend-down-gitforwindows-sourcecode.png)
+
+这下局面瞬间清楚了,`git for windows` 并不是 `git` **原生支持**的 `windows` 版本,或者说 `windows` 系统的 `git` 是另外一个团队开发的,这个开发团队就是 `git for windows`.
 
