@@ -74,8 +74,6 @@
 
 `date` 扩展默认已启用,我们可以输入 `phpinfo` 打印出 `php` 的基本信息,并搜索关键字 `date` 找到关于 `date` 扩展的相关信息以验证日期时间函数库.
 
-![php-timezone-method-date-extra-info.png](./images/php-timezone-method-date-extra-info.png)
-
 |选项|值|
 |-|-|
 |date/time support(日期时间支持情况)|enabled(已启用)|
@@ -157,3 +155,8 @@ echo "当前时区: ".date_default_timezone_get()."<br/>";
 ```
 ### 运行时设置 `php` 配置选项
 
+
+## 参考资料
+
+- [时区相关知识扫盲](https://blog.csdn.net/nextyu/article/details/78480371)
+- [时区时差时间换算](http://www.beijing-time.org/shiqu/)
