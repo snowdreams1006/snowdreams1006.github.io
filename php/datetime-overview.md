@@ -28,7 +28,17 @@
 - 示例
 
 ```php
-echo date("Y-m-d H:i:s");
+<?php
+// 设置当前时区为上海时区
+date_default_timezone_set("Asia/Shanghai");
 
-echo date("Y-m-d H:i:s");
+// 获取当前时区
+echo "当前时区 : ".date_default_timezone_get()."<br/>";
+
+// `Y年m月d日 H时i分s秒` 格式化当前时间
+echo "当前时间 : ".date("Y年m月d日 H时i分s秒")."<br/>";
+
+// `Y-m-d H:i:s` 格式化当前时间
+echo "当前时间 : ".date("Y-m-d H:i:s")."<br/>";
+?>
 ```
