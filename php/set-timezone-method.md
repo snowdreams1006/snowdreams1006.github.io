@@ -1,4 +1,4 @@
-# 搞定时区设置的三种姿势(php)
+# `php` 中关于时区的那点事
 
 ## 科普一下什么是时区
 
@@ -72,11 +72,39 @@
 
 > 上述时区主要是 `php` 中所支持的中国时区,参考 [亚洲所支持的时区列表](https://www.php.net/manual/zh/timezones.asia.php) 
 
-## 日期时间库是什么
+## 关于时区的编程实现
 
-日期时间函数库是 `php` **内置函数库**,可以通过日期时间函数获得服务器的日期时间,用于消除不同客户端的时间差异性.
+时区不仅仅是现实生活的问题,计算机编程世界也有时间,自然也离不开时区的概念.
 
-`date` 扩展默认已启用,我们可以输入 `phpinfo` 打印出 `php` 的基本信息,并搜索关键字 `date` 找到关于 `date` 扩展的相关信息以验证日期时间函数库.
+在计算机世界中,一切都是数据,最好时区的概念也能体现在相关数据库中,幸运的是已经有前辈为我们提供了**时区信息数据库**,而各类语言基本都会提供时区的工具类.
+
+`php` 中的**日期时间函数库**是 `php` **内置函数库**,我们可以方便地操作时间,设置时区等.
+
+正常情况下, `date` 扩展默认是启用的,我们可以输入 `phpinfo` 打印出 `php` 的基本信息,然后搜索关键字 `date` 就可以找到关于 `date` 扩展的相关信息.
+
+- 示例
+
+```php
+<?php
+// 获取默认时区
+echo "默认时区: ".ini_get("date.timezone")."<br/>";
+
+// 获取当前时区
+echo "当前时区: ".date_default_timezone_get()."<br/>";
+
+// 当前时间
+echo "当前时间: ".date("Y-m-d H:i:s")."<br>";
+
+// 打印 php 信息
+phpinfo();
+?>
+```
+
+- 结果
+
+默认时区: 
+当前时区: UTC
+当前时间: 2019-05-30 05:30:00
 
 |选项|值|
 |-|-|
@@ -84,31 +112,37 @@
 |timelib version(时间库版本)|2016.05(`2016.05`)|
 |"Olson" Timezone Database Version(`Olson` 时区数据库版本)|2018.5(`2018.5`)|
 |Timezone Database(时区数据库)|internal(内部的)|
-|Default timezone(默认时区)|UTC(世界协调时)|
+|Default timezone(默认时区)|UTC(协调世界时)|
 
-## 时区设置的三种姿势
+> 由此可见,假设不设置时区的话,默认时区是**协调世界时**,该时区和北京时间相比慢 `8` 个小时!
 
-查看目前[所有支持](https://www.php.net/manual/en/timezones.php)的时区,下面整理出中国的几个时区.
+## 设置时区的三种姿势
+
+翻阅 `php` 开发文档中可以找到目前[所有支持时区](https://www.php.net/manual/en/timezones.php)列表,下面整理出关于中国的主要时区.
 
 - `Asia/Hong_Kong` : 亚洲/香港
 - `Asia/Macau` : 亚洲/澳门    
-- **`Asia/Shanghai`** : 亚洲/上海
+- `Asia/Shanghai` : 亚洲/上海
 - `Asia/Taipei` : 亚洲/台北
 - `Asia/Urumqi` : 亚洲/乌鲁木齐
 
-> 中国常用时区是上海,并没有北京时区!
+> 常用时区是上海,并没有北京,当然也可以设置成 `PRC` (中华人民共和国)!
 
-### 永久性修改 `php` 配置文件
+如果没有设置时区的话,默认时区应该是协调世界时(`UTC`),虽说是通用的时间标准,但转换成当地时间还是需要一定换算的,而且看起来也不太舒服.
 
-> 修改 `php` 配置文件中 `date.timezone` 选项
+所以最好还是修改一下时区的设置项,如果业务不考虑国际化需求,那么永久性把时区固定就可以了,如果有国际化的业务场景,那么最好能够动态设置时区,这样就能清楚知道当地时间了.
 
-适用于所有脚本,需要重启服务器方可生效.
+因此,下面主要提供两种方式来设置时区,分别是静态设置和动态设置,其中动态设置又提供了两种方法.
 
-`PRC` : 中华人民共和国
+### 静态修改 `php` 配置
 
-> /private/etc/php.ini.default
+> `php` 的配置文件默认位于 : `/private/etc/php.ini` ,打开文件后修改 `date.timezone` 选项. 
 
-```
+由于这种方法是直接修改配置文件,因此时区设置后适用于所有脚本,只不过需要重启服务器方可生效.
+
+- 示例
+
+```ini
 [Date]
 ; Defines the default timezone used by the date functions
 ; http://php.net/date.timezone
@@ -127,38 +161,88 @@
 ;date.sunset_zenith = 90.583333
 ```
 
-```
+- 结果
+
+```ini
+# 去掉;并设置时区,取值可以是PRC,也可以是Asia/Shanghai等时区
 date.timezone = PRC
 ```
 
+> 详情请参考: [http://php.net/date.timezone](http://php.net/date.timezone)
 
-|选项|值|
-|-|-|
-|date/time support(日期时间支持情况)|enabled(已启用)|
-|timelib version(时间库版本)|2016.05(`2016.05`)|
-|"Olson" Timezone Database Version(`Olson` 时区数据库版本)|2018.5(`2018.5`)|
-|Timezone Database(时区数据库)|internal(内部的)|
-|Default timezone(默认时区)|PRC(中华人民共和国)|
+### 动态设置 `php` 配置
 
-### 运行时设置 `php` 时区方法
+> [ini_set](https://www.php.net/manual/zh/function.ini-set.php) 支持设置当前脚本的默认时区选项.
+
+静态设置时区仅仅适合时区固定的情况,如果需要动态切换时区,修改配置文件就不能满足这种情况了.
+
+因此,`php` 中还提供了动态修改 `php.ini` 配置文件的方法,`ini_set()` 方法刚好支持动态设置时区.
+
+> 不用重启服务器,但仅仅针对**当前脚本**生效,其中 `ini_set` 方法支持的 [php.ini 配置选项列表](https://www.php.net/manual/zh/ini.list.php)
+
+- 示例
 
 ```php
-<?php
-header("content-type:text/html;chartset=utf-8");
+// 设置当前时区
+ini_set("date.timezone", "Asia/Tokyo");
+
+// 获取默认时区
+echo "当前时区: ".ini_get("date.timezone")."<br/>";
+
+// 当前时间
+echo "当前时间: ".date("Y-m-d H:i:s")."<br>";
+```
+
+- 结果
+
+当前时区: Asia/Tokyo
+当前时间: 2019-05-30 14:30:00
+
+### 动态设置 `php` 时区
+
+> [date_default_timezone_set](https://www.php.net/manual/zh/function.date-default-timezone-set.php) 方法用于设置当前脚本的默认时区.
+
+`ini_set` 虽然支持设置时区选项,但毕竟不是专业设置时区的方法,`date_default_timezone_set` 才是专门设置时区的方法.
+
+这两个方法都属于动态设置时区,也都是针对当前脚本生效,也都不用重启服务器就能立马生效.
+
+- 示例
+
+```php
+// 获取当前时区
+echo "当前时区: ".date_default_timezone_get()."<br/>";
+
+// 设置当前时区
+date_default_timezone_set("UTC");
 
 // 获取当前时区
 echo "当前时区: ".date_default_timezone_get()."<br/>";
 
-var_dump(date_default_timezone_set("Asia/Shanghai"));
-
-echo "<br/>";
-
-echo "当前时区: ".date_default_timezone_get()."<br/>";
-
-?>
+// 当前时间
+echo "当前时间: ".date("Y-m-d H:i:s")."<br>";
 ```
-### 运行时设置 `php` 配置选项
 
+- 结果
+
+当前时区: Asia/Tokyo
+当前时区: UTC
+当前时间: 2019-05-30 05:30:00
+
+## 关于时区的一些总结
+
+时区和时间密切相关,统一时间说的其实是统一时间的标准,这样一个地区的当地时间就可以轻易转换成另一个地区的当地时间了.
+
+目前世界上统一的时间标准是**协调时间时**(`UTC`),中国的时间标准是**北京时间**,北京时间比协调时间时快 `8` 个小时.
+
+现实世界的时区也要反映到计算机世界,其中**时区信息数据库**就是用于表示现实世界的时区概念.
+
+由此可见,时区是一个通用概念,不仅 `php` 有时区,`java` 和 `js` 等语言也有时区概念,可以说只要有时间的地方都离不开时区.
+
+关于时区的小技能,你 `get` 到了吗?
+
+- 美剧<<闪电侠>>当地时间是星期二晚上八点开播,请问北京时间何时开播?
+- 英剧<<神探夏洛克>>北京时间凌晨四点半开播,请问当地时间是何时开播?
+- 泰剧<<新铁石心肠>>当地时间是晚上九点二十开播,请问北京时间是何时?
 
 ## 参考资料
 
