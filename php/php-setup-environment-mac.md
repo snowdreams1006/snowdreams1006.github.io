@@ -213,9 +213,7 @@ http://localhost/info.php](
 http://localhost/info.php) 如果能正常打印出 `php` 相关信息,那就证明 `php` 和 `apache` 整合无误,否则可能是某一步配置有误!
 
 ```php
-<?php
 phpinfo();
-?>
 ```
 
 ![php-setup-environment-mac-apache-php-start.png](./images/php-setup-environment-mac-apache-php-start.png)
@@ -852,8 +850,6 @@ Query OK, 1 row affected (0.01 sec)
 如果没有更改过项目的部署路径,那么我们之前有个测试 `php` 环境的文件,即 `/Library/WebServer/Documents/info.php` ,现在我们继续编写该文件,通过编码的方式连接到 `mysql` 数据库.
 
 ```php
-<?php
-
 $username="root";
 $userpass="root";
 $dbhost="127.0.0.1";
@@ -880,8 +876,6 @@ if ($result->num_rows > 0) {
 $db->close();
 
 phpinfo();
-
-?>
 ```
 
 现在再次启动 `apache` 服务器,访问 `http://localhost/info.php` 测试成功!
