@@ -84,7 +84,21 @@
 
 - 示例
 
-code
+```php
+<?php
+// 获取默认时区
+echo "默认时区: ".ini_get("date.timezone")."<br/>";
+
+// 获取当前时区
+echo "当前时区: ".date_default_timezone_get()."<br/>";
+
+// 当前时间
+echo "当前时间: ".date("Y-m-d H:i:s")."<br>";
+
+// 打印 php 信息
+phpinfo();
+?>
+```
 
 - 结果
 
@@ -128,7 +142,24 @@ code
 
 - 示例
 
-code
+```ini
+[Date]
+; Defines the default timezone used by the date functions
+; http://php.net/date.timezone
+;date.timezone =
+
+; http://php.net/date.default-latitude
+;date.default_latitude = 31.7667
+
+; http://php.net/date.default-longitude
+;date.default_longitude = 35.2333
+
+; http://php.net/date.sunrise-zenith
+;date.sunrise_zenith = 90.583333
+
+; http://php.net/date.sunset-zenith
+;date.sunset_zenith = 90.583333
+```
 
 - 结果
 
@@ -151,7 +182,16 @@ date.timezone = PRC
 
 - 示例
 
-code
+```php
+// 设置当前时区
+ini_set("date.timezone", "Asia/Tokyo");
+
+// 获取默认时区
+echo "当前时区: ".ini_get("date.timezone")."<br/>";
+
+// 当前时间
+echo "当前时间: ".date("Y-m-d H:i:s")."<br>";
+```
 
 - 结果
 
@@ -168,7 +208,19 @@ code
 
 - 示例
 
-code
+```php
+// 获取当前时区
+echo "当前时区: ".date_default_timezone_get()."<br/>";
+
+// 设置当前时区
+date_default_timezone_set("UTC");
+
+// 获取当前时区
+echo "当前时区: ".date_default_timezone_get()."<br/>";
+
+// 当前时间
+echo "当前时间: ".date("Y-m-d H:i:s")."<br>";
+```
 
 - 结果
 
