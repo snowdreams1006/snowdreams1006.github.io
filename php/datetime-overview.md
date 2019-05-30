@@ -32,13 +32,55 @@
 // 设置当前时区为上海时区
 date_default_timezone_set("Asia/Shanghai");
 
-// 获取当前时区
+// 获取当前时区 : Asia/Shanghai
 echo "当前时区 : ".date_default_timezone_get()."<br/>";
 
-// `Y年m月d日 H时i分s秒` 格式化当前时间
+// `Y年m月d日 H时i分s秒` 格式化当前时间 : 2019年05月30日 22时32分46秒
 echo "当前时间 : ".date("Y年m月d日 H时i分s秒")."<br/>";
 
-// `Y-m-d H:i:s` 格式化当前时间
+// `Y-m-d H:i:s` 格式化当前时间 : 2019-05-30 22:32:46
 echo "当前时间 : ".date("Y-m-d H:i:s")."<br/>";
+
+// `w` 星期中的第几天,数字表示: 0（表示星期天）到 6（表示星期六）
+switch (date("w")) {
+    case '0':
+        $dayStr = "日";
+        break;
+    case '1':
+        $dayStr = "一";
+        break;
+    case '2':
+        $dayStr = "二";
+        break;
+    case '3':
+        $dayStr = "三";
+        break;
+    case '4':
+        $dayStr = "四";
+        break;
+    case '5':
+        $dayStr = "五";
+        break;
+    case '6':
+        $dayStr = "六";
+        break;
+    default:
+        $dayStr = "未知";
+        break;
+} 
+// 2019年05月30日 星期四
+echo "当前时间 : ".date("Y年m月d日")." 星期".$dayStr."<br/>";
+
+echo "<hr/>";
+
+// `z` 年份中的第几天 : 今天是全年的第149天
+echo "今天是全年的第".date("z")."天<br/>";
+
+// `W` ISO-8601 格式年份中的第几周,每周从星期一开始 : 本周是全年的第22周
+echo "本周是全年的第".date("W")."周<br/>";
+
+// `t` 指定的月份有几天 : 本月共有31天
+echo "本月共有".date("t")."天<br/>";
+
 ?>
 ```
