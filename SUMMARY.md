@@ -68,7 +68,7 @@
 ## 学习笔记
 * [php 学习笔记](php/README.md)
     * [搭建开发环境( mac 版)](php/php-setup-environment-mac.md)
-    * [搞定时区设置的三种姿势](php/set-timezone-method.md)
+    * [关于时区的那点事](php/set-timezone-method.md)
 * [工具资源](tools/README.md)
     * [给 mac 装个 vmware 虚拟机](tools/mac-install-vmware.md)
         * [给 mac 虚拟机装个 windows](tools/mac-vmware-install-windows.md)
