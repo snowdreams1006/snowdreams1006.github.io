@@ -27,7 +27,8 @@
     "favicon-plus",
     "donate",
     "advanced-emoji",
-    "tbfed-pagefooter"
+    "tbfed-pagefooter",
+    "rss"
   ],
   "pluginsConfig": {
     "github": {
@@ -79,6 +80,23 @@
       "copyright":"&copy snowdreams1006",
       "modify_label": "文件修订时间：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },        
+    "rss": {
+      "title": "雪之梦技术驿站",
+      "description": "雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io",
+      "author": "snowdreams1006",
+      "site_url": "https://snowdreams1006.github.io/",
+      "feed_url": "https://snowdreams1006.github.io/rss",
+      "managingEditor": "snowdreams1006@163.com",
+      "webMaster": "snowdreams1006@163.com",
+      "categories": [
+        "markdown",
+        "git",
+        "github",
+        "gitbook",
+        "java",
+        "php"
+      ]
     }
   }
 }
