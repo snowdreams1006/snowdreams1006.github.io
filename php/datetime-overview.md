@@ -177,5 +177,31 @@ echo "今天是".date("Y-m-d").",距离国庆节还剩".$remainingDay."天<br/>"
 ?>
 ```
 
+> [strtotime](https://www.php.net/manual/zh/function.strtotime.php) : 将任何字符串的日期时间描述解析为 `Unix` 时间戳
 
+- 说明
 
+本函数预期接受一个包含**美国英语日期格式**的字符串并尝试将其解析为 `Unix` 时间戳（自 `January 1 1970 00:00:00 GMT` 起的秒数,其值相对于 `now` 参数给出的时间,如果没有提供此参数则用系统当前时间.
+
+- 示例
+
+```php
+<?php
+// 设置当前时区为上海时区
+date_default_timezone_set("Asia/Shanghai");
+
+// 获取当前时区
+echo "当前时区 : ".date_default_timezone_get()."<br/>";
+
+// 当前日期时间戳
+echo "当前日期时间戳: ".time()." <--> ".strtotime("now")." <--> ".date("Y-m-d H:i:s", strtotime("now"))."<br/>";
+
+// 一周后的日期时间: 7 days; 24 hours; 60 mins; 60 secs
+$nextWeek = time() + (7 * 24 * 60 * 60);
+echo "现在是".date("Y-m-d H:i:s").",下周是".date("Y-m-d H:i:s",$nextWeek)." <--> ".date("Y-m-d H:i:s",strtotime("+1 week"))."<br/>";
+
+echo "现在是".date("Y-m-d H:i:s").",1周2天4小时2秒是".date("Y-m-d H:i:s",strtotime("+1 week 2 days 4 hours 2 seconds"))."<br/>";
+
+echo "现在是".date("Y-m-d H:i:s").",下周三是".date("Y-m-d H:i:s",strtotime("next Thursday"))."<br/>";
+?>
+```
