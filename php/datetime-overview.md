@@ -47,7 +47,6 @@ echo date("Y年m月d日 H时i分s秒");
 - 示例
 
 ```php
-<?php
 // 设置当前时区为上海时区
 date_default_timezone_set("Asia/Shanghai");
 
@@ -100,8 +99,6 @@ echo "本周是全年的第".date("W")."周<br/>";
 
 // `t` 指定的月份有几天 : 本月共有31天
 echo "本月共有".date("t")."天<br/>";
-
-?>
 ```
 
 ## 日期转化时间戳
@@ -119,7 +116,6 @@ echo "本月共有".date("t")."天<br/>";
 - 示例
 
 ```php
-<?php
 // 设置当前时区为上海时区
 date_default_timezone_set("Asia/Shanghai");
 
@@ -133,8 +129,6 @@ echo "现在是".date("Y-m-d H:i:s").",上周是".date("Y-m-d H:i:s",$preWeek)."
 // 一周后的日期时间: 7 days; 24 hours; 60 mins; 60 secs
 $nextWeek = time() + (7 * 24 * 60 * 60);
 echo "现在是".date("Y-m-d H:i:s").",下周是".date("Y-m-d H:i:s",$nextWeek)."<br/>";
-
-?>
 ```
 
 > [microtime](https://www.php.net/manual/zh/function.microtime.php) : 返回当前 `Unix` 时间戳和微秒数
@@ -150,7 +144,6 @@ echo "现在是".date("Y-m-d H:i:s").",下周是".date("Y-m-d H:i:s",$nextWeek).
 - 示例
 
 ```php
-<?php
 // 设置当前时区为上海时区
 date_default_timezone_set("Asia/Shanghai");
 
@@ -159,7 +152,6 @@ echo "当前时区 : ".date_default_timezone_get()."<br/>";
 
 // 当前日期时间戳
 echo "当前日期时间戳: ".time()." <--> ".microtime()." <--> ".microtime(TRUE)."<br/>";
-?>
 ```
 
 > [mktime](https://www.php.net/manual/zh/function.mktime.php) : 取得一个日期的 `Unix` 时间戳
@@ -188,7 +180,6 @@ echo "当前日期时间戳: ".time()." <--> ".microtime()." <--> ".microtime(TR
 - 示例
 
 ```php
-<?php
 // 设置当前时区为上海时区
 date_default_timezone_set("Asia/Shanghai");
 
@@ -203,7 +194,6 @@ $nationalDay = mktime(0,0,0,10,1,2019);
 $currentDay = time();
 $remainingDay = floor(abs($nationalDay - $currentDay)/(24*3600));
 echo "今天是".date("Y-m-d").",距离国庆节还剩".$remainingDay."天<br/>";
-?>
 ```
 
 > [strtotime](https://www.php.net/manual/zh/function.strtotime.php) : 将任何字符串的日期时间描述解析为 `Unix` 时间戳
@@ -232,7 +222,6 @@ echo date("Y-m-d", strtotime("2019-05-31 +1 week 2 days 4 hours 2 seconds"));
 - 示例
 
 ```php
-<?php
 // 设置当前时区为上海时区
 date_default_timezone_set("Asia/Shanghai");
 
@@ -249,7 +238,6 @@ echo "现在是".date("Y-m-d H:i:s").",下周是".date("Y-m-d H:i:s",$nextWeek).
 echo "现在是".date("Y-m-d H:i:s").",1周2天4小时2秒是".date("Y-m-d H:i:s",strtotime("+1 week 2 days 4 hours 2 seconds"))."<br/>";
 
 echo "现在是".date("Y-m-d H:i:s").",下周三是".date("Y-m-d H:i:s",strtotime("next Thursday"))."<br/>";
-?>
 ```
 
 ## 日期时间函总结
