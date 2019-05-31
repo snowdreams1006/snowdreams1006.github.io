@@ -154,6 +154,8 @@ echo "当前日期时间戳: ".time()." <--> ".microtime()." <--> ".microtime(TR
 |`j`|`day` 天数|`01 到 31` |
 |`Y`|`year` 年份数,可以是两位或四位数字|`0-69` 对应于 `2000-2069` ,`70-100` 对应于 `1970-2000`|
 
+> 格式: **时分秒 月日年**,支持从右往左依次省略,被省略的值取当前时间的对应值.
+
 - 示例
 
 ```php
@@ -164,8 +166,14 @@ date_default_timezone_set("Asia/Shanghai");
 // 获取当前时区
 echo "当前时区 : ".date_default_timezone_get()."<br/>";
 
-// 指定日期时间戳: 时分秒 月日年
+// 指定日期时间戳: 时分秒 月日年 : 1559275200 <--> 2019-05-31 12:00:00
 echo "2019年05月31日 12:00:00 的时间戳: ".mktime(12,0,0,5,31,2019)." <--> ".date("Y-m-d H:i:s", mktime(12,0,0,5,31,2019))."<br/>";
+
+// 距离国庆节还有多少天,单位秒 : 今天是2019-05-31,距离国庆节还剩122天
+$nationalDay = mktime(0,0,0,10,1,2019);
+$currentDay = time();
+$remainingDay = floor(abs($nationalDay - $currentDay)/(24*3600));
+echo "今天是".date("Y-m-d").",距离国庆节还剩".$remainingDay."天<br/>";
 ?>
 ```
 
