@@ -4,6 +4,10 @@
 
 > [date](https://www.php.net/manual/zh/function.date.php) : 格式化日期时间
 
+- 场景
+
+将当前日期时间或者特定日期时间**格式化**输出为特定格式的字符串,常用于人性化展示信息.
+
 - 说明
 
 返回给定时间戳格式化后所产生的日期时间字符串,如果没有给出时间戳则默认使用本地当前时间.
@@ -24,6 +28,19 @@
 |`i`|有前导零的分钟数|`00 到 59`|
 |`S`|每月天数后面的英文后缀,`2` 个字符|`st,nd,rd` 或者 `th` ,可以和 `j` 一起用|
 |`s`|秒数,有前导零 |`00 到 59`|
+
+- 常用格式
+
+```php
+// 形如 2019-05-31 12:00:00
+echo date("Y-m-d H:i:s");
+
+// 形如 2019/05/31 12:00:00
+echo date("Y/m/d H:i:s");
+
+// 形如 2019年05月31日 12时00分00秒
+echo date("Y年m月d日 H时i分s秒");
+```
 
 - 示例
 
@@ -85,9 +102,13 @@ echo "本月共有".date("t")."天<br/>";
 ?>
 ```
 
-## 当前日期时间戳
+## 日期转化时间戳
 
 > [time](https://www.php.net/manual/zh/function.time.php) : 返回当前的 Unix 时间戳
+
+- 场景
+
+获取当前日期时间或特定日期时间的时间戳,常用于日期时间之间的相互转换.
 
 - 说明
 
@@ -116,6 +137,10 @@ echo "现在是".date("Y-m-d H:i:s").",下周是".date("Y-m-d H:i:s",$nextWeek).
 
 > [microtime](https://www.php.net/manual/zh/function.microtime.php) : 返回当前 `Unix` 时间戳和微秒数
 
+- 场景
+
+获取当前日期时间或特定日期时间的时间戳,常用于程序运行过程打点分析,也可以用于日期时间之间的互相转换.
+
 - 说明
 
 当前 `Unix` 时间戳以及微秒数,本函数仅在支持 `gettimeofday()`` 系统调用的操作系统下可用.
@@ -135,9 +160,11 @@ echo "当前日期时间戳: ".time()." <--> ".microtime()." <--> ".microtime(TR
 ?>
 ```
 
-## 指定日期时间戳
-
 > [mktime](https://www.php.net/manual/zh/function.mktime.php) : 取得一个日期的 `Unix` 时间戳
+
+- 场景
+
+获取给定日期的时间戳,按照`"时分秒 月日年"`格式依次解析,返回时间戳.
 
 - 说明
 
@@ -179,9 +206,26 @@ echo "今天是".date("Y-m-d").",距离国庆节还剩".$remainingDay."天<br/>"
 
 > [strtotime](https://www.php.net/manual/zh/function.strtotime.php) : 将任何字符串的日期时间描述解析为 `Unix` 时间戳
 
+- 场景
+
+将英文日期解析成时间戳,比直接解析日期方便,采用自然语义而不是编程语言进行转换日期.
+
 - 说明
 
 本函数预期接受一个包含**美国英语日期格式**的字符串并尝试将其解析为 `Unix` 时间戳（自 `January 1 1970 00:00:00 GMT` 起的秒数,其值相对于 `now` 参数给出的时间,如果没有提供此参数则用系统当前时间.
+
+- 常用格式
+
+```php
+// 2019-06-02
+echo date("Y-m-d", strtotime("2019-05-31 +2 days"));
+
+// 2019-07-01
+echo date("Y-m-d", strtotime("2019-05-31 +1 month"));
+
+// 2019-06-09
+echo date("Y-m-d", strtotime("2019-05-31 +1 week 2 days 4 hours 2 seconds"));
+```
 
 - 示例
 
