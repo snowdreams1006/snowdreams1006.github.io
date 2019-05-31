@@ -1,5 +1,7 @@
 # 日期时间操作一箩筐
 
+![php-datetime-overview-doc.png](./images/php-datetime-overview-doc.png)
+
 ## 格式化日期时间
 
 > [date](https://www.php.net/manual/zh/function.date.php) : 格式化日期时间
@@ -249,3 +251,21 @@ echo "现在是".date("Y-m-d H:i:s").",1周2天4小时2秒是".date("Y-m-d H:i:s
 echo "现在是".date("Y-m-d H:i:s").",下周三是".date("Y-m-d H:i:s",strtotime("next Thursday"))."<br/>";
 ?>
 ```
+
+## 日期时间函总结
+
+日期时间函数库是 `php` 内置的函数库,默认情况下已启用,值得注意的是,日期时间和时区有关,建议首先设置下时区.
+
+纵观日期时间的操作方法,总的来说,可以大致分为两类,一类是给计算机用的,另一类是给人看的.
+
+- 给人看的
+    * `date_default_timezone_set("Asia/Shanghai")` : 设置当前脚本使用的时区
+    * `date("Y-m-d H:i:s")` : 格式化日期时间
+    * `date("Y-m-d", strtotime("2019-05-31 +2 days"))` : 格式化英文描述的日期时间
+
+- 给计算机用的
+    * `time()` : 当前时间的秒数
+    * `microtime()` : 当前时间的秒数和微秒数
+    * `strtotime()` : 将字符串形式的日期时间转换成时间戳
+
+最后,[文档](https://www.php.net/manual/zh/ref.datetime.php)那么齐全,不懂就去多看看,忘记有啥方法全靠 `ide` 智能提示就好,多用用就会慢慢熟练.
