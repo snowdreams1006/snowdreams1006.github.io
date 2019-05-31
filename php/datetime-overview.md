@@ -85,7 +85,7 @@ echo "本月共有".date("t")."天<br/>";
 ?>
 ```
 
-## 当前 Unix 时间戳
+## 当前日期时间戳
 
 > [time](https://www.php.net/manual/zh/function.time.php) : 返回当前的 Unix 时间戳
 
@@ -114,11 +114,11 @@ echo "现在是".date("Y-m-d H:i:s").",下周是".date("Y-m-d H:i:s",$nextWeek).
 ?>
 ```
 
-> [microtime](https://www.php.net/manual/zh/function.microtime.php) : 返回当前 Unix 时间戳和微秒数
+> [microtime](https://www.php.net/manual/zh/function.microtime.php) : 返回当前 `Unix` 时间戳和微秒数
 
 - 说明
 
-当前 Unix 时间戳以及微秒数,本函数仅在支持 `gettimeofday()`` 系统调用的操作系统下可用.
+当前 `Unix` 时间戳以及微秒数,本函数仅在支持 `gettimeofday()`` 系统调用的操作系统下可用.
 
 - 示例
 
@@ -130,8 +130,42 @@ date_default_timezone_set("Asia/Shanghai");
 // 获取当前时区
 echo "当前时区 : ".date_default_timezone_get()."<br/>";
 
-// 当前时间戳
-echo "当前时间戳: ".time()." <--> ".microtime()." <--> ".microtime(TRUE)."<br/>";
+// 当前日期时间戳
+echo "当前日期时间戳: ".time()." <--> ".microtime()." <--> ".microtime(TRUE)."<br/>";
+?>
+```
+
+## 指定日期时间戳
+
+> [mktime](https://www.php.net/manual/zh/function.mktime.php) : 取得一个日期的 `Unix` 时间戳
+
+- 说明
+
+根据给出的参数返回 `Unix` 时间戳.
+
+- 备注
+
+|格式|说明|参数示例|
+|-|-|-|
+|`H`|`hour` 小时数|`00 到 23`|
+|`i`|`minute` 分钟数|`00 到 59`|
+|`s`|`second` 秒数|`00 到 59`|
+|`n`|`month` 月份数|`01 到 12`|
+|`j`|`day` 天数|`01 到 31` |
+|`Y`|`year` 年份数,可以是两位或四位数字|`0-69` 对应于 `2000-2069` ,`70-100` 对应于 `1970-2000`|
+
+- 示例
+
+```php
+<?php
+// 设置当前时区为上海时区
+date_default_timezone_set("Asia/Shanghai");
+
+// 获取当前时区
+echo "当前时区 : ".date_default_timezone_get()."<br/>";
+
+// 指定日期时间戳: 时分秒 月日年
+echo "2019年05月31日 12:00:00 的时间戳: ".mktime(12,0,0,5,31,2019)." <--> ".date("Y-m-d H:i:s", mktime(12,0,0,5,31,2019))."<br/>";
 ?>
 ```
 
