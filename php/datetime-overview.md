@@ -24,7 +24,7 @@
 |`i`|有前导零的分钟数|`00 到 59`|
 |`S`|每月天数后面的英文后缀,`2` 个字符|`st,nd,rd` 或者 `th` ,可以和 `j` 一起用|
 |`s`|秒数,有前导零 |`00 到 59`|
- 
+
 - 示例
 
 ```php
@@ -81,6 +81,35 @@ echo "本周是全年的第".date("W")."周<br/>";
 
 // `t` 指定的月份有几天 : 本月共有31天
 echo "本月共有".date("t")."天<br/>";
+
+?>
+```
+
+## 当前 Unix 时间戳
+
+> [time](https://www.php.net/manual/zh/function.time.php) : 返回当前的 Unix 时间戳
+
+- 说明
+
+返回自从 `Unix` 纪元(格林威治时间 `1970年1月1日 00:00:00`)到当前时间的秒数.
+
+- 示例
+
+```php
+<?php
+// 设置当前时区为上海时区
+date_default_timezone_set("Asia/Shanghai");
+
+// 获取当前时区
+echo "当前时区 : ".date_default_timezone_get()."<br/>";
+
+// 一周前的日期时间: 7 days; 24 hours; 60 mins; 60 secs
+$preWeek = time() - (7 * 24 * 60 * 60);
+echo "现在是".date("Y-m-d H:i:s").",上周是".date("Y-m-d H:i:s",$preWeek)."<br/>";
+
+// 一周后的日期时间: 7 days; 24 hours; 60 mins; 60 secs
+$nextWeek = time() + (7 * 24 * 60 * 60);
+echo "现在是".date("Y-m-d H:i:s").",下周是".date("Y-m-d H:i:s",$nextWeek)."<br/>";
 
 ?>
 ```
