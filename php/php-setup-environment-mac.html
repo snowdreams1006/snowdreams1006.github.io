@@ -1079,6 +1079,19 @@
             
         </li>
     
+        <li class="chapter " data-level="3.1.3" data-path="datetime-overview.html">
+            
+                <a href="datetime-overview.html">
+            
+                    
+                    日期时间操作一箩筐
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1664,9 +1677,7 @@ Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
 <p>&#x662F;&#x65F6;&#x5019;&#x5C55;&#x793A;&#x771F;&#x6B63;&#x7684;&#x6280;&#x672F;&#x4E86;,&#x73B0;&#x5728;&#x4E07;&#x4E8B;&#x4FF1;&#x5907;&#x53EA;&#x5F85;&#x6D4B;&#x8BD5; <code>php</code> &#x5230;&#x5E95;&#x6709;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x6210;&#x529F;?!</p>
 <p>&#x5728;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA; <code>info.php</code> &#x6D4B;&#x8BD5;&#x6587;&#x4EF6;,&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#x540E;&#x8BBF;&#x95EE; <a href="http://localhost/info.php" target="_blank"> 
 http://localhost/info.php</a> &#x5982;&#x679C;&#x80FD;&#x6B63;&#x5E38;&#x6253;&#x5370;&#x51FA; <code>php</code> &#x76F8;&#x5173;&#x4FE1;&#x606F;,&#x90A3;&#x5C31;&#x8BC1;&#x660E; <code>php</code> &#x548C; <code>apache</code> &#x6574;&#x5408;&#x65E0;&#x8BEF;,&#x5426;&#x5219;&#x53EF;&#x80FD;&#x662F;&#x67D0;&#x4E00;&#x6B65;&#x914D;&#x7F6E;&#x6709;&#x8BEF;!</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
-phpinfo();
-<span class="hljs-meta">?&gt;</span>
+<pre><code class="lang-php">phpinfo();
 </code></pre>
 <p><img src="images/php-setup-environment-mac-apache-php-start.png" alt="php-setup-environment-mac-apache-php-start.png"></p>
 <h2 id="&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x4E4B;-mysql-&#x6570;"><a name="&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x4E4B;-mysql-&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x4E4B;-mysql-&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x4E4B; mysql &#x6570;</h2>
@@ -2198,9 +2209,7 @@ Query OK, 1 row affected (0.01 sec)
 </code></pre>
 <h3 id="&#x7F16;&#x7A0B;&#x8FDE;&#x63A5;"><a name="&#x7F16;&#x7A0B;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x7A0B;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. &#x7F16;&#x7A0B;&#x8FDE;&#x63A5;</h3>
 <p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x66F4;&#x6539;&#x8FC7;&#x9879;&#x76EE;&#x7684;&#x90E8;&#x7F72;&#x8DEF;&#x5F84;,&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x6709;&#x4E2A;&#x6D4B;&#x8BD5; <code>php</code> &#x73AF;&#x5883;&#x7684;&#x6587;&#x4EF6;,&#x5373; <code>/Library/WebServer/Documents/info.php</code> ,&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x7F16;&#x5199;&#x8BE5;&#x6587;&#x4EF6;,&#x901A;&#x8FC7;&#x7F16;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x8FDE;&#x63A5;&#x5230; <code>mysql</code> &#x6570;&#x636E;&#x5E93;.</p>
-<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
-
-$username=<span class="hljs-string">&quot;root&quot;</span>;
+<pre><code class="lang-php">$username=<span class="hljs-string">&quot;root&quot;</span>;
 $userpass=<span class="hljs-string">&quot;root&quot;</span>;
 $dbhost=<span class="hljs-string">&quot;127.0.0.1&quot;</span>;
 $dbdatabase=<span class="hljs-string">&quot;test&quot;</span>;
@@ -2226,8 +2235,6 @@ $result = $db-&gt;query(<span class="hljs-string">&quot;SELECT id,name FROM user
 $db-&gt;close();
 
 phpinfo();
-
-<span class="hljs-meta">?&gt;</span>
 </code></pre>
 <p>&#x73B0;&#x5728;&#x518D;&#x6B21;&#x542F;&#x52A8; <code>apache</code> &#x670D;&#x52A1;&#x5668;,&#x8BBF;&#x95EE; <code>http://localhost/info.php</code> &#x6D4B;&#x8BD5;&#x6210;&#x529F;!</p>
 <p><img src="images/php-setup-environment-mac-php-mysql-connected.png" alt="php-setup-environment-mac-php-mysql-connected.png"></p>
@@ -2264,7 +2271,7 @@ phpinfo();
 </ul>
 <p>&#x6700;&#x540E;,<code>php</code> &#x4E0D;&#x4EC5;&#x4EC5;&#x53EF;&#x4EE5;&#x9762;&#x5411;&#x8FC7;&#x7A0B;&#x4E5F;&#x53EF;&#x4EE5;&#x9762;&#x5411;&#x5BF9;&#x8C61;,&#x867D;&#x7136;&#x662F;<del>&#x62CD;&#x7C27;&#x7247;</del>,&#x4F46;&#x771F;&#x7684;&#x5F88;&#x5F3A;&#x5927;,&#x9B45;&#x529B;&#x4E0D;&#x5C0F;&#x5462;!</p>
 <footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2019-05-26 22:04:43
+2019-05-30 16:41:57
 </span></footer>
                                 
                                 </section>
@@ -2308,7 +2315,7 @@ phpinfo();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"搭建开发环境( mac 版)","level":"3.1.1","depth":2,"next":{"title":"关于时区的那点事","level":"3.1.2","depth":2,"path":"php/set-timezone-method.md","ref":"php/set-timezone-method.md","articles":[]},"previous":{"title":"php 学习笔记","level":"3.1","depth":1,"path":"php/README.md","ref":"php/README.md","articles":[{"title":"搭建开发环境( mac 版)","level":"3.1.1","depth":2,"path":"php/php-setup-environment-mac.md","ref":"php/php-setup-environment-mac.md","articles":[]},{"title":"关于时区的那点事","level":"3.1.2","depth":2,"path":"php/set-timezone-method.md","ref":"php/set-timezone-method.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-plus","donate","advanced-emoji","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"output":"_book","github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":"/favicon.ico","pageview-count":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考."},"file":{"path":"php/php-setup-environment-mac.md","mtime":"2019-05-26T14:04:43.710Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-30T08:28:31.143Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"搭建开发环境( mac 版)","level":"3.1.1","depth":2,"next":{"title":"关于时区的那点事","level":"3.1.2","depth":2,"path":"php/set-timezone-method.md","ref":"php/set-timezone-method.md","articles":[]},"previous":{"title":"php 学习笔记","level":"3.1","depth":1,"path":"php/README.md","ref":"php/README.md","articles":[{"title":"搭建开发环境( mac 版)","level":"3.1.1","depth":2,"path":"php/php-setup-environment-mac.md","ref":"php/php-setup-environment-mac.md","articles":[]},{"title":"关于时区的那点事","level":"3.1.2","depth":2,"path":"php/set-timezone-method.md","ref":"php/set-timezone-method.md","articles":[]},{"title":"日期时间操作一箩筐","level":"3.1.3","depth":2,"path":"php/datetime-overview.md","ref":"php/datetime-overview.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-plus","donate","advanced-emoji","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"output":"_book","github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":"/favicon.ico","pageview-count":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考."},"file":{"path":"php/php-setup-environment-mac.md","mtime":"2019-05-30T08:41:57.454Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-31T01:31:35.572Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
