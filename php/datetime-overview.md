@@ -91,7 +91,7 @@ echo "本月共有".date("t")."天<br/>";
 
 - 说明
 
-返回自从 `Unix` 纪元(格林威治时间 `1970年1月1日 00:00:00`)到当前时间的秒数.
+返回自从 `Unix` 纪元(格林威治时间 `1970年1月1日 00:00:00`)到当前时间的**秒数**.
 
 - 示例
 
@@ -113,3 +113,25 @@ echo "现在是".date("Y-m-d H:i:s").",下周是".date("Y-m-d H:i:s",$nextWeek).
 
 ?>
 ```
+
+> [microtime](https://www.php.net/manual/zh/function.microtime.php) : 返回当前 Unix 时间戳和微秒数
+
+- 说明
+
+当前 Unix 时间戳以及微秒数,本函数仅在支持 `gettimeofday()`` 系统调用的操作系统下可用.
+
+- 示例
+
+```php
+<?php
+// 设置当前时区为上海时区
+date_default_timezone_set("Asia/Shanghai");
+
+// 获取当前时区
+echo "当前时区 : ".date_default_timezone_get()."<br/>";
+
+// 当前时间戳
+echo "当前时间戳: ".time()." <--> ".microtime()." <--> ".microtime(TRUE)."<br/>";
+?>
+```
+
