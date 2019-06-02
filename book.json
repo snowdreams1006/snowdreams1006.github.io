@@ -1,102 +1,111 @@
 {
-  "title": "雪之梦技术驿站",
-  "author": "snowdreams1006",
-  "description": "雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考.",
-  "language": "zh-hans",
-  "gitbook": "3.2.3",
-  "links": {
-      "sidebar": {
-          "我的网站": "https://snowdreams1006.cn/"
-      }
-  },
-  "plugins": [
-    "github",
-    "pageview-count",
-    "mermaid-gb3",
-    "-lunr", 
-    "-search", 
-    "search-plus",
-    "splitter",
-    "-sharing", 
-    "sharing-plus",
-    "expandable-chapters-small",
-    "anchor-navigation-ex",
-    "edit-link",
-    "copy-code-button",
-    "chart",
-    "favicon-plus",
-    "donate",
-    "advanced-emoji",
-    "tbfed-pagefooter",
-    "rss"
-  ],
-  "pluginsConfig": {
-    "github": {
-      "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+    "title": "雪之梦技术驿站",
+    "author": "snowdreams1006",
+    "description": "雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考.",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "links": {
+        "sidebar": {
+            "我的网站": "https://snowdreams1006.cn/"
+        }
     },
-    "sharing": {
-       "douban": true,
-       "facebook": false,
-       "google": false,
-       "hatenaBookmark": false,
-       "instapaper": false,
-       "line": false,
-       "linkedin": false,
-       "messenger": false,
-       "pocket": false,
-       "qq": true,
-       "qzone": true,
-       "stumbleupon": false,
-       "twitter": false,
-       "viber": false,
-       "vk": false,
-       "weibo": true,
-       "whatsapp": false,
-       "all": [
-           "facebook", "google", "twitter",
-           "weibo", "instapaper", "linkedin",
-           "pocket", "stumbleupon"
-       ]
-    },
-    "edit-link": {
-      "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",
-      "label": "编辑本页"
-    },
-    "chart": {
-      "type": "c3"
-    },
-    "favicon": "/favicon.ico",
-    "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png",
-    "output": "_book",
-    "donate": {
-      "wechat": "/wechat.jpg",
-      "alipay": "/alipay.jpg",
-      "title": "",
-      "button": "赏",
-      "alipayText": "支付宝",
-      "wechatText": "微信"
-    },
-    "tbfed-pagefooter": {
-      "copyright":"&copy snowdreams1006",
-      "modify_label": "文件修订时间：",
-      "modify_format": "YYYY-MM-DD HH:mm:ss"
-    },        
-    "rss": {
-      "title": "雪之梦技术驿站",
-      "description": "雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io",
-      "author": "snowdreams1006",
-      "site_url": "https://snowdreams1006.github.io/",
-      "feed_url": "https://snowdreams1006.github.io/rss",
-      "managingEditor": "snowdreams1006@163.com",
-      "webMaster": "snowdreams1006@163.com",
-      "categories": [
-        "markdown",
-        "git",
+    "plugins": [
         "github",
-        "gitbook",
-        "java",
-        "php"
-      ]
+        "pageview-count",
+        "mermaid-gb3",
+        "-lunr",
+        "-search",
+        "search-plus",
+        "splitter",
+        "-sharing",
+        "sharing-plus",
+        "expandable-chapters-small",
+        "anchor-navigation-ex",
+        "edit-link",
+        "copy-code-button",
+        "chart",
+        "favicon-plus",
+        "donate",
+        "advanced-emoji",
+        "tbfed-pagefooter",
+        "rss",
+        "mygitalk"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+        },
+        "sharing": {
+            "douban": true,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper", "linkedin",
+                "pocket", "stumbleupon"
+            ]
+        },
+        "edit-link": {
+            "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",
+            "label": "编辑本页"
+        },
+        "chart": {
+            "type": "c3"
+        },
+        "favicon": "/favicon.ico",
+        "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png",
+        "output": "_book",
+        "donate": {
+            "wechat": "/wechat.jpg",
+            "alipay": "/alipay.jpg",
+            "title": "",
+            "button": "赏",
+            "alipayText": "支付宝",
+            "wechatText": "微信"
+        },
+        "tbfed-pagefooter": {
+            "copyright": "&copy snowdreams1006",
+            "modify_label": "文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "rss": {
+            "title": "雪之梦技术驿站",
+            "description": "雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io",
+            "author": "snowdreams1006",
+            "site_url": "https://snowdreams1006.github.io/",
+            "feed_url": "https://snowdreams1006.github.io/rss",
+            "managingEditor": "snowdreams1006@163.com",
+            "webMaster": "snowdreams1006@163.com",
+            "categories": [
+                "markdown",
+                "git",
+                "github",
+                "gitbook",
+                "java",
+                "php"
+            ]
+        },
+        "mygitalk": {
+            "clientID": "3f62415a283d19cbd696",
+            "clientSecret": "aed0e1db0620bf5d0e3a3f0225f801997ad74e58",
+            "repo": "snowdreams1006.github.io",
+            "owner": "snowdreams1006",
+            "admin": ["snowdreams1006"],
+            "distractionFreeMode": false
+        }
     }
-  }
 }
