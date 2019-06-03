@@ -219,6 +219,65 @@
 }
 {% endchart %}
 
+#### 博客园
+
+> [博客园][cnblogs] : https://www.cnblogs.com/snowdreams1006/
+
+{% chart %}
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            [
+                "x",
+                "2019-06-01",
+                "2019-06-02",
+                "2019-06-03"
+            ],
+            [
+                "粉丝",
+                21,
+                21,
+                21
+            ],
+            [
+                "阅读数",
+                7756,
+                7756,
+                7756
+            ],
+            [
+                "随笔",
+                61,
+                61,
+                61
+            ]
+        ],
+        "axes": {
+            "粉丝": "y2"
+        },
+        "types": {
+            "粉丝": "bar"
+        }
+    },
+    "axis": {
+      "x": {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝",
+          "position": "outer-middle"
+        }
+      }
+    }
+}
+{% endchart %}
+
 ## 2019年05月
 
 ### 全网统计
