@@ -420,6 +420,154 @@
 }
 {% endchart %}
 
+#### 腾讯云社区
+
+> [腾讯云社区][tencent-cloud] : https://cloud.tencent.com/developer/user/2952369/activities
+
+{% chart %}
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            [
+                "x",
+                "2019-06-01",
+                "2019-06-02",
+                "2019-06-03"
+            ],
+            [
+                "粉丝",
+                13,
+                13,
+                13
+            ],
+            [
+                "阅读量",
+                4809,
+                4809,
+                4809
+            ],
+            [
+                "文章",
+                62,
+                62,
+                62
+            ],
+            [
+                "点赞",
+                199,
+                199,
+                199
+            ],
+            [
+                "订阅",
+                11,
+                11,
+                11
+            ]
+        ],
+        "axes": {
+            "粉丝": "y2"
+        },
+        "types": {
+            "粉丝": "bar"
+        }
+    },
+    "axis": {
+      "x": {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝",
+          "position": "outer-middle"
+        }
+      }
+    }
+}
+{% endchart %}
+
+#### B站专栏
+
+> [B站专栏][bilibili] : https://member.bilibili.com/v2#/upload-manager/text
+
+{% chart %}
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            [
+                "x",
+                "2019-06-01",
+                "2019-06-02",
+                "2019-06-03"
+            ],
+            [
+                "粉丝",
+                10,
+                10,
+                10
+            ],
+            [
+                "阅读量",
+                490,
+                490,
+                490
+            ],
+            [
+                "投稿",
+                56,
+                56,
+                56
+            ],
+            [
+                "点赞",
+                65,
+                65,
+                65
+            ],
+            [
+                "收藏",
+                16,
+                16,
+                16
+            ],
+            [
+                "投币",
+                1,
+                1,
+                1
+            ]
+        ],
+        "axes": {
+            "粉丝": "y2"
+        },
+        "types": {
+            "粉丝": "bar"
+        }
+    },
+    "axis": {
+      "x": {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝",
+          "position": "outer-middle"
+        }
+      }
+    }
+}
+{% endchart %}
+
 ## 2019年05月
 
 ### 全网统计
