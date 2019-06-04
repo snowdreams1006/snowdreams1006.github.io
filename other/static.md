@@ -486,6 +486,77 @@
 }
 {% endchart %}
 
+#### 思否
+
+> [思否][segmentfault] : https://segmentfault.com/blog/snowdreams1006
+
+{% chart %}
+{
+    "data": {
+        "x": "x",
+        "columns": [
+            [
+                "x",
+                "2019-06-01",
+                "2019-06-02",
+                "2019-06-03"
+            ],
+            [
+                "粉丝",
+                2,
+                2,
+                2
+            ],
+            [
+                "阅读量",
+                6063,
+                6063,
+                6063
+            ],
+            [
+                "内容数",
+                62,
+                62,
+                62
+            ],
+            [
+                "点赞数",
+                23,
+                23,
+                23
+            ],
+            [
+                "声望",
+                91,
+                91,
+                91
+            ]
+        ],
+        "axes": {
+            "粉丝": "y2"
+        },
+        "types": {
+            "粉丝": "bar"
+        }
+    },
+    "axis": {
+      "x": {
+        "type": "timeseries",
+        "tick": {
+            "format": "%Y-%m-%d"
+        }
+      },
+      "y2": {
+        "show": "true",
+        "label": {
+          "text": "粉丝",
+          "position": "outer-middle"
+        }
+      }
+    }
+}
+{% endchart %}
+
 ### 平台统计
 
 #### 慕课手记
