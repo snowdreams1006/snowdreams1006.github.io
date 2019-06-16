@@ -80,6 +80,7 @@
         * [给 windows 虚拟机装个 windows](tools/windows-vmware-install-windows.md)
         * [给 windows 虚拟机装个 centos](tools/windows-vmware-install-centos.md)
         * [给 windows 虚拟机装个 ubuntu](tools/windows-vmware-install-ubuntu.md)
+    * [玩转各种高大上的小徽章](tools/badge.md)
 * [如何写作](write/README.md)
     * [markdown 和富文本](write/markdownOrRichText.md)
     * [markdown 转富文本](write/markdown2richText.md)
