@@ -1,6 +1,41 @@
-# 玩转各种高大上的小徽章
+# github 上各式各样的小徽章都是哪来的?
 
+## 前言
 
+平时大家在在逛 `github` 时或多或少都看到过项目首页各式各样的小徽章,不知道你是否和我一样好奇这些小徽章都是哪来的呢?
+
+[![Build Status](https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg)](https://circleci.com/gh/vuejs/vue/tree/dev)
+[![Coverage Status](https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg)](https://codecov.io/github/vuejs/vue?branch=dev)
+[![Downloads](https://img.shields.io/npm/dm/vue.svg)](https://npmcharts.com/compare/vue?minimal=true)
+[![Version](https://img.shields.io/npm/v/vue.svg)](https://www.npmjs.com/package/vue)
+[![License](https://img.shields.io/npm/l/vue.svg)](https://www.npmjs.com/package/vue)
+[![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://chat.vuejs.org/)
+
+> 上述徽章来源于前端开发三大框架之一的 `Vue` ,详情请参考 [https://github.com/vuejs/vue](https://github.com/vuejs/vue) 
+
+[![CircleCI](https://circleci.com/gh/angular/angular/tree/master.svg?style=shield)](https://circleci.com/gh/angular/workflows/angular/tree/master)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=LzF3RzBVVGt6VWE2S0hHaC9uYllOZz09LS1BVjNTclBKV0x4eVRlcjA4QVY1M0N3PT0=--eb4ce8c8dc2c1c5b2b5352d473ee12a73ac20e06)](https://www.browserstack.com/automate/public-build/LzF3RzBVVGt6VWE2S0hHaC9uYllOZz09LS1BVjNTclBKV0x4eVRlcjA4QVY1M0N3PT0=--eb4ce8c8dc2c1c5b2b5352d473ee12a73ac20e06)
+[![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular/angular?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge)
+[![npm version](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://www.npmjs.com/@angular/core)
+
+> 上述徽章来源于前端开发三大框架之一的 `Angular` ,详情请参考 [https://github.com/angular/angular](https://github.com/angular/angular) 
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
+[![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&amp;circle-token=:circle-token)](https://circleci.com/gh/facebook/react)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+
+> 上述徽章来源于前端开发三大框架之一的 `React` ,详情请参考 [https://github.com/facebook/react](https://github.com/facebook/react) 
+
+前端三大框架的项目首页均有数量不等的小徽章,由此可见这应该不是 `github` 统一分发的而是自定义行为!
+
+虽然不是统一分配的,但也不是毫无规律可寻,想要制作专属的小徽章,其实真的很简单!
+
+[![npm version](https://img.shields.io/npm/v/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
+[![npm-download](https://img.shields.io/npm/dt/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
+[![npm-license](https://img.shields.io/npm/l/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
+[![star this repo](http://githubbadges.com/star.svg?user=snowdreams1006&repo=gitbook-plugin-mygitalk&style=default)](https://github.com/snowdreams1006/gitbook-plugin-mygitalk)
+[![fork this repo](http://githubbadges.com/fork.svg?user=snowdreams1006&repo=gitbook-plugin-mygitalk&style=default)](https://github.com/snowdreams1006/gitbook-plugin-mygitalk/fork)
 
 ## 参考文档
 
