@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 16 Jun 2019 02:49:28 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 17 Jun 2019 09:16:05 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -556,6 +556,12 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[玩转各种高大上的小徽章]]></title>
+            <link>https://snowdreams1006.github.io/tools/badge.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/badge.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[如何写作]]></title>
             <description><![CDATA[越来越多的人想写个人博客或者打算做自媒体,笔者也是一样.
 最近在学习如何写博客,分享下创作经历,避免走弯路.]]></description>
@@ -634,7 +640,8 @@
 "2019-06-12",
 "2019-06-13",
 "2019-06-14",
-"2019-06-15"
+"2019-06-15",
+"2019-06-16"
 ],
 [
 "粉丝",
@@ -652,7 +659,8 @@
 115,
 115,
 115,
-115
+115,
+116
 ],
 [
 "阅读",
@@ -670,7 +678,8 @@
 53447,
 53447,
 53447,
-53829
+53829,
+54106
 ]
 ],
 "axes": {
