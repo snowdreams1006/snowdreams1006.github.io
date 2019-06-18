@@ -1,8 +1,12 @@
-# github 上各式各样的小徽章都是哪来的?
+# github 上各式各样的小徽章从何而来?
 
 ## 前言
 
 平时大家在在逛 `github` 时或多或少都看到过项目首页各式各样的小徽章,不知道你是否和我一样好奇这些小徽章都是哪来的呢?
+
+首先让我们一睹为快前端开发的三大主流框架: `var`
+
+看一看他们的 `github` 项目首页有哪些小徽章吧!
 
 [![Build Status](https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg)](https://circleci.com/gh/vuejs/vue/tree/dev)
 [![Coverage Status](https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg)](https://codecov.io/github/vuejs/vue?branch=dev)
@@ -36,6 +40,8 @@
 [![npm-license](https://img.shields.io/npm/l/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
 [![star this repo](http://githubbadges.com/star.svg?user=snowdreams1006&repo=gitbook-plugin-mygitalk&style=default)](https://github.com/snowdreams1006/gitbook-plugin-mygitalk)
 [![fork this repo](http://githubbadges.com/fork.svg?user=snowdreams1006&repo=gitbook-plugin-mygitalk&style=default)](https://github.com/snowdreams1006/gitbook-plugin-mygitalk/fork)
+
+> 上述徽章是 [gitbook-plugin-mygitalk](https://github.com/snowdreams1006/gitbook-plugin-mygitalk) 项目引用的小徽章,亲测不是统一分配的呢!
 
 ## 参考文档
 
