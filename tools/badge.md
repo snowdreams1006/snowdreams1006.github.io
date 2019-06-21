@@ -266,9 +266,7 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 - [https://badgen.net/](https://badgen.net/)
 - [https://forthebadge.com/](https://forthebadge.com/)
 - [https://badge.fury.io/](https://badge.fury.io/)
-- [http://githubbadges.com/](http://githubbadges.com/)
 - [https://github.com/boennemann/badges](https://github.com/boennemann/badges)
-- [https://github.com/fehmicansaglam/progressed.io](https://github.com/fehmicansaglam/progressed.io)
 
 ### https://shields.io/
 
@@ -378,6 +376,8 @@ https://badgen.net/badge/:subject/:status/:color?icon=github
 
 ### https://forthebadge.com/
 
+> 扁平化的徽章,支持的徽章数量有限,不支持自定义徽章.
+
 ![badge-orthebadge.com.png](./images/badge-orthebadge.com.png)
 
 网站首页默认提供了一些预览徽章,左侧是复制 `image` 链接,右侧是复制 `markdown` 链接.
@@ -394,19 +394,21 @@ https://badgen.net/badge/:subject/:status/:color?icon=github
 
 ![badge-orthebadge.com-all.png](./images/badge-orthebadge.com-all.png)
 
-### 静态进度条徽章
+### https://badge.fury.io/
 
-[![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
-[![progress](http://progressed.io/bar/50?title=progress)](https://github.com/fehmicansaglam/progressed.io)
-[![completed](http://progressed.io/bar/75?title=completed)](https://github.com/fehmicansaglam/progressed.io)
-[![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
+> 版本徽章,支持各类平台版本,包括 `npm` ,`Ruby`,`Python`,`Go` 等平台.
+
+![badge-badge.fury.io.png](./images/badge-badge.fury.io.png)
+
+选择目标平台并输入包管理信息,即可在线生成各个类型的徽章版本.
+
+![badge-badge.fury.io-npm.png](./images/badge-badge.fury.io-npm.png)
 
 ```markdown
-[![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
-[![progress](http://progressed.io/bar/50?title=progress)](https://github.com/fehmicansaglam/progressed.io)
-[![completed](http://progressed.io/bar/75?title=completed)](https://github.com/fehmicansaglam/progressed.io)
-[![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
+[![npm version](https://badge.fury.io/js/gitbook-plugin-mygitalk.svg)](https://badge.fury.io/js/gitbook-plugin-mygitalk)
 ```
+
+[![npm version](https://badge.fury.io/js/gitbook-plugin-mygitalk.svg)](https://badge.fury.io/js/gitbook-plugin-mygitalk)
 
 ## 排版布局
 
@@ -452,6 +454,22 @@ https://badgen.net/badge/:subject/:status/:color?icon=github
 
 ## 抛砖引玉
 
+- 社交化徽章
+
+![GitHub followers](https://img.shields.io/github/followers/snowdreams1006.svg?style=social)
+![GitHub forks](https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io.svg?style=social)
+![GitHub stars](https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io.svg?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io.svg?style=social)
+
+```markdown
+![GitHub followers](https://img.shields.io/github/followers/snowdreams1006.svg?style=social)
+![GitHub forks](https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io.svg?style=social)
+![GitHub stars](https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io.svg?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io.svg?style=social)
+```
+
+- 自定义徽章
+
 [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
 [![wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](http://weixin.qq.com/r/cy5CWvvE5Kabrb8593th)
 [![慕课网](https://img.shields.io/badge/%E6%85%95%E8%AF%BE%E7%BD%91-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://www.imooc.com/u/5224488/articles)
@@ -476,10 +494,27 @@ https://badgen.net/badge/:subject/:status/:color?icon=github
 [![腾讯云社区](https://img.shields.io/badge/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%A4%BE%E5%8C%BA-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://cloud.tencent.com/developer/user/2952369/activities)
 ```
 
+- 进度条徽章
+
+[![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
+[![progress](http://progressed.io/bar/50?title=progress)](https://github.com/fehmicansaglam/progressed.io)
+[![completed](http://progressed.io/bar/75?title=completed)](https://github.com/fehmicansaglam/progressed.io)
+[![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
+
+```markdown
+[![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
+[![progress](http://progressed.io/bar/50?title=progress)](https://github.com/fehmicansaglam/progressed.io)
+[![completed](http://progressed.io/bar/75?title=completed)](https://github.com/fehmicansaglam/progressed.io)
+[![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
+```
+
 ## 参考文档
 
 - [GitHub 项目徽章的添加和设置](https://juejin.im/post/5a32157c6fb9a0450b6667ac#heading-10)
 - [玩转 Github 徽章](https://www.jianshu.com/p/afba6e33e48e)
 - [为你的Github README生成漂亮的徽章和进度条](https://shikieiki.github.io/2017/03/01/%E4%B8%BA%E4%BD%A0%E7%9A%84Github%E7%94%9F%E6%88%90%E6%BC%82%E4%BA%AE%E7%9A%84%E5%BE%BD%E7%AB%A0%E5%92%8C%E8%BF%9B%E5%BA%A6%E6%9D%A1/)
 - [给python项目在github贴上build和pypi小徽章](https://blog.csdn.net/mouday/article/details/82804630)
-- [ga-beacon](https://github.com/igrigorik/ga-beacon)
+- [https://github.com/igrigorik/ga-beacon](https://github.com/igrigorik/ga-beacon)
+- [https://github.com/boennemann/badges](https://github.com/boennemann/badges)
+- [https://ellerbrock.github.io/open-source-badges/](https://ellerbrock.github.io/open-source-badges/)
+- [http://githubbadges.com/](http://githubbadges.com/)
