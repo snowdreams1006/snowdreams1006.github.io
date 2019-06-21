@@ -15,15 +15,6 @@
 [![License](https://img.shields.io/npm/l/vue.svg)](https://www.npmjs.com/package/vue)
 [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://chat.vuejs.org/)
 
-```markdown
-[![Build Status](https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg)](https://circleci.com/gh/vuejs/vue/tree/dev)
-[![Coverage Status](https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg)](https://codecov.io/github/vuejs/vue?branch=dev)
-[![Downloads](https://img.shields.io/npm/dm/vue.svg)](https://npmcharts.com/compare/vue?minimal=true)
-[![Version](https://img.shields.io/npm/v/vue.svg)](https://www.npmjs.com/package/vue)
-[![License](https://img.shields.io/npm/l/vue.svg)](https://www.npmjs.com/package/vue)
-[![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://chat.vuejs.org/)
-```
-
 - `Angular` : [https://github.com/angular/angular](https://github.com/angular/angular)
 
 [![CircleCI](https://circleci.com/gh/angular/angular/tree/master.svg?style=shield)](https://circleci.com/gh/angular/workflows/angular/tree/master)
@@ -31,26 +22,12 @@
 [![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular/angular?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge)
 [![npm version](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://www.npmjs.com/@angular/core)
 
-```markdown
-[![CircleCI](https://circleci.com/gh/angular/angular/tree/master.svg?style=shield)](https://circleci.com/gh/angular/workflows/angular/tree/master)
-[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=LzF3RzBVVGt6VWE2S0hHaC9uYllOZz09LS1BVjNTclBKV0x4eVRlcjA4QVY1M0N3PT0=--eb4ce8c8dc2c1c5b2b5352d473ee12a73ac20e06)](https://www.browserstack.com/automate/public-build/LzF3RzBVVGt6VWE2S0hHaC9uYllOZz09LS1BVjNTclBKV0x4eVRlcjA4QVY1M0N3PT0=--eb4ce8c8dc2c1c5b2b5352d473ee12a73ac20e06)
-[![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular/angular?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge)
-[![npm version](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://www.npmjs.com/@angular/core)
-```
-
 - `React` : [https://github.com/facebook/react](https://github.com/facebook/react)
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
 [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&amp;circle-token=:circle-token)](https://circleci.com/gh/facebook/react)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
-
-```markdown
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
-[![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&amp;circle-token=:circle-token)](https://circleci.com/gh/facebook/react)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
-```
 
 小结:
 
@@ -102,23 +79,7 @@ https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 
 如果你和我一样,希望在 `markdown` 文件中使用徽章,那么建议使用在线链接,或者引入本地 `svg` 相关文件.
 
-> 图片格式: `![图片文字说明](图片源地址)`
-
-```markdown
-![github-snowdreams1006-brightgreen.svg](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)
-```
-
-![github-snowdreams1006-brightgreen.svg](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)
-
-> 链接格式: `[超链接文字说明](超链接地址)`
-
-```markdown
-[https://github.com/snowdreams1006](https://github.com/snowdreams1006)
-```
-
-[https://github.com/snowdreams1006](https://github.com/snowdreams1006)
-
-> 徽章格式: `[![图片文字说明](图片源地址)](超链接地址)` 即超链接内部嵌套图片
+> 徽章格式 : `[![图片文字说明](图片源地址)](超链接地址)` 即超链接内部嵌套图片
 
 ```markdown
 [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
@@ -127,6 +88,8 @@ https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
 
 如果你是在 `html` 文件使用徽章,同样先取得在线徽章地址,然后按照 `html` 语法插入图片即可.
+
+> 徽章格式 : `<a href="超链接地址"><img src="图片源地址" alt="图片文字说明"></a>` 即超链接内部嵌套图片
 
 ```html
 <a href="https://github.com/snowdreams1006">
@@ -138,7 +101,7 @@ https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 	<img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github">
 </a>
 
-不论是什么语法,最核心最根本的是徽章的在线链接,至于不同语言有着各自的语法,按照规则拼接就好了.
+不论是什么语法,最核心最根本的获得到**徽章链接**,至于不同语言有着各自的语法,按照语言规则手动拼接就好.
 
 - `Badge URL` 
 
