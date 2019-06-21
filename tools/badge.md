@@ -176,11 +176,15 @@ https://badge.fury.io/js/gitbook-plugin-mygitalk.png
 https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 ```
 
+![github-snowdreams1006-brightgreen.svg](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)
+
 - 动态数据
 
 ```plain
 https://badge.fury.io/js/gitbook-plugin-mygitalk.svg
 ```
+
+![gitbook-plugin-mygitalk.svg](https://badge.fury.io/js/gitbook-plugin-mygitalk.svg)
 
 > 静态数据示例中 `github-snowdreams1006-brightgreen.svg` 数据不会更改,自然生成的徽章也不会变.动态数据示例中 `gitbook-plugin-mygitalk.svg` 是 `npm` 的版本号,当项目升级后,版本号会发生更改,那么生成的徽章也会随之更新.
 
@@ -192,17 +196,23 @@ https://badge.fury.io/js/gitbook-plugin-mygitalk.svg
 https://badgen.net/github/stars/snowdreams1006/gitbook-plugin-mygitalk
 ```
 
+![gitbook-plugin-mygitalk](https://badgen.net/github/stars/snowdreams1006/gitbook-plugin-mygitalk)
+
 - `Npm` 
 
 ```plain
 https://badgen.net/npm/dt/gitbook-plugin-mygitalk
 ```
 
+![gitbook-plugin-mygitalk](https://badgen.net/npm/dt/gitbook-plugin-mygitalk)
+
 - `Docker`
 
 ```plain
 https://badgen.net/docker/stars/library/centos
 ```
+
+![centos](https://badgen.net/docker/stars/library/centos)
 
 ## 静态进度条徽章
 
