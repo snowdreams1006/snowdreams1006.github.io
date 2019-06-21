@@ -188,7 +188,7 @@ https://badge.fury.io/js/gitbook-plugin-mygitalk.svg
 
 > 静态数据示例中 `github-snowdreams1006-brightgreen.svg` 数据不会更改,自然生成的徽章也不会变.动态数据示例中 `gitbook-plugin-mygitalk.svg` 是 `npm` 的版本号,当项目升级后,版本号会发生更改,那么生成的徽章也会随之更新.
 
-如果以徽章的**内容数据来源**为标准,那么可以有无数多的来源分类.
+如果以徽章的**内容数据来源**为标准,那么可以有无数多的分类.
 
 - `GitHub`
 
@@ -213,6 +213,10 @@ https://badgen.net/docker/stars/library/centos
 ```
 
 ![centos](https://badgen.net/docker/stars/library/centos)
+
+如果以徽章的**内容数据用途**为标准,那么也可以有无数多的分类.
+
+
 
 ## 静态进度条徽章
 
