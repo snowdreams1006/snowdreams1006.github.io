@@ -96,6 +96,93 @@ https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 
 > 左侧的 `svg` 无论放大多少倍,依然保持原样,清晰度保持不变.右侧的 `png` 一旦放大,立马变得模糊不清.
 
+## 如何使用徽章
+
+大多数徽章都是 `svg` 格式,当然也不排除某些徽章是 `png` 格式,不论怎么说,一律当成图标使用就可以了.
+
+如果你和我一样,希望在 `markdown` 文件中使用徽章,那么建议使用在线链接,或者引入本地 `svg` 相关文件.
+
+> 图片格式: `![图片文字说明](图片源地址)`
+
+```markdown
+![github-snowdreams1006-brightgreen.svg](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)
+```
+
+![github-snowdreams1006-brightgreen.svg](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)
+
+> 链接格式: `[超链接文字说明](超链接地址)`
+
+```markdown
+[https://github.com/snowdreams1006](https://github.com/snowdreams1006)
+```
+
+[https://github.com/snowdreams1006](https://github.com/snowdreams1006)
+
+> 徽章格式: `[![图片文字说明](图片源地址)](超链接地址)` 即超链接内部嵌套图片
+
+```markdown
+[![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
+```
+
+[![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
+
+如果你是在 `html` 文件使用徽章,同样先取得在线徽章地址,然后按照 `html` 语法插入图片即可.
+
+```html
+<a href="https://github.com/snowdreams1006">
+	<img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github">
+</a>
+```
+
+<a href="https://github.com/snowdreams1006">
+	<img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github">
+</a>
+
+不论是什么语法,最核心最根本的是徽章的在线链接,至于不同语言有着各自的语法,按照规则拼接就好了.
+
+- `Badge URL` 
+
+```plain
+https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
+```
+
+- `Markdown` 
+
+```markdown
+[![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
+```
+
+- `HTML`
+
+```html
+<a href="https://github.com/snowdreams1006"><img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github"></a>
+```
+
+- `Textile`
+
+```textile
+!https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg!:https://github.com/snowdreams1006
+```
+
+- `RDOC`
+
+```rdoc
+{<img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github" />}[https://github.com/snowdreams1006]
+```
+
+- `AsciiDoc`
+
+```asciidoc
+image:https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg["github", link="https://github.com/snowdreams1006"]
+```
+
+- `RST`
+
+```rst
+.. image:: https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
+    :target: https://github.com/snowdreams1006
+```
+
 ## 静态进度条徽章
 
 [![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
