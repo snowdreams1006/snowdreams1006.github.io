@@ -216,7 +216,29 @@ https://badgen.net/docker/stars/library/centos
 
 如果以徽章的**内容数据用途**为标准,那么也可以有无数多的分类.
 
+- 构建状态
 
+```plain
+https://img.shields.io/travis/GitbookIO/gitbook.svg
+```
+
+![Travis (.org)](https://img.shields.io/travis/GitbookIO/gitbook.svg)
+
+- 代码覆盖率
+
+```plain
+https://img.shields.io/codecov/c/github/vuejs/vue.svg
+```
+
+![Codecov](https://img.shields.io/codecov/c/github/vuejs/vue.svg)
+
+- 代码分析
+
+```plain
+https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github.io.svg
+```
+
+![GitHub top language](https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github.io.svg)
 
 ## 静态进度条徽章
 
