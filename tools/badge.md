@@ -146,7 +146,7 @@ image:https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg["github
     :target: https://github.com/snowdreams1006
 ```
 
-## 徽章的分类
+## 徽章分类
 
 如果以徽章的**格式**为标准,那么可以分为`svg` 和 `png` 两类.
 
@@ -156,30 +156,53 @@ image:https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg["github
 https://badge.fury.io/js/gitbook-plugin-mygitalk.svg
 ```
 
+![gitbook-plugin-mygitalk.svg](https://badge.fury.io/js/gitbook-plugin-mygitalk.svg)
+
 - `png`
 
 ```plain
 https://badge.fury.io/js/gitbook-plugin-mygitalk.png
 ```
 
-如果以徽章的**数据**为标准,那么可以分为静态数据和动态数据两类.
+![gitbook-plugin-mygitalk.png](https://badge.fury.io/js/gitbook-plugin-mygitalk.png)
+
+如果以徽章的**内容数据是否动态**为标准,那么可以分为静态数据和动态数据两类.
 
 > 静态数据意味着数据本身是不变的,只要在线链接不变,那么生成的徽章永远不会改变,而动态数据意味着生成徽章的数据是动态变化的,即使在线链接不变,当数据本身发现变化时,徽章自然随之更新.
 
 - 静态数据
 
-```
+```plain
 https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 ```
 
 - 动态数据
 
-```
+```plain
 https://badge.fury.io/js/gitbook-plugin-mygitalk.svg
 ```
 
 > 静态数据示例中 `github-snowdreams1006-brightgreen.svg` 数据不会更改,自然生成的徽章也不会变.动态数据示例中 `gitbook-plugin-mygitalk.svg` 是 `npm` 的版本号,当项目升级后,版本号会发生更改,那么生成的徽章也会随之更新.
 
+如果以徽章的**内容数据来源**为标准,那么可以有无数多的来源分类.
+
+- `GitHub`
+
+```plain
+https://badgen.net/github/stars/snowdreams1006/gitbook-plugin-mygitalk
+```
+
+- `Npm` 
+
+```plain
+https://badgen.net/npm/dt/gitbook-plugin-mygitalk
+```
+
+- `Docker`
+
+```plain
+https://badgen.net/docker/stars/library/centos
+```
 
 ## 静态进度条徽章
 
