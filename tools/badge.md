@@ -267,6 +267,7 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 - [https://forthebadge.com/](https://forthebadge.com/)
 - [https://badge.fury.io/](https://badge.fury.io/)
 - [http://githubbadges.com/](http://githubbadges.com/)
+- [https://github.com/boennemann/badges](https://github.com/boennemann/badges)
 - [https://github.com/fehmicansaglam/progressed.io](https://github.com/fehmicansaglam/progressed.io)
 
 ### 自定义徽章
@@ -307,34 +308,12 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 [![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
 ```
 
-## 抛砖引玉
-
-[![npm version](https://img.shields.io/npm/v/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
-[![npm-download](https://img.shields.io/npm/dt/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
-[![npm-license](https://img.shields.io/npm/l/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
-[![star this repo](http://githubbadges.com/star.svg?user=snowdreams1006&repo=gitbook-plugin-mygitalk&style=default)](https://github.com/snowdreams1006/gitbook-plugin-mygitalk)
-[![fork this repo](http://githubbadges.com/fork.svg?user=snowdreams1006&repo=gitbook-plugin-mygitalk&style=default)](https://github.com/snowdreams1006/gitbook-plugin-mygitalk/fork)
-
-```markdown
-[![npm version](https://img.shields.io/npm/v/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
-[![npm-download](https://img.shields.io/npm/dt/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
-[![npm-license](https://img.shields.io/npm/l/gitbook-plugin-mygitalk.svg)](https://www.npmjs.com/package/gitbook-plugin-mygitalk)
-[![star this repo](http://githubbadges.com/star.svg?user=snowdreams1006&repo=gitbook-plugin-mygitalk&style=default)](https://github.com/snowdreams1006/gitbook-plugin-mygitalk)
-[![fork this repo](http://githubbadges.com/fork.svg?user=snowdreams1006&repo=gitbook-plugin-mygitalk&style=default)](https://github.com/snowdreams1006/gitbook-plugin-mygitalk/fork)
-```
-
-> 上述徽章是 [gitbook-plugin-mygitalk](https://github.com/snowdreams1006/gitbook-plugin-mygitalk) 项目引用的小徽章,亲测的确不是统一分配的呢!
 
 ## 参考文档
 
-- [为你的Github README生成漂亮的徽章和进度条](https://shikieiki.github.io/2017/03/01/%E4%B8%BA%E4%BD%A0%E7%9A%84Github%E7%94%9F%E6%88%90%E6%BC%82%E4%BA%AE%E7%9A%84%E5%BE%BD%E7%AB%A0%E5%92%8C%E8%BF%9B%E5%BA%A6%E6%9D%A1/)
-- [给python项目在github贴上build和pypi小徽章](https://blog.csdn.net/mouday/article/details/82804630)
 - [GitHub 项目徽章的添加和设置](https://juejin.im/post/5a32157c6fb9a0450b6667ac#heading-10)
 - [玩转 Github 徽章](https://www.jianshu.com/p/afba6e33e48e)
-- [forthebadge](https://forthebadge.com/)
-- [badges](https://github.com/boennemann/badges)
+- [为你的Github README生成漂亮的徽章和进度条](https://shikieiki.github.io/2017/03/01/%E4%B8%BA%E4%BD%A0%E7%9A%84Github%E7%94%9F%E6%88%90%E6%BC%82%E4%BA%AE%E7%9A%84%E5%BE%BD%E7%AB%A0%E5%92%8C%E8%BF%9B%E5%BA%A6%E6%9D%A1/)
+- [给python项目在github贴上build和pypi小徽章](https://blog.csdn.net/mouday/article/details/82804630)
 - [ga-beacon](https://github.com/igrigorik/ga-beacon)
-- [shields](https://shields.io/)
-- [progressed](https://github.com/fehmicansaglam/progressed.io)
-- [Version Badge](https://badge.fury.io/)
-- [GitHub SVG Buttons](http://githubbadges.com/)
+
