@@ -58,6 +58,32 @@
 
 > 虽然不是统一分配的,但也不是毫无规律可寻,想要制作专属的小徽章,其实真的很简单!
 
+## 什么是徽章
+
+徽章是一种小巧精美的小图标,一般配有相关文字进行辅助说明,富有表现力.
+
+不仅出现于 `github` 项目主页,凡是能够表现图片的地方都可以出现徽章,本质上是一种 `svg` 格式的矢量图标.
+
+下面以自定义 `github-snowdreams1006-brightgreen.svg` 徽章为例,简单认识一下徽章.
+
+- 在线链接
+
+> 在线链接: [github-snowdreams1006-brightgreen.svg](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)
+
+```plain
+https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
+```
+
+- 浏览器效果
+
+> 打开在线链接,并检查当前网页,豁然开朗,徽章是一种 `svg` 实现的矢量图标.
+
+![badge-github-snowdreams1006.png](./images/badge-github-snowdreams1006.png)
+
+
+
+
+
 ## 静态进度条徽章
 
 [![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
