@@ -270,7 +270,7 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 - [https://github.com/boennemann/badges](https://github.com/boennemann/badges)
 - [https://github.com/fehmicansaglam/progressed.io](https://github.com/fehmicansaglam/progressed.io)
 
-### `https://shields.io/`
+### https://shields.io/
 
 > 适用于绝大多数情况,默认按照徽章内容分类,`Build`,`Code Coverage`,`Analysis` 等多主题,同时支持自定义徽章和动态徽章.
 
@@ -319,6 +319,76 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 ```
 
 ![微信公众号-雪之梦技术驿站-brightgreen.svg](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)
+
+### https://badgen.net/
+
+> 徽章内容来源种类较多,默认按照平台分类,按照特定规则生成徽章,需要手动拼接在线链接,略显繁琐.
+
+```plain
+https://badgen.net/badge/:subject/:status/:color?icon=github
+                   ──┬──  ───┬───  ──┬───  ──┬── ────┬──────
+                     │       │       │       │       └─ Extra Options (label, list, icon, color)
+                     │       │       │       │
+                     │      TEXT    TEXT    RGB / COLOR_NAME ( optional )
+                     │
+                  "badge" - default (static) badge generator
+```
+
+![badge-badgen.net.png](./images/badge-badgen.net.png)
+
+虽然支持颜色,图标以及查询参数等高级用法,但是还是习惯性采用默认设置,下面动手开始制作徽章吧!
+
+- 切换到默认动态徽章选项卡,选择 `GitHUb` 徽章.
+
+![badge-badgen.net-live-github.png](./images/badge-badgen.net-live-github.png)
+
+- 选择 `stars` 徽章,将 `micromatch` 替换成目标信息.
+
+`/github/stars/micromatch/micromatch` 替换成 `/stars/snowdreams1006/snowdreams1006.github.io`
+
+- 预览徽章效果并手动修改成目标格式.
+
+![badge-badgen.net-live-github-snowdreams1006.png](./images/badge-badgen.net-live-github-snowdreams1006.png)
+
+```markdown
+![snowdreams1006.github.io](https://badgen.net/github/stars/snowdreams1006/snowdreams1006.github.io)
+```
+
+![snowdreams1006.github.io](https://badgen.net/github/stars/snowdreams1006/snowdreams1006.github.io)
+
+除了支持动态徽章,同样也支持静态徽章,切换到 `STATIC BADGES` 选项卡,一起来生成静态徽章吧!
+
+![badge-badgen.net-static.png](./images/badge-badgen.net-static.png)
+
+```markdown
+![★★★★☆](https://badgen.net/badge/stars/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
+```
+
+![★★★★☆](https://badgen.net/badge/stars/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%86)
+
+按照徽章的在线链接规则,应该也支持自定义徽章,再次回顾一下链接规则:
+
+> 规则 : `https://badgen.net/badge/:subject/:status/:color` ,如果是自定义动态链接,估计不支持吧!
+
+```markdown
+![微信公众号-雪之梦技术驿站](https://badgen.net/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99)
+```
+
+![微信公众号-雪之梦技术驿站](https://badgen.net/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99)
+
+### 静态进度条徽章
+
+[![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
+[![progress](http://progressed.io/bar/50?title=progress)](https://github.com/fehmicansaglam/progressed.io)
+[![completed](http://progressed.io/bar/75?title=completed)](https://github.com/fehmicansaglam/progressed.io)
+[![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
+
+```markdown
+[![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
+[![progress](http://progressed.io/bar/50?title=progress)](https://github.com/fehmicansaglam/progressed.io)
+[![completed](http://progressed.io/bar/75?title=completed)](https://github.com/fehmicansaglam/progressed.io)
+[![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
+```
 
 ## 排版布局
 
@@ -387,21 +457,6 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 [![开源中国](https://img.shields.io/badge/%E5%BC%80%E6%BA%90%E4%B8%AD%E5%9B%BD-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://my.oschina.net/snowdreams1006)
 [![腾讯云社区](https://img.shields.io/badge/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%A4%BE%E5%8C%BA-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://cloud.tencent.com/developer/user/2952369/activities)
 ```
-
-### 静态进度条徽章
-
-[![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
-[![progress](http://progressed.io/bar/50?title=progress)](https://github.com/fehmicansaglam/progressed.io)
-[![completed](http://progressed.io/bar/75?title=completed)](https://github.com/fehmicansaglam/progressed.io)
-[![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
-
-```markdown
-[![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
-[![progress](http://progressed.io/bar/50?title=progress)](https://github.com/fehmicansaglam/progressed.io)
-[![completed](http://progressed.io/bar/75?title=completed)](https://github.com/fehmicansaglam/progressed.io)
-[![done](http://progressed.io/bar/100?title=done)](https://github.com/fehmicansaglam/progressed.io)
-```
-
 
 ## 参考文档
 
