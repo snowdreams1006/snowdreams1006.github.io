@@ -182,7 +182,7 @@ https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io.svg?
 https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg
 ```
 
-![微信公众号:雪之梦技术驿站](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)
+![雪之梦技术驿站](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)
 
 如果以徽章的**内容数据是否动态**为标准,那么可以分为静态数据和动态数据两类.
 
@@ -270,9 +270,60 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 - [https://github.com/boennemann/badges](https://github.com/boennemann/badges)
 - [https://github.com/fehmicansaglam/progressed.io](https://github.com/fehmicansaglam/progressed.io)
 
-### 自定义徽章
+### `https://shields.io/`
+
+> 适用于绝大多数情况,默认按照徽章内容分类,`Build`,`Code Coverage`,`Analysis` 等多主题,同时支持自定义徽章和动态徽章.
+
+如果徽章的主题明确,那么根据网站提供的主题对号入座即可在线生成徽章,下面以 `gitbook-plugin-mygitalk` 为例,简要说明如何获得相应徽章链接.
+
+> [gitbook-plugin-mygitalk](https://www.npmjs.com/package/gitbook-plugin-mygitalk) 是 `gitbook` 的一款评论插件. 
+
+![badge-shields.io-theme.png](./images/badge-shields.io-theme.png)
+
+打开网站后按照分类,选择其中一个主题,点击进去后填写目标信息,即可在线生成徽章.
+
+- 浏览已支持的主体,选择 `License` 许可证主题.
+
+![badge-shields.io-theme-license.png](./images/badge-shields.io-theme-license.png)
+
+- 浏览已支持的 `License` 许可证列表,选择 `NPM` 许可证.
+
+![badge-shields.io-theme-license-npm.png](./images/badge-shields.io-theme-license-npm.png)
+
+- 填写好正确的 `npm` 包信息并实时预览,然后点击按钮复制徽章链接或者或者特定格式的徽章.
+
+```markdown
+![NPM](https://img.shields.io/npm/l/gitbook-plugin-mygitalk.svg)
+```
+
+![NPM](https://img.shields.io/npm/l/gitbook-plugin-mygitalk.svg)
+
+> 按照主题生成徽章真的很简单,首先对号入座,然后按需生成相应徽章即可,唯一的要求就是**对号入座**!
+
+如果默认提供的徽章主题没有适合自己的徽章,或者想要自定义徽章效果,那么也可以在线制作私人订制徽章.
+
+- 打开网站后往下拉,找到 `Your Badge` 区域,准备制作专属徽章.
+
+![badge-shields.io-custom.png](./images/badge-shields.io-custom.png)
+
+- 填写(`Label`)标签-(`Message`)信息-(`Color`)颜色等信息后,点击(`Make Badge`)生成徽章.
+
+![badge-shields.io-custom-make.png](./images/badge-shields.io-custom-make.png)
+
+- 点击生成徽章后默认会在当前标签页面打开该链接,手动复制链接并调整成目标格式即可.
+
+![badge-shields.io-custom-make-preview.png](./images/badge-shields.io-custom-make-preview.png)
+
+```markdown
+![微信公众号-雪之梦技术驿站-brightgreen.svg](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)
+```
+
+![微信公众号-雪之梦技术驿站-brightgreen.svg](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)
+
+## 抛砖引玉
 
 [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
+[![wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](http://weixin.qq.com/r/cy5CWvvE5Kabrb8593th)
 [![慕课网](https://img.shields.io/badge/%E6%85%95%E8%AF%BE%E7%BD%91-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://www.imooc.com/u/5224488/articles)
 [![简书](https://img.shields.io/badge/%E7%AE%80%E4%B9%A6-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://www.jianshu.com/u/577b0d76ab87)
 [![csdn](https://img.shields.io/badge/csdn-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://blog.csdn.net/weixin_38171180)
