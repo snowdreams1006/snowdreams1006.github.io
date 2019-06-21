@@ -57,7 +57,7 @@ https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 
 ![badge-inspect-github-snowdreams1006-brightgreen.png](./images/badge-inspect-github-snowdreams1006-brightgreen.png)
 
-- `svg` VS `png` 
+- `svg` VS `png`
 
 > 如果说 `svg` 是矢量图形而 `png` 却不是,所以不妨将 `png` 姑且称之为标量图形.
 
@@ -103,13 +103,13 @@ https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 
 不论是什么语法,最核心最根本的获得到**徽章链接**,至于不同语言有着各自的语法,按照语言规则手动拼接就好.
 
-- `Badge URL` 
+- `Badge URL`
 
 ```plain
 https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 ```
 
-- `Markdown` 
+- `Markdown`
 
 ```markdown
 [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
@@ -216,7 +216,7 @@ https://badgen.net/github/stars/snowdreams1006/gitbook-plugin-mygitalk
 
 ![gitbook-plugin-mygitalk](https://badgen.net/github/stars/snowdreams1006/gitbook-plugin-mygitalk)
 
-- `Npm` 
+- `Npm`
 
 ```plain
 https://badgen.net/npm/dt/gitbook-plugin-mygitalk
@@ -276,7 +276,7 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 
 如果徽章的主题明确,那么根据网站提供的主题对号入座即可在线生成徽章,下面以 `gitbook-plugin-mygitalk` 为例,简要说明如何获得相应徽章链接.
 
-> [gitbook-plugin-mygitalk](https://www.npmjs.com/package/gitbook-plugin-mygitalk) 是 `gitbook` 的一款评论插件. 
+> [gitbook-plugin-mygitalk](https://www.npmjs.com/package/gitbook-plugin-mygitalk) 是 `gitbook` 的一款评论插件.
 
 ![badge-shields.io-theme.png](./images/badge-shields.io-theme.png)
 
@@ -320,6 +320,48 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 
 ![微信公众号-雪之梦技术驿站-brightgreen.svg](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)
 
+## 排版布局
+
+默认 `markdown` 实现的图片是依次排开的,无法自定义样式,而 `markdown` 语法同时也兼容 `html` 语法,因此我们可以用 `html` 语法实现**居中对齐**.
+
+```html
+<p align="center">
+	<a href="https://circleci.com/gh/vuejs/vue/tree/dev">
+		<img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg" alt="Build Status">
+	</a>
+	<a href="https://codecov.io/github/vuejs/vue?branch=dev">
+		<img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg" alt="Coverage Status">
+	</a>
+	<a href="https://www.npmjs.com/package/vue">
+		<img src="https://img.shields.io/npm/dm/vue.svg" alt="Downloads">
+	</a>
+	<a href="https://www.npmjs.com/package/vue">
+		<img src="https://img.shields.io/npm/l/vue.svg" alt="License">
+	</a>
+	<a href="https://chat.vuejs.org/">
+		<img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="License">
+	</a>
+</p>
+```
+
+<p align="center">
+	<a href="https://circleci.com/gh/vuejs/vue/tree/dev">
+		<img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg" alt="Build Status">
+	</a>
+	<a href="https://codecov.io/github/vuejs/vue?branch=dev">
+		<img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg" alt="Coverage Status">
+	</a>
+	<a href="https://www.npmjs.com/package/vue">
+		<img src="https://img.shields.io/npm/dm/vue.svg" alt="Downloads">
+	</a>
+	<a href="https://www.npmjs.com/package/vue">
+		<img src="https://img.shields.io/npm/l/vue.svg" alt="License">
+	</a>
+	<a href="https://chat.vuejs.org/">
+		<img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="License">
+	</a>
+</p>
+
 ## 抛砖引玉
 
 [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
@@ -335,6 +377,7 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 
 ```markdown
 [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
+[![wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](http://weixin.qq.com/r/cy5CWvvE5Kabrb8593th)
 [![慕课网](https://img.shields.io/badge/%E6%85%95%E8%AF%BE%E7%BD%91-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://www.imooc.com/u/5224488/articles)
 [![简书](https://img.shields.io/badge/%E7%AE%80%E4%B9%A6-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://www.jianshu.com/u/577b0d76ab87)
 [![csdn](https://img.shields.io/badge/csdn-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://blog.csdn.net/weixin_38171180)
@@ -367,4 +410,3 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 - [为你的Github README生成漂亮的徽章和进度条](https://shikieiki.github.io/2017/03/01/%E4%B8%BA%E4%BD%A0%E7%9A%84Github%E7%94%9F%E6%88%90%E6%BC%82%E4%BA%AE%E7%9A%84%E5%BE%BD%E7%AB%A0%E5%92%8C%E8%BF%9B%E5%BA%A6%E6%9D%A1/)
 - [给python项目在github贴上build和pypi小徽章](https://blog.csdn.net/mouday/article/details/82804630)
 - [ga-beacon](https://github.com/igrigorik/ga-beacon)
-
