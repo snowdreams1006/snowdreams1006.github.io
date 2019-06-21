@@ -376,6 +376,24 @@ https://badgen.net/badge/:subject/:status/:color?icon=github
 
 ![微信公众号-雪之梦技术驿站](https://badgen.net/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99)
 
+### https://forthebadge.com/
+
+![badge-orthebadge.com.png](./images/badge-orthebadge.com.png)
+
+网站首页默认提供了一些预览徽章,左侧是复制 `image` 链接,右侧是复制 `markdown` 链接.
+
+```markdown
+[![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
+```
+
+[![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
+
+网站首页默认展示的徽章毕竟有限,如果找不到理想徽章,岂不是白介绍了这个网站,当然不能够!
+
+`VIEW ALL` 查看目前支持的全部徽章,如果还是找不到徽章,那就真的没有.
+
+![badge-orthebadge.com-all.png](./images/badge-orthebadge.com-all.png)
+
 ### 静态进度条徽章
 
 [![progress](http://progressed.io/bar/25?title=progress)](https://github.com/fehmicansaglam/progressed.io)
