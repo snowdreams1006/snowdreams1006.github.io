@@ -166,6 +166,24 @@ https://badge.fury.io/js/gitbook-plugin-mygitalk.png
 
 ![gitbook-plugin-mygitalk.png](https://badge.fury.io/js/gitbook-plugin-mygitalk.png)
 
+如果以徽章的**样式**为标准,那么可以分为默认样式和自定义样式两类.
+
+- 默认样式
+
+```plain
+https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io.svg?style=social
+```
+
+![GitHub stars](https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io.svg?style=social)
+
+- 自定义样式
+
+```plain
+https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg
+```
+
+![微信公众号:雪之梦技术驿站](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)
+
 如果以徽章的**内容数据是否动态**为标准,那么可以分为静态数据和动态数据两类.
 
 > 静态数据意味着数据本身是不变的,只要在线链接不变,那么生成的徽章永远不会改变,而动态数据意味着生成徽章的数据是动态变化的,即使在线链接不变,当数据本身发现变化时,徽章自然随之更新.
@@ -239,6 +257,7 @@ https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github
 ```
 
 ![GitHub top language](https://img.shields.io/github/languages/top/snowdreams1006/snowdreams1006.github.io.svg)
+
 
 ## 静态进度条徽章
 
