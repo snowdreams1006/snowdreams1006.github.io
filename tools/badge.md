@@ -78,11 +78,23 @@ https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 
 > 打开在线链接,并检查当前网页,豁然开朗,徽章是一种 `svg` 实现的矢量图标.
 
-![badge-github-snowdreams1006.png](./images/badge-github-snowdreams1006.png)
+![badge-inspect-github-snowdreams1006-brightgreen.png](./images/badge-inspect-github-snowdreams1006-brightgreen.png)
 
+- `svg` VS `png` 
 
+> 如果说 `svg` 是矢量图形而 `png` 却不是,所以不妨将 `png` 姑且称之为标量图形.
 
+`svg` 是矢量图形,`png` 是标量图形,两者均能实现类似效果,只不过矢量图形不论怎么方法都能保持原样,并不会像 `png` 那样会失真而已.
 
+既然两种均能表现相同的效果,现在我们就来演示一下 `png` 的实现效果.
+
+![badge-github-snowdreams1006-brightgreen.png](./images/badge-github-snowdreams1006-brightgreen.png)
+
+> `svg` 转 `png` 在线网站: [https://cloudconvert.com/svg-to-svg](https://cloudconvert.com/svg-to-svg)
+
+![badge-github-snowdreams1006-svg-png.png](./images/badge-github-snowdreams1006-svg-png.png)
+
+> 左侧的 `svg` 无论放大多少倍,依然保持原样,清晰度保持不变.右侧的 `png` 一旦放大,立马变得模糊不清.
 
 ## 静态进度条徽章
 
