@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 22 Jun 2019 02:16:36 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Jun 2019 04:48:28 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -286,6 +286,7 @@
         </item>
         <item>
             <title><![CDATA[git bash 扩展命令(下)]]></title>
+            <description><![CDATA[已投稿给脚本之家公众号,如需查看请访问:]]></description>
             <link>https://snowdreams1006.github.io/git/tools/git-bash-extend-down.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/git/tools/git-bash-extend-down.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
