@@ -33,3 +33,22 @@ go version go1.12.4 darwin/amd64
 - `src` 源码目录
 - `pkg` 非可执行文件,转换成`.a` 文件
 - `bin` 可执行文件
+
+## 命令行工具介绍
+
+- `go build` : 用于编译源码文件,代码包,依赖包
+- `go run` : 可以编译并运行 `Go` 源码文件
+- `go get` : 主要是用来动态获取远程代码包
+
+```
+go build test.go
+```
+
+```
+go run test.go
+```
+
+```
+# https://github.com/Caplost/imooc
+go get github.com/Caplost/imooc
+```
