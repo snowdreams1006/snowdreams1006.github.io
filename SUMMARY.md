@@ -65,13 +65,12 @@
 * [java8新特性](java8/README.md)
     * [lambda表达式](java8/lambda.md)
     * [函数式接口](java8/functionInterface.md)
-
-## 学习笔记
 * [php 学习笔记](php/README.md)
     * [搭建开发环境( mac 版)](php/php-setup-environment-mac.md)
     * [关于时区的那点事](php/set-timezone-method.md)
     * [日期时间操作一箩筐](php/datetime-overview.md)
 * [go 学习笔记](go/README.md)
+    * [初识 go](go/base/about.md)
     * [标准命令详解](go/cmd/about.md)
         * [go build](go/cmd/build.md)
         * [go install](go/cmd/install.md)
