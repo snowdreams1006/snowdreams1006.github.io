@@ -52,3 +52,17 @@ go run test.go
 # https://github.com/Caplost/imooc
 go get github.com/Caplost/imooc
 ```
+
+## `GoLand` 编辑器选择和配置
+
+- 常见的 `IDE` : `Sublime text2` ,`liteide` ,`Goland` 等
+
+> 国人开发的 `liteide` ,推荐 `Goland`
+
+- `GOLand` 下载安装(https://www.jetbrains.com/go/)
+- `GOLand` 简单配置
+
+打开设置,设置`GOROOT` -> `NO SDK` 更改为`go` 安装位置
+`GOPATH` 添加项目路径
+
+
