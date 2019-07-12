@@ -27,26 +27,34 @@
 
 下面我们将介绍一种方法,让你能够在 `Windows` 电脑上安装一个苹果笔记本,用起来和真的一样,只不过你我都心知肚明,那并不是真实的机器!
 
-安装 `Mac` 操作系统需要两个前提条件:
-
-- `Windows` 电脑已安装好 `VMware` 虚拟机.
-- `Windows` 电脑已下载好 `Mac` 操作系统镜像.
-
 虚拟机技术能够虚拟出任何操作系统,并不局限于 `Windows` 安装 `Mac` ,也可以安装 `Linux` 或者 `Windows` .
 同理,虚拟机技术也不局限于 `VMware` ,也可以是 `VirtualBox` 或者 `Parallels Desktop` 等等.
 
 为了避免选择困难症,下面以 `VMware` 虚拟机安装 `Mac` 为例,简单演示一下安装流程.
 
+安装 `Mac` 操作系统需要两个前提条件:
 
-## 前情回顾
+- `Windows` 电脑已安装好 `VMware` 虚拟机.
+- `Windows` 电脑已下载好 `Mac` 操作系统镜像.
 
-虚拟机是相对于真实的物理机而言的概念,是在我们当前正在使用的计算机基础上,通过软件或硬件的方式创造的新的计算机.
+> 下载链接: 
 
-本文主要介绍的是 `VMware` 虚拟机,下载并安装 `VMware` 软件再安装操作系统即可模拟出另一台计算机的效果,这种模拟出来的计算机就是虚拟机.
+## 知识扫盲
 
-`VMware` 不仅支持 `Windows` 也支持 `Linux` ,对于 `Mac` 系统也是支持的,如需了解 `Mac` 宿主机如何安装使用虚拟机,可以参考[工具资源系列之给mac装个虚拟机](https://mp.weixin.qq.com/s/ToXjx06xlehHpsCcfOWliw).
+- **虚拟机**是相对于真实的物理机而言的概念,是在我们当前正在使用的计算机基础上,通过软件或硬件的方式创造的新的计算机.
 
-> `Windows` 物理机如何安装虚拟机请参考 [给 windows 装个 vmware 虚拟机](https://mp.weixin.qq.com/s/7_ZxBsxlMoCIr-Qcw1G8Qg)
+- `VMware` 是常用的虚拟机软件之一,物理机安装好 `VMware` 软件就可以利用该软件虚拟出任意计算机即虚拟机.
+
+`VMware` 支持 `Windows` ,`Mac` 和 `Linux` 等常见操作系统,是名副其实的跨平台软件.
+
+- **镜像** 是一种特殊格式的文件,文件后缀名一般是 `.iso` ,但也要例外,比如本文安装的 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 的后缀名却是 `.cdr` ,镜像文件就是创建虚拟机的必要程序,有了它 `VMware` 软件才能创建出虚拟机.
+
+总的来说,`VMware` 软件加载 `xxos.iso` 镜像文件创建出 `xxos` 虚拟机.
+
+所以,阅读教程前请务必准备好 `VMware` 虚拟机以及相应的 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件.
+
+- [给 windows 装个 vmware 虚拟机](https://mp.weixin.qq.com/s/7_ZxBsxlMoCIr-Qcw1G8Qg)
+- [工具资源系列之给mac装个虚拟机](https://mp.weixin.qq.com/s/ToXjx06xlehHpsCcfOWliw)
 
 ## 下载镜像
 
