@@ -71,7 +71,7 @@
 
 ## 安装镜像
 
-> 准备好已下载的镜像文件: `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 
+### 解锁镜像
 
 打开 `VMware` 软件,选择 `文件-> 创建新的虚拟机` 或者在主页中选择 `创建新的虚拟机` .
 
@@ -84,6 +84,21 @@
 虽然已经加载镜像文件,但是存在警告信息: 无法检测此光盘镜像中的操作系统. 无关紧要,下一步手动指定安装的镜像文件是 `Mac 10.14` 操作系统即可!
 
 ![windows-vmware-mac-load-image.png](./images/windows-vmware-mac-load-image.png)
+
+当我们理所当然点击下一步时,顿时傻眼了,竟然没有 `Mac os` 操作系统,凭什么?!
+
+![windows-vmware-mac-image-fail.png](./images/windows-vmware-mac-image-fail.png)
+
+客户机操作系统选项没有 `Mac` 操作系统是不是因为上一步的警告信息呢?还真不是,因为并没有解锁!
+
+解压 `macOS Unlocker for VMware v3.0.2.zip` 并找到 `win-install.cmd` 文件,选中该文件右键以管理员身份运行!
+
+![windows-vmware-mac-unlock.png](./images/windows-vmware-mac-unlock.png)
+
+> 测试时运行效果是一闪而过,应该也无碍,只要再次安装镜像时出现 `Mac Os` 操作系统就是解锁成功.
+
+### 继续安装
+
 
 `VMware` 仅能识别出镜像文件基本信息,具体版本信息还是需要手动校准,下载的镜像文件是 `Win7 旗舰版` ,因此安装版本也是 `Win7 旗舰版` .
 
