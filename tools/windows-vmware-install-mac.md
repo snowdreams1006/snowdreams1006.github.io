@@ -71,15 +71,17 @@
 
 ## 安装镜像
 
-> 准备好已下载的镜像文件: `cn_windows_7_ultimate_x64_dvd_x15-66043.iso` 
+> 准备好已下载的镜像文件: `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 
 
 打开 `VMware` 软件,选择 `文件-> 创建新的虚拟机` 或者在主页中选择 `创建新的虚拟机` .
 
 ![windows-vmware-create.png](./images/windows-vmware-create.png)
 
-总体来说,安装过程比较简单,前面相关配置按照默认值即可,后面真正安装过程可能耗费时间比较长,耐心等待安装完成.
+选择已下载好的镜像文件,选择文件时默认后缀名是 `.iso` 而我们安装的镜像文件是 `.cdr` ,因此一定要选择**全部**文件,这样就能选中 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件了!
 
-![windows-vmware-windows-install.gif](./images/windows-vmware-windows-install.gif)
+![windows-vmware-mac-load-image.png](./images/windows-vmware-mac-load-image.png)
+
+> 
 
 `VMware` 仅能识别出镜像文件基本信息,具体版本信息还是需要手动校准,下载的镜像文件是 `Win7 旗舰版` ,因此安装版本也是 `Win7 旗舰版` .
 
