@@ -39,7 +39,7 @@
 
 总的来说,`VMware` 软件加载 `xxos.iso` 镜像文件创建出 `xxos` 虚拟机.
 
-所以,阅读教程前请务必准备好 `VMware` 虚拟机以及相应的 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件.
+所以,阅读教程前请务必准备好 `VMware` 虚拟机以及相应的镜像文件.
 
 ## 安装准备
 
