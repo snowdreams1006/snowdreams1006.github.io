@@ -107,23 +107,49 @@
 
 ![windows-vmware-mac-image-success.png](./images/windows-vmware-mac-image-success.png)
 
-`VMware` 仅能识别出镜像文件基本信息,具体版本信息还是需要手动校准,下载的镜像文件是 `Win7 旗舰版` ,因此安装版本也是 `Win7 旗舰版` .
+接下来正常安装,傻瓜式操作均采用默认配置,直接点击下一步,直到安装完成.
 
-![windows-vmware-windows-config-version.png](./images/windows-vmware-windows-config-version.png)
-
-一系列安装配置完毕后,还有最后一步配置确认操作,确认无误后点击 `完成` 就可以真正进行安装虚拟机了!
-
-![windows-vmware-windows-config-confirm.png](./images/windows-vmware-windows-config-confirm.png)
-
-安装过程中可能要求输入产品密钥以及设置用户,这些操作和新买计算机刚开机时操作一模一样,百度找一下相应版本的产品密钥即可,可以设置登录用户也可以不设置用户.
-
-至此,安装成功!
-
-![windows-vmware-windows-install-info.png](./images/windows-vmware-windows-install-info.png)
+![windows-vmware-mac-install-complete.png](./images/windows-vmware-mac-install-complete.png)
 
 > 安装虚拟机后,有啥秘密试验都可以在虚拟机上进行操作啦,再也不担心会不小心损坏物理机了呢!
 
-## 回忆总结
+## 开机体验
+
+虚拟机安装完毕后,选择启动该虚拟机,正如物理机按开机按键一样,静静等待传说中的黑苹果!
+
+![windows-vmware-mac-start.png](./images/windows-vmware-mac-start.png)
+
+安装一会接着提示"无法在更新服务器上找到组件",这是因为网络不通或者破解软件的原因,可以暂时忽略该错误.
+
+![windows-vmware-mac-tools.png](./images/windows-vmware-mac-tools.png)
+
+设置语言,使劲往下滑直到最后,然后选择简体中文,紧接着下一步.
+
+![windows-vmware-mac-lang.png](./images/windows-vmware-mac-lang.png)
+
+开始安装 `macOS` 操作系统,选择"继续". 
+
+![windows-vmware-mac-install-start.png](./images/windows-vmware-mac-install-start.png)
+
+同意协议并继续下一步.
+
+![windows-vmware-mac-install-accept.png](./images/windows-vmware-mac-install-accept.png)
+
+不好意思,我又指了一条错误的安装道路!
+
+![windows-vmware-mac-install-fail.png](./images/windows-vmware-mac-install-fail.png)
+
+下一步无路可走,只好返回,现在又回到准备安装的界面,看来我们必须准备好安装磁盘才能继续!
+
+选择 `实用工具->磁盘工具` 开始准备安装磁盘.
+
+![windows-vmware-mac-install-disk-prepare.png](./images/windows-vmware-mac-install-disk-prepare.png)
+
+打开的新页面左侧有两块磁盘,选择下面以 `VMWare` 开头的磁盘,编辑好**磁盘名称**(如 `snowdreams1006`),然后点击**抹掉**.
+
+![windows-vmware-mac-install-disk-name.png](./images/windows-vmware-mac-install-disk-name.png)
+
+## 安装总结
 
 `VMware` 软件提供了虚拟机环境,差一个操作系统就能创建出虚拟机,而这种操作系统大部分是 `.iso`镜像文件.
 
