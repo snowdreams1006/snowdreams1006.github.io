@@ -21,16 +21,22 @@
 
 ![windows-vmware-mac-applestore-joke.jpg](./images/windows-vmware-mac-applestore-joke.jpg)
 
-开玩笑,
-
-对于预算不够又想要体验macOS，或者正在犹豫要不要入MacBook的小伙伴来说，黑苹果无疑是最简单的办法，对于大部分小白来说，直接在主机上安装黑苹果是一种极其费事的操作，因为每种型号的电脑所需要的文件都不太一样，无形中增加了很多难度。
-
-![windows-vmware-mac-macbook-compare.png](./images/windows-vmware-mac-macbook-compare.png)
-
-
-前面我们已经介绍了如何在 `Windows` 宿主机安装 `VMware` 虚拟机,这节我们将利用安装好的 `VMware` 软件安装 `Mac` 系统.
+哈哈,我是开玩笑的,言归正传,买不起真实的苹果笔记本也没关系,我们可以像安装普通软件那样,安装一个苹果笔记本!
 
 ![windows-vmware-mac-success.png](./images/windows-vmware-mac-success.png)
+
+下面我们将介绍一种方法,让你能够在 `Windows` 电脑上安装一个苹果笔记本,用起来和真的一样,只不过你我都心知肚明,那并不是真实的机器!
+
+安装 `Mac` 操作系统需要两个前提条件:
+
+- `Windows` 电脑已安装好 `VMware` 虚拟机.
+- `Windows` 电脑已下载好 `Mac` 操作系统镜像.
+
+虚拟机技术能够虚拟出任何操作系统,并不局限于 `Windows` 安装 `Mac` ,也可以安装 `Linux` 或者 `Windows` .
+同理,虚拟机技术也不局限于 `VMware` ,也可以是 `VirtualBox` 或者 `Parallels Desktop` 等等.
+
+为了避免选择困难症,下面以 `VMware` 虚拟机安装 `Mac` 为例,简单演示一下安装流程.
+
 
 ## 前情回顾
 
