@@ -161,7 +161,13 @@
 
 ![windows-vmware-mac-install-progress.gif](./images/windows-vmware-mac-install-progress.gif)
 
+终于安装完毕,退出安装光盘,大功告成!
 
+![windows-vmware-mac-install-exit.png](./images/windows-vmware-mac-install-exit.png)
+
+并不是所有的安装版本都是最新版,当初的最新版也不一定是现在的最初版,如果追求最新操作系统,那你可以手动升级啊!
+
+![windows-vmware-mac-install-info.png](./images/windows-vmware-mac-install-info.png)
 
 ## 安装总结
 
