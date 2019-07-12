@@ -67,6 +67,8 @@
 - `macOS Unlocker for VMware v3.0.2.zip` 解锁文件,是安装镜像文件的前提.
 - `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件,是安装 `Mac` 操作系统的灵魂.
 
+> 友情提示,百度云下载大文件限速太厉害,一定要准备好下载方案或者开通超级VIP进行下载.
+
 ## 安装镜像
 
 > 准备好已下载的镜像文件: `cn_windows_7_ultimate_x64_dvd_x15-66043.iso` 
