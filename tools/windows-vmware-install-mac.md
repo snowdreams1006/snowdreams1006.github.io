@@ -149,6 +149,20 @@
 
 ![windows-vmware-mac-install-disk-name.png](./images/windows-vmware-mac-install-disk-name.png)
 
+完成后关闭当前页面并返回到开始安装页面,紧接着继续下一步直到上次停留的页面.
+
+![windows-vmware-mac-install-success.png](./images/windows-vmware-mac-install-success.png)
+
+现在已经出现了安装磁盘,选择刚刚命名的 `snowdreams1006` 安装磁盘,继续愉快的下一步!
+
+![windows-vmware-mac-install-16min.png](./images/windows-vmware-mac-install-16min.png)
+
+虽然说还剩 `16min` ,实测感觉要长多了,幸运的是,接下来的安装步骤没有特别需要注意点,因此整理成动图略过.
+
+![windows-vmware-mac-install-progress.gif](./images/windows-vmware-mac-install-progress.gif)
+
+
+
 ## 安装总结
 
 `VMware` 软件提供了虚拟机环境,差一个操作系统就能创建出虚拟机,而这种操作系统大部分是 `.iso`镜像文件.
