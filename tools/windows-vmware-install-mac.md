@@ -79,9 +79,11 @@
 
 选择已下载好的镜像文件,选择文件时默认后缀名是 `.iso` 而我们安装的镜像文件是 `.cdr` ,因此一定要选择**全部**文件,这样就能选中 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件了!
 
-![windows-vmware-mac-load-image.png](./images/windows-vmware-mac-load-image.png)
+![windows-vmware-mac-select-image.png](./images/windows-vmware-mac-select-image.png)
 
-> 
+虽然已经加载镜像文件,但是存在警告信息: 无法检测此光盘镜像中的操作系统. 无关紧要,下一步手动指定安装的镜像文件是 `Mac 10.14` 操作系统即可!
+
+![windows-vmware-mac-load-image.png](./images/windows-vmware-mac-load-image.png)
 
 `VMware` 仅能识别出镜像文件基本信息,具体版本信息还是需要手动校准,下载的镜像文件是 `Win7 旗舰版` ,因此安装版本也是 `Win7 旗舰版` .
 
