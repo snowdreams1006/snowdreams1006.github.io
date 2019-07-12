@@ -97,8 +97,15 @@
 
 > 测试时运行效果是一闪而过,应该也无碍,只要再次安装镜像时出现 `Mac Os` 操作系统就是解锁成功.
 
+如果没有解锁成功,打开 **windows 任务管理器** 并杀死 `vmware` 相关的全部进程,再次运行`win-install.cmd` 命令.
+
+![windows-vmware-mac-kill-vmware.png](./images/windows-vmware-mac-kill-vmware.png)
+
 ### 继续安装
 
+解锁成功后,再次打开 `VMware` 软件继续安装镜像文件,此时已经出现 `Mac os` 操作系统选项了,如果没有出现该选项,请返回上一步.
+
+![windows-vmware-mac-image-success.png](./images/windows-vmware-mac-image-success.png)
 
 `VMware` 仅能识别出镜像文件基本信息,具体版本信息还是需要手动校准,下载的镜像文件是 `Win7 旗舰版` ,因此安装版本也是 `Win7 旗舰版` .
 
