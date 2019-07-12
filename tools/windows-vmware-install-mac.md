@@ -1,8 +1,32 @@
 # 给 windows 虚拟机装个 mac
 
-
-
 ![windows-vmware-mac-macbookpro.png](./images/windows-vmware-mac-macbookpro.png)
+
+众说周知,`Mac` 很好但也很贵,对一般大众而言,漂亮简洁高颜值,对软件开发者而言,方便省心有点贵.
+
+- 好到什么程度?
+
+内置大量常用的开发工具,省去了初学者安装配置环境的麻烦,版本控制工具 `svn` 默认已安装,`web` 服务器 `apache` 默认已安装,编程开发环境 `php` 默认已安装等等,例子很多就不一一列举了.
+除此之外,`Mac` 系统不同于 `Windows` 系统,`Mac` 系统是一种类 `Unix` 操作系统,命令行工具很好用,相当于提前熟悉 `Linux` 语法了,这一点是 `Windows` 望尘莫及的.
+
+- 贵到什么程度?
+
+随随便便的普通版七八千,如果再稍微挑挑拣拣,起码一两万!
+
+![windows-vmware-mac-macbook-compare.png](./images/windows-vmware-mac-macbook-compare.png)
+
+如果预算不够但又想体验一下 `Mac` 电脑,该怎么办?
+
+答案很简单,直线去去线下苹果体验店啊! 
+
+![windows-vmware-mac-applestore-joke.jpg](./images/windows-vmware-mac-applestore-joke.jpg)
+
+开玩笑,
+
+对于预算不够又想要体验macOS，或者正在犹豫要不要入MacBook的小伙伴来说，黑苹果无疑是最简单的办法，对于大部分小白来说，直接在主机上安装黑苹果是一种极其费事的操作，因为每种型号的电脑所需要的文件都不太一样，无形中增加了很多难度。
+
+![windows-vmware-mac-macbook-compare.png](./images/windows-vmware-mac-macbook-compare.png)
+
 
 前面我们已经介绍了如何在 `Windows` 宿主机安装 `VMware` 虚拟机,这节我们将利用安装好的 `VMware` 软件安装 `Mac` 系统.
 
