@@ -27,6 +27,22 @@
 
 下面我们将介绍一种方法,让你能够在 `Windows` 电脑上安装一个苹果笔记本,用起来和真的一样,只不过你我都心知肚明,那并不是真实的机器!
 
+## 知识扫盲
+
+- **虚拟机**是相对于真实的物理机而言的概念,是在我们当前正在使用的计算机基础上,通过软件或硬件的方式创造的新的计算机.
+
+- `VMware` 是常用的虚拟机软件之一,物理机安装好 `VMware` 软件就可以利用该软件虚拟出任意计算机即虚拟机.
+
+`VMware` 支持 `Windows` ,`Mac` 和 `Linux` 等常见操作系统,是名副其实的跨平台软件.
+
+- **镜像** 是一种特殊格式的文件,文件后缀名一般是 `.iso` ,但也要例外,比如本文安装的 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 的后缀名却是 `.cdr` ,镜像文件就是创建虚拟机的必要程序,有了它 `VMware` 软件才能创建出虚拟机.
+
+总的来说,`VMware` 软件加载 `xxos.iso` 镜像文件创建出 `xxos` 虚拟机.
+
+所以,阅读教程前请务必准备好 `VMware` 虚拟机以及相应的 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件.
+
+## 安装准备
+
 虚拟机技术能够虚拟出任何操作系统,并不局限于 `Windows` 安装 `Mac` ,也可以安装 `Linux` 或者 `Windows` .
 同理,虚拟机技术也不局限于 `VMware` ,也可以是 `VirtualBox` 或者 `Parallels Desktop` 等等.
 
@@ -46,89 +62,10 @@
 
 > 如果尚未安装 `VMware` 虚拟机,请参考上述链接进行安装,如果链接已失效,请私信我补发. 
 
-## 知识扫盲
+![windows-vmware-mac-downloaded.png](./images/windows-vmware-mac-downloaded.png)
 
-- **虚拟机**是相对于真实的物理机而言的概念,是在我们当前正在使用的计算机基础上,通过软件或硬件的方式创造的新的计算机.
-
-- `VMware` 是常用的虚拟机软件之一,物理机安装好 `VMware` 软件就可以利用该软件虚拟出任意计算机即虚拟机.
-
-`VMware` 支持 `Windows` ,`Mac` 和 `Linux` 等常见操作系统,是名副其实的跨平台软件.
-
-- **镜像** 是一种特殊格式的文件,文件后缀名一般是 `.iso` ,但也要例外,比如本文安装的 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 的后缀名却是 `.cdr` ,镜像文件就是创建虚拟机的必要程序,有了它 `VMware` 软件才能创建出虚拟机.
-
-总的来说,`VMware` 软件加载 `xxos.iso` 镜像文件创建出 `xxos` 虚拟机.
-
-所以,阅读教程前请务必准备好 `VMware` 虚拟机以及相应的 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件.
-
-## 下载镜像
-
-`VMware` 为我们安装虚拟机提供了环境,真正的虚拟机到底是 `Windows` 系统还是 `Linux` 系统取决于我们要安装什么操作系统.
-
-安装操作系统最简单便捷的方式就是下载操作系统的镜像文件,`VMware` 识别到镜像文件后就会一步一步安装操作系统.
-
-所以我们第一步要做的就是寻找镜像文件,正所谓"知自知彼方能百战不殆",意味着首先要确定下我们到底要安装哪一个版本的操作系统?
-
-`Windows` 操作系统有很多种,有 `Win7` ,`Win8` 和 `Win10` ,还有旗舰版和家庭版.
-
-如果我们购买真实的计算机,那肯定要好好考虑一下,毕竟金钱要花的有价值,然而我们要安装的虚拟机,并不收费,这么多版本我们可以任意挑选安装!
-
-如果有明确的目标,可以按照实际需求自行下载相应的操作系统;
-如果没有明确的目标,不妨和我一样安装一个和本机相似的虚拟机,一来操作比较熟悉,而来可以在虚拟机进行任意实验.
-
-所以,首先我要看一下本机的系统版本,因此我决定安装同款 `Win7` 旗舰版!
-
-![windows-vmware-windows-host-info.png](./images/windows-vmware-windows-host-info.png)
-
-> 选择 `我的电脑 > 右键属性 > 查看计算机的相关属性` ,我的电脑是 `Windows 7 旗舰版`
-
-现在已经明确了虚拟机的操作系统,那我们去哪里下载目标虚拟机的镜像文件呢?
-
-这里推荐一下 [https://msdn.itellyou.cn/](https://msdn.itellyou.cn/) 网站,方便使用,好评!
-
-![windows-vmware-windows-download-detail.png](./images/windows-vmware-windows-download-detail.png)
-
-- `Windows 7 Enterprise (x64) - DVD (Chinese-Simplified)` : 64 位企业版
-- `Windows 7 Enterprise (x86) - DVD (Chinese-Simplified)` : 32 位企业版
-- `Windows 7 Enterprise with Service Pack 1 (x64) - DVD (Chinese-Simplified) ` : 64 位企业版且带有`service package 1`
-- `Windows 7 Enterprise with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位企业版且带有`service package 1`
-- `Windows 7 Home Basic (x86) - DVD (Chinese-Simplified)` : 32 位家庭普通版
-- `Windows 7 Home Basic with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位家庭普通版且带有`service package 1`
-- `Windows 7 Home Premium (x64) - DVD (Chinese-Simplified)` : 64 位家庭高级版
-- `Windows 7 Home Premium (x86) - DVD (Chinese-Simplified)` : 32 位家庭高级版
-- `Windows 7 Home Premium with Service Pack 1 (x64) - DVD (Chinese-Simplified)` : 64 位家庭高级版且带有`service package 1`
-- `Windows 7 Home Premium with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位家庭高级版且带有`service package 1`
-- `Windows 7 Professional (x64) - DVD (Chinese-Simplified)` : 64 位专业版
-- `Windows 7 Professional (x86) - DVD (Chinese-Simplified)` : 32 位专业版
-- `Windows 7 Professional with Service Pack 1 (x64) - DVD (Chinese-Simplified)` : 64 位专业版且带有`service package 1` 
-- `Windows 7 Professional with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位专业版且带有`service package 1` 
-- `Windows 7 Professional with Service Pack 1, VL Build (x64) - DVD (Chinese-Simplified)` : 64 位专业版且带有`service package 1`,并基于 `VL` 进行构建.
-- `Windows 7 Professional with Service Pack 1, VL Build (x86) - DVD (Chinese-Simplified)` : 32 位专业版且带有`service package 1`,并基于 `VL` 进行构建.
-- `Windows 7 Professional, VL Build (x64) - DVD (Chinese-Simplified)` : 64 位专业版并基于 `VL` 进行构建.
-- `Windows 7 Professional, VL Build (x86) - DVD (Chinese-Simplified)` : 32 位专业版并基于 `VL` 进行构建.
-- `Windows 7 Starter (x86) - DVD (Chinese-Simplified)` : 32 位初级版
-- `Windows 7 Starter with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位初级版且带有`service package 1`
-- `Windows 7 Ultimate (x64) - DVD (Chinese-Simplified)` : 64 位旗舰版
-- `Windows 7 Ultimate (x86) - DVD (Chinese-Simplified)` : 32 位旗舰版
-- `Windows 7 Ultimate with Service Pack 1 (x64) - DVD (Chinese-Simplified)` : 64 位旗舰版且带有`service package 1` 
-- `Windows 7 Ultimate with Service Pack 1 (x86) - DVD (Chinese-Simplified)` : 32 位旗舰版且带有`service package 1` 
-- `Windows Automated Installation Kit for Windows 7 and Windows Server 2008 R2 (x86, x64, ia64) - DVD (Chinese-Simplified)` : `Windows 7 and Windows Server 2008 R2 (x86, x64, ia64)` 自动安装包套件
-- `Windows Automated Installation Kit for Windows 7 and Windows Server 2008 R2 Service Pack 1 (x86, x64, ia64) - DVD (Chinese-Simplified)` : `Windows 7 and Windows Server 2008 R2 Service Pack 1 (x86, x64, ia64)` 自动安装包套件
-
-上述这么多的版本是不是让人有些眼花缭乱,具体版本之间有何差异以及自己适合哪一种请百度一下再理性分析!
-
-以下以 64 位旗舰版且带有服务包操作系统为例进行演示,主要是创建一个和宿主机一样的操作环境,方便后续进行秘密实验!
-
-> `cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso` 镜像文件,其中 `cn` 表示中文简体语言, `Windows_7` 表示 `Win7` 操作系统, `ultimate` 表示旗舰版,`sp1` 表示`service package 1` ,`x64` 表示 64 位操作系统,`dvd` 表示 `DVD` 安装方式,`677408` 应该是版本号,`.iso` 是镜像文件的后缀.
-
-```
-ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B58548681854236C7939003B583A8078|/
-```
-
-由于镜像文件本身比较大,因此推荐使用专业的下载工具进行,这里使用的是**迅雷**下载**磁力链接**.
-
-![windows-vmware-windows-download-xunlei.png](./images/windows-vmware-windows-download-xunlei.png)
-
-> 镜像文件: `cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso` ,其中后缀是 `.iso` ,千万**不要解压**! **不要解压**! **不要解压**!
+- `macOS Unlocker for VMware v3.0.2.zip` 解锁文件,是安装镜像文件的前提.
+- `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件,是安装 `Mac` 操作系统的灵魂.
 
 ## 安装镜像
 
