@@ -37,7 +37,14 @@
 - `Windows` 电脑已安装好 `VMware` 虚拟机.
 - `Windows` 电脑已下载好 `Mac` 操作系统镜像.
 
-> 下载链接: 
+![windows-vmware-mac-required.png](./images/windows-vmware-mac-required.png)
+
+> 链接: `https://pan.baidu.com/s/1zL7-nB7ukif6nWBQ8KyOMA` 提取码: `hrgr` 
+
+- [给 windows 装个 vmware 虚拟机](https://mp.weixin.qq.com/s/7_ZxBsxlMoCIr-Qcw1G8Qg)
+- [给 mac 装个 vmware 虚拟机](https://mp.weixin.qq.com/s/ToXjx06xlehHpsCcfOWliw)
+
+> 如果尚未安装 `VMware` 虚拟机,请参考上述链接进行安装,如果链接已失效,请私信我补发. 
 
 ## 知识扫盲
 
@@ -52,9 +59,6 @@
 总的来说,`VMware` 软件加载 `xxos.iso` 镜像文件创建出 `xxos` 虚拟机.
 
 所以,阅读教程前请务必准备好 `VMware` 虚拟机以及相应的 `macOS Mojave 10.14 18A391 Lazy Installer(MD5-CDD5EDA714D8BCC8E799F8272556CF3B).cdr` 镜像文件.
-
-- [给 windows 装个 vmware 虚拟机](https://mp.weixin.qq.com/s/7_ZxBsxlMoCIr-Qcw1G8Qg)
-- [工具资源系列之给mac装个虚拟机](https://mp.weixin.qq.com/s/ToXjx06xlehHpsCcfOWliw)
 
 ## 下载镜像
 
