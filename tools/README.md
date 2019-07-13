@@ -68,6 +68,10 @@
 
 > 在线解析百度网盘资源,加速下载不封号 : [https://www.baiduwp.com/](https://www.baiduwp.com/)
 
+- [convert anything to anything](https://cloudconvert.com/)
+
+> 功能强大且免费的文档转换工具 : [https://cloudconvert.com/](https://cloudconvert.com/)
+
 ## 博客主页
 
 - [八一菜刀](http://www.xiaominfo.com/)
