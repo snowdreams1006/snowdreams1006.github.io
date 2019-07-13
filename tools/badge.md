@@ -518,3 +518,12 @@ https://badgen.net/badge/:subject/:status/:color?icon=github
 - [https://github.com/boennemann/badges](https://github.com/boennemann/badges)
 - [https://ellerbrock.github.io/open-source-badges/](https://ellerbrock.github.io/open-source-badges/)
 - [http://githubbadges.com/](http://githubbadges.com/)
+
+## 在线网站
+
+- [https://shields.io/](https://shields.io/)
+- [https://badgen.net/](https://badgen.net/)
+- [https://forthebadge.com/](https://forthebadge.com/)
+- [https://badge.fury.io/](https://badge.fury.io/)
+- [https://ellerbrock.github.io/open-source-badges/](https://ellerbrock.github.io/open-source-badges/)
+- [http://githubbadges.com/](http://githubbadges.com/)
