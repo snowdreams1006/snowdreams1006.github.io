@@ -141,6 +141,8 @@
 
 下一步无路可走,只好返回,现在又回到准备安装的界面,看来我们必须准备好安装磁盘才能继续!
 
+![windows-vmware-mac-install-mistake.jpg](./images/windows-vmware-mac-install-mistake.jpg)
+
 选择 `实用工具->磁盘工具` 开始准备安装磁盘.
 
 ![windows-vmware-mac-install-disk-prepare.png](./images/windows-vmware-mac-install-disk-prepare.png)
