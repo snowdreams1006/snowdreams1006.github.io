@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 30 Jun 2019 07:14:59 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 13 Jul 2019 09:11:10 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -503,6 +503,27 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[初识 go]]></title>
+            <link>https://snowdreams1006.github.io/go/base/about.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/about.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[环境搭建]]></title>
+            <description><![CDATA[右击计算机,属性,高级系统设置,高级,环境变量,Path,添加 go\bin .]]></description>
+            <link>https://snowdreams1006.github.io/go/base/setup.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/setup.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[基础语法]]></title>
+            <description><![CDATA[常量建议大写: const NAME="imooc"
+main 函数外定义的变量时全局变量:  var name = "global variable"]]></description>
+            <link>https://snowdreams1006.github.io/go/base/grammar.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/grammar.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[标准命令详解]]></title>
             <description><![CDATA[Go语言的1.5版本在标准命令方面有了重大变更。这倒不是说它们的用法有多大的变化，而是说它们的底层支持已经大变样了。让我们先来对比一下$GOROOT/pkg/tool/<平台相关目录>中的内容。以下简称此目录为Go工具目录。]]></description>
             <link>https://snowdreams1006.github.io/go/cmd/about.html</link>
@@ -643,7 +664,8 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[给windows虚拟机装个mac]]></title>
+            <title><![CDATA[给 windows 虚拟机装个 mac]]></title>
+            <description><![CDATA[windows-vmware-mac-macbookpro.png]]></description>
             <link>https://snowdreams1006.github.io/tools/windows-vmware-install-mac.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/windows-vmware-install-mac.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
