@@ -54,9 +54,7 @@
 }
 {% endchart %}
 
-## 平台统计
-
-### 慕课手记
+## 慕课手记
 
 > [慕课手记][imooc] : https://www.imooc.com/u/5224488/articles
 
@@ -133,7 +131,7 @@
 }
 {% endchart %}
 
-### 简书
+## 简书
 
 > [简书][jianshu] : https://www.jianshu.com/u/577b0d76ab87
 
@@ -210,7 +208,7 @@
 }
 {% endchart %}
 
-### CSDN
+## CSDN
 
 > [CSDN][csdn] : https://blog.csdn.net/weixin_38171180
 
@@ -287,7 +285,7 @@
 }
 {% endchart %}
 
-### 博客园
+## 博客园
 
 > [博客园][cnblogs] : https://www.cnblogs.com/snowdreams1006/
 
@@ -350,7 +348,7 @@
 }
 {% endchart %}
 
-### 掘金
+## 掘金
 
 > [掘金][juejin] : https://juejin.im/user/582d5cb667f356006331e586
 
@@ -427,7 +425,7 @@
 }
 {% endchart %}
 
-### 思否
+## 思否
 
 > [思否][segmentfault] : https://segmentfault.com/blog/snowdreams1006
 
@@ -504,7 +502,7 @@
 }
 {% endchart %}
 
-### 开源中国
+## 开源中国
 
 > [开源中国][oschina] : https://my.oschina.net/snowdreams1006
 
@@ -581,7 +579,7 @@
 }
 {% endchart %}
 
-### 腾讯云社区
+## 腾讯云社区
 
 > [腾讯云社区][tencent-cloud] : https://cloud.tencent.com/developer/user/2952369/activities
 
@@ -658,7 +656,7 @@
 }
 {% endchart %}
 
-### B站专栏
+## B站专栏
 
 > [B站专栏][bilibili] : https://member.bilibili.com/v2#/upload-manager/text
 
