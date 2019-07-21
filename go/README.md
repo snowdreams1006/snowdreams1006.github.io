@@ -8,7 +8,7 @@
 
 `Go` 是 `Google` 公司推出的静态强类型,编译型,并发型,并具有垃圾回收功能的开源编程语言,最初由 `Robert Griesemer` , `Rob Pike` ,`Ken Thompson` 三人主持开发,后来陆续加入其他开发者,最终于 2009 年 11 月正式开源.
 
-## 创始人
+## 创始人都是大神
 
 `Go`  的三位主要创始人分别是: 罗伯特·格瑞史莫(`Robert Griesemer`),和肯·汤普逊(`Ken Thompson`)
 
@@ -40,7 +40,7 @@
 
 ![go-index-creator.jpg](./images/go-index-creator.jpg)
 
-## 吉祥物
+## 吉祥物也很可爱
 
 原来的 `logo` 是一只可爱的囊地鼠,英文名叫 `gopher`.
 
@@ -54,7 +54,73 @@
 
 ![go-index-logo-gopher-stickers.png](./images/go-index-logo-gopher-stickers.png)
 
-## 常见问题
+## 到底好用不好用
+
+`Go` 语言是云计算时代的 `C` 语言也称为21 世纪的 `C` 语言,由此可见,`Go` 的地位非同一般.
+
+`Go` 语言的诞生是为了提高生产效率,专门对多处理器系统应用程序的编程进行了优化,使用Go编译的程序可以媲美C或C++代码的速度,而且更加安全,支持并行进程.
+
+- 运行效率高,开发高效,部署简单.
+
+> 运行效率高是因为编译性语言与解释性语言相比,开发高效是语法简单,部署简单是直接部署编译后的程序.
+
+- 语言层面支持并发,易于利用多核实现并发.
+
+> 不同于 php,只需要 go 配合 channel 即可完成进程或线程所做的工作.
+
+- 内置 `runtime` 并支持垃圾回收
+
+> 类似 `Java` 虚拟机支持垃圾回收,不必手动进行内存管理.
+
+- 简单易学,丰富的标准库,强大的网络库.
+
+> 学习成本低,语法简单但表达能力强,支持函数式编程,面向对象编程等多种编程范式.
+
+- 内置强大的工具(`gofmt`),跨平台编译,内嵌`C`支持.
+
+> 不同的人有不同的代码风格,可转化统一风格
+
+## 志同道合有几人
+
+- `Docker` : 是为开发人员构建和运行应用程序而构建的平台
+
+![go-index-docker.png](./images/go-index-docker.png)
+
+> [https://www.docker.com/](https://www.docker.com/)
+
+- `Kubernetes` : 自动化容器部署,扩展,管理的应用程序
+
+![go-index-k8s.png](./images/go-index-k8s.png)
+
+> [https://kubernetes.io/](https://kubernetes.io/)
+
+- `Etcd` : 分布式键值对存储系统
+
+![go-index-etcd.png](./images/go-index-etcd.png)
+
+> [https://etcd.io/](https://etcd.io/)
+
+- `baidu-netdisk-downloaderx` : 一款图形界面的百度网盘不限速下载器,支持 `Windows` , `Linux` 和 `Mac`
+
+![go-index-baidu-netdisk-downloaderx-BND2.png](./images/go-index-baidu-netdisk-downloaderx-BND2.png)
+
+> [https://github.com/b3log/baidu-netdisk-downloaderx](https://github.com/b3log/baidu-netdisk-downloaderx)
+
+- `pan-light` : 百度网盘不限速客户端, `golang + qt5`, 跨平台图形界面
+
+![go-index-pan-light.png](./images/go-index-pan-light.png)
+
+> [https://github.com/peterq/pan-light](https://github.com/peterq/pan-light)
+
+## 自学技术哪家强
+
+- [https://golang.org/](https://golang.org/) : The Go Programming Language
+- [https://golang.google.cn/](https://golang.google.cn/) : The Go Programming Language
+- [https://tour.go-zh.org/welcome/1](https://tour.go-zh.org/welcome/1) : Go 语言之旅
+- [https://studygolang.com/](https://studygolang.com/) : Go语言中文网- Golang中文社区
+- [https://www.runoob.com/go/go-tutorial.html](https://www.runoob.com/go/go-tutorial.html) : Go 语言教程| 菜鸟教程
+
+## 自问自答解疑惑
 
 - `go` 和 `golang` 是什么关系?
 
