@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 14 Jul 2019 08:55:48 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 21 Jul 2019 12:32:25 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -497,7 +497,7 @@
         </item>
         <item>
             <title><![CDATA[go 学习笔记]]></title>
-            <description><![CDATA[郝林，10年软件开发从业经验。搞过银行、电信软件和互联网社交等产品。对Go语言和Docker都情有独钟。现在正在从事互联网软件基础组件的构建以及Go语言的技术推广和社区运营等工作。他也是图灵原创技术图书《Go并发编程实战》和在线免费教程《Go语言第一课》的作者。]]></description>
+            <description><![CDATA[go-index-gopher.jpg]]></description>
             <link>https://snowdreams1006.github.io/go/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/README.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
