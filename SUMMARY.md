@@ -3,7 +3,6 @@
 * [简介](README.md)
 
 ## 入门教程
-
 * [markdown 入门教程](markdown/README.md)
     * [掘金入门指南](markdown/juejin.md)
     * [慕课网语法演示](markdown/imooc.md)
@@ -68,7 +67,6 @@
     * [函数式接口](java8/functionInterface.md)
 
 ## 学习笔记
-
 * [php 学习笔记](php/README.md)
     * [搭建开发环境( mac 版)](php/php-setup-environment-mac.md)
     * [关于时区的那点事](php/set-timezone-method.md)
@@ -110,13 +108,14 @@
     * [常见问题](write/faq.md)
 
 ## 开源项目
-
 * [gitbook-official](https://snowdreams1006.github.io/gitbook-official/)
 * [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
 * [security-plus](https://security-plus.github.io/)
 
-## 程序人生
+## 读书观感
+* [大数据浪潮之巅:新技术商业制胜之道](bigDataWave/README.md)
 
+## 程序人生
 * [其他](other/README.md)
     * [程序员转型之路](other/transformation.md)
     * [历史统计](other/static.md)
@@ -124,6 +123,5 @@
     * [捐赠支持](other/donate.md)
 
 ## 思绪乱飞
-
 * [TODO清单](todo/README.md)
 
