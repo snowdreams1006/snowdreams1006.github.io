@@ -124,5 +124,16 @@
 
 - `go` 和 `golang` 是什么关系?
 
+`go` 是 `golang` 的简称,`golang` 是 `go language` 的缩写,即 `go 语言`.
+
+- `go` 的常用 `IDE` 有哪些?
+
+独立集成工具主要有 `LiteIDE` 和 `GoLand` 两种,但是常见 `IDE` 基本上均提供各种 `Go` 插件,支持 `Windows` ,`MacOS` 和 `Linux` 常见操作系统.
+
+- `go` 的常见 `Web` 开发框架有哪些?
+
+`Beego` ,`Iris` 和 `Gin` 等,国人用的比较多是 `Beego`,目前资料也比较齐全.
+
+## 无总结不成文章
 
 
