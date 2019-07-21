@@ -118,38 +118,57 @@
 > 它主要服务于机器日志数据分析领域,随后又不断拓展业务,演变开发了若干不同类型的软件.
 > 在本文中我们就来好好聊聊Splunk的进阶史.
 
-27. Confluent：Kafka项目背后的公司 155
-Kafka是LinkedIn开发的开源项目，它主要通过日志文件传输的方式在不同的数据源之间同步数据。而Confluent公司是Kafka开源项目的创始人离开LinkedIn以后所创立的公司，主要致力于Kafka项目的商业化。在本文中，我们来讲讲这家公司的故事。
+27. Confluent: Kafka项目背后的公司
+> Kafka是LinkedIn开发的开源项目,它主要通过日志文件传输的方式在不同的数据源之间同步数据.
+> 而Confluent公司是Kafka开源项目的创始人离开LinkedIn以后所创立的公司,主要致力于Kafka项目的商业化.
+> 在本文中,我们来讲讲这家公司的故事.
 
-28. Powerset：HBase的“老东家” 160
-Powerset是一家在多年前被微软收购的创业公司，目前在语义搜索方面开疆拓土。它为开源社区贡献了BigTable的Hadoop版实现。本文就来讲讲这家公司的发展史。
+28. Powerset: HBase的"老东家"
+> Powerset是一家在多年前被微软收购的创业公司,目前在语义搜索方面开疆拓土.
+> 它为开源社区贡献了BigTable的Hadoop版实现.
+> 本文就来讲讲这家公司的发展史.
 
-29. Cassandra和DataStax公司的故事 166
-Cassandra是开源社区仿照Amazo# Dynamo开发的产品，它#初由Facebook开发并开源，却又被公司内部弃用。创业公司DataStax对Cassandra大力支持，造就了今#繁荣的Cassandra社区。
+29. Cassandra和DataStax公司的故事
+> Cassandra是开源社区仿照Amazon Dynamo开发的产品,它最初由Facebook开发并开源,却又被公司内部弃用.
+> 创业公司DataStax对Cassandra大力支持,造就了今日繁荣的Cassandra社区。
 
-30. Databricks：Spark的数据“金砖”王国 172
-Spark是Hadoop生态圈里大红大紫的项目，它甚至取代了Hadoop MapReduce的地位。Databricks是对这个项目进行商业化的企业。本文就来聊聊这家企业的故事。
+30. Databricks: Spark的数据"金砖"王国
+> Spark是Hadoop生态圈里大红大紫的项目,它甚至取代了Hadoop MapReduce的地位.
+> Databricks是对这个项目进行商业化的企业.
+> 本文就来聊聊这家企业的故事.
 
-31. Data Artisans和浴火重生的新一代大数据计算引擎Flink 178
-Data Artisans是对Flink进行商业化的公司。Apache Flink是一个年轻的新型处理引擎，是Hadoop社区里Spark的主要竞争对手。Flink设计理念先进，但是工程实现方面相对落后。
+31. Data Artisans和浴火重生的新一代大数据计算引擎Flink
+> Data Artisans是对Flink进行商业化的公司.
+> Apache Flink是一个年轻的新型处理引擎,是Hadoop社区里Spark的主要竞争对手.
+> Flink设计理念先进,但是工程实现方面相对落后.
 
-32. Dremio：基于Drill和Arrow的大数据公司 183
-Dremio是另外一家大数据创业公司，其创始人是从MapR公司跳槽出来的。Dremio的主要产品就是Dremio项目，它吸收了MapR主导的开源项目Drill的精华，以开源项目Arrow为核心开发。本文就来讲讲Dremio公司和Dremio平台的来龙去脉。
+32. Dremio: 基于Drill和Arrow的大数据公司
+> Dremio是另外一家大数据创业公司,其创始人是从MapR公司跳槽出来的.
+> Dremio的主要产品就是Dremio项目,它吸收了MapR主导的开源项目Drill的精华,以开源项目Arrow为核心开发.
+> 本文就来讲讲Dremio公司和Dremio平台的来龙去脉.
 
-33. Imply：基于Druid的大数据分析公司 189
-开源大数据项目Druid由Metamarkets开发。开始时籍籍无名，后来被一些大公司，尤其是Airbnb使用和推广以后，受到了很多关注。
+33. Imply: 基于Druid的大数据分析公司
+> 开源大数据项目Druid由Metamarkets开发.
+> 开始时籍籍无名,后来被一些大公司,尤其是Airbnb使用和推广以后,受到了很多关注.
 
-34. Kyligence：麒麟背后的大数据公司 194
-麒麟(英文名字是Kylin)是第1个全部由中国人主导的Apache顶#开源项目，Kyligence则是对这个项目进行商业化的公司。本文就来看看麒麟和Kyligence的故事。
+34. Kyligence: 麒麟背后的大数据公司
+> 麒麟(英文名字是Kylin)是第1个全部由中国人主导的Apache顶级开源项目,Kyligence则是对这个项目进行商业化的公司.
+> 本文就来看看麒麟和Kyligence的故事.
 
-35. Snowflake：云端的弹性数据仓库 200
-Snowflake是一个构建在云端的弹性数据仓库，它背后的公司与之同名。Snowflake公司的创始人和管理层都有强大的背景，本文就来讲一下Snowflake及其公司的故事。
+35. Snowflake: 云端的弹性数据仓库
+> Snowflake是一个构建在云端的弹性数据仓库,它背后的公司与之同名.
+> Snowflake公司的创始人和管理层都有强大的背景,本文就来讲一下Snowflake及其公司的故事.
 
-36. TiDB：一个国产新数据库的创业故事 205
-TiDB是位于北京的一家创业公司PingCAP的产品，它的目标是实现一个开源的类似谷歌Spanner的系统，这个产品非常有特色，本文就来聊聊TiDB和它背后的公司。
+36. TiDB：一个国产新数据库的创业故事
+> TiDB是位于北京的一家创业公司PingCAP的产品,它的目标是实现一个开源的类似谷歌Spanner的系统,这个产品非常有特色,本文就来聊聊TiDB和它背后的公司.
 
-37. 大数据创业公司的前景：红海vs.蓝海 211
-关于创业的市场，通常有红海和蓝海的说法，蓝海容易成功，红海相对艰难。对大数据创业公司来说，蓝海多半指的是应用软件类的市场，而红海指的则是基础架构软件类的市场。本文将对比分析一下这两类市场。
+37. 大数据创业公司的前景: 红海vs.蓝海
+> 关于创业的市场,通常有红海和蓝海的说法,蓝海容易成功,红海相对艰难.
+> 对大数据创业公司来说,蓝海多半指的是应用软件类的市场,而红海指的则是基础架构软件类的市场.
+> 本文将对比分析一下这两类市场.
 
-38. 如何通过分析企业的技术积累来判断其发展前景 216
-通过分析企业的技术积累，能够有效地判断企业的发展前景如何。我们需要关注三个方面：技术适用的场景是否有巨大的盈利空间，技术本身是否有领先和独到之处，以及技术的积累是否足够深和广。
+38. 如何通过分析企业的技术积累来判断其发展前景
+> 通过分析企业的技术积累,能够有效地判断企业的发展前景如何.
+> 我们需要关注三个方面: 技术适用的场景是否有巨大的盈利空间,技术本身是否有领先和独到之处,以及技术的积累是否足够深和广.
+
+## 总结分析
