@@ -54,6 +54,79 @@
 
 ![go-index-logo-gopher-stickers.png](./images/go-index-logo-gopher-stickers.png)
 
+## 体验 go 语言魅力
+
+- 案例一
+
+> `fmt.Println("Hello, 世界")` : 输出字符串并换行
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  fmt.Println("Hello, 世界")
+}
+```
+
+![go-index-helloworld.png](./images/go-index-helloworld.png)
+
+- 案例二
+
+> `a, b = b, a` : 互换变量`a` 和 `b` 的值,而其他语言一般都需要引入临时变量.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var a = 3
+    var b = 4
+    fmt.Println(a, b)
+    a, b = b, a
+    fmt.Println(a, b)
+}
+```
+
+![go-index-exchange.png](./images/go-index-exchange.png)
+
+- 案例三
+
+> `go` + `chan` 关键字轻松完成并行计算
+
+```go
+package main
+
+import (
+    "fmt"
+    "math"
+)
+
+func main() {
+    fmt.Println(pi(5000))
+}
+
+func pi(n int) float64 {
+    ch := make(chan float64)
+    for k := 0; k <= n; k++ {
+        go term(ch, float64(k))
+    }
+    f := 0.0
+    for k := 0; k <= n; k++ {
+        f += <-ch
+    }
+    return f
+}
+
+func term(ch chan float64, k float64) {
+    ch <- 4 * math.Pow(-1, k) / (2*k + 1)
+}
+```
+
+![go-index-concurrentpi.png](./images/go-index-concurrentpi.png)
+
 ## 到底好用不好用
 
 `Go` 语言是云计算时代的 `C` 语言也称为21 世纪的 `C` 语言,由此可见,`Go` 的地位非同一般.
