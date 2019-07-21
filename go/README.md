@@ -40,6 +40,20 @@
 
 ![go-index-creator.jpg](./images/go-index-creator.jpg)
 
+## 吉祥物
+
+原来的 `logo` 是一只可爱的囊地鼠,英文名叫 `gopher`.
+
+![go-index-logo-old.png](./images/go-index-logo-old.png)
+
+新的 `logo` 是现代化图标,代表更快更强,体现速度和效率.
+
+![go-index-logo-new.png](./images/go-index-logo-new.png)
+
+网上流传甚广的一组很萌很可爱的吉祥物,并附上 github 链接: [https://github.com/tenntenn/gopher-stickers](https://github.com/tenntenn/gopher-stickers)
+
+![go-index-logo-gopher-stickers.png](./images/go-index-logo-gopher-stickers.png)
+
 ## 常见问题
 
 - `go` 和 `golang` 是什么关系?
