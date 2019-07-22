@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 21 Jul 2019 12:32:25 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Jul 2019 01:25:18 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -739,6 +739,13 @@ main 函数外定义的变量时全局变量:  var name = "global variable"]]></
             <description><![CDATA[faq-github-build-failed-issue01.png]]></description>
             <link>https://snowdreams1006.github.io/write/faq.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/write/faq.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[大数据浪潮之巅:新技术商业制胜之道]]></title>
+            <description><![CDATA[这本书讲述了大数据的发展史,描述了一幅波澜壮阔的宏大场面,有的公司迎难而上抓住机遇,有的公司错失良机失之交臂,看到的不是技术而是一系列的历史事件.]]></description>
+            <link>https://snowdreams1006.github.io/bigDataWave/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/bigDataWave/README.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
