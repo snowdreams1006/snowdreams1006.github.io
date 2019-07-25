@@ -32,6 +32,8 @@
 
 > 不同的人有不同的代码风格,可转化统一风格
 
+![go-index-logo-new.png](./images/go-index-logo-new.png)
+
 ## 知名应用
 
 - `Docker` : 是为开发人员构建和运行应用程序而构建的平台
@@ -53,8 +55,6 @@
 > [https://etcd.io/](https://etcd.io/)
 
 ## 学习文档
-
-![go-index-logo-new.png](./images/go-index-logo-new.png)
 
 - [https://golang.org/](https://golang.org/) : The Go Programming Language
 - [https://golang.google.cn/](https://golang.google.cn/) : The Go Programming Language
