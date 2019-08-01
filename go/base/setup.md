@@ -89,13 +89,16 @@ go version go1.12.7 darwin/amd64
 
 运行命令的过程中可能会询问是否安装**命令行开发者工具**,按照提示默认安装即可.
 
-![go-base-setup-install-cmd-tools.gif](../images/go-base-setup-setup-install-cmd-tools.gif)
+![go-base-setup-install-cmd-tools.gif](../images/go-base-setup-install-cmd-tools.gif)
 
 ## `Go` 安装小结
 
 `Go` 语言安装来说比较简单,建议采用默认配置进行安装,这样不用操心各种环境变量的配置,否则一上来就暴露在 `GOROOT`,`GOPATH` 和 `PATH` 等诸多陌生概念之中,影响初学者搭建环境的信心,而且这些概念在刚开始并不会用到,未免有些操之过急.
 
 所以,采用默认安装配置后,只要记住 `Go` 默认位置以及接下来在哪写 `Go` 程序的位置足矣!
+
+- 测试是否安装成功,只需要在命令行窗口中运行 `go version` 能够输出 `Go` 的版本信息表示安装成功,否则可能安装失败.
+- 查询 `Go` 的安装位置以及工作空间位置只需运行 `go env` 就能找到相应的 `GOROOT` 和 `GOPATH` 信息.
 
 如果是 `Windows` 系统:
 
@@ -105,7 +108,7 @@ go version go1.12.7 darwin/amd64
 如果是 `Mac` 系统:
 
 - `Go` 的默认安装位置(`GOROOT`): `/usr/local/go`
-- `Go` 的默认工作空间(`GOPATH`): `/Users/snowdreams1006/go`
+- `Go` 的默认工作空间(`GOPATH`): `/Users/yourusername/go`
 
 搭建基本的语言环境是第一步,命令行操作虽然简单,不需要额外依赖,但实际工作中总不能一直在命令行中编写代码吧,还需要一个称心如意的 `IDE` 来辅助我们开发,下一节见!
 
