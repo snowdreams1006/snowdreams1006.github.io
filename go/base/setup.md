@@ -48,66 +48,31 @@
 
 ![go-base-setup-explain-userprofile.png](../images/go-base-setup-explain-userprofile.png)
 
+## `Go` 测试验证
 
-## 环境搭建和 `IDE` 的安装使用
+安装前命令行中输入 `go` 提示无命令,安装后再次输入 `go` 则能正确显示命令信息.
 
-- `windows` 开发环境搭建与设置
-  * `go` 下载安装
-  * `goroot` ,`gopath` 设置和注意点
-  * `go` 语言目录结构介绍
-- 命令行工具介绍
-- `GoLand` 编辑器选择和配置
+> 安装后必须新打开命令行窗口才能生效,`go version` 可以打印出 `Go` 的版本信息.
 
-## `windows` 开发环境搭建与设置
-
-### 环境变量设置
-
-右击计算机,属性,高级系统设置,高级,环境变量,Path,添加 go\bin .
+![go-base-setup-verify-go.png](../images/go-base-setup-verify-go.png)
 
 ```bash
 $ go version
-go version go1.12.4 darwin/amd64
+go version go1.12.7 windows/amd64
 ```
 
-新建 `GOROOT` `GOPATH` 环境变量,其中`GOPATH`设置`GO` 语言源码存放目录,`GOROOT`设置`GO`安装目录.
+![go-base-setup-go-version.png](../images/go-base-setup-go-version.png)
 
-`GOPATH` 可以设置多个工作目录,比如`go get` 下载扩展工具时会下载到`GOPATH`第一个.
+上述命令行操作验证了 `Go` 语言本身已安装正确,其中 `go env` 展示了 `Go` 相关的环境变量,目前重要的变量有两个:
 
-### `go` 语言目录结构介绍
+- `GOROOT` : `Go` 的安装目录,默认 `GOROOT=c:\go`
+- `GOPATH` : `Go` 的工作空间,默认 `GOPATH=C:\Users\snowdreams1006-win7\go`,其中 `C:\Users\snowdreams1006-win7` 表示用户家目录.
 
-- `src` 源码目录
-- `pkg` 非可执行文件,转换成`.a` 文件
-- `bin` 可执行文件
+上述两个变量都是安装后自动设置的,除非自定义安装位置才需要手动调整一系列的环境变量,作为初次接触 `Go` 语言,不建议瞎折腾,为时过早,目前只要记住这些目录的位置在哪就可以了.
 
-## 命令行工具介绍
+> 任意目录下打开命令行窗口都能调用 `Go` 相关命令,比如 `go version` 和 `go env` ,这是因为安装 `Go` 时已自动追加了系统环境变量 `PATH=%PATH%;C:\Go\bin`,如果上述验证失败,记得修改环境变量 `PATH` 试试看!
 
-- `go build` : 用于编译源码文件,代码包,依赖包
-- `go run` : 可以编译并运行 `Go` 源码文件
-- `go get` : 主要是用来动态获取远程代码包
+## `Go` 其他系统
 
-```
-go build test.go
-```
-
-```
-go run test.go
-```
-
-```
-# https://github.com/Caplost/imooc
-go get github.com/Caplost/imooc
-```
-
-## `GoLand` 编辑器选择和配置
-
-- 常见的 `IDE` : `Sublime text2` ,`liteide` ,`Goland` 等
-
-> 国人开发的 `liteide` ,推荐 `Goland`
-
-- `GOLand` 下载安装(https://www.jetbrains.com/go/)
-- `GOLand` 简单配置
-
-打开设置,设置`GOROOT` -> `NO SDK` 更改为`go` 安装位置
-`GOPATH` 添加项目路径
 
 
