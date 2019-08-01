@@ -32,6 +32,23 @@
 
 > 如果安装时没有采用默认配置而是自定义安装位置,那么应该自行设置后续相关环境变量.
 
+![go-base-setup-variable-added.png](../images/go-base-setup-variable-added.png)
+
+![go-base-setup-path-modified.png](../images/go-base-setup-path-modified.png)
+
+> 默认情况下,安装 `Go` 语言后新增了 `GOPATH` 和 `PATH` 用户系统变量,同时修改了系统环境变量`PATH` .
+
+默认情况下,`Go` 安装成功后发生了如下改变:
+
+- 增加了用户变量: `GOPATH=%USERPROFILE%\go` 
+- 增加了用户变量: `PATH=%USERPROFILE%\go\bin`
+- 修改了系统变量: `PATH=%PATH%;C:\Go\bin`
+
+其中 `%USERPROFILE%` 代表的是当前计算机登录用户的家目录,比如我的登录名是 `snowdreams1006-win7`,那么 `%USERPROFILE%` 表示的是 `C` 盘下的 `Users` 目录下的 `snowdreams1006-win7` 目录,即 `%USERPROFILE%=C:\Users\snowdreams1006-win7`
+
+![go-base-setup-explain-userprofile.png](../images/go-base-setup-explain-userprofile.png)
+
+
 ## 环境搭建和 `IDE` 的安装使用
 
 - `windows` 开发环境搭建与设置
