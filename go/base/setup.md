@@ -1,6 +1,36 @@
 # 环境搭建
 
+千里之行始于足下,开始 `Go` 语言学习之旅前,首先要搭建好本地开发环境,然后就可以放心大胆瞎折腾了.
 
+`Go` 的环境安装和其他语言安装没什么特别注意之处,下载安装包下一步下一步直到完成,可能唯一需要注意的就是 `$GOPATH` 环境变量的设置问题.
+
+不过,简单起见,目前采用默认配置,等到比较熟悉 `Go` 语言时候再自定义设置也不迟,因此采用喜闻乐见的傻瓜式安装方式吧!
+
+![go-base-setup-index.png](../images/go-base-setup-index.png)
+
+## `Go` 下载安装
+
+由于众所周知的原因,谷歌被墙,因此 `Go` 的国外官网无法访问,好在已提供 `Go` 的中国官网可以正常访问.
+
+![go-base-setup-website.png](../images/go-base-setup-website.png)
+
+- 国外官网: [https://golang.org/](https://golang.org/)
+- 国内官网: [https://golang.google.cn/](https://golang.google.cn/)
+- Go 语言中文网: [https://studygolang.com/](https://studygolang.com/)
+
+> 除了官网下载,也可以从第三方网站下载,一般速度比较快,下面就以 `Windows` 系统为例演示下载安装过程.
+
+![go-base-setup-download.png](../images/go-base-setup-download.png)
+
+双击下载文件 `go1.12.7.windows-amd64.msi` 按照提示一直下一步直到安装完毕.
+
+![go-base-setup-install.gif](../images/go-base-setup-install.gif)
+
+默认情况下 `Go` 安装到 `C:\Go` 目录,同时设置了 `$GOPATH` 环境变量.
+
+![go-base-setup-install-dir.png](../images/go-base-setup-install-dir.png)
+
+> 如果安装时没有采用默认配置而是自定义安装位置,那么应该自行设置后续相关环境变量.
 
 ## 环境搭建和 `IDE` 的安装使用
 
@@ -12,10 +42,6 @@
 - `GoLand` 编辑器选择和配置
 
 ## `windows` 开发环境搭建与设置
-
-### `go` 下载安装
-
-> 下载地址: [https://golang.org/dl/](https://golang.org/dl/)
 
 ### 环境变量设置
 
