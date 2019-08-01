@@ -72,7 +72,40 @@ go version go1.12.7 windows/amd64
 
 > 任意目录下打开命令行窗口都能调用 `Go` 相关命令,比如 `go version` 和 `go env` ,这是因为安装 `Go` 时已自动追加了系统环境变量 `PATH=%PATH%;C:\Go\bin`,如果上述验证失败,记得修改环境变量 `PATH` 试试看!
 
-## `Go` 其他系统
+## `Mac` 安装配置
 
+[点此下载](https://dl.google.com/go/go1.12.7.darwin-amd64.pkg)并双击安装 `go1.12.7.darwin-amd64.pkg` ,同样傻瓜式下一步安装操作.
 
+![go-base-setup-install-mac.gif](../images/go-base-setup-install-mac.gif)
+
+```bash
+snowdreams1006-mac11deMac:~ snowdreams1006$ go version
+go version go1.12.7 darwin/amd64
+```
+
+安装完毕后打开**终端**验证 `Go` 的基本命令是否正常,运行 `go version` 和 `go env` 查看基本配置信息.
+
+![go-base-setup-verify-go-mac.png](../images/go-base-setup-verify-go-mac.png)
+
+运行命令的过程中可能会询问是否安装**命令行开发者工具**,按照提示默认安装即可.
+
+![go-base-setup-install-cmd-tools.gif](../images/go-base-setup-setup-install-cmd-tools.gif)
+
+## `Go` 安装小结
+
+`Go` 语言安装来说比较简单,建议采用默认配置进行安装,这样不用操心各种环境变量的配置,否则一上来就暴露在 `GOROOT`,`GOPATH` 和 `PATH` 等诸多陌生概念之中,影响初学者搭建环境的信心,而且这些概念在刚开始并不会用到,未免有些操之过急.
+
+所以,采用默认安装配置后,只要记住 `Go` 默认位置以及接下来在哪写 `Go` 程序的位置足矣!
+
+如果是 `Windows` 系统:
+
+- `Go` 的默认安装位置(`GOROOT`): `C:\go`
+- `Go` 的默认工作空间(`GOPATH`): `C:\Users\yourusername\go`
+
+如果是 `Mac` 系统:
+
+- `Go` 的默认安装位置(`GOROOT`): `/usr/local/go`
+- `Go` 的默认工作空间(`GOPATH`): `/Users/snowdreams1006/go`
+
+搭建基本的语言环境是第一步,命令行操作虽然简单,不需要额外依赖,但实际工作中总不能一直在命令行中编写代码吧,还需要一个称心如意的 `IDE` 来辅助我们开发,下一节见!
 
