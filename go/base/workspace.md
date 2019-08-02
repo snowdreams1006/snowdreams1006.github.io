@@ -145,6 +145,8 @@ func main() {
 
 ### `go get` 下载代码包
 
+`go get github.com/golang/example/hello` 下载 `Go` 官方示例的 `hello` 代码包.
+
 ```bash
 snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
 $ tree
@@ -241,7 +243,19 @@ $
 
 ### `go test` 测试代码包
 
+`Go` 自带轻量级的测试框架,测试文件命名是 `xxx_test.go` ,文件内的方法签名是 `TestXXX` .
+
+`go test github.com/golang/example/stringutil` 测试 `stringutil` 代码包,是因为包内存在测试文件 `reverse_test.go`
+
+```bash
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+$ go test github.com/golang/example/stringutil
+ok      github.com/golang/example/stringutil    0.342s
+```
+
 ### `go install` 安装代码包
+
+
 
 ### `go build` 编译代码包
 
