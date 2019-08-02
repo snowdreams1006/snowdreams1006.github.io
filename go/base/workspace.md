@@ -34,6 +34,32 @@
 
 > 如果你刚刚安装 `Go` 语言或者不是默认形式安装的 `Go`,打开命令行窗口运行 `go env` 查看 `GOPATH` 那一项,`GOPATH` 指代的目录就是工作空间.
 
+![go-base-workspace-go-env.png](../images/go-base-workspace-go-env.png)
+
+## 体验别人的 `Go` 命令
+
+默认情况下,刚刚安装完毕的 `Go` 环境并不会自动创建工作空间目录,可以手动创建也可以运行别人的 `Go` 命令时顺便创建.
+
+```bash
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 /
+# 初始时工作空间并未创建
+$ ls $GOPATH
+ls: cannot access 'C:\Users\snowdreams1006-win7\go': No such file or directory
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 /
+# 下载别人的 `Go` 命令顺便创建了工作空间
+$ go get github.com/snowdreams1006/learn-go/hello
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 /
+# 已经按照标准目录结构创建完毕,目前有src和bin目录就足够了
+$ ls $GOPATH
+bin/  src/
+```
+
+
+
+
+## 打造自己的 `Go` 命令
 
 ## `Go` 
 
