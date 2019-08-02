@@ -255,11 +255,79 @@ ok      github.com/golang/example/stringutil    0.342s
 
 ### `go install` 安装代码包
 
+`go install github.com/golang/example/hello` 安装代码包,运行可执行文件 `hello` 输出 `Hello, Go examples!`
 
+```bash
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+$ go install github.com/golang/example/hello
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+$ hello
+Hello, Go examples!
+```
 
 ### `go build` 编译代码包
 
+上述命令我们都是在 `golang/example` 项目下进行演示的,不能厚此薄彼,下面这两个命令还是演示我们自己手写的 `hello` 命令文件吧!
+
+首先切换到 `hello` 目录下,这样省的输入一长串的路径,在当前目录下运行 `go` 命令可以省略文件路径.
+
+```bash
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+# 切换到 `learn-go` 项目的 `hello` 目录
+$ cd $GOPATH/src/github.com/snowdreams1006/learn-go/hello
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go/src/github.com/snowdreams1006/earn-go/hello
+$ ls
+hello.go
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go/src/github.com/snowdreams1006/earn-go/hello
+# go build 省略文件路径表示在当前目录下进行编译,输出文件也是当前目录下
+$ go build
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go/src/github.com/snowdreams1006/earn-go/hello
+$ ls
+hello.exe*  hello.go
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go/src/github.com/snowdreams1006/earn-go/hello
+# 此时直接运行 `hello` 命令,运行的的是 `$GOPATH/bin` 目录下的命令而不是当前目录下的 `hello`
+$ hello
+Hello, Go examples!
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go/src/github.com/snowdreams1006/learn-go/hello
+$ ./hello
+Hello, world.
+```
+
+上述演示结果,展示了切换到当前目录下可以直接省略代码包路径,默认输出的可执行文件也由原先的 `$GOPATH/bin` 目录变成当前目录.
+
+直接运行 `hello` 命令输出的结果是原先的 `$GOPATH/bin/hello` 命令而不是当前目录下的 `hello`,至于为什么如此,暂时不太理解.
+
+当然想要运行当前目录下的 `hello.exe` 命令文件也很简单,指定路径即可: `./hello`
+
+![go-base-workspace-go-build-question.png](../images/go-base-workspace-go-build-question.png)
+
 ### `go run` 运行代码包
+
+`go build` 命令或者 `go install` 命令都会生成可执行二进制文件,然后运行该二进制文件才能输出命令结果.
+
+`go run` 就是一步到位的命令,不用生成文件直接输出命令的执行结果,有时候这种方式也很有用!
+
+```bash
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go/src/github.com/snowdreams1006/learn-go/hello
+$ ls
+hello.go
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go/src/github.com/snowdreams1006/learn-go/hello
+$ go run hello.go
+Hello, world.
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go/src/github.com/snowdreams1006/learn-go/hello
+$ ls
+hello.go
+```
+
+值得注意的是,`go run` 后面紧跟着的是文件名,不能像 `go build` 那样省略包路径,否则会报错.
 
 ## `GoLand` 编辑器选择和配置
 
