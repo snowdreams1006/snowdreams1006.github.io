@@ -56,8 +56,23 @@ $ ls $GOPATH
 bin/  src/
 ```
 
+运行完 `go get github.com/snowdreams1006/learn-go/hello` 命令后,工作空间目前已近乎标准目录.
 
+![go-base-workspace-go-get-tree.png](../images/go-base-workspace-go-get-tree.png)
 
+可以看出,`go get` 命令下载了 `hello` 命令所依赖的文件并生成 `bin/hello.exe` 可执行文件,现在终于可以说一声 `Hello world!`
+
+```bash
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+$ hello
+!oG,olleH
+```
+
+这个是啥?怎么不是传说中的 `Hello World` ?
+
+![go-base-workspace-go-get-angry.png](../images/go-base-workspace-go-get-angry.png)
+
+> 聪明的你,或许已经发现输出的语句的确不是 `Hello World` 而是 `Hello Go` 反过来写!
 
 ## 打造自己的 `Go` 命令
 
