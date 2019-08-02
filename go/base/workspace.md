@@ -91,41 +91,161 @@ $ hello
 > 重要区别: 
 > `Go` 的命名空间(即基本路径)是域名正写: `github.com/snowdreams1006`,如果是其他语言,命名空间可能就是域名反写形式: `com.github.snowdreams1006` .
 
+
 ```bash
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~
+# 当前并未创建过工作空间
+$ ls $GOPATH
+ls: cannot access 'C:\Users\snowdreams1006-win7\go': No such file or directory
 
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~
+# 在工作空间下创建 `learn-go` 项目
+$ mkdir -p $GOPATH/src/github.com/snowdreams1006/learn-go/hello
 
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~
+# 在 `learn-go` 项目下创建 `hello.go` 文件
+$ vim $GOPATH/src/github.com/snowdreams1006/learn-go/hello/hello.go
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~
+# `hello.go` 文件内容,输出 `Hello world`
+$ cat $GOPATH/src/github.com/snowdreams1006/learn-go/hello/hello.go
+package main
+
+import "fmt"
+
+func main() {
+        fmt.Printf("Hello, world.\n")
+}
 ```
 
-## `Go` 
+现在 `Go` 语言版的 `Hello World` 已经编写完毕,接下来让我们编辑输出并安装 `hello` 文件命令吧!
 
-新建 `GOROOT` `GOPATH` 环境变量,其中`GOPATH`设置`GO` 语言源码存放目录,`GOROOT`设置`GO`安装目录.
+在命令行窗口运行 `go install github.com/snowdreams1006/learn-go/hello` 命令会在工作空间的 `bin` 目录下生成 `hello.exe` 可执行文件.
 
-`GOPATH` 可以设置多个工作目录,比如`go get` 下载扩展工具时会下载到`GOPATH`第一个.
+![go-base-workspace-go-install-ls.png](../images/go-base-workspace-go-install-ls.png)
 
-### `go` 语言目录结构介绍
+现在命令行窗口不负众望,输出了期待已久的 `Hello World`!
 
-- `src` 源码目录
-- `pkg` 非可执行文件,转换成`.a` 文件
-- `bin` 可执行文件
+![go-base-workspace-go-install-hi.png](../images/go-base-workspace-go-install-hi.png)
 
-## 命令行工具介绍
+## 简单讲解下 `Go` 命令 
 
-- `go build` : 用于编译源码文件,代码包,依赖包
-- `go run` : 可以编译并运行 `Go` 源码文件
-- `go get` : 主要是用来动态获取远程代码包
+无论是下载别人的远程代码还是自己从零编写代码,在命令行中都用到了相应命令,`go get` 和 `go install` 等.
 
+- `go get` : 下载远程代码包,如果本地已安装,则执行逻辑退化为 `go install`.
+- `go install` : 安装本地依赖包,如果本地没有相关依赖,则报错提示无法找到相关依赖包.
+
+当然 `Go` 支持的常用命令远远不止这两个,直接输入 `go` 自然会提示有哪些命令可供使用,如果想要查询具体某一个命令的帮助文档,则输入 `go help <command>` 即可,例如 `go help get`
+
+![go-base-workspace-go-help-command.png](../images/go-base-workspace-go-help-command.png)
+
+这些命令比较简单,不用翻译也能猜出八九不离十,故此不浪费时间一一阐述.
+
+下面直接上代码亲测运行一遍相关命令.
+
+### `go get` 下载代码包
+
+```bash
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+$ tree
+.
+|-- bin
+|   `-- hello.exe
+`-- src
+    `-- github.com
+        `-- snowdreams1006
+            `-- learn-go
+                `-- hello
+                    `-- hello.go
+
+6 directories, 2 files
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+$ go get github.com/golang/example/hello
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+$ tree
+.
+|-- bin
+|   `-- hello.exe
+`-- src
+    `-- github.com
+        |-- golang
+        |   `-- example
+        |       |-- LICENSE
+        |       |-- README.md
+        |       |-- appengine-hello
+        |       |   |-- README.md
+        |       |   |-- app.go
+        |       |   |-- app.yaml
+        |       |   `-- static
+        |       |       |-- favicon.ico
+        |       |       |-- index.html
+        |       |       |-- script.js
+        |       |       `-- style.css
+        |       |-- gotypes
+        |       |   |-- Makefile
+        |       |   |-- README.md
+        |       |   |-- defsuses
+        |       |   |   `-- main.go
+        |       |   |-- doc
+        |       |   |   `-- main.go
+        |       |   |-- go-types.md
+        |       |   |-- hello
+        |       |   |   `-- hello.go
+        |       |   |-- hugeparam
+        |       |   |   `-- main.go
+        |       |   |-- implements
+        |       |   |   `-- main.go
+        |       |   |-- lookup
+        |       |   |   `-- lookup.go
+        |       |   |-- nilfunc
+        |       |   |   `-- main.go
+        |       |   |-- pkginfo
+        |       |   |   `-- main.go
+        |       |   |-- skeleton
+        |       |   |   `-- main.go
+        |       |   |-- typeandvalue
+        |       |   |   `-- main.go
+        |       |   `-- weave.go
+        |       |-- hello
+        |       |   `-- hello.go
+        |       |-- outyet
+        |       |   |-- Dockerfile
+        |       |   |-- containers.yaml
+        |       |   |-- main.go
+        |       |   `-- main_test.go
+        |       |-- stringutil
+        |       |   |-- reverse.go
+        |       |   `-- reverse_test.go
+        |       `-- template
+        |           |-- image.tmpl
+        |           |-- index.tmpl
+        |           `-- main.go
+        `-- snowdreams1006
+            `-- learn-go
+                `-- hello
+                    `-- hello.go
+
+25 directories, 35 files
+
+snowdreams1006-win7@WIN-FANS2DDDB06 MINGW64 ~/go
+$
 ```
-go build test.go
-```
 
-```
-go run test.go
-```
+原本 `$GOPATH/src` 源码目录只有我们自己的 `github.com/snowdreams1006/learn-go` 项目,获取远程 `golang/hello` 代码包后多了一大堆源码文件.
 
-```
-# https://github.com/Caplost/imooc
-go get github.com/Caplost/imooc
-```
+真的是神奇的操作,其余语言调用开源工具一般都是作为依赖放到非源码目录,`Go` 直接放到正在编写的源码目录,看起来第三方源码像是我们自己写的一样,只不过用命名空间区分开了而已!
+
+![go-base-workspace-go-get-surprise.png](../images/go-base-workspace-go-get-surprise.png)
+
+### `go test` 测试代码包
+
+### `go install` 安装代码包
+
+### `go build` 编译代码包
+
+### `go run` 运行代码包
 
 ## `GoLand` 编辑器选择和配置
 
