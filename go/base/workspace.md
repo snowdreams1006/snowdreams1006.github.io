@@ -58,6 +58,8 @@ bin/  src/
 
 运行完 `go get github.com/snowdreams1006/learn-go/hello` 命令后,工作空间目前已近乎标准目录.
 
+> 如果 `go get` 命令半天没什么反应,不要着急,说不定正在下载,只是比较慢而已,如果想要看到下载过程,可以添加额外参数: `go get -u -v`
+
 ![go-base-workspace-go-get-tree.png](../images/go-base-workspace-go-get-tree.png)
 
 可以看出,`go get` 命令下载了 `hello` 命令所依赖的文件并生成 `bin/hello.exe` 可执行文件,现在终于可以说一声 `Hello world!`
@@ -72,9 +74,27 @@ $ hello
 
 ![go-base-workspace-go-get-angry.png](../images/go-base-workspace-go-get-angry.png)
 
+不管怎么说,创建工作空间的目的已经达到了,不是吗?
+
 > 聪明的你,或许已经发现输出的语句的确不是 `Hello World` 而是 `Hello Go` 反过来写!
 
 ## 打造自己的 `Go` 命令
+
+如果手头上没有 `Go` 项目或者说想要从零开发 `Go` 项目的话,那么只能手动创建工作空间了.
+
+我们已经知道了工作空间的规范,但是现在涉及到自定义项目,同样需要确定项目的规范.
+
+一般说来,项目需要唯一id用于区分其他可能出现的同名项目,也就是命名空间的概念.
+
+作为个人开源项目,同广大的 `Go` 项目规范一样托管到 `github.com` 网站,因此命名空间 `github.com/user` 作为基本路径.
+
+> 重要区别: 
+> `Go` 的命名空间(即基本路径)是域名正写: `github.com/snowdreams1006`,如果是其他语言,命名空间可能就是域名反写形式: `com.github.snowdreams1006` .
+
+```bash
+
+
+```
 
 ## `Go` 
 
