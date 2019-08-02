@@ -329,16 +329,22 @@ hello.go
 
 值得注意的是,`go run` 后面紧跟着的是文件名,不能像 `go build` 那样省略包路径,否则会报错.
 
-## `GoLand` 编辑器选择和配置
+![go-base-workspace-go-run-run_away.png](../images/go-base-workspace-go-run-run_away.png)
 
-- 常见的 `IDE` : `Sublime text2` ,`liteide` ,`Goland` 等
+## `Go` 基本环境小结
 
-> 国人开发的 `liteide` ,推荐 `Goland`
+默认安装的 `Go` 省心省力,自动帮我们设置好相关的环境变量,至于这些变量是干嘛用的以及怎么自定义修改,建议初学时不要深究,先搭建好基本的开发环境再说.
 
-- `GOLand` 下载安装(https://www.jetbrains.com/go/)
-- `GOLand` 简单配置
+`go env` 命令可以输出 `Go` 的相关配置信息,`GOROOT` 是 `Go` 的安装目录,`GOPATH` 是 `Go` 的工作空间目录,这是 `Go` 本身最基本的配置信息.
 
-打开设置,设置`GOROOT` -> `NO SDK` 更改为`go` 安装位置
-`GOPATH` 添加项目路径
+如果不太了解这部分内容,可以翻看上一篇文章,这里就不详细阐述了.
 
+`Go` 的工作空间下面有 `src` ,`bin` 和 `pkg` 三个平行目录,其中 `src` 下面才是我们真正编写代码的目录.
 
+`Go` 语言相关的项目既然都放在 `src` 目录下就有一定的命名规范,参考 `github.com/snowdreams1006/learn-go` 和 `github.com/golang/example` 这种形式.
+
+测试 `Go` 语言的安装环境以及进行简单的命令验证,这些操作本身比较简单,用不着强大的 `IDE` ,但是学习 `Go` 语言如果没有 `IDE` 的辅助,那么很难想象会是什么样的局面.
+
+因此,下一节将开始介绍 `Go` 开发的 `IDE` 环境配置,感觉离工程化开发又迈进一步呢!
+
+![go-base-workspace-go-summary-thank_you.png](../images/go-base-workspace-go-summary-thank_you.png)
