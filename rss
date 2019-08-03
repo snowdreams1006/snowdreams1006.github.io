@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 02 Aug 2019 09:23:05 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 03 Aug 2019 08:55:49 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -740,6 +740,135 @@ main 函数外定义的变量时全局变量:  var name = "global variable"]]></
             <description><![CDATA[在日常文章数据统计的过程中,纯手动方式已经难以应付,于是乎,逐步开始了程序介入方式进行统计.]]></description>
             <link>https://snowdreams1006.github.io/write/static-semi-manual-with-js.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/write/static-semi-manual-with-js.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[简述优选文章统计]]></title>
+            <description><![CDATA[{% chart %}
+{
+"data": {
+"x": "x",
+"columns": [
+[
+"x",
+"01",
+"02",
+"03",
+"04",
+"05",
+"06",
+"07",
+"08",
+"09",
+"10",
+"11",
+"12",
+"13",
+"14",
+"15",
+"16",
+"17",
+"18",
+"19",
+"20",
+"21",
+"22",
+"23",
+"24",
+"25",
+"26",
+"27",
+"28",
+"29",
+"30",
+"31",
+"32",
+"33",
+"34",
+"35",
+"36"
+],
+[
+"阅读量",
+14000,
+10000,
+12000,
+9073,
+15000,
+7988,
+18000,
+17036,
+13146,
+16087,
+18788,
+14861,
+19771,
+27232,
+11637,
+12835,
+14173,
+9256,
+31607,
+12552,
+21840,
+10745,
+12573,
+8760,
+10981,
+22641,
+33164,
+28793,
+22393,
+17709,
+16965,
+29429,
+12264,
+25831,
+14984,
+15204
+],
+[
+"点赞量",
+174,
+70,
+69,
+30,
+191,
+57,
+117,
+124,
+54,
+101,
+101,
+41,
+32,
+83,
+76,
+70,
+61,
+48,
+72,
+74,
+88,
+55,
+28,
+39,
+13,
+36,
+61,
+111,
+28,
+102,
+23,
+55,
+41,
+28,
+31,
+60
+],
+[]]></description>
+            <link>https://snowdreams1006.github.io/write/jianshu-optimize-static.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/write/jianshu-optimize-static.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
