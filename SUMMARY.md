@@ -106,6 +106,7 @@
     * [markdown 转富文本](write/markdown2richText.md)
     * [csv 半手动数据统计](write/static-semi-manual-with-csv.md)
     * [js 半手动数据统计](write/static-semi-manual-with-js.md)
+    * [简述优选文章统计](write/jianshu-optimize-static.md)
     * [常见问题](write/faq.md)
 
 ## 开源项目
