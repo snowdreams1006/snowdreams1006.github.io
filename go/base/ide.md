@@ -20,5 +20,41 @@
 
 ![go-base-ide-goland-download.png](../images/go-base-ide-goland-download.png)
 
+安装过程比较简单,这里就不再赘述,简单的动图一闪而过看下大致过程吧!
+
+![go-base-ide-goland-windows-install.gif](../images/go-base-ide-goland-windows-install.gif)
+
+其中安装位置,默认是 `C` 盘,可以自行选择合适的安装位置.
+
+![go-base-ide-goland-windows-install-location.png](../images/go-base-ide-goland-windows-install-location.png)
+
+如果是 `Mac` 电脑,安装 `Goland` 更为简单,直接下载拖动到 `Application` 分类,连安装目录都不用选择,简单演示如下:
+
+![go-base-ide-goland-mac-install.png](../images/go-base-ide-goland-mac-install.png)
+
+## `Goland` 克隆项目
+
+初次打开 `Goland` 编辑器,界面出现三个选项:
+
+- `New Project` : 新建项目,适合从零开发新项目
+- `Open Project` : 打开项目,适合本地已存在 `Go` 项目
+- `Check out from Version Control` : 从版本库中检出项目,适合团队合作时直接从线上项目下载到本地.
+
+![go-base-ide-goland-open.png](../images/go-base-ide-goland-open.png)
+
+三种方式分别对应三种不同的场景,这里选择以第三种方式检出版本库为例,目录源码: [https://github.com/snowdreams1006/learn-go](https://github.com/snowdreams1006/learn-go)
+
+选择 `git` 版本库,并填写项目地址,然后点击右侧的 `Test` 按钮,如果提示失败,可能是 `Git` 基本环境没有配置过,请先配置下 `Git`,可以参考 [git 入门教程
+](https://snowdreams1006.github.io/git/)
+
+![go-base-ide-goland-git-clone-test-succes.png](../images/go-base-ide-goland-git-clone-test-succes.png)
+
+> 项目地址: `git@github.com:snowdreams1006/learn-go.git` 或者 `https://github.com/snowdreams1006/learn-go.git` 或者 `https://github.com/snowdreams1006/learn-go`
+
+默认情况下,本地目录是 `GolandProjects`,一定要修改成自己的 `GOPATH` 目录,即 `USERPROFILE/go` 目录.
+
+![go-base-ide-goland-git-clone-change-directory.png](../images/go-base-ide-goland-git-clone-change-directory.png)
+
+
 
 
