@@ -10,6 +10,8 @@
 
 萝卜青菜各有所爱,选择哪个 `IDE` 都可以,甚至不用任何 `IDE` 也可以,不过还是推荐下 `GoLand` 吧!
 
+![go-base-ide-goland.png](../images/go-base-ide-goland.png)
+
 ## `Goland` 下载安装
 
 > 官网地址: [https://www.jetbrains.com/go/](https://www.jetbrains.com/go/),如果无法访问,可能需要**特殊手段**绕过.
