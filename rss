@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 03 Aug 2019 09:23:15 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 07 Aug 2019 03:15:28 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -521,6 +521,13 @@
             <description><![CDATA[搭建好 Go 的基本环境后,现在可以正式开始 Go 语言的学习之旅,初学时建议在默认的 GOPATH 工作空间规范编写代码,基本目录结构大概是这个样子.]]></description>
             <link>https://snowdreams1006.github.io/go/base/workspace.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/workspace.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[IDE编辑器]]></title>
+            <description><![CDATA[工欲善其事必先利其器,命令行工具虽然能够在一定程度上满足基本操作的需求,但实际工作中总不能一直使用命令行工具进行编码操作吧?]]></description>
+            <link>https://snowdreams1006.github.io/go/base/ide.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/ide.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
