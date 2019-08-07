@@ -55,6 +55,23 @@
 
 ![go-base-ide-goland-git-clone-change-directory.png](../images/go-base-ide-goland-git-clone-change-directory.png)
 
+耐心等待,`Goland` 会自动下载项目相关依赖,右下角的进度条完毕后意味着项目初始化好了,可以正常工作了.
 
+## `Goland` 打开项目
 
+找到 `hello/hello.go` 文件,其中 `main` 方法左侧有个绿色的启动按钮,点击运行.
+
+![go-base-ide-goland-open-project-main.png](../images/go-base-ide-goland-open-project-main.png)
+
+初始运行,提示配置进行命令配置,设置工作目录为 `GOPATH` 环境变量所在的目录.
+
+![go-base-ide-goland-project-configure.png](../images/go-base-ide-goland-project-configure.png)
+
+此时配置页面左下角的红色报错消失了,保存后关闭该窗口,再次运行 `main` 方法,如我们所愿输出了 `Hello Go!` 的逆序.
+
+![go-base-ide-goland-project-run.png](../images/go-base-ide-goland-project-run.png)
+
+现在打开 `strings/reverse_test.go` 文件,同样点击左侧的启动按钮运行测试文件,证明测试运行正常!
+
+![go-base-ide-goland-project-test.png](../images/go-base-ide-goland-project-test.png)
 
