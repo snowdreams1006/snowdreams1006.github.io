@@ -40,6 +40,40 @@ func main() {
 
 ![go-base-grammar-go-application-build.png](../images/go-base-grammar-go-application-build.png)
 
+### 知识点归纳
+
+`Go` 应用程序入口的有以下要求:
+
+- 必须是 `main` 包 :`package main`
+- 必须是 `main` 方法 : `func main()`
+- 文件名任意不一定是 `main.go`,目录名也任意不一定是 `main` 目录.
+
+> 以上规则可以很容易在编辑器中得到验证,任意一条不符合规则,程序都会报错提示,这也是使用编辑器而不是命令行进行学习的原因,能够帮助我们及时发现错误,方便随时验证猜想.
+
+总结来说,`main` 包不一定在 `main` 目录下,`main` 方法可以在任意文件中.
+
+这也意味着程序入口所在的目录不一定叫做 `main` 目录却一定要声明为 `main` 包,虽然不理解为什么这么设计,这一点至少和 `Java` 完全不一样,至少意味着 `Go`文件可以直接迁移目录而不需要语言层面的重构,可能有点方面,同时也有点疑惑?!
+
+![go-base-grammar-main-rule-surprise.png](../images/go-base-grammar-main-rule-surprise.png)
+
+`main` 函数值得注意的不同之处:
+
+- `main` 函数不支持返回值,但可以通过 `os.Exit` 返回退出状态
+
+![go-base-grammar-main-rule-return.png](../images/go-base-grammar-main-rule-return.png)
+
+> `main` 函数,不支持返回值,若此时强行运行 `main` 方法,则会报错: `func main must have no arguments and no return values`
+
+![go-base-grammar-main-rule-exit.png](../images/go-base-grammar-main-rule-exit.png)
+
+> `main` 函数可以借助 `os.Exit(-1)` 返回程序退出时状态码,外界可以根据不同状态码识别相应状态.
+
+- `main` 函数不支持传入参数,但可以通过 `os.Args` 获取参数
+
+![go-base-grammar-main-rule-args.png](../images/go-base-grammar-main-rule-args.png)
+
+> 在 `Terminal` 终端选项卡中运行 `go run hello_world.go snowdreams1006` 命令 `os.Args` 输出命令路径和参数值.
+ 
 ## `GO` 基础语法讲解
 
 - 关键字,标识符,注释,基础结构
