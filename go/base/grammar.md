@@ -233,7 +233,86 @@ a, b := 1, 1
 
 就问你服不服?一个小小的变量赋值都能玩出五种花样,厉害了,我的 `Go` !
 
-- 
+- 变量类型可以省略,由编译器自动进行类型推断
+
+![go-base-grammar-var-auto-error.jpg](../images/go-base-grammar-var-auto-error.jpg)
+
+> 类似 `Js` 的书写习惯,但本质上仍然是强类型,不会进行不同类型的自动转换,还会说像 `Js` 的变量吗?
+
+- 同一个变量语句可以对不同变量进行同时赋值
+
+仍然以**斐波那契数列**为例,`Go` 官网的示例中使用到的就是变量同时赋值的特性,完整代码如下:
+
+```go
+package main
+
+import "fmt"
+
+// fib returns a function that returns
+// successive Fibonacci numbers.
+func fib() func() int {
+	a, b := 0, 1
+	return func() int {
+		a, b = b, a+b
+		return a
+	}
+}
+
+func main() {
+	f := fib()
+	// Function calls are evaluated left-to-right.
+	fmt.Println(f(), f(), f(), f(), f())
+}
+```
+
+如果对该特性认识不够清晰,可能觉得这并不是什么大不了的事情嘛!
+
+实际上,俗话说,没有对比就没有伤害,举一个简单的例子: 交换变量
+
+```go
+func TestExchange(t *testing.T) {
+	a, b := 1, 2
+	t.Log(a,b)
+
+	a, b = b, a
+	t.Log(a,b)
+
+	temp := a
+	a = b
+	b = temp
+	t.Log(a,b)
+}
+```
+
+其他语言中如果需要交换两个变量,一般都是引入第三个临时变量的写法,而 `Go` 实现变量交换则非常简单清晰,也符合人的思考而不是计算机的思考.
+
+虽然不清楚底层会不会仍然是采用临时变量交换,但不管怎么说,使用该特性交换变量确实很方便!
+
+> 同时对多个变量进行赋值是 `Go` 特有的语法,其他语言可以同时声明多个变量但不能同时赋值.
+
+- 常量同样很有意思,也有关键字声明 `const`.
+
+有些编程语言对常量和变量没有强制规定,常量可以逻辑上被视为不会修改的变量,一般用全大写字母提示用户是常量,为了防止常量被修改,有的编程语言可能会有额外的关键字进行约束.
+
+幸运的是,`Go` 语言的常量提供了关键字 `const` 约束,并且禁止重复赋值,这一点很好,简单方便.
+
+![go-base-grammar-const-assign-error.jpg](../images/go-base-grammar-const-assign-error.jpg)
+
+
+```go
+func TestConst(t *testing.T) {
+	const pi = 3.14
+	t.Log(pi)
+
+	// cannot assign to pi
+	pi = 2.828
+	t.Log(pi)
+}
+```
+
+除了语言层面的 `const` 常量关键字,`Go` 语言还要一个特殊的关键字 `iota` ,常常和常量一起搭配使用!
+
+
 
 ### 关键字,标识符
 
