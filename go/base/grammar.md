@@ -377,7 +377,30 @@ t.Log(accessCode&Readable == Readable, accessCode&Writing == Writing, accessCode
 
 同理可自主分析,`accessCode&Writing == Writing` 结果 `true` 则意味着可写,否则不可写,`accessCode&Executable == Executable` 结果 `true` 意味着可执行,`false` 意味着不可执行.
 
+熟悉了 `iota` 的数学计算和比特位计算后,我们趁热打铁,用文件大小单位继续练习!
 
+```go
+func TestConstForIota(t *testing.T) {
+	const (
+		B = 1 << (10 * iota)
+		Kb
+		Mb
+		Gb
+		Tb
+		Pb
+	)
+	// 1 1024 1048576 1073741824 1099511627776 1125899906842624
+	t.Log(B, Kb, Mb, Gb, Tb, Pb)
+
+	// 62.9 KB (64,411 字节)
+	size := 64411.0
+	t.Log(size, size/Kb)
+}
+```
+
+字节 `Byte` 与 千字节 `Kilobyte` 之间的进制单位是 `1024` ,也就是 `2^10` ,刚好可以用 `iota` 左移 `10` 位来表示,一次只移动一次,直接乘以 `10` 就好了!
+
+怎么样,`iota` 是不是很神奇?同时是不是和我一样也有点小困惑,`iota` 这货到底是啥? 
  
 ```go
 // iota is a predeclared identifier representing the untyped integer ordinal
