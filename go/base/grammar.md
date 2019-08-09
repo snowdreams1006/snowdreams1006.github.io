@@ -312,7 +312,79 @@ func TestConst(t *testing.T) {
 
 除了语言层面的 `const` 常量关键字,`Go` 语言还要一个特殊的关键字 `iota` ,常常和常量一起搭配使用!
 
+当设置一些连续常量值或者有一定规律的常量值时,`iota` 可以帮助我们快速设置.
 
+```go
+func TestConstForIota(t *testing.T) {
+	const (
+		Mon = 1 + iota
+		Tue
+		Wed
+		Thu
+		Fri
+		Sat
+		Sun
+	)
+	// 1 2 3 4 5 6 7
+	t.Log(Mon, Tue, Wed, Thu, Fri, Sat, Sun)
+}
+```
+
+大多数编程语言中,星期一代表的数字几乎都是 `0`,星期二是 `1`,以此类推,导致和传统认识上偏差,为了校准偏差,更加符合国人习惯,因此将星期一代表的数字 `0` 加一,以此类推,设置初始 `iota` 后就可以剩余星期应用该规律,依次 `1,2,3,4,5,6,7`
+
+如果不使用 `iota` 的话,可能需要手动进行连续赋值,比较繁琐,引入了 `iota` 除了帮助快速设置,还可以进行**比特位**级别的操作.
+
+
+```go
+func TestConstForIota(t *testing.T) {
+	const (
+		Readable = 1 << iota
+		Writing
+		Executable
+	)
+	// 0001 0010 0100 即 1 2 4
+	t.Log(Readable, Writing, Executable)
+}
+```
+
+第一位比特位为 `1` 时,表示文件可读,第二位比特位为 `1` 时,表示可写,第三位比特位为 `1` 时,表示可执行,相应的 `10` 进制数值依次为 `1,2,4` 也就是左移一位,左移两位,左移三位,数学上也可以记成 `2^0,2^1,2^2` .
+
+文件的可读,可写,可执行三种状态代表了文件的权限状态码,从而实现了文件的基本权限操作,常见的权限码有 `755` 和 `644`.
+
+按位与 `&` 运算与编程语言无关,"两位同时为 `1` 时,按位与的结果才为 `1` ,否则结果为 `0` ",因此给定权限码我们可以很方便判断该权限是否拥有可读,可写,可执行等权限.
+
+```go
+// 0111 即 7,表示可读,可写,可执行
+accessCode := 7
+t.Log(accessCode&Readable == Readable, accessCode&Writing == Writing, accessCode&Executable == Executable)
+
+// 0110 即 6,表示不可读,可写,可执行
+accessCode = 6
+t.Log(accessCode&Readable == Readable, accessCode&Writing == Writing, accessCode&Executable == Executable)
+
+// 0100 即 4,表示不可读,不可写,可执行
+accessCode = 4
+t.Log(accessCode&Readable == Readable, accessCode&Writing == Writing, accessCode&Executable == Executable)
+
+// 0000 即 0,表示不可读,不可写,不可执行
+accessCode = 0
+t.Log(accessCode&Readable == Readable, accessCode&Writing == Writing, accessCode&Executable == Executable)
+```
+
+`accessCode&Readable` 表示目标权限码和可读权限码进行按位与运算,而可读权限码的二进制表示值为 `0001` ,因此只要目标权限码的二进制表示值第一位是 `1` ,按位与的结果肯定是 `0001` ,而 `0001` 又刚好是可读权限码,所以 `accessCode&Readable == Readable` 为 `true` 就意味着目标权限码拥有可读权限.
+
+如果目标权限码的二进制位第一个不是 `1` 而是 `0`,则 `0&1=0` ,`(0|1)^0=0`,所以按位与运算结果肯定全是 `0` 即 `0000`,此时 `0000 == 0001` 比较值 `false` ,也就是该权限码不可读.
+
+同理可自主分析,`accessCode&Writing == Writing` 结果 `true` 则意味着可写,否则不可写,`accessCode&Executable == Executable` 结果 `true` 意味着可执行,`false` 意味着不可执行.
+
+
+ 
+```go
+// iota is a predeclared identifier representing the untyped integer ordinal
+// number of the current const specification in a (usually parenthesized)
+// const declaration. It is zero-indexed.
+const iota = 0 // Untyped int.
+```
 
 ### 关键字,标识符
 
