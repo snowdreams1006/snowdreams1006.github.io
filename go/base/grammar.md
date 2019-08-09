@@ -6,7 +6,7 @@
 
 ![go-base-grammar-go.png](../images/go-base-grammar-go.png)
 
-## 第一个 `Go` 程序
+## 编写第一个 `Hello World` 程序
 
 学习编程语言的第一件事就是编写出 `Hello World`,现在让我们用 `Go` 语言开发出第一个可运行的命令行程序吧!
 
@@ -73,8 +73,53 @@ func main() {
 ![go-base-grammar-main-rule-args.png](../images/go-base-grammar-main-rule-args.png)
 
 > 在 `Terminal` 终端选项卡中运行 `go run hello_world.go snowdreams1006` 命令 `os.Args` 输出命令路径和参数值.
- 
-## `GO` 基础语法讲解
+
+## 在测试用例中边学边练基础语法
+
+> The master has failed more times than the beginner has tried
+
+计算机编程不是理科而是工科,动手亲自实践一遍才能更好地掌握知识技能,幸运的是,`Go` 语言本身内置提供了测试框架,不用加载第三方类库扩展,非常有利于学习练习.
+
+刚刚接触 `Go` 语言,暂时不需要深入讲解如何编写规范的测试程序,毕竟基础语法还没开始正式练习呢!
+
+但是,简单的规则还是要说的,总体来说,只有两条规则:
+
+- 测试文件名以 `_test` 结尾 : `XXX_test.go`
+
+> 命令习惯和不同, `Java` 中的文件名一般是**大驼峰命名法**,相应的测试文件是 `XXXTest`
+
+- 测试方法名以 `Test` 开头 :  `TestXXX` 
+
+> 命名习惯和其他编程语言不同,`Java` 中的测试方法命名是一般是**小驼峰命名法**,相应的测试方法是 `testXXX`
+
+- 测试方法有着固定的参数 : `t *testing.T`
+
+> 其他编程语言中一般没有参数,`Java` 中的测试方法一定没有参数,否则抛出异常 `java.lang.Exception: Method testXXX should have no parameters`
+
+新建 `Go` 文件,类型选择 `Empty File` ,文件名命名为 `hello_world_test` ,编辑器新建一个空白的测试文件.
+
+![go-base-grammar-test-rule-file.png](../images/go-base-grammar-test-rule-file.png)
+
+此时编写测试方法签名,利用编辑器自动提示功能输入 `t.Log` 随便输出些内容,这样就完成了第一个测试文件.
+
+![go-base-grammar-test-rule-log.png](../images/go-base-grammar-test-rule-log.png)
+
+和 `main` 程序一样,测试方法也是可执行的,编辑器窗口的左侧也会出现绿色启动按钮,运行测试用例在编辑器下方的控制台窗口输出 `PASS` 证明测试逻辑正确!
+
+![go-base-grammar-test-rule-pass.png](../images/go-base-grammar-test-rule-pass.png)
+
+测试文件源码示例:
+
+```go
+package main
+
+import "testing"
+
+func TestHelloWorld(t *testing.T){
+	t.Log("Hello Test")
+}
+```
+
 
 - 关键字,标识符,注释,基础结构
 - package,import,别名,路径,`.` `_` 的使用说明
