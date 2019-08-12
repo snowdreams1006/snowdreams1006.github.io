@@ -76,7 +76,7 @@
         * [环境搭建](go/base/setup.md)
         * [工作空间](go/base/workspace.md)
         * [IDE编辑器](go/base/ide.md)
-        * [基础语法](go/base/grammar.md)
+        * [变量和常量](go/base/var-and-const.md)
     * [标准命令详解](go/cmd/about.md)
         * [go build](go/cmd/build.md)
         * [go install](go/cmd/install.md)
