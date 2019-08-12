@@ -454,6 +454,129 @@ func TestConstForIota(t *testing.T) {
 const iota = 0 // Untyped int.
 ```
 
+简短翻译:
+
+`iota` 是预定义标识符,代表**当前常量**中**无符号整型**的**序号**,是以 `0` 作为索引的.
+
+上述注释看起来晦涩难懂,如果是常量那就就安安静静当做常量,不行吗?怎么从常量定义中还读出了循环变量索引的味道?
+
+为了验证猜想,仍然以最简单的星期转换为例,模拟每一步时的 `iota` 的值.
+
+```go
+const (
+	// iota = 0,Mon = 1 + 0 = 1,符合输出结果 1,此时 iota  = 1,即 iota 自增1
+	Mon = 1 + iota
+	// iota = 1,Tue = 1 + iota = 1 + 1 = 2,符合输出结果 2,此时 iota = 2
+	Tue
+	// iota = 2,Wed = 1 + iota = 1 + 2 = 3,符合输出结果 3,此时 iota = 3
+	Wed
+	Thu
+	Fri
+	Sat
+	Sun
+)
+// 1 2 3 4 5 6 7
+t.Log(Mon, Tue, Wed, Thu, Fri, Sat, Sun)
+```
+
+上述猜想中将 `iota` 当做常量声明循环中的变量 `i`,每声明一次,`i++`,因此仅需要定义循环初始条件和循环自增变量即可完成循环赋值.
+
+```go
+const (
+	Mon = 1 + iota
+	Tue
+	Wed
+	Thu
+	Fri
+	Sat
+	Sun
+)
+// 1 2 3 4 5 6 7
+t.Log(Mon, Tue, Wed, Thu, Fri, Sat, Sun)
+
+var days [7]int
+for i := 0; i < len(days); i++ {
+	days[i] = 1 + i
+}
+// [1 2 3 4 5 6 7]
+t.Log(days)
+```
+
+这样对应是不是觉得 `iota` 似乎就是循环变量的 `i`,其中 `Mon = 1 + iota` 就是循环初始体,`Mon~Sun` 有限常量就是循环的终止条件,每一个常量就是下一次循环.
+
+如果一个例子不足以验证该猜想的话,那就再来一个!
+
+```go
+const (
+Readable = 1 << iota
+Writing
+Executable
+)
+// 0001 0010 0100 即 1 2 4
+t.Log(Readable, Writing, Executable)
+
+var access [3]int
+for i := 0; i < len(access); i++ {
+	access[i] = 1 << uint(i)
+}
+// [1 2 4]
+t.Log(access)
+```
+
+上述两个例子已经初步验证 `iota` 可能和循环变量 `i` 具有一定的关联性,还可以进一步接近猜想.
+
+```go
+const (
+	// iota=0 const=1+0=1 iota=0+1=1
+	first = 1 + iota
+
+	// iota=1 const=1+1=2 iota=1+1=2
+	second
+
+	// iota=2 const=2+2=4 iota=2+1=3
+	third = 2 + iota
+
+	// iota=3 const=2+3=5 iota=3+1=4
+	forth
+
+	// iota=4 const=2*4=8 iota=4+1=5
+	fifth = 2 * iota
+
+	// iota=5 const=2*5=10 iota=5+1=6
+	sixth
+
+	// iota=6 const=6 iota=6+1=7
+	seventh = iota
+)
+// 1 2 4 5 8 10 6
+t.Log(first, second, third, forth, fifth, sixth, seventh)
+
+const currentIota  = iota
+// 0
+t.Log(currentIota)
+
+var rank [7]int
+for i := 0; i < len(rank); i++ {
+	if i < 2 {
+		rank[i] = 1 + i
+	} else if i < 4 {
+		rank[i] = 2 + i
+	} else if i < 6 {
+		rank[i] = 2 * i
+	} else {
+		rank[i] = i
+	}
+}
+// [1 2 3 4 5 6 7]
+t.Log(rank)
+```
+
+`iota` 是一组常量初始化中的循环变量索引,当这一组变量全部初始化完毕后,`iota` 重新开始计算,因此新的变量 `currentIota` 的值为 `0` 而不是 `7`
+
+因此,`iota` 常常用作一组有规律常量的初始化背后的原因可能就是循环变量进行赋值,按照这个思路理解前面关于 `iota` 的例子暂时是没有任何问题的,至于这种理解是否准确,有待继续学习 `Go` 作进一步验证,一家之言,仅供参考!
+
+
+
 ### 关键字,标识符
 
 - `GO` 中保留关键字只有 `25` 个:
