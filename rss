@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 07 Aug 2019 07:37:14 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 12 Aug 2019 07:53:45 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -531,11 +531,10 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[基础语法]]></title>
-            <description><![CDATA[常量建议大写: const NAME="imooc"
-main 函数外定义的变量时全局变量:  var name = "global variable"]]></description>
-            <link>https://snowdreams1006.github.io/go/base/grammar.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/grammar.html</guid>
+            <title><![CDATA[变量和常量]]></title>
+            <description><![CDATA[首先希望学习 Go 语言的爱好者至少拥有其他语言的编程经验,如果是完全零基础的小白用户,本教程可能并不适合阅读或尝试阅读看看,系列笔记的目标是站在其他语言的角度学习新的语言,理解 Go 语言,进而写出真正的 Go 程序.]]></description>
+            <link>https://snowdreams1006.github.io/go/base/var-and-const.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/var-and-const.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
