@@ -575,40 +575,107 @@ t.Log(rank)
 
 因此,`iota` 常常用作一组有规律常量的初始化背后的原因可能就是循环变量进行赋值,按照这个思路理解前面关于 `iota` 的例子暂时是没有任何问题的,至于这种理解是否准确,有待继续学习 `Go` 作进一步验证,一家之言,仅供参考!
 
-### 变量和常量总结
+### 变量和常量的基本小结
 
-- `GO` 中保留关键字只有 `25` 个:
+- 变量用 `var` 关键字声明,常量用 `const` 关键字声明.
+- 变量声明并赋值的形式比较多,使用时最好统一一种形式,避免风格不统一.
+- 变量类型具备自动推断能力,但本质上仍然是强类型,不同类型之间并不会自动转换.
+- 一组规律的常量可以用 `iota` 常量进行简化,可以暂时理解为采用循环方式对变量进行赋值,从而转化成常量的初始化.
+- 变量和常量都具有相似的初始化形式,与其他编程语言不同之处在于一条语句中可以对多个变量进行赋值,一定程度上简化了代码的书写规则.
+- 任何定义但未使用的变量或常量都是不允许存在的,既然用不着,为何要声明?!禁止冗余的设计,好坏暂无法评定,既然如何设计,那就遵守吧!
 
+## 与众不同的变量和常量
+
+斐波那契数列是一组无穷的递增数列,形如 `1,1,2,3,5,8,13...` 这种从第三个数开始,后面的数总是前两个数之和的数列就是斐波那契数列.
+
+如果从第三个数开始考虑,那么前两个数就是斐波那契数列的起始值,以后的数字都符合既定规律,取前两个数字当做变量 `a,b` 采用循环的方式不断向后推进数列得到指定长度的数列.
+
+```go
+func TestFib(t *testing.T) {
+	var a int = 1
+	var b int = 1
+
+	fmt.Print(a)
+	for i := 0; i < 6; i++ {
+		fmt.Print(" ", b)
+
+		temp := a
+		a = b
+		b = temp + b
+	}
+	fmt.Println()
+}
 ```
-break default func interface select
-case defer go map struct 
-chan else goto package switch
-const fallthrough if range type 
-continue for import return var
+
+虽然上述解法比较清晰明了,但还不够简洁,至少没有用到 `Go` 语言的特性.实际上,我们还可以做得更好,或者说用 `Go` 语言的特性来实现更加清晰简单的解法:
+
+```go
+func TestFibSimplify(t *testing.T) {
+	a, b := 0, 1
+
+	for i := 0; i < 6; i++ {
+		fmt.Print(" ", b)
+		
+		a, b = b, a+b
+	}
+
+	fmt.Println()
+}
 ```
 
-> 不必强记,根据平时开发经验来看,都是开发时常用的.
+和第一种解法不同的是,这一次将变量 `a` 向前移一位,人为制造出虚拟头节点 `0`,变量 `a` 的下一个节点 `b` 指向斐波那契数列的第一个节点 `1`,随着 `a` 和 `b` 相继向后推进,下一个循环中的节点 `b` 直接符合规定,相比第一种解法缩短了一个节点.
 
-- `GO` 中 `36` 个预定的标识符,其包括基础数据类型和系统内嵌函数:
+`a, b := 0, 1` 是循环开始前的初始值,`b` 是斐波那契数列中的第一个节点,循环进行过程中 `a, b = b, a+b` 语义非常清楚,节点的 `a` 变成节点 `b`,节点 `b` 是 `a+b` 的值.
 
+是不是很神奇,这里既没有用到临时变量存储变量 `a` 的值,也没有发生变量覆盖的情况,直接完成了变量的交换赋值操作.
+
+由此可见, `a, b = b, a+b` 并不是 `a=b` 和 `b=a+b` 的执行结果的累加,而是同时完成的,这一点有些神奇,不知道 `Go` 是如何实现多个变量同时赋值的操作?
+
+如果有小伙伴知道其中奥妙,还望不吝赐教,大家一起学习进步!
+
+如果你觉得上述操作有点不好理解,那么接下来的操作,相信你一定会很熟悉,那就是两个变量的值进行交换.
+
+```go
+func TestExchange(t *testing.T) {
+	a, b := 1, 2
+	t.Log(a, b)
+
+	a, b = b, a
+	t.Log(a, b)
+
+	temp := a
+	a = b
+	b = temp
+	t.Log(a, b)
+}
 ```
-append bool byte cap close complex
-complex64 complex128 uint16 copy false float32
-float64 imag int int8 int16 uint32 
-int32 int64 iota len make new
-nil panic uint64 print println real 
-recover string TRUE unit unit8 uintprt
-```
 
-### 注释,基础结构
+同样的是,`a, b = b, a` 多变量同时赋值直接完成了变量的交换,其他编程语言实现类似需求一般都是采用临时变量提前存储变量 `a` 的值以防止变量覆盖,然而 `Go` 语言的实现方式竟然和普通人的思考方式一样,不得不说,这一点确实不错!
 
-- 注释形式
-  * //单行注释
-  * /*多行注释*/
-  * 一般是用单行注释较多
-- 基础结构
+通过简单的斐波那契数列,引入了变量和常量的基本使用,以及 `Go` 的源码文件相应规范,希望能够带你入门 `Go` 语言的基础,了解和其它编程语言有什么不同以及这些不同之处对我们实际编码有什么便捷之处,如果能用熟悉的编程语言实现 `Go` 语言的设计思想也未曾不是一件有意思的事情.
 
-常量建议大写: `const NAME="imooc"`
-`main` 函数外定义的变量时全局变量:  `var name = "global variable"`
+下面,简单总结下本文涉及到的主要知识点,虽然是变量和常量,但重点并不在如何介绍定义上,而是侧重于特殊之处以及相应的实际应用.
 
+- 源码文件所在的目录和源码文件的所在包没有必然联系,即 `package main` 所在的源码文件并不一定在 `main` 目录下,甚至都不一定有 `main` 目录.
 
+![go-base-grammar-summary-main.png](../images/go-base-grammar-summary-main.png)
+
+> `hello.go` 源码文件位于 `hello` 目录下,而 `hello_word.go` 位于 `main` 目录下,但是他们所在的包都是 `package main`
+
+- 源码文件命名暂时不知道有没有什么规则,但测试文件命名一定是 `xxx_test`,测试方法命名是 `TestXXX` ,其中 `Go` 天生支持测试框架,不用额外加载第三方类库.
+
+![go-base-grammar-summary-test.png](../images/go-base-grammar-summary-test.png)
+
+- 声明变量的关键字是 `var`,声明常量的关键字是 `const`,无论是变量还是常量,均存在好几种声明方式,更是存在自动类型推断更可以进行简化.
+
+![go-base-grammar-summary-var.png](../images/go-base-grammar-summary-var.png)
+
+> 一般而言,实现其它编程语言中的全局变量声明用 `var`,局部变量声明 `:=` 简化形式,其中多个变量可以进行同时赋值.
+
+- 一组特定规律的常量值可以巧用 `iota` 来实现,可以理解为首次使用 `iota` 的常量是这组常量规律的第一个,其余的常量按照该规律依次初始化.
+
+![go-base-grammar-summary-iota.png](../images/go-base-grammar-summary-iota.png)
+
+> `Go` 语言没有枚举类,可以用一组常量值实现枚举,毕竟枚举也是特殊的常量.
+
+本文源码已上传到 [https://github.com/snowdreams1006/learn-go](https://github.com/snowdreams1006/learn-go/blob/master/main/hello_world_test.go) 项目,感兴趣的小伙伴可以点击查看,如果文章中有描述不当之处,恳请指出,谢谢你的评论和转发.
