@@ -170,7 +170,7 @@ func TestHelloWorld(t *testing.T){
 
 回归正题,下面让我们用 `Go` 语言实现斐波那契数列吧!
 
-![go-base-grammar-fibonacci-test.jpg](../images/go-base-grammar-fibonacci-test.jpg)
+![go-base-grammar-fibonacci-test.png](../images/go-base-grammar-fibonacci-test.png)
 
 ```go
 func TestFib(t *testing.T) {
@@ -235,7 +235,7 @@ a, b := 1, 1
 
 - 变量类型可以省略,由编译器自动进行类型推断
 
-![go-base-grammar-var-auto-error.jpg](../images/go-base-grammar-var-auto-error.jpg)
+![go-base-grammar-var-auto-error.png](../images/go-base-grammar-var-auto-error.png)
 
 > 类似 `Js` 的书写习惯,但本质上仍然是强类型,不会进行不同类型的自动转换,还会说像 `Js` 的变量吗?
 
@@ -296,7 +296,7 @@ func TestExchange(t *testing.T) {
 
 幸运的是,`Go` 语言的常量提供了关键字 `const` 约束,并且禁止重复赋值,这一点很好,简单方便.
 
-![go-base-grammar-const-assign-error.jpg](../images/go-base-grammar-const-assign-error.jpg)
+![go-base-grammar-const-assign-error.png](../images/go-base-grammar-const-assign-error.png)
 
 
 ```go
@@ -401,7 +401,52 @@ func TestConstForIota(t *testing.T) {
 字节 `Byte` 与 千字节 `Kilobyte` 之间的进制单位是 `1024` ,也就是 `2^10` ,刚好可以用 `iota` 左移 `10` 位来表示,一次只移动一次,直接乘以 `10` 就好了!
 
 怎么样,`iota` 是不是很神奇?同时是不是和我一样也有点小困惑,`iota` 这货到底是啥? 
+
+![go-base-grammar-const-iota-baidu.png](../images/go-base-grammar-const-iota-baidu.png)
  
+百度翻译给我们的解释是,这货表示"微量",类似英语单词的 `little` 一样,`a little` 也表示"一点点".
+
+但是 `iota` 除了表示**一点点**之外,好像还拥有自增的能力,这可不是 `little` 这种量词能够传达的意思.
+
+因此,有可能 `iota` 并不是原始英语含义,说不定是希腊字母的语言,查询了标准的 `24` 个希腊字母表以及对应的英语注释.
+
+|大写|小写|英文读音|国际音标|意义|
+|-|-|-|
+|Α|α|alpha|/ˈælfə/|角度,系数,角加速度|
+|Β|β|beta|/'beitə/|磁通系数,角度,系数|
+|Γ|γ|gamma|/'gæmə/|电导系数,角度,比热容比|
+|Δ|δ|delta|/'deltə/|变化量,屈光度,一元二次方|
+|Ε|ε|epsilon|/ep'silon/|对数之基数,介电常数|
+|Ζ|ζ|zeta|/'zi:tə/|系数,方位角,阻抗,相对粘度|
+|Η|η|eta|/'i:tə/|迟滞系数,效率|
+|Θ|θ|theta|/'θi:tə/|温度,角度|
+|Ι|ι ℩|iota|	/ai'oute/|微小,一点|
+|Κ|κ|kappa|/'kæpə/|介质常数,绝热指数|
+|∧|λ|lambda|/'læmdə/|波长,体积,导热系数|
+|Μ|μ|mu|/mju:/|磁导系数,微动摩擦系(因)数,流体动力粘度|
+|Ν|ν|nu|/nju:/|磁阻系数,流体运动粘度,光子频率|
+|Ξ|ξ|xi|/ksi/|随机数,(小)区间内的一个未知特定值|
+|Ο|ο|omicron|/oumaik'rən/|高阶无穷小函数|
+|∏|π|pi|/pai/|圆周率,π(n)表示不大于n的质数个数|
+|Ρ|ρ|rho|/rou/|电阻系数,柱坐标和极坐标中的极径,密度|
+|∑|σ ς|sigma|/'sigmə/|总和,表面密度,跨导,正应力|
+|Τ|τ|tau|/tau/|时间常数,切应力|
+|Υ|υ|upsilon|/ju:p'silən/|位移|
+|Φ|φ|phi|/fai/|磁通,角,透镜焦度,热流量|
+|Χ|χ|chi|/kai/|统计学中有卡方(χ2)分布|
+|Ψ|ψ|psi|/psai/|角速,介质电通量|
+|Ω|ω|omega|/'oumigə/|欧姆,角速度,交流电的电角度|
+
+希腊字母常常用于物理,化学,生物,科学等学科,作为常量或者变量,不同于一般的英语变量或常量的是,希腊字母表示的变量或常量一般具有特定的语义!
+
+因此,`iota` 应该是希腊字母 `I` 的英语表示,该变量或者说常量表示**微小**,**一点**的含义.
+
+翻译成自然语言就是,这个符号表示一点点,如果表达改变的含义,那就是在原来基础上多那么一点点,如果表达不改变的含义,应该是只有一点点,仅此而已.
+
+![go-base-grammar-const-iota-little.jpg](../images/go-base-grammar-const-iota-little.jpg)
+
+当然,以上均是个人猜测,更加专业的说法还是应该看下 `Go` 语言如何定义 `iota` ,按住 `Ctrl` 键,鼠标悬停在 `iota` 上可以点击进入源码部分,如下:
+
 ```go
 // iota is a predeclared identifier representing the untyped integer ordinal
 // number of the current const specification in a (usually parenthesized)
