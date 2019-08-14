@@ -244,4 +244,117 @@ func TestClearZeroOperator(t *testing.T) {
 - 数组一定条件下可以直接比较,基于值比较而不是引用比较
 - 特有的按位清零运算符
 
+## 循环
 
+- 仅支持 `for` 循环
+
+```go
+func TestLoop(t *testing.T) {
+	for i := 0; i < 10; i++ {
+		t.Log(i)
+	}
+}
+```
+
+> 和其他编程语言相比,没有 `()` 包裹循环条件 
+
+- 变相支持 `while` 循环
+
+```go
+func TestWhileLoop(t *testing.T) {
+	i := 0
+	for i < 5 {
+		i++
+		t.Log(i)
+	}
+}
+```
+
+## 条件
+
+- 条件表达式是布尔类型,不需要 `()`
+
+```go
+func TestIfCondition(t *testing.T) {
+	for i := 0; i < 10; i++ {
+		if i%2 == 0{
+			t.Log(i)
+		}
+	}
+}
+```
+
+- 支持变量赋值
+
+```go
+func TestIfCondition(t *testing.T) {
+	if res, err := 1, 0; err == 0 {
+		t.Log("success", res)
+	} else {
+		t.Log("fail", err)
+	}
+}
+```
+
+### `switch` 条件
+
+与其他主要编程语言的差异
+
+- 条件表达式不限制为常量或整数
+
+
+```go
+func TestSwitchCondition(t *testing.T) {
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		t.Log("Mac")
+	case "linux":
+		t.Log("Linux")
+	case "windows":
+		t.Log("Windows")
+	default:
+		t.Log(os)
+	}
+}
+```
+
+- 单个 `case` 中,可以出现多个结果选项,使用逗号 `,` 分割
+
+```go
+func TestSwitchCondition2(t *testing.T) {
+	for i := 0; i < 10; i++ {
+		switch i {
+		case 0, 2, 4, 6, 8, 10:
+			t.Log("Even", i)
+		case 1, 3, 5, 7, 9:
+			t.Log("odd", i)
+		default:
+			t.Log("default", i)
+		}
+	}
+}
+```
+
+- 与 `C` 语言等规则相反,`Go` 语言不需要用 `break` 来明确退出一个 `case`
+
+
+- 可以不设定 `switch` 之后的条件表达式,此种情况下,整个 `switch` 结构与多个 `if else` 的逻辑作用相同
+
+```go
+func TestSwitchCaseCondition(t *testing.T) {
+	for i := 0; i < 10; i++ {
+		switch {
+		case i%2 == 0:
+			t.Log("Even", i)
+		case i%2 == 1:
+			t.Log("odd", i)
+		default:
+			t.Log("default", i)
+		}
+	}
+}
+```
+
+## 流程控制总结
+
+`switch` 条件表达式和 `if` 表达式一样,也支持变量赋值,更强大方便的 `switch`
