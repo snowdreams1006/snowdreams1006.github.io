@@ -77,6 +77,7 @@
         * [工作空间](go/base/workspace.md)
         * [IDE编辑器](go/base/ide.md)
         * [变量和常量](go/base/var-and-const.md)
+        * [数据类型](go/base/type.md)
     * [标准命令详解](go/cmd/about.md)
         * [go build](go/cmd/build.md)
         * [go install](go/cmd/install.md)
