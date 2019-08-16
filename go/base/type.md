@@ -301,6 +301,19 @@ func TestClearZeroOperator(t *testing.T) {
 
 ## 循环
 
+- `for` 的条件里不需要括号
+
+```go
+func TestForLoop(t *testing.T) {
+	sum := 0
+	for i := 1; i <= 100; i++ {
+		sum += i
+	}
+	// 1+2+3+...+99+100=5050
+	t.Log(sum)
+}
+```
+
 - 仅支持 `for` 循环
 
 ```go
@@ -327,6 +340,20 @@ func TestWhileLoop(t *testing.T) {
 
 ## 条件
 
+- `if` 的条件里可以赋值
+- `if` 的条件里赋值的变量作用域就在这个 `if` 语句内
+
+```go
+func TestIfConditionMultiReturnValueShorter(t *testing.T) {
+	const filename = "test.txt"
+	if content, err := ioutil.ReadFile(filename); err != nil {
+		t.Log(err)
+	} else {
+		t.Logf("%s\n", content)
+	}
+}
+```
+
 - 条件表达式是布尔类型,不需要 `()`
 
 ```go
@@ -352,6 +379,74 @@ func TestIfCondition(t *testing.T) {
 ```
 
 ### `switch` 条件
+
+- `switch` 会自动 `break`,除非使用 `fallthrough`
+
+```go
+func evalBySwitchOperator(a, b int, op string) int {
+	var result int
+	switch op {
+	case "+":
+		result = a + b
+	case "-":
+		result = a - b
+	case "*":
+		result = a * b
+	case "/":
+		result = a / b
+	default:
+		panic("unsupported operator:" + op)
+	}
+	return result
+}
+
+func TestEvalBySwitchOperator(t *testing.T) {
+	// 3
+	t.Log(evalBySwitchOperator(1, 2, "+"))
+	// -1
+	t.Log(evalBySwitchOperator(1, 2, "-"))
+	// 2
+	t.Log(evalBySwitchOperator(1, 2, "*"))
+	// 0
+	t.Log(evalBySwitchOperator(1, 2, "/"))
+	// unsupported operator:% [recovered]
+	//t.Log(evalBySwitchOperator(1, 2, "%"))
+}
+```
+
+```go
+func gradeBySwitchOperator(score int) string {
+	result := ""
+	switch {
+	case score < 0 || score > 100:
+		panic(fmt.Sprintf("Wrong score: %d", score))
+	case score < 60:
+		result = "F"
+	case score < 80:
+		result = "C"
+	case score < 90:
+		result = "B"
+	case score <= 100:
+		result = "A"
+	}
+	return result
+}
+
+func TestGradeBySwitchOperator(t *testing.T){
+	// F F C C B B A A
+	t.Log(
+		gradeBySwitchOperator(0),
+		gradeBySwitchOperator(59),
+		gradeBySwitchOperator(60),
+		gradeBySwitchOperator(79),
+		gradeBySwitchOperator(80),
+		gradeBySwitchOperator(89),
+		gradeBySwitchOperator(99),
+		gradeBySwitchOperator(100),
+		//gradeBySwitchOperator(1000),
+	)
+}
+```
 
 与其他主要编程语言的差异
 
