@@ -570,3 +570,50 @@ func TestSwitchCaseCondition(t *testing.T) {
 ## 流程控制总结
 
 `switch` 条件表达式和 `if` 表达式一样,也支持变量赋值,更强大方便的 `switch`
+
+## 函数
+
+- 函数返回多个值时可以起名字
+- 仅用于非常简单的函数
+- 对于调用者而言没有区别
+- 函数作为参数
+
+```go
+func apply(op func(int, int) int, a, b int) int {
+	p := reflect.ValueOf(op).Pointer()
+	opName := runtime.FuncForPC(p).Name()
+
+	fmt.Printf("Calling function %s with args (%d,%d)\n", opName, a, b)
+	return op(a, b)
+}
+
+func TestApply(t *testing.T) {
+	// 1
+	t.Log(apply(func(a int, b int) int {
+		return a % b
+	}, 5, 2))
+}
+```
+- 可变参数列表
+
+```go
+func sum(numbers ...int) int {
+	result := 0
+	for i := range numbers {
+		result += numbers[i]
+	}
+	return result
+}
+
+func TestSum(t *testing.T) {
+	// 15
+	t.Log(sum(1, 2, 3, 4, 5))
+}
+```
+
+## 函数语法要点回顾
+
+- 返回值类型写在最后面
+- 可返回多个值
+- 函数作为参数
+- 没有默认参数,可选参数
