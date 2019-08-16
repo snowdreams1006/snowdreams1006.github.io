@@ -617,3 +617,83 @@ func TestSum(t *testing.T) {
 - 可返回多个值
 - 函数作为参数
 - 没有默认参数,可选参数
+
+## 指针
+
+```go
+func TestPointer(t *testing.T) {
+	a := 1
+	aPoi := &a
+
+	//aPoi = aPoi + 1
+
+	t.Log(a, aPoi)
+	t.Logf("%T %T", a, aPoi)
+
+	var b int = 2
+	var pb *int = &b
+	*pb = 3
+
+	// 3
+	t.Log(b)
+}
+```
+
+- 指针不能运算
+
+参数传递
+
+值传递?引用传递?
+
+`c` 和 `c++` 既可以值传递也可以引用传递,`java` 和 `python` 绝对大部分都是引用传递,除了系统的自建类型.
+
+`Go` 语言只有值传递一种方式
+
+```go
+func swapByVal(a, b int) {
+	a, b = b, a
+}
+
+func TestSwap(t *testing.T) {
+	a, b := 3, 4
+
+	swapByVal(a, b)
+
+	// 3 4
+	t.Log(a,b)
+}
+```
+
+传递指针
+
+```go
+func swapByRef(a, b *int) {
+	*a, *b = *b, *a
+}
+
+func TestSwapByRef(t *testing.T) {
+	a, b := 3, 4
+
+	swapByRef(&a, &b)
+
+	// 4 3
+	t.Log(a,b)
+}
+```
+
+返回交换结果
+
+```go
+func swap(a, b int) (int, int) {
+	return b, a
+}
+
+func TestSwap(t *testing.T) {
+	a, b := 3, 4
+
+	a, b = swap(a, b)
+
+	// 4 3
+	t.Log(a, b)
+}
+```
