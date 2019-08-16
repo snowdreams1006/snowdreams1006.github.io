@@ -305,7 +305,7 @@ func TestPointerShorter(t *testing.T) {
 
 变量和类型还只是孤立的声明语句,没有计算不成逻辑,并不是所有的程序都是预定义的变量,`Go` 的运算符是简单还是复杂呢,让我们亲自体验一下!
 
-- 算术运算符没有前置 `++` 或 `--`
+- 算术运算符少了 `++i` 和 `--i`
 
 ```go
 func TestArithmeticOperator(t *testing.T) {
@@ -365,5 +365,65 @@ func TestCompareArray(t *testing.T) {
 ```
 
 > 数组 `a` 和 `c` 均是一维数组且元素个数都是 `3`,因此两个数组可以比较且相等,若数组`a` 和 `b` 进行比较,则报错 `invalid operation`,是因为两个数组的元素个数不相同,无法比较!
+
+- 逻辑运算符老实本分无异常
+
+```go
+func TestLogicalOperator(t *testing.T) {
+    a, b := true, false
+    t.Log(a, b)
+
+    // false true false true
+    t.Log(a&&b,a||b,!a,!b)
+}
+```
+
+- 位运算符新增按位清零 `&^` 很巧妙
+
+`Go` 语言中定义按位清零运算符是 `&^`,计算规律如下:
+
+当右边操作位数为 `1` 时,左边操作为不论是 `1` 还是 `0` ,结果均为 `0`;
+当右边操作位数为 `0` 时,结果同左边操作位数.
+
+```go
+func TestClearZeroOperator(t *testing.T) {
+    // 0 0 1 0
+    t.Log(1&^1, 0&^1, 1&^0, 0&^1)
+}
+```
+
+不知道还记不记得,在介绍常量 `iota` 时,曾经以文件权限为例,判断给定的权限码是否拥有特定权限,同样是给定的权限码,又该如何撤销特定权限呢?
+
+```go
+func TestClearZeroOperator(t *testing.T) {
+    const (
+        Readable = 1 << iota
+        Writable
+        Executable
+    )
+    // 0001 0010 0100 即 1 2 4
+    t.Log(Readable, Writable, Executable)
+
+    // 0111 即 7,表示可读,可写,可执行
+    accessCode := 7
+    t.Log(accessCode&Readable == Readable, accessCode&Writable == Writable, accessCode&Executable == Executable)
+
+    // 0111 &^ 0001 = 0110 即清除可读权限
+    accessCode = accessCode &^ Readable
+    t.Log(accessCode&Readable == Readable, accessCode&Writing == Writing, accessCode&Executable == Executable)
+}
+```
+
+> `accessCode = accessCode &^ Readable` 进行按位清零操作后就失去了可读权限,`accessCode&Readable == Readable` 再次判断时就没有可读权限了.
+
+
+
+
+
+
+
+
+
+
 
 
