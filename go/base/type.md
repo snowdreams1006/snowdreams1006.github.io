@@ -314,6 +314,62 @@ func TestForLoop(t *testing.T) {
 }
 ```
 
+- `for` 的条件里可以省略初始条件,结束条件和递增表达式
+
+```go
+func convert2Binary(n int) string {
+	result := ""
+	for ; n > 0; n /= 2 {
+		lsb := n % 2
+		result = strconv.Itoa(lsb) + result
+	}
+	return result
+}
+
+func TestConvert2Binary(t *testing.T) {
+	// 1 100 101 1101
+	t.Log(
+		convert2Binary(1),
+		convert2Binary(4),
+		convert2Binary(5),
+		convert2Binary(13),
+	)
+}
+```
+
+```go
+func printFile(filename string) {
+	if file, err := os.Open(filename); err != nil {
+		panic(err)
+	} else {
+		scanner := bufio.NewScanner(file)
+		for scanner.Scan() {
+			fmt.Println(scanner.Text())
+		}
+	}
+}
+
+func TestPrintFile(t *testing.T){
+	const filename = "test.txt"
+	printFile(filename)
+}
+```
+
+- 无限循环
+
+```go
+func TestPrintFile(t *testing.T) {
+	const filename = "test.txt"
+	printFile(filename)
+}
+
+func forever() {
+	for {
+		fmt.Println("hello go")
+	}
+}
+```
+
 - 仅支持 `for` 循环
 
 ```go
@@ -337,6 +393,12 @@ func TestWhileLoop(t *testing.T) {
 	}
 }
 ```
+##总结
+
+- `for` ,`if`后面的条件没有括号
+- `if` 条件里也可以定义变量
+- 没有 `while`
+- `switch` 不需要 `break`,也可以直接 `switch` 多个条件
 
 ## 条件
 
