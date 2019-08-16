@@ -1,3 +1,5 @@
+
+
 # 数据类型
 
 - 布尔类型
@@ -25,10 +27,56 @@
 
 - 特殊类型
 
-`byte(uint8)` ,`rune(int32)`
+
+- `bool` ,`string`
+- `(u)int` ,`(u)int8` , `(u)int16`, `(u)int32`,`(u)int64`,`uintptr`
+- `byte(uint8)` ,`rune(int32)`
+- `float32` ,`float64` ,`complex64` ,`complex128`
+
+> `rune` 是 `char` 类型,`4` 字节
+
+## 复数回顾
+
+> `i = 根号-1`,`i` 是想象的 `imagine`
+
+`3+4i`,实部`3`,虚部`4`
+
+i^2 = -1,i^3 =-i,i^4=1
+
+e^(iq) = consq+isinq
+
+最美公式
+
+```go
+func TestComplex(t *testing.T) {
+	c := 3 + 4i
+
+	// 5
+	t.Log(cmplx.Abs(c))
+}
+
+func TestEuler(t *testing.T) {
+	// (0+1.2246467991473515e-16i)
+	t.Log(cmplx.Pow(math.E, 1i*math.Pi) + 1)
+
+	// (0+1.2246467991473515e-16i)
+	t.Log(cmplx.Exp(1i*math.Pi) + 1)
+}
+```
 
 
-## 类型转换
+## 类型转换是强制的
+
+```go
+func TestExplicitTypeConvert(t *testing.T) {
+	var a, b int = 3, 4
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b)))
+
+	// 3 4 5
+	t.Log(a, b, c)
+}
+```
 
 - 不允许隐式类型转换
 
@@ -110,6 +158,13 @@ func TestString(t *testing.T){
 - 不支持任何形式的隐式类型转换,包括别名到原类型的隐式转换
 - 支持指针类型,但指针不支持任何形式的计算.
 - 字符串是值类型,默认初始化零值是空字符串而不是空.
+
+## 变量要点定义回顾
+
+- 变量类型写在变量名之后
+- 编译器可以推测变量类型
+- 没有 `char`,只有 `runne`
+- 原生支持复数类型
 
 ## 算术运算符
 
