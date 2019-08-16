@@ -239,4 +239,19 @@ func TestExplicitTypeConvert(t *testing.T) {
 
 > 已知勾股定理的两条直角边计算斜边,根据勾股定理得,直角边长度的平方和再开根号即斜边长度,然而 `math.Sqrt` 方法接收的 `float64` 类型,返回的也是 `float64` 类型,可实际值全是 `int` 类型,这种情况下并不会自动进行类型转换,只能进行强制类型转换才能得到我们的期望值,这就是显示类型转换.
 
+- 别名类型和原类型也不能进行隐式类型转换
 
+```go
+func TestImplicitTypeConvert2(t *testing.T) {
+    type MyInt64 int64
+
+    var a int64 = 1
+    var b MyInt64
+
+    // b = a : cannot use a (type int64) as type MyInt64 in assignment
+    b = MyInt64(a)
+    t.Log(a, b)
+}
+```
+
+> `MyInt64` 是 `int64` 的别名,别名类型的 `b` 和原类型的 `a` 也不能进行也不能进行隐式类型转换,会报错 `cannot use a (type int64) as type MyInt64 in assignment`,只能进行显示类型转换.
