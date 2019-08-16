@@ -8,4 +8,80 @@
 
 - 变量默认初始化有零值
 
+```go
+func TestVariableZeroValue(t *testing.T) {
+    var a int
+    var s string
+
+    // 0
+    t.Log(a, s)
+    // 0 ""
+    t.Logf("%d %q", a, s)
+}
+```
+
+> `int` 类型的变量初始化默认零值是零 `0`,`string` 类型的变量默认初始化零值是空字符串 ` `,其他类型也有相应的零值.
+
+- 多个变量可以同时赋值
+
+```go
+func TestVariableInitialValue(t *testing.T) {
+    var a, b int = 1, 2
+    var s string = "hello Go"
+
+    // 1 2 hello Go
+    t.Log(a, b, s)
+}
+```
+
+> 其他主要的编程语言大多支持多个变量初始化,但极少数有像 `Go` 语言这样,不仅支持同时初始化,还可以同时赋值.
+
+- 多个变量可以用小括号 `()` 统一定义
+
+```go
+func TestVariableShorter(t *testing.T) {
+    var (
+        a int    = 1
+        b int    = 2
+        s string = "hello go"
+    )
+
+    // 1 2 hello Go
+    t.Log(a, b, s)
+}
+```
+
+> 用小括号 `()` 方式,省略了相同的 `var` 关键字,看起来更加统一
+
+- 变量类型可以被自动推断
+
+```go
+func TestVariableTypeDeduction(t *testing.T) {
+    var a, b, s = 1, 2, "hello Go"
+
+    // 1 2 hello Go
+    t.Log(a, b, s)
+}
+```
+
+> `Go` 语言可以根据变量值推测出变量类型,所以可以省略变量类型,再一次简化了变量定义,但是变量类型仍然是强类型,并不像 `Js` 那样的弱类型.
+
+- 变量可以用 `:=` 形式更加简化
+
+```go
+func TestVariableTypeDeductionShorter(t *testing.T) {
+    a, b, s := 1, 2, "hello Go"
+
+    // 1 2 hello Go
+    t.Log(a, b, s)
+
+    s = "hello golang"
+
+    // 1 2 hello golang
+    t.Log(a, b, s)
+}
+```
+
+> 省略了关键字 `var`,转而使用 `:=` 符号声明并初始化变量值且利用自动类型推断能力进一步就简化变量定义,再次赋值时不能再使用 `:=` 符号.
+
 
