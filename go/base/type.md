@@ -131,3 +131,86 @@ func TestPrintArrayByPointer(t *testing.T){
 
 - `Go` 语言中一般不直接使用数组,使用的是切片
 
+## 切片 `slice`
+
+- `[ )` 左闭右开区间,和其他编程语言一致
+
+```go
+
+func TestSlice(t *testing.T) {
+	arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	s := arr[2:6]
+
+	// [0 1 2 3 4 5 6 7 8 9] [2 3 4 5]
+	t.Log(arr, s)
+}
+```
+
+`slice` 是对数组的一个视图
+
+
+```go
+func TestSlice(t *testing.T) {
+	arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	// arr[2:6] =  [2 3 4 5]
+	t.Log("arr[2:6] = ", arr[2:6])
+	// arr[:6] =  [0 1 2 3 4 5]
+	t.Log("arr[:6] = ", arr[:6])
+	// arr[2:] =  [2 3 4 5 6 7 8 9]
+	t.Log("arr[2:] = ", arr[2:])
+	// arr[:] =  [0 1 2 3 4 5 6 7 8 9]
+	t.Log("arr[:] = ", arr[:])
+}
+```
+
+```go
+func TestUpdateSlice(t *testing.T) {
+	arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	s1 := arr[2:6]
+	// s1 =  [2 3 4 5]
+	t.Log("s1 = ", s1)
+
+	s2 := arr[:6]
+	// s2 =  [0 1 2 3 4 5]
+	t.Log("s2 = ", s2)
+
+	updateSlice(s1)
+	// s1 =  [666 3 4 5]
+	t.Log("s1 = ", s1)
+	// arr =  [0 1 666 3 4 5 6 7 8 9]
+	t.Log("arr = ", arr)
+
+	updateSlice(s2)
+	// s2 =  [666 1 666 3 4 5]
+	t.Log("s2 = ", s2)
+	// arr =  [666 1 666 3 4 5 6 7 8 9]
+	t.Log("arr = ", arr)
+}
+```
+
+因此将数组变成切片就可以修改原来数组的元素了!
+
+`slice` 本身没有数据,是对底层 `array` 的一个 `view`
+
+- `slice` 可以继续`Reslice`
+
+```go
+func TestReSlice(t *testing.T) {
+	arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+	s1 := arr[2:6]
+	// s1 =  [2 3 4 5]
+	t.Log("s1 = ", s1)
+
+	s1 = s1[2:]
+	// s1 =  [4 5]
+	t.Log("s1 = ", s1)
+
+	s1 = s1[:6]
+	// s1 =  [4 5 6 7 8 9]
+	t.Log("s1 = ", s1)
+}
+```
+
