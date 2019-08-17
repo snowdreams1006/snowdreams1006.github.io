@@ -522,5 +522,81 @@ func TestSwitchCaseCondition(t *testing.T) {
 
 最后登场的是 `for` 循环,一个人完成了其他主流编程语言三个人的工作,`Go` 语言中既没有 `while` 循环也,也没有 `do while` 循环,有的只是 `for` 循环.
 
+- 循环条件不需要小括号 `()`
 
+```go
+func TestForLoop(t *testing.T) {
+    sum := 0
+    for i := 1; i <= 100; i++ {
+        sum += i
+    }
+    // 1+2+3+...+99+100=5050
+    t.Log(sum)
+}
+```
+
+> 再一次看到条件表达式不需要小括号 `()` 应该不会惊讶了吧? `if` 的条件语句表达式也是类似的,目前为止,接触到明确需要小括号的 `()` 也只有变量或常量定义时省略形式了.
+
+- 可以省略初始条件
+
+```go
+func convert2Binary(n int) string {
+    result := ""
+    for ; n > 0; n /= 2 {
+        lsb := n % 2
+        result = strconv.Itoa(lsb) + result
+    }
+    return result
+}
+
+func TestConvert2Binary(t *testing.T) {
+    // 1 100 101 1101
+    t.Log(
+        convert2Binary(1),
+        convert2Binary(4),
+        convert2Binary(5),
+        convert2Binary(13),
+    )
+}
+```
+
+> 利用整数相除法,不断取余相除,得到给定整数的二进制字符串,这里就省略了初始条件,只有结束条件和递增表达式.这种写法同样在其他主流的编程语言是没有的,体现了 `Go` 设计的简洁性,这种特性在以后的编程中会越来越多的用到,既然可以省略初始条件,相信你也能猜到可不可以省略其他两个条件呢?
+
+- 可以省略初始条件和递增表达式
+
+```go
+func printFile(filename string) {
+    if file, err := os.Open(filename); err != nil {
+        panic(err)
+    } else {
+        scanner := bufio.NewScanner(file)
+        for scanner.Scan() {
+            fmt.Println(scanner.Text())
+        }
+    }
+}
+
+func TestPrintFile(t *testing.T) {
+    const filename = "test.txt"
+    printFile(filename)
+}
+```
+
+> 打开文件并逐行读取内容,其中 `scanner.Scan()` 的返回值类型是 `bool`,这里省略了循环的初始条件和递增表达式,只有循环的终止条件,也顺便实现了 `while` 循环的效果.
+
+- 初始条件,终止条件和递增表达式可以全部省略
+
+```go
+func forever() {
+    for {
+        fmt.Println("hello go")
+    }
+}
+
+func TestForever(t *testing.T) {
+    forever()
+}
+```
+
+> `for` 循环中没有任何表达式,意味着这是一个死循环,常用于 `Web` 请求中监控服务端口,是不是比 `while(true)` 要更加简单?
 
