@@ -416,14 +416,111 @@ func TestClearZeroOperator(t *testing.T) {
 
 > `accessCode = accessCode &^ Readable` 进行按位清零操作后就失去了可读权限,`accessCode&Readable == Readable` 再次判断时就没有可读权限了.
 
+## 流程控制语句
 
+### `if` 有话要说
 
+有了变量类型和各种运算符的加入,现在实现简单的语句已经不是问题了,如果再辅助流程控制语句,那么实现较为复杂拥有一定逻辑的语句便可更上一层楼.
 
+`Go` 语言的 `if` 条件语句和其他主流的编程语言的语义是一样的,不一样的是书写规则和一些细节上有着自己特点.
 
+- 条件表达式不需要小括号 `()`
 
+```go
+func TestIfCondition(t *testing.T) {
+    for i := 0; i < 10; i++ {
+        if i%2 == 0 {
+            t.Log(i)
+        }
+    }
+}
+```
 
+> `Go` 语言的各种省略形式使得整体上非常简洁,但也让拥有其他主流编程语言的开发者初次接触时很不习惯,语句结束不用分号 `;`,条件表达式不用小括号 `()` 等等细节,如果不用 `IDE` 的自动提示功能,这些细节肯定要耗费不少时间.
 
+- 条件表达式中可以定义变量,只要最后的表达式结果是布尔类型即可
 
+```go
+func TestIfConditionMultiReturnValue(t *testing.T) {
+    const filename = "test.txt"
+    if content, err := ioutil.ReadFile(filename); err != nil {
+        t.Log(err)
+    } else {
+        t.Logf("%s\n", content)
+    }
+}
+```
+
+> `Go` 语言的函数支持返回多个值,这一点稍后再细说,`ioutil.ReadFile` 函数返回文件内容和错误信息,当存在错误信息时 `err != nil`,输出错误信息,否则输出文件内容.
+
+- 条件表达式中定义的变量作用域仅限于当前语句块
+
+![go-base-grammar-if-scope.png](../images/go-base-grammar-if-scope.png)
+
+> 如果尝试在 `if` 语句块外访问变量 `content`,则报错 `undefined: content`
+
+### `switch` 不甘示弱
+
+同其他主流的编程语言相比,`switch` 语句最大的特点就是多个 `case` 不需要 `break`,`Go` 会自动进行 `break`,这一点很人性化.
+
+- `switch` 会自动 `break`,除非使用 `fallthrough`
+
+```go
+func TestSwitchCondition(t *testing.T) {
+    switch os := runtime.GOOS; os {
+    case "darwin":
+        t.Log("Mac")
+    case "linux":
+        t.Log("Linux")
+    case "windows":
+        t.Log("Windows")
+    default:
+        t.Log(os)
+    }
+}
+```
+
+- 条件表达式不限制为常量或整数
+
+> 其他主流的编程语言中 `switch` 的条件表达式仅支持有限类型,使用方式存在一定局限性,`Go` 语言则不同,这一点变化也是很有意思的,使用 `switch` 做分支控制时不用担心变量类型了!
+
+- `case` 语言支持多种条件,用逗号 `,` 分开,逻辑或
+
+```go
+func TestSwitchMultiCase(t *testing.T) {
+    for i := 0; i < 10; i++ {
+        switch i {
+        case 0, 2, 4, 6, 8, 10:
+            t.Log("Even", i)
+        case 1, 3, 5, 7, 9:
+            t.Log("odd", i)
+        default:
+            t.Log("default", i)
+        }
+    }
+}
+```
+
+- 省略 `switch` 的条件表达式时,`switch` 的逻辑和多个 `if else` 逻辑相同
+
+```go
+func TestSwitchCaseCondition(t *testing.T) {
+    for i := 0; i < 10; i++ {
+        switch {
+        case i%2 == 0:
+            t.Log("Even", i)
+        case i%2 == 1:
+            t.Log("odd", i)
+        default:
+            t.Log("default", i)
+        }
+    }
+}
+```
+
+### `for` 姗姗来迟
+
+最后登场的是 `for` 循环,一个人完成了其他主流编程语言三个人的工作,`Go` 语言中既没有 `while` 循环也,也没有 `do while` 循环,有的只是 `for` 循环.
 
 
 
