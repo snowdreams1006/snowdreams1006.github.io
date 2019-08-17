@@ -416,7 +416,7 @@ func TestClearZeroOperator(t *testing.T) {
 
 > `accessCode = accessCode &^ Readable` 进行按位清零操作后就失去了可读权限,`accessCode&Readable == Readable` 再次判断时就没有可读权限了.
 
-## 流程控制语句
+## 流程控制语句也有自己的傲娇
 
 ### `if` 有话要说
 
@@ -600,3 +600,119 @@ func TestForever(t *testing.T) {
 
 > `for` 循环中没有任何表达式,意味着这是一个死循环,常用于 `Web` 请求中监控服务端口,是不是比 `while(true)` 要更加简单?
 
+## 压轴的一等公民函数隆重登场
+
+虽然没有特意强制函数,但是示例代码中全部都是以函数形式给出的,函数是封装的一种形式,更是 `Go` 语言的一等公民.
+
+- 返回值在函数声明的最后,多个返回值时用小括号 `()`
+
+```go
+func eval(a, b int, op string) int {
+    var result int
+    switch op {
+    case "+":
+        result = a + b
+    case "-":
+        result = a - b
+    case "*":
+        result = a * b
+    case "/":
+        result = a / b
+    default:
+        panic("unsupported operator: " + op)
+    }
+    return result
+}
+
+func TestEval(t *testing.T) {
+    t.Log(
+        eval(1, 2, "+"),
+        eval(1, 2, "-"),
+        eval(1, 2, "*"),
+        eval(1, 2, "/"),
+        //eval(1, 2, "%"),
+    )
+}
+```
+
+> 不论是变量的定义还是函数的定义,`Go` 总是和其他主流的编程语言相反,个人觉得挺符合思维顺序,毕竟都是先有输入才能输出,多个输出当然要统一隔离在一块了.
+
+- 可以有零个或一个或多个返回值
+
+```go
+func divide(a, b int) (int, int) {
+    return a / b, a % b
+}
+
+func TestDivide(t *testing.T) {
+    // 2 1
+    t.Log(divide(5, 2))
+}
+```
+
+> 小学时就知道两个整数相除,除不尽的情况下还有余数.只不过编程中商和余数都是分别计算的,`Go` 语言支持返回多个结果,终于可以实现小学除法了!
+
+- 返回多个结果时可以给返回值起名字
+
+```go
+
+func divideReturnName(a, b int) (q, r int) {
+    return a / b, a % b
+}
+
+func TestDivideReturnName(t *testing.T) {
+    q, r := divideReturnName(5, 2)
+
+    // 2 1
+    t.Log(q, r)
+}
+```
+
+> 还是整数除法的示例,只不过给返回值起了变量名称 `(q, r int)`,但这并不影响调用者,某些 `IDE` 可能会基于次特性自动进行代码补全,调用者接收时的变量名不一定非要是 `q,r` .
+
+- 其他函数可以作为当前函数的参数
+
+```go
+func apply(op func(int, int) int, a, b int) int {
+    p := reflect.ValueOf(op).Pointer()
+    opName := runtime.FuncForPC(p).Name()
+
+    fmt.Printf("Calling function %s with args (%d,%d)\n", opName, a, b)
+    return op(a, b)
+}
+
+func pow(a, b int) int {
+    return int(math.Pow(float64(a), float64(b)))
+}
+
+func TestApply(t *testing.T) {
+    // 1
+    t.Log(apply(func(a int, b int) int {
+        return a % b
+    }, 5, 2))
+
+    // 25
+    t.Log(apply(pow, 5, 2))
+}
+```
+
+> `apply` 函数的第一个参数是 `op` 函数,第二,第三个参数是 `int` 类型的 `a,b`.其中 `op` 函数也接收两个 `int` 参数,返回一个 `int` 结果,因此 `apply` 函数的功能就是将 `a,b` 参数传递给 `op` 函数去执行,这种方式比 `switch` 固定运算类型要灵活方便!
+
+- 没有默认参数,可选参数等复杂概念,只有可变参数列表
+
+```go
+func sum(numbers ...int) int {
+    result := 0
+    for i := range numbers {
+        result += numbers[i]
+    }
+    return result
+}
+
+func TestSum(t *testing.T) {
+    // 15
+    t.Log(sum(1, 2, 3, 4, 5))
+}
+```
+
+> `range` 遍历方式后续再说,这里可以简单理解为其他主流编程语言中的 `foreach` 循环,一般包括当前循环索引和循环项.
