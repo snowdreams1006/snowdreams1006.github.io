@@ -214,3 +214,58 @@ func TestReSlice(t *testing.T) {
 }
 ```
 
+- `slice` 的扩展
+
+```go
+func TestSliceOutOfBound(t *testing.T) {
+	arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7}
+
+	s1 := arr[2:6]
+	// s1 =  [2 3 4 5]
+	t.Log("s1 = ", s1)
+
+	s2 := s1[3:5]
+	// s2 =  [5 6]
+	t.Log("s2 = ", s2)
+}
+```
+
+- `slice` 可以向后扩展,不可以向前扩展
+
+- `s[i]` 不可以超越`len(s)`,向后扩展不可以超越底层数组 `cap(s)`
+
+```go
+func TestSliceDetail(t *testing.T) {
+	arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7}
+	// arr = [0 1 2 3 4 5 6 7], len(arr) = 8, cap(arr) = 8
+	t.Logf("arr = %v, len(arr) = %d, cap(arr) = %d", arr,len(arr),cap(arr))
+
+	s1 := arr[2:6]
+	// s1 = [2 3 4 5], len(s1) = 4, cap(s1) = 6
+	t.Logf("s1 = %v, len(s1) = %d, cap(s1) = %d", s1,len(s1),cap(s1))
+
+	s2 := s1[3:5]
+	// s2 = [5 6], len(s2) = 2, cap(s2) = 3
+	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2,len(s2),cap(s2))
+}
+```
+
+
+```go
+func TestSliceDetail(t *testing.T) {
+	arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7}
+	// arr = [0 1 2 3 4 5 6 7], len(arr) = 8, cap(arr) = 8
+	t.Logf("arr = %v, len(arr) = %d, cap(arr) = %d", arr,len(arr),cap(arr))
+
+	s1 := arr[2:6]
+	// s1 = [2 3 4 5], len(s1) = 4, cap(s1) = 6
+	t.Logf("s1 = %v, len(s1) = %d, cap(s1) = %d", s1,len(s1),cap(s1))
+
+	s2 := s1[3:5]
+	// s2 = [5 6], len(s2) = 2, cap(s2) = 3
+	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2,len(s2),cap(s2))
+
+	// slice bounds out of range
+	//t.Log(s1[3:7])
+}
+```
