@@ -387,6 +387,44 @@ func TestSliceAutoLonger(t *testing.T) {
 
 当不断进行切片重新截取时 `s[1:]` ,切片存储的元素开始缩减,个数递减,容量也递减.
 
+![go-container-about-slice-add-and-delete.png](../images/go-container-about-slice-add-and-delete.png)
 
+其实除了基于数组创建切片和直接创建切片的方式外,还存在第三种创建切片的方式,也是使用比较多的方式,那就是 `make` 函数.
 
+```go
+func TestMakeSlice(t *testing.T) {
+    s1 := make([]int,10)
+
+    // s1 = [0 0 0 0 0 0 0 0 0 0], len(s1) = 10, cap(s1) = 10
+    t.Logf("s1 = %v, len(s1) = %d, cap(s1) = %d", s1, len(s1), cap(s1))
+
+    s2 := make([]int, 10, 32)
+
+    // s2 = [0 0 0 0 0 0 0 0 0 0], len(s2) = 10, cap(s2) = 32
+    t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+}
+```
+
+通过 `make` 方式可以设置初始化长度和容量,这是字面量创建切片所不具备的能力,并且这种方式创建的切片还支持批量拷贝功能!
+
+```go
+func TestCopySlice(t *testing.T) {
+    var s1 = []int{1, 3, 5, 7, 9}
+    var s2 = make([]int, 10, 32)
+
+    copy(s2, s1)
+
+    // s2 = [1 3 5 7 9 0 0 0 0 0], len(s2) = 10, cap(s2) = 32
+    t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+
+    var s3 []int
+
+    copy(s3, s1)
+
+    // s3 = [], len(s3) = 0, cap(s3) = 0
+    t.Logf("s3 = %v, len(s3) = %d, cap(s3) = %d", s3, len(s3), cap(s3))
+}
+```
+
+> `func copy(dst, src []Type) int` 是切片之间拷贝的函数,神奇的是,只有目标切片是 `make` 方式创建的切片才能进行拷贝,不明所以,有了解的小伙伴还请指点一二!
 
