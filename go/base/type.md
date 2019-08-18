@@ -1,5 +1,51 @@
 ## 数组
 
+数组和切片
+
+- 容量是否可伸缩
+- 是否可比较
+
+```go
+func TestMapWithFunValue(t *testing.T) {
+	m := map[int]func(op int) int{}
+
+	m[1] = func(op int) int {
+		return op
+	}
+	m[2] = func(op int) int {
+		return op * op
+	}
+	m[3] = func(op int) int {
+		return op * op * op
+	}
+
+	// 1 4 27
+	t.Log(m[1](1), m[2](2), m[3](3))
+}
+```
+
+实现 set
+
+没有 set,可以用 map[type]bool
+
+```go
+func TestMapForSet(t *testing.T) {
+	mySet := map[int]bool{}
+
+	mySet[1] = true
+
+	n := 3
+
+	if mySet[n] {
+		t.Log("update", mySet[n])
+	} else {
+		t.Log("add", mySet[n])
+	}
+
+	delete(mySet, 1)
+}
+```
+
 - 数量写在类型的前面
 
 - `[...]` 自动计算数组大小
