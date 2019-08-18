@@ -375,3 +375,36 @@ func TestNewSliceInitialLengthAndCapacity(t *testing.T) {
 	t.Logf("s = %v, len(s) = %d, cap(s) = %d", s, len(s), cap(s))
 }
 ```
+
+拷贝
+
+```go
+func TestCopySlice(t *testing.T) {
+	s1 := []int{1, 3, 5, 7, 9}
+	s2 := make([]int, 10, 32)
+
+	copy(s2,s1)
+
+	// s2 = [1 3 5 7 9 0 0 0 0 0], len(s2) = 10, cap(s2) = 32
+	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+}
+```
+
+删除
+
+```go
+func TestDeleteSlice(t *testing.T) {
+	s1 := []int{1, 3, 5, 7, 9}
+	s2 := make([]int, 10, 32)
+
+	copy(s2,s1)
+
+	// s2 = [1 3 5 7 9 0 0 0 0 0], len(s2) = 10, cap(s2) = 32
+	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+
+	s2 = append(s2[:3],s2[4:]...)
+
+	// s2 = [1 3 5 9 0 0 0 0 0], len(s2) = 9, cap(s2) = 32
+	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+}
+```
