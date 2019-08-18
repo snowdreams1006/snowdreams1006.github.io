@@ -428,3 +428,108 @@ func TestCopySlice(t *testing.T) {
 
 > `func copy(dst, src []Type) int` 是切片之间拷贝的函数,神奇的是,只有目标切片是 `make` 方式创建的切片才能进行拷贝,不明所以,有了解的小伙伴还请指点一二!
 
+切片的底层结构是动态数组,如果切片是基于数组截取而成,那么此时的切片从效果上来看,切片就是原数组的一个视图,对切片的任何操作都会反映到原数组上,这也是很好理解的.
+
+那如果对切片再次切片呢,或者说切片会不会越界,其实都比较简单了,还是稍微演示一下,重点就是动态数组的底层结构.
+
+```go
+func TestSliceOutOfBound(t *testing.T) {
+    arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7}
+
+    s1 := arr[2:6]
+    // s1 = [2 3 4 5], len(s1) = 4, cap(s1) = 6
+    t.Logf("s1 = %v, len(s1) = %d, cap(s1) = %d", s1, len(s1), cap(s1))
+
+    s2 := s1[3:5]
+    // s2 = [5 6], len(s2) = 2, cap(s2) = 3
+    t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+}
+```
+
+> `[]` 只能访问 `len(arr)` 范围内的元素,`[:]` 只能访问 `cap(arr)` 范围内的元素,一般而言 `cap >= len` 所以某些情况看起来越界,其实并不没有越界,只是二者的标准不同!
+
+我们知道切片 `slice` 的内部数据结构是基于动态数组,存在三个重要的变量,分别是指针 `ptr`,个数 `len` 和容量 `cap` ,理解了这三个变量如何实现动态数组就不会掉进切片的坑了!
+
+个数 `len` 是通过下标访问时的有效范围,超过 `len` 后会报越界错误,而容量 `cap` 是往后能看到的最大范围,动态数组的本质也是控制这两个变量实现有效数组的访问.
+
+![go-container-about-slice-outOfBound-len.png](../images/go-container-about-slice-outOfBound-len.png)
+
+> 因为 `s1 = [2 3 4 5], len(s1) = 4, cap(s1) = 6` ,所以 `[]` 访问切片 `s1` 元素的范围是`[0,4)` ,因此最大可访问到`s1[3]`,而 `s1[4]` 已经越界了!
+
+![go-container-about-slice-outOfBound-cap.png](../images/go-container-about-slice-outOfBound-cap.png)
+
+> 因为 `s1 = [2 3 4 5], len(s1) = 4, cap(s1) = 6` ,所以 `[:]` 根据切片 `s1` 创建新切片的范围是 `[0,6]` ,因此最大可访问范围是 `s1[0:6]` ,而 `s1[3:7]` 已经越界!
+
+### 集合 `map`
+
+集合是一种键值对组成的数据结构,其他的主流编程语言也有类似概念,相比之下,`Go` 语言的 `map` 能装载的数据类型更加多样化.
+
+- 字面量创建 `map` 换行需保留逗号 `,`
+
+```go
+func TestMap(t *testing.T) {
+    m1 := map[string]string{
+        "author": "snowdreams1006",
+        "website": "snowdreams1006",
+        "language": "golang",
+    }
+
+    // map[name:snowdreams1006 site:https://snowdreams1006.github.io]
+    t.Log(m1)
+}
+```
+
+> 一对键值对的结尾处加上逗号 `,` 可以理解,但是最后一个也要有逗号这就让我无法理解了,`Why` ?
+
+- `make` 创建的 `map` 和字面量创建的 `map` 默认初始化零值不同
+
+```go
+func TestMapByMake(t *testing.T) {
+    // empty map
+    m1 := make(map[string]int)
+
+    // map[] false
+    t.Log(m1, m1 == nil)
+
+    // nil
+    var m2 map[string]int
+
+    // map[] true
+    t.Log(m2, m2 == nil)
+}
+```
+
+> `make` 函数创建的 `map` 是空 `map`,而通过字面量形式创建的 `map` 是 `nil`,同样的规律也适合于切片 `slice`.
+
+- `range` 遍历 `map` 是无序的
+
+```go
+func TestMapTraverse(t *testing.T) {
+    m := map[string]string{
+        "name": "snowdreams1006",
+        "site": "https://snowdreams1006.github.io",
+    }
+
+    // map[name:snowdreams1006 site:https://snowdreams1006.github.io]
+    t.Log(m)
+
+    for k, v := range m {
+        t.Log(k, v)
+    }
+
+    t.Log()
+
+    for k := range m {
+        t.Log(k)
+    }
+
+    t.Log()
+
+    for _, v := range m {
+        t.Log(v)
+    }
+}
+```
+
+> 这里再一次遇到 `range` 形式的遍历,忽略键或值时用 `_` 占位,也是和数组,切片的把遍历方式一样,唯一的差别就是 `map` 没有索引,遍历结果也是无序的!
+
