@@ -640,3 +640,153 @@ func TestMapForSet(t *testing.T) {
 
 > 使用 `map[type]bool` 封装实现 `set` 禁止重复性元素的特性,等到讲解到面向对象部分再好好封装,这里仅仅列出核心结构.
 
+## 知识点总结梳理
+
+`Go` 语言是十分简洁的,不论是基础语法还是这一节的内建容器都很好的体现了这一点.
+
+数组作为各个编程语言的基础数据结构,`Go` 语言和其他主流的编程语言相比没有什么不同,都是一片连续的存储空间,不同之处是数组是值类型,所以也是可以进行比较的.
+
+这并不是新鲜知识,毕竟上一节内容已经详细阐述过该内容,这一节的重点是数组的衍生版切片 `slice` .
+
+因为数组本身是特定长度的连续空间,因为是不可变的,其他主流的编程语言中有相应的解决方案,其中就有不少数据结构的底层是基于数组实现的,`Go` 语言的 `slice` 也是如此,因此个人心底里更愿意称其为动态数组!
+
+切片 `slice` 的设计思路非常简单,内部包括三个重要变量,包括数组指针 `ptr`,可访问元素长度 `len` 以及已分配容量 `cap` .
+
+当新元素不断添加进切片时,总会达到已最大分配容量,此时切片就会自动扩容,反之则会缩容,从而实现了动态控制的能力!
+
+- 指定元素个数的是数组,未指定个数的是切片
+
+```go
+func TestArrayAndSlice(t *testing.T) {
+    // array
+    var arr1 [3]int
+    // slice
+    var arr2 []int
+
+    // [0 0 0] []
+    t.Log(arr1,arr2)
+}
+```
+
+- 基于数组创建的切片是原始数组的视图
+
+```go
+func TestArrayAndSliceByUpdate(t *testing.T) {
+    arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+    
+    // arr =  [0 1 2 3 4 5 6 7 8 9]
+    t.Log("arr = ", arr)
+
+    s := arr[2:6]
+
+    // before update s = [2 3 4 5], arr = [0 1 2 3 4 5 6 7 8 9]
+    t.Logf("before update s = %v, arr = %v", s, arr)
+
+    s[0] = 666
+
+    // after update s = [666 3 4 5], arr = [0 1 666 3 4 5 6 7 8 9]
+    t.Logf("after update s = %v, arr = %v", s, arr)
+}
+```
+
+- 添加或删除切片元素都返回新切片
+
+```go
+func TestArrayAndSliceIncreasing(t *testing.T) {
+    var s []int
+
+    fmt.Println("add new item to slice")
+
+    for i := 0; i < 10; i++ {
+        s = append(s, i)
+
+        fmt.Printf("s = %v, len(s) = %d, cap(s) = %d\n", s, len(s), cap(s))
+    }
+
+    fmt.Println("remove item from slice")
+
+    for i := 0; i < 10; i++ {
+        s = s[1:]
+
+        fmt.Printf("s = %v, len(s) = %d, cap(s) = %d\n", s, len(s), cap(s))
+    }
+}
+```
+
+- `[index]` 访问切片元素仅仅和切片的 `len` 有关,`[start:end]` 创建新切片仅仅和原切片的 `cap` 有关
+
+```go
+func TestArrayAndSliceBound(t *testing.T) {
+    arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+    s1 := arr[5:8]
+
+    // s1[0] = 5, s1[2] = 7
+    t.Logf("s1[0] = %d, s1[%d] = %d", s1[0], len(s1)-1, s1[len(s1)-1])
+    // s1 = [5 6 7], len(s1) = 3, cap(s1) = 5
+    t.Logf("s1 = %v, len(s1) = %d, cap(s1) = %d", s1, len(s1), cap(s1))
+
+    s2 := s1[3:5]
+
+    // s2[0] = 8, s2[1] = 9
+    t.Logf("s2[0] = %d, s2[%d] = %d", s2[0], len(s2)-1, s2[len(s2)-1])
+    // s2 = [8 9], len(s2) = 2, cap(s2) = 2
+    t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+}
+```
+
+- 只有 `map` 没有 `set` 
+
+```go
+func TestMapAndSet(t *testing.T) {
+    m := map[string]string{
+        "name": "snowdreams1006",
+        "site": "https://snowdreams1006.github.io",
+        "lang": "go",
+    }
+
+    // https://snowdreams1006.github.io
+    if site, ok := m["site"]; ok {
+        t.Log(site)
+    } else {
+        t.Log("site does not exist ")
+    }
+
+    s := map[string]bool{
+        "name": true,
+        "site": true,
+        "lang": true,
+    }
+
+    // Pay attention to snowdreams1006
+    if _, ok := m["isFollower"]; ok {
+        t.Log("Have an eye on snowdreams1006")
+    } else {
+        s["isFollower"] = true
+        t.Log("Pay attention to snowdreams1006")
+    }
+}
+```
+
+- `delete` 函数删除集合 `map` 键值对
+
+```go
+func TestMapAndSetByDelete(t *testing.T) {
+    m := map[string]string{
+        "name": "snowdreams1006",
+        "site": "https://snowdreams1006.github.io",
+        "lang": "go",
+    }
+
+    delete(m, "lang")
+
+    // delete lang successfully
+    if _,ok := m["lang"];!ok{
+        t.Log("delete lang successfully")
+    }
+}
+```
+
+关于 `Go` 语言中内建容器是不是都已经 `Get` 了呢?如果有表述不对的地方,还请指正哈,欢迎一起来公众号[雪之梦技术驿站]学习交流,每天进步一点点!
+
+
