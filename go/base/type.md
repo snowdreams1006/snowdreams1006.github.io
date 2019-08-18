@@ -408,3 +408,292 @@ func TestDeleteSlice(t *testing.T) {
 	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
 }
 ```
+
+头尾删除
+
+```go
+func TestPopSlice(t *testing.T) {
+	s1 := []int{1, 3, 5, 7, 9}
+	s2 := make([]int, 10, 32)
+
+	copy(s2,s1)
+
+	// s2 = [1 3 5 7 9 0 0 0 0 0], len(s2) = 10, cap(s2) = 32
+	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+
+	front := s2[0]
+	s2 = s2[1:]
+
+	// front = 1
+	t.Logf("front = %v", front)
+	// s2 = [3 5 7 9 0 0 0 0 0], len(s2) = 9, cap(s2) = 31
+	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+
+	tail := s2[len(s2)-1]
+	s2 = s2[:len(s2)-1]
+
+	// tail = 0
+	t.Logf("tail = %v", tail)
+	// s2 = [3 5 7 9 0 0 0 0], len(s2) = 8, cap(s2) = 31
+	t.Logf("s2 = %v, len(s2) = %d, cap(s2) = %d", s2, len(s2), cap(s2))
+}
+```
+
+map
+
+```go
+func TestMap(t *testing.T) {
+	m := map[string]string{
+		"name": "snowdreams1006",
+		"site": "https://snowdreams1006.github.io",
+	}
+	
+	// map[name:snowdreams1006 site:https://snowdreams1006.github.io]
+	t.Log(m)
+}
+```
+
+map[k]v,map[k1]map[k2]v
+
+```go
+func TestMapByMake(t *testing.T) {
+	// empty map
+	m1 := make(map[string]int)
+
+	// map[] false
+	t.Log(m1, m1 == nil)
+
+	// nil
+	var m2 map[string]int
+
+	// map[] true
+	t.Log(m2, m2 == nil)
+}
+```
+
+遍历,`hashMap`
+
+```go
+func TestMapTraverse(t *testing.T) {
+	m := map[string]string{
+		"name": "snowdreams1006",
+		"site": "https://snowdreams1006.github.io",
+	}
+
+	// map[name:snowdreams1006 site:https://snowdreams1006.github.io]
+	t.Log(m)
+
+	for k, v := range m {
+		t.Log(k, v)
+	}
+
+	t.Log()
+
+	for k := range m {
+		t.Log(k)
+	}
+
+	t.Log()
+	
+	for _, v := range m {
+		t.Log(v)
+	}
+}
+```
+
+获取
+
+```go
+func TestMapGetItem(t *testing.T) {
+	m := map[string]string{
+		"name": "snowdreams1006",
+		"site": "https://snowdreams1006.github.io",
+	}
+
+	// map[name:snowdreams1006 site:https://snowdreams1006.github.io]
+	t.Log(m)
+
+	name := m["name"]
+
+	// snowdreams1006
+	t.Log(name)
+
+	author := m["author"]
+
+	// zero value is empty
+	t.Log(author)
+}
+```
+
+删除
+
+```go
+func TestMapDeleteItem(t *testing.T) {
+	m := map[string]string{
+		"name": "snowdreams1006",
+		"site": "https://snowdreams1006.github.io",
+	}
+
+	// map[name:snowdreams1006 site:https://snowdreams1006.github.io]
+	t.Log(m)
+
+	delete(m,"name")
+
+	// map[site:https://snowdreams1006.github.io]
+	t.Log(m)
+
+	delete(m,"id")
+
+	// map[site:https://snowdreams1006.github.io]
+	t.Log(m)
+}
+```
+
+`map` 的操作
+
+- 创建 : `make map[string]int`
+- 获取元素: `m[k]`
+- `key` 不存在时,获取value类型的初始值
+- 用 `value,ok := m[k]` 来判断是否存在 `key`
+- 用 `delete` 删除一个元素
+- 用 `range` 遍历 `key`,或者遍历 `key,value` 键值对
+- 不保证遍历顺序,如需排序,需手动对 `key` 排序
+- 用 `len(m)` 获得元素的个数
+
+`map` 的 `key`
+
+- `map` 使用哈希表,必须可以比较相等
+- 除了 `slice`,`map`,`func` 的内建类型都可以作为 `key`
+- `struc` 类型不包括上述字段,也可以作为 `key`
+
+## 举个例子
+
+寻找最长不含有重复字符的子串
+
+> [https://leetcode.com/problems/longest-substring-without-repeating-characters/](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+```go
+func lengthOfLongestSubstring(s string) int {
+	lastOccurred := make(map[byte]int)
+	start, maxLength := 0, 0
+
+	for i, ch := range []byte(s) {
+		if lastI, ok := lastOccurred[ch]; ok && lastI >= start {
+			start = lastI + 1
+		}
+		if i-start+1 > maxLength {
+			maxLength = i - start + 1
+		}
+		lastOccurred[ch] = i
+	}
+
+	return maxLength
+}
+
+func TestLengthOfLongestSubstring(t *testing.T) {
+	// 3 1 3 0 1 7
+	t.Log(
+		lengthOfLongestSubstring("abcabcbb"),
+		lengthOfLongestSubstring("bbbbb"),
+		lengthOfLongestSubstring("pwwkew"),
+		lengthOfLongestSubstring(""),
+		lengthOfLongestSubstring("a"),
+		lengthOfLongestSubstring("abcdefg"),
+	)
+}
+```
+
+```go
+func TestString(t *testing.T) {
+	s := "hello,雪之梦技术驿站"
+
+	//  hello,雪之梦技术驿站 27
+	t.Log(s,len(s))
+
+	// 68 65 6C 6C 6F 2C E9 9B AA E4 B9 8B E6 A2 A6 E6 8A 80 E6 9C AF E9 A9 BF E7 AB 99 
+	for _,b := range []byte(s){
+		fmt.Printf("%X ",b)
+	}
+	fmt.Println()
+}
+```
+
+```go
+
+func TestString2Rune(t *testing.T) {
+	s := "hello,雪之梦技术驿站"
+
+	//  hello,雪之梦技术驿站 27
+	t.Log(s, len(s))
+
+	// 68 65 6C 6C 6F 2C E9 9B AA E4 B9 8B E6 A2 A6 E6 8A 80 E6 9C AF E9 A9 BF E7 AB 99
+	for _, b := range []byte(s) {
+		fmt.Printf("%X ", b)
+	}
+	fmt.Println()
+
+	// ch is rune,utf-8 解码再转 unicode 编码
+	for i, ch := range s {
+		fmt.Printf("(%d %X) ", i, ch)
+	}
+	fmt.Println()
+
+	// 13
+	t.Log(utf8.RuneCountInString(s))
+
+	bytes := []byte(s)
+
+	// h e l l o , 雪 之 梦 技 术 驿 站
+	for len(bytes) > 0 {
+		ch, size := utf8.DecodeRune(bytes)
+		bytes = bytes[size:]
+
+		fmt.Printf("%c ", ch)
+	}
+	fmt.Println()
+
+	// (0 h) (1 e) (2 l) (3 l) (4 o) (5 ,) (6 雪) (7 之) (8 梦) (9 技) (10 术) (11 驿) (12 站) 
+	for i, ch := range []rune(s) {
+		fmt.Printf("(%d %c) ", i, ch)
+	}
+	fmt.Println()
+}
+```
+
+- 使用`range` 遍历 `pos,rune` 对
+- `utf8.RuneCountInString(s)` 字符数,`len(s)` 字节数
+- `[]byte(s)` 获得字节
+
+```go
+func lengthOfLongestSubstringInternationalVersion(s string) int {
+	lastOccurred := make(map[rune]int)
+	start, maxLength := 0, 0
+
+	for i, ch := range []rune(s) {
+		if lastI, ok := lastOccurred[ch]; ok && lastI >= start {
+			start = lastI + 1
+		}
+		if i-start+1 > maxLength {
+			maxLength = i - start + 1
+		}
+		lastOccurred[ch] = i
+	}
+
+	return maxLength
+}
+
+func TestLengthOfLongestSubstringInternationalVersion(t *testing.T) {
+	// 3 1 3 0 1 7 7 2 8
+	t.Log(
+		lengthOfLongestSubstringInternationalVersion("abcabcbb"),
+		lengthOfLongestSubstringInternationalVersion("bbbbb"),
+		lengthOfLongestSubstringInternationalVersion("pwwkew"),
+		lengthOfLongestSubstringInternationalVersion(""),
+		lengthOfLongestSubstringInternationalVersion("a"),
+		lengthOfLongestSubstringInternationalVersion("abcdefg"),
+		lengthOfLongestSubstringInternationalVersion("雪之梦技术驿站"),
+		lengthOfLongestSubstringInternationalVersion("一零零六"),
+		lengthOfLongestSubstringInternationalVersion("黑化肥挥发发灰会花飞灰化肥挥发发黑会飞花"),
+	)
+}
+```
