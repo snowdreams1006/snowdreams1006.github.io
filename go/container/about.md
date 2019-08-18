@@ -106,5 +106,192 @@
 
 > 参数传递只有值传递,逻辑上更加简单,但是处理复杂情况时可以传递指针实现引用传递的效果.
 
+## 内建容器有哪些
+
+复习了 `Go` 语言的基础语法后,开始继续学习变量类型的承载者也就是容器的相关知识.
+
+承载一类变量最基础的底层容器就是数组了,大多数高级的容器底层都可以依靠数组进行封装,所以先来了解一下 `Go` 的数组有何不同?
+
+### 数组和切片
+
+- 数组的声明和初始化 
+
+数组的明显特点就是一组特定长度的连续存储空间,声明数组时必须指定数组的长度,声明的同时可以进行初始化,当然不指定数组长度时也可以使用 `...` 语法让编译器帮我们确定数组的长度.
+
+```go
+func TestArray(t *testing.T) {
+    var arr1 [3]int
+    arr2 := [5]int{1, 2, 3, 4, 5}
+    arr3 := [...]int{2, 4, 6, 8, 10}
+
+    // [0 0 0] [1 2 3 4 5] [2 4 6 8 10]
+    t.Log(arr1, arr2, arr3)
+
+    var grid [3][4]int
+
+    // [[0 0 0 0] [0 0 0 0] [0 0 0 0]]
+    t.Log(grid)
+}
+```
+
+> `[3]int` 指定数组长度为 `3`,元素类型为 `int`,当然也可以声明时直接赋值 `[5]int{1, 2, 3, 4, 5}` ,如果懒得指定数组长度,可以用 `[...]int{2, 4, 6, 8, 10}` 表示.
+
+- 数组的遍历和元素访问
+
+最常见的 `for` 循环进行遍历就是根据数组的索引进行访问,`range arr` 方式提供了简化遍历的便捷方法.
+
+```go
+func TestArrayTraverse(t *testing.T) {
+    arr := [...]int{2, 4, 6, 8, 10}
+
+    for i := 0; i < len(arr); i++ {
+        t.Log(arr[i])
+    }
+
+    for i := range arr {
+        t.Log(arr[i])
+    }
+
+    for i, v := range arr {
+        t.Log(i, v)
+    }
+
+    for _, v := range arr {
+        t.Log(v)
+    }
+}
+```
+
+> `range arr` 可以返回索引值和索引项,如果仅仅关心索引项而不在乎索引值的话,可以使用 `_` 占位符表示忽略索引值,如果只关心索引值,那么可以不写索引项.这种处理逻辑也就是函数的多返回值顺序接收,不可以出现未使用的变量.
+
+- 数组是值类型可以进行比较
+
+数组是值类型,这一点和其他主流的编程语言有所不同,因此相同纬度且相同元素个数的数组可以比较,关于这方面的内容前面也已经强调过,这里再次简单回顾一下.
+
+```go
+func printArray(arr [5]int) {
+    arr[0] = 666
+    for i, v := range arr {
+        fmt.Println(i, v)
+    }
+}
+
+func TestPrintArray(t *testing.T) {
+    var arr1 [3]int
+    arr2 := [5]int{1, 2, 3, 4, 5}
+    arr3 := [...]int{2, 4, 6, 8, 10}
+
+    // [0 0 0] [1 2 3 4 5] [2 4 6 8 10]
+    t.Log(arr1, arr2, arr3)
+
+    // cannot use arr1 (type [3]int) as type [5]int in argument to printArray
+    //printArray(arr1)
+
+    fmt.Println("printArray(arr2)")
+    printArray(arr2)
+
+    fmt.Println("printArray(arr3)")
+    printArray(arr3)
+
+    // [1 2 3 4 5] [2 4 6 8 10]
+    t.Log(arr2, arr3)
+}
+```
+
+> 因为参数传递是值传递,所以 `printArray` 函数无法更改调用者传递的外部函数值,如果想要在函数 `printArray` 内部更改传递过来的数组内容,可以通过指针来实现,但是有没有更简单的做法?
+
+想要在 `printArrayByPointer` 函数内部修改参数数组,可以通过数组指针的方式,如果有不熟悉的地方,可以翻看上一篇文章回顾查看.
+
+```go
+func printArrayByPointer(arr *[5]int) {
+    arr[0] = 666
+    for i, v := range arr {
+        fmt.Println(i, v)
+    }
+}
+
+func TestPrintArrayByPointer(t *testing.T) {
+    var arr1 [3]int
+    arr2 := [5]int{1, 2, 3, 4, 5}
+    arr3 := [...]int{2, 4, 6, 8, 10}
+
+    // [0 0 0] [1 2 3 4 5] [2 4 6 8 10]
+    t.Log(arr1, arr2, arr3)
+
+    fmt.Println("printArrayByPointer(arr2)")
+    printArrayByPointer(&arr2)
+
+    fmt.Println("printArrayByPointer(arr3)")
+    printArrayByPointer(&arr3)
+
+    // [666 2 3 4 5] [666 4 6 8 10]
+    t.Log(arr2, arr3)
+}
+```
+
+> 修改数组的元素可以通过传递数组指针来实现,除此之外,`Go` 语言中数组还有一个近亲 `slice`,也就是切片,它可以实现类似的效果.
+
+- 切片的声明和初始化
+
+切片和数组非常类似,创建数组时如果没有指定数组的长度,那么最终创建的其实是切片并不是数组.
+
+```go
+func TestSliceInit(t *testing.T) {
+    var s1 [5]int
+    // [0 0 0 0 0]
+    t.Log(s1)
+
+    var s2 []int
+    // []
+    t.Log(s2,len(s2))
+}
+```
+
+> `[]int` 没有指定长度,此时创建的是切片,默认初始化零值是 `nil`,并不是空数组!
+
+同理,数组可以声明并初始化,切片也可以,并且语法也很类似,稍不注意还以为是数组呢!
+
+```go
+func TestSliceInitValue(t *testing.T) {
+    var s1 = [5]int{1, 3, 5, 7, 9}
+    // [1 3 5 7 9]
+    t.Log(s1)
+
+    var s2 = []int{1, 3, 5, 7, 9}
+    // [1 3 5 7 9]
+    t.Log(s2)
+}
+```
+
+> 仅仅是没有指定 `[]` 中的长度,最终创建的结果就变成了切片,真的让人眼花缭乱!
+
+数组和切片如此相像,让人不得不怀疑两者之间有什么见不得人的勾当?其实可以从数组中得到切片,下面举例说明:
+
+```go
+func TestSliceFromArray(t *testing.T) {
+    arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+    // arr =  [0 1 2 3 4 5 6 7 8 9]
+    t.Log("arr = ", arr)
+
+    // arr[2:6] =  [2 3 4 5]
+    t.Log("arr[2:6] = ", arr[2:6])
+    // arr[:6] =  [0 1 2 3 4 5]
+    t.Log("arr[:6] = ", arr[:6])
+    // arr[2:] =  [2 3 4 5 6 7 8 9]
+    t.Log("arr[2:] = ", arr[2:])
+    // arr[:] =  [0 1 2 3 4 5 6 7 8 9]
+    t.Log("arr[:] = ", arr[:])
+}
+```
+
+> `arr[start:end]` 截取数组的一部分得到的结果就是切片,切片的概念也是很形象啊!
+
+和其他主流的编程语言一样,`[start:end]` 是一个左闭右开区间,切片的含义也非常明确:
+
+忽略起始索引 `start` 时,`arr[:end]` 表示原数组从头开始直到终止索引 `end` 的前一位;
+忽略终止索引 `end` 时,`arr[ start:]` 表示原数组从起始索引 `start` 开始直到最后一位;
+既忽略起始索引又忽略终止索引的情况,虽然不常见但是含义上将应该就是原数组,但是记得类型是切片不是数组哟!
+
+
 
 
