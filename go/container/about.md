@@ -533,3 +533,110 @@ func TestMapTraverse(t *testing.T) {
 
 > 这里再一次遇到 `range` 形式的遍历,忽略键或值时用 `_` 占位,也是和数组,切片的把遍历方式一样,唯一的差别就是 `map` 没有索引,遍历结果也是无序的!
 
+- 获取元素时需判断元素是否存在
+
+```go
+func TestMapGetItem(t *testing.T) {
+    m := map[string]string{
+        "name": "snowdreams1006",
+        "site": "https://snowdreams1006.github.io",
+    }
+
+    // snowdreams1006
+    t.Log(m["name"])
+
+    // zero value is empty string
+    t.Log(m["author"])
+
+    // https://snowdreams1006.github.io
+    if site, ok := m["site"]; ok {
+        t.Log(site)
+    } else {
+        t.Log("key does not exist ")
+    }
+}
+```
+
+> `Go` 语言的 `map` 获取不存在的键时,返回的是值对应类型的零值,`map[string]string` 返回的默认零值就是空字符串,由于不会报错进行强提醒,这也就要求我们调用时多做一步检查.当键值对存在时,第二个返回值返回 `true`,不存在时返回 `false`.
+
+- 删除键值对时用 `delete` 函数
+
+```go
+func TestMapDeleteItem(t *testing.T) {
+    m := map[string]string{
+        "name": "snowdreams1006",
+        "site": "https://snowdreams1006.github.io",
+    }
+
+    // map[name:snowdreams1006 site:https://snowdreams1006.github.io]
+    t.Log(m)
+
+    delete(m, "name")
+
+    // map[site:https://snowdreams1006.github.io]
+    t.Log(m)
+
+    delete(m, "id")
+
+    // map[site:https://snowdreams1006.github.io]
+    t.Log(m)
+}
+```
+
+> `delete(map,key)` 用于删除 `map` 的键值对,如果想要验证是否删除成功,别忘了使用 `value,ok := m[k]` 确定是否存在指定键值对
+
+- 除 `slice`,`map`,`func` 外,其余类型均可键
+
+> 因为 `map` 是基于哈希表实现,所以遍历是无序的,另一方面因为 `slice`,`map`,`func` 不可比较,因为也不能作为键.当然若自定义类型 `struc` 不包含上述类型,也可以作为键,并不要求实现 `hashcode` 和 `equal` 之类的.
+
+- `value` 可以承载函数 `func` 类型
+
+```go
+func TestMapWithFunValue(t *testing.T) {
+    m := map[int]func(op int) int{}
+
+    m[1] = func(op int) int {
+        return op
+    }
+    m[2] = func(op int) int {
+        return op * op
+    }
+    m[3] = func(op int) int {
+        return op * op * op
+    }
+
+    // 1 4 27
+    t.Log(m[1](1), m[2](2), m[3](3))
+}
+```
+
+> 再一次说明函数是一等公民,这部分会在以后的函数式编程中进行详细介绍.
+
+### 没有 `set`
+
+`Go` 的默认类型竟然没有 `set` 这种数据结构,这在主流的编程语言中算是特别的存在了!
+
+正如 `Go` 的循环仅支持 `for` 循环一样,没有 `while` 循环一样可以玩出 `while` 循环的效果,靠的就是增强的 `for` 能力.
+
+所以,即使没有 `set` 类型,基于现有的数据结构一样能实现 `set` 效果,当然直接用 `map` 就可以封装成 `set`.
+
+```go
+func TestMapForSet(t *testing.T) {
+    mySet := map[int]bool{}
+
+    mySet[1] = true
+
+    n := 3
+
+    if mySet[n] {
+        t.Log("update", mySet[n])
+    } else {
+        t.Log("add", mySet[n])
+    }
+
+    delete(mySet, 1)
+}
+```
+
+> 使用 `map[type]bool` 封装实现 `set` 禁止重复性元素的特性,等到讲解到面向对象部分再好好封装,这里仅仅列出核心结构.
+
