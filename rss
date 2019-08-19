@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 17 Aug 2019 06:07:22 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 Aug 2019 01:44:40 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -542,6 +542,25 @@
             <description><![CDATA[在上篇文章中,我们动手亲自编写了第一个 Go 语言版本的 Hello World,并且认识了 Go 语言中有意思的变量和不安分的常量.]]></description>
             <link>https://snowdreams1006.github.io/go/base/grammar.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/grammar.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[内建容器]]></title>
+            <description><![CDATA[上篇文章中详细介绍了 Go 的基础语言,指出了 Go 和其他主流的编程语言的差异性,比较侧重于语法细节,相信只要稍加记忆就能轻松从已有的编程语言切换到 Go 语言的编程习惯中,尽管这种切换可能并不是特别顺畅,但多加练习尤其是多多试错,总是可以慢慢感受 Go 语言之美!]]></description>
+            <link>https://snowdreams1006.github.io/go/container/about.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/container/about.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[数组切片]]></title>
+            <link>https://snowdreams1006.github.io/go/container/array.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/container/array.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[字典映射]]></title>
+            <link>https://snowdreams1006.github.io/go/container/map.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/container/map.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
