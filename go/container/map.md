@@ -286,3 +286,20 @@ func TestQueue_Push(t *testing.T) {
 }
 
 ```
+
+- gopath 环境变量的设置
+
+- 默认~/go(unix/linux),%userprofile\go(windows)%
+- 官方推荐: 所有项目和第三方库都放在同一个gopath
+- 也可以将不同的项目放到不同的gopath
+
+go get golang.org/x/tools/cmd/goimports
+
+使用 gopm 获取无法下载的包
+
+go get github.com/gpmgo/gopm
+
+gopm get golang.org/x/tools/cmd/goimports
+
+go install ./...
+
