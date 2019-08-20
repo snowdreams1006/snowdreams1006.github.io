@@ -169,3 +169,169 @@ Map and slice values behave like pointers: they are descriptors that contain poi
 
 Note that this discussion is about the semantics of the operations. Actual implementations may apply optimizations to avoid copying as long as the optimizations do not change the semantics.
 ```
+
+
+> Why are maps, slices, and channels references while arrays are values?
+
+```go
+There's a lot of history on that topic. Early on, maps and channels were syntactically pointers and it was impossible to declare or use a non-pointer instance. Also, we struggled with how arrays should work. Eventually we decided that the strict separation of pointers and values made the language harder to use. Changing these types to act as references to the associated, shared data structures resolved these issues. This change added some regrettable complexity to the language but had a large effect on usability: Go became a more productive, comfortable language when it was introduced.
+```
+
+> Why don't maps allow slices as keys?
+
+```
+Map lookup requires an equality operator, which slices do not implement. They don't implement equality because equality is not well defined on such types; there are multiple considerations involving shallow vs. deep comparison, pointer vs. value comparison, how to deal with recursive types, and so on. We may revisit this issue—and implementing equality for slices will not invalidate any existing programs—but without a clear idea of what equality of slices should mean, it was simpler to leave it out for now.
+
+In Go 1, unlike prior releases, equality is defined for structs and arrays, so such types can be used as map keys. Slices still do not have a definition of equality, though.
+```
+
+> Why are maps built in?
+
+```
+The same reason strings are: they are such a powerful and important data structure that providing one excellent implementation with syntactic support makes programming more pleasant. We believe that Go's implementation of maps is strong enough that it will serve for the vast majority of uses. If a specific application can benefit from a custom implementation, it's possible to write one but it will not be as convenient syntactically; this seems a reasonable tradeoff.
+```
+
+> How do constants work in Go?
+
+```
+Although Go is strict about conversion between variables of different numeric types, constants in the language are much more flexible. Literal constants such as 23, 3.14159 and math.Pi occupy a sort of ideal number space, with arbitrary precision and no overflow or underflow. For instance, the value of math.Pi is specified to 63 places in the source code, and constant expressions involving the value keep precision beyond what a float64 could hold. Only when the constant or constant expression is assigned to a variable—a memory location in the program—does it become a "computer" number with the usual floating-point properties and precision.
+
+Also, because they are just numbers, not typed values, constants in Go can be used more freely than variables, thereby softening some of the awkwardness around the strict conversion rules. One can write expressions such as
+
+sqrt2 := math.Sqrt(2)
+without complaint from the compiler because the ideal number 2 can be converted safely and accurately to a float64 for the call to math.Sqrt.
+
+A blog post titled Constants explores this topic in more detail.
+```
+
+> Why does Go not provide implicit numeric conversions?
+
+```
+The convenience of automatic conversion between numeric types in C is outweighed by the confusion it causes. When is an expression unsigned? How big is the value? Does it overflow? Is the result portable, independent of the machine on which it executes? It also complicates the compiler; “the usual arithmetic conversions” are not easy to implement and inconsistent across architectures. For reasons of portability, we decided to make things clear and straightforward at the cost of some explicit conversions in the code. The definition of constants in Go—arbitrary precision values free of signedness and size annotations—ameliorates matters considerably, though.
+
+A related detail is that, unlike in C, int and int64 are distinct types even if int is a 64-bit type. The int type is generic; if you care about how many bits an integer holds, Go encourages you to be explicit.
+```
+
+> Why does Go not have covariant result types?
+
+```
+Covariant result types would mean that an interface like
+
+type Copyable interface {
+    Copy() interface{}
+}
+would be satisfied by the method
+
+func (v Value) Copy() Value
+because Value implements the empty interface. In Go method types must match exactly, so Value does not implement Copyable. Go separates the notion of what a type does—its methods—from the type's implementation. If two methods return different types, they are not doing the same thing. Programmers who want covariant result types are often trying to express a type hierarchy through interfaces. In Go it's more natural to have a clean separation between interface and implementation.
+```
+
+> Why is my nil error value not equal to nil?
+
+```
+Under the covers, interfaces are implemented as two elements, a type T and a value V. V is a concrete value such as an int, struct or pointer, never an interface itself, and has type T. For instance, if we store the int value 3 in an interface, the resulting interface value has, schematically, (T=int, V=3). The value V is also known as the interface's dynamic value, since a given interface variable might hold different values V (and corresponding types T) during the execution of the program.
+
+An interface value is nil only if the V and T are both unset, (T=nil, V is not set), In particular, a nil interface will always hold a nil type. If we store a nil pointer of type *int inside an interface value, the inner type will be *int regardless of the value of the pointer: (T=*int, V=nil). Such an interface value will therefore be non-nil even when the pointer value V inside is nil.
+
+This situation can be confusing, and arises when a nil value is stored inside an interface value such as an error return:
+
+func returnsError() error {
+    var p *MyError = nil
+    if bad() {
+        p = ErrBad
+    }
+    return p // Will always return a non-nil error.
+}
+If all goes well, the function returns a nil p, so the return value is an error interface value holding (T=*MyError, V=nil). This means that if the caller compares the returned error to nil, it will always look as if there was an error even if nothing bad happened. To return a proper nil error to the caller, the function must return an explicit nil:
+
+func returnsError() error {
+    if bad() {
+        return ErrBad
+    }
+    return nil
+}
+It's a good idea for functions that return errors always to use the error type in their signature (as we did above) rather than a concrete type such as *MyError, to help guarantee the error is created correctly. As an example, os.Open returns an error even though, if not nil, it's always of concrete type *os.PathError.
+
+Similar situations to those described here can arise whenever interfaces are used. Just keep in mind that if any concrete value has been stored in the interface, the interface will not be nil. For more information, see The Laws of Reflection.
+```
+
+> Can I convert []T1 to []T2 if T1 and T2 have the same underlying type?
+
+```
+This last line of this code sample does not compile.
+type T1 int
+type T2 int
+var t1 T1
+var x = T2(t1) // OK
+var st1 []T1
+var sx = ([]T2)(st1) // NOT OK
+In Go, types are closely tied to methods, in that every named type has a (possibly empty) method set. The general rule is that you can change the name of the type being converted (and thus possibly change its method set) but you can't change the name (and method set) of elements of a composite type. Go requires you to be explicit about type conversions.
+```
+
+> Can I convert a []T to an []interface{}?
+
+```
+Not directly. It is disallowed by the language specification because the two types do not have the same representation in memory. It is necessary to copy the elements individually to the destination slice. This example converts a slice of int to a slice of interface{}:
+
+t := []int{1, 2, 3, 4}
+s := make([]interface{}, len(t))
+for i, v := range t {
+    s[i] = v
+}
+```
+
+> Why doesn't type T satisfy the Equal interface?
+
+```
+Consider this simple interface to represent an object that can compare itself with another value:
+
+type Equaler interface {
+    Equal(Equaler) bool
+}
+and this type, T:
+
+type T int
+func (t T) Equal(u T) bool { return t == u } // does not satisfy Equaler
+Unlike the analogous situation in some polymorphic type systems, T does not implement Equaler. The argument type of T.Equal is T, not literally the required type Equaler.
+
+In Go, the type system does not promote the argument of Equal; that is the programmer's responsibility, as illustrated by the type T2, which does implement Equaler:
+
+type T2 int
+func (t T2) Equal(u Equaler) bool { return t == u.(T2) }  // satisfies Equaler
+Even this isn't like other type systems, though, because in Go any type that satisfies Equaler could be passed as the argument to T2.Equal, and at run time we must check that the argument is of type T2. Some languages arrange to make that guarantee at compile time.
+
+A related example goes the other way:
+
+type Opener interface {
+   Open() Reader
+}
+
+func (t T3) Open() *os.File
+In Go, T3 does not satisfy Opener, although it might in another language.
+
+While it is true that Go's type system does less for the programmer in such cases, the lack of subtyping makes the rules about interface satisfaction very easy to state: are the function's names and signatures exactly those of the interface? Go's rule is also easy to implement efficiently. We feel these benefits offset the lack of automatic type promotion. Should Go one day adopt some form of polymorphic typing, we expect there would be a way to express the idea of these examples and also have them be statically checked.
+```
+
+> How can I guarantee my type satisfies an interface?
+
+```
+You can ask the compiler to check that the type T implements the interface I by attempting an assignment using the zero value for T or pointer to T, as appropriate:
+
+type T struct{}
+var _ I = T{}       // Verify that T implements I.
+var _ I = (*T)(nil) // Verify that *T implements I.
+If T (or *T, accordingly) doesn't implement I, the mistake will be caught at compile time.
+
+If you wish the users of an interface to explicitly declare that they implement it, you can add a method with a descriptive name to the interface's method set. For example:
+
+type Fooer interface {
+    Foo()
+    ImplementsFooer()
+}
+A type must then implement the ImplementsFooer method to be a Fooer, clearly documenting the fact and announcing it in go doc's output.
+
+type Bar struct{}
+func (b Bar) ImplementsFooer() {}
+func (b Bar) Foo() {}
+Most code doesn't make use of such constraints, since they limit the utility of the interface idea. Sometimes, though, they're necessary to resolve ambiguities among similar interfaces.
+```
