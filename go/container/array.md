@@ -2,9 +2,6 @@
 
 字符串
 
-<<<<<<< HEAD
-- `string` 是数据类型,不是
-=======
 - string 是数据类型,不是引用或指针类型
 - string 是只读的 byte slice,len 函数可以返回它所包含的 byte 数
 - string 的 byte 数组可以存放任何数组
