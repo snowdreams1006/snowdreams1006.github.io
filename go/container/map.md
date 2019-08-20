@@ -32,7 +32,7 @@ func TestCreatTreeNode(t *testing.T) {
 
 > 结构创建在堆上还是栈上?java都是堆上(new垃圾回收),c++局部变量是栈立即销毁,返回时堆分配,手动释放.
 
-不需要知道go
+不需要知道go,垃圾回收
 
 ```go
 func createTreeNode(val int) *treeNode {
@@ -43,5 +43,140 @@ func TestConstructFn(t *testing.T) {
 	root := createTreeNode(1)
 	
 	t.Log(root)
+}
+```
+
+接收者
+
+```go
+func (node treeNode) print() {
+	fmt.Println(node.value)
+}
+```
+
+遍历
+
+```go
+func TestTreeNodeTraverse(t *testing.T) {
+	var root treeNode
+
+	root = treeNode{value: 3}
+	root.left = &treeNode{}
+	root.right = &treeNode{5, nil, nil}
+	root.right.left = new(treeNode)
+
+	root.print()
+}
+```
+
+```go
+func print(node treeNode) {
+	fmt.Println(node.value)
+}
+
+func TestTreeNodeTraverseByNormalWay(t *testing.T) {
+	var root treeNode
+
+	root = treeNode{value: 3}
+	root.left = &treeNode{}
+	root.right = &treeNode{5, nil, nil}
+	root.right.left = new(treeNode)
+
+	print(root)
+}
+```
+
+```go
+func (node treeNode) setValue(value int) {
+	node.value = value
+}
+
+func TestTreeNodeSetValue(t *testing.T){
+	var root treeNode
+
+	root = treeNode{value: 3}
+	root.left = &treeNode{}
+	root.right = &treeNode{5, nil, nil}
+	root.right.left = new(treeNode)
+
+	root.left.setValue(4)
+	root.left.print()
+}
+```
+
+```go
+func (node *treeNode) setValue(value int) {
+	node.value = value
+}
+
+func TestTreeNodeSetValue(t *testing.T){
+	var root treeNode
+
+	root = treeNode{value: 3}
+	root.left = &treeNode{}
+	root.right = &treeNode{5, nil, nil}
+	root.right.left = new(treeNode)
+
+	root.left.setValue(4)
+	root.left.print()
+
+	root.setValue(100)
+	root.print()
+}
+```
+
+- 显示定义和命名方法接收者
+- nil 指针也可以调用方法
+
+```go
+
+func (node *treeNode) setValueWithNil(value int) {
+	if node == nil{
+		fmt.Println("Setting value to nil node")
+		return
+	}
+	node.value = value
+}
+
+func TestTreeNodeSetValueWithNil(t *testing.T){
+	var root treeNode
+
+	root = treeNode{value: 3}
+	root.left = &treeNode{}
+	root.right = &treeNode{5, nil, nil}
+	root.right.left = new(treeNode)
+
+	var pRoot *treeNode
+	pRoot.setValueWithNil(200)
+
+	pRoot = &root
+	pRoot.setValueWithNil(300)
+	pRoot.print()
+}
+```
+
+
+```go
+func (node *treeNode) traverse() {
+	if node == nil{
+		return
+	}
+
+	node.left.traverse()
+	node.print()
+	node.right.traverse()
+}
+
+func TestTreeNodetraverse(t *testing.T) {
+	var root treeNode
+
+	root = treeNode{value: 3}
+	root.left = &treeNode{}
+	root.right = &treeNode{5, nil, nil}
+	root.right.left = new(treeNode)
+	root.left.right = createTreeNode(2)
+	root.right.left.setValue(4)
+
+	root.traverse()
 }
 ```
