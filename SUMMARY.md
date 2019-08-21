@@ -81,7 +81,7 @@
     * [内建容器](go/container/about.md)
         * [数组切片](go/container/array.md)
         * [字典映射](go/container/map.md)
-    * [内建容器](go/oop/about.md)
+    * [面向对象](go/oop/about.md)
     * [标准命令详解](go/cmd/about.md)
         * [go build](go/cmd/build.md)
         * [go install](go/cmd/install.md)
