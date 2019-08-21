@@ -8,7 +8,7 @@
 
 客观的说,`Go` 既是面向对象语言又不是面向对象! 
 
-![go-oop-about-schrodinger-cat.jpeg](../images/go-oop-about-schrodinger-cat.jpeg)
+![go-oop-about-schrodinger-cat.png](../images/go-oop-about-schrodinger-cat.png)
 
 > 是也不是,难道像是薛定谔的猫一样不确定性?其实这个答案是官方的回答,可参考 [Is Go an object-oriented language?](https://golang.google.cn/doc/faq#Is_Go_an_object-oriented_language)
 
@@ -43,7 +43,7 @@ type MyDynamicArray struct {
 ```
 
 `Go` 语言为什么和其他主流的编程语言不同,习惯于分号结尾的开发者可能一时并不习惯 `Go` 的这种语法,于是决定尝试性实验探索一下 `Go` 的编程规范!
- 
+
 ![go-oop-about-redundant-semicolon.png](../images/go-oop-about-redundant-semicolon.png)
 
 > 如果手动添加分号的话,编辑器则会提示分号重复,所以猜想是编译器会自动添加分号以为做语句声明的分隔符,于是就和我们自己定义的分号重复了,所以要求我们删除分号,这样编译器就能无条件添加分号了.
@@ -63,7 +63,7 @@ type MyDynamicArray struct {
 编辑器此时没有报错或警告信息,因此在一行上多个属性之间应该用分号分割,也就是说 `Go` 编译器识别多个属性仍然是同其他主流的编程语言一样,使用分号分割,而开发者却不能用!
 
 上述规则记忆很简单,验证语法规则也比较容易,难点在于为什么 `Go` 会这么设计?或者说如何认识到这种设计思路背后的语义?
- 
+
 `Go` 是一门新的编程语言,不仅体现在具体的语法差异性,更重要的是编程思想的特殊性.正如面向对象中的接口一样,只需要定义抽象的行为而并不关注行为的具体实现.
 
 采用这种思路来理解不同的编程语言的差异性的话就能透过现象看本质了,否则很容易陷入语法细节上,进而可能忽略了背后的核心思想.
