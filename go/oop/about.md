@@ -1,4 +1,32 @@
-# 内建容器
+# 面向对象
+
+面向对象编程风格深受广大开发者喜欢,尤其是以 `C++`,`Java` 为典型代表,来源于 `C` 语言,却不同于 `C` 的面向过程编程方式带来了极大的便利性.
+
+`Go` 语言同样是来源于 `C` 语言,可能会好奇 `Go` 语言是否支持面向对象编程风格呢?
+
+客观的说,`Go` 既是面向对象语言又不是面向对象! 
+
+![go-oop-about-schrodinger-cat.jpeg](../images/go-oop-about-schrodinger-cat.jpeg)
+
+> 是也不是,难道像是薛定谔的猫一样不确定性?其实这个答案是官方的回答,可参考 [Is Go an object-oriented language?](https://golang.google.cn/doc/faq#Is_Go_an_object-oriented_language)
+
+`Go` 支持封装,不支持继承和多态特性,如果严格按照面向对象的相关规范,不能说 `Go` 是面向对象的编程语言.
+
+但是,`Go` 提供的接口是一种非常简单上手且更加通用的方式,虽然和其他主流的编程语言明显不同,甚至不能实现多态,但 `Go` 的接口不仅适用于结构体,也可以适用于任何数据类型!
+
+争议性比较大的就是继承了,没有任何关键字直接支持继承特性,与此同时,存在着某些方式可以将类型嵌入到其他类型中以实现子类化,但那并不是真正的继承!
+
+所以说,`Go` 既支持面向对象编程风格又不完全是面向对象编程语言,换个角度看问题,没有继承特性使得`Go` 相对于面向对象编程语言更加轻量化!
+
+以下是官方问答中关于面向对象编程语言的原文:
+
+> **Is Go an object-oriented language?**
+>
+> Yes and no. Although Go has types and methods and allows an object-oriented style of programming, there is no type hierarchy. The concept of “interface” in Go provides a different approach that we believe is easy to use and in some ways more general. There are also ways to embed types in other types to provide something analogous—but not identical—to subclassing. Moreover, methods in Go are more general than in C++ or Java: they can be defined for any sort of data, even built-in types such as plain, “unboxed” integers. They are not restricted to structs (classes).
+>
+> Also, the lack of a type hierarchy makes “objects” in Go feel much more lightweight than in languages such as C++ or Java.
+
+
 
 > Why are there braces but no semicolons? And why can't I put the opening brace on the next line?
 
