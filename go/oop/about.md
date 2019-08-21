@@ -70,3 +70,142 @@ type MyDynamicArray struct {
 
 添加或者不添加,对于开发者而言都是一种分割多个属性的标志,如果能不添加就能实现,那为什么还要添加呢?
 
+是什么,为什么和怎么样是三个基本问题,如果是简单学习了解的话,是什么和怎么样就已经足够了,但是学着学着难免会陷入各自孤立的场景,各个编程语言之间没有任何关系,每一种语言都是独立存在的?!
+
+世界语言千千万,编程语言也不少,学了新语言却没有利用到旧语言,那学习新语言时和纯小白有何差异?学到是学会了,可惜却对旧语言没什么帮助也没有加深旧语言的理解,只是单纯的学习罢了.
+
+语言是创造出来的,但都不是凭空而来而是建立在已有的只是体系下演变发展而来,所以何不尝试一下,弄清楚语言设计的初衷和面临的问题,然后再看语言的实现细节,看一下是如何解决问题的,我想这种方式应该是更好的学习过程吧.
+
+虽然无法深处语言设计时环境,也不明白语言设计面临的问题,但先问尝试着问自己一下为什么,不这么设计行不行诸如此类的问题,应该才是学习新知识的好姿势.
+
+所以接下来的文章都会采用语义性分析的角度,尝试理解语言背后的设计初衷,同时以大量的辅助性的测试验证自己的猜想,不再是简单的知识罗列整理过程,当然必要的知识归纳还是很重要的,这一点也不会放弃.
+
+动态数组已经定义完毕,也就是设计者的工作暂时告一段落,那作为使用者,如何使用我们的动态数组呢?
+
+按照面向对象的说法,由类对对象的过程叫做实例化,然而我们已经知道 `Go` 并不是安全的面向对象语言,因此尽可能避免用面向对象的专业术语去称呼 `Go` 的实现细节,可以将其理解为结构体类型和结构体变量的关系.
+
+```go
+func TestMyDynamicArray(t *testing.T){
+	var arr MyDynamicArray
+
+	// {<nil> 0 0}
+	t.Log(arr)
+}
+```
+
+上述写法并没有特殊强调过,安全是用前几篇文章中介绍过的语法规则实现的,`var arr MyDynamicArray` 表示声明类型为 `MyDynamicArray` 的变量 `arr` ,此时直接打印该变量的值,得到的是 `{<nil> 0 0}`.
+
+后两个值都是 `0`,也很好理解,讲解 `Go` 语言中的变量时我们就介绍过,`Go` 的变量类型默认初始化都有相应的零值,`int` 类型的 `len cap` 属性自然就是 `0`,而 `ptr *[]int` 是指向数组的指针,所以是 `nil`.
+
+等等,有点不对劲,这里有个设计错误,取名于动态数组结果内部却是切片,这算怎么回事?先修正这个错误再说!
+
+![go-oop-about-myDynamicArray-array-size-with-cap.png](../images/go-oop-about-myDynamicArray-array-size-with-cap.png)
+
+使用数组必须制定数组初始化长度,第一感觉是使用 `cap` 表示的容量来初始化 `*[cap]int` 数组,然而并不可以,编辑器提示必须使用整型数字.
+
+虽然 `cap` 是 `int` 类型的变量,但内部数组 `[cap]int` 并不能识别这种方式,可能是因为这两个变量时一块声明的,`cap` 和 `[cap]int` 都是变量,无法分配.
+
+那如果指定初始化长度应该指定多少呢,如果是 `0` 的话,语义上正确,但和实际使用情况不符合,数组无法插入了!
+
+![go-oop-about-myDynamicArray-array-size-with-zero.png](../images/go-oop-about-myDynamicArray-array-size-with-zero.png)
+
+如果数组的初始化长度不为零,解决了无法操作数组的问题,语义上又不正确了,因此需要这种情况下维护两个变量 `len` 和 `cap` 的值,`len` 表示真正的数组个数,`cap` 表示内部数组实际分配的长度,由于这两个变量至关重要,不需要被调用者随意修改,最多只能查看变量的值.
+
+按照这个思路设计如下代码:
+
+```go
+type MyDynamicArray struct {
+	ptr *[10]int
+	len int
+	cap int
+}
+
+func TestMyDynamicArray(t *testing.T){
+	var myDynamicArray MyDynamicArray
+
+	t.Log(myDynamicArray)
+
+	myDynamicArray.len = 0
+	myDynamicArray.cap = 10
+	var arr [10]int
+	myDynamicArray.ptr = &arr
+
+	t.Log(myDynamicArray)
+	t.Log(*myDynamicArray.ptr)
+}
+```
+
+`var myDynamicArray MyDynamicArray` 声明结构体变量后并设置了结构体的基本属性,然后操作了内部数组,实现了数组的访问修改.
+
+![go-oop-about-myDynamicArray-array-size-with-init.png](../images/go-oop-about-myDynamicArray-array-size-with-init.png)
+
+然而,调用者关注的不应该是实现的细节上,这部分应该有设计者实现,将有关数据封装成一个整体以便方便调用者.
+
+第一步,先将内部数组相关的两个变量进行封装,对外仅提供访问接口不提供设置接口,防止调用者随意修改.
+
+很显然这部分应该是函数来实现,于是乎有了下面的改造过程.
+
+![go-oop-about-myDynamicArray-method-inner.png](../images/go-oop-about-myDynamicArray-method-inner.png)
+
+很遗憾,编辑器直接报错: 必须是类型名称或是指向类型名称的指针.
+
+函数不可以放在结构体内,这一点倒是像极了 `C` 家族,让 `Java` 这种衍生家族觉得不可思议,也就意味着结构体只能定义结构,不能定义行为!
+
+那我们就把函数移动到结构体外部吧,可是我们定义的函数名叫做 `len`,而系统也有 `len` 函数,此时能否正常运行呢?
+
+![go-oop-about-myDynamicArray-method-len.png](../images/go-oop-about-myDynamicArray-method-len.png)
+
+除了函数本身报错外,函数内部的 `len` 也报错了,也就是说此时的函数和结构体尚未建立起任何联系,怎么能访问到 `len` 属性呢?
+
+这很简单,直接将结构体的指针传递给 `len` 函数,那函数内部就可以访问到结构体的属性了吧!
+
+![go-oop-about-myDynamicArray-method-len-with-args.png](../images/go-oop-about-myDynamicArray-method-len-with-args.png)
+
+从设计的角度上来讲,确实解决了函数定义的问题,但是使用者调用函数时的使用方法看起来和面向对象的写法有些不一样.
+
+```go
+func TestMyDynamicArray(t *testing.T) {
+	var myDynamicArray MyDynamicArray
+
+	t.Log(myDynamicArray)
+
+	myDynamicArray.len = 0
+	myDynamicArray.cap = 10
+	var arr [10]int
+	myDynamicArray.ptr = &arr
+
+	t.Log(myDynamicArray)
+	t.Log(*myDynamicArray.ptr)
+
+	(*myDynamicArray.ptr)[0] = 1
+	t.Log(*myDynamicArray.ptr)
+
+	t.Log(len(&myDynamicArray))
+}
+```
+
+面向对象的方法中一般都是通过点操作符 `.` 访问属性或方法的,而我们实现的属性访问是 `.` 但方法确实函数调用的形式?看起来明显不像是方法!
+
+为了让普通的函数看起来像是面向对象中的方法,`Go` 做了下面的改变,通过将当前结构体的变量声明移动到函数名前面,从而实现类似于面向对象语言中的 `this` 或 `self` 的效果.
+
+
+```go
+func len(myArr *MyDynamicArray) int {
+	return myArr.len
+}
+```
+
+![go-oop-about-myDynamicArray-method-len-ahead-name.png](../images/go-oop-about-myDynamicArray-method-len-ahead-name.png)
+
+此时方法名和参数返回值又报错了,根据提示说函数名和字段名不能相同?又是一件神奇的事情,难不成 `Go` 无法区分函数和字段?
+
+那我们只好修改函数名,改成面向对象中喜闻乐见的方法命名规则,如下:
+
+```go
+func (myArr *MyDynamicArray) GetLen() int {
+	return myArr.len
+}
+```
+
+> 简单说一下 `Go` 的访问性规则,大写字母开头的表示公开的 `public` 权限,小写字母开头表示私有的 `private` 权限,只有这两类权限,都是针对包 `package` 而言,以后会再细说,现在先这么理解就行了.
+
