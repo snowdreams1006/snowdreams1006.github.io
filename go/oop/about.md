@@ -1,5 +1,7 @@
 # 面向对象
 
+![go-oop-about-oop-elephant.jpg](../images/go-oop-about-oop-elephant.jpg)
+
 面向对象编程风格深受广大开发者喜欢,尤其是以 `C++`,`Java` 为典型代表,来源于 `C` 语言,却不同于 `C` 的面向过程编程方式带来了极大的便利性.
 
 `Go` 语言同样是来源于 `C` 语言,可能会好奇 `Go` 语言是否支持面向对象编程风格呢?
