@@ -258,3 +258,89 @@ func NewMyDynamicArray() *MyDynamicArray {
 
 最后,这些只是个人猜想,目前并不知道 `Go` 是否存在构造函数,有了解的人,还请明确告诉我答案,个人倾向于不存在构造函数,最多只提供类似于构造函数初始化的逻辑!
 
+现在,我们已经封装了结构体的数据,定义了结构体的方法以及实现了结构体的工厂函数.那么接下来让我们继续完善动态数组,实现数组的基本操作.
+
+```go
+func NewMyDynamicArray() *MyDynamicArray {
+	var myDynamicArray MyDynamicArray
+
+	myDynamicArray.len = 0
+	myDynamicArray.cap = 10
+	var arr [10]int
+	myDynamicArray.ptr = &arr
+
+	return &myDynamicArray
+}
+
+func TestMyDynamicArray(t *testing.T) {
+	myDynamicArray := NewMyDynamicArray()
+
+	t.Log(myDynamicArray)
+}
+```
+
+首先将测试用例中的逻辑提取到工厂函数中,默认无参的工厂函数初始化的内部数组长度为 `10` ,后续再考虑调用者指定以及实现动态数组等功能,暂时先实现最基本的功能.
+
+初始化的内部数组均是零值,因此需要首先提供给外界能够添加的接口,实现如下:
+
+```go
+
+func (myArr *MyDynamicArray) Add(index, value int) {
+	if myArr.len == myArr.cap {
+		return
+	}
+
+	if index < 0 || index > myArr.len {
+		return
+	}
+
+	for i := myArr.len - 1; i >= index; i-- {
+		(*myArr.ptr)[i+1] = (*myArr.ptr)[i]
+	}
+
+	(*myArr.ptr)[index] = value
+	myArr.len++
+}
+```
+
+由于默认的初始化工厂函数暂时是固定长度的数组,因此新增元素其实是操作固定长度的数组,不过这并不妨碍后续实现动态数组部分.
+
+为了操作方便,再提供插入头部和插入尾部两种接口,可以基于动态数组实现比较高级的数据结构.
+
+```go
+func (myArr *MyDynamicArray) AddLast(value int) {
+	myArr.Add(myArr.len, value)
+}
+
+func (myArr *MyDynamicArray) AddFirst(value int) {
+	myArr.Add(0, value)
+}
+```
+
+为了方便测试动态数组的算法是否正确,因此提供打印方法查看数组结构.
+
+![go-oop-about-myDynamicArray-print.png](../images/go-oop-about-myDynamicArray-print.png)
+
+由此可见,打印方法显示的数据结构和真实的结构体数据是一样的,接下来我们就比较有信心继续封装动态数组了!
+
+```go
+func (myArr *MyDynamicArray) Set(index, value int) {
+	if index < 0 || index >= myArr.len {
+		return
+	}
+
+	(*myArr.ptr)[index] = value
+}
+
+func (myArr *MyDynamicArray) Get(index int) int {
+	if index < 0 || index >= myArr.len {
+		return -1
+	}
+
+	return (*myArr.ptr)[index]
+}
+```
+
+这两个接口更加简单,更新数组指定索引的元素以及根据索引查询数组的值.
+
+接下来让我们开始测试一下动态数组的全部接口吧
