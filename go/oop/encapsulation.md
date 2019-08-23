@@ -8,6 +8,8 @@
 
 ## 何为探索性学习
 
+![go-oop-encapsulation-exploratory-learning.jpeg](../images/go-oop-encapsulation-exploratory-learning.jpeg)
+
 通过现有知识加上思想规则指导不断猜想假设逐步验证的学习过程是探索性学习,这样既有利于我们思考又能加深我们对新知识的理解,何乐而不为?
 
 学习 `Go` 语言的过程越发觉得吃力,倒不是因为语法晦涩难懂而是因为语法习惯背后蕴藏的思维习惯差异性太大!
@@ -21,6 +23,8 @@
 上篇文章中已经确定主线方向,基本上弄清楚了面向对象中的封装概念以及实现,为了不遗漏任何可能重要的知识点,本文将继续开放性探索,力争讲解清楚封装的知识点.
 
 如果这种学习的过程用走迷宫来比喻的话,一条道走到黑这种策略就是算法理论中的深度优先算法.如果边走边看,四处观望周围的风景就是广度优先算法.
+
+![go-oop-encapsulation-exploratory-maze.jpg](../images/go-oop-encapsulation-exploratory-maze.jpg)
 
 所以,聪明的你肯定已经猜到了,上文采用的正是深度优先算法而本文则采用广度优先算法继续探索封装对象之旅!
 
@@ -803,5 +807,7 @@ func (l *Lan) PrintWebsite() {
 
 最后,非常感谢你的阅读,鄙人知识浅薄,如有描述不当的地方,还请各位看官指出,你的每一次留言我都会认真回复,你的转发就是对我最大的鼓励!
 
+![go-oop-encapsulation-hi.png](../images/go-oop-encapsulation-hi.png)
 
+>   如果需要查看相关源码,可以直接访问 [https://github.com/snowdreams1006/learn-go](https://github.com/snowdreams1006/learn-go),同时也推荐关注公众号与我交流.
 
