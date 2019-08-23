@@ -655,5 +655,102 @@ func TestLanPrintWebsite(t *testing.T) {
 
 ## 关于封装
 
+- 定义结构体字段
 
+```go
+type Lang struct {
+    name    string
+    website string
+}
+```
+
+>  结构体有多个字段时彼此直接换行,不用逗号也不用分号之类的,不要多此一举.
+
+- 定义结构体方法
+
+```go
+func (l *Lang) GetName() string {
+    return l.name
+}
+```
+
+> 原本是普通的函数,函数名前面加入指向当前结构体的参数时,函数不再是函数而是方法,同时当前结构体参数叫做接收者,类似于其他面向对象语言中的 `this` 或 `self` 关键字实现的效果.
+
+- 字面量声明结构体
+
+```go
+func TestInitLang(t *testing.T) {
+    l := Lang{
+        name:    "Go",
+        website: "https://golang.google.cn/",
+    }
+
+    t.Log(l.ToString())
+}
+```
+
+> 字面量声明结构体除了这种类似于有参构造函数使用方式,还有无参和全参构造函数使用方式,这里说的构造函数只是看起来像并不真的是构造函数.
+
+- `new` 声明结构体
+
+```go
+func TestPack(t *testing.T) {
+    var l = new(Lang)
+    l.SetName("Go")
+    l.SetWebsite("https://golang.google.cn/")
+
+    t.Log(l.ToString())
+}
+```
+
+> `new` 函数和其他主流的编程语言 `new` 关键字类似,用于声明结构体,不同于字面量声明方式,`new` 函数的输出对象是指针类型.
+
+- 首字母大小写控制访问权限
+
+> 不论是变量名还是方法名,名称首字母大写表示公开的,小写表示私有的.
+
+- 代码的基本组织单元是包
+
+> 访问控制权限也是针对代码包而言,一个目录下只有一个代码包,包名和目录名没有必然联系.
+
+- 复合扩展已有类型
+
+```go
+type MyLang struct {
+    l *Lang
+}
+
+func (ml *MyLang) Print() {
+    if ml == nil || ml.l == nil {
+        return
+    }
+
+    fmt.Println(ml.l.ToString())
+}
+
+func TestMyLangPrint(t *testing.T) {
+    var l = new(Lang)
+    l.SetName("Go")
+    l.SetWebsite("https://golang.google.cn/")
+
+    var ml = MyLang{l}
+
+    ml.Print()
+}
+```
+
+> 自定义结构体内嵌其他结构体,通过复合而不是继承的方式实现对已有类型的增强控制,也是一种推荐的编程规范.
+
+- 别名扩展已有类型
+
+```go
+type Lan Lang
+
+func (l *Lan) PrintWebsite() {
+    fmt.Println(l.website)
+}
+```
  
+> 别名可以看成单字段结构体的简化形式,可以用来扩展已存在的结构体类型,也支持方法等特性.
+
+
