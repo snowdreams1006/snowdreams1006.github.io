@@ -297,3 +297,87 @@ t.Log(myDynamicArray)
 
 事实上并不支持这种参数不全的形式,因此个人觉得要么无参要么全参要么指定初始化字段这三种还是语义清楚的.
 
+除了字面量的方式,`Go` 是否支持创建 `slice` 或 `map` 时所使用的 `make` 函数呢?
+
+![go-oop-encapsulation-struct-init-field-make-error.png](../images/go-oop-encapsulation-struct-init-field-make-error.png)
+
+看样子,`make` 函数并不支持创建结构体,至于为什么不支持,原因就不清楚了,也是个人的一个疑惑点.
+
+既然 `make` 可以创建 `slice` ,`map` 这种内建类型,语义上就是用来创建类型的变量,而结构体也是一种类型,唯一的差别可能就是结构体大多是自定义类型而不是内建类型.
+
+如果我来设计的话,可能会一统天下,语义上一致的功能只使用相同的关键字.
+
+回到面向对象的传统编程规范上,一般实例化对象用的是关键字 `new`,而 `new` 并不是 `Go` 中的关键字.
+
+`Go` 语言中的一等公民是函数,正如刚才说的 `make` 也不是关键字,同样是函数.
+
+![go-oop-encapsulation-struct-init-field-new-error.png](../images/go-oop-encapsulation-struct-init-field-new-error.png)
+
+对于同一个目标,`Go` 总是有着自己的见解,`new` 不是以关键字形式出现而是再次以函数的身份登场,初步推测应该也能实现实例化对象的能力.
+
+![go-oop-encapsulation-struct-init-field-new-assignment-error.png](../images/go-oop-encapsulation-struct-init-field-new-assignment-error.png)
+
+难道 `new` 函数能实例化对象?为什么报错说赋值错误,难不成姿势不对?吓得我赶紧看一下 `new` 的文档注释.
+
+```go
+
+// The new built-in function allocates memory. The first argument is a type,
+// not a value, and the value returned is a pointer to a newly
+// allocated zero value of that type.
+func new(Type) *Type
+```
+
+根据注释说明,果然是使用姿势不对,并不像其他的面向对象语言那样可以重复赋值,`Go` 不支持这种形式,还是老老实实初始化声明吧!
+
+```go
+var myDynamicArray2 = new(MyDynamicArray)
+	
+t.Log(myDynamicArray2)	
+```
+
+既然存在着两种方式来实例化对象,那么总要看一下有什么区别.
+
+```go
+func TestNewMyDynamicArray(t *testing.T) {
+	var myDynamicArray = MyDynamicArray{
+		ptr: &[10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
+		len: 10,
+		cap: 10,
+	}
+	myDynamicArray = MyDynamicArray{
+		&[10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
+		10,
+		10,
+	}
+	t.Log(myDynamicArray)
+	t.Logf("%[1]T %[1]v", myDynamicArray)
+
+	var myDynamicArray2 = new(MyDynamicArray)
+	myDynamicArray2.ptr = &[10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+	myDynamicArray2.len = 10
+	myDynamicArray2.cap = 10
+
+	t.Log(myDynamicArray2)
+
+	t.Logf("%[1]T %[1]v", myDynamicArray2)
+}
+```
+
+![go-oop-encapsulation-struct-init-field-diff.png](../images/go-oop-encapsulation-struct-init-field-diff.png)
+
+这里简单解释下 `t.Logf("%[1]T %[1]v", myDynamicArray)` 语句,`%[1]T` 表示的 `%T` 的变体,`%[1]v` 也是 `%v` 的变体,其中占位符刚好都是同一个变量,也是第一个参数,所以就用 `[1]` 替代了,体现了 `Go` 设计的简洁.
+
+```go
+test := "snowdreams1006"
+
+// string snowdreams1006
+t.Logf("%T %v", test, test)
+t.Logf("%[1]T %[1]v", test)
+```
+
+> `%T` 是打印变量的类型,应该是类型 `type` 的缩写,`v` 应该是值 `value` 的缩写.
+
+解释清楚了测试代码的含义,再看测试结果,采用字面量方式得到的变量类型和 `new` 函数得到的变量类型明显不同.
+
+具体表现为 `_struct.MyDynamicArray {0xc0000560f0 10 10}` 是结构体类型和具体的值,而 `*_struct.MyDynamicArray &{0xc000056190 10 10}` 是结构体类型的指针和值的地址.
+
