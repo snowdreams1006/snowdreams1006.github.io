@@ -603,3 +603,57 @@ func main() {
 
 现在想一想,`Go` 语言不但贯彻了这一思想,更是严格执行了,直接取消了继承特性.
 
+```go
+type MyLang struct {
+    l *Lang
+}
+
+func (ml *MyLang) Print() {
+    if ml == nil || ml.l == nil {
+        return
+    }
+
+    fmt.Println(ml.l.ToString())
+}
+
+func TestMyLangPrint(t *testing.T) {
+    var l = new(Lang)
+    l.SetName("Go")
+    l.SetWebsite("https://golang.google.cn/")
+
+    var ml = MyLang{l}
+
+    ml.Print()
+}
+```
+
+![go-oop-encapsulation-combination-custom.png](../images/go-oop-encapsulation-combination-custom.png)
+
+通过自定义结构体内部属性是 `Lang` 类型,进而扩展原来 `Lang` 不具备的方法或者重写原来的方法.
+
+如果我们的自定义结构体刚好只有这么一个属性,完全可以使用简化形式,其实专业叫法称之为别名.
+
+```go
+type Lan Lang
+
+func (l *Lan) PrintWebsite(){
+    fmt.Println(l.website)
+}
+
+func TestLanPrintWebsite(t *testing.T) {
+    var la = new(Lan)
+    la.name = "GoLang"
+    la.website = "https://golang.google.cn/"
+
+    la.PrintWebsite()
+}
+```
+
+作为设计者和使用者都已经考虑到了,封装的基本知识也要告一段落了,由于 `Go` 不支持继承,也没必要演示相关代码,唯一剩下的只有接口了.
+
+虽然 `Go` 同样是不支持多态,但是 `Go` 提供的接口确实与众不同,别有一番滋味在心头,下一节将开始探索接口.
+
+## 关于封装
+
+
+ 
