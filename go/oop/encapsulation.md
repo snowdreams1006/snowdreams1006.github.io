@@ -177,8 +177,123 @@ func (myBool *MyBool) IsTrue() bool{
 
 单属性的结构体不支持方法,此路不通,原路返回,接着继续探索方法.
 
+上文中定义动态数组时,内部使用的数组暂时是静态数组,现在为了方便继续探索方法,提供重载方法使其支持动态数组.
 
+```go
+func NewMyDynamicArray() *MyDynamicArray {
+	var myDynamicArray MyDynamicArray
+
+	myDynamicArray.len = 0
+	myDynamicArray.cap = 10
+	var arr [10]int
+	myDynamicArray.ptr = &arr
+
+	return &myDynamicArray
+}
+```
+
+内部数组 `arr` 是静态数组,应该提供可以让外部调用者初始化指定数组到接口,按照已知的面向对象中关于方法的定义来扩展重载方法.
+
+![go-oop-encapsulation-struct-method-overload.png](../images/go-oop-encapsulation-struct-method-overload.png)
+
+初次尝试方法的重载就遇到了问题,报错提示该方法已声明,所以说 `Go` 不支持方法重载,这样就有点麻烦了.
+
+想要实现类似的功能要么通过定义不同的方法名,要么定义一个非常大的函数,接收最全的参数,根据调用者参数进行对应的逻辑处理.
+
+用惯了方法的重载,突然发现这种特性在 `Go` 语言中无法实现,顿时有点沮丧,和其他主流的面向对象语言差异性也太大了吧!
+
+不支持构造函数,不支持方法重载,原来以为理所应当的特性现在发现并不是理所应当了.
+
+还是先冷静下来想一想,`Go` 为什么不支持方法重载呢?难不成和构造函数那样,怕是滥用干脆禁用的逻辑?
+
+不是设计者,无法体会也不想猜测原因,可以肯定的是,`Go` 语言是一门全新的语言,有着独特的设计思路,不与众人同!
+
+吐槽时间结束,既然上了贼船就得一条道走到黑,不支持方法重载就换个函数名或者按参数名区分.
+
+![go-oop-encapsulation-struct-method-error.png](../images/go-oop-encapsulation-struct-method-error.png)
+
+天啊撸,刚刚解决方法重载问题又冒出数组初始化不能是变量只能是常量表达式?
+
+简直不可思议!
+
+既然数组初始化长度只是常量表达式,也就无法接收外部传递的容量 `cap`,没有了容量只能接收长度 `len` ,而初始化内部数组长度又没办法确定了,两个变量都无法对外暴露!
+
+一切又回到原点,想要实现动态数组的功能只能靠具体的方法中去动态扩容和缩容,不能初始化指定长度了.
+
+这样的话,关于方法也是一条死路,停止探索.
 
 ## 声明结构体
 
- 
+关于结构体定义的属性和方法都已经探索完毕,除了发现一种单属性结构的简化形式外,暂时没有新的发现.
+
+回到使用者的角度上,声明结构体有没有其他方式呢?
+
+```go
+var myDynamicArray MyDynamicArray
+	
+t.Log(myDynamicArray)
+```
+
+这是变量的声明,除了这种形式,在学习 `Go` 的变量时还介绍过声明并初始化方式以及切片和映射的 `make` 方式,能不能也用于结构体呢?
+
+```go
+var myDynamicArray = MyDynamicArray{
+		
+}
+
+t.Log(myDynamicArray)
+```
+
+编译器没有报错,证明这种字面量形式也是适用的,不过空数据结构没有太大的意义,怎么能初始化对应的结构呢?
+
+和多属性的结构体最为相似的数据结构莫过于映射 `map` 了,回忆一下 `map` 如何进行字面量初始化的吧!
+
+```go
+var m = map[string]string{
+	"id":   "1006",
+	"name": "雪之梦技术驿站",
+}
+
+t.Log(m)
+```
+
+模仿这种结构看看能不能对结构体也这么初始化,果然就没有那么顺利!
+
+![go-oop-encapsulation-struct-init-field-error.png](../images/go-oop-encapsulation-struct-init-field-error.png)
+
+我还没定义,你就不行了?提示字段名称无效,结构体明明就有 `len` 字段啊,除非是没有正确识别!
+
+`"len"` 与 `len` 是不一样的吧?那就去掉双引号 `""` 直接使用字段名进行定义看看.
+
+```go
+var myDynamicArray = MyDynamicArray{
+	len: 10,
+}
+
+t.Log(myDynamicArray)
+```
+
+此时报错消失了,成功解锁一种新的隐藏技能.
+
+```go
+var myDynamicArray = MyDynamicArray{
+	ptr: &[10]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
+	len: 10,
+	cap: 10,
+}
+
+t.Log(myDynamicArray)
+```
+
+除了这种指定字段名称注入方式,能不能不指定字段名称而是按照顺序初始化?
+
+![go-oop-encapsulation-struct-init-field-in-order.png](../images/go-oop-encapsulation-struct-init-field-in-order.png)
+
+借助编辑器可以看到确实是按照顺序注入的,这样的话,其实有点意思了,明明不支持构造函数,采用字面量实例化时却看起来像构造函数的无参,有参数和全参形式?
+
+可以预想到的是,这种全参注入的方式一定是严格按照定义顺序相匹配的,当参数不全时可能按位插入也可能不支持.
+
+![go-oop-encapsulation-struct-init-field-lack-order.png](../images/go-oop-encapsulation-struct-init-field-lack-order.png)
+
+事实上并不支持这种参数不全的形式,因此个人觉得要么无参要么全参要么指定初始化字段这三种还是语义清楚的.
+
