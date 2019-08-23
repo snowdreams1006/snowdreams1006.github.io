@@ -381,3 +381,130 @@ t.Logf("%[1]T %[1]v", test)
 
 具体表现为 `_struct.MyDynamicArray {0xc0000560f0 10 10}` 是结构体类型和具体的值,而 `*_struct.MyDynamicArray &{0xc000056190 10 10}` 是结构体类型的指针和值的地址.
 
+这种差异也是正常的差异,符合语义,字面量实例化的对象是值对象,而 `new` 实例化对象开辟了内存,返回的是实例对象到引用,正如其他编程语言的 `new` 关键字一样.
+
+既然说到了值对象和引用对象,再说一遍老生常谈的问题,函数或者说方法传递时应该传递哪一种类型?
+
+## 值传递还是引用传递
+
+接下来的示例和动态数组没什么关系,简单起见,新开一个结构体叫做 `Employee`,回顾一下目前学到的封装知识.
+
+```
+type Employee struct {
+	Id   string
+	Name string
+	Age  int
+}
+
+func TestCreateEmployee(t *testing.T) {
+	e := Employee{
+		"0",
+		"Bob",
+		20,
+	}
+	t.Logf("%[1]T %[1]v", e)
+
+	e1 := Employee{
+		Name: "Mike",
+		Age:  30,
+	}
+	t.Logf("%[1]T %[1]v", e1)
+
+	e2 := new(Employee)
+	e2.Id = "2"
+	e2.Name = "Rose"
+	e2.Age = 18
+	t.Logf("%[1]T %[1]v", e2)
+}
+```
+
+首先测试引用传递,这也是结构体常用的传递方式,行为表现上和其他的主流编程语言表现一致,方法内的修改会影响调用者的参数.
+
+```go
+func (e *Employee) toStringPointer() string {
+	fmt.Printf("Name address is %x\n", unsafe.Pointer(&e.Name))
+
+	return fmt.Sprintf("ID:%s-Name:%s-Age:%d", e.Id, e.Name, e.Age)
+}
+
+func TestToStringPointer(t *testing.T) {
+	e := &Employee{"0", "Bob", 20}
+
+	fmt.Printf("Name address is %x\n", unsafe.Pointer(&e.Name))
+
+	t.Log(e.toStringPointer())
+}
+```
+
+![go-oop-encapsulation-struct-method-diff-pointer.png](../images/go-oop-encapsulation-struct-method-diff-pointer.png)
+
+> `unsafe.Pointer(&e.Name)` 是查看变量的内存地址,可以看出来调用前后的地址是同一个.
+
+```go
+func (e Employee) toStringValue() string {
+	fmt.Printf("Name address is %x\n", unsafe.Pointer(&e.Name))
+
+	return fmt.Sprintf("ID:%s-Name:%s-Age:%d", e.Id, e.Name, e.Age)
+}
+
+func TestToStringValue(t *testing.T) {
+	e := Employee{"0", "Bob", 20}
+
+	fmt.Printf("Name address is %x\n", unsafe.Pointer(&e.Name))
+
+	t.Log(e.toStringValue())
+}
+```
+
+![go-oop-encapsulation-struct-method-diff-value.png](../images/go-oop-encapsulation-struct-method-diff-value.png)
+
+> 调用者发送的内存地址和接收者接收的内存地址不一样,符合期望,值传递都是拷贝变量进行传递的嘛!
+
+值类型还是引用类型的区分无需赘述,接下来请关注一个神奇的事情,方法的接收者是值类型,方法的调用者是不是一定要传递值类型呢?
+
+```go
+func (e Employee) toString() string {
+	fmt.Printf("Name address is %x\n", unsafe.Pointer(&e.Name))
+
+	return fmt.Sprintf("ID:%s-Name:%s-Age:%d", e.Id, e.Name, e.Age)
+}
+```
+
+方法的调用者分别传递值类型和引用类型,两者均能正常工作,
+
+```go
+func TestToString(t *testing.T) {
+	e := Employee{"0", "Bob", 20}
+
+	fmt.Printf("Name address is %x\n", unsafe.Pointer(&e.Name))
+
+	t.Log(e.toString())
+	t.Log((&e).toString())
+}
+```
+
+![go-oop-encapsulation-struct-method-value-diff.png](../images/go-oop-encapsulation-struct-method-value-diff.png)
+
+> 虽然方法的接收者要求的是值类型,调用者传递的是值类型还是引用类型均可!
+
+![go-oop-encapsulation-struct-method-pointer-diff.png](../images/go-oop-encapsulation-struct-method-value-diff.png)
+
+仅仅更改了方法接收者的类型,调用者不用做任何更改,依然可以正常运行!
+
+同样的,语义上分析,方法的设计者和调用方法的调用者两者之间可以说是松耦合的,设计者的更改对于调用者来说没有太大影响,这也就意味着如果设计者觉得用值类型接收参数不好,完全可以直接更改为指针类型而不用通知调用者调整逻辑!
+
+这其实要归功于 `Go` 语言到设计者很好的处理了值类型和指针类型的调用方式,不论是值类型还是引用类型,一律使用点操作符 `.` 调用方法,并不像有的语言指针类型就是 `->` 或 `*` 前缀才能调用之类的限制.
+
+有所为有所不为,可能正是看到了这两种调用方式带来的差异性,`Go` 全部统一成点操作符了!
+
+虽然形式上两种调用方式是一样的,但是设计方法或者函数时应该是值类型还是指针类型呢?
+
+这里有三点建议可供参考:
+
+- 如果接收者需要更改调用者的值,只能使用指针类型
+- 如果参数本身非常大,拷贝参数比较占用内存,只能用指针类型
+- 如果参数本身具有状态,拷贝参数可能会影响对象的状态,只能用指针类型
+- 如果是内建类型或者比较小的结构体,完全可以忽略拷贝问题,推荐用值类型.
+
+当然,实际情况可能还和业务相关,具体用什么类型还要自行判断,万一选用不当也不用担心,更改一下参数类型就好了也不会影响调用者的代码逻辑.
+
