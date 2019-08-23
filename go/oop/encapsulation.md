@@ -508,3 +508,98 @@ func TestToString(t *testing.T) {
 
 当然,实际情况可能还和业务相关,具体用什么类型还要自行判断,万一选用不当也不用担心,更改一下参数类型就好了也不会影响调用者的代码逻辑.
 
+## 封装后如何访问
+
+现在封装问题基本上已将讲解清楚了,封装之后的结构体不仅是我们自己使用还要提供给外界使用,同此同时要保证外界不能随意修改我们的封装逻辑,这一部分就涉及到访问的控制权限了.
+
+`Go` 语言的访问级别有两种,一种是公开的另一种就是私有的,由于没有继承特性,也不涉及子类和父类之间访问权限问题.
+
+理解起来变得非常简单,具体实际使用上是否便利还不好判断.
+
+关于可见性的命名规范如下:
+
+- 名称一般使用大驼峰命名法即 `CamelCase`
+- 首字母大写表示公开的 `public` ,小写表示私有的 `private`
+- 上述规则不仅适用于方法,包括结构体,变量和常量等 `Go` 语言的几乎全部
+
+那么问题了,这里的 `public` 和 `private` 是针对谁来说?
+
+`Go` 语言中的基本结构是包 `package`,这里的包和目录有区别,并不像 `Java` 语言那样包和目录严格相关联的,需要特别注意.
+
+包是相关代码的集合,这些代码可能存放于不同的目录文件中,就是通过包 `package` 的声明告诉 `Go`编译器说:我们是一个家族整体.
+
+如果不同的文件目录可以声明在同一个包中,这样相当于允许家族外迁,只要保留姓氏就好.
+
+还是用代码说话吧,散落在各地的小伙伴能不能有共同的姓氏!
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/snowdreams1006/learn-go/oop/pack"
+)
+
+func main() {
+	var l = new(pack.Lang)
+	l.SetName("Go")
+	l.SetWebsite("https://golang.google.cn/")
+
+	fmt.Println(l.ToString())
+}
+
+```
+
+![go-oop-encapsulation-package-access-same-directory.png](../images/go-oop-encapsulation-package-access-same-directory.png)
+
+`pack.go` 源码文件和 `pack_test` 测试文件都位于相同的目录 `pack` 下且包的声明也相同都是 `pack`.
+
+这种情况相当于一家氏族位于一个村落中一起生活,和其他语言到表现一致,现在试一下这个氏族的一部分人能不能搬到其他村落居住呢?
+
+![go-oop-encapsulation-package-access-other-directory-error.png](../images/go-oop-encapsulation-package-access-other-directory-error.png)
+
+难不成跨域地域有点大,不支持定义方法吗?那里 `pack` 目录近一点试试看!
+
+![go-oop-encapsulation-package-access-same-directory-error.png](../images/go-oop-encapsulation-package-access-other-directory-error.png)
+
+还是不行,不能新建了=目录,那么和原来在一个目录下呢?
+
+![go-oop-encapsulation-package-access-same-directory-success.png](../images/go-oop-encapsulation-package-access-other-directory-error.png)
+
+只有这样是可以被标识位结构体的方法的,如果不是方法完全可以任意存放,这一点就不再展示了.
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/snowdreams1006/learn-go/oop/pack"
+)
+
+func main() {
+	var l = new(pack.Lang)
+	l.SetName("Go")
+	l.SetWebsite("https://golang.google.cn/")
+
+	fmt.Println(l.ToString())
+
+	l.PrintLangName()
+}
+```
+
+`"github.com/snowdreams1006/learn-go/oop/pack"` 是当前文件中导入依赖包路径,因此调用者能否正常访问到我们封装的结构体.
+
+在当前结构体中的属性被我们设置成了小写字母开头,所以不是同一包是无法访问该属性的.
+
+![go-oop-encapsulation-package-access-private.png](../images/go-oop-encapsulation-package-access-private.png)
+
+## 封装后如何扩展
+
+设计者封装好对象供其他人使用,难免会有疏忽不足之处,此时使用者就需要扩展已存在的结构体了.
+
+如果是面向对象的设计思路,最简单的实现方式可能就是继承了,重写扩展什么的都不在话下,可是 `Go` 并不这么认为,不支持继承!
+
+所以剩下的方法就是组合了,这也是学习面向对象时的一种经验,多用组合少用继承.
+
+现在想一想,`Go` 语言不但贯彻了这一思想,更是严格执行了,直接取消了继承特性.
+
