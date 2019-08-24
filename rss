@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 24 Aug 2019 12:10:47 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 24 Aug 2019 16:31:22 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -577,6 +577,13 @@
             <description><![CDATA[虽然在上篇文章中,我们通过尝试性学习探索了 Go 语言中关于面向对象的相关概念,更确切的说是关于封装的基本概念以及相关实现.]]></description>
             <link>https://snowdreams1006.github.io/go/oop/encapsulation.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/encapsulation.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[能否继承]]></title>
+            <description><![CDATA[熟悉面向对象的小伙伴们可能会知道封装,继承和多态是最主要的特性,为什么前辈们会如此看重这三种特性,真的那么重要吗?]]></description>
+            <link>https://snowdreams1006.github.io/go/oop/inheritance.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/inheritance.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
