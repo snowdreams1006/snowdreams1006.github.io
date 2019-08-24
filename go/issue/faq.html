@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>数组切片 · 雪之梦技术驿站</title>
+        <title>常见问题 · 雪之梦技术驿站</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -103,10 +103,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="map.html" />
+    <link rel="next" href="../cmd/about.html" />
     
     
-    <link rel="prev" href="about.html" />
+    <link rel="prev" href="../oop/encapsulation.html" />
     
 
     <link href="https://snowdreams1006.github.io/rss" title="雪之梦技术驿站" rel="alternate" type="application/rss+xml" />
@@ -1237,9 +1237,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2" data-path="about.html">
+        <li class="chapter " data-level="3.2.2" data-path="../container/about.html">
             
-                <a href="about.html">
+                <a href="../container/about.html">
             
                     
                     内建容器
@@ -1251,9 +1251,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.2.2.1" data-path="array.html">
+        <li class="chapter " data-level="3.2.2.1" data-path="../container/array.html">
             
-                <a href="array.html">
+                <a href="../container/array.html">
             
                     
                     数组切片
@@ -1264,9 +1264,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.2.2" data-path="map.html">
+        <li class="chapter " data-level="3.2.2.2" data-path="../container/map.html">
             
-                <a href="map.html">
+                <a href="../container/map.html">
             
                     
                     字典映射
@@ -1314,9 +1314,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.4" data-path="../issue/faq.html">
+        <li class="chapter active" data-level="3.2.4" data-path="faq.html">
             
-                <a href="../issue/faq.html">
+                <a href="faq.html">
             
                     
                     常见问题
@@ -1972,7 +1972,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >数组切片</a>
+        <a href="../.." >常见问题</a>
     </h1>
 </div>
 
@@ -1987,368 +1987,404 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x7EC4;&#x5207;&#x7247;"><b>1. </b>&#x6570;&#x7EC4;&#x5207;&#x7247;</a></li></ul></div><a href="#&#x6570;&#x7EC4;&#x5207;&#x7247;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6570;&#x7EC4;&#x5207;&#x7247;"><a name="&#x6570;&#x7EC4;&#x5207;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;&#x5207;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6570;&#x7EC4;&#x5207;&#x7247;</h1>
-<p>&#x5B57;&#x7B26;&#x4E32;</p>
-<ul>
-<li>string &#x662F;&#x6570;&#x636E;&#x7C7B;&#x578B;,&#x4E0D;&#x662F;&#x5F15;&#x7528;&#x6216;&#x6307;&#x9488;&#x7C7B;&#x578B;</li>
-<li>string &#x662F;&#x53EA;&#x8BFB;&#x7684; byte slice,len &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5B83;&#x6240;&#x5305;&#x542B;&#x7684; byte &#x6570;</li>
-<li>string &#x7684; byte &#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x5B58;&#x653E;&#x4EFB;&#x4F55;&#x6570;&#x7EC4;</li>
-</ul>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> TestString(t *testing.T) {
-    <span class="hljs-keyword">var</span> s <span class="hljs-keyword">string</span>
-
-    <span class="hljs-comment">// s = ,len(s) =  0</span>
-    t.Logf(<span class="hljs-string">&quot;s = %v,len(s) =  %d&quot;</span>, s, <span class="hljs-built_in">len</span>(s))
-
-    s = <span class="hljs-string">&quot;hello&quot;</span>
-
-    <span class="hljs-comment">// s = hello,len(s) =  5</span>
-    t.Logf(<span class="hljs-string">&quot;s = %v,len(s) =  %d&quot;</span>, s, <span class="hljs-built_in">len</span>(s))
-
-    s = <span class="hljs-string">&quot;\xE4\xB8\xA5&quot;</span>
-
-    <span class="hljs-comment">// s = &#x4E25;,len(s) =  3</span>
-    t.Logf(<span class="hljs-string">&quot;s = %v,len(s) =  %d&quot;</span>, s, <span class="hljs-built_in">len</span>(s))
-
-    s = <span class="hljs-string">&quot;\xE444\xB888\xA555&quot;</span>
-
-    <span class="hljs-comment">// s = &#xFFFD;44&#xFFFD;88&#xFFFD;55,len(s) =  9</span>
-    t.Logf(<span class="hljs-string">&quot;s = %v,len(s) =  %d&quot;</span>, s, <span class="hljs-built_in">len</span>(s))
-}
-</code></pre>
-<p>unicode utf8</p>
-<ul>
-<li>unicode &#x662F;&#x4E00;&#x79CD;&#x5B57;&#x7B26;&#x96C6;(code point)</li>
-<li>utf8 &#x662F; unicode &#x7684;&#x5B58;&#x50A8;&#x5B9E;&#x73B0;(&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x7684;&#x89C4;&#x5219;)</li>
-</ul>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> TestStringCodePoint(t *testing.T) {
-    <span class="hljs-keyword">var</span> s <span class="hljs-keyword">string</span>
-
-    <span class="hljs-comment">// s = ,len(s) =  0</span>
-    t.Logf(<span class="hljs-string">&quot;s = %v,len(s) =  %d&quot;</span>, s, <span class="hljs-built_in">len</span>(s))
-
-    s = <span class="hljs-string">&quot;hello&quot;</span>
-
-    <span class="hljs-comment">// s = hello,len(s) =  5</span>
-    t.Logf(<span class="hljs-string">&quot;s = %v,len(s) =  %d&quot;</span>, s, <span class="hljs-built_in">len</span>(s))
-
-    s = <span class="hljs-string">&quot;&#x4E2D;&quot;</span>
-
-    <span class="hljs-comment">// s = &#x4E2D;,len(s) =  3</span>
-    t.Logf(<span class="hljs-string">&quot;s = %v,len(s) =  %d&quot;</span>, s, <span class="hljs-built_in">len</span>(s))
-
-    <span class="hljs-comment">//s = e4b8ad,len(s) =  3</span>
-    t.Logf(<span class="hljs-string">&quot;s = %x,len(s) =  %d&quot;</span>, s, <span class="hljs-built_in">len</span>(s))
-
-    ch := []<span class="hljs-keyword">rune</span>(s)
-
-    <span class="hljs-comment">// s = [4e2d],len(s) =  1</span>
-    t.Logf(<span class="hljs-string">&quot;ch = %x,len(ch) =  %d&quot;</span>, ch, <span class="hljs-built_in">len</span>(ch))
-}
-</code></pre>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> TestString2Rune(t *testing.T) {
-    s := <span class="hljs-string">&quot;&#x4E2D;&#x534E;&#x4EBA;&#x6C11;&#x5171;&#x548C;&#x56FD;&quot;</span>
-
-    <span class="hljs-keyword">for</span> _, c := <span class="hljs-keyword">range</span> s {
-        t.Logf(<span class="hljs-string">&quot;%[1]c %[1]d %[1]x&quot;</span>, c)
-    }
-}
-</code></pre>
-<p>&#x5E38;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;</p>
-<ul>
-<li>strings &#x5305;</li>
-</ul>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> TestStrings(t *testing.T) {
-    s := <span class="hljs-string">&quot;A,B,C&quot;</span>
-
-    parts := strings.Split(s,<span class="hljs-string">&quot;,&quot;</span>)
-    <span class="hljs-keyword">for</span> _, part := <span class="hljs-keyword">range</span> parts {
-        t.Log(part)
-    }
-
-    newStr := strings.Join(parts,<span class="hljs-string">&quot;-&quot;</span>)
-
-    t.Log(newStr)
-}
-</code></pre>
-<ul>
-<li>strconv &#x5305;</li>
-</ul>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> TestStrconv(t *testing.T) {
-
-    s := strconv.Itoa(<span class="hljs-number">10</span>)
-
-    <span class="hljs-comment">// string 10</span>
-    t.Logf(<span class="hljs-string">&quot;%[1]T %[1]v&quot;</span>, s)
-
-    <span class="hljs-comment">// int 10</span>
-    <span class="hljs-keyword">if</span> i, err := strconv.Atoi(<span class="hljs-string">&quot;10&quot;</span>); err == <span class="hljs-literal">nil</span> {
-        t.Logf(<span class="hljs-string">&quot;%[1]T %[1]v&quot;</span>, i)
-    }
-}
-</code></pre>
-<p>&#x51FD;&#x6570;&#x662F;&#x4E00;&#x7B49;&#x516C;&#x6C11;</p>
-<ul>
-<li>&#x5B83;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x503C;</li>
-<li>&#x6240;&#x6709;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x503C;&#x4F20;&#x9012;: <code>map</code> ,<code>slice</code>,<code>channel</code> &#x4F1A;&#x6709;&#x5F15;&#x7528;&#x4F20;&#x9012;&#x7684;&#x9519;&#x89C9;</li>
-<li>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x503C;</li>
-<li>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;</li>
-</ul>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> returnMultiValues() (<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>) {
-    <span class="hljs-keyword">return</span> rand.Intn(<span class="hljs-number">10</span>), rand.Intn(<span class="hljs-number">10</span>)
-}
-
-<span class="hljs-keyword">func</span> TestReturnMultiValues(t *testing.T) {
-    a, b := returnMultiValues()
-
-    t.Log(a, b)
-}
-</code></pre>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> timeSpend(inner <span class="hljs-keyword">func</span>(op <span class="hljs-keyword">int</span>) <span class="hljs-keyword">int</span>) <span class="hljs-keyword">func</span>(op <span class="hljs-keyword">int</span>) <span class="hljs-keyword">int</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">func</span>(n <span class="hljs-keyword">int</span>) <span class="hljs-keyword">int</span> {
-        start := time.Now()
-
-        ret := inner(n)
-
-        fmt.Println(<span class="hljs-string">&quot;time spend : &quot;</span>, time.Since(start).Seconds())
-
-        <span class="hljs-keyword">return</span> ret
-    }
-}
-
-<span class="hljs-keyword">func</span> slowFunc(op <span class="hljs-keyword">int</span>) <span class="hljs-keyword">int</span> {
-
-    time.Sleep(time.Second * <span class="hljs-number">1</span>)
-
-    <span class="hljs-keyword">return</span> op
-}
-
-<span class="hljs-keyword">func</span> TestSlowFuncTimeSpend(t *testing.T){
-
-    slowFuncTimeSpend := timeSpend(slowFunc)
-
-    t.Log(slowFuncTimeSpend(<span class="hljs-number">10</span>))
-}
-</code></pre>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> TestDefer(t *testing.T) {
-    <span class="hljs-keyword">defer</span> <span class="hljs-keyword">func</span>() {
-        t.Log(<span class="hljs-string">&quot;Clear resource&quot;</span>)
-    }()
-
-    t.Log(<span class="hljs-string">&quot;Started&quot;</span>)
-
-    <span class="hljs-built_in">panic</span>(<span class="hljs-string">&quot;Fatal error&quot;</span>)
-}
-</code></pre>
-<p><a href="https://golang.google.cn/doc/faq#Is_Go_an_object-oriented_language" target="_blank">https://golang.google.cn/doc/faq#Is_Go_an_object-oriented_language</a></p>
-<p>&#x5C01;&#x88C5;&#x6570;&#x636E;&#x548C;&#x884C;&#x4E3A;</p>
-<pre><code class="lang-go">
-<span class="hljs-keyword">type</span> Employee <span class="hljs-keyword">struct</span> {
-    Id   <span class="hljs-keyword">string</span>
-    Name <span class="hljs-keyword">string</span>
-    Age  <span class="hljs-keyword">int</span>
-}
-
-<span class="hljs-keyword">func</span> TestCreateEmployee(t *testing.T) {
-    e := Employee{
-        <span class="hljs-string">&quot;0&quot;</span>,
-        <span class="hljs-string">&quot;Bob&quot;</span>,
-        <span class="hljs-number">20</span>,
-    }
-    t.Logf(<span class="hljs-string">&quot;%[1]T %[1]v&quot;</span>, e)
-
-    e1 := Employee{
-        Name: <span class="hljs-string">&quot;Mike&quot;</span>,
-        Age:  <span class="hljs-number">30</span>,
-    }
-    t.Logf(<span class="hljs-string">&quot;%[1]T %[1]v&quot;</span>, e1)
-
-    e2 := <span class="hljs-built_in">new</span>(Employee)
-    e2.Id = <span class="hljs-string">&quot;2&quot;</span>
-    e2.Name = <span class="hljs-string">&quot;Rose&quot;</span>
-    e2.Age = <span class="hljs-number">18</span>
-    t.Logf(<span class="hljs-string">&quot;%[1]T %[1]v&quot;</span>, e2)
-}
-</code></pre>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> (e Employee) toString() <span class="hljs-keyword">string</span> {
-    <span class="hljs-keyword">return</span> fmt.Sprintf(<span class="hljs-string">&quot;ID:%s-Name:%s-Age:%d&quot;</span>, e.Id, e.Name, e.Age)
-}
-
-<span class="hljs-keyword">func</span> TestToString(t *testing.T) {
-    e := Employee{<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-number">20</span>}
-
-    t.Log(e.toString())
-}
-</code></pre>
-<pre><code class="lang-go">
-<span class="hljs-keyword">func</span> (e *Employee) toStringPointer() <span class="hljs-keyword">string</span> {
-    <span class="hljs-keyword">return</span> fmt.Sprintf(<span class="hljs-string">&quot;ID:%s-Name:%s-Age:%d&quot;</span>, e.Id, e.Name, e.Age)
-}
-
-<span class="hljs-keyword">func</span> TestToStringPointer(t *testing.T) {
-    e := &amp;Employee{<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-number">20</span>}
-
-    t.Log(e.toStringPointer())
-}
-</code></pre>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> (e *Employee) toStringPointer() <span class="hljs-keyword">string</span> {
-    fmt.Printf(<span class="hljs-string">&quot;Name address is %x\n&quot;</span>, unsafe.Pointer(&amp;e.Name))
-
-    <span class="hljs-keyword">return</span> fmt.Sprintf(<span class="hljs-string">&quot;ID:%s-Name:%s-Age:%d&quot;</span>, e.Id, e.Name, e.Age)
-}
-
-<span class="hljs-keyword">func</span> TestToStringPointer(t *testing.T) {
-    e := Employee{<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-number">20</span>}
-
-    fmt.Printf(<span class="hljs-string">&quot;Name address is %x\n&quot;</span>, unsafe.Pointer(&amp;e.Name))
-
-    t.Log(e.toStringPointer())
-}
-</code></pre>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> (e Employee) toStringValue() <span class="hljs-keyword">string</span> {
-    fmt.Printf(<span class="hljs-string">&quot;Name address is %x\n&quot;</span>, unsafe.Pointer(&amp;e.Name))
-
-    <span class="hljs-keyword">return</span> fmt.Sprintf(<span class="hljs-string">&quot;ID:%s-Name:%s-Age:%d&quot;</span>, e.Id, e.Name, e.Age)
-}
-
-<span class="hljs-keyword">func</span> TestToStringValue(t *testing.T) {
-    e := Employee{<span class="hljs-string">&quot;0&quot;</span>, <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-number">20</span>}
-
-    fmt.Printf(<span class="hljs-string">&quot;Name address is %x\n&quot;</span>, unsafe.Pointer(&amp;e.Name))
-
-    t.Log(e.toStringValue())
-}
-</code></pre>
-<pre><code class="lang-go"><span class="hljs-keyword">type</span> Programmer <span class="hljs-keyword">interface</span> {
-    WriteHelloWorld() <span class="hljs-keyword">string</span>
-}
-
-<span class="hljs-keyword">type</span> GoProgrammer <span class="hljs-keyword">struct</span> {
-}
-
-<span class="hljs-keyword">func</span> (g *GoProgrammer) WriteHelloWorld() <span class="hljs-keyword">string</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;fmt.Println(\&quot;Hello World\&quot;)&quot;</span>
-}
-
-<span class="hljs-keyword">func</span> TestGoProgrammer(t *testing.T) {
-    <span class="hljs-keyword">var</span> p Programmer
-    p = <span class="hljs-built_in">new</span>(GoProgrammer)
-
-    t.Log(p.WriteHelloWorld())
-}
-</code></pre>
-<ul>
-<li>&#x63A5;&#x53E3;&#x4E3A;&#x975E;&#x5165;&#x4FB5;,&#x5B9E;&#x73B0;&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;</li>
-<li>&#x6240;&#x4EE5;&#x63A5;&#x53E3;&#x7684;&#x5B9A;&#x4E49;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x5728;&#x63A5;&#x53E3;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x5305;&#x5185;</li>
-</ul>
-<pre><code class="lang-go"><span class="hljs-keyword">type</span> Pet <span class="hljs-keyword">struct</span> {
-}
-
-<span class="hljs-keyword">func</span> (p *Pet) Speak() {
-    fmt.Print(<span class="hljs-string">&quot;...&quot;</span>)
-}
-
-<span class="hljs-keyword">func</span> (p *Pet) SpeakTo(host <span class="hljs-keyword">string</span>) {
-    p.Speak()
-    fmt.Println(<span class="hljs-string">&quot; &quot;</span>, host)
-}
-
-<span class="hljs-keyword">type</span> Dog <span class="hljs-keyword">struct</span> {
-    p *Pet
-}
-
-<span class="hljs-keyword">func</span> (d *Dog) Speak() {
-    d.p.Speak()
-}
-
-<span class="hljs-keyword">func</span> (d *Dog) SpeakTo(host <span class="hljs-keyword">string</span>) {
-    d.p.SpeakTo(host)
-}
-
-<span class="hljs-keyword">func</span> TestDog(t *testing.T){
-    d := <span class="hljs-built_in">new</span>(Dog)
-    d.SpeakTo(<span class="hljs-string">&quot;Chao&quot;</span>)
-}
-</code></pre>
-<pre><code class="lang-go"><span class="hljs-keyword">type</span> Code <span class="hljs-keyword">string</span>
-
-<span class="hljs-keyword">type</span> Programmer <span class="hljs-keyword">interface</span> {
-    WriteHelloWord() Code
-}
-
-<span class="hljs-keyword">type</span> GoProgrammer <span class="hljs-keyword">struct</span> {
-}
-
-<span class="hljs-keyword">func</span> (g *GoProgrammer) WriteHelloWord() Code {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;fmt.Println(\&quot;Hello World!\&quot;)&quot;</span>
-}
-
-<span class="hljs-keyword">type</span> JavaProgrammer <span class="hljs-keyword">struct</span> {
-}
-
-<span class="hljs-keyword">func</span> (j *JavaProgrammer) WriteHelloWord() Code {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;System.out.Println(\&quot;Hello World!\&quot;)&quot;</span>
-}
-
-<span class="hljs-keyword">func</span> writeFirstProgram(p Programmer) {
-    fmt.Printf(<span class="hljs-string">&quot;%T %v\n&quot;</span>, p, p.WriteHelloWord())
-}
-
-<span class="hljs-keyword">func</span> TestPolymorphism(t *testing.T) {
-    gp := <span class="hljs-built_in">new</span>(GoProgrammer)
-    jp := <span class="hljs-built_in">new</span>(JavaProgrammer)
-
-    writeFirstProgram(gp)
-    writeFirstProgram(jp)
-}
-</code></pre>
-<p>&#x7A7A;&#x63A5;&#x53E3;&#x4E0E;&#x65AD;&#x8A00;</p>
-<ul>
-<li>&#x7A7A;&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;</li>
-<li>&#x901A;&#x8FC7;&#x65AD;&#x8A00;&#x6765;&#x5C06;&#x7A7A;&#x63A5;&#x53E3;&#x8F6C;&#x6362;&#x4E3A;&#x6307;&#x5B9A;&#x7C7B;&#x578B;</li>
-</ul>
-<p><code>v,ok := p.(int)</code></p>
-<pre><code class="lang-go"><span class="hljs-keyword">func</span> doSomething(p <span class="hljs-keyword">interface</span>{}) {
-    <span class="hljs-keyword">if</span> i, ok := p.(<span class="hljs-keyword">int</span>); ok {
-        fmt.Println(<span class="hljs-string">&quot;int&quot;</span>, i)
-        <span class="hljs-keyword">return</span>
-    }
-    <span class="hljs-keyword">if</span> s, ok := p.(<span class="hljs-keyword">string</span>); ok {
-        fmt.Println(<span class="hljs-string">&quot;string&quot;</span>, s)
-        <span class="hljs-keyword">return</span>
-    }
-    fmt.Println(<span class="hljs-string">&quot;unknown type&quot;</span>)
-}
-
-<span class="hljs-keyword">func</span> TestDoSomething(t *testing.T) {
-    doSomething(<span class="hljs-number">10</span>)
-    doSomething(<span class="hljs-string">&quot;10&quot;</span>)
-    doSomething(<span class="hljs-number">10.0</span>)
-}
-</code></pre>
-<p>&#x63A5;&#x53E3;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</p>
-<ul>
-<li>&#x503E;&#x5411;&#x4E8E;&#x4F7F;&#x7528;&#x5C0F;&#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;,&#x5F88;&#x591A;&#x63A5;&#x53E3;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;</li>
-<li>&#x8F83;&#x5927;&#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x53EF;&#x4EE5;&#x7531;&#x5C0F;&#x7684;&#x63A5;&#x53E3;&#x7EC4;&#x5408;&#x800C;&#x6210;</li>
-<li>&#x53EA;&#x4F9D;&#x8D56;&#x4E8E;&#x5FC5;&#x8981;&#x529F;&#x80FD;&#x7684;&#x6700;&#x5C0F;&#x63A5;&#x53E3;</li>
-</ul>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x89C1;&#x95EE;&#x9898;"><b>1. </b>&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li></ul></div><a href="#&#x5E38;&#x89C1;&#x95EE;&#x9898;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5E38;&#x89C1;&#x95EE;&#x9898;"><a name="&#x5E38;&#x89C1;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x89C1;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5E38;&#x89C1;&#x95EE;&#x9898;</h1>
 <blockquote>
+<p>Why are there braces but no semicolons? And why can&apos;t I put the opening brace on the next line?</p>
+</blockquote>
+<pre><code>Go uses brace brackets for statement grouping, a syntax familiar to programmers who have worked with any language in the C family. Semicolons, however, are for parsers, not for people, and we wanted to eliminate them as much as possible. To achieve this goal, Go borrows a trick from BCPL: the semicolons that separate statements are in the formal grammar but are injected automatically, without lookahead, by the lexer at the end of any line that could be the end of a statement. This works very well in practice but has the effect that it forces a brace style. For instance, the opening brace of a function cannot appear on a line by itself.
+
+Some have argued that the lexer should do lookahead to permit the brace to live on the next line. We disagree. Since Go code is meant to be formatted automatically by gofmt, some style must be chosen. That style may differ from what you&apos;ve used in C or Java, but Go is a different language and gofmt&apos;s style is as good as any other. More important&#x2014;much more important&#x2014;the advantages of a single, programmatically mandated format for all Go programs greatly outweigh any perceived disadvantages of the particular style. Note too that Go&apos;s style means that an interactive implementation of Go can use the standard syntax one line at a time without special rules.
+</code></pre><blockquote>
+<p>Why are ++ and -- statements and not expressions? And why postfix, not prefix?</p>
+</blockquote>
+<pre><code>Without pointer arithmetic, the convenience value of pre- and postfix increment operators drops. By removing them from the expression hierarchy altogether, expression syntax is simplified and the messy issues around order of evaluation of ++ and -- (consider f(i++) and p[i] = q[++i]) are eliminated as well. The simplification is significant. As for postfix vs. prefix, either would work fine but the postfix version is more traditional; insistence on prefix arose with the STL, a library for a language whose name contains, ironically, a postfix increment.
+</code></pre><blockquote>
+<p>Why is there no pointer arithmetic?</p>
+</blockquote>
+<pre><code>Safety. Without pointer arithmetic it&apos;s possible to create a language that can never derive an illegal address that succeeds incorrectly. Compiler and hardware technology have advanced to the point where a loop using array indices can be as efficient as a loop using pointer arithmetic. Also, the lack of pointer arithmetic can simplify the implementation of the garbage collector.
+</code></pre><blockquote>
+<p>Why are declarations backwards?</p>
+</blockquote>
+<pre><code>They&apos;re only backwards if you&apos;re used to C. In C, the notion is that a variable is declared like an expression denoting its type, which is a nice idea, but the type and expression grammars don&apos;t mix very well and the results can be confusing; consider function pointers. Go mostly separates expression and type syntax and that simplifies things (using prefix * for pointers is an exception that proves the rule). In C, the declaration
+
+    int* a, b;
+declares a to be a pointer but not b; in Go
+
+    var a, b *int
+declares both to be pointers. This is clearer and more regular. Also, the := short declaration form argues that a full variable declaration should present the same order as := so
+
+    var a uint64 = 1
+has the same effect as
+
+    a := uint64(1)
+Parsing is also simplified by having a distinct grammar for types that is not just the expression grammar; keywords such as func and chan keep things clear.
+
+See the article about Go&apos;s Declaration Syntax for more details.
+</code></pre><blockquote>
+<p>Can I stop these complaints about my unused variable/import?</p>
+</blockquote>
+<pre><code>The presence of an unused variable may indicate a bug, while unused imports just slow down compilation, an effect that can become substantial as a program accumulates code and programmers over time. For these reasons, Go refuses to compile programs with unused variables or imports, trading short-term convenience for long-term build speed and program clarity.
+
+Still, when developing code, it&apos;s common to create these situations temporarily and it can be annoying to have to edit them out before the program will compile.
+
+Some have asked for a compiler option to turn those checks off or at least reduce them to warnings. Such an option has not been added, though, because compiler options should not affect the semantics of the language and because the Go compiler does not report warnings, only errors that prevent compilation.
+
+There are two reasons for having no warnings. First, if it&apos;s worth complaining about, it&apos;s worth fixing in the code. (And if it&apos;s not worth fixing, it&apos;s not worth mentioning.) Second, having the compiler generate warnings encourages the implementation to warn about weak cases that can make compilation noisy, masking real errors that should be fixed.
+
+It&apos;s easy to address the situation, though. Use the blank identifier to let unused things persist while you&apos;re developing.
+
+import &quot;unused&quot;
+
+// This declaration marks the import as used by referencing an
+// item from the package.
+var _ = unused.Item  // TODO: Delete before committing!
+
+func main() {
+    debugData := debug.Profile()
+    _ = debugData // Used only during debugging.
+    ....
+}
+Nowadays, most Go programmers use a tool, goimports, which automatically rewrites a Go source file to have the correct imports, eliminating the unused imports issue in practice. This program is easily connected to most editors to run automatically when a Go source file is written.
+</code></pre><blockquote>
+<p>Why does Go not have the ?: operator?</p>
+</blockquote>
+<pre><code>There is no ternary testing operation in Go. You may use the following to achieve the same result:
+
+if expr {
+    n = trueVal
+} else {
+    n = falseVal
+}
+The reason ?: is absent from Go is that the language&apos;s designers had seen the operation used too often to create impenetrably complex expressions. The if-else form, although longer, is unquestionably clearer. A language needs only one conditional control flow construct.
+</code></pre><blockquote>
+<p>Why do T and *T have different method sets?</p>
+</blockquote>
+<pre><code>As the Go specification says, the method set of a type T consists of all methods with receiver type T, while that of the corresponding pointer type *T consists of all methods with receiver *T or T. That means the method set of *T includes that of T, but not the reverse.
+
+This distinction arises because if an interface value contains a pointer *T, a method call can obtain a value by dereferencing the pointer, but if an interface value contains a value T, there is no safe way for a method call to obtain a pointer. (Doing so would allow a method to modify the contents of the value inside the interface, which is not permitted by the language specification.)
+
+Even in cases where the compiler could take the address of a value to pass to the method, if the method modifies the value the changes will be lost in the caller. As an example, if the Write method of bytes.Buffer used a value receiver rather than a pointer, this code:
+
+var buf bytes.Buffer
+io.Copy(buf, os.Stdin)
+would copy standard input into a copy of buf, not into buf itself. This is almost never the desired behavior.
+</code></pre><blockquote>
+<p>How do I know whether a variable is allocated on the heap or the stack?</p>
+</blockquote>
+<pre><code>From a correctness standpoint, you don&apos;t need to know. Each variable in Go exists as long as there are references to it. The storage location chosen by the implementation is irrelevant to the semantics of the language.
+
+The storage location does have an effect on writing efficient programs. When possible, the Go compilers will allocate variables that are local to a function in that function&apos;s stack frame. However, if the compiler cannot prove that the variable is not referenced after the function returns, then the compiler must allocate the variable on the garbage-collected heap to avoid dangling pointer errors. Also, if a local variable is very large, it might make more sense to store it on the heap rather than the stack.
+
+In the current compilers, if a variable has its address taken, that variable is a candidate for allocation on the heap. However, a basic escape analysis recognizes some cases when such variables will not live past the return from the function and can reside on the stack.
+</code></pre><blockquote>
+<p>What is the size of an int on a 64 bit machine?</p>
+</blockquote>
+<pre><code>The sizes of int and uint are implementation-specific but the same as each other on a given platform. For portability, code that relies on a particular size of value should use an explicitly sized type, like int64. On 32-bit machines the compilers use 32-bit integers by default, while on 64-bit machines integers have 64 bits. (Historically, this was not always true.)
+
+On the other hand, floating-point scalars and complex types are always sized (there are no float or complex basic types), because programmers should be aware of precision when using floating-point numbers. The default type used for an (untyped) floating-point constant is float64. Thus foo := 3.0 declares a variable foo of type float64. For a float32 variable initialized by an (untyped) constant, the variable type must be specified explicitly in the variable declaration:
+
+var foo float32 = 3.0
+Alternatively, the constant must be given a type with a conversion as in foo := float32(3.0).
+</code></pre><blockquote>
+<p>What&apos;s the difference between new and make?</p>
+</blockquote>
+<pre><code>In short: new allocates memory, while make initializes the slice, map, and channel types.
+
+See the relevant section of Effective Go for more details.
+</code></pre><blockquote>
+<p>Should I define methods on values or pointers?</p>
+</blockquote>
+<pre><code>func (s *MyStruct) pointerMethod() { } // method on pointer
+func (s MyStruct)  valueMethod()   { } // method on value
+For programmers unaccustomed to pointers, the distinction between these two examples can be confusing, but the situation is actually very simple. When defining a method on a type, the receiver (s in the above examples) behaves exactly as if it were an argument to the method. Whether to define the receiver as a value or as a pointer is the same question, then, as whether a function argument should be a value or a pointer. There are several considerations.
+
+First, and most important, does the method need to modify the receiver? If it does, the receiver must be a pointer. (Slices and maps act as references, so their story is a little more subtle, but for instance to change the length of a slice in a method the receiver must still be a pointer.) In the examples above, if pointerMethod modifies the fields of s, the caller will see those changes, but valueMethod is called with a copy of the caller&apos;s argument (that&apos;s the definition of passing a value), so changes it makes will be invisible to the caller.
+
+By the way, in Java method receivers are always pointers, although their pointer nature is somewhat disguised (and there is a proposal to add value receivers to the language). It is the value receivers in Go that are unusual.
+
+Second is the consideration of efficiency. If the receiver is large, a big struct for instance, it will be much cheaper to use a pointer receiver.
+
+Next is consistency. If some of the methods of the type must have pointer receivers, the rest should too, so the method set is consistent regardless of how the type is used. See the section on method sets for details.
+
+For types such as basic types, slices, and small structs, a value receiver is very cheap so unless the semantics of the method requires a pointer, a value receiver is efficient and clear.
+</code></pre><blockquote>
+<p>When should I use a pointer to an interface?</p>
+</blockquote>
+<pre><code>Almost never. Pointers to interface values arise only in rare, tricky situations involving disguising an interface value&apos;s type for delayed evaluation.
+
+It is a common mistake to pass a pointer to an interface value to a function expecting an interface. The compiler will complain about this error but the situation can still be confusing, because sometimes a pointer is necessary to satisfy an interface. The insight is that although a pointer to a concrete type can satisfy an interface, with one exception a pointer to an interface can never satisfy an interface.
+
+Consider the variable declaration,
+
+var w io.Writer
+The printing function fmt.Fprintf takes as its first argument a value that satisfies io.Writer&#x2014;something that implements the canonical Write method. Thus we can write
+
+fmt.Fprintf(w, &quot;hello, world\n&quot;)
+If however we pass the address of w, the program will not compile.
+
+fmt.Fprintf(&amp;w, &quot;hello, world\n&quot;) // Compile-time error.
+The one exception is that any value, even a pointer to an interface, can be assigned to a variable of empty interface type (interface{}). Even so, it&apos;s almost certainly a mistake if the value is a pointer to an interface; the result can be confusing.
+</code></pre><blockquote>
+<p>When are function parameters passed by value?</p>
+</blockquote>
+<pre><code>As in all languages in the C family, everything in Go is passed by value. That is, a function always gets a copy of the thing being passed, as if there were an assignment statement assigning the value to the parameter. For instance, passing an int value to a function makes a copy of the int, and passing a pointer value makes a copy of the pointer, but not the data it points to. (See a later section for a discussion of how this affects method receivers.)
+
+Map and slice values behave like pointers: they are descriptors that contain pointers to the underlying map or slice data. Copying a map or slice value doesn&apos;t copy the data it points to. Copying an interface value makes a copy of the thing stored in the interface value. If the interface value holds a struct, copying the interface value makes a copy of the struct. If the interface value holds a pointer, copying the interface value makes a copy of the pointer, but again not the data it points to.
+
+Note that this discussion is about the semantics of the operations. Actual implementations may apply optimizations to avoid copying as long as the optimizations do not change the semantics.
+</code></pre><blockquote>
+<p>Why are maps, slices, and channels references while arrays are values?</p>
+</blockquote>
+<pre><code class="lang-go">There<span class="hljs-string">&apos;s a lot of history on that topic. Early on, maps and channels were syntactically pointers and it was impossible to declare or use a non-pointer instance. Also, we struggled with how arrays should work. Eventually we decided that the strict separation of pointers and values made the language harder to use. Changing these types to act as references to the associated, shared data structures resolved these issues. This change added some regrettable complexity to the language but had a large effect on usability: Go became a more productive, comfortable language when it was introduced.
+</span></code></pre>
 <blockquote>
+<p>Why don&apos;t maps allow slices as keys?</p>
+</blockquote>
+<pre><code>Map lookup requires an equality operator, which slices do not implement. They don&apos;t implement equality because equality is not well defined on such types; there are multiple considerations involving shallow vs. deep comparison, pointer vs. value comparison, how to deal with recursive types, and so on. We may revisit this issue&#x2014;and implementing equality for slices will not invalidate any existing programs&#x2014;but without a clear idea of what equality of slices should mean, it was simpler to leave it out for now.
+
+In Go 1, unlike prior releases, equality is defined for structs and arrays, so such types can be used as map keys. Slices still do not have a definition of equality, though.
+</code></pre><blockquote>
+<p>Why are maps built in?</p>
+</blockquote>
+<pre><code>The same reason strings are: they are such a powerful and important data structure that providing one excellent implementation with syntactic support makes programming more pleasant. We believe that Go&apos;s implementation of maps is strong enough that it will serve for the vast majority of uses. If a specific application can benefit from a custom implementation, it&apos;s possible to write one but it will not be as convenient syntactically; this seems a reasonable tradeoff.
+</code></pre><blockquote>
+<p>How do constants work in Go?</p>
+</blockquote>
+<pre><code>Although Go is strict about conversion between variables of different numeric types, constants in the language are much more flexible. Literal constants such as 23, 3.14159 and math.Pi occupy a sort of ideal number space, with arbitrary precision and no overflow or underflow. For instance, the value of math.Pi is specified to 63 places in the source code, and constant expressions involving the value keep precision beyond what a float64 could hold. Only when the constant or constant expression is assigned to a variable&#x2014;a memory location in the program&#x2014;does it become a &quot;computer&quot; number with the usual floating-point properties and precision.
+
+Also, because they are just numbers, not typed values, constants in Go can be used more freely than variables, thereby softening some of the awkwardness around the strict conversion rules. One can write expressions such as
+
+sqrt2 := math.Sqrt(2)
+without complaint from the compiler because the ideal number 2 can be converted safely and accurately to a float64 for the call to math.Sqrt.
+
+A blog post titled Constants explores this topic in more detail.
+</code></pre><blockquote>
+<p>Why does Go not provide implicit numeric conversions?</p>
+</blockquote>
+<pre><code>The convenience of automatic conversion between numeric types in C is outweighed by the confusion it causes. When is an expression unsigned? How big is the value? Does it overflow? Is the result portable, independent of the machine on which it executes? It also complicates the compiler; &#x201C;the usual arithmetic conversions&#x201D; are not easy to implement and inconsistent across architectures. For reasons of portability, we decided to make things clear and straightforward at the cost of some explicit conversions in the code. The definition of constants in Go&#x2014;arbitrary precision values free of signedness and size annotations&#x2014;ameliorates matters considerably, though.
+
+A related detail is that, unlike in C, int and int64 are distinct types even if int is a 64-bit type. The int type is generic; if you care about how many bits an integer holds, Go encourages you to be explicit.
+</code></pre><blockquote>
+<p>Why does Go not have covariant result types?</p>
+</blockquote>
+<pre><code>Covariant result types would mean that an interface like
+
+type Copyable interface {
+    Copy() interface{}
+}
+would be satisfied by the method
+
+func (v Value) Copy() Value
+because Value implements the empty interface. In Go method types must match exactly, so Value does not implement Copyable. Go separates the notion of what a type does&#x2014;its methods&#x2014;from the type&apos;s implementation. If two methods return different types, they are not doing the same thing. Programmers who want covariant result types are often trying to express a type hierarchy through interfaces. In Go it&apos;s more natural to have a clean separation between interface and implementation.
+</code></pre><blockquote>
+<p>Why is my nil error value not equal to nil?</p>
+</blockquote>
+<pre><code>Under the covers, interfaces are implemented as two elements, a type T and a value V. V is a concrete value such as an int, struct or pointer, never an interface itself, and has type T. For instance, if we store the int value 3 in an interface, the resulting interface value has, schematically, (T=int, V=3). The value V is also known as the interface&apos;s dynamic value, since a given interface variable might hold different values V (and corresponding types T) during the execution of the program.
+
+An interface value is nil only if the V and T are both unset, (T=nil, V is not set), In particular, a nil interface will always hold a nil type. If we store a nil pointer of type *int inside an interface value, the inner type will be *int regardless of the value of the pointer: (T=*int, V=nil). Such an interface value will therefore be non-nil even when the pointer value V inside is nil.
+
+This situation can be confusing, and arises when a nil value is stored inside an interface value such as an error return:
+
+func returnsError() error {
+    var p *MyError = nil
+    if bad() {
+        p = ErrBad
+    }
+    return p // Will always return a non-nil error.
+}
+If all goes well, the function returns a nil p, so the return value is an error interface value holding (T=*MyError, V=nil). This means that if the caller compares the returned error to nil, it will always look as if there was an error even if nothing bad happened. To return a proper nil error to the caller, the function must return an explicit nil:
+
+func returnsError() error {
+    if bad() {
+        return ErrBad
+    }
+    return nil
+}
+It&apos;s a good idea for functions that return errors always to use the error type in their signature (as we did above) rather than a concrete type such as *MyError, to help guarantee the error is created correctly. As an example, os.Open returns an error even though, if not nil, it&apos;s always of concrete type *os.PathError.
+
+Similar situations to those described here can arise whenever interfaces are used. Just keep in mind that if any concrete value has been stored in the interface, the interface will not be nil. For more information, see The Laws of Reflection.
+</code></pre><blockquote>
+<p>Can I convert []T1 to []T2 if T1 and T2 have the same underlying type?</p>
+</blockquote>
+<pre><code>This last line of this code sample does not compile.
+type T1 int
+type T2 int
+var t1 T1
+var x = T2(t1) // OK
+var st1 []T1
+var sx = ([]T2)(st1) // NOT OK
+In Go, types are closely tied to methods, in that every named type has a (possibly empty) method set. The general rule is that you can change the name of the type being converted (and thus possibly change its method set) but you can&apos;t change the name (and method set) of elements of a composite type. Go requires you to be explicit about type conversions.
+</code></pre><blockquote>
+<p>Can I convert a []T to an []interface{}?</p>
+</blockquote>
+<pre><code>Not directly. It is disallowed by the language specification because the two types do not have the same representation in memory. It is necessary to copy the elements individually to the destination slice. This example converts a slice of int to a slice of interface{}:
+
+t := []int{1, 2, 3, 4}
+s := make([]interface{}, len(t))
+for i, v := range t {
+    s[i] = v
+}
+</code></pre><blockquote>
+<p>Why doesn&apos;t type T satisfy the Equal interface?</p>
+</blockquote>
+<pre><code>Consider this simple interface to represent an object that can compare itself with another value:
+
+type Equaler interface {
+    Equal(Equaler) bool
+}
+and this type, T:
+
+type T int
+func (t T) Equal(u T) bool { return t == u } // does not satisfy Equaler
+Unlike the analogous situation in some polymorphic type systems, T does not implement Equaler. The argument type of T.Equal is T, not literally the required type Equaler.
+
+In Go, the type system does not promote the argument of Equal; that is the programmer&apos;s responsibility, as illustrated by the type T2, which does implement Equaler:
+
+type T2 int
+func (t T2) Equal(u Equaler) bool { return t == u.(T2) }  // satisfies Equaler
+Even this isn&apos;t like other type systems, though, because in Go any type that satisfies Equaler could be passed as the argument to T2.Equal, and at run time we must check that the argument is of type T2. Some languages arrange to make that guarantee at compile time.
+
+A related example goes the other way:
+
+type Opener interface {
+   Open() Reader
+}
+
+func (t T3) Open() *os.File
+In Go, T3 does not satisfy Opener, although it might in another language.
+
+While it is true that Go&apos;s type system does less for the programmer in such cases, the lack of subtyping makes the rules about interface satisfaction very easy to state: are the function&apos;s names and signatures exactly those of the interface? Go&apos;s rule is also easy to implement efficiently. We feel these benefits offset the lack of automatic type promotion. Should Go one day adopt some form of polymorphic typing, we expect there would be a way to express the idea of these examples and also have them be statically checked.
+</code></pre><blockquote>
+<p>How can I guarantee my type satisfies an interface?</p>
+</blockquote>
+<pre><code>You can ask the compiler to check that the type T implements the interface I by attempting an assignment using the zero value for T or pointer to T, as appropriate:
+
+type T struct{}
+var _ I = T{}       // Verify that T implements I.
+var _ I = (*T)(nil) // Verify that *T implements I.
+If T (or *T, accordingly) doesn&apos;t implement I, the mistake will be caught at compile time.
+
+If you wish the users of an interface to explicitly declare that they implement it, you can add a method with a descriptive name to the interface&apos;s method set. For example:
+
+type Fooer interface {
+    Foo()
+    ImplementsFooer()
+}
+A type must then implement the ImplementsFooer method to be a Fooer, clearly documenting the fact and announcing it in go doc&apos;s output.
+
+type Bar struct{}
+func (b Bar) ImplementsFooer() {}
+func (b Bar) Foo() {}
+Most code doesn&apos;t make use of such constraints, since they limit the utility of the interface idea. Sometimes, though, they&apos;re necessary to resolve ambiguities among similar interfaces.
+</code></pre><blockquote>
+<p>Why doesn&apos;t Go have &quot;implements&quot; declarations?</p>
+</blockquote>
+<pre><code>A Go type satisfies an interface by implementing the methods of that interface, nothing more. This property allows interfaces to be defined and used without needing to modify existing code. It enables a kind of structural typing that promotes separation of concerns and improves code re-use, and makes it easier to build on patterns that emerge as the code develops. The semantics of interfaces is one of the main reasons for Go&apos;s nimble, lightweight feel.
+
+See the question on type inheritance for more detail.
+</code></pre><blockquote>
+<p>Why does Go not support overloading of methods and operators?</p>
+</blockquote>
+<pre><code>Method dispatch is simplified if it doesn&apos;t need to do type matching as well. Experience with other languages told us that having a variety of methods with the same name but different signatures was occasionally useful but that it could also be confusing and fragile in practice. Matching only by name and requiring consistency in the types was a major simplifying decision in Go&apos;s type system.
+
+Regarding operator overloading, it seems more a convenience than an absolute requirement. Again, things are simpler without it.
+</code></pre><blockquote>
+<p>Why is len a function and not a method?</p>
+</blockquote>
+<pre><code>We debated this issue but decided implementing len and friends as functions was fine in practice and didn&apos;t complicate questions about the interface (in the Go type sense) of basic types.
+</code></pre><blockquote>
+<p>Why is there no type inheritance?</p>
+</blockquote>
+<pre><code class="lang-go">Object-oriented programming, at least in the best-known languages, involves too much discussion of the relationships between types, relationships that often could be derived automatically. Go takes a different approach.
+
+Rather than requiring the programmer to declare ahead of time that two types are related, in Go a <span class="hljs-keyword">type</span> automatically satisfies any <span class="hljs-keyword">interface</span> that specifies a subset of its methods. Besides reducing the bookkeeping, this approach has <span class="hljs-built_in">real</span> advantages. Types can satisfy many interfaces at once, without the complexities of traditional multiple inheritance. Interfaces can be very lightweight&#x2014;an <span class="hljs-keyword">interface</span> with one or even zero methods can express a useful concept. Interfaces can be added after the fact <span class="hljs-keyword">if</span> a <span class="hljs-built_in">new</span> idea comes along or <span class="hljs-keyword">for</span> testing&#x2014;without annotating the original types. Because there are no explicit relationships between types and interfaces, there is no <span class="hljs-keyword">type</span> hierarchy to manage or discuss.
+
+It<span class="hljs-string">&apos;s possible to use these ideas to construct something analogous to type-safe Unix pipes. For instance, see how fmt.Fprintf enables formatted printing to any output, not just a file, or how the bufio package can be completely separate from file I/O, or how the image packages generate compressed image files. All these ideas stem from a single interface (io.Writer) representing a single method (Write). And that&apos;</span>s only scratching the surface. Go<span class="hljs-string">&apos;s interfaces have a profound influence on how programs are structured.
+
+It takes some getting used to but this implicit style of type dependency is one of the most productive things about Go.
+</span></code></pre>
 <blockquote>
+<p>How do I get dynamic dispatch of methods?</p>
+</blockquote>
+<pre><code>The only way to have dynamically dispatched methods is through an interface. Methods on a struct or any other concrete type are always resolved statically.
+</code></pre><blockquote>
+<p>Is Go an object-oriented language?</p>
+</blockquote>
+<pre><code>Yes and no. Although Go has types and methods and allows an object-oriented style of programming, there is no type hierarchy. The concept of &#x201C;interface&#x201D; in Go provides a different approach that we believe is easy to use and in some ways more general. There are also ways to embed types in other types to provide something analogous&#x2014;but not identical&#x2014;to subclassing. Moreover, methods in Go are more general than in C++ or Java: they can be defined for any sort of data, even built-in types such as plain, &#x201C;unboxed&#x201D; integers. They are not restricted to structs (classes).
+
+Also, the lack of a type hierarchy makes &#x201C;objects&#x201D; in Go feel much more lightweight than in languages such as C++ or Java.
+</code></pre><blockquote>
+<p>Why are map operations not defined to be atomic?</p>
+</blockquote>
+<pre><code class="lang-go">After long discussion it was decided that the typical use of maps did not require safe access from multiple goroutines, and in those cases where it did, the <span class="hljs-keyword">map</span> was probably part of some larger data structure or computation that was already synchronized. Therefore requiring that all <span class="hljs-keyword">map</span> operations grab a mutex would slow down most programs and add safety to few. This was not an easy decision, however, since it means uncontrolled <span class="hljs-keyword">map</span> access can crash the program.
+
+The language does not preclude atomic <span class="hljs-keyword">map</span> updates. When required, such as when hosting an untrusted program, the implementation could interlock <span class="hljs-keyword">map</span> access.
+
+Map access is unsafe only when updates are occurring. As long as all goroutines are only reading&#x2014;looking up elements in the <span class="hljs-keyword">map</span>, including iterating through it using a <span class="hljs-keyword">for</span> <span class="hljs-keyword">range</span> loop&#x2014;and not changing the <span class="hljs-keyword">map</span> by assigning to elements or doing deletions, it is safe <span class="hljs-keyword">for</span> them to access the <span class="hljs-keyword">map</span> concurrently without synchronization.
+
+As an aid to correct <span class="hljs-keyword">map</span> use, some implementations of the language contain a special check that automatically reports at run time when a <span class="hljs-keyword">map</span> is modified unsafely by concurrent execution.
+</code></pre>
 <blockquote>
+<p>Why does Go not have assertions?</p>
+</blockquote>
+<pre><code class="lang-go">Go doesn<span class="hljs-string">&apos;t provide assertions. They are undeniably convenient, but our experience has been that programmers use them as a crutch to avoid thinking about proper error handling and reporting. Proper error handling means that servers continue to operate instead of crashing after a non-fatal error. Proper error reporting means that errors are direct and to the point, saving the programmer from interpreting a large crash trace. Precise errors are particularly important when the programmer seeing the errors is not familiar with the code.
+
+We understand that this is a point of contention. There are many things in the Go language and libraries that differ from modern practices, simply because we feel it&apos;</span>s sometimes worth trying a different approach.
+</code></pre>
 <blockquote>
+<p>Why does Go not have exceptions?</p>
+</blockquote>
+<pre><code>We believe that coupling exceptions to a control structure, as in the try-catch-finally idiom, results in convoluted code. It also tends to encourage programmers to label too many ordinary errors, such as failing to open a file, as exceptional.
+
+Go takes a different approach. For plain error handling, Go&apos;s multi-value returns make it easy to report an error without overloading the return value. A canonical error type, coupled with Go&apos;s other features, makes error handling pleasant but quite different from that in other languages.
+
+Go also has a couple of built-in functions to signal and recover from truly exceptional conditions. The recovery mechanism is executed only as part of a function&apos;s state being torn down after an error, which is sufficient to handle catastrophe but requires no extra control structures and, when used well, can result in clean error-handling code.
+
+See the Defer, Panic, and Recover article for details. Also, the Errors are values blog post describes one approach to handling errors cleanly in Go by demonstrating that, since errors are just values, the full power of Go can deployed in error handling.
+</code></pre><blockquote>
+<p>Why does Go not have generic types?</p>
+</blockquote>
+<pre><code>Generics may well be added at some point. We don&apos;t feel an urgency for them, although we understand some programmers do.
+
+Go was intended as a language for writing server programs that would be easy to maintain over time. (See this article for more background.) The design concentrated on things like scalability, readability, and concurrency. Polymorphic programming did not seem essential to the language&apos;s goals at the time, and so was left out for simplicity.
+
+The language is more mature now, and there is scope to consider some form of generic programming. However, there remain some caveats.
+
+Generics are convenient but they come at a cost in complexity in the type system and run-time. We haven&apos;t yet found a design that gives value proportionate to the complexity, although we continue to think about it. Meanwhile, Go&apos;s built-in maps and slices, plus the ability to use the empty interface to construct containers (with explicit unboxing) mean in many cases it is possible to write code that does what generics would enable, if less smoothly.
+
+The topic remains open. For a look at several previous unsuccessful attempts to design a good generics solution for Go, see this proposal.
+</code></pre><blockquote>
+<p>What&apos;s up with Unicode identifiers?</p>
+</blockquote>
+<pre><code>When designing Go, we wanted to make sure that it was not overly ASCII-centric, which meant extending the space of identifiers from the confines of 7-bit ASCII. Go&apos;s rule&#x2014;identifier characters must be letters or digits as defined by Unicode&#x2014;is simple to understand and to implement but has restrictions. Combining characters are excluded by design, for instance, and that excludes some languages such as Devanagari.
+
+This rule has one other unfortunate consequence. Since an exported identifier must begin with an upper-case letter, identifiers created from characters in some languages can, by definition, not be exported. For now the only solution is to use something like X&#x65E5;&#x672C;&#x8A9E;, which is clearly unsatisfactory.
+
+Since the earliest version of the language, there has been considerable thought into how best to expand the identifier space to accommodate programmers using other native languages. Exactly what to do remains an active topic of discussion, and a future version of the language may be more liberal in its definition of an identifier. For instance, it might adopt some of the ideas from the Unicode organization&apos;s recommendations for identifiers. Whatever happens, it must be done compatibly while preserving (or perhaps expanding) the way letter case determines visibility of identifiers, which remains one of our favorite features of Go.
+
+For the time being, we have a simple rule that can be expanded later without breaking programs, one that avoids bugs that would surely arise from a rule that admits ambiguous identifiers.
+</code></pre><blockquote>
+<p>Does Go have a runtime?</p>
+</blockquote>
+<pre><code>Go does have an extensive library, called the runtime, that is part of every Go program. The runtime library implements garbage collection, concurrency, stack management, and other critical features of the Go language. Although it is more central to the language, Go&apos;s runtime is analogous to libc, the C library.
+
+It is important to understand, however, that Go&apos;s runtime does not include a virtual machine, such as is provided by the Java runtime. Go programs are compiled ahead of time to native machine code (or JavaScript or WebAssembly, for some variant implementations). Thus, although the term is often used to describe the virtual environment in which a program runs, in Go the word &#x201C;runtime&#x201D; is just the name given to the library providing critical language services.
+</code></pre><blockquote>
+<p>What are the guiding principles in the design?</p>
+</blockquote>
+<pre><code class="lang-go">When Go was designed, Java and C++ were the most commonly used languages <span class="hljs-keyword">for</span> writing servers, at least at Google. We felt that these languages required too much bookkeeping and repetition. Some programmers reacted by moving towards more dynamic, fluid languages like Python, at the cost of efficiency and <span class="hljs-keyword">type</span> safety. We felt it should be possible to have the efficiency, the safety, and the fluidity in a single language.
+
+Go attempts to reduce the amount of typing in both senses of the word. Throughout its design, we have tried to reduce clutter and complexity. There are no forward declarations and no header files; everything is declared exactly once. Initialization is expressive, automatic, and easy to use. Syntax is clean and light on keywords. Stuttering (foo.Foo* myFoo = <span class="hljs-built_in">new</span>(foo.Foo)) is reduced by simple <span class="hljs-keyword">type</span> derivation using the := declare-and-initialize construct. And perhaps most radically, there is no <span class="hljs-keyword">type</span> hierarchy: types just are, they don<span class="hljs-string">&apos;t have to announce their relationships. These simplifications allow Go to be expressive yet comprehensible without sacrificing, well, sophistication.
+
+Another important principle is to keep the concepts orthogonal. Methods can be implemented for any type; structures represent data while interfaces represent abstraction; and so on. Orthogonality makes it easier to understand what happens when things combine.
+</span></code></pre>
 <blockquote>
-<blockquote>
-<p>a38c4ca339dd38f436a45102878e92135d4b6d3b</p>
+<p>What are Go&apos;s ancestors?</p>
 </blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<pre><code class="lang-go">Go is mostly in the C family (basic syntax), with significant input from the Pascal/Modula/Oberon family (declarations, packages), plus some ideas from languages inspired by Tony Hoare<span class="hljs-string">&apos;s CSP, such as Newsqueak and Limbo (concurrency). However, it is a new language across the board. In every respect the language was designed by thinking about what programmers do and how to make programming, at least the kind of programming we do, more effective, which means more fun.
+</span></code></pre>
 <p><footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2019-08-20 19:02:16
+2019-08-21 18:24:58
 </span></footer><div id="gitalk-container" class="gitbook-plugin-mygitalk"></div></p>
 
                                 
@@ -2377,12 +2413,12 @@
 
             
                 
-                <a href="about.html" class="navigation navigation-prev " aria-label="Previous page: 内建容器">
+                <a href="../oop/encapsulation.html" class="navigation navigation-prev " aria-label="Previous page: 再说封装">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="map.html" class="navigation navigation-next " aria-label="Next page: 字典映射">
+                <a href="../cmd/about.html" class="navigation navigation-next " aria-label="Next page: 标准命令详解">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2393,7 +2429,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数组切片","level":"3.2.2.1","depth":3,"next":{"title":"字典映射","level":"3.2.2.2","depth":3,"path":"go/container/map.md","ref":"go/container/map.md","articles":[]},"previous":{"title":"内建容器","level":"3.2.2","depth":2,"path":"go/container/about.md","ref":"go/container/about.md","articles":[{"title":"数组切片","level":"3.2.2.1","depth":3,"path":"go/container/array.md","ref":"go/container/array.md","articles":[]},{"title":"字典映射","level":"3.2.2.2","depth":3,"path":"go/container/map.md","ref":"go/container/map.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-plus","donate","advanced-emoji","tbfed-pagefooter","rss","mygitalk"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"output":"_book","github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"雪之梦技术驿站","description":"雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io","author":"snowdreams1006","site_url":"https://snowdreams1006.github.io/","feed_url":"https://snowdreams1006.github.io/rss","managingEditor":"snowdreams1006@163.com","webMaster":"snowdreams1006@163.com"},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":"/favicon.ico","pageview-count":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","expandable-chapters-small":{},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"snowdreams1006.github.io","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考."},"file":{"path":"go/container/array.md","mtime":"2019-08-20T11:02:16.233Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-24T12:09:46.957Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常见问题","level":"3.2.4","depth":2,"next":{"title":"标准命令详解","level":"3.2.5","depth":2,"path":"go/cmd/about.md","ref":"go/cmd/about.md","articles":[{"title":"go build","level":"3.2.5.1","depth":3,"path":"go/cmd/build.md","ref":"go/cmd/build.md","articles":[]},{"title":"go install","level":"3.2.5.2","depth":3,"path":"go/cmd/install.md","ref":"go/cmd/install.md","articles":[]},{"title":"go get","level":"3.2.5.3","depth":3,"path":"go/cmd/get.md","ref":"go/cmd/get.md","articles":[]},{"title":"go clean","level":"3.2.5.4","depth":3,"path":"go/cmd/clean.md","ref":"go/cmd/clean.md","articles":[]},{"title":"go doc 与 godoc","level":"3.2.5.5","depth":3,"path":"go/cmd/doc-godoc.md","ref":"go/cmd/doc-godoc.md","articles":[]},{"title":"go run","level":"3.2.5.6","depth":3,"path":"go/cmd/run.md","ref":"go/cmd/run.md","articles":[]},{"title":"go test","level":"3.2.5.7","depth":3,"path":"go/cmd/test.md","ref":"go/cmd/test.md","articles":[]},{"title":"go list","level":"3.2.5.8","depth":3,"path":"go/cmd/list.md","ref":"go/cmd/list.md","articles":[]},{"title":"go fix 与 go tool fix","level":"3.2.5.9","depth":3,"path":"go/cmd/fix-toolfix.md","ref":"go/cmd/fix-toolfix.md","articles":[]},{"title":"go vet 与 go tool vet","level":"3.2.5.10","depth":3,"path":"go/cmd/vet-toolvet.md","ref":"go/cmd/vet-toolvet.md","articles":[]},{"title":"go tool pprof","level":"3.2.5.11","depth":3,"path":"go/cmd/toolpprof.md","ref":"go/cmd/toolpprof.md","articles":[]},{"title":"go tool cgo","level":"3.2.5.12","depth":3,"path":"go/cmd/toolcgo.md","ref":"go/cmd/toolcgo.md","articles":[]},{"title":"go env","level":"3.2.5.13","depth":3,"path":"go/cmd/env.md","ref":"go/cmd/env.md","articles":[]}]},"previous":{"title":"再说封装","level":"3.2.3.1","depth":3,"path":"go/oop/encapsulation.md","ref":"go/oop/encapsulation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-plus","donate","advanced-emoji","tbfed-pagefooter","rss","mygitalk"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"output":"_book","github":{"url":"https://github.com/snowdreams1006/snowdreams1006.github.io"},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"雪之梦技术驿站","description":"雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io","author":"snowdreams1006","site_url":"https://snowdreams1006.github.io/","feed_url":"https://snowdreams1006.github.io/rss","managingEditor":"snowdreams1006@163.com","webMaster":"snowdreams1006@163.com"},"favicon-plus":{"appleTouchIconPrecomposed152":"","favicon":"","output":"_book"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":"/favicon.ico","pageview-count":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","expandable-chapters-small":{},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"snowdreams1006.github.io","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站又名snowdreams1006的技术小屋.主要分享个人的学习经验,一家之言,仅供参考."},"file":{"path":"go/issue/faq.md","mtime":"2019-08-21T10:24:58.687Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-24T12:09:46.957Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 19 Aug 2019 01:44:40 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 24 Aug 2019 12:10:47 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -553,14 +553,36 @@
         </item>
         <item>
             <title><![CDATA[数组切片]]></title>
+            <description><![CDATA[字符串]]></description>
             <link>https://snowdreams1006.github.io/go/container/array.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/container/array.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[字典映射]]></title>
+            <description><![CDATA[结构的定义]]></description>
             <link>https://snowdreams1006.github.io/go/container/map.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/container/map.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[面向对象]]></title>
+            <description><![CDATA[go-oop-about-oop-elephant.jpg]]></description>
+            <link>https://snowdreams1006.github.io/go/oop/about.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/about.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[再说封装]]></title>
+            <description><![CDATA[虽然在上篇文章中,我们通过尝试性学习探索了 Go 语言中关于面向对象的相关概念,更确切的说是关于封装的基本概念以及相关实现.]]></description>
+            <link>https://snowdreams1006.github.io/go/oop/encapsulation.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/encapsulation.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[常见问题]]></title>
+            <link>https://snowdreams1006.github.io/go/issue/faq.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/issue/faq.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
