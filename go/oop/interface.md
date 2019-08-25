@@ -171,7 +171,7 @@ func TestExtendInstance(t *testing.T) {
 
 不过,这只是我的一厢情愿,因为面向对象中这种机制叫做接口,满足接口的规范就做实现了接口.
 
-## 如何设计又怎么实现接口
+## 如何设计又怎么实现
 
 duck typing
 
