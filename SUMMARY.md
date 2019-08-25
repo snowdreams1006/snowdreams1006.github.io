@@ -84,6 +84,7 @@
     * [面向对象](go/oop/about.md)
         * [再说封装](go/oop/encapsulation.md)
         * [能否继承](go/oop/inheritance.md)
+        * [初识接口](go/oop/interface.md)
     * [常见问题](go/issue/faq.md)
     * [标准命令详解](go/cmd/about.md)
         * [go build](go/cmd/build.md)
