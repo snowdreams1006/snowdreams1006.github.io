@@ -50,6 +50,29 @@ $ ebook-convert --version
 
 > 如果没有输出 `ebook-convert` 版本信息,可能需要配置环境变量.
 
+### `windows` 系统
+
+[下载地址](https://calibre-ebook.com/download_windows) : https://calibre-ebook.com/download_windows
+
+和一般的应用下载安装方式一样,无外乎选择一下软件安装位置和书籍存放目录,安装过程略过,动图演示.
+
+![gitbook-export-calibre-windows-install.gif](./images/gitbook-export-calibre-windows-install.gif)
+
+软件安装前如果使用命令行运行 `ebook-convert` 相关命令会提示无法查找该命令,安装后需要重新打开新的命令行工具再次运行 `ebook-convert --version` 就能输出版本信息,表示安装成功.
+
+![gitbook-export-calibre-windows-version.png](./images/gitbook-export-calibre-windows-version.png)
+
+> 只有新打开的命令行窗口运行 `ebook-convert` 才会生效1,原来的命令行窗口依旧没有会报错的呢,记住啦!
+
+示例:
+
+```bash
+Administrator@snowdreams1006 MINGW64 /f/workspace/snowdreams1006.github.io (master)
+$ ebook-convert --version
+ebook-convert.exe (calibre 3.46.0)
+Created by: Kovid Goyal <kovid@kovidgoyal.net>
+```
+
 ## 配置封面
 
 所有格式的电子书都可以配置自定义封面,在项目的根目录下提供 `cover.jpg` 和 `cover_small.jpg ` 两种封面图片时,生成电子书会自动增加封面页.
