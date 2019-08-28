@@ -113,7 +113,7 @@ func TestExtendInstance(t *testing.T) {
 
 仔细听了事情来龙去脉,双方都没有过错,看来还真的是市场赶不上实际需求的变化,真得尽快研究新的解决办法才行啊!
 
-![go-oop-interface-issue-new.jpg](../images/go-oop-interface-issue-new.jpeg)
+![go-oop-interface-issue-new.jpg](../images/go-oop-interface-issue-new.jpg)
 
 "冷静一下,你们的意见我们这边已经知道了,这样吧,给我们三天的时间,我们一定会想出一个万全之策,到时候再公布新的交易规则,现在我宣布暂时关闭交易,省的再惹出不必要的争端!"
 
@@ -121,7 +121,7 @@ func TestExtendInstance(t *testing.T) {
 
 视角切换到市场监督大会上,主席首先开始发言:"各位,现在市场面临的问题想必大家都有所耳闻吧,我们已经郑重承诺,三天后必须给市场一个答复,时间紧,任务重,大家要集思广益,一起解决这个难题!"
 
-![go-oop-interface-issue-meeting.jpg](../images/go-oop-interface-issue-meeting.jpeg)
+![go-oop-interface-issue-meeting.jpg](../images/go-oop-interface-issue-meeting.jpg)
 
 
 "现在的顾客到底是怎么了,连自己到底想要什么都搞不清楚,还急冲冲地跑来买宠物,自己都不知道要买啥,鬼才知道呢!",资历老练的继承经理抱怨道.
@@ -142,7 +142,9 @@ func TestExtendInstance(t *testing.T) {
 
 经过一番激烈的讨论,大家基本上达成一致,先前存在的继承模型确实有些不足,不能适应快速变化的市场,过于强调差异性而非共性.
 
-这样就导致无法满足急性子顾客批量购买的需求,所以需要提供类似于继承那种抽象的概念来表达约定,主要满足这种约定的动物就是宠物.
+这样就导致无法满足急性子顾客批量购买的需求,所以需要提供类似于继承那种抽象的概念来表达某种约定,只要满足这种约定的动物就是宠,不管是猫还是狗,哪怕是玩具也行!
+
+![go-oop-interface-pet-toy.jpeg](../images/go-oop-interface-pet-toy.jpeg)
 
 ## 让继承变得更加抽象
 
