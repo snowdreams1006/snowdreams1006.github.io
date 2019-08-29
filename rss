@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 24 Aug 2019 16:31:22 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 29 Aug 2019 13:15:35 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -587,6 +587,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[初识接口]]></title>
+            <description><![CDATA[在上篇文章中,我们编撰了一则简短的小故事用于讲解了什么是面向对象的继承特性以及 Go 语言是如何实现这种继承语义的,这一节我们将继续探讨新的场景,希望能顺便讲解面向对象的接口概念.]]></description>
+            <link>https://snowdreams1006.github.io/go/oop/interface.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/interface.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[常见问题]]></title>
             <link>https://snowdreams1006.github.io/go/issue/faq.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/issue/faq.html</guid>
@@ -972,7 +979,8 @@
 "2019-04-30",
 "2019-05-31",
 "2019-06-30",
-"2019-07-31"
+"2019-07-31",
+"2019-08-29"
 ],
 [
 "粉丝",
@@ -980,7 +988,8 @@
 115,
 115,
 116,
-134
+134,
+191
 ],
 [
 "阅读",
@@ -988,7 +997,8 @@
 53447,
 53829,
 54106,
-71422
+71422,
+89468
 ]
 ],
 "axes": {
