@@ -129,7 +129,7 @@
 
 ## 程序人生
 * [其他](other/README.md)
-    * [程序员转型之路](other/transformation.md)
+    * [转型之路](other/transformation.md)
     * [历史统计](other/static.md)
     * [关于作者](other/me.md)
     * [捐赠支持](other/donate.md)
