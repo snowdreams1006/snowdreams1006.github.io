@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 29 Aug 2019 13:15:35 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 01 Sep 2019 06:23:02 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -960,7 +960,7 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[程序员转型之路]]></title>
+            <title><![CDATA[转型之路]]></title>
             <description><![CDATA[other-transformation-important-of-learn.png]]></description>
             <link>https://snowdreams1006.github.io/other/transformation.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/transformation.html</guid>
@@ -1031,13 +1031,14 @@
         </item>
         <item>
             <title><![CDATA[关于作者]]></title>
-            <description><![CDATA[申请认证慕课网作者]]></description>
+            <description><![CDATA[慕课网认证作者,今日头条优质科技领域创作者,微信公众号「雪之梦技术驿站」号主,目前专注于后端领域,主要技术栈有 Java,Go 和 NodeJs 等.]]></description>
             <link>https://snowdreams1006.github.io/other/me.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/me.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[捐赠支持]]></title>
+            <description><![CDATA[snowdreams1006-wechat-donate.jpg]]></description>
             <link>https://snowdreams1006.github.io/other/donate.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/donate.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
