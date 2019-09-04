@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 01 Sep 2019 06:51:53 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 04 Sep 2019 04:26:49 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -597,104 +597,6 @@
             <title><![CDATA[常见问题]]></title>
             <link>https://snowdreams1006.github.io/go/issue/faq.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/issue/faq.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[标准命令详解]]></title>
-            <description><![CDATA[Go语言的1.5版本在标准命令方面有了重大变更。这倒不是说它们的用法有多大的变化，而是说它们的底层支持已经大变样了。让我们先来对比一下$GOROOT/pkg/tool/<平台相关目录>中的内容。以下简称此目录为Go工具目录。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/about.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/about.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go build]]></title>
-            <description><![CDATA[go build命令用于编译我们指定的源码文件或代码包以及它们的依赖包。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/build.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/build.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go install]]></title>
-            <description><![CDATA[命令go install用于编译并安装指定的代码包及它们的依赖包。当指定的代码包的依赖包还没有被编译和安装时，该命令会先去处理依赖包。与go build命令一样，传给go install命令的代码包参数应该以导入路径的形式提供。并且，go build命令的绝大多数标记也都可以用于go install命令。实际上，go install命令只比go build命令多做了一件事，即：安装编译后的结果文件到指定目录。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/install.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/install.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go get]]></title>
-            <description><![CDATA[命令go get可以根据要求和实际情况从互联网上下载或更新指定的代码包及其依赖包，并对它们进行编译和安装。在上面这个示例中，我们从著名的代码托管站点Github上下载了一个项目（或称代码包），并安装到了环境变量GOPATH中包含的第一个工作区中。与此同时，我们也知道了这个代码包的导入路径就是github.com/hyper-carrot/go_lib/logging。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/get.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/get.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go clean]]></title>
-            <description><![CDATA[执行go clean命令会删除掉执行其它命令时产生的一些文件和目录，包括：]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/clean.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/clean.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go doc 与 godoc]]></title>
-            <description><![CDATA[go doc命令可以打印附于Go语言程序实体上的文档。我们可以通过把程序实体的标识符作为该命令的参数来达到查看其文档的目的。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/doc-godoc.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/doc-godoc.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go run]]></title>
-            <description><![CDATA[在《Go并发编程实战》的第二章中，我介绍了Go源码文件的分类。Go源码文件包括：命令源码文件、库源码文件和测试源码文件。其中，命令源码文件总应该属于main代码包，且在其中有无参数声明、无结果声明的main函数。单个命令源码文件可以被单独编译，也可以被单独安装（可能需要设置环境变量GOBIN）。当然，命令源码文件也可以被单独运行。我们想要运行命令源码文件就需要使用命令go run。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/run.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/run.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go test]]></title>
-            <description><![CDATA[go test命令用于对Go语言编写的程序进行测试。这种测试是以代码包为单位的。当然，这还需要测试源码文件的帮助。关于怎样编写并写好Go程序测试代码，我们会在本章的第二节加以详述。在这里，我们只讨论怎样使用命令启动测试。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/test.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/test.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go list]]></title>
-            <description><![CDATA[go list命令的作用是列出指定的代码包的信息。与其他命令相同，我们需要以代码包导入路径的方式给定代码包。被给定的代码包可以有多个。这些代码包对应的目录中必须直接保存有Go语言源码文件，其子目录中的文件不算在内。否则，代码包将被看做是不完整的。现在我们来试用一下：]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/list.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/list.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go fix 与 go tool fix]]></title>
-            <description><![CDATA[命令go fix会把指定代码包的所有Go语言源码文件中的旧版本代码修正为新版本的代码。这里所说的版本即Go语言的版本。代码包的所有Go语言源码文件不包括其子代码包（如果有的话）中的文件。修正操作包括把对旧程序调用的代码更换为对新程序调用的代码、把旧的语法更换为新的语法，等等。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/fix-toolfix.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/fix-toolfix.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go vet 与 go tool vet]]></title>
-            <description><![CDATA[命令go vet是一个用于检查Go语言源码中静态错误的简单工具。与大多数Go命令一样，go vet命令可以接受-n标记和-x标记。-n标记用于只打印流程中执行的命令而不真正执行它们。-n标记也用于打印流程中执行的命令，但不会取消这些命令的执行。示例如下：]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/vet-toolvet.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/vet-toolvet.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go tool pprof]]></title>
-            <description><![CDATA[我们可以使用go tool pprof命令来交互式的访问概要文件的内容。命令将会分析指定的概要文件，并会根据我们的要求为我们提供高可读性的输出信息。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/toolpprof.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/toolpprof.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go tool cgo]]></title>
-            <description><![CDATA[cgo也是一个Go语言自带的特殊工具。一般情况下，我们使用命令go tool cgo来运行它。这个工具可以使我们创建能够调用C语言代码的Go语言源码文件。这使得我们可以使用Go语言代码去封装一些C语言的代码库，并提供给Go语言代码或项目使用。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/toolcgo.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/toolcgo.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go env]]></title>
-            <description><![CDATA[命令go env用于打印Go语言的环境信息。其中的一些信息我们在之前已经多次提及，但是却没有进行详细的说明。在本小节，我们会对这些信息进行深入介绍。我们先来看一看go env命令情况下都会打印出哪些Go语言通用环境信息。]]></description>
-            <link>https://snowdreams1006.github.io/go/cmd/env.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/cmd/env.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
