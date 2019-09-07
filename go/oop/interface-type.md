@@ -97,7 +97,56 @@
 
 回到编程语言中,`Go` 语言采用的是后一种,接口实现者对于接口的实现是隐式的,也就是说某一种结构体很有可能有意无意实现了某种接口.
 
+有心插花花不开,无心插柳柳成荫.
 
+这种似是而非若有还无的朦胧暧昧既给我们带来了方便,同时也给我们留下了烦恼,假如真的想知道到底是不是接口的实现者反而有些费事了.
 
+庆幸的是,现代 ide 都比较智能,这种语法虽然比较灵活但还是有规律可寻的,所以一般ide 也是可以智能推测出接口和实现的关心,并不用肉眼去仔细辨别.
 
+如果真的需要在程序中辨别接口和实现类的关心,那么只能借助系统级别的方法来判断了.
 
+首先先定义程序员的第一课 `Hello World` 的接口:
+
+```go
+type Programmer interface {
+    WriteHelloWord() string
+}
+```
+
+然后按照不同的编程语言实现该接口,为了更加通用性表示 `WriteHelloWord` 的输出结果,将输出结果 `string` 定义成别名形式以此表示输出的是代码 `Code`.
+
+```go
+type Code string
+```
+
+重新整理接口定义,如下:
+
+```go
+type Programmer interface {
+    WriteHelloWord() Code
+}
+```
+
+首先是 `Go` 语言写第一个程序,我们知道 `Go` 实现接口是隐式的,不需要关键字强制声明.
+
+```go
+type GoProgrammer struct {
+}
+
+func (g *GoProgrammer) WriteHelloWord() Code {
+    return "fmt.Println(\"Hello World!\")"
+}
+```
+
+接下来,选择 `Java` 程序员作为对比,其他面向对象编程语言类似,不再赘述.
+
+```go
+type JavaProgrammer struct {
+}
+
+func (j *JavaProgrammer) WriteHelloWord() Code {
+    return "System.out.Println(\"Hello World!\")"
+}
+```
+
+第三方客户端
