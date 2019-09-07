@@ -85,6 +85,7 @@
         * [再说封装](go/oop/encapsulation.md)
         * [能否继承](go/oop/inheritance.md)
         * [初识接口](go/oop/interface.md)
+        * [再谈接口](go/oop/interface-type.md)
     * [常见问题](go/issue/faq.md)
 * [工具资源](tools/README.md)
     * [给 mac 装个 vmware 虚拟机](tools/mac-install-vmware.md)
@@ -114,6 +115,7 @@
 * [大数据浪潮之巅:新技术商业制胜之道](bigDataWave/README.md)
 
 ## 程序人生
+* [晚安](greet/README.md)
 * [其他](other/README.md)
     * [转型之路](other/transformation.md)
     * [历史统计](other/static.md)
