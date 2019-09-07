@@ -149,4 +149,69 @@ func (j *JavaProgrammer) WriteHelloWord() Code {
 }
 ```
 
-第三方客户端
+客户需要程序员写 `WriteHelloWord` ,此时 `Go` 程序员和 `Java` 程序员各显身手,重点是看一下接口变量的类型和值.
+
+```go
+func writeFirstProgram(p Programmer) {
+    fmt.Printf("%[1]T %[1]v %v\n", p, p.WriteHelloWord())
+}
+```
+
+按照接口的语义,我们可以将 `Go` 程序员和 `Java` 程序员全部扔给 `writeFirstProgram` 方法中,此时接口的类型是具体实现类的类型,接口的值也是实现类的数据.
+
+当然,不论是 `Go` 还是 `Java` 都可以写出 `WriteHelloWord` .
+
+```go
+func TestPolymorphism(t *testing.T) {
+    gp := new(GoProgrammer)
+    jp := new(JavaProgrammer)
+
+    // *polymorphism.GoProgrammer &{} fmt.Println("Hello World!")
+    writeFirstProgram(gp)
+    // *polymorphism.JavaProgrammer &{} System.out.Println("Hello World!")
+    writeFirstProgram(jp)
+}
+```
+
+上述例子很简单,我们自然也是可以一眼看出接口和实现类的关系,并且 ide 也为我们提供非常直观的效果,在比较复杂的结构体中这种可视化效果尤为重要.
+
+![go-oop-interface-type-programer.png](../images/go-oop-interface-type-programer.png)
+
+如果你非要和我较真,说你正在用的 ide 无法可视化直接看出某个类型是否满足某接口,那怎么办?
+
+我的建议是,那就换成和我一样的ide 不就好了吗!
+
+哈哈,这只不过是我的一厢情愿罢了,有些人是不愿意改变的,不会随随便便就换一个 ide,那我就告诉你另外一个方法来检测类型和接口的关系.
+
+赵本山说,没事你就走两步?
+
+博大精深,如果某个结构体类型满足特定接口,那么这个这个结构体的实例化后一定可以赋值给接口类型,如果不能则说明肯定没有实现!
+
+肉眼看不出的关系,那就拿放大镜看,编译错误则不符合,编译通过则满足.
+
+为了对比效果,这里再定义一个新的接口 `MyProgrammer` ,除了名称外,接口暂时和 `Programmer` 完全一样.
+
+```go
+type MyProgrammer interface {
+    WriteHelloWord() Code
+}
+```
+
+![go-oop-interface-type-myProgrammer-pass.png](../images/go-oop-interface-type-myProgrammer-pass.png)
+
+ide 并没有报错,左侧的可视化效果也表明 `MyProgrammer` 和 `Programmer` 接口虽然名称不同,但是接口方法却一模一样,`GoProgrammer` 类型不仅实现了原来的 `Programmer` 接口还顺便实现了 `MyProgrammer`.
+
+不仅 `GoProgrammer` 是这样,`JavaProgrammer` 也是如此,有意无意实现了新的接口,这也就是 `Go` 的接口设计不同于传统声明式接口设计的地方.
+
+![go-oop-interface-type-myProgrammer-goProgrammer.png](../images/go-oop-interface-type-myProgrammer-goProgrammer.png)
+
+现在我们改变一下 `MyProgrammer` 接口中的 `WriteHelloWord` 方法,返回类型由别名 `Code` 更改成原类型 `string`,再试一下实际效果如何.
+
+由于 `Go` 是强类型语言,即使是别名和原类型也不是相同的,正如类型之间的转换都是强制的,没有隐式类型转换那样.
+
+因此,可以预测的是,`WriteHelloWord` 接口方法前后不一致,是没有类型结构体满足新的接口方法的,此时编译器应该会报错.
+
+![go-oop-interface-type-myProgrammer-fail.png](../images/go-oop-interface-type-myProgrammer-fail.png)
+
+事实胜于雄辩,无论是 `GoProgrammer` 还是 `JavaProgrammer` 都没有实现 `MyProgrammer` ,因此是不能赋值给类型 `MyProgrammer` ,编译器确实报错了!
+
