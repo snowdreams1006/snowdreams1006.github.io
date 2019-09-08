@@ -263,3 +263,50 @@ func (t T2) Equal(u Equaler) bool { return t == u.(T2) }
 
 ![go-oop-interface-type-equal-pass.png](../images/go-oop-interface-type-equal-pass.png)
 
+只有方法名称和签名完全一致才是实现了接口,否则看似实现实则是其他编程语言的逻辑,放到`Go` 语言中并没有实现接口.
+
+但是不知道你是否发现,这种形式实现的接口方法和我们熟悉的面向接口编程还是有所不同,任何满足接口 `Equaler` 方法的类型都可以被传入到 `T2.Equal` 的参数,而我们的编译器却不会在编译时给出提示.
+
+```go
+type T3 int
+
+func (t T3) Equal(u Equaler) bool { return t == u.(T3) }
+```
+
+仿造 `T2` 实现 `T3` 类型,同样也实现了 `Equaler` 接口所要求的 `Equal` 方法.
+
+`T2` 和 `T3` 明显是不同的类型,编译期间 `T3` 是可以传给 `T2` 的,反之亦然, `T2` 也可以传给 `T3` .
+
+![go-oop-interface-type-equal-error-pass.png](../images/go-oop-interface-type-equal-error-pass.png)
+
+编译正常而运行出错意味着后期捕捉问题的难度加大了,个人比较习惯于编译期间报错而不是运行报错,`Go` 语言就是编译型语言为什么造成了编译期间无法捕捉错误而只能放到运行期间了?
+
+![go-oop-interface-type-equal-error-panic.png](../images/go-oop-interface-type-equal-error-panic.png)
+
+由此可见,`t == u.(T3)` 可能会抛出异常,异常机制也是编程语言通用的一种自我保护机制,`Go` 语言应该也有一套机制,后续再研究异常机制,暂时不涉及.
+
+不过我们在这里确实看到了 `u.(T3)` 判断类型的局限性,想要确保程序良好运行,应该研究一下接口变量到底是什么以及如何判断类型和接口的关系.
+
+编译期间的判断关系可以通过 ide 的智能提示也可以将类型声明给接口看看是否编译错误,但这些都是编译期间的判断,无法解决当前运行期间的错误.
+
+```go
+func TestEqualType(t *testing.T) {
+    var t2 Equaler = new(T2)
+    var t3 Equaler = new(T3)
+
+    t.Logf("%[1]T %[1]v\n",t2)
+    t.Logf("%[1]T %[1]v\n",t3)
+    t.Logf("%[1]T %[1]v %v\n",t2,t2.Equal(t3))
+}
+```
+
+`%T %V` 打印出接口变量的类型和值,从输出结果上看 `*polymorphism.T2 0xc0000921d0`,我们得知接口变量的类型其实就是实现了该接口的结构体类型,接口变量的值就是该结构体的值.
+
+`t2` 和 `t3` 接口变量的类型因此是不同的,运行时也就自然报错了.
+
+说完现象找原因.
+
+`Go` 语言的接口并没有保证实现接口的类型具有多态性,仅仅是约束了统一的行为规范,`t2` 和 `t3` 都满足了 `Equal` 这种规范,所以对于接口的设计效果来说,已经达到目标了.
+
+但是这种接口设计的理念和我们所熟悉的其他编程语言的多态性是不同的,`Go` 并没有多态正如没有继承特性一样.
+
