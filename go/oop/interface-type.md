@@ -387,4 +387,74 @@ func TestEmptyInterface(t *testing.T) {
 }
 ```
 
+空接口的这种特殊性值得我们花时间去研究一下,任何结构体类型都可以赋值给空接口,那么此时的接口变量断言出结构体变量是否也有配套的特殊之处呢?
+
+```go
+func TestEmptyInterfaceTypeDeduce(t *testing.T) {
+    var gpe EmptyInterface = new(GoProgrammer)
+
+    v, ok := gpe.(Programmer)
+    t.Logf("%[1]T %[1]v %v\n", v, ok)
+
+    v, ok = gpe.(*GoProgrammer)
+    t.Logf("%[1]T %[1]v %v\n", v, ok)
+
+    switch v := gpe.(type) {
+    case int:
+        t.Log("int", v)
+    case string:
+        t.Log("string", v)
+    case Programmer:
+        t.Log("Programmer", v)
+    case EmptyInterface:
+        t.Log("EmptyInterface", v)
+    default:
+        t.Log("unknown", v)
+    }
+}
+```
+
+虽然接收的时候可以接收任何类型,但是实际使用过程中必须清楚知道具体类型才能调用实例化对象的方法,因而这种断言机制十分重要.
+
+```go
+func doSomething(p interface{}) {
+    if i, ok := p.(int); ok {
+        fmt.Println("int", i)
+        return
+    }
+    if s, ok := p.(string); ok {
+        fmt.Println("string", s)
+        return
+    }
+    fmt.Println("unknown type", p)
+}
+
+func TestDoSomething(t *testing.T) {
+    doSomething(10)
+    doSomething("10")
+    doSomething(10.0)
+}
+```
+
+上述 `doSomething` 可以采用 `switch` 语句进行简化,如下:
+
+```go
+func doSomethingBySwitch(p interface{}) {
+    switch v := p.(type) {
+    case int:
+        fmt.Println("int", v)
+    case string:
+        fmt.Println("string", v)
+    default:
+        fmt.Println("unknown type", v)
+    }
+}
+
+func TestDoSomethingBySwitch(t *testing.T) {
+    doSomethingBySwitch(10)
+    doSomethingBySwitch("10")
+    doSomethingBySwitch(10.0)
+}
+```
+
 
