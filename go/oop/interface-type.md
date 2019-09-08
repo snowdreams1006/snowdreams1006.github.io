@@ -215,3 +215,51 @@ ide 并没有报错,左侧的可视化效果也表明 `MyProgrammer` 和 `Progra
 
 事实胜于雄辩,无论是 `GoProgrammer` 还是 `JavaProgrammer` 都没有实现 `MyProgrammer` ,因此是不能赋值给类型 `MyProgrammer` ,编译器确实报错了!
 
+并不是所有长得像的都是兄弟,也不是长得不像的就不是兄弟.
+
+```go
+type Equaler interface {
+    Equal(Equaler) bool
+}
+```
+ 
+`Equaler` 接口定义了 `Equal` 方法,不同于传统的多态,`Go` 的类型检查更为严格,并不支持多态特性.
+
+```go
+type T int
+
+func (t T) Equal(u T) bool { return t == u }
+```
+
+如果单单看 `Equal(u T) bool` 方法声明,放到其他主流的编程语言中这种情况可能是正确的,但是多态特性并不适合 `Go` 语言.
+
+![go-oop-interface-type-equal-fail.png](../images/go-oop-interface-type-equal-fail.png)
+
+不仅仅 ide 没有左侧可视化的箭头效果,硬生生的将类型声明成接口类型也会报错,说明的确没有实现接口.
+
+透过现象看本质,`T.Equal` 的参数类型是`T` ,而不是字面上所需的类型`Equaler`,所以并没有实现 `Equaler` 接口中规定的 `Equal` 方法.
+
+是不是很意外?
+
+如果你已经看到了这里,相信你现在不仅基本理解了面向对象的三大特性,还知道了 `GO` 设计时的与众不同.
+
+这种与众不同之处,不仅仅体现在面向对象中的类型和接口中,最基础的语法细节上无一不体现出设计者的匠心独运,正是这种创新也促进我们重新思考面向对象的本质,真的需要循规蹈矩按照现有的思路去设计新语言吗?
+
+`Go` 语言的语法精简,设计简单优雅,抛弃了某些看起来比较高级但实际使用过程中可能会比较令人困惑的部分,对于这部分的舍弃,一定程度上简化了整体的设计.
+
+另一方面,如果真的还需要这种实现时,就应该开发者手动实现,自己动手保证而不是编译器级别的控制.
+
+控制权的转移意味着开发者承担了更多的责任,比如类间转换中没有显示类型转换和隐式类型转换之分,`Go` 仅仅支持显示类型转换,不会自动帮你隐式转换,也没有为了兼顾隐式类型的转换而引入的基本类型的包装类型,没有自动拆箱和自动装箱等复杂概念.
+
+所以如果要实现 `Equal` 接口方法,那么就应该开发者自己保证严格实现,稍微修改下就能真正实现该方法.
+
+```go
+type T2 int
+
+func (t T2) Equal(u Equaler) bool { return t == u.(T2) }
+```
+
+`Equal(Equaler) bool` 接口方法中的参数中要求 `Equaler` 接口,因此 `Equal(u Equaler) bool` 方法才是真正实现了接口方法.
+
+![go-oop-interface-type-equal-pass.png](../images/go-oop-interface-type-equal-pass.png)
+
