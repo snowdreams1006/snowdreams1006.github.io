@@ -321,3 +321,70 @@ func TestInterfaceTypeDeduce(t *testing.T) {
 ```
 
 ![go-oop-interface-type-equal-type-deduce.png](../images/go-oop-interface-type-equal-type-deduce.png)
+
+当 `t2.(*T2)` 或 `t3.(*T3)` 时,均正常工作,一旦 `t2.(*T3)` 则会抛出异常,因此需要特殊处理下这种情况.
+
+根据实验结果得知,`t2.(*T2)` 的类型和值恰巧就是接口变量的类型和值,如果结构体类型不能转换成指定接口的话,则可能抛出异常.
+
+因此,猜测这种形式的效果上类似于强制类型转换,将接口变量 `t2` 强制转换成结构体类型,动不动就报错或者说必须指定接口变量和结构体类型的前提,有点像其他编程语言的断言机制.
+
+单独研究一下这种断言机制,按照 `Go` 语言函数设计的思想,这种可能会抛出异常的写法并不是设计者的问题,而是我们使用者的责任,属于使用不当,没有检查能否转换成功.
+
+```go
+v2,ok2 := t2.(*T2)
+```
+
+从实际运行的结果中可以看出,接口变量 `t2` 经过断言为 `*T2` 结构体类型后得到的变量和接口变量 `t2` 应该是一样的,因为他俩的类型和值完全一样.
+
+当这种转换失败时,`ok` 的值是 `false` ,此时得到的转换结果就是 `nil` .
+
+![go-oop-interface-type-type-deduce.png](../images/go-oop-interface-type-type-deduce.png)
+
+接口既然是实现规范的方式,按照以往的编程经验给我们的最佳实践,我们知道接口最好尽可能的细化,最好一个接口中只有一个接口方法,这样的好处自然不必赘述.
+
+有意思的是,`Go` 的接口还可以存在没有任何的接口方法,这种特殊的接口叫做空接口,无为而治,没有任何规范约束,这不就是老子口中的顺其自然,无为而治吗?
+
+```go
+type EmptyInterface interface {
+}
+```
+
+道家的思想主要靠个人领悟,有点哲学的味道,这一点不像理科知识那样严谨,可以根据已知按照一定的逻辑推测出未知,甚至预言出超时代的新理论也不是没有可能的.
+
+然而,道家说一生二,二生三,三生万物,这句话看似十分富有哲理性但是实际却很难操作,只讲了开头和结尾,并没有讲解如何生万物,忽略了过程,因为全靠个人领悟.
+
+没有任何接口方法的空接口和一般接口之间是什么关系?空接口是一,是接口中最基础的存在,有一个接口的是二,有二就会有三,自然就会有千千万万的接口,从而构造出接口世界观.
+
+```go
+func TestEmptyInterfaceTypeDeduce(t *testing.T) {
+    var _ Programmer = new(GoProgrammer)
+    var _ EmptyInterface = new(GoProgrammer)
+}
+```
+
+`GoProgrammer` 结构体类型不仅实现了 `Programmer` 接口,也实现空接口,至少编译级别没有报错.
+
+但是,`Go` 语言的接口实现是严格实现,空接口没有接口,因此没有任何结构体都没有实现空接口,符合一贯的设计理念,并没有特殊处理成默认实现空接口.
+
+![go-oop-interface-type-empty-interface-not-implement.png](../images/go-oop-interface-type-empty-interface-not-implement.png)
+
+所以我困惑了,一方面,结构体类型实例对象可以赋值给空接口变量,而结构体类型却又没有实现空接口,这不是有种自相矛盾的地方吗?
+
+明明没有实现空接口却没有赋值给空接口,难不成是为了弥补语言设计的不足?
+
+因为 `Go` 语言不支持继承,自然没有其他编程语言中的基类概念,而实际工作中有时候确实需要一种通用的封装结构,继承不足,接口来凑?
+
+所以设计出空接口这种特殊情况来弥补不足?
+
+```go
+func TestEmptyInterface(t *testing.T) {
+    var _ Programmer = new(GoProgrammer)
+    var _ EmptyInterface = new(GoProgrammer)
+    var p EmptyInterface = new(GoProgrammer)
+
+    v, ok := p.(GoProgrammer)
+    t.Logf("%[1]T %[1]v %v\n", v, ok)
+}
+```
+
+
