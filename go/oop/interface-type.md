@@ -310,3 +310,14 @@ func TestEqualType(t *testing.T) {
 
 但是这种接口设计的理念和我们所熟悉的其他编程语言的多态性是不同的,`Go` 并没有多态正如没有继承特性一样.
 
+```go
+func TestInterfaceTypeDeduce(t *testing.T) {
+    var t2 Equaler = new(T2)
+    var t3 Equaler = new(T3)
+
+    t.Logf("%[1]T %[1]v %[2]T %[2]v\n",t2,t2.(*T2))
+    t.Logf("%[1]T %[1]v %[2]T %[2]v\n",t3,t3.(*T3))
+}
+```
+
+![go-oop-interface-type-equal-type-deduce.png](../images/go-oop-interface-type-equal-type-deduce.png)
