@@ -531,3 +531,67 @@ func TestPolymorphism(t *testing.T) {
 
 传递给 `writeFirstProgram` 函数的参数中如果是 `GoProgrammer` 则实现 `Go` 语言版本的 `Hello World!`,如果是 `JavaProgrammer` 则是 `Java` 版本的 `System.out.Println("Hello World!")`
 
+- 看似松散实则依旧严格的接口实现规则
+
+```go
+type MyProgrammer interface {
+	WriteHelloWord() string
+}
+```
+
+![go-oop-interface-type-alias-not-implement.png](../images/go-oop-interface-type-alias-not-implement.png)
+
+`MyProgrammer` 和 `Programmer` 中的 `WriteHelloWord` 接口方法只有返回值类型不一样,虽然`Code` 类型是 `string` 类型的别名,但是 `Go` 依旧不认为两者相同,所以 `JavaProgrammer` 不能赋值给 `MyProgrammer` 接口类型.
+
+- 接口变量肚子里是藏了啥
+
+```go
+type GoProgrammer struct {
+	name string
+}
+
+type JavaProgrammer struct {
+	name string
+}
+``` 
+ 
+给接口实现者添加 `name` 属性,其余不做改变.
+
+```go
+func interfaceContent(p Programmer) {
+	fmt.Printf("%[1]T %[1]v\n", p)
+}
+
+func TestInterfaceContent(t *testing.T) {
+	var gp Programmer = &GoProgrammer{
+		name:"Go",
+	}
+	var jp Programmer = &JavaProgrammer{
+		name:"Java",
+	}
+
+	// *polymorphism.GoProgrammer &{Go}
+	interfaceContent(gp)
+	// *polymorphism.JavaProgrammer &{Java}
+	interfaceContent(jp)
+}
+```
+
+输出接口变量的类型和值,结果显示接口变量的类型就是结构体实现者的类型,接口变量的值就是实现者的值.
+
+```go
+func (g GoProgrammer) PrintName()  {
+	fmt.Println(g.name)
+}
+
+func (j JavaProgrammer) PrintName()  {
+	fmt.Println(j.name)
+}
+```
+
+现在继续添加结构体类型的方法,可能 `PrintName` 方法有意无意实现了某种接口,不过在演示项目中肯定没有实现接口.
+
+从实验中我们知道接口变量的类型和值都是实现者的类型和值,那么能否通过接口变量访问到实现者呢?
+
+想要完成访问实现者的目标,首先需要知道具体实现者的类型,然后才能因地制宜访问具体实现者的方法和属性等.
+
