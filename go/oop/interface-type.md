@@ -443,7 +443,7 @@ func TestDoSomethingBySwitch(t *testing.T) {
 }
 ```
 
-## 接口基本用法总结
+## 不一样的接口基本用法总结
 
 - 类型别名
 
@@ -451,7 +451,7 @@ func TestDoSomethingBySwitch(t *testing.T) {
 type Code string
 ```
 
-`Code` 类型是原始类型 `string` 的别名,但 `Code` 和 `string` 却不是完全相等的,因为 `Go` 不存在隐式类型转换,`Go` 不认为这两种类型是一样的.
+> `Code` 类型是原始类型 `string` 的别名,但 `Code` 和 `string` 却不是完全相等的,因为 `Go` 不存在隐式类型转换,`Go` 不认为这两种类型是一样的.
 
 - 接口定义者
 
@@ -461,7 +461,7 @@ type Programmer interface {
 }
 ```
 
-`Programmer` 接口定义了 `WriteHelloWord()` 的方法.
+> `Programmer` 接口定义了 `WriteHelloWord()` 的方法.
 
 - 接口实现者
 
@@ -474,9 +474,9 @@ func (g *GoProgrammer) WriteHelloWord() Code {
 }
 ```
 
-`Go` 开发者实现了 `WriteHelloWord` 接口方法,而这个方法刚好是 `Programmer` 接口中的唯一一个接口方法,因此 `GoProgrammer` 也就是 `Programmer` 接口的实现者.
+> `Go` 开发者实现了 `WriteHelloWord` 接口方法,而这个方法刚好是 `Programmer` 接口中的唯一一个接口方法,因此 `GoProgrammer` 也就是 `Programmer` 接口的实现者.
 
-这种基于方法推断出实现者和定义者的形式和其他主流的编程语言有很大的不同,这里并没有显示声明结构体类型需要实现什么接口,而是说干就干,可能一不小心就实现了某种接口都有可能.
+这种**基于方法推断**出实现者和定义者的形式和其他主流的编程语言有很大的不同,这里并没有显示声明结构体类型需要实现什么接口,而是说干就干,可能**一不小心就实现了某种接口**都有可能.
 
 ```go
 type JavaProgrammer struct {
@@ -487,7 +487,7 @@ func (j *JavaProgrammer) WriteHelloWord() Code {
 }
 ```
 
-此时,当然是我们故意实现了 `Programmer` 接口,以便接下来方便演示接口的基于用法.
+> 此时,当然是我们故意实现了 `Programmer` 接口,以便接下来方便演示接口的基于用法.
 
 - 接口的使用者
 
@@ -497,7 +497,7 @@ func writeFirstProgram(p Programmer) {
 }
 ```
 
-定义了 `writeFirstProgram` 的函数,接收 `Programmer` 接口类型的参数,而接口中定义了 `WriteHelloWord` 的接口方法.
+> 定义了 `writeFirstProgram` 的函数,接收 `Programmer` 接口类型的参数,而接口中定义了 `WriteHelloWord` 的接口方法.
 
 所以不管是 `GoProgrammer` 还是 `JavaProgrammer` 都可以作为参数传递给 `writeFirstProgram` 函数,这就是面向接口编程,并不在乎具体的实现者,只关心接口方法足矣.
 
@@ -515,7 +515,7 @@ func TestPolymorphism(t *testing.T) {
 }
 ```
 
-传递给 `writeFirstProgram` 函数的参数中如果是 `GoProgrammer` 则实现 `Go` 语言版本的 `Hello World!`,如果是 `JavaProgrammer` 则是 `Java` 版本的 `System.out.Println("Hello World!")`
+> 传递给 `writeFirstProgram` 函数的参数中如果是 `GoProgrammer` 则实现 `Go` 语言版本的 `Hello World!`,如果是 `JavaProgrammer` 则是 `Java` 版本的 `System.out.Println("Hello World!")`
 
 - 看似松散实则依旧严格的接口实现规则
 
@@ -527,7 +527,7 @@ type MyProgrammer interface {
 
 ![go-oop-interface-type-alias-not-implement.png](../images/go-oop-interface-type-alias-not-implement.png)
 
-`MyProgrammer` 和 `Programmer` 中的 `WriteHelloWord` 接口方法只有返回值类型不一样,虽然`Code` 类型是 `string` 类型的别名,但是 `Go` 依旧不认为两者相同,所以 `JavaProgrammer` 不能赋值给 `MyProgrammer` 接口类型.
+> `MyProgrammer` 和 `Programmer` 中的 `WriteHelloWord` 接口方法只有返回值类型不一样,虽然`Code` 类型是 `string` 类型的别名,但是 `Go` 依旧不认为两者相同,所以 `JavaProgrammer` 不能赋值给 `MyProgrammer` 接口类型.
 
 - 接口变量肚子里是藏了啥
 
@@ -541,7 +541,7 @@ type JavaProgrammer struct {
 }
 ```
 
-给接口实现者添加 `name` 属性,其余不做改变.
+> 给接口实现者添加 `name` 属性,其余不做改变.
 
 ```go
 func interfaceContent(p Programmer) {
@@ -563,7 +563,7 @@ func TestInterfaceContent(t *testing.T) {
 }
 ```
 
-输出接口变量的类型和值,结果显示接口变量的类型就是结构体实现者的类型,接口变量的值就是实现者的值.
+> 输出接口变量的类型和值,结果显示接口变量的类型就是结构体实现者的类型,接口变量的值就是实现者的值.
 
 ```go
 func (g GoProgrammer) PrintName()  {
@@ -601,9 +601,7 @@ func TestInterfaceTypeImplMethod(t *testing.T) {
 }
 ```
 
-`v, ok := gp.(*GoProgrammer)` 将接口变量转换成结构体类型,如果转换成功意味着断言成功,则可以调用相应结构体类型实例对象的方法和属性.
-
-如果断言失败,则不可以.
+> `v, ok := gp.(*GoProgrammer)` 将接口变量转换成结构体类型,如果转换成功意味着断言成功,则可以调用相应结构体类型实例对象的方法和属性.如果断言失败,则不可以.
 
 - 空接口定义和使用
 
@@ -613,12 +611,9 @@ type EmptyInterface interface {
 }
 ```
 
-明明是接口却没有定义任何接口方法,这种的接口是空接口,空接口的设计可能是为了弥补最基本通用类型的缺失.
-
-任何结构体类型都可以赋值给空接口,此时空接口依旧和一般接口一样的是可以采用断言机制确定目标结构体类型.
+> 任何结构体类型都可以赋值给空接口,此时空接口依旧和一般接口一样的是可以采用断言机制确定目标结构体类型.
 
 但这并不是最常用的操作,比较常用的做法还是用来充当类似于 `Object` 或者泛型的角色,空接口可以接收任何类型的参数.
-
 
 ```go
 func emptyInterfaceParam(p interface{}){
@@ -649,3 +644,6 @@ func TestEmptyInterfaceParam(t *testing.T) {
 	emptyInterfaceParam(ge)
 }
 ```
+
+好了,关于 `Go` 语言的接口部分暂时结束了,关于面向对象编程风格的探索也告一段落,接下来将开始探索 `Go` 的一等公民函数以及函数式编程.
+
