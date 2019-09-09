@@ -615,5 +615,51 @@ func TestInterfaceTypeImplMethod(t *testing.T) {
 }
 ```
 
-`v, ok := gp.(*GoProgrammer)` 将接口变量转换成结构体类型,如果转换成功意味着断言成功,则可以调用
+`v, ok := gp.(*GoProgrammer)` 将接口变量转换成结构体类型,如果转换成功意味着断言成功,则可以调用相应结构体类型实例对象的方法和属性.
 
+如果断言失败,则不可以.
+
+- 空接口定义和使用
+
+```go
+type EmptyInterface interface {
+
+}
+```
+
+明明是接口却没有定义任何接口方法,这种的接口是空接口,空接口的设计可能是为了弥补最基本通用类型的缺失.
+
+任何结构体类型都可以赋值给空接口,此时空接口依旧和一般接口一样的是可以采用断言机制确定目标结构体类型.
+
+但这并不是最常用的操作,比较常用的做法还是用来充当类似于 `Object` 或者泛型的角色,空接口可以接收任何类型的参数.
+
+
+```go
+func emptyInterfaceParam(p interface{}){
+	fmt.Printf("%[1]T %[1]v",p)
+
+	switch v := p.(type) {
+	case int:
+		fmt.Println("int", v)
+	case string:
+		fmt.Println("string", v)
+	case Programmer:
+		fmt.Println("Programmer", v)
+	case EmptyInterface:
+		fmt.Println("EmptyInterface", v)
+	default:
+		fmt.Println("unknown", v)
+	}
+}
+
+func TestEmptyInterfaceParam(t *testing.T) {
+	var gp Programmer = new(GoProgrammer)
+	var ge EmptyInterface = new(GoProgrammer)
+
+	// *polymorphism.GoProgrammer &{}Programmer &{}
+	emptyInterfaceParam(gp)
+	
+	// *polymorphism.GoProgrammer &{}Programmer &{}
+	emptyInterfaceParam(ge)
+}
+```
