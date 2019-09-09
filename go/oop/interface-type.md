@@ -165,32 +165,23 @@ func TestPolymorphism(t *testing.T) {
 
    哈哈,这只不过是我的一厢情愿罢了,有些人是不愿意改变的,不会随随便便就换一个 `IDE`,那我就告诉你另外一个方法来检测类型和接口的关系.
 
-赵本山说,没事你就走两步?
+赵本山说,**没事你就走两步**?
 
 ![go-oop-interface-type-try-to-go-walk.jpg](../images/go-oop-interface-type-try-to-go-walk.jpg)
 
+   真的是博大精深,言简意赅!如果某个结构体类型满足特定接口,那么这个这个结构体的实例化后一定可以赋值给接口类型,如果不能则说明肯定没有实现!肉眼看不出的关系,那就拿放大镜看,编译错误则不符合,编译通过则满足.
 
-博大精深,如果某个结构体类型满足特定接口,那么这个这个结构体的实例化后一定可以赋值给接口类型,如果不能则说明肯定没有实现!
-
-肉眼看不出的关系,那就拿放大镜看,编译错误则不符合,编译通过则满足.
-
-为了对比效果,这里再定义一个新的接口 `MyProgrammer` ,除了名称外,接口暂时和 `Programmer` 完全一样.
-
-```go
-type MyProgrammer interface {
-    WriteHelloWord() Code
-}
-```
+   为了对比效果,这里再定义一个新的接口 `MyProgrammer` ,除了名称外,接口暂时和 `Programmer` 完全一样.
 
 ![go-oop-interface-type-myProgrammer-pass.png](../images/go-oop-interface-type-myProgrammer-pass.png)
 
-ide 并没有报错,左侧的可视化效果也表明 `MyProgrammer` 和 `Programmer` 接口虽然名称不同,但是接口方法却一模一样,`GoProgrammer` 类型不仅实现了原来的 `Programmer` 接口还顺便实现了 `MyProgrammer`.
+`IDE` 并没有报错,左侧的可视化效果也表明 `MyProgrammer` 和 `Programmer` 虽然名称不同,但是接口方法却一模一样,`GoProgrammer` 类型不仅实现了原来的 `Programmer` 接口还顺便实现了 `MyProgrammer`.
 
 不仅 `GoProgrammer` 是这样,`JavaProgrammer` 也是如此,有意无意实现了新的接口,这也就是 `Go` 的接口设计不同于传统声明式接口设计的地方.
 
 ![go-oop-interface-type-myProgrammer-goProgrammer.png](../images/go-oop-interface-type-myProgrammer-goProgrammer.png)
 
-现在我们改变一下 `MyProgrammer` 接口中的 `WriteHelloWord` 方法,返回类型由别名 `Code` 更改成原类型 `string`,再试一下实际效果如何.
+   现在我们改变一下 `MyProgrammer` 接口中的 `WriteHelloWord` 方法,返回类型由别名 `Code` 更改成原类型 `string`,再试一下实际效果如何.
 
 由于 `Go` 是强类型语言,即使是别名和原类型也不是相同的,正如类型之间的转换都是强制的,没有隐式类型转换那样.
 
@@ -198,7 +189,7 @@ ide 并没有报错,左侧的可视化效果也表明 `MyProgrammer` 和 `Progra
 
 ![go-oop-interface-type-myProgrammer-fail.png](../images/go-oop-interface-type-myProgrammer-fail.png)
 
-事实胜于雄辩,无论是 `GoProgrammer` 还是 `JavaProgrammer` 都没有实现 `MyProgrammer` ,因此是不能赋值给类型 `MyProgrammer` ,编译器确实报错了!
+   事实胜于雄辩,无论是 `GoProgrammer` 还是 `JavaProgrammer` 都没有实现 `MyProgrammer` ,因此是不能赋值给类型 `MyProgrammer` ,编译器确实报错了!
 
 并不是所有长得像的都是兄弟,也不是长得不像的就不是兄弟.
 
@@ -220,19 +211,21 @@ func (t T) Equal(u T) bool { return t == u }
 
 ![go-oop-interface-type-equal-fail.png](../images/go-oop-interface-type-equal-fail.png)
 
-不仅仅 ide 没有左侧可视化的箭头效果,硬生生的将类型声明成接口类型也会报错,说明的确没有实现接口.
+> 不仅仅 `IDE` 没有左侧**可视化的箭头效果**,硬生生的将类型声明成接口类型也会报错,说明的确没有实现接口.
 
-透过现象看本质,`T.Equal` 的参数类型是`T` ,而不是字面上所需的类型`Equaler`,所以并没有实现 `Equaler` 接口中规定的 `Equal` 方法.
+   透过现象看本质,`T.Equal` 的参数类型是`T` ,而不是字面上所需的类型`Equaler`,所以并没有实现 `Equaler` 接口中规定的 `Equal` 方法.
 
-是不是很意外?
+   是不是很意外?
 
-如果你已经看到了这里,相信你现在不仅基本理解了面向对象的三大特性,还知道了 `GO` 设计时的与众不同.
+![go-oop-interface-type-surprise.png](../images/go-oop-interface-type-surprise.png)
 
-这种与众不同之处,不仅仅体现在面向对象中的类型和接口中,最基础的语法细节上无一不体现出设计者的匠心独运,正是这种创新也促进我们重新思考面向对象的本质,真的需要循规蹈矩按照现有的思路去设计新语言吗?
+  如果你已经看到了这里,相信你现在不仅基本理解了面向对象的三大特性,还知道了 `GO` 设计的是多么与众不同!
 
-`Go` 语言的语法精简,设计简单优雅,抛弃了某些看起来比较高级但实际使用过程中可能会比较令人困惑的部分,对于这部分的舍弃,一定程度上简化了整体的设计.
+  这种与众不同之处,不仅仅体现在面向对象中的类型和接口中,最基础的语法细节上无一不体现出设计者的匠心独运,正是这种创新也促进我们重新思考面向对象的本质,真的需要循规蹈矩按照现有的思路去设计新语言吗?
 
-另一方面,如果真的还需要这种实现时,就应该开发者手动实现,自己动手保证而不是编译器级别的控制.
+  `Go` 语言的语法精简,设计简单优雅,抛弃了某些看起来比较高级但实际使用过程中可能会比较令人困惑的部分,对于这部分的舍弃,确实在一定程度上简化了整体的设计.
+
+   但是另一方面,如果仍然需要这种被丢弃的编程习惯时,只能由开发者手动实现,从这点看就不太方便了,所以只能尽可能靠近设计者的意图,写出真正的 `Go` 程序.
 
 控制权的转移意味着开发者承担了更多的责任,比如类间转换中没有显示类型转换和隐式类型转换之分,`Go` 仅仅支持显示类型转换,不会自动帮你隐式转换,也没有为了兼顾隐式类型的转换而引入的基本类型的包装类型,没有自动拆箱和自动装箱等复杂概念.
 
