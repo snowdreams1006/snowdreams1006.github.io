@@ -492,3 +492,42 @@ func (g *GoProgrammer) WriteHelloWord() Code {
 
 这种基于方法推断出实现者和定义者的形式和其他主流的编程语言有很大的不同,这里并没有显示声明结构体类型需要实现什么接口,而是说干就干,可能一不小心就实现了某种接口都有可能.
 
+```go
+type JavaProgrammer struct {
+}
+
+func (j *JavaProgrammer) WriteHelloWord() Code {
+	return "System.out.Println(\"Hello World!\")"
+}
+```
+
+此时,当然是我们故意实现了 `Programmer` 接口,以便接下来方便演示接口的基于用法.
+
+- 接口的使用者
+
+```go
+func writeFirstProgram(p Programmer) {
+	fmt.Printf("%[1]T %[1]v %v\n", p, p.WriteHelloWord())
+}
+```
+
+定义了 `writeFirstProgram` 的函数,接收 `Programmer` 接口类型的参数,而接口中定义了 `WriteHelloWord` 的接口方法.
+
+所以不管是 `GoProgrammer` 还是 `JavaProgrammer` 都可以作为参数传递给 `writeFirstProgram` 函数,这就是面向接口编程,并不在乎具体的实现者,只关心接口方法足矣.
+
+- 面向接口编程
+
+```go
+func TestPolymorphism(t *testing.T) {
+	gp := new(GoProgrammer)
+	jp := new(JavaProgrammer)
+
+	// *polymorphism.GoProgrammer &{} fmt.Println("Hello World!")
+	writeFirstProgram(gp)
+	// *polymorphism.JavaProgrammer &{} System.out.Println("Hello World!")
+	writeFirstProgram(jp)
+}
+```
+
+传递给 `writeFirstProgram` 函数的参数中如果是 `GoProgrammer` 则实现 `Go` 语言版本的 `Hello World!`,如果是 `JavaProgrammer` 则是 `Java` 版本的 `System.out.Println("Hello World!")`
+
