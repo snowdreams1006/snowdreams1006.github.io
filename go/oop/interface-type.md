@@ -457,4 +457,38 @@ func TestDoSomethingBySwitch(t *testing.T) {
 }
 ```
 
+## 总结
+
+- 类型别名
+
+```go
+type Code string
+```
+
+`Code` 类型是原始类型 `string` 的别名,但 `Code` 和 `string` 却不是完全相等的,因为 `Go` 不存在隐式类型转换,`Go` 不认为这两种类型是一样的.
+
+- 接口定义者
+
+```go
+type Programmer interface {
+	WriteHelloWord() Code
+}
+```
+
+`Programmer` 接口定义了 `WriteHelloWord()` 的方法.
+
+- 接口实现者
+
+```go
+type GoProgrammer struct {
+}
+
+func (g *GoProgrammer) WriteHelloWord() Code {
+	return "fmt.Println(\"Hello World!\")"
+}
+```
+
+`Go` 开发者实现了 `WriteHelloWord` 接口方法,而这个方法刚好是 `Programmer` 接口中的唯一一个接口方法,因此 `GoProgrammer` 也就是 `Programmer` 接口的实现者.
+
+这种基于方法推断出实现者和定义者的形式和其他主流的编程语言有很大的不同,这里并没有显示声明结构体类型需要实现什么接口,而是说干就干,可能一不小心就实现了某种接口都有可能.
 
