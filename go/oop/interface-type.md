@@ -595,3 +595,25 @@ func (j JavaProgrammer) PrintName()  {
 
 想要完成访问实现者的目标,首先需要知道具体实现者的类型,然后才能因地制宜访问具体实现者的方法和属性等.
 
+- 断言判断接口变量的实现者
+
+```go
+func TestInterfaceTypeImplMethod(t *testing.T) {
+	var gp Programmer = &GoProgrammer{
+		name: "Go",
+	}
+
+	// *polymorphism.GoProgrammer &{Go}
+	fmt.Printf("%[1]T %[1]v\n", gp)
+
+	if v, ok := gp.(*GoProgrammer); ok {
+		// Go
+		v.PrintName()
+	}else{
+		fmt.Println("gp is not *GoProgrammer")
+	}
+}
+```
+
+`v, ok := gp.(*GoProgrammer)` 将接口变量转换成结构体类型,如果转换成功意味着断言成功,则可以调用
+
