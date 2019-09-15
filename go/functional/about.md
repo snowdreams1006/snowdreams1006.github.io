@@ -136,6 +136,83 @@ func TestEvalWithStandardStyle(t *testing.T) {
 }
 ```
 
+- 其他函数作为参数传入
+
+虽然说不支持的操作符不会报错而是给出了相应的零值和错误描述,但是并不是最佳实践.
+
+函数的定义者必须明确说明 `evalWithStandardStyle` 函数仅仅支持加减乘除基本运算,除此之处,暂不受理!
+
+这种做法要求函数的使用者想要正确调用函数必须阅读函数的定义,也只能实现预支持的运算,对于未被实现的其他运算无法继续使用该方法.
+
+舞台交给你,你就是主角,你想要怎么处理输入怎么输出全部交由使用者,这样就不存在无法满足需求的情况了.
+
+```go
+func evalWithApplyStyle(a, b int, op func(int, int) (int, error)) (int, error) {
+    return op(a, b)
+}
+```
+
+> 操作符由原来的字符串 `string` 更改成函数 `func(int, int) (int, error)`,舞台交给你,全靠自由发挥!
+
+`evalWithApplyStyle` 函数内部直接调用函数参数 `op` 并返回该函数的处理结果,当前演示示例中函数的控制权完全转移给你函数入参 `op` 函数,实际情况可按照实际需求决定如何处理 `evalWithApplyStyle` 逻辑.
+
+```go
+func divide(a, b int) (int, error) {
+    return a / b, nil
+}
+
+func mod(a, b int) (int, error) {
+    return a % b, nil
+}
+```
+
+自己动手,丰衣足食,顺手定义除法 `divide` 和取余 `mod` 运算,接下来测试下实现效果.
+
+```go
+func TestEvalWithApplyStyle(t *testing.T) {
+    // Success: 2
+    if result, err := evalWithApplyStyle(5, 2, divide); err != nil {
+        t.Log("Error:", err)
+    } else {
+        t.Log("Success:", result)
+    }
+
+    // Success: 1
+    if result, err := evalWithApplyStyle(5, 2, mod); err != nil {
+        t.Log("Error:", err)
+    } else {
+        t.Log("Success:", result)
+    }
+}
+```
+
+测试结果很理想,不仅实现了减加乘除等基本运算,还可以实现之前一直没法实现的取余运算!
+
+这说明了这种函数作为参数的做法充分调动劳动人民积极性,妈妈再也不用担心我无法实现复杂功能了呢!
+
+- 匿名函数也可以作为参数
+
+一般而言,调用函数时都是直接用函数名进行调用,单独的函数具有可复用性,但如果本就是一次性函数的话,其实是没必要定义带函数名形式的函数.
+
+依然是上述例子,这一次对两个数的运算规则不再是数学运算了,这一次我们来比较两个数的最大值,使用匿名函数的形式进行实现.
+
+```go
+func TestEvalWithApplyStyle(t *testing.T) {
+    // Success: 5
+    if result, err := evalWithApplyStyle(5, 2, func(a int, b int) (result int, e error) {
+        if a > b {
+            return a, nil
+        }
+        return b, nil
+    }); err != nil {
+        t.Log("Error:", err)
+    } else {
+        t.Log("Success:", result)
+    }
+}
+```
+
+
 ```go
 // 1 1 2 3 5 8 13 21 34 55
 //     a b
