@@ -53,6 +53,50 @@
 
 所以函数的出身就注定了函数式编程的基本命运走向,因此纯粹的函数式编程不能有可变因素,也是各种限制的直接原因.
 
+## 函数
+
+> 关于函数部分可参考之前的文章: [go 学习笔记之值得特别关注的基础语法有哪些](https://mp.weixin.qq.com/s/8Ijk3FGMo9fCSTNGbx8R3Q)
+
+- `func` 定义普通函数
+
+基本四则运算,包括加减乘除,若不支持操作类型则抛出异常,终止程序.
+
+```go
+func eval(a, b int, op string) int {
+    var result int
+    switch op {
+    case "+":
+        result = a + b
+    case "-":
+        result = a - b
+    case "*":
+        result = a * b
+    case "/":
+        result = a / b
+    default:
+        panic("unsupported operator: " + op)
+    }
+    return result
+}
+```
+
+测试未定义操作运算则抛出异常,`unsupported operator: %` ,说明仅仅支持加减乘除基本运算.
+
+```go
+func TestEval(t *testing.T) {
+    // 3 -1 2 0 unsupported operator: %
+    t.Log(
+        eval(1, 2, "+"),
+        eval(1, 2, "-"),
+        eval(1, 2, "*"),
+        eval(1, 2, "/"),
+        eval(1, 2, "%"),
+    )
+}
+```
+
+- 多返回值定义标准函数
+
 
 
 ```go
