@@ -97,7 +97,44 @@ func TestEval(t *testing.T) {
 
 - 多返回值定义标准函数
 
+`Go` 语言和其他主流的编程语言明显不同的是,函数支持多返回值,通常第一个返回值表示真正结果,第二个返回值表示是否错误,这也是 `Go` 关于异常错误设计的独特之处.
 
+```go
+func evalWithStandardStyle(a, b int, op string) (int, error) {
+    switch op {
+    case "+":
+        return a + b, nil
+    case "-":
+        return a - b, nil
+    case "*":
+        return a * b, nil
+    case "/":
+        return a / b, nil
+    default:
+        return 0, fmt.Errorf("unsupported operator: %s", op)
+    }
+}
+```
+
+编写真正 `Go` 程序后再次测试函数,遇到没有定义的操作符时不再抛出异常而是返回默认零值以及给出简短的错误描述信息.
+
+```go
+func TestEvalWithStandardStyle(t *testing.T) {
+    // Success: 2
+    if result, err := evalWithStandardStyle(5, 2, "/"); err != nil {
+        t.Log("Error:", err)
+    } else {
+        t.Log("Success:", result)
+    }
+
+    // Error: unsupported operator: %
+    if result, err := evalWithStandardStyle(5, 2, "%"); err != nil {
+        t.Log("Error:", err)
+    } else {
+        t.Log("Success:", result)
+    }
+}
+```
 
 ```go
 // 1 1 2 3 5 8 13 21 34 55
