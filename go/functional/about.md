@@ -22,7 +22,11 @@
 
 **生物学家**会下意识对动植物进行分类归纳,**面向对象编程**也是如此,用一系列的抽象模型去**模拟**现实世界的行为规律.
 
+![go-functional-programming-about-biology.jpg](../images/go-functional-programming-about-biology.jpg)
+
 **数学家**向来以严谨求学著称,作为最重要的基础科学,数学规律以及归纳演绎方法论对应的就是**函数式编程**,不是模拟现实而是**描述**规律更有可能创造规律.
+
+![go-functional-programming-about-math.jpg](../images/go-functional-programming-about-math.jpg)
 
 标准的函数式编程具有浓厚的**数学色彩**,幸运的是,`Go` 并不是函数式语言,所以也不必受限于**近乎苛责**般的条条框框.
 
@@ -31,6 +35,8 @@
 - 不可变性: 不用状态变量和可变对象
 - 函数只能有一个参数
 - 纯函数没有副作用
+
+![go-functional-programming-about-feature.jpg](../images/go-functional-programming-about-feature.jpg)
 
 摘自维基百科中关于函数式编程中有这么一段话:
 
@@ -395,8 +401,8 @@ func TestFibonacci(t *testing.T) {
 
 ## 函数式编程入门函数总结
 
-- 函数是一等公民,其中函数参数,变量,函数返回值都可以是函数.
-- 高阶函数是普通函数组合而成,参数和返回值可以是另外的函数.
-- 函数是函数式编程的基础,支持函数式编程但并不是函数式语言.
+- 函数是**一等公民**,其中函数参数,变量,函数返回值都可以是函数.
+- 高阶函数是普通函数**组合**而成,参数和返回值可以是另外的函数.
+- 函数是函数式编程的基础,**支持函数式编程但并不是函数式语言**.
 - 没有**纯粹函数式编程**的条条框框,更加灵活自由,良好的可读性.
 
