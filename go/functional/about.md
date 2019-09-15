@@ -1,5 +1,21 @@
 # 函数式编程
 
+- 函数式编程语言和函数式编程风格
+
+`Go` 不是函数式编程语言但支持函数式编程风格,正如 `Go` 不是面相对象编程语言依然支持面向对象编程风格那样,`Go` 并不是完完全全按照函数式编程语言标准进行设计的,而是剔除了一些比较专业的严格的要求.
+
+摘自维基百科中关于函数式编程中有这么一段话:
+
+> In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. 
+
+其实上述的英文的大致意思是说:函数式编程将计算机程序看成是数学函数的推演,不用状态变量也不用可变对象来表达数与数之间的关系.
+
+
+
+
+
+
+
 ```go
 // 1 1 2 3 5 8 13 21 34 55
 //     a b
