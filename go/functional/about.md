@@ -212,6 +212,42 @@ func TestEvalWithApplyStyle(t *testing.T) {
 }
 ```
 
+- 函数的返回值可以是函数
+
+依然是上述示例,如果由于原因不需要立即返回函数的计算结果而是等待使用者自己觉得时机合适的时候再计算返回值,这时候函数返回值依然是函数就很有作用了,也就是所谓的惰性求值.
+
+```go
+func evalWithFunctionalStyle(a, b int, op func(int, int) (int, error)) func() (int, error) {
+    return func() (int, error) {
+        return op(a, b)
+    }
+}
+```
+
+上述函数看起来可能有点点,其实相对于上例仅仅更改了返回值,由原来的 `(int, error)` 更改成 `func() (int, error)` ,其余均保持不变哟!
+
+`evalWithFunctionalStyle` 函数依然是使用者的主场,和上例相比的唯一不同之处在于,你的主场你做主,什么时候裁判完全自己说了算,并不是运行后就立马宣布结果.
+
+```go
+func pow(a, b int) (int, error) {
+    return int(math.Pow(float64(a), float64(b))),nil
+}
+
+func TestEvalWithFunctionalStyle(t *testing.T) {
+    ef := evalWithFunctionalStyle(5, 2, pow)
+
+    time.Sleep(time.Second * 1)
+
+    // Success: 25
+    if result, err := ef(); err != nil {
+        t.Log("Error:", err)
+    } else {
+        t.Log("Success:", result)
+    }
+}
+```
+
+`time.Sleep(time.Second * 1)` 演示代码代表执行 `evalWithFunctionalStyle` 函数后可以不立即计算最终结果,等待时机合适后由使用者再次调用 `ef()` 函数进行惰性求值.
 
 ```go
 // 1 1 2 3 5 8 13 21 34 55
