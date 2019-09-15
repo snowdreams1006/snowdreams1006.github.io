@@ -145,7 +145,7 @@ func evalWithApplyStyle(a, b int, op func(int, int) (int, error)) (int, error) {
 
 > 操作符由原来的字符串 `string` 更改成函数 `func(int, int) (int, error)`,舞台交给你,全靠自由发挥!
 
-`evalWithApplyStyle` 函数内部直接调用函数参数 `op` 并返回该函数的处理结果,当前演示示例中函数的控制权完全转移给你函数入参 `op` 函数,实际情况可按照实际需求决定如何处理 `evalWithApplyStyle` 逻辑.
+`evalWithApplyStyle` 函数内部直接调用函数参数 `op` 并返回该函数的处理结果,当前演示示例中函数的控制权完全转移给函数入参 `op` 函数,实际情况可按照实际需求决定如何处理 `evalWithApplyStyle` 逻辑.
 
 ```go
 func divide(a, b int) (int, error) {
@@ -205,7 +205,7 @@ func TestEvalWithApplyStyle(t *testing.T) {
 
 - 函数的返回值可以是函数
 
-依然是上述示例,如果由于原因不需要立即返回函数的计算结果而是等待使用者自己觉得时机合适的时候再计算返回值,这时候函数返回值依然是函数就很有作用了,也就是所谓的惰性求值.
+依然是上述示例,如果由于原因不需要**立即返回**函数的计算结果而是**等待使用者**自己觉得时机合适的时候再计算返回值,这时候函数返回值依然是函数就很有作用了,也就是所谓的**惰性求值**.
 
 ```go
 func evalWithFunctionalStyle(a, b int, op func(int, int) (int, error)) func() (int, error) {
@@ -215,9 +215,9 @@ func evalWithFunctionalStyle(a, b int, op func(int, int) (int, error)) func() (i
 }
 ```
 
-上述函数看起来可能有点点,其实相对于上例仅仅更改了返回值,由原来的 `(int, error)` 更改成 `func() (int, error)` ,其余均保持不变哟!
+上述函数看起来可能有点难以理解,实际上相对于上例**仅仅更改了返回值**,由原来的 `(int, error)` 更改成 `func() (int, error)` ,其余均保持不变哟!
 
-`evalWithFunctionalStyle` 函数依然是使用者的主场,和上例相比的唯一不同之处在于,你的主场你做主,什么时候裁判完全自己说了算,并不是运行后就立马宣布结果.
+`evalWithFunctionalStyle` 函数依然是**使用者的主场**,和上例相比的唯一不同之处在于,你的主场你做主,**什么时候裁判完全自己说了算**,并不是运行后就立马宣布结果.
 
 ```go
 func pow(a, b int) (int, error) {
@@ -238,7 +238,7 @@ func TestEvalWithFunctionalStyle(t *testing.T) {
 }
 ```
 
-`time.Sleep(time.Second * 1)` 演示代码代表执行 `evalWithFunctionalStyle` 函数后可以不立即计算最终结果,等待时机合适后由使用者再次调用 `ef()` 函数进行惰性求值.
+`time.Sleep(time.Second * 1)` 演示代码代表执行 `evalWithFunctionalStyle` 函数后可以**不立即计算最终结果**,等待时机合适后由使用者再次调用 `ef()` 函数进行惰性求值.
 
 ```go
 // 1 1 2 3 5 8 13 21 34 55
@@ -265,7 +265,7 @@ func evalWithFunctionalStyle(a, b int, op func(int, int) (int, error)) func() (i
 }
 ```
 
-于是打算把入参函数 `func(int, int) (int, error)` 和返回值函数 `func() (int, error)` 进行统一,而入参函数和返回值函数唯一不同之处就是入参个数不同,所以顺理成章想到了 `Go` 函数中的不定长参数相关语法.
+于是打算把入参函数 `func(int, int) (int, error)` 和返回值函数 `func() (int, error)` 进行统一,而入参函数和返回值函数唯一不同之处就是入参个数不同,所以顺理成章想到了 `Go` 函数中的**不定长参数**相关语法.
 
 ```go
 type generateIntFunc func(base ...int) (int, error)
@@ -308,7 +308,7 @@ func TestEvalWithObjectiveStyle(t *testing.T) {
 
 - 类型化函数可以实现接口
 
-函数通过别名形式进行类型化后可以实现接口,某些程度上可以视为一种类型,因此实现接口也是顺理成章的事情.
+函数通过**别名**形式进行类型化后可以实现接口,某些程度上可以视为一种类型,因此实现接口也是顺理成章的事情.
 
 ```go
 func (g generateIntFunc) String() string {
@@ -366,7 +366,7 @@ func fibonacci() func() int {
 }
 ```
 
-斐波那契数列函数 `fibonacci` 的返回值是真正的生成器函数,每次调用都会生成新的斐波那契数字.
+**斐波那契数列**函数 `fibonacci` 的返回值是真正的生成器函数,每次调用都会生成新的斐波那契数字.
 
 这就是 `Go` 语言实现闭包的一种简单示例,`fibonacci` 函数本身的变量 `a,b` 被内部匿名函数 `func() int` 所引用,而这种引用最终被使用者不断调用就会导致最初的 `a,b` 变量一直被占用着,只要继续调用这种生成器,裴波那契数列的数字就会一直递增.
 
@@ -391,32 +391,12 @@ func TestFibonacci(t *testing.T) {
 }
 ```
 
-## 总结
+![go-functional-programming-about-fib.png](../images/go-functional-programming-about-fib.png)
 
-函数式编程 vs 函数指针
+## 函数式编程入门函数总结
 
-- 函数是一等公民: 参数,变量,返回值都可以是函数
-- 高阶函数
+- 函数是一等公民,其中函数参数,变量,函数返回值都可以是函数.
+- 高阶函数是普通函数组合而成,参数和返回值可以是另外的函数.
+- 函数是函数式编程的基础,支持函数式编程但并不是函数式语言.
+- 没有**纯粹函数式编程**的条条框框,更加灵活自由,良好的可读性.
 
-"正统"的函数式编程
-
-- 不可变性: 不能有状态,只有常量和函数
-- 函数只能有一个参数
-
-go 语言闭包的应用
-
-- 更加自然,不需要修饰如何访问自由变量
-- 没有 lambda 表达式,但是有匿名函数
-- 斐波那契数列
-- 为函数实现接口
-- 使用函数来遍历二叉树
-
-- https://www.liaoxuefeng.com/wiki/1016959663602400/1017328525009056
-- https://studygolang.com/articles/617
-- http://www.ruanyifeng.com/blog/2017/02/fp-tutorial.html
-- https://github.com/SilenceHVK/blog/issues/53
-- https://www.jianshu.com/p/390147c78967
-- https://www.infoq.cn/article/b6gkx1crp2umU2*jIPQB
-- https://www.cnblogs.com/DSharp/p/3789545.html
-- https://www.cnblogs.com/DSharp/archive/2005/01/28/98632.html
-- https://mp.weixin.qq.com/s/cb1SHuXLgwjpl7qdXM-yfA
