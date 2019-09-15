@@ -262,6 +262,111 @@ func fibonacci() func() int {
 }
 ```
 
+- 函数可以充当类型
+
+上述示例中讲解了函数可以作为返回值,参数有函数,返回值也有参数,所以 `evalWithFunctionalStyle` 函数看起来比较费劲,而 `Go` 语言的类型别名就是为了简化而生的,更何况函数是 `Go` 中的一等公民,当然也适合了.
+
+```go
+func evalWithFunctionalStyle(a, b int, op func(int, int) (int, error)) func() (int, error) {
+    return func() (int, error) {
+        return op(a, b)
+    }
+}
+```
+
+于是打算把入参函数 `func(int, int) (int, error)` 和返回值函数 `func() (int, error)` 进行统一,而入参函数和返回值函数唯一不同之处就是入参个数不同,所以顺理成章想到了 `Go` 函数中的不定长参数相关语法.
+
+```go
+type generateIntFunc func(base ...int) (int, error)
+```
+
+这样入参函数和出参函数都可以用 `generateIntFunc` 类型函数进行替代,接着改造 `evalWithFunctionalStyle` 函数.
+
+```go
+func evalWithObjectiveStyle(a, b int, op generateIntFunc) generateIntFunc {
+    return func(base ...int) (i int, e error) {
+        return op(a, b)
+    }
+}
+```
+
+改造后的 `evalWithObjectiveStyle` 函数看起来比较简洁,花花架子中看是否中用还不好说,还是用测试用例说话吧!
+
+```go
+func TestEvalWithObjectiveStyle(t *testing.T) {
+    ef := evalWithObjectiveStyle(5, 2, func(base ...int) (int,error) {
+        result := 0
+        for i := range base {
+            result += base[i]
+        }
+        return result,nil
+    })
+
+    time.Sleep(time.Second * 1)
+
+    // Success: 7
+    if result, err := ef(); err != nil {
+        t.Log("Error:", err)
+    } else {
+        t.Log("Success:", result)
+    }
+}
+```
+
+函数别名进行类型化后并不影响功能,依然是函数式编程,不过夹杂了些面向对象的味道.
+
+- 类型化函数可以实现接口
+
+函数通过别名形式进行类型化后可以实现接口,某些程度上可以视为一种类型,因此实现接口也是顺理成章的事情.
+
+```go
+func (g generateIntFunc) String() string {
+    r,_ := g()
+    return fmt.Sprint(r)
+}
+```
+
+> 此处示例代码中为类型化函数 `generateIntFunc` 实现 `String` 接口方法,可能并没有太大实际意义,仅仅是为了讲解这个知识点而硬凑上去的,实际情况肯定会有所不同.
+
+```go
+func TestEvalWithInterfaceStyle(t *testing.T) {
+    ef := evalWithObjectiveStyle(5, 2, func(base ...int) (int,error) {
+        result := 0
+        for i := range base {
+            result += base[i]
+        }
+        return result,nil
+    })
+
+    time.Sleep(time.Second * 1)
+
+    // String: 7
+    t.Log("String:", ef.String())
+
+    // Success: 7
+    if result, err := ef(); err != nil {
+        t.Log("Error:", err)
+    } else {
+        t.Log("Success:", result)
+    }
+}
+```
+
+惰性求值获取的函数变量 `ef` 此时可以调用 `String` 方法,也就是具备对象化能力,得到的最终结果竟然和直接运行该函数的值一样?
+
+有点神奇,目前还不理解这是什么操作,如果有 `Go` 语言的大佬们不吝赐教的话,小弟感激不尽!
+
+- 水到渠成的闭包
+
+函数的参数,返回值都可以是另外的函数,函数也可以作为引用那样传递给变量,也存在匿名函数等简化形式,除此之外,类型化后的函数还可以用来实现接口等等特性应该足以阐释一等公民的高贵身份地位了吧?
+
+如此强大的函数特性,只要稍加组合使用就会拥有强大的能力,并且 `Go` 语言并不是严格的函数式语言,没有太多语法层面的限制.
+
+在正式讲解函数式编程之前,先来了解一下闭包的概念以及应用.
+
+
+
+
 ```go
 func TestFibonacci(t *testing.T) {
     f := fibonacci()
