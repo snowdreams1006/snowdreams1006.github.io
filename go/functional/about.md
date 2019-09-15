@@ -362,10 +362,33 @@ func TestEvalWithInterfaceStyle(t *testing.T) {
 
 如此强大的函数特性,只要稍加组合使用就会拥有强大的能力,并且 `Go` 语言并不是严格的函数式语言,没有太多语法层面的限制.
 
-在正式讲解函数式编程之前,先来了解一下闭包的概念以及应用.
+```go
+// 1 1 2 3 5 8 13 21 34 55
+//     a b
+//       a b
+func fibonacci() func() int {
+    a, b := 0, 1
+    return func() int {
+        a, b = b, a+b
+        return a
+    }
+}
+```
 
+斐波那契数列函数 `fibonacci` 的返回值是真正的生成器函数,每次调用都会生成新的斐波那契数字.
 
+这就是 `Go` 语言实现闭包的一种简单示例,`fibonacci` 函数本身的变量 `a,b` 被内部匿名函数 `func() int` 所引用,而这种引用最终被使用者不断调用就会导致最初的 `a,b` 变量一直被占用着,只要继续调用这种生成器,裴波那契数列的数字就会一直递增.
 
+```go
+// 1 1 2 3 5 8 13 21 34 55
+func TestFibonacci(t *testing.T) {
+    f := fibonacci()
+    for i := 0; i < 10; i++ {
+        fmt.Print(f(), " ")
+    }
+    fmt.Println()
+}
+```
 
 ```go
 func TestFibonacci(t *testing.T) {
