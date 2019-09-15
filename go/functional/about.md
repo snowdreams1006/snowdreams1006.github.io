@@ -28,7 +28,22 @@
 
 所以,你还能说确定的输入经过确定的函数运算后肯定会得到确定的输出结果吗?量子力学首先表示不服,小心薛定谔的猫上来挠你两下!
 
+个人猜测函数式编程可能正处于经典力学的作用范围,所以函数式编程也才会发展成一种流行的编程风格,如果有哪种编程语言不支持这种编程风格的话,好像都不好意思说自己是通用编程语言了呢!
 
+越来越多的主流语言在设计的时候无一例外都会更多的参考函数式特性() `lambda` 表达式,原生支持 `map` `，reduce` ……）,就连面向对象语言的 `Java8` 也开始支持函数式编程.
+
+函数式编程的基本点自然就是函数,而函数各个语言都会支持,谁让函数一般都被视为逻辑处理的最小单元呢!
+
+`Go` 语言也是支持函数的,并且函数也是 `Go` 语言中的一等公民,`Go` 中的函数可以作为函数的参数,返回值,基本类型等场合.
+
+由此可见,`Go` 支持函数式编程风格有着良好基础,至于 `Go` 本身是否特意为函数式编程风格标准设计的那就不好猜测了.
+
+
+函数式编程特点
+
+- 函数是一等公民
+- 复杂函数可分解拆分可复用的基本函数,典型函数有 `map` 和 `reduce` 函数组成的 `MapReduce` 算法.
+- 不适用状态变量和可变对象实现纯函数
 
 
 
@@ -73,6 +88,7 @@ go 语言闭包的应用
 - 为函数实现接口
 - 使用函数来遍历二叉树
 
+- https://www.liaoxuefeng.com/wiki/1016959663602400/1017328525009056
 - https://studygolang.com/articles/617
 - http://www.ruanyifeng.com/blog/2017/02/fp-tutorial.html
 - https://github.com/SilenceHVK/blog/issues/53
@@ -80,7 +96,7 @@ go 语言闭包的应用
 - https://www.infoq.cn/article/b6gkx1crp2umU2*jIPQB
 - https://www.cnblogs.com/DSharp/p/3789545.html
 - https://www.cnblogs.com/DSharp/archive/2005/01/28/98632.html
-
+- https://mp.weixin.qq.com/s/cb1SHuXLgwjpl7qdXM-yfA
 
 - 递归风格
 
