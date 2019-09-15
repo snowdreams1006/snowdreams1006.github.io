@@ -171,3 +171,57 @@ def fibonacci(n):
 for n in range(10):
     print(fibonacci(n))
 ```
+
+PHP
+
+- Printing first 10 Fibonacci numbers, using function
+
+```php
+function fib(int $n) : int {
+    return ($n === 0 || $n === 1) ? $n : fib($n - 1) + fib($n - 2);
+}
+
+for ($i = 0; $i <= 10; $i++) echo fib($i) . PHP_EOL;
+```
+
+- Printing first 10 Fibonacci numbers, using closure
+
+```php
+$fib = function(int $n) use(&$fib) : int {
+    return ($n === 0 || $n === 1) ? $n : $fib($n - 1) + $fib($n - 2);
+};
+
+for ($i = 0; $i <= 10; $i++) echo $fib($i) . PHP_EOL;
+```
+
+- Printing a list with first 10 Fibonacci numbers, with generators
+
+```php
+function fib(int $n) {
+    yield 0; $n--;
+    yield 1; $n--;
+    $second = ($first = 2) + 1;
+    while ($n-- !== 0) {
+        yield $first;
+        [$second, $first] = [$first + $second, $second];
+    }
+}
+
+$fibo = fib(10);
+foreach ($fibo as $value) {
+    echo $value . PHP_EOL;
+}
+```
+
+Java
+
+Get Fibonacci number
+
+```java
+public UnaryOperator<Integer> fib(Integer acc, Integer incr) {
+    return x -> {
+        return (x > 0) ? fib(acc + incr, acc).apply(--x) : acc;
+    };
+}
+System.out.println(fib(0, 1).apply(5));
+```
