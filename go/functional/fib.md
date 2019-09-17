@@ -67,15 +67,36 @@ func TestExchange(t *testing.T) {
 
 > 「雪之梦技术驿站」注: `Go` 语言的多变量同时赋值特性体现的更多是一种声明式编程思想,不关注具体实现,只需要表达出实际需求.
 
+- 函数的返回值也可以是函数
+
+> `Go` 语言中的函数是一等公民,不仅函数的返回值可以是函数,参数,变量等等都可以是函数.
+
+函数的返回值可以是函数,这样的实际意义在于使用者可以拥有更大的灵活性,有时可以用作延迟计算,有时也可以用作函数增强.
+
+根据该特性实现非常简单的 `i++` 自增函数 `autoIncrease` 效果,因为初值是 `0`,所以每调用一次该函数, `i` 的值就会自增.
+
 ```go
-func fibonacci() func() int {
-  a, b := 0, 1
+func autoIncrease() func() int {
+  i := 0
   return func() int {
-    a, b = b, a+b
-    return a
+    i++
+    return i
   }
 }
 ```
+
+再小的代码片段也不应该忘记测试,单元测试继续走起,顺便看一下使用方法.
+
+```go
+func TestAutoIncrease(t *testing.T) {
+  a := autoIncrease()
+
+  // 1 2 3
+  t.Log(a(),a(),a())
+}
+```
+
+
 
 
 ## 参考
