@@ -96,7 +96,45 @@ func TestAutoIncrease(t *testing.T) {
 }
 ```
 
+初始调用 `autoIncrease` 函数并没有直接得到结果而是返回了函数引用,等到使用者自己觉得时机成熟后再次调用返回的函数引用即变量`a` ,然后才会真正计算结果,这种方式被称为延迟计算也叫做惰性求值.
 
+函数的返回值是函数这一特性除了可以用作惰性求值外,还可以包装原函数以实现功能增强.
+
+当然这少不了引入原函数,成本很低,因为函数的参数和返回值一样都可以是函数.
+
+`timeSpend` 函数实现的功能是包装特定类型的函数,增加计算函数运行时间的新功能并包装成函数返回出去给使用者.
+
+```go
+func timeSpend(fn func()) func() {
+  return func()  {
+    start := time.Now()
+
+    fn()
+
+    fmt.Println("time spend : ", time.Since(start).Seconds())
+  }
+}
+```
+
+为了演示包装函数,定义一个比较耗时函数用于被计算耗时函数所包装,函数名称为 `slowFunc` ,大于运行`1s` .
+
+```go
+func slowFunc() {
+  time.Sleep(time.Second * 1)
+
+  fmt.Println("I am slowFunc")
+}
+```
+
+无测试不编码,继续运行单元测试用例,演示耗时函数 `timeSpend` 如何包装慢函数 `slowFunc` 增强功能.
+
+```go
+func TestSlowFuncTimeSpend(t *testing.T) {
+  slowFuncTimeSpend := timeSpend(slowFunc)
+
+  slowFuncTimeSpend()
+}
+```
 
 
 ## 参考
