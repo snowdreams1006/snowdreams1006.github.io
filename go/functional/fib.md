@@ -210,6 +210,9 @@ func TestCountByClosureWithOk(t *testing.T) {
 ```
 > [节选自廖雪峰 `js` 的闭包教程](https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016)
 
+
+
+
 ## `Go` 闭包归纳总结
 
 ## 相关资料引用参考
