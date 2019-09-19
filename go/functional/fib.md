@@ -216,9 +216,9 @@ func TestCountByClosureWithOk(t *testing.T) {
 
 - [廖雪峰: `js` 的闭包教程](https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016)
 - [知乎: 什么是闭包](https://www.zhihu.com/question/34210214)
-- https://www.ibm.com/developerworks/cn/linux/l-cn-closure/
-- https://www.runoob.com/js/js-function-closures.html
-- https://tiancaiamao.gitbooks.io/go-internals/content/zh/03.6.html
-- http://jartto.wang/2017/12/18/reflective-closure/
-- https://lotabout.me/2016/thoughts-of-closure/
+- [ IBM Developer: 闭包的概念、形式与应用](https://www.ibm.com/developerworks/cn/linux/l-cn-closure/)
+- [菜鸟教程: JavaScript 闭包](https://www.runoob.com/js/js-function-closures.html)
+- [gitbook博客: 闭包的实现](https://tiancaiamao.gitbooks.io/go-internals/content/zh/03.6.html)
+- [Jartto 博客:反思闭包](http://jartto.wang/2017/12/18/reflective-closure/)
+- [三点水博客: 再谈闭包](https://lotabout.me/2016/thoughts-of-closure/)
 
