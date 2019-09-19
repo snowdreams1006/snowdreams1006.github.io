@@ -144,6 +144,80 @@ func TestSlowFuncTimeSpend(t *testing.T) {
 
 ## 什么是闭包
 
+[维基百科](https://en.wikipedia.org/wiki/Closure_%28computer_programming%29) 中关于闭包说得比较透彻,特地摘抄如下:
+
+> In programming languages, a closure, also lexical closure or function closure, is a technique for implementing lexically scoped name binding in a language with first-class functions. Operationally, a closure is a record storing a function[a] together with an environment.[1] The environment is a mapping associating each free variable of the function (variables that are used locally, but defined in an enclosing scope) with the value or reference to which the name was bound when the closure was created.[b] Unlike a plain function, a closure allows the function to access those captured variables through the closure's copies of their values or references, even when the function is invoked outside their scope.
+
+能够直接理解英文的同学可以略过这部分的中文翻译,不愿意费脑理解英文的小伙伴跟我一起解读中文吧!
+
+### 闭包是一种技术
+
+> In programming languages, a **closure**, also **lexical closure** or **function closure**, is a **technique** for implementing lexically scoped **name binding** in a language with **first-class functions**.
+
+> **闭包**也叫做**词法闭包**或者**函数闭包**,是**函数优先**编程语言中用于实现词法范围的**名称绑定**技术.
+
+概念性定义解释后可能还是不太清楚,那么就用代码解释一下什么是闭包?
+
+> 编程语言千万种,前端后端和中台;心有余而力不足,大众化 `Js` 带上 `Go` .
+
+- `Js` 实现斐波那契数列生成器
+
+仿照 `Go` 语言的实现方式写一个 `Js` 版本的斐波那契数列生成器,代码如下:
+
+```js
+function fibonacci() {
+  var a, b;
+  a = 0;
+  b = 1;
+  return function() {
+    var temp = a;
+    a = b;
+    b = temp + b;
+    return a;
+  }
+}
+```
+
+同样的,仿造测试代码写出 `Js` 版本的测试用例:
+
+```js
+// 1 1 2 3 5 8 13 21 34 55
+function TestFibonacci() {
+  var f = fibonacci();
+  for(var i = 0; i < 10; i++ ){
+    console.log(f() +" ");
+  }
+  console.log();
+}
+```
+
+- `Go` 实现斐波那契数列生成器
+
+开篇引言的示例,照搬过来,逻辑很简单,细节稍后再说.
+
+```go
+func fibonacci() func() int {
+  a, b := 0, 1
+  return func() int {
+    a, b = b, a+b
+    return a
+  }
+}
+```
+
+单元测试用例函数,连续 `10` 次调用生成器,依次输出斐波那契数列中的前十位.
+
+```go
+// 1 1 2 3 5 8 13 21 34 55
+func TestFibonacci(t *testing.T) {
+  f := fibonacci()
+  for i := 0; i < 10; i++ {
+    fmt.Print(f(), " ")
+  }
+  fmt.Println()
+}
+```
+
 ## 怎么理解闭包
 
 
@@ -208,10 +282,6 @@ func TestCountByClosureWithOk(t *testing.T) {
   }
 }
 ```
-> [节选自廖雪峰 `js` 的闭包教程](https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016)
-
-
-
 
 ## `Go` 闭包归纳总结
 
@@ -219,9 +289,5 @@ func TestCountByClosureWithOk(t *testing.T) {
 
 - [廖雪峰: `js` 的闭包教程](https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016)
 - [知乎: 什么是闭包](https://www.zhihu.com/question/34210214)
-- [ IBM Developer: 闭包的概念、形式与应用](https://www.ibm.com/developerworks/cn/linux/l-cn-closure/)
-- [菜鸟教程: JavaScript 闭包](https://www.runoob.com/js/js-function-closures.html)
-- [gitbook博客: 闭包的实现](https://tiancaiamao.gitbooks.io/go-internals/content/zh/03.6.html)
-- [Jartto 博客:反思闭包](http://jartto.wang/2017/12/18/reflective-closure/)
 - [三点水博客: 再谈闭包](https://lotabout.me/2016/thoughts-of-closure/)
 
