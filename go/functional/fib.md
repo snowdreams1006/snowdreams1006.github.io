@@ -31,7 +31,7 @@ func TestFibonacci(t *testing.T) {
 }
 ```
 
-## 背后蕴藏的奥妙
+## 背后有故事
 
 - 变量支持连续赋值,无需中间变量
 
@@ -146,6 +146,8 @@ func TestSlowFuncTimeSpend(t *testing.T) {
 
 ## 怎么理解闭包
 
+
+
 ## 为什么要闭包
 
 ## 闭包的优缺点
@@ -154,12 +156,66 @@ func TestSlowFuncTimeSpend(t *testing.T) {
 
 ## 真的掌握闭包了吗
 
+```go
+func count() []int {
+  var arr []int
+  for i := 1; i <= 3; i++ {
+    arr = append(arr, i)
+  }
+  return arr
+}
+
+func TestCount(t *testing.T) {
+  // 1 2 3
+  for _, c := range count() {
+    t.Log(c)
+  }
+}
+
+func countByClosureButWrong() []func() int {
+  var arr []func() int
+  for i := 1; i <= 3; i++ {
+    arr = append(arr, func() int {
+      return i
+    })
+  }
+  return arr
+}
+
+func TestCountByClosure(t *testing.T) {
+  // 4 4 4 
+  for _, c := range countByClosureButWrong() {
+    t.Log(c())
+  }
+}
+
+func countByClosureWithOk() []func() int {
+  var arr []func() int
+  for i := 1; i <= 3; i++ {
+    func(n int) {
+      arr = append(arr, func() int {
+        return n
+      })
+    }(i)
+  }
+  return arr
+}
+
+func TestCountByClosureWithOk(t *testing.T) {
+  // 1 2 3
+  for _, c := range countByClosureWithOk() {
+    t.Log(c())
+  }
+}
+```
+> [节选自廖雪峰 `js` 的闭包教程](https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016)
+
 ## `Go` 闭包归纳总结
 
 ## 相关资料引用参考
 
-- https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016
-- https://www.zhihu.com/question/34210214
+- [廖雪峰: `js` 的闭包教程](https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016)
+- [知乎: 什么是闭包](https://www.zhihu.com/question/34210214)
 - https://www.ibm.com/developerworks/cn/linux/l-cn-closure/
 - https://www.runoob.com/js/js-function-closures.html
 - https://tiancaiamao.gitbooks.io/go-internals/content/zh/03.6.html
