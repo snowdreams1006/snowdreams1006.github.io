@@ -22,6 +22,7 @@ func fibonacci() func() int {
 `Go` 语言的单元测试用例,循环调用 `10` 次斐波那契数列生成器,因此生成前十位数列: `1 1 2 3 5 8 13 21 34 55`
 
 ```go
+// 1 1 2 3 5 8 13 21 34 55
 func TestFibonacci(t *testing.T) {
   f := fibonacci()
   for i := 0; i < 10; i++ {
@@ -218,7 +219,139 @@ func TestFibonacci(t *testing.T) {
 }
 ```
 
-不仅仅是 `Js` 和 `Go` 这两种编程语言能够实现闭包,实际上很多编程语言都能实现闭包,就想是面向对象编程一样,也不是某种语言专有的技术,唯一的区别可能就是语法细节上略有不同吧,所以记住了: 闭包是一种技术!
+不仅仅是 `Js` 和 `Go` 这两种编程语言能够实现闭包,实际上很多编程语言都能实现闭包,就想是面向对象编程一样,也不是某种语言专有的技术,唯一的区别可能就是语法细节上略有不同吧,所以记住了: **闭包是一种技术**!
+
+### 闭包存储了环境
+
+> Operationally, a closure is a **record** storing a **function**[a] together with an **environment**.
+
+> 在操作上,闭包是将**函数[a]与环境**一起存储的**记录**。
+
+闭包是一种技术,存储了闭包所需要的环境,而环境分为函数运行时所处的内部环境和依赖的外部环境,闭包被使用者调用时不会像普通函数那样丢失环境而是存储了环境.
+
+如果是普通函数方式打开上述示例的斐波那契数列生成器:
+
+```go
+func fibonacciWithoutClosure() int {
+  a, b := 0, 1
+  a, b = b, a+b
+  return a
+}
+```
+
+可想而知,这样肯定是不行的,因为函数内部环境是无法维持的,使用者每次调用 `fibonacciWithoutClosure` 函数都会重新初始化变量 `a,b` 的值,无法实现累加自增效果.
+
+```go
+// 1 1 1 1 1 1 1 1 1 1 
+func TestFibonacciWithoutClosure(t *testing.T) {
+  for i := 0; i < 10; i++ {
+    fmt.Print(fibonacciWithoutClosure(), " ")
+  }
+  fmt.Println()
+}
+```
+
+很显然,函数内部定义的变量每次运行函数时都会重新初始化,为了避免这种情况,在不改变整体实现思路的前提下,只需要提升变量的作用范围就能再次实现生成器函数:
+
+```go
+var a, b = 0, 1
+func fibonacciWithoutClosure() int {
+  a, b = b, a+b
+  return a
+}
+```
+
+此时再次运行 `10` 次生成器函数,如我们所愿生成前10 位斐波那契数列.
+
+```go
+// 1 1 2 3 5 8 13 21 34 55
+func TestFibonacciWithoutClosure(t *testing.T) {
+  for i := 0; i < 10; i++ {
+    fmt.Print(fibonacciWithoutClosure(), " ")
+  }
+  fmt.Println()
+}
+```
+
+所以说普通函数 `fibonacciWithoutClosure` 的运行环境要么是仅仅依赖内部变量维持的独立环境,每次运行都会重新初始化,无法实现变量的重复利用;要么是依赖了外部变量维持的具有记忆功能的环境,解决了重新初始化问题的同时引入了新的问题,那就是必须定义作用范围更大的外部环境,增加了维护成本.
+
+既然函数内的变量无法维持而函数外的变量又需要管理,如果能两者结合的话,岂不是皆大欢喜,扬长补短?
+
+对的,闭包基本上就是这种实现思路!
+
+```go
+func fibonacci() func() int {
+  a, b := 0, 1
+  return func() int {
+    a, b = b, a+b
+    return a
+  }
+}
+```
+
+斐波那契数列生成器函数 `fibonacci` 的返回值是匿名函数,而匿名函数的返回值是斐波那契数,不考虑函数内部实现细节的情况下,整个函数的语义是十分明确的,使用者初始化调用 `fibonacci` 函数时得到返回值变量暂存起来,需要生成斐波那契数字的时候再调用刚才暂存的变量就能真正生成斐波那契数列.
+
+```go
+// 1 1 2 3 5 8 13 21 34 55
+func TestFibonacci(t *testing.T) {
+  f := fibonacci()
+  for i := 0; i < 10; i++ {
+    fmt.Print(f(), " ")
+  }
+  fmt.Println()
+}
+```
+
+现在我们再好好比较一下这种形式实现的闭包和普通函数的区别?
+
+- 闭包函数 `fibonacci` 的内部定义了变量 `a,b`,最终返回的匿名函数中直接使用了变量 `a,b`.
+- 普通函数 `fibonacciWithoutClosure` 的外部定义了变量 `a,b`,调用该函数直接生成斐波那契数字.
+- 闭包函数是延迟计算也就是惰性求值而普通函数是立即计算,两者的调用方式不一样.
+
+但是如果把视角切换到真正有价值部分,你会发现闭包函数不过是普通函数的嵌套而已!
+
+```go
+func fibonacciDeduction() func() int {
+  a, b := 0, 1
+
+  func fibonacciGenerator() int {
+    a, b = b, a+b
+    return a
+  }
+
+  return fibonacciGenerator
+}
+```
+
+虽然 `Go` 不支持函数嵌套,但是 `Go` 支持匿名函数,同样可以实现函数嵌套的效果.
+
+```js
+function fibonacciDeduction() {
+  var a, b;
+  a = 0;
+  b = 1;
+
+  function fibonacciGenerator() {
+    var temp = a;
+    a = b;
+    b = temp + b;
+    return a
+  }
+
+  return fibonacciGenerator
+}
+```
+
+
+
+// 1 1 2 3 5 8 13 21 34 55
+function TestFibonacciDeduction() {
+  var f = fibonacciDeduction();
+  for(var i = 0; i < 10; i++ ){
+    console.log(f() +" ");
+  }
+  console.log();
+}
 
 ## 怎么理解闭包
 
