@@ -169,7 +169,9 @@ func TestSlowFuncTimeSpend(t *testing.T) {
 
 如果有一句话介绍什么是闭包,那么我更愿意称其为**流浪在外的人想念爸爸妈妈**!
 
-如果非要比较官方正式的定义去解释什么是闭包,那只好翻开[维基百科](https://en.wikipedia.org/wiki/Closure_%28computer_programming%29) 看下有关闭包的定义: 
+![go-functional-programming-fib-go-home.jpg](../images/go-functional-programming-fib-go-home.jpg)
+
+如果非要用比较官方的定义去**解释什么是闭**包,那只好翻开[维基百科](https://en.wikipedia.org/wiki/Closure_%28computer_programming%29) 看下有关闭包的定义: 
 
 > In programming languages, a closure, also lexical closure or function closure, is a technique for implementing lexically scoped name binding in a language with first-class functions. Operationally, a closure is a record storing a function[a] together with an environment.[1] The environment is a mapping associating each free variable of the function (variables that are used locally, but defined in an enclosing scope) with the value or reference to which the name was bound when the closure was created.[b] Unlike a plain function, a closure allows the function to access those captured variables through the closure's copies of their values or references, even when the function is invoked outside their scope.
 
@@ -177,7 +179,11 @@ func TestSlowFuncTimeSpend(t *testing.T) {
 
 ### 闭包是一种技术
 
+第一句话的原版英文如下:
+
 > In programming languages, a **closure**, also **lexical closure** or **function closure**, is a **technique** for implementing lexically scoped **name binding** in a language with **first-class functions**.
+
+中文翻译如下:
 
 > **闭包**也叫做**词法闭包**或者**函数闭包**,是**函数优先**编程语言中用于实现词法范围的**名称绑定**技术.
 
@@ -379,7 +385,6 @@ func fibonacciDeduction() func() int {
 
 
 
-
 ## 怎么理解闭包
 
 
@@ -452,4 +457,3 @@ func TestCountByClosureWithOk(t *testing.T) {
 - [廖雪峰: `js` 的闭包教程](https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016)
 - [知乎: 什么是闭包](https://www.zhihu.com/question/34210214)
 - [三点水博客: 再谈闭包](https://lotabout.me/2016/thoughts-of-closure/)
-
