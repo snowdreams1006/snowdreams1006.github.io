@@ -395,19 +395,185 @@ func fibonacciDeduction() func() int {
 }
 ```
 
+```js
+function fibonacciDeduction() {
+  var a, b;
+  a = 0;
+  b = 1;
 
+  function fibonacciGenerator() {
+    var temp = a;
+    a = b;
+    b = temp + b;
+    return a
+  }
+
+  return fibonacciGenerator
+}
+```
+
+斐波那契数列生成器函数是 `fibonacciDeduction`,该函数内部真正实现生成器功能的却是 `fibonacciGenerator` 函数,正是这个函数使用了变量 `a,b` ,相当于把外部变量打包绑定成运行环境的一部分!
+
+```js
+// 1 1 2 3 5 8 13 21 34 55
+function TestFibonacciDeduction() {
+  var f = fibonacciDeduction();
+  for(var i = 0; i < 10; i++ ){
+    console.log(f() +" ");
+  }
+  console.log();
+}
+```
+
+> 闭包并不是某一种语言特有的技术,虽然各个语言的实现细节上有所差异,但并不妨碍整体理解,正如定义的第二句那样: `storing a **function**[a] together with an **environment**.`
+
+### 环境关联了自由变量
+
+> The environment is a mapping associating each **free variable** of the function (variables that are used locally, but defined in an enclosing scope) with **the value or reference** to which the name was bound **when the closure was created**
+
+> 环境是一种映射,它将函数的每个**自由变量**(在本地使用但在封闭范围内定义的变量)与**创建闭包时**名称绑定到的**值或引用**相关联。
+
+环境是闭包所处的环境,这里强调的是外部环境,更确切的说是相对于匿名函数而言的外部变量,像这种被闭包函数使用但是定义在闭包函数外部的变量被称为自由变量.
+
+由于闭包函数内部使用了自由变量,因此闭包内部的也就关联了自由变量的值或引用,这种绑定关系是创建闭包时确定的,运行时环境也一直存在并不会发生像普通函数那样重新初始化变量导致的环境不能维持现象.
+
+- 自由变量
+
+这里使用了一个比较陌生的概念: **自由变量**(在本地使用但在封闭范围内定义的变量)
+
+很显然,根据注释说明,所谓的自由变量是相对于闭包函数或者说匿名函数来说的外部变量,由于该变量的定义不受自己控制,所以对自己来说就是自由的.
+
+那么按照这种逻辑继续延伸猜测的话,匿名函数内部定义的变量岂不是约束变量?自由变量对于定义函数来说岂不是约束变量?
+
+```go
+var a, b = 0, 1
+func fibonacciWithoutClosure() int {
+  a, b = b, a+b
+  return a
+}
+```
+
+> 那么问题来了: 变量 `a,b` 相对于函数 `fibonacciWithoutClosure` 来说,是不是自由变量?
+
+- 值或引用
+
+```go
+func fibonacci() func() int {
+  a, b := 0, 1
+  return func() int {
+    a, b = b, a+b
+    return a
+  }
+}
+```
+
+变量 `a,b` 定义在函数 `fibonacci` 内部,相对于匿名函数 `func() int` 来说是自由变量,在匿名函数中直接使用了变量 `a,b` 并没有重新复制一份,所以这种形式的环境关联的自由变量是引用.
+
+再举个引用关联的示例,加深一下闭包的环境理解.
+
+```go
+func countByClosureButWrong() []func() int {
+  var arr []func() int
+  for i := 1; i <= 3; i++ {
+    arr = append(arr, func() int {
+      return i
+    })
+  }
+  return arr
+}
+```
+
+`countByClosureButWrong` 函数内部定义了变量数组 `arr` ,存储的是匿名函数而匿名函数使用的是循环变量 `i` .
+
+这里的循环变量的定义部分是在匿名函数的外部就是所谓的自由变量,变量 `i` 没有进行拷贝所以也就是引用关联.
+
+```go
+func TestCountByClosure(t *testing.T) {
+  // 4 4 4 
+  for _, c := range countByClosureButWrong() {
+    t.Log(c())
+  }
+}
+```
+
+运行这种闭包函数,最终的输出结果都是 `4 4 4`,这是因为闭包的环境关联的循环变量 `i` 是引用方式而不是值传递方式,所以闭包运行结束后的变量 `i` 已经是 `4`.
+
+除了引用传递方式还有值传递方式,关联自由变量时拷贝一份到匿名函数,使用者调用闭包函数时就能如愿绑定到循环变量.
+
+```go
+func countByClosureWithOk() []func() int {
+  var arr []func() int
+  for i := 1; i <= 3; i++ {
+    func(n int) {
+      arr = append(arr, func() int {
+        return n
+      })
+    }(i)
+  }
+  return arr
+}
+```
+
+> 自由变量 `i` 作为参数传递给匿名函数,而 `Go` 中的参数传递只有值传递,所以匿名函数使用的变量 `n` 就可以正确绑定循环变量了,这也就是自由变量的值绑定方式.
+ 
+```go
+func TestCountByClosureWithOk(t *testing.T) {
+  // 1 2 3
+  for _, c := range countByClosureWithOk() {
+    t.Log(c())
+  }
+}
+```
+
+> 自由变量通过值传递的方式传递给闭包函数,实现值绑定环境,正确绑定了循环变量 `1 2 3` 而不是 `4 4 4 `
+
+### 访问被捕获自由变量
+
+> Unlike a plain function, a closure allows the function to access those **captured variables** through the closure's **copies of their values or references**, even when the function is invoked **outside their scope**.
+
+> 与普通函数不同,闭包允许函数通过闭包的**值的副本或引用**访问那些**被捕获的变量**，即使函数在其**作用域之外**被调用
+
+闭包函数和普通函数的不同之处在于,闭包提供一种持续访问被捕获变量的能力,简单的理解就是扩大了变量的作用域.
+
+```go
+func fibonacci() func() int {
+  a, b := 0, 1
+  return func() int {
+    a, b = b, a+b
+    return a
+  }
+}
+```
+
+自由变量 `a,b` 的定义发生在函数 `fibonacci` 体内,一般而言,变量的作用域也仅限于函数内部,外界是无法访问该变量的值或引用的.
+
+但是,闭包提供了持续暴露变量的机制,外界突然能够访问原本应该私有的变量,实现了全局变量的作用域效果!
+
+```go
+var a, b = 0, 1
+func fibonacciWithoutClosure() int {
+  a, b = b, a+b
+  return a
+}
+```
+
+> 普通函数想要访问变量 `a,b` 的值或引用,定义在函数内部是无法暴露给调用者访问的,只能提升成全局变量才能实现作用域范围的扩大.
+
+由此可见,一旦变量被闭包捕获后,外界使用者是可以访问这些被捕获的变量的值或引用的,相当于访问了私有变量!
 
 ## 怎么理解闭包
 
+闭包是一种函数式编程中实现名称绑定的技术,直观表现为函数嵌套提升变量的作用范围,使得原本寿命短暂的局部变量获得长生不死的能力,只要被捕获到的自由变量一直在使用中,系统就不会回收空间!
 
+知乎上关于闭包的众多回答中,其中有一个回答言简意赅,分享如下:
 
-## 为什么要闭包
+> 我叫独孤求败，我在一个山洞里，里面有世界上最好的剑法，还有最好的武器。我学习了里面的剑法，拿走了最好的剑。离开了这里。我来到这个江湖，快意恩仇。但是从来没有人知道我这把剑的来历，和我这一身的武功。。。那山洞就是一个闭包，而我，就是那个山洞里唯一一个可以与外界交汇的地方。这山洞的一切对外人而言就像不存在一样，只有我才拥有这里面的宝藏！
 
-## 闭包的优缺点
+这也是闭包定义中最后一句话表达的意思,山洞是闭包,里面的剑法和武器就是闭包的内部环境,而独孤求败剑客则是被捕获的自由变量,出生在山洞之外的世界,学成归来后独自闯荡江湖.从此江湖上有了独孤求败的传说,了解了大侠的那把剑和神秘莫测的剑法.
 
-## 回顾斐波那契数列
+## 掌握闭包了么
 
-## 真的掌握闭包了吗
+问题: 请将下述普通函数改写成闭包函数?
 
 ```go
 func count() []int {
@@ -424,7 +590,11 @@ func TestCount(t *testing.T) {
     t.Log(c)
   }
 }
+```
 
+回答: 闭包的错误示例以及正确示例
+
+```go
 func countByClosureButWrong() []func() int {
   var arr []func() int
   for i := 1; i <= 3; i++ {
@@ -462,7 +632,16 @@ func TestCountByClosureWithOk(t *testing.T) {
 }
 ```
 
-## `Go` 闭包归纳总结
+那么,问题来了,原本普通函数就能实现的需求更改成闭包函数实现后,一不小心就弄错了,为什么还需要闭包?
+
+> 由于篇幅所限,为什么需要闭包以及闭包的优缺点等知识的相关分析打算另开一篇单独讨论,敬请期待...
+
+## 闭包归纳总结
+
+- 闭包不是某一种语言特有的机制,但常出现在函数式编程中,尤其是函数占据重要地位的编程语言.
+- 闭包的直观表现是函数嵌套中嵌套函数访问了外部变量,被捕获的外部变量从此获得延长寿命的能力.
+- 闭包中使用的自由变量一般有值传递和引用传递两种形式,斐波那契数列生成器利用的是引用而循环变量用的是值传递.
+- `Go` 不支持函数嵌套但支持匿名函数,语法层面的差异性掩盖不了闭包整体的统一规范.
 
 ## 相关资料引用参考
 
