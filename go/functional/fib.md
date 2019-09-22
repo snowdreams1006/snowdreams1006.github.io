@@ -327,7 +327,7 @@ func fibonacci() func() int {
 
 **斐波那契数列生成器**函数 `fibonacci` 的**返回值是匿名函**数,而匿名函数的返回值就是斐波那契数字.
 
-如果不考虑函数内部实现细节,整个函数的语义是十分明确的,**使用者**初始化调用 `fibonacci` 函数时得到返回值是真正的斐波那契生成器函数,用变量暂存起来,当需要生成斐波那契数字的时候再调用刚才暂存的变量就能真正生成斐波那契数列.
+如果不考虑函数内部实现细节,整个函数的语义是十分明确的,**使用者**初始化调用 `fibonacci` 函数时得到**返回值是真正的斐波那契生成器函数**,用变量暂存起来,当需要生成斐波那契数字的时候再**调用刚才暂存的变量**就能真正生成斐波那契数列.
 
 ```go
 // 1 1 2 3 5 8 13 21 34 55
@@ -366,34 +366,6 @@ func fibonacciDeduction() func() int {
 ![go-functional-programming-fib-nested-error.png](../images/go-functional-programming-fib-nested-error.png)
 
 但是某些语言是支持函数嵌套的,比如最常用的 `Js` 语言就支持函数嵌套,用 `Js` 重写上述代码如下:
-
-```js
-function fibonacciDeduction() {
-  var a, b;
-  a = 0;
-  b = 1;
-
-  function fibonacciGenerator() {
-    var temp = a;
-    a = b;
-    b = temp + b;
-    return a
-  }
-
-  return fibonacciGenerator
-}
-
-func fibonacciDeduction() func() int {
-  a, b := 0, 1
-
-  func fibonacciGenerator() int {
-    a, b = b, a+b
-    return a
-  }
-
-  return fibonacciGenerator
-}
-```
 
 ```js
 function fibonacciDeduction() {
