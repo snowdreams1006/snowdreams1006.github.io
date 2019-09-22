@@ -38,9 +38,13 @@ func TestFibonacci(t *testing.T) {
 }
 ```
 
-> 循环调用 `10` 次斐波那契数列生成器,因此生成前十位数列: `1 1 2 3 5 8 13 21 34 55`
+> 循环调用 `10` 次**斐波那契数列生成器**,因此生成**前十位**数列: `1 1 2 3 5 8 13 21 34 55`
 
 ## 背后有故事
+
+小小的**斐波那契数列生成器**背后蕴藏着丰富的 `Go` **语言特性**,该示例也是**官方示例**之一.
+
+![go-functional-programming-fib-try-go.png](../images/go-functional-programming-fib-try-go.png)
 
 - 变量支持连续赋值,无需中间变量
 
