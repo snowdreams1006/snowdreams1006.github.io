@@ -459,6 +459,39 @@ func TestCountByClosureWithOk(t *testing.T) {
 
 > 自由变量通过值传递的方式传递给闭包函数,实现值绑定环境,正确绑定了循环变量 `1 2 3` 而不是 `4 4 4 `
 
+### 访问被捕获自由变量
+
+> Unlike a plain function, a closure allows the function to access those **captured variables** through the closure's **copies of their values or references**, even when the function is invoked **outside their scope**.
+
+> 与普通函数不同,闭包允许函数通过闭包的**值的副本或引用**访问那些**被捕获的变量**，即使函数在其**作用域之外**被调用
+
+闭包函数和普通函数的不同之处在于,闭包提供一种持续访问被捕获变量的能力,简单的理解就是扩大了变量的作用域.
+
+```go
+func fibonacci() func() int {
+  a, b := 0, 1
+  return func() int {
+    a, b = b, a+b
+    return a
+  }
+}
+```
+
+自由变量 `a,b` 的定义发生在函数 `fibonacci` 体内,一般而言,变量的作用域也仅限于函数内部,外界是无法访问该变量的值或引用的.
+
+但是,闭包提供了持续暴露变量的机制,外界突然能够访问原本应该私有的变量,实现了全局变量的作用域效果!
+
+```go
+var a, b = 0, 1
+func fibonacciWithoutClosure() int {
+  a, b = b, a+b
+  return a
+}
+```
+
+> 普通函数想要访问变量 `a,b` 的值或引用,定义在函数内部是无法暴露给调用者访问的,只能提升成全局变量才能实现作用域范围的扩大.
+
+由此可见,一旦变量被闭包捕获后,外界使用者是可以访问这些被捕获的变量的值或引用的,相当于访问了私有变量!
 
 ## 怎么理解闭包
 
