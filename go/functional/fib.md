@@ -26,7 +26,7 @@ func fibonacci() func() int {
 > `Go` 语言支持**连续赋值**,更加贴合思考方式,而其余主流的编程语言可能**不支持**这种方式,大多采用**临时变量**暂存的方式.
 
 - `Go` 版本的单元测试用例
- 
+
 ```go
 // 1 1 2 3 5 8 13 21 34 55
 func TestFibonacci(t *testing.T) {
@@ -113,13 +113,15 @@ func TestAutoIncrease(t *testing.T) {
 }
 ```
 
-初始调用 `autoIncrease` 函数并没有直接得到结果而是返回了函数引用,等到使用者自己觉得时机成熟后再次调用返回的函数引用即变量`a` ,然后才会真正计算结果,这种方式被称为延迟计算也叫做惰性求值.
+初始调用 `autoIncrease` 函数并没有直接得到结果而是**返回了函数引用**,等到使用者觉得**时机成熟**后再次调用返回的函数引用即变量`a` ,这时候才会真正计算结果,这种方式被称为**延迟计算也叫做惰性求值**.
 
-函数的返回值是函数这一特性除了可以用作惰性求值外,还可以包装原函数以实现功能增强.
+继续演示一下**功能增强**的示例:
 
-当然这少不了引入原函数,成本很低,因为函数的参数和返回值一样都可以是函数.
+因为要演示函数增强功能,没有输入哪来的输出?
 
-`timeSpend` 函数实现的功能是包装特定类型的函数,增加计算函数运行时间的新功能并包装成函数返回出去给使用者.
+所以函数的入参应该也是函数,返回值就是增强后的函数.
+
+这样的话接下来要做的函数就比较清晰了,这里我们定义 `timeSpend` 函数: 实现的功能是**包装特定类型的函数**,增加**计算函数运行时间**的新功能并包装成函数,最后**返回**出去给使用者.
 
 ```go
 func timeSpend(fn func()) func() {
@@ -133,7 +135,7 @@ func timeSpend(fn func()) func() {
 }
 ```
 
-为了演示包装函数,定义一个比较耗时函数用于被计算耗时函数所包装,函数名称为 `slowFunc` ,大于运行`1s` .
+为了演示包装函数 `timeSpend`,需要定义一个比较**耗时函数当做入参**,函数名称姑且称之为为 `slowFunc` ,睡眠 `1s` 来**模拟耗时**操作.
 
 ```go
 func slowFunc() {
@@ -143,29 +145,35 @@ func slowFunc() {
 }
 ```
 
-无测试不编码,继续运行单元测试用例,演示耗时函数 `timeSpend` 如何包装慢函数 `slowFunc` 增强功能.
+**无测试不编码**,继续运行单元测试用例,演示包装函数 `timeSpend` 是如何增强原函数 `slowFunc` 以实现功能增强?
 
 ```go
 func TestSlowFuncTimeSpend(t *testing.T) {
   slowFuncTimeSpend := timeSpend(slowFunc)
 
+  // I am slowFunc
+  // time spend :  1.002530902
   slowFuncTimeSpend()
 }
 ```
 
-- 函数嵌套可能是一种闭包
+> 测试结果显示原函数 `slowFunc` 被当做入参传递给包装函数 `timeSpend` 后实现了功能增强,不仅保留了原函数功能还增加了计时功能.
 
-不论是引言部分的斐波那契数列生成器函数还是演示函数返回值的自增示例,其实有一种专业术语称为"闭包".
+- 函数嵌套可能是闭包函数
 
-一般表现行为为普通函数内部定义了若干变量和内部函数,内部函数的内部引用了这些变量并且被使用者一直调用,不会轻易释放变量的引用,这就是闭包的外在表现形式.
+不论是引言部分的**斐波那契数列生成器**函数还是演示函数返回值的**自增函数**示例,其实这种形式的函数有一种专业术语称为"闭包".
+
+一般而言,函数内部不仅**存在变量还有嵌套函数**,而嵌套函数又引用了这些外部变量的话,那么这种形式**很有可能**就是**闭包函数**.
 
 ## 什么是闭包
 
-[维基百科](https://en.wikipedia.org/wiki/Closure_%28computer_programming%29) 中关于闭包说得比较透彻,特地摘抄如下:
+如果有一句话介绍什么是闭包,那么我更愿意称其为**流浪在外的人想念爸爸妈妈**!
+
+如果非要比较官方正式的定义去解释什么是闭包,那只好翻开[维基百科](https://en.wikipedia.org/wiki/Closure_%28computer_programming%29) 看下有关闭包的定义: 
 
 > In programming languages, a closure, also lexical closure or function closure, is a technique for implementing lexically scoped name binding in a language with first-class functions. Operationally, a closure is a record storing a function[a] together with an environment.[1] The environment is a mapping associating each free variable of the function (variables that are used locally, but defined in an enclosing scope) with the value or reference to which the name was bound when the closure was created.[b] Unlike a plain function, a closure allows the function to access those captured variables through the closure's copies of their values or references, even when the function is invoked outside their scope.
 
-能够直接理解英文的同学可以略过这部分的中文翻译,不愿意费脑理解英文的小伙伴跟我一起解读中文吧!
+如果能够**直接理解英文**的同学可以略过这部分的中文翻译,要是不愿意费脑理解英文的小伙伴跟我一起**解读中文**吧!
 
 ### 闭包是一种技术
 
