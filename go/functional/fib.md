@@ -325,6 +325,8 @@ func fibonacciDeduction() func() int {
 
 虽然 `Go` 不支持函数嵌套,但是 `Go` 支持匿名函数,同样可以实现函数嵌套的效果.
 
+为了演示闭包是通过函数嵌套形式实现的环境绑定这一结论,我们选用其他支持函数嵌套的语言,比如已经对比过的 `Js` 语言.
+
 ```js
 function fibonacciDeduction() {
   var a, b;
@@ -342,8 +344,9 @@ function fibonacciDeduction() {
 }
 ```
 
+斐波那契数列生成器函数是 `fibonacciDeduction`,该函数内部真正实现生成器功能的却是 `fibonacciGenerator` 函数,正是这个函数使用了变量 `a,b` ,相当于把外部变量打包绑定成运行环境的一部分!
 
-
+```js
 // 1 1 2 3 5 8 13 21 34 55
 function TestFibonacciDeduction() {
   var f = fibonacciDeduction();
@@ -352,6 +355,110 @@ function TestFibonacciDeduction() {
   }
   console.log();
 }
+```
+
+> 闭包并不是某一种语言特有的技术,虽然各个语言的实现细节上有所差异,但并不妨碍整体理解,正如定义的第二句那样: `storing a **function**[a] together with an **environment**.`
+
+### 环境关联了自由变量
+
+> The environment is a mapping associating each **free variable** of the function (variables that are used locally, but defined in an enclosing scope) with **the value or reference** to which the name was bound **when the closure was created**
+
+> 环境是一种映射,它将函数的每个**自由变量**(在本地使用但在封闭范围内定义的变量)与**创建闭包时**名称绑定到的**值或引用**相关联。
+
+环境是闭包所处的环境,这里强调的是外部环境,更确切的说是相对于匿名函数而言的外部变量,像这种被闭包函数使用但是定义在闭包函数外部的变量被称为自由变量.
+
+由于闭包函数内部使用了自由变量,因此闭包内部的也就关联了自由变量的值或引用,这种绑定关系是创建闭包时确定的,运行时环境也一直存在并不会发生像普通函数那样重新初始化变量导致的环境不能维持现象.
+
+- 自由变量
+
+这里使用了一个比较陌生的概念: **自由变量**(在本地使用但在封闭范围内定义的变量)
+
+很显然,根据注释说明,所谓的自由变量是相对于闭包函数或者说匿名函数来说的外部变量,由于该变量的定义不受自己控制,所以对自己来说就是自由的.
+
+那么按照这种逻辑继续延伸猜测的话,匿名函数内部定义的变量岂不是约束变量?自由变量对于定义函数来说岂不是约束变量?
+
+```go
+var a, b = 0, 1
+func fibonacciWithoutClosure() int {
+  a, b = b, a+b
+  return a
+}
+```
+
+> 那么问题来了: 变量 `a,b` 相对于函数 `fibonacciWithoutClosure` 来说,是不是自由变量?
+
+- 值或引用
+
+```go
+func fibonacci() func() int {
+  a, b := 0, 1
+  return func() int {
+    a, b = b, a+b
+    return a
+  }
+}
+```
+
+变量 `a,b` 定义在函数 `fibonacci` 内部,相对于匿名函数 `func() int` 来说是自由变量,在匿名函数中直接使用了变量 `a,b` 并没有重新复制一份,所以这种形式的环境关联的自由变量是引用.
+
+再举个引用关联的示例,加深一下闭包的环境理解.
+
+```go
+func countByClosureButWrong() []func() int {
+  var arr []func() int
+  for i := 1; i <= 3; i++ {
+    arr = append(arr, func() int {
+      return i
+    })
+  }
+  return arr
+}
+```
+
+`countByClosureButWrong` 函数内部定义了变量数组 `arr` ,存储的是匿名函数而匿名函数使用的是循环变量 `i` .
+
+这里的循环变量的定义部分是在匿名函数的外部就是所谓的自由变量,变量 `i` 没有进行拷贝所以也就是引用关联.
+
+```go
+func TestCountByClosure(t *testing.T) {
+  // 4 4 4 
+  for _, c := range countByClosureButWrong() {
+    t.Log(c())
+  }
+}
+```
+
+运行这种闭包函数,最终的输出结果都是 `4 4 4`,这是因为闭包的环境关联的循环变量 `i` 是引用方式而不是值传递方式,所以闭包运行结束后的变量 `i` 已经是 `4`.
+
+除了引用传递方式还有值传递方式,关联自由变量时拷贝一份到匿名函数,使用者调用闭包函数时就能如愿绑定到循环变量.
+
+```go
+func countByClosureWithOk() []func() int {
+  var arr []func() int
+  for i := 1; i <= 3; i++ {
+    func(n int) {
+      arr = append(arr, func() int {
+        return n
+      })
+    }(i)
+  }
+  return arr
+}
+```
+
+> 自由变量 `i` 作为参数传递给匿名函数,而 `Go` 中的参数传递只有值传递,所以匿名函数使用的变量 `n` 就可以正确绑定循环变量了,这也就是自由变量的值绑定方式.
+ 
+```go
+func TestCountByClosureWithOk(t *testing.T) {
+  // 1 2 3
+  for _, c := range countByClosureWithOk() {
+    t.Log(c())
+  }
+}
+```
+
+> 自由变量通过值传递的方式传递给闭包函数,实现值绑定环境,正确绑定了循环变量 `1 2 3` 而不是 `4 4 4 `
+
 
 ## 怎么理解闭包
 
