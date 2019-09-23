@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 10 Sep 2019 03:20:47 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Sep 2019 02:03:59 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -598,6 +598,20 @@
             <description><![CDATA[如果你还了解编程概念中的接口概念,那么我建议你最好还是先阅读上一篇文章.详情请点击 go 学习笔记之万万没想到宠物店竟然催生出面向接口编程? ,否则的话,请自动忽略上文,继续探索 Go 语言的接口有什么不同之处.]]></description>
             <link>https://snowdreams1006.github.io/go/oop/interface-type.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/interface-type.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[函数式编程]]></title>
+            <description><![CDATA[在编程世界中向来就没有一家独大的编程风格,至少目前还是百家争鸣的春秋战国,除了众所周知的面向对象编程还有日渐流行的函数式编程,当然这也是本系列文章的重点.]]></description>
+            <link>https://snowdreams1006.github.io/go/functional/about.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/functional/about.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[斐波那契数列]]></title>
+            <description><![CDATA[本篇文章是 Go 语言学习笔记之函数式编程系列文章的第二篇,上一篇介绍了函数基础,这一篇文章重点介绍函数的重要应用之一: 闭包]]></description>
+            <link>https://snowdreams1006.github.io/go/functional/fib.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/functional/fib.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
