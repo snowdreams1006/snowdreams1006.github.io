@@ -651,3 +651,15 @@ func fibonacci() func() int {
 - [廖雪峰: `js` 的闭包教程](https://www.liaoxuefeng.com/wiki/1022910821149312/1023021250770016)
 - [知乎: 什么是闭包](https://www.zhihu.com/question/34210214)
 - [三点水博客: 再谈闭包](https://lotabout.me/2016/thoughts-of-closure/)
+
+<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+<script>
+    const btw = new BTWPlugin();
+    btw.init({
+        id: 'container',
+        blogId: '15702-1569305559839-744',
+        name: '雪之梦技术驿站',
+        qrcode: 'https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg',
+        keyword: 'vip',
+    });
+</script>
