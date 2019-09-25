@@ -49,84 +49,59 @@
 
 ## 公众号引流
 
-如果你也有自己独立的博客,也在运营者自己的公众号,但是苦于没有很好的手段引导用户关注公众号,那么`Openwrite` 推出的 `ReadMore` 工具可以说是良心之作!
+如果你有自己**独立博客**,也在运营者**微信公众号**,但是苦于没有很好的手段**引导读者关注公众号**,那么`Openwrite` 推出的 `ReadMore` 工具绝对可以**解决燃眉之**急,真的可以说是良心之作!
 
-- 效果如何看了就知道
+- 效果怎么样看了就知道
 
-个人博客集成 `ReadMore` 工具后,博客文章的内容自动**隐藏**一半,同时浮现出**阅读全文**的按钮引导用户点击.
+**静态博客**网站集成 `ReadMore` 工具后,全站博客文章内容自动**隐藏一半**,同时浮现出**阅读全文**的按钮引导读者点击解锁.
 
 ![gitbook-openwrite-website-lock-preview.png](../images/gitbook-openwrite-website-lock-preview.png)
 
-一旦用户想要阅读全文就会主动点击按钮,此时就会自动弹出引导用户关注公众号进行解锁文章的弹窗.
+一旦读者想要**阅读全文**就会主动**点击按钮**,此时就会自动弹出**引导用户关注公众号**的弹窗.
 
 ![gitbook-openwrite-website-lock-guide.png](../images/gitbook-openwrite-website-lock-guide.png)
 
 此时,用户有三种选择,要么扫码关注公众号解锁全站文章,要么掉头走人不再阅读,或者以其人之道还治其人之身,技术绕过直接解锁!
 
-当然,我们自然是希望所有的阅读用户都能转换成公众号粉丝,所以接下来应该是关注公众号**回复关键字**获取验证码.
+当然,我们自然是**希望所有的读者都可以转换成公众号粉丝**,所以接下来读者应该是关注公众号**回复关键字**获取验证码进而解锁文章.
 
 ![gitbook-openwrite-wechat-follow-reply.jpg](../images/gitbook-openwrite-wechat-follow-reply.jpg)
 
-当用户点击公众号预先设置好的文字链接后,此时就会获取到验证码,离成功只差一步!
+读者**关注公众号**后,**发送关键字**获取文字链接并**点击该链接**,此时就会**获取验证码**,离成功只差一步!
 
 ![gitbook-openwrite-wechat-follow-code.jpg](../images/gitbook-openwrite-wechat-follow-code.jpg)
 
-回到博客平台的受限文章,输入刚刚获取到的验证码,此时不仅解锁了当前文章,博客内的其他文章全部自动解锁,完美!
+再次回到博客平台的**受限文章**,**输入刚刚获取到的验证码**,不仅解锁了**当前文章**,博客内的其他文章也**全部自动解锁**,并不会造成不好体验,完美!
 
 ![gitbook-openwrite-website-unlock-preview.png](../images/gitbook-openwrite-website-unlock-preview.png)
 
-从**陌生读者**阅读博客文章到转换成**公众号粉丝**,整个操作流程一气呵成,没有丝毫卡顿也没有门槛,一切都是这么自然!
+从**陌生读者**成**公众号粉丝**,整个操作流程**一气呵成**,没有丝毫卡顿也没有任何门槛,一切都是这么自然!
 
-所以,如果你有**自主运营**的个人博客,想要转换成公众号粉丝,那么 `ReadMore` 工具简直就是**躺增粉丝**利器!
+所以,如果你有**自主运营**的个人博客,想要转换成公众号粉丝,那么 `ReadMore` 工具简直就是**躺增粉丝**利器啊!
 
-## 自主集成
+### 自主集成
 
-`ReadMore` 工具集成步骤比较简单,按照官方说明,大致可以分为两步:
+`ReadMore` 工具集成步骤比较简单,按照相关官方教程说明,大致可以分为两步:
 
-- 设置微信公众号
+![https://openwrite.cn/openwrite/openwrite-readmore/](https://i.loli.net/2019/09/25/fy85C1KBQNauYFU.png)
 
-登录要增粉的微信公众号,按如下规则设置关键词回复:
+**如果博客文章比较少的话**,这么设置是任何没有问题的,大不了多**复制**一下就可以了.
 
-关键词,设置为: vip
-回复内容,设置为如下文本内容:
-                        
-```html
-<a href="https://my.openwrite.cn/code/generate?blogId=15702-1569305559839-744">点击该链接，获取博客解锁验证码</a>
-```
+**但是如果博客文章比较多**,肯定不能手动复制粘贴了,此时应该将该规则**自动应用到全部文章**中,如此一来,个人博客文章全部拥有该功能.
 
-- 设置个人博客
+### 插件集成
 
-在您博客的文章页面的末尾,增加如下js代码.
+熟悉了自主集成的基本思路后,不难发现,集成 `ReadMore` 工具只需要保证**个人博客**支持运行 `Js` 代码即可!
 
-```js                        
-<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
-<script>
-    const btw = new BTWPlugin();
-    btw.init({
-        id: 'container',
-        blogId: '15702-1569305559839-744',
-        name: '雪之梦技术驿站',
-        qrcode: 'https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg',
-        keyword: 'vip',
-    });
-</script>
-```
+这个要求确实不高,哪怕是 `Gitbook + Github Pages` 搭建的静态网站也是支持运行 `Js` 代码的,更何况整合 `Github` 后还提供了免费域名,刚好满足 `ReadMore` 的条件.
 
-> 其中id中设置的container需要用户根据文章页面中的文章容器来调整,或者直接将文章最外面的容器设置为该id.
-
-然而,如果博客文章只有一篇,这么设置是没有问题的,但是博客肯定是不可能只有一篇文章的,所以该规则应该自动应用到全部文章中,如此一来,个人博客的全部文章都拥有该功能.
-
-## `gitbook` 插件自动集成
-
-熟悉了自主集成的基本思路后,不难发现,集成 `ReadMore` 工具只需要保证个人博客支持运行 `Js` 代码即可!
-
-这个要求确实不高,`gitbook` 搭建的静态网站也支持运行 `Js` 代码的,更何况整合 `github` 后还提供了免费域名!
+![gitbook-openwrite-blog2weixin-preview.png](../images/gitbook-openwrite-blog2weixin-preview.png)
 
 说干就干,于是乎,花了一整晚的时间弄了 `gitbook` 插件来集成 `ReadMore` 工具.
 
 - 安装 `openwrite` 插件
 
-在 `book.json` 配置文件中,添加 `openwrite` 插件到 `plugins` 数组中,参考示例如下:
+在 `book.json` 配置文件中,添加 `openwrite` 插件到 `plugins` 数组中,示例如下:
 
 ```json
 {
@@ -134,7 +109,7 @@
 }
 ```
 
-声明插件后添加插件配置项,配置信息来源于 `openwrite` 后台,务必修改成自己真正的配置信息!
+声明插件后需要添加相关配置信息,来源于 `OpenWrite` 后台,**务必修改成自己真正的配置信息**!
 
 ```json
 {
@@ -148,8 +123,6 @@
     }
 }
 ```
-
-> 插件配置项仍然是 `book.json` 配置文件,`gitbook` 的插件声明和插件配置不是同一个节点而是独立声明的,所以务必填写插件配置信息.
 
 插件声明并配置后,通过 `gitbook` 或 `npm` 命令行方式安装 `openwrite` 插件到本地.
 
@@ -165,19 +138,23 @@ $ npm install gitbook-plugin-openwrite
 
 - 运行 `openwrite` 插件
 
-本地运行 `gitbook serve` 后验证下是否成功集成 `ReadMore` 功能吧!
+本地运行 `gitbook serve` 命令后,赶快验证下是否成功通过 `gitbook-plugin-openwrite` 插件集成 `ReadMore` 工具吧!
 
-如果没有问题的话,运行 `gitbook build` 生成网页文件准备上传到 `github` 或其他静态服务器吧!
+如果没有问题的话,运行 `gitbook build` 生成的目标文件上传到 `github` 或其他静态服务器就能轻松集成 `ReadMore` 工具!
 
-## 集成思路参考
+> 如果可以的话,欢迎给 [https://github.com/snowdreams1006/gitbook-plugin-openwrite](https://github.com/snowdreams1006/gitbook-plugin-openwrite) 一个 `Star` ,告诉我的确**有人在用**!
 
-按照官网的工具集成指南,关于博客设置的部分只需要将自己的专属配置信息插入到博客的每一篇文章中即可实现.
+### 集成思路
 
-但是,大多数博客平台编写技术文章时都是直接编写 `markdown` ,因而无法直接插入 `js`,比较方便的做法是修改全局性的模板文件.
+按照 `OpenWrite` 官方 `ReadMore`工具 集成指南,关于博客设置部分只需要将自己的**专属配置信息**插入到**具体博客文章**中即可实现集成.
 
-关于 `gitbook` 的模板文件位于根目录下的 `_layouts/website/page.html` ,所以要么直接修改模板,要么通过插件方式自定义模板!
+但是,**大多数博客平台**编写博客文章时都是编写 `markdown` 而不是 `html`,因而 不太方便直接插入 `js` 代码,**比较方便的做法**是修改**全局性质的模板文件**.
 
-独乐乐不如众乐乐,本来打算直接修改 `gitbook` 模板文件,后来觉得这样配不上技术的身份,还是采用插件的方式扩展吧!
+而关于 `gitbook` 的**模板文件**位于根目录下的 `_layouts/website/page.html` ,所以要么**直接修改模板**,要么通过**插件方式自定义模板**!
+
+本来打算直接修改 `gitbook` 模板文件,但是**独乐乐不如众乐乐**,所以还是采用插件的方式扩展吧!
+
+核心代码如下,修改模板文件,在文章内容外面包裹一层 `div` 作为目标区域并运行集成 `Js` 代码片段.
 
 ```html
 {% extends template.self %}
@@ -204,6 +181,8 @@ $ npm install gitbook-plugin-openwrite
 {% endblock %}
 ```
 
+实现思路还是比较简单明确的,这里简单对其中的细节做些解释说明.
+
 - 全局构建目标区域
 
 ```html
@@ -216,9 +195,9 @@ $ npm install gitbook-plugin-openwrite
 
 `page.content` 是每个页面当前的文件内容,不再是原生的 `markdown` 类型而是 `html` 类型,这一点非常重要,因为 `gitbook` 并不会处理 `div` 内嵌的 `markdown` 内容!
 
-> 之前一直在尝试想通过 `Js` 方式直接在当前文件内容外面嵌套一层目标区域 `div`,但是只找到 `markdown` 异步转 `html` 的 `api` 导致无法集成,最后只能采用修改模板的方式.
+> 之前一直尝试想通过 `Js` 方式**直接嵌套**一层目标区域 `div`,但是只找到 `markdown` **异步**转 `html` 的 `api` 导致无法集成,最后只能采用**修改模板**的方式.
 
-`{{ page.content|safe }}` 表示的是当前页面的 `html` 内容,在外面再嵌套一层 `div` ,其中 `id="vip-container"`.
+而 `{{ page.content|safe }}` 表示的是当前页面的 `html` 内容,最后在原始内容外面嵌套一层 `div` 充当**目标区域**,其中 `id="vip-container"`.
 
 - 全局插入到目标页面
 
