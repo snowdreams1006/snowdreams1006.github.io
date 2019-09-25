@@ -183,7 +183,7 @@ $ npm install gitbook-plugin-openwrite
 
 实现思路还是比较简单明确的,这里简单对其中的细节做些解释说明.
 
-- 全局构建目标区域
+- 构建目标区域
 
 ```html
 {% block page %}
@@ -199,7 +199,7 @@ $ npm install gitbook-plugin-openwrite
 
 而 `{{ page.content|safe }}` 表示的是当前页面的 `html` 内容,最后在原始内容外面嵌套一层 `div` 充当**目标区域**,其中 `id="vip-container"`.
 
-- 全局插入到目标页面
+- 插入集成代码
 
 ```js
 <script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
@@ -215,11 +215,13 @@ $ npm install gitbook-plugin-openwrite
 </script>
 ```
 
-`{{ config.pluginsConfig.openwrite.blogId }}` 读取的是 `gitbook` 关于 `openwrite` 插件的配置信息,目标代码自动插入到每一个页面中,省去了手动插入的麻烦,做到了自动化集成的需求.
+`{{ config.pluginsConfig.openwrite.blogId }}` 表示读取的是 `gitbook` 关于 `openwrite` 插件的配置信息,这样一来集成代码就会自动插入到每一个页面中,从而省去了手动插入的麻烦,达到了自动化集成的目的.
 
-> 上一步全局构建的目标区域 `id="vip-container"` 在这一步直接使用了,所以该配置项不必暴露给用户.
+> 上一步构建目标区域时设置了 `id="vip-container"` ,在这一步直接使用了该区域唯一标示,所以该配置项不必暴露给外部用户,因此配置项中没有 `id` .
 
-- 使用者需要做啥
+- 使用者示例
+
+关于插件原理部分的相关介绍,如果不懂的话也没有关系,直接上手能够用就好,下面提供非常基础的示例:
 
 ```json
 {
@@ -241,6 +243,11 @@ $ npm install gitbook-plugin-openwrite
     }
 }
 ```
+
+> `book.json` 配置文件中的其他项可能省略了,这里只保留关于插件部分相关代码,完整示例可参考: 
+
+
+
 
 虽然本教程基于 `gitbook` 提供的插件机制进行集成 `ReadMore` 功能,但是其他平台的思路大致上也是一样的,最方便的做法是基于模板固定目标区域,然后配置相应的 `Js` 代码.
 
