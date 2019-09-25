@@ -60,7 +60,7 @@
             * [主题插件](myGitbook/advance/plugin-theme.md)
         * [导出电子书](myGitbook/advance/export.md)
         * [发布电子书](myGitbook/advance/publish.md)
-    * [openwrite](myGitbook/openwrite/README.md)
+    * [公众号引流](myGitbook/openwrite/README.md)
     * [常见问题](myGitbook/issue/README.md)
         * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
     * [参考更多](myGitbook/reference/README.md)

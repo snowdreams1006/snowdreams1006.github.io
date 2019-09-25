@@ -1,10 +1,12 @@
-# openwrite 博客导流
+# 公众号引流
 
-相信大部分爱好技术分享的同行们都曾经有过这样想法: 各种平台这么多,复制粘贴也太 low 了,抽空一定做平台一次性全解决!
+相信大多数博客作者都或多或少有过这样想法: 现在各种平台这么多,想要实现**全平台发布**就要到处**复制粘贴**,等我有空一定做**统一平台**一次性**全部解决**!
 
-不知道你们有没有这样的想法,反正我是这么想过,甚至 `github` 项目早已创建,可一直迟迟没有下一步,要么是工作忙,要么是技术储备不够,总有一大堆借口自我安慰!
+不知道正在阅读文章的你,有没有这样的想法?
 
-如果只是专注于某一两家平台,这种需求可能不会那么强烈,如果你和我一样曾经手动复制粘贴过下面这么多平台,那么我相信你一定可以体会一文多发的迫切性!
+反正我确实这么想过,甚至 `github` 上[相关项目](https://github.com/snowdreams1006/distribute-your-article)早已创建,**可一直迟迟没有下一步**,要么是工作忙,要么是技术储备不够,**总有一大堆借口自我安慰**!
+
+如果只是专注于某一两家平台,这种需求可能不会那么强烈,可是如果你和我一样曾经手动复制粘贴过下面这么多平台,那么我相信你一定可以体会**一文多发的迫切性**!
 
 [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
 [![wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg)
@@ -19,13 +21,15 @@
 [![开源中国](https://img.shields.io/badge/%E5%BC%80%E6%BA%90%E4%B8%AD%E5%9B%BD-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://my.oschina.net/snowdreams1006)
 [![腾讯云社区](https://img.shields.io/badge/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%A4%BE%E5%8C%BA-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://cloud.tencent.com/developer/user/2952369/activities)
 
-幸运的是,一文多发的路上并不孤单,不堪其扰的大佬们已经说干就干动手解决了这个问题并且提供了 `SAAS` 服务,这就是今天的主角: `OpenWrite` 一文多发平台!
+幸运的是,在**一文多发**探索的路上并不孤单,不堪其扰的大佬们早已**说干就干动手解决**了这个问题,有的是**开源平台**,有的是 **`SAAS` 服务**,大家都在努力...
+
+其中,`SAAS` 服务可能是最简单上手的方式了,这就是今天的主角: [`OpenWrite`](https://openwrite.cn/) 一文多发平台!
 
 - 如果你热衷于写文**记录点滴**、**分享心得**
 - 如果你钟情于 `markdown` 的**简洁**、流畅与纯粹
 - 如果你专注于内容创作,而对很多**网络抄袭**无可奈何
 
-那么,希望 **[OpenWrite](https://openwrite.cn/)** 可以帮助你！
+那么,希望 [https://openwrite.cn/](https://openwrite.cn/) 可以帮助你！
 
 ## 一文多发
 
