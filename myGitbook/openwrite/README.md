@@ -24,7 +24,7 @@
 - 如果你热衷于写文**记录点滴**、**分享心得**
 - 如果你钟情于 `markdown` 的**简洁**、流畅与纯粹
 - 如果你专注于内容创作,而对很多**网络抄袭**无可奈何
- 
+
 那么,希望 **[OpenWrite](https://openwrite.cn/)** 可以帮助你！
 
 ## 一文多发
@@ -104,7 +104,7 @@
 
 然而,如果博客文章只有一篇,这么设置是没有问题的,但是博客肯定是不可能只有一篇文章的,所以该规则应该自动应用到全部文章中,如此一来,个人博客的全部文章都拥有该功能.
 
-## `gitbook-plugin-openwrite` 插件自动集成
+## `gitbook` 插件自动集成
 
 熟悉了自主集成的基本思路后,不难发现,集成 `ReadMore` 工具只需要保证个人博客支持运行 `Js` 代码即可!
 
@@ -121,7 +121,7 @@
     "plugins" : ["openwrite"]
 }
 ```
- 
+
 声明插件后添加插件配置项,配置信息来源于 `openwrite` 后台,务必修改成自己真正的配置信息!
 
 ```json
@@ -271,3 +271,11 @@ $ npm install gitbook-plugin-openwrite
 
 - 项目地址: [https://github.com/snowdreams1006/gitbook-plugin-openwrite](https://github.com/snowdreams1006/gitbook-plugin-openwrite)
 - 演示地址: [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/)
+
+## 参考链接
+
+- [https://openwrite.cn/](https://openwrite.cn/)
+- [还在搞公众号互推涨粉？OpenWrite推出增长神器，助你实现粉丝躺增！](https://openwrite.cn/openwrite/openwrite-readmore/)
+- [WordPress 博客整合导流工具，博客导流到微信公众号](https://mp.weixin.qq.com/s/TkCB_y4-bfFpo6uHVV70bQ)
+- [谈一谈博客的关注解锁文章功能](https://cuiqingcai.com/7463.html)
+- [牛掰！我是这么把博客粉丝转到公众号的](https://mp.weixin.qq.com/s/5jYWz8H0_-qBKIr-vFzRNQ)
