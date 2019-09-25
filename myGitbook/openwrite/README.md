@@ -219,7 +219,7 @@ $ npm install gitbook-plugin-openwrite
 
 > 上一步构建目标区域时设置了 `id="vip-container"` ,在这一步直接使用了该区域唯一标示,所以该配置项不必暴露给外部用户,因此配置项中没有 `id` .
 
-- 使用者示例
+- 使用者集成参考
 
 关于插件原理部分的相关介绍,如果不懂的话也没有关系,直接上手能够用就好,下面提供非常基础的示例:
 
@@ -244,22 +244,56 @@ $ npm install gitbook-plugin-openwrite
 }
 ```
 
-> `book.json` 配置文件中的其他项可能省略了,这里只保留关于插件部分相关代码,完整示例可参考: 
+> `book.json` 配置文件中的其他项可能省略了,这里只保留关于插件部分相关代码,完整示例参考: [https://github.com/snowdreams1006/gitbook-plugin-openwrite/tree/master/example](https://github.com/snowdreams1006/gitbook-plugin-openwrite/tree/master/example)
 
+虽然本教程基于 `gitbook` 提供的**插件机制**进行集成 `ReadMore` 工具,但基本思路也适合其他平台: 最方便的做法是基于模板固定目标区域,然后配置相应的 `Js` 集成代码.
 
+当然,**直接集成**是非常简单的,如果是基于**插件等集成形式**以提供给更多人使用的话,那可能就要研究一下**博客平台的接口文档**了.
 
+## 懒人直达
 
-虽然本教程基于 `gitbook` 提供的插件机制进行集成 `ReadMore` 功能,但是其他平台的思路大致上也是一样的,最方便的做法是基于模板固定目标区域,然后配置相应的 `Js` 代码.
+- 声明并配置 `openwrite` 插件
 
-当然,直接集成是非常简单的,如果是基于插件进行集成提供给更多人使用的话,那可能就要研究一下博客平台的接口文档了.
+```json
+{
+    ...
+    "plugins": [
+        "openwrite"
+    ],
+    "pluginsConfig": {
+        "openwrite":{
+            "blogId": "your blogId",
+            "name": "your name",
+            "qrcode": "your qrcode",
+            "keyword": "your keyword"
+        }
+    }
+}
+```
 
-## 结尾与总结
+> 注意修改成自己的配置信息,来源于 `OpenWrite` 后台,点击**使用**后第二步**关于博客设置**!
 
-总体来说,`Openwrite` 一文多发平台非常优秀,对于多平台发布的小伙伴来说更是福音,假如没有一文多发的需求,那可能对你的帮助并没有那么大.
+- 安装 `openwrite` 插件到本地
 
-但是,作为一个有追求的技术分享者,个人博客用户转换成微信公众号粉丝这一需求应该更加普遍,感谢 `Openwrite` 提供的 `ReadMore` 工具,原以为只有动态博客才能玩的套路没想到也可以用到静态博客身上!
+```bash
+$ gitbook install
+```
 
-基于 `Gitbook` 搭建的静态博客市面上并不少,考虑到其他小伙伴可能也有类似需求,所以做成了 `gitbook` 插件共享给大家,希望对大家有所帮助!
+- 运行本地服务
+
+```bash
+$ gitbook serve
+```
+
+> 如果本地运行发现没有问题的话,恭喜你成功集成了公众号引流功能,稍后运行 `gitbook build` 命令后就可以上传静态网站到目标服务器了呢!
+
+## 总结寄语
+
+总体来说,`OpenWrite` 作为**一文多发平台**是非常优秀的,对于**多平台发布**的小伙伴来说简直就是福音,但是假如你并没有一文多发的需求,那可能对你的帮助并不是很大,因为连复制粘贴都不需要了啊!
+
+但是,作为一个**有追求的技术分享者**,**个人博客用户转换成微信公众号粉丝**这一需求应该说更加普遍,再次感谢 `OpenWrite` 提供的 `ReadMore` 工具,原以为只有**动态博客**才能玩的套路没想到也可以用到**静态博客**身上!
+
+最后考虑到基于 `Gitbook` 搭建的**静态博客**市面上并不少,其他小伙伴可能也有**类似需求**,所以做成了 `gitbook` 插件共享给大家,`gitbook-plugin-openwrite` 希望对大家有所帮助!
 
 [![npm version](https://img.shields.io/npm/v/gitbook-plugin-openwrite.svg)](https://www.npmjs.com/package/gitbook-plugin-openwrite)
 [![npm-download](https://img.shields.io/npm/dt/gitbook-plugin-openwrite.svg)](https://www.npmjs.com/package/gitbook-plugin-openwrite)
@@ -268,7 +302,7 @@ $ npm install gitbook-plugin-openwrite
 [![微信公众号-雪之梦技术驿站-brightgreen.svg](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg)
 
 - 项目地址: [https://github.com/snowdreams1006/gitbook-plugin-openwrite](https://github.com/snowdreams1006/gitbook-plugin-openwrite)
-- 演示地址: [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/)
+- 演示地址: [https://github.com/snowdreams1006/gitbook-plugin-openwrite/tree/master/example](https://github.com/snowdreams1006/gitbook-plugin-openwrite/tree/master/example)
 
 ## 参考链接
 
