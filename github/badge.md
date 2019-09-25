@@ -1,4 +1,4 @@
-# github 上各式各样的小徽章从何而来?
+# github 小徽章从何而来
 
 ## 前言
 
@@ -93,12 +93,12 @@ https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg
 
 ```html
 <a href="https://github.com/snowdreams1006">
-	<img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github">
+    <img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github">
 </a>
 ```
 
 <a href="https://github.com/snowdreams1006">
-	<img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github">
+    <img src="https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg" alt="github">
 </a>
 
 不论是什么语法,最核心最根本的获得到**徽章链接**,至于不同语言有着各自的语法,按照语言规则手动拼接就好.
@@ -416,40 +416,40 @@ https://badgen.net/badge/:subject/:status/:color?icon=github
 
 ```html
 <p align="center">
-	<a href="https://circleci.com/gh/vuejs/vue/tree/dev">
-		<img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg" alt="Build Status">
-	</a>
-	<a href="https://codecov.io/github/vuejs/vue?branch=dev">
-		<img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg" alt="Coverage Status">
-	</a>
-	<a href="https://www.npmjs.com/package/vue">
-		<img src="https://img.shields.io/npm/dm/vue.svg" alt="Downloads">
-	</a>
-	<a href="https://www.npmjs.com/package/vue">
-		<img src="https://img.shields.io/npm/l/vue.svg" alt="License">
-	</a>
-	<a href="https://chat.vuejs.org/">
-		<img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="License">
-	</a>
+    <a href="https://circleci.com/gh/vuejs/vue/tree/dev">
+        <img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg" alt="Build Status">
+    </a>
+    <a href="https://codecov.io/github/vuejs/vue?branch=dev">
+        <img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg" alt="Coverage Status">
+    </a>
+    <a href="https://www.npmjs.com/package/vue">
+        <img src="https://img.shields.io/npm/dm/vue.svg" alt="Downloads">
+    </a>
+    <a href="https://www.npmjs.com/package/vue">
+        <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
+    </a>
+    <a href="https://chat.vuejs.org/">
+        <img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="License">
+    </a>
 </p>
 ```
 
 <p align="center">
-	<a href="https://circleci.com/gh/vuejs/vue/tree/dev">
-		<img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg" alt="Build Status">
-	</a>
-	<a href="https://codecov.io/github/vuejs/vue?branch=dev">
-		<img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg" alt="Coverage Status">
-	</a>
-	<a href="https://www.npmjs.com/package/vue">
-		<img src="https://img.shields.io/npm/dm/vue.svg" alt="Downloads">
-	</a>
-	<a href="https://www.npmjs.com/package/vue">
-		<img src="https://img.shields.io/npm/l/vue.svg" alt="License">
-	</a>
-	<a href="https://chat.vuejs.org/">
-		<img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="License">
-	</a>
+    <a href="https://circleci.com/gh/vuejs/vue/tree/dev">
+        <img src="https://img.shields.io/circleci/project/github/vuejs/vue/dev.svg" alt="Build Status">
+    </a>
+    <a href="https://codecov.io/github/vuejs/vue?branch=dev">
+        <img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg" alt="Coverage Status">
+    </a>
+    <a href="https://www.npmjs.com/package/vue">
+        <img src="https://img.shields.io/npm/dm/vue.svg" alt="Downloads">
+    </a>
+    <a href="https://www.npmjs.com/package/vue">
+        <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
+    </a>
+    <a href="https://chat.vuejs.org/">
+        <img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="License">
+    </a>
 </p>
 
 ## 抛砖引玉
