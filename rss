@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 25 Sep 2019 03:20:41 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 26 Sep 2019 01:10:52 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -339,6 +339,13 @@ csdn
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[github 徽章从何而来]]></title>
+            <description><![CDATA[平时大家在在逛 github 时或多或少都看到过项目首页各式各样的小徽章,不知道你是否和我一样好奇这些小徽章都是哪来的呢?]]></description>
+            <link>https://snowdreams1006.github.io/github/badge.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/github/badge.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[gitbook 入门教程]]></title>
             <description><![CDATA[gitBook 是一个基于node.js的命令行工具,使用 github/git 和 markdown/asciiDoc 构建精美的电子书.]]></description>
             <link>https://snowdreams1006.github.io/myGitbook/README.html</link>
@@ -434,6 +441,13 @@ csdn
             <description><![CDATA[默认情况下,gitbook 输出方式是静态网站,其实 gitbook 的输出方式有三种: website, json,和 ebook.]]></description>
             <link>https://snowdreams1006.github.io/myGitbook/advance/publish.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/advance/publish.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[公众号引流]]></title>
+            <description><![CDATA[相信大多数博客作者都或多或少有过这样想法: 现在各种平台这么多,想要实现全平台发布就要到处复制粘贴,等我有空一定做统一平台一次性全部解决!]]></description>
+            <link>https://snowdreams1006.github.io/myGitbook/openwrite/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/openwrite/README.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -699,13 +713,6 @@ csdn
             <description><![CDATA[前面我们已经介绍了如何在 Windows 宿主机安装 VMware 虚拟机,这节我们将利用安装好的 VMware 软件安装 Ubuntu 系统.]]></description>
             <link>https://snowdreams1006.github.io/tools/windows-vmware-install-ubuntu.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/windows-vmware-install-ubuntu.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[github 上各式各样的小徽章从何而来?]]></title>
-            <description><![CDATA[平时大家在在逛 github 时或多或少都看到过项目首页各式各样的小徽章,不知道你是否和我一样好奇这些小徽章都是哪来的呢?]]></description>
-            <link>https://snowdreams1006.github.io/tools/badge.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/badge.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
