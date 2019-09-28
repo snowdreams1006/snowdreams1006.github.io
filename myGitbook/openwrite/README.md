@@ -256,7 +256,6 @@ $ npm install gitbook-plugin-openwrite
 
 ```json
 {
-    ...
     "plugins": [
         "openwrite"
     ],
