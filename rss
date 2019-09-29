@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 26 Sep 2019 01:10:52 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 29 Sep 2019 09:22:26 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -713,6 +713,12 @@ csdn
             <description><![CDATA[前面我们已经介绍了如何在 Windows 宿主机安装 VMware 虚拟机,这节我们将利用安装好的 VMware 软件安装 Ubuntu 系统.]]></description>
             <link>https://snowdreams1006.github.io/tools/windows-vmware-install-ubuntu.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/windows-vmware-install-ubuntu.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[学习开发自己的 chrome 插件]]></title>
+            <link>https://snowdreams1006.github.io/tools/chrome-extend-learn.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/chrome-extend-learn.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
