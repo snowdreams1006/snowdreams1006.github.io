@@ -90,6 +90,7 @@
         * [再谈接口](go/oop/interface-type.md)
     * [函数式编程](go/functional/about.md)
         * [斐波那契数列](go/functional/fib.md)
+        * [简要理解闭包](go/functional/closure.md)
     * [常见问题](go/issue/faq.md)
 * [工具资源](tools/README.md)
     * [给 mac 装个 vmware 虚拟机](tools/mac-install-vmware.md)

@@ -1,7 +1,6 @@
 # TODO清单
 
 - [ IBM Developer: 闭包的概念、形式与应用](https://www.ibm.com/developerworks/cn/linux/l-cn-closure/)
-- [菜鸟教程: JavaScript 闭包](https://www.runoob.com/js/js-function-closures.html)
 - [gitbook博客: 闭包的实现](https://tiancaiamao.gitbooks.io/go-internals/content/zh/03.6.html)
 - [Jartto 博客:反思闭包](http://jartto.wang/2017/12/18/reflective-closure/)
 - [三点水博客: 再谈闭包](https://lotabout.me/2016/thoughts-of-closure/)
