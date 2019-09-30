@@ -28,7 +28,7 @@ func TestFibonacci(t *testing.T) {
 }
 ```
 
-## **不老不死**是福还是祸
+## 自带**独立**的运行环境
 
 ```go
 func autoIncrease() func() int {
@@ -51,6 +51,8 @@ func TestAutoIncrease(t *testing.T) {
     t.Log(b(), b(), b())
 }
 ```
+
+## **不老不死**是福还是祸
 
 ```go
 func countByClosureButWrong() []func() int {
@@ -75,8 +77,6 @@ func countByClosureWithOk() []func() int {
     for i := 1; i <= 3; i++ {
         func(n int) {
             arr = append(arr, func() int {
-                fmt.Println("countByClosureWithOk : ", i)
-
                 return n
             })
         }(i)
@@ -91,3 +91,4 @@ func TestCountByClosureWithOk(t *testing.T) {
     }
 }
 ```
+
