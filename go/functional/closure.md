@@ -51,4 +51,3 @@ func TestAutoIncrease(t *testing.T) {
     t.Log(b(), b(), b())
 }
 ```
-
