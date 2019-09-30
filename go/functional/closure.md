@@ -92,65 +92,14 @@ func TestCountByClosureWithOk(t *testing.T) {
 }
 ```
 
+## 七嘴八舌畅谈**优缺点**
 
-## 生产者**控制权**在转移
+- 模拟**类和对象**的关系,也可以实现**封装**,具备一定**面向对象**能力
+- **缓存**复杂逻辑,常驻内存,避免滥用**全局变量**徒增维护成本.
+- **实现闭包成本较高**,同时也增加了**理解难度**.
+- 滥用容易占用过多内存,可能造成**内存泄漏**.
 
-```go
-func sumByNormal(arr []int) int {
-    sum := 0
-    for _, v := range arr {
-        sum += v
-    }
-    return sum
-}
-
-func TestSumByNormal(t *testing.T) {
-    arr := []int{1, 2, 3}
-
-    // 6
-    t.Log(sumByNormal(arr))
-
-    // 6
-    t.Log(sumByNormal(arr))
-}
-
-func sumByClosure() func(arr []int) int {
-    sum := 0
-    return func(arr []int) int {
-        for _, v := range arr {
-            sum += v
-        }
-        return sum
-    }
-}
-
-func TestSumClosure(t *testing.T) {
-    arr := []int{1, 2, 3}
-
-    s := sumByClosure()
-
-    // 6
-    t.Log(s(arr))
-
-    // 12
-    t.Log(s(arr))
-
-    ns := sumByClosure()
-
-    // 6
-    t.Log(ns(arr))
-}
-```
-
-## **自给自足**兼职**赚外快**
-
-- 类与实例化
-
-
-- 缓存
-- 封装
-
-
+## 简单**总结**下闭包知识
 
 
 
