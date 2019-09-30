@@ -52,7 +52,7 @@ func TestAutoIncrease(t *testing.T) {
 }
 ```
 
-## **不老不死**是福还是祸
+## **长生不老**是福还是祸
 
 ```go
 func countByClosureButWrong() []func() int {
@@ -93,7 +93,7 @@ func TestCountByClosureWithOk(t *testing.T) {
 ```
 
 
-## 生产者控制权在变化
+## 生产者**控制权**在转移
 
 ```go
 func sumByNormal(arr []int) int {
@@ -141,5 +141,16 @@ func TestSumClosure(t *testing.T) {
     t.Log(ns(arr))
 }
 ```
+
+## **自给自足**兼职**赚外快**
+
+- 类与实例化
+
+
+- 缓存
+- 封装
+
+
+
 
 
