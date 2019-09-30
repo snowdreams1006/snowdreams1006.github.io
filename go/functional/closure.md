@@ -91,6 +91,3 @@ func TestCountByClosureWithOk(t *testing.T) {
     }
 }
 ```
-
-## 
-
