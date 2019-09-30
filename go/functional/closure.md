@@ -1,10 +1,10 @@
 # 简要理解闭包
 
-> [go 学习笔记之仅仅需要一个示例就能讲清楚什么闭包](https://mp.weixin.qq.com/s/ZIIBvCuDgrsdNbQXBeAR9A)
-
 > 相关示例代码已托管 `Github`: [https://github.com/snowdreams1006/learn-go/blob/master/functional/functional/funcitional_test.go](https://github.com/snowdreams1006/learn-go/blob/master/functional/functional/funcitional_test.go)
 
 ## 斐波那契数列**见闭包**
+
+> [go 学习笔记之仅仅需要一个示例就能讲清楚什么闭包](https://mp.weixin.qq.com/s/ZIIBvCuDgrsdNbQXBeAR9A)
 
 ```go
 // 1 1 2 3 5 8 13 21 34 55
@@ -51,4 +51,46 @@ func TestAutoIncrease(t *testing.T) {
     t.Log(b(), b(), b())
 }
 ```
+
+```go
+func countByClosureButWrong() []func() int {
+    var arr []func() int
+    for i := 1; i <= 3; i++ {
+        arr = append(arr, func() int {
+            return i
+        })
+    }
+    return arr
+}
+
+func TestCountByClosure(t *testing.T) {
+    // 4 4 4
+    for _, c := range countByClosureButWrong() {
+        t.Log(c())
+    }
+}
+
+func countByClosureWithOk() []func() int {
+    var arr []func() int
+    for i := 1; i <= 3; i++ {
+        func(n int) {
+            arr = append(arr, func() int {
+                fmt.Println("countByClosureWithOk : ", i)
+
+                return n
+            })
+        }(i)
+    }
+    return arr
+}
+
+func TestCountByClosureWithOk(t *testing.T) {
+    // 1 2 3
+    for _, c := range countByClosureWithOk() {
+        t.Log(c())
+    }
+}
+```
+
+## 
 

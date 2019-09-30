@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 29 Sep 2019 09:22:26 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 30 Sep 2019 11:44:33 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -637,6 +637,12 @@ csdn
             <description><![CDATA[本篇文章是 Go 语言学习笔记之函数式编程系列文章的第二篇,上一篇介绍了函数基础,这一篇文章重点介绍函数的重要应用之一: 闭包]]></description>
             <link>https://snowdreams1006.github.io/go/functional/fib.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/functional/fib.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[简要理解闭包]]></title>
+            <link>https://snowdreams1006.github.io/go/functional/closure.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/functional/closure.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
