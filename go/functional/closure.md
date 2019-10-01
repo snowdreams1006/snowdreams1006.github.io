@@ -100,6 +100,10 @@ func TestFibonacci(t *testing.T) {
 
 ## 自带独立的运行环境
 
+![go-functional-programming-closure-fage.jpeg](../images/go-functional-programming-closure-fage.jpeg)
+
+> **自带运行环境**的闭包正如电影中出场**自带背景音乐**的发哥一样,音乐响起,发哥登场,闭包出现,环境自带!
+
 **闭包**自带**独立的运行环境**,每一次运行闭包的环境都是相互独立的,正如面向对象中**类和对象**实例化的关系那样,闭包是类,闭包的引用是实例化对象.
 
 ```go
