@@ -308,6 +308,8 @@ func fibonacci() func() int {
 }
 ```
 
+> 本文涉及示例代码: [https://github.com/snowdreams1006/learn-go/blob/master/functional/closure/closure_test.go](https://github.com/snowdreams1006/learn-go/blob/master/functional/closure/closure_test.go)
+
 ## 参考资料及延伸阅读
 
 - [ 闭包的概念、形式与应用](https://www.ibm.com/developerworks/cn/linux/l-cn-closure/)
