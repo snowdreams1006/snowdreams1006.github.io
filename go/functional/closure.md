@@ -138,6 +138,42 @@ func TestAutoIncrease(t *testing.T) {
 
 ## 长生不老是福还是祸
 
+普通函数内部定义的变量寿命有限,函数运行结束后也就被系统销毁了,结束了自己短暂而又光荣的一生.
+
+但是,闭包所引用的变量却不一样,只要一直处于**使用中**状态,那么变量就会"**长生不老**",并不会因为出身于函数内就和普通变量拥有一样的短暂人生.
+
+- 老骥伏枥,志在千里
+
+![go-functional-programming-closure-horse.jpeg](../images/go-functional-programming-closure-horse.jpeg)
+
+```go
+func fightWithHorse() func() int {
+    horseShowTime := 0
+    return func() int {
+        horseShowTime++
+
+        fmt.Printf("(%d)祖国需要我,我就提枪上马立即战斗!\n",horseShowTime)
+
+        return horseShowTime
+    }
+}
+
+func TestFightWithHorse(t *testing.T) {
+    f := fightWithHorse()
+
+    // 1 2 3
+    t.Log(f(), f(), f())
+}
+```
+
+> 如果使用者一直在使用闭包函数,那么闭包内部引用的自由变量就不会被销毁,一直处于**活跃状态**,从而获得**永生的超能力**!
+
+- 祸兮福所倚福兮祸所伏
+
+凡事有利必有弊,**闭包不死则引用变量不灭**,如果不理解变量**长生不老**的特性,编写闭包函数时可能一不小心就掉进**作用域陷阱**了,千万要小心!
+
+下面以绑定循环变量为例讲解闭包作用域的陷阱,示例如下:
+
 ```go
 func countByClosureButWrong() []func() int {
     var arr []func() int
@@ -148,26 +184,82 @@ func countByClosureButWrong() []func() int {
     }
     return arr
 }
+```
 
+`countByClosureButWrong` 闭包函数引用的自由变量不仅有 `arr` 数组还有循环变量 `i` ,函数的整体逻辑是: 闭包函数内部维护一个函数数组,保存的函数主要返回了循环变量.
+
+```go
 func TestCountByClosure(t *testing.T) {
     // 4 4 4
     for _, c := range countByClosureButWrong() {
         t.Log(c())
     }
 }
+```
 
+当我们运行 `countByClosureButWrong` 函数获得闭包返回的函数数组 `arr`,然后通过 `range` 关键字进行遍历数组,得到正在遍历的函数项 `c`.
+
+当我们运行 `c()` 时,期望输出的 `1,2,3` 循环变量的值,但是实际结果却是 `4,4,4`.
+
+![go-functional-programming-closure-wrong.png](../images/go-functional-programming-closure-wrong.png)
+
+原因仍然是变量长生不老的特性:遍历循环时绑定的**变量值**肯定是 `1,2,3`,但是循环变量 `i` 却没有像普通函数那样消亡而是一直长生不老,所以变量的**引用**发生变化了!
+
+![go-functional-programming-closure-wrong-explain.png](../images/go-functional-programming-closure-wrong-explain.png)
+
+长生不老的循环变量的值刚好是当初循环的终止条件 `i=4`,只要运行闭包函数,不论是数组中的哪一项函数引用的都是相同的变量 `i`,所以全部都是 `4,4,4`.
+
+既然是变量引用出现问题,那么解决起来就很简单了,不用变量引用就好了嘛!
+
+最简单的做法就是使用短暂的临时变量 `n` 暂存起来正在遍历的值,闭包内引用的变量不再是 `i` 而是临时变量 `n`.
+
+```go
+func countByClosureButWrong() []func() int {
+    var arr []func() int
+    for i := 1; i <= 3; i++ {
+        n := i
+
+        fmt.Printf("for i=%d n=%d \n", i,n)
+
+        arr = append(arr, func() int {
+            fmt.Printf("append i=%d n=%d\n", i, n)
+
+            return n
+        })
+    }
+    return arr
+}
+```
+
+![go-functional-programming-closure-wrong-fix.png](../images/go-functional-programming-closure-wrong-fix.png)
+
+上述解决办法很简单就是**采用临时变量绑定循环变量的值**,而不是原来的长生不老的变量引用,但是这种做法不够优雅,还可以继续简化进行版本升级.
+
+既然是采用**变量赋值**的做法,是不是和参数传递中的**值传递**很相像?那我们就可以用值传递的方式重新复制一份变量的值传递给闭包函数.
+
+```go
 func countByClosureWithOk() []func() int {
     var arr []func() int
     for i := 1; i <= 3; i++ {
+        fmt.Printf("for i=%d \n", i)
+
         func(n int) {
             arr = append(arr, func() int {
+                fmt.Printf("append n=%d \n", n)
+
                 return n
             })
         }(i)
     }
     return arr
 }
+```
 
+> 采用匿名函数自执行的方式传递参数 `i` ,函数内部使用变量 `n` 绑定了外部的循环变量,看起来更加优雅,有逼格!
+
+采用匿名函数进行值传递进行改造后,我们再次运行测试用例验证一下改造结果:
+
+```go
 func TestCountByClosureWithOk(t *testing.T) {
     // 1 2 3
     for _, c := range countByClosureWithOk() {
@@ -175,6 +267,8 @@ func TestCountByClosureWithOk(t *testing.T) {
     }
 }
 ```
+
+终于解决了正确绑定循环变量的问题,下次再出现实际结果和预期不符,不一定是 `bug` 有可能是理解不深,没有正确使用闭包!
 
 ## 七嘴八舌畅谈优缺点
 
