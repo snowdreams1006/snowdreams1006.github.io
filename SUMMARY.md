@@ -58,6 +58,7 @@
         * [插件介绍](myGitbook/advance/plugin.md)
             * [实用插件](myGitbook/advance/plugin-practical.md)
             * [主题插件](myGitbook/advance/plugin-theme.md)
+            * [开发插件](myGitbook/advance/plugin-develop.md)
         * [导出电子书](myGitbook/advance/export.md)
         * [发布电子书](myGitbook/advance/publish.md)
     * [公众号引流](myGitbook/openwrite/README.md)
