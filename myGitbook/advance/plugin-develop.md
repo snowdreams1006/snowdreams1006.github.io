@@ -99,36 +99,36 @@ $ gitbook install
 
 #### index.js
 
-The `index.js` is main entry point of your plugin runtime:
+`index.js` 是插件运行时的入口,基本示例如下:
 
 ```js
 module.exports = {
-    // Map of hooks
+    // 钩子函数
     hooks: {},
 
-    // Map of new blocks
+    // 代码块
     blocks: {},
 
-    // Map of new filters
+    // 过滤器
     filters: {}
 };
 ```
 
 ### 发布插件
 
-GitBook plugins can be published on [NPM](https://www.npmjs.com).
+`GitBook` 插件可以在[https://www.npmjs.com](https://www.npmjs.com)上发布.
 
-To publish a new plugin, you need to create an account on [npmjs.com](https://www.npmjs.com) then publish it from the command line:
+如需发布插件,首先需要在[https://www.npmjs.com](https://www.npmjs.com)上**注册帐户**,然后通过命令行发布.
 
 ```
 $ npm publish
 ```
 
-### 私有化插件
+### 专用插件
 
-Private plugins can be hosted on GitHub and included using `git` urls:
+专用插件可以托管在 `GitHub` 上,并使用 `git` urls:
 
-```
+```json
 {
     "plugins": [
         "myplugin@git+https://github.com/MyCompany/mygitbookplugin.git#1.0.0"
@@ -138,27 +138,29 @@ Private plugins can be hosted on GitHub and included using `git` urls:
 
 ### 本地测试插件
 
-Testing your plugin on your book before publishing it is possible using [npm link](https://docs.npmjs.com/cli/link).
+使用 `npm link` 可以在发布之前测试你的插件,命令详情参考[https://docs.npmjs.com/cli/link](https://docs.npmjs.com/cli/link)
 
-In the plugin's folder, run:
+在插件的文件夹中,运行：
 
-```
+```bash
 $ npm link
 ```
 
-Then in your book's folder:
+然后在您的书或者文档的文件夹中执行:
 
-```
-$ npm link gitbook-plugin-<plugin's name>
+```bash
+$ npm link gitbook-plugin-<name>
 ```
 
 ### 单元测试插件
 
-[gitbook-tester](https://github.com/todvora/gitbook-tester) makes it easy to write **Node.js/Mocha** unit tests for your plugins. Using [Travis.org](https://travis.org), tests can be run on each commits/tags.
+[gitbook-tester](https://github.com/todvora/gitbook-tester)可以方便地为你的插件编写**Node.js/Mocha**单元测试.
+
+使用[Travis.org](https://travis.org).可以对每个提交/标签运行测试。
 
 ## 插件总结
 
-welcome to develop your own plugins
+希望本文能够对你理解 `Gitbook` 插件有所帮助,了解并熟练掌握插件开发的全流程,如果本文对你有所帮助,别忘了给我一个正面反馈以鼓励我继续创作哟!
 
 ## 阅读延伸
 
