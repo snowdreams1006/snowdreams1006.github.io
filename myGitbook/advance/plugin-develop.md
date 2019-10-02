@@ -57,15 +57,23 @@ $ gitbook install
 
 ## 如何开发插件
 
-A GitBook plugin is a node package published on NPM that follow a defined convention.
+`GitBook` 插件是在 `npm` 上发布的遵循**传统定义**的 `node` 包,除了标准的 `node` 规范外还有一些 `Gitbook` 自身定义的相关规范.
 
 ### 目录结构
 
+`Gitbook` 插件最基本的项目结构包括配置文件 `package.json` 和入门文件 `index.js` .
+
+```bash
+.
+├── index.js
+└── package.json
+```
+
+> 实际插件项目略有不同,可能还会有 `_layouts` 布局目录, `asset` 资源目录以及自定义 `example` 示例目录和 `docs` 文档目录等等.
+
 #### package.json
 
-The `package.json` is a manifest format for describing **Node.js modules**. GitBook plugins are built on top of Node modules. It declares dependencies, version, ownership, and other information required to run a plugin in GitBook. This document describes the schema in detail.
-
-A plugin manifest `package.json` can also contain details about the required configuration. The configuration schema is defined in the `gitbook` field of the `package.json` (This field follow the [JSON-Schema](http://json-schema.org) guidelines):
+`package.json` 是**`nodejs`**的配置文件,`Gitbook` 插件同样遵循该规范,配置文件声明了插件的版本描述性信息,除此之外还有 `Gitbook` 相关字段,遵循[http://json-schema.org](http://json-schema.org)准则,基本示例如下:
 
 ```js
 {
@@ -87,9 +95,7 @@ A plugin manifest `package.json` can also contain details about the required con
 }
 ```
 
-You can learn more about `package.json` from the [NPM documentation](https://docs.npmjs.com/files/package.json).
-
-The **package name** must begin with `gitbook-plugin-` and the **package engines** should contains `gitbook`.
+> 值得注意的是,**包名称**必须以 `gitbook-plugin-`开头，**包引擎**应该包含`gitbook`.如需了解 `package.json` 的规范,可参考[https://docs.npmjs.com/files/package.json](https://docs.npmjs.com/files/package.json)
 
 #### index.js
 
