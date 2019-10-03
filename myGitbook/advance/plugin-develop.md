@@ -126,7 +126,7 @@ module.exports = {
 
 如需发布插件,首先需要在[https://www.npmjs.com](https://www.npmjs.com)上**注册帐户**,然后通过命令行发布.
 
-```
+```bash
 $ npm publish
 ```
 
