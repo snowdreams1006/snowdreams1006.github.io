@@ -4,9 +4,11 @@
 
 插件是**扩展** `GitBook` 功能(电子书和网站)的**最佳方式**.
 
-只要是 `Gitbook` 默认没有提供的功能,基于**插件机制**都可以**自行扩展**,插件让 `Gitbook` 更加强大.
+只要是 `Gitbook` **默认没有提供的功能**,基于**插件机制**都可以**自行扩展**,是插件让 `Gitbook` 变得更加强大.
 
-本文将**全面介绍**插件的相关知识点并**重点介绍插件开发的全流程**,只有熟悉插件开发流程才能做到有的放矢,**心中有数**,进而开发出自己的插件.
+![gitbook-develop-application-preview.png](./images/gitbook-develop-application-preview.png)
+
+本文将**全面介绍**插件的相关知识并**重点介绍插件开发的全流程**,只有**熟悉插件开发流程**才能做到有的放矢,**心中有数**,进而开发出自己的插件.
 
 > 关于插件请参考 `Gitbook` 入门教程**高级进阶**系列文章,本文重点讲解开发 `Gitbook` 的**基本流程**.
 >
@@ -17,6 +19,8 @@
 ## 如何发现插件
 
 您可以在~~[https://plugins.gitbook.com](https://plugins.gitbook.com)~~轻松搜索插件,也可以在[https://www.npmjs.com](https://www.npmjs.com)搜索 `gitbook-plugin-<name>` 插件.
+
+![gitbook-plugin-npm-preview.png](./images/gitbook-plugin-npm-preview.png)
 
 > 目前 `Gitbook` 官方已不再为维护 `https://plugins.gitbook.com` 插件网站,只能通过 `https://www.npmjs.com` 发现 `Gitbook` 插件.
 
@@ -31,7 +35,7 @@
 ```
 
 您还可以使用以下命令指定特定版本: `myPlugin@0.3.1` .
-默认不填写版本的情况下,`GitBook` 使用最新版本(兼容版本)的插件.
+默认不填写版本的情况下,`GitBook` 使用**最新版本(兼容版本)**的插件.
 
 ### 安装插件
 
@@ -55,13 +59,15 @@ $ gitbook install
 插件的配置在 `book.json`  配置文件中的 `pluginsConfig` 属性中(如果没有该属性请自行创建),
 安装插件时,最好浏览插件的文档了解相关选项的详细信息.
 
+> 有些插件并未提供插件配置项,可以省略该步骤,有的插件会提供配置项,以插件介绍文档为准.
+
 ## 如何开发插件
 
 `GitBook` 插件是在 `npm` 上发布的遵循**传统定义**的 `node` 包,除了标准的 `node` 规范外还有一些 `Gitbook` 自身定义的相关规范.
 
 ### 目录结构
 
-`Gitbook` 插件最基本的项目结构包括配置文件 `package.json` 和入门文件 `index.js` .
+`Gitbook` 插件最基本的项目结构至少包括**配置文件** `package.json` 和**入口文件** `index.js` ,其他目录文件根据插件用途自行增减.
 
 ```bash
 .
@@ -159,6 +165,8 @@ $ npm link gitbook-plugin-<name>
 使用[Travis.org](https://travis.org).可以对每个提交/标签运行测试。
 
 ## 插件总结
+
+`Gitbook` 插件是扩展 `Gitbook` 功能的不二之选,如果熟悉 `nodejs` 项目的开发流程,只要稍微熟悉下 `Gitbook` 提供的接口文档,开发出自己的插件应该不是难事!
 
 希望本文能够对你理解 `Gitbook` 插件有所帮助,了解并熟练掌握插件开发的全流程,如果本文对你有所帮助,别忘了给我一个正面反馈以鼓励我继续创作哟!
 
