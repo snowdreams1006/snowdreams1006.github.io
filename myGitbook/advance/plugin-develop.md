@@ -173,7 +173,7 @@ $ npm link gitbook-plugin-<name>
 
 [gitbook-tester](https://github.com/todvora/gitbook-tester)可以方便地为你的插件编写**Node.js/Mocha**单元测试.
 
-使用[Travis.org](https://travis.org).可以对每个提交/标签运行测试。
+使用[Travis.org](https://travis.org).可以对每个提交/标签运行测试.
 
 ## 插件总结
 

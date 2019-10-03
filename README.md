@@ -60,5 +60,3 @@
 
 如果你觉得本教程对你有所帮助,请不吝 `Star`.
 如果你想贡献一份力量,欢迎提交 `Pull Request`.
-
-![snowdreams1006-wechat-open.png](snowdreams1006-wechat-open.png)
