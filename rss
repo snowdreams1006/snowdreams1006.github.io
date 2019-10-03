@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 01 Oct 2019 08:33:06 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 03 Oct 2019 05:13:48 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -427,6 +427,13 @@ csdn
             <description><![CDATA[目前 gitbook 提供三类文档: Book 文档,API 文档和 FAQ 文档.]]></description>
             <link>https://snowdreams1006.github.io/myGitbook/advance/plugin-theme.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/advance/plugin-theme.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[开发插件]]></title>
+            <description><![CDATA[插件是扩展 GitBook 功能(电子书和网站)的最佳方式.]]></description>
+            <link>https://snowdreams1006.github.io/myGitbook/advance/plugin-develop.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/advance/plugin-develop.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
