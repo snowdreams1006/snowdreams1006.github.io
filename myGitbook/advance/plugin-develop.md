@@ -57,7 +57,18 @@ $ gitbook install
 ### 配置插件
 
 插件的配置在 `book.json`  配置文件中的 `pluginsConfig` 属性中(如果没有该属性请自行创建),
-安装插件时,最好浏览插件的文档了解相关选项的详细信息.
+安装插件时,最好浏览插件的文档了解相关选项的详细信息.;;
+
+```bash
+{
+    "plugins": ["github"],
+    "pluginsConfig": {
+        "github": {
+          "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+        }
+    }
+}
+```
 
 > 有些插件并未提供插件配置项,可以省略该步骤,有的插件会提供配置项,以插件介绍文档为准.
 
