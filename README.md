@@ -52,7 +52,7 @@
 
 如果三言两语很难阐释你遇到的问题,如果你是人见人爱的妹子,那么欢迎加我私人微信一起畅谈人生.
 
-![snowdreams1109-wechat-private.jpeg](snowdreams1109-wechat-private.jpeg)
+![snowdreams1109-wechat-private.jpg](snowdreams1109-wechat-private.jpg)
 
 ## 说明
 
