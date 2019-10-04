@@ -2,7 +2,7 @@
 
 ## 什么是插件
 
-插件是**扩展** `GitBook` 功能(电子书和网站)的**最佳方式**.
+`Gitbook` 插件是**扩展** `GitBook` 功能(电子书和网站)的**最佳方式**.
 
 只要是 `Gitbook` **默认没有提供的功能**,基于**插件机制**都可以**自行扩展**,是插件让 `Gitbook` 变得更加强大.
 
@@ -18,11 +18,11 @@
 
 ## 如何发现插件
 
-您可以在~~[https://plugins.gitbook.com](https://plugins.gitbook.com)~~轻松搜索插件,也可以在[https://www.npmjs.com](https://www.npmjs.com)搜索 `gitbook-plugin-<name>` 插件.
+您可以在~~[`Gitbook`官网](https://plugins.gitbook.com)~~轻松搜索插件,也可以在[`npmjs` 官网](https://www.npmjs.com)搜索 `gitbook-plugin-<name>` 插件.
 
 ![gitbook-plugin-npm-preview.png](./images/gitbook-plugin-npm-preview.png)
 
-> 目前 `Gitbook` 官方已不再为维护 `https://plugins.gitbook.com` 插件网站,只能通过 `https://www.npmjs.com` 发现 `Gitbook` 插件.
+> 目前 `Gitbook` 官方已**不再为维护**插件网站,只能通过 `npmjs` 发现 `Gitbook` 插件.
 
 ## 如何安装插件
 
@@ -39,7 +39,7 @@
 
 ### 安装插件
 
-- 如果是[https://www.gitbook.com](https://www.gitbook.com)在线环境,网站会自动帮你安装插件.
+- 如果是[官网](https://www.gitbook.com)在线环境,网站会自动帮你安装插件.
 - 如果是在本地环境,**直接运行** `gitbook install` 来安装插件.
 
 ```bash
@@ -57,9 +57,9 @@ $ gitbook install
 ### 配置插件
 
 插件的配置在 `book.json`  配置文件中的 `pluginsConfig` 属性中(如果没有该属性请自行创建),
-安装插件时,最好浏览插件的文档了解相关选项的详细信息.;;
+安装插件时,最好浏览插件的文档了解相关选项的详细信息.
 
-```bash
+```json
 {
     "plugins": ["github"],
     "pluginsConfig": {
@@ -90,9 +90,9 @@ $ gitbook install
 
 #### package.json
 
-`package.json` 是**`nodejs`**的配置文件,`Gitbook` 插件同样遵循该规范,配置文件声明了插件的版本描述性信息,除此之外还有 `Gitbook` 相关字段,遵循[http://json-schema.org](http://json-schema.org)准则,基本示例如下:
+`package.json` 是**`nodejs`**的配置文件,`Gitbook` 插件同样遵循该规范,配置文件声明了插件的版本描述性信息,除此之外还有 `Gitbook` 相关字段,遵循[`schema`](http://json-schema.org)准则,基本示例如下:
 
-```js
+```json
 {
     "name": "gitbook-plugin-mytest",
     "version": "0.0.1",
@@ -112,7 +112,7 @@ $ gitbook install
 }
 ```
 
-> 值得注意的是,**包名称**必须以 `gitbook-plugin-`开头，**包引擎**应该包含`gitbook`.如需了解 `package.json` 的规范,可参考[https://docs.npmjs.com/files/package.json](https://docs.npmjs.com/files/package.json)
+> 值得注意的是,**包名称**必须以 `gitbook-plugin-`开头，**包引擎**应该包含`gitbook`.如需了解 `package.json` 的规范,可参考[官方文档](https://docs.npmjs.com/files/package.json)
 
 #### index.js
 
@@ -133,9 +133,9 @@ module.exports = {
 
 ### 发布插件
 
-`GitBook` 插件可以在[https://www.npmjs.com](https://www.npmjs.com)上发布.
+`GitBook` 插件可以在[`npmjs`官网](https://www.npmjs.com)上发布.
 
-如需发布插件,首先需要在[https://www.npmjs.com](https://www.npmjs.com)上**注册帐户**,然后通过命令行发布.
+如需发布插件,首先需要在[`npmjs`官网](https://www.npmjs.com)上**注册帐户**,然后通过命令行发布.
 
 ```bash
 $ npm publish
@@ -155,7 +155,7 @@ $ npm publish
 
 ### 本地测试插件
 
-使用 `npm link` 可以在发布之前测试你的插件,命令详情参考[https://docs.npmjs.com/cli/link](https://docs.npmjs.com/cli/link)
+使用 `npm link` 可以在发布之前测试你的插件,命令详情参考[官方文档](https://docs.npmjs.com/cli/link)
 
 在插件的文件夹中,运行：
 
@@ -171,18 +171,20 @@ $ npm link gitbook-plugin-<name>
 
 ### 单元测试插件
 
-[gitbook-tester](https://github.com/todvora/gitbook-tester)可以方便地为你的插件编写**Node.js/Mocha**单元测试.
+[`gitbook-tester`](https://github.com/todvora/gitbook-tester)可以方便地为你的插件编写**Node.js/Mocha**单元测试.
 
-使用[Travis.org](https://travis.org).可以对每个提交/标签运行测试.
+使用[`Travis`](https://travis.org).可以对每个提交/标签运行测试.
 
 ## 插件总结
 
 `Gitbook` 插件是扩展 `Gitbook` 功能的不二之选,如果熟悉 `nodejs` 项目的开发流程,只要稍微熟悉下 `Gitbook` 提供的接口文档,开发出自己的插件应该不是难事!
 
+![gitbook-develop-cheer.jpg](./images/gitbook-develop-cheer.jpg)
+
 希望本文能够对你理解 `Gitbook` 插件有所帮助,了解并熟练掌握插件开发的全流程,如果本文对你有所帮助,别忘了给我一个正面反馈以鼓励我继续创作哟!
 
 ## 阅读延伸
 
-- [https://snowdreams1006.github.io/gitbook-official/en/plugins/](https://snowdreams1006.github.io/gitbook-official/en/plugins/)
-- [https://snowdreams1006.github.io/gitbook-official/en/plugins/create.html](https://snowdreams1006.github.io/gitbook-official/en/plugins/create.html)
-- [https://snowdreams1006.github.io/gitbook-official/en/plugins/testing.html](https://snowdreams1006.github.io/gitbook-official/en/plugins/testing.html)
+- [什么是Gitbook插件](https://snowdreams1006.github.io/gitbook-official/en/plugins/)
+- [如何创建Gitbook插件](https://snowdreams1006.github.io/gitbook-official/en/plugins/create.html)
+- [如何测试Gitbook插件](https://snowdreams1006.github.io/gitbook-official/en/plugins/testing.html)
