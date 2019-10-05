@@ -5,7 +5,6 @@
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "plugins": [
-        "github",
         "pageview-count",
         "mermaid-gb3",
         "-lunr",
@@ -19,7 +18,8 @@
         "edit-link",
         "copy-code-button",
         "chart",
-        "favicon-plus",
+        "favicon-custom",
+        "github-buttons",
         "advanced-emoji",
         "rss",
         "openwrite",
@@ -29,11 +29,15 @@
         "donate"
     ],
     "pluginsConfig": {
-        "favicon": "/favicon.ico",
-        "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png",
-        "output": "_book",
-        "github": {
-            "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+        "favicon": "favicon.ico",
+        "appleTouchIconPrecomposed152": "apple-touch-icon-precomposed-152.png",
+        "github-buttons": {
+            "buttons": [{
+                "user": "snowdreams1006",
+                "repo": "snowdreams1006.github.io",
+                "type": "star",
+                "size": "small"
+            }]
         },
         "sharing": {
             "douban": true,
@@ -89,7 +93,7 @@
             "qrcode": "https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg",
             "keyword": "vip"
         },
-        "copyright": {      
+        "copyright": {
             "site": "https://snowdreams1006.github.io/",
             "author": "雪之梦技术驿站",
             "website": "雪之梦技术驿站",
