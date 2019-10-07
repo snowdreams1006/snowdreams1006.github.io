@@ -1,5 +1,7 @@
 # 实用插件
 
+<!-- toc -->
+
 ## `tbfed-pagefooter` 页脚插件
 
 如果希望将网页源码暴露出去并接受公众的监督校准的话,使用[edit-link插件](https://plugins.gitbook.com/plugin/edit-link)可以直接链接到源码文件.
@@ -102,7 +104,7 @@ $ gitbook serve
 ![gitbook-plugin-disqus-config-site.png](./images/gitbook-plugin-disqus-config-site.png)
 
 至此 `disqus.com` 网站配置完成,接下来我们配置 `gitbook` 集成 `disqus` 插件.
- 
+
 ![gitbook-plugin-disqus-complete.png](./images/gitbook-plugin-disqus-complete.png)
 
 ### 安装并配置 `disqus` 插件

@@ -5,6 +5,7 @@
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "plugins": [
+        "toc",
         "pageview-count",
         "mermaid-gb3",
         "-lunr",
@@ -31,6 +32,10 @@
     "pluginsConfig": {
         "favicon": "favicon.ico",
         "appleTouchIconPrecomposed152": "apple-touch-icon-precomposed-152.png",
+        "toc": {
+            "addClass": true,
+            "className": "toc"
+        },
         "github-buttons": {
             "buttons": [{
                 "user": "snowdreams1006",
