@@ -1,18 +1,6 @@
 # 实用插件
 
-插件没有什么逻辑顺序,大家可以按照目录大纲直接定位到感兴趣的插件部分阅读即可.
-
-更多插件正在陆续更新中,敬请期待...
-
-## 最新更新插件
-
-- `tbfed-pagefooter` 版权页脚插件
-- `gitalk` 评论插件
-- `search-plus` 中文搜索插件
-
-> `gitalk` 评论插件并不是 `gitbook` 插件,因而集成方式和一般的插件安装方式不同!
-
-## `tbfed-pagefooter` 版权页脚插件
+## `tbfed-pagefooter` 页脚插件
 
 如果希望将网页源码暴露出去并接受公众的监督校准的话,使用[edit-link插件](https://plugins.gitbook.com/plugin/edit-link)可以直接链接到源码文件.
 
@@ -377,6 +365,12 @@ gitalk.render("gitalk-container");
 其实本质上并没有改变什么,仍然是集成到每个页面中,但是简化了人工操作的工作量就是效率的提升.
 
 如果有更高效更优雅的集成方式,欢迎大家一起探讨.
+
+## `mygitalk` 评论插件
+
+## `copyright` 版权保护插件
+
+## `openwrite` 阅读更多插件
 
 ## `edit-link` 编辑链接插件
 

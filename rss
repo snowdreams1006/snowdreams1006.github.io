@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 05 Oct 2019 06:30:32 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Oct 2019 04:29:19 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -417,7 +417,7 @@ csdn
         </item>
         <item>
             <title><![CDATA[实用插件]]></title>
-            <description><![CDATA[插件没有什么逻辑顺序,大家可以按照目录大纲直接定位到感兴趣的插件部分阅读即可.]]></description>
+            <description><![CDATA[如果希望将网页源码暴露出去并接受公众的监督校准的话,使用edit-link插件可以直接链接到源码文件.]]></description>
             <link>https://snowdreams1006.github.io/myGitbook/advance/plugin-practical.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/advance/plugin-practical.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
