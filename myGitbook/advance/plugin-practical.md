@@ -420,7 +420,98 @@ $ gitbook serve
 
 ## `copyright` 版权保护插件
 
+如果你的博客不希望被别人随意转载或者文章希望保留首发网站信息,那么推荐使用[copyright插件](https://www.npmjs.com/package/gitbook-plugin-copyright)帮助你进行版权保护.
+
+[链接地址](https://www.npmjs.com/package/gitbook-plugin-copyright): https://snowdreams1006.github.io/gitbook-plugin-copyright/
+
+![gitbook-plugin-copyright-preview.png](./images/gitbook-plugin-copyright-preview.png)
+
+> `gitbook-plugin-copyright` 版权保护插件实现复制文章时自动追加版权保护信息,并在文章结尾处追加来源信息.
+
+### 激活插件配置
+
+在 `book.json` 中配置 `copyright` 插件,详细说明请参考 [copyright 插件](https://snowdreams1006.github.io/gitbook-plugin-copyright/).
+
+示例:
+
+```json
+{
+    "plugins": ["copyright"],
+    "pluginsConfig": {
+        "copyright": {
+        "site": "https://snowdreams1006.github.io/gitbook-plugin-copyright",
+        "author": "雪之梦技术驿站",
+        "website": "雪之梦技术驿站",
+        "image": "https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"
+        }
+    }
+}
+```
+
+### 安装 `copyright` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `copyright` 插件
+
+默认情况下,版权保护信息是英文,如果 `book.json` 配置文件中指定中文语言 `"language": "zh-hans"` 时,内容复制以及文章末尾均为中文.
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-copyright-preview.png](./images/gitbook-plugin-copyright-preview.png)
+
 ## `readmore` 阅读更多插件
+
+## `github` 插件
+
+添加 `github` 图标链接,方便直接跳转到 `github` 指定仓库.
+
+[链接地址](https://plugins.gitbook.com/plugin/github): https://plugins.gitbook.com/plugin/github
+
+![gitbook-plugin-github-preview.png](./images/gitbook-plugin-github-preview.png)
+
+### 激活插件配置
+
+在 `book.json` 中配置 `github` 插件,详细说明请参考 [github 插件](https://plugins.gitbook.com/plugin/github).
+
+示例:
+
+```
+{
+    "plugins": ["github"],
+    "pluginsConfig": {
+        "github": {
+          "url": "https://github.com/snowdreams1006/snowdreams1006.github.io"
+        }
+    }
+}
+```
+
+### 安装 `github` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `github` 插件
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-github-preview.png](./images/gitbook-plugin-github-preview.png)
 
 ## `edit-link` 编辑链接插件
 
