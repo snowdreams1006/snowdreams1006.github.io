@@ -470,6 +470,52 @@ $ gitbook serve
 
 ## `readmore` 阅读更多插件
 
+如果 `Gitbook` 个人博客流量不错的话,可以考虑转化成公众号流量,`readmore` 插件是集成[OpenWrite](https://openwrite.cn/)提供引流工具,通过关注公众号解锁博客文章,实现粉丝转换!
+
+[链接地址](https://www.npmjs.com/package/gitbook-plugin-readmore): https://snowdreams1006.github.io/gitbook-plugin-readmore/
+
+![gitbook-plugin-readmore-preview.png](./images/gitbook-plugin-readmore-preview.png)
+
+### 激活插件配置
+
+在 `book.json` 中配置 `readmore` 插件,详细说明请参考 [readmore 插件](https://snowdreams1006.github.io/gitbook-plugin-readmore/).
+
+示例:
+
+```json
+{
+    "plugins": ["readmore"],
+    "pluginsConfig": {
+        "readmore":{
+            "blogId": "15702-1569305559839-744",
+            "name": "雪之梦技术驿站",
+            "qrcode": "https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg",
+            "keyword": "vip"
+        }
+    }
+}
+```
+
+### 安装 `readmore` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `readmore` 插件
+
+`readmore` 插件暂未验证绑定域名,本地测试也能正常运行,如果后续开启了域名验证,只有部署到线上服务器才能生效,这一点和 `mygitalk` 插件原理类似.
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-readmore-preview.png](./images/gitbook-plugin-readmore-preview.png)
+
 ## `github` 插件
 
 添加 `github` 图标链接,方便直接跳转到 `github` 指定仓库.
