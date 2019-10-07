@@ -368,9 +368,59 @@ gitalk.render("gitalk-container");
 
 ## `mygitalk` 评论插件
 
+如果你正在苦恼于 `Gitbook` 静态博客无法添加动态交互功能,如果你渴望接收用户的评论反馈,如果你看过 `gitalk` 插件却苦于没有现成的 `Gitbook` 插件,那么 `mygitalk` 插件值得一试!
+
+[链接地址](https://www.npmjs.com/package/gitbook-plugin-mygitalk): https://snowdreams1006.github.io/gitbook-plugin-mygitalk/
+
+![gitbook-plugin-mygitalk-preview.png](./images/gitbook-plugin-mygitalk-preview.png)
+
+> `gitbook-plugin-mygitalk` 是全网最早发布的基于 `gitalk` 实现评论插件,用于给 `Gitbook` 博客网站集成评论功能.
+
+### 激活插件配置
+
+在 `book.json` 中配置 `mygitalk` 插件,详细说明请参考 [mygitalk 插件](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/).
+
+示例:
+
+```json
+{
+  "plugins" : ["mygitalk"],
+  "pluginsConfig": {
+    "mygitalk": {
+        "clientID": "GitHub Application Client ID",
+        "clientSecret": "GitHub Application Client Secret",
+        "repo": "GitHub repo",
+        "owner": "GitHub repo owner",
+        "admin": ["GitHub repo owner and collaborators, only these guys can initialize github issues"],
+        "distractionFreeMode": false
+    }
+  }
+}
+```
+
+### 安装 `mygitalk` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `mygitalk` 插件
+
+启动本地服务器后可能会提示联系管理员,只需要 `gitbook build` 上传到目标服务器上即可正常开启评论功能.
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-mygitalk-preview.png](./images/gitbook-plugin-mygitalk-preview.png)
+
 ## `copyright` 版权保护插件
 
-## `openwrite` 阅读更多插件
+## `readmore` 阅读更多插件
 
 ## `edit-link` 编辑链接插件
 
