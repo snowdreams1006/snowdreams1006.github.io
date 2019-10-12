@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 07 Oct 2019 06:15:32 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Oct 2019 08:09:54 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -1015,6 +1015,18 @@ csdn
         </item>
         <item>
             <title><![CDATA[TODO清单]]></title>
+            <description><![CDATA[INFO  Install dependencies
+npm WARN deprecated core-js@1.2.7: core-js@<2.6.8 is no longer maintained. Please, upgrade to core-js@3 or at least to actual version of core-js@2.
+npm ERR! code EACCES
+npm ERR! syscall open
+npm ERR! path /Users/sunpo/.npm/_cacache/index-v5/51/d3/7697273802dffa158119427da833e251b88e0e9d4c73d8f5f964476884f4
+npm ERR! errno -13
+npm ERR!
+npm ERR! Your cache folder contains root-owned files, due to a bug in
+npm ERR! previous versions of npm which has since been addressed.
+npm ERR!
+npm ERR! To permanently fix this problem, please run:
+npm ERR!   sudo chown -R 501:20 "/Users/sunpo/.npm"]]></description>
             <link>https://snowdreams1006.github.io/todo/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/todo/README.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
