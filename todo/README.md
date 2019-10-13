@@ -110,3 +110,10 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 - [Hexo高级教程之插件开发](https://blog.csdn.net/melordljm/article/details/51985157)
 - [Hexo主题开发](https://www.cnblogs.com/yyhh/p/11058985.html?clicktime=1570634105&enterid=1570634105)
 >>>>>>> 32dc4ab0f6b98922dcada02d9b6cd8da4bcb1935
+>>>>>>> 
+
+
+- [得到Go程序的汇编代码的方法](https://yq.aliyun.com/articles/684054)
+- [使用Hugo搭建静态站点](https://tonybai.com/2015/09/23/intro-of-gohugo/)
+- [TOML简介](https://blog.csdn.net/john_f_lau/article/details/55803069)
+- [Hugo加入评论的功能](https://blog.csdn.net/anonymking/article/details/86370082)
