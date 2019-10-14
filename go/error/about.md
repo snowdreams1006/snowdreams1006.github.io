@@ -29,3 +29,8 @@
 - 仅在 defer 调用中使用
 - 获取 panic 的值
 - 如果无法处理,可重新 panic
+
+error vs panic
+
+- 意料之中的:使用 error,如: 文件打不开
+- 意料之外的:使用 panic,如: 数组越界
