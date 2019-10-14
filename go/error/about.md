@@ -13,3 +13,12 @@
 - Open/Close
 - Lock/Unlock
 - PrintHeader/PrintFooter
+
+## 错误处理二
+
+- 如何实现统一的错误处理逻辑
+
+## panic
+
+- 停止当前函数执行
+- 一直向上返回,执行每一层的 defer
