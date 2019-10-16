@@ -66,3 +66,80 @@ panic vs os.Exit
 - 形成僵尸服务进程,导致 health check 失效
 - "Let it Crash" 往往是我们恢复不确定性错误的最好方式
 
+https://golang.google.cn/ref/spec#Defer_statements
+
+A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is 
+panicking.
+
+```
+defer Stmt = "defer" Expression .
+```
+
+```go
+func TestFuncWithoutDefer(t *testing.T) {
+	// 「雪之梦技术驿站」: 正常顺序
+	t.Log("「雪之梦技术驿站」: 正常顺序")
+
+	// 1 2
+	t.Log(1)
+	t.Log(2)
+}
+
+func TestFuncWithDefer(t *testing.T) {
+	// 「雪之梦技术驿站」: 正常顺序执行完毕后才执行 defer 代码
+	t.Log(" 「雪之梦技术驿站」: 正常顺序执行完毕后才执行 defer 代码")
+
+	// 2 1
+	defer t.Log(1)
+	t.Log(2)
+}
+
+func TestFuncWithMultipleDefer(t *testing.T) {
+	// 「雪之梦技术驿站」: 猜测 defer 底层实现数据结构可能是栈,先进后出.
+	t.Log(" 「雪之梦技术驿站」: 猜测 defer 底层实现数据结构可能是栈,先进后出.")
+
+	// 3 2 1
+	defer t.Log(1)
+	defer t.Log(2)
+	t.Log(3)
+}
+
+func TestFuncWithMultipleDeferOrder(t *testing.T) {
+	// 「雪之梦技术驿站」: defer 底层实现数据结构类似于栈结构,依次倒叙执行多个 defer 语句
+	t.Log(" 「雪之梦技术驿站」: defer 底层实现数据结构类似于栈结构,依次倒叙执行多个 defer 语句")
+
+	// 2 3 1
+	defer t.Log(1)
+	t.Log(2)
+	defer t.Log(3)
+}
+
+func TestFuncWithMultipleDeferAndReturn(t *testing.T) {
+	// 「雪之梦技术驿站」: defer 延迟函数会在包围函数正常return之前逆序执行.
+	t.Log(" 「雪之梦技术驿站」: defer 延迟函数会在包围函数正常return之前逆序执行.")
+
+	// 3 2 1
+	defer t.Log(1)
+	defer t.Log(2)
+	t.Log(3)
+	return
+	t.Log(4)
+}
+
+func TestFuncWithMultipleDeferAndPanic(t *testing.T) {
+	// 「雪之梦技术驿站」: defer 延迟函数会在包围函数panic惊慌失措之前逆序执行.
+	t.Log(" 「雪之梦技术驿站」: defer 延迟函数会在包围函数panic惊慌失措之前逆序执行.")
+
+	// 3 2 1
+	defer t.Log(1)
+	defer t.Log(2)
+	t.Log(3)
+	panic("「雪之梦技术驿站」: defer 延迟函数会在包围函数panic惊慌失措之前逆序执行.")
+	t.Log(4)
+}
+```
+
+The expression must be a function or method call; it cannot be parenthesized. Calls of built-in functions are restricted as for expression statements.
+
+Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked. Instead, deferred functions are invoked immediately before the surrounding function returns, in the reverse order they were deferred. That is, if the surrounding function returns through an explicit return statement, deferred functions are executed after any result parameters are set by that return statement but before the function returns to its caller. If a deferred function value evaluates to nil, execution panics when the function is invoked, not when the "defer" statement is executed.
+

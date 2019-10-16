@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 12 Oct 2019 08:09:54 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Oct 2019 15:53:48 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -651,6 +651,13 @@ csdn
             <description><![CDATA[闭包是主流编程语言中的一种通用技术,常常和函数式编程进行强强联合,本文主要是介绍 Go 语言中什么是闭包以及怎么理解闭包.]]></description>
             <link>https://snowdreams1006.github.io/go/functional/closure.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/functional/closure.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[异常管理]]></title>
+            <description><![CDATA[error vs panic]]></description>
+            <link>https://snowdreams1006.github.io/go/error/about.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/error/about.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
