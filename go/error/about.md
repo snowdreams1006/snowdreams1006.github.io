@@ -1,5 +1,11 @@
 # 错误管理
 
+`Go` 语言中有个 `defer` 关键字,常用于实现延迟函数来保证关键代码的最终执行,常言道: "未雨绸缪方可有备无患".
+
+延迟函数就是这么一种机制,无论程序是正常返回还是异常报错,只要存在延迟函数都会保证这部分逻辑执行,所以用来做些资源清理等操作再合适不过了.
+
+![go-error-about-defer.jpg](../images/go-error-about-defer.jpg)
+
 ## 出入成双有始有终
 
 日常开发编程中,有些操作总是成双成对出现的,有开始就有结束,有打开就要关闭,还有连续依赖关系需要处理.
@@ -276,9 +282,13 @@ func TestFuncWithMultipleDeferAndPanic(t *testing.T) {
 
 ## 延迟函数应用场景
 
+基本上成双成对的操作都可以使用延迟函数,尤其是申请的资源前后存在依赖关系时更应该使用 `defer` 关键字来简化处理逻辑.
 
+下面举两个常见例子来说明延迟函数的应用场景.
 
 - Open/Close
+
+文件操作一般会涉及到打开和开闭,尤其是文件之间拷贝操作更是有着严格的顺序,只需要按照申请资源的顺序紧跟着`defer` 就可以满足资源释放操作.
 
 ```go
 func readFileWithDefer(filename string) ([]byte, error) {
@@ -292,6 +302,8 @@ func readFileWithDefer(filename string) ([]byte, error) {
 ```
 
 - Lock/Unlock
+
+锁的申请和释放是保证同步的一种重要机制,需要申请多个锁资源时可能存在依赖关系,不妨尝试一下延迟函数!
 
 ```go
 var mu sync.Mutex
@@ -313,3 +325,32 @@ func lookupWithDefer(key string) int {
 - [go defer (go延迟函数)](https://www.cnblogs.com/ysherlock/p/8150726.html)
 
 ## 总结以及下节预告
+
+`defer` 延迟函数是保障关键逻辑正常运行的一种机制,如果存在多个延迟函数的话,一般会按照逆序的顺序运行,类似于栈结构.
+
+延迟函数的运行时机一般有三种情况:
+
+- 周围函数遇到返回时
+- 周围函数函数体结尾处
+- 当前协程惊慌失措中
+
+本文主要介绍了什么是 `defer` 延迟函数,通过解读官方文档并配套相关代码认识了延迟函数,下次将继续分享下延迟函数中可能令人迷惑的地方.
+
+读者不妨看一下下面的代码,将心里的猜想和实际运行结果比较一下,我们下次再接着分享.
+
+```go
+func deferFuncWithAnonymousReturnValue() int {
+	var retVal int
+	defer func() {
+		retVal++
+	}()
+	return 0
+}
+
+func deferFuncWithNamedReturnValue() (retVal int) {
+	defer func() {
+		retVal++
+	}()
+	return 0
+}
+```
