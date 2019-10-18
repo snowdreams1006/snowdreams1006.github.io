@@ -268,62 +268,48 @@ func TestFuncWithMultipleDeferAndPanic(t *testing.T) {
 
 简单地说,延迟函数就是一种未雨绸缪的规划机制,帮助开发者编程程序时及时做好收尾善后工作,提前做好预案以准备随时应对各种情况.
 
+- 当周围函数正常执行到到达函数体结尾时,如果发现存在延迟函数自然会逆序执行延迟函数.
+- 当周围函数正常执行遇到return语句准备返回给调用者时,存在延迟函数时也会执行,同样满足善后清理的需求.
+- 当周围函数异常运行不小心 `panic` 惊慌失措时,程序存在延迟函数也不会忘记执行,提前做好预案发挥了作用.
 
+所以不论是正常运行还是异常运行,提前做好预案总是没错的,基本上可以保证万无一失.
 
 ## 延迟函数应用场景
 
+
+
 - Open/Close
 
-> file对象打开后的自动关闭
-
 ```go
-func CopyFile(dstName, srcName string) (written int64, err error) {
-    src, err := os.Open(srcName)
-    if err != nil {
-        return
-    }
-    defer src.Close()
-
-    dst, err := os.Create(dstName)
-    if err != nil {
-        return
-    }
-    defer dst.Close()
-
-    // other codes
-    return io.Copy(dst, src)
+func readFileWithDefer(filename string) ([]byte, error) {
+	f, err := os.Open(filename)
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+	return ioutil.ReadAll(f)
 }
 ```
-
-在打开输入文件输出文件后,不管后面的代码流程如何影响,这两个文件能够被自动关闭.
 
 - Lock/Unlock
 
-> mutex对象锁住后的自动释放
-
 ```go
-func foo(...) {
-    mu.Lock()
-    defer mu.Unlock()
-
-    // code logic
+var mu sync.Mutex
+var m = make(map[string]int)
+func lookupWithDefer(key string) int {
+	mu.Lock()
+	defer mu.Unlock()
+	return m[key]
 }
 ```
 
-确保mu锁能够在函数foo退出之后自动释放。
-
-- PrintHeader/PrintFooter
-
 ## 延伸阅读参考文档
 
+- [Defer_statements](https://golang.google.cn/ref/spec#Defer_statements)
 - [go语言的defer语句](https://www.jianshu.com/p/5b0b36f398a2)
+- [Go defer实现原理剖析](https://studygolang.com/articles/16067)
+- [go语言 defer 你不知道的秘密!](https://www.cnblogs.com/baizx/p/5024547.html)
+- [Go语言中defer的一些坑](https://www.jianshu.com/p/79c029c0bd58)
+- [go defer (go延迟函数)](https://www.cnblogs.com/ysherlock/p/8150726.html)
 
 ## 总结以及下节预告
-
-### defer 调用
-
-- 确保调用在函数结束时发生
-- 参与在defer语言时计算
-- defer列表为后进先出
-
-## 何时使用 defer 调用
