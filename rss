@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 18 Oct 2019 10:49:40 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 18 Oct 2019 10:59:39 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -654,8 +654,8 @@ csdn
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[异常管理]]></title>
-            <description><![CDATA[error vs panic]]></description>
+            <title><![CDATA[错误管理]]></title>
+            <description><![CDATA[Go 语言中有个 defer 关键字,常用于实现延迟函数来保证关键代码的最终执行,常言道: "未雨绸缪方可有备无患".]]></description>
             <link>https://snowdreams1006.github.io/go/error/about.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/error/about.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
