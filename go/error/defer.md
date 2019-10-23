@@ -12,6 +12,49 @@ A "defer" statement invokes a function whose execution is deferred to the moment
 The expression must be a function or method call; it cannot be parenthesized. Calls of built-in functions are restricted as for expression statements.
 ```
 
+- 支持函数调用
+
+```go
+func funcCallWithDefer() {
+    fmt.Println("funcInvokeWithDefer function is called")
+}
+
+func TestFuncCallWithDefer(t *testing.T) {
+    // 「雪之梦技术驿站」: defer 语句可以是函数调用.
+    fmt.Println(" 「雪之梦技术驿站」: defer 语句可以是函数调用.")
+
+    defer funcCallWithDefer()
+
+    fmt.Println("TestFuncInvokeWithDefer function call has ended")
+}
+``` 
+
+- 支持方法调用
+
+```go
+type Lang struct {
+    name    string
+    website string
+}
+
+func (l *Lang) ToString() {
+    fmt.Printf("Lang:[name = %s,website = %s] \n", l.name, l.website)
+}
+
+func TestMethodCallWithDefer(t *testing.T) {
+    // 「雪之梦技术驿站」: defer 语句也可以是方法调用.
+    fmt.Println(" 「雪之梦技术驿站」: defer 语句也可以是方法调用.")
+
+    var l = new(Lang)
+    l.name = "Go"
+    l.website = "https://snowdreams1006.github.io/go/"
+
+    defer l.ToString()
+
+    fmt.Println("TestMethodCallWithDefer method call has ended")
+}
+```
+
 ### 内建函数(Built-in functions)
 
 |函数名|说明|说明|
