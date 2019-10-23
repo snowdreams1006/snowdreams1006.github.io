@@ -1,12 +1,12 @@
 # 延迟函数
 
-## 上节回顾
+## 温故知新不忘延迟基础
 
 ```
 A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
 ```
 
-## 本节概要
+## 支持什么又不支持哪些
 
 ```
 The expression must be a function or method call; it cannot be parenthesized. Calls of built-in functions are restricted as for expression statements.
@@ -96,7 +96,43 @@ func TestBuiltinFuncCallWithDefer(t *testing.T) {
 }
 ```
 
-## 阅读更多
+## 咬文嚼字深入理解延迟
+
+```
+Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked. Instead, deferred functions are invoked immediately before the surrounding function returns, in the reverse order they were deferred. That is, if the surrounding function returns through an explicit return statement, deferred functions are executed after any result parameters are set by that return statement but before the function returns to its caller. If a deferred function value evaluates to nil, execution panics when the function is invoked, not when the "defer" statement is executed.
+```
+
+### 第一句
+
+> Each time a "defer" statement executes, **the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked**.
+
+### 第二句
+
+> Instead, **deferred functions are invoked immediately** before the surrounding function returns, **in the reverse order they were deferred**.
+
+### 第三句
+
+> That is, if the **surrounding function** returns through an **explicit return statement**, **deferred functions** are executed **after any result parameters are set by** that return statement but **before the function returns** to its caller.
+
+### 第四句
+
+> If a **deferred function** value **evaluates to nil**, **execution panics when the function is invoked**, not when the "defer" statement is executed.
+
+## 理论加实践才是硬道理
+
+```
+For instance, if the deferred function is a function literal and the surrounding function has named result parameters that are in scope within the literal, the deferred function may access and modify the result parameters before they are returned. If the deferred function has any return values, they are discarded when the function completes. (See also the section on handling panics.)
+```
+
+### 第一句
+
+> For instance, if the **deferred function** is a **function litera**l and the **surrounding function** has **named result parameters** that are in scope within the literal, **the deferred function may access and modify the result parameters before they are returned**.
+
+### 第二句
+
+> If the **deferred function** has any **return values**, they are **discarded** when the function completes. (See also the section on handling panics.)
+
+## 阅读延伸以及参考文档
 
 - [Defer_statements](https://golang.google.cn/ref/spec#Defer_statements)
 - [Built-in_functions](https://golang.google.cn/ref/spec#Built-in_functions)
