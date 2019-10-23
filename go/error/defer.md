@@ -55,7 +55,11 @@ func TestMethodCallWithDefer(t *testing.T) {
 }
 ```
 
-### 内建函数(Built-in functions)
+- 不可以被括号包裹
+
+![go-error-defer-parenthesized-fail.png](../images/go-error-defer-parenthesized-fail.png)
+
+- 内建函数和表达式一样受限
 
 |函数名|说明|说明|
 |:-:|:-:|:-:|
@@ -75,6 +79,22 @@ func TestMethodCallWithDefer(t *testing.T) {
 |real|抽出复数的实部|复数操作|
 |imag|抽出复数的虚部|复数操作|
 
+```go
+func TestBuiltinFuncCallWithDefer(t *testing.T) {
+    // 「雪之梦技术驿站」: defer 语句不可以被括号包裹.
+    fmt.Println(" 「雪之梦技术驿站」: defer 语句不可以被括号包裹.")
+
+    arr := new([10]int)
+    arr[4] = 5
+    arr[7] = 8
+
+    // defer discards result of len(arr)
+    defer len(arr)
+    defer println("Calls of built-in functions are restricted as for expression statements.")
+
+    fmt.Println("TestBuiltinFuncCallWithDefer function call has ended")
+}
+```
 
 ## 阅读更多
 
