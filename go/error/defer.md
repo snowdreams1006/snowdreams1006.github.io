@@ -132,6 +132,8 @@ For instance, if the deferred function is a function literal and the surrounding
 
 > If the **deferred function** has any **return values**, they are **discarded** when the function completes. (See also the section on handling panics.)
 
+## 公布答案以及总结全文
+
 ## 阅读延伸以及参考文档
 
 - [Defer_statements](https://golang.google.cn/ref/spec#Defer_statements)
