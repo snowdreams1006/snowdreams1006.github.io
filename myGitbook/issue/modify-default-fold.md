@@ -38,3 +38,21 @@
 
 ## 用一下搜索引擎又不会死
 
+俗话说:互联网上绝大多数问题别人都已经遇到过并提供了解决方案,我们要做的就是找到它!
+
+这也是面向搜索编程的核心思想,遇到默认折叠问题应该也不会例外,那就搜索一下吧!
+
+![gitbook-issue-modify-default-fold-search-baidu-no-result.png](../images/gitbook-issue-modify-default-fold-search-baidu-no-result.png)
+
+虽然百度搜索出现了一些相关文章,但是却不是我们想要的效果,大多数是基于 `gitbook` 插件实现的目录折叠效果,并不是默认折叠左侧菜单效果.
+
+不管是换关键词重新搜索还是谷歌搜索,均未发现有关默认折叠左侧菜单的解决方案,难不成面向搜索失败了,要做解决问题的第一人吗!
+
+![gitbook-issue-modify-default-fold-search-google-no-result.png](../images/gitbook-issue-modify-default-fold-search-google-no-result.png)
+
+> 多次重复搜索操作均为找到解决方案,由此可见真的很少有人想要默认折叠左侧菜单,我也是很佩服提出该问题的小伙伴骨骼惊奇啊!
+
+## 直面问题期待找到蛛丝马迹
+
+既然依靠别人无法解决问题,那么只能自力更生独自解决问题,是时候考验真正的技术了!
+
