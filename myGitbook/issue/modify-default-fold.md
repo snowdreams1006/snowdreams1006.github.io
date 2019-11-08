@@ -749,11 +749,46 @@ $ sudo npm install -g browserify uglify-js less less-plugin-clean-css
 
 - 运行 `build.sh` 构建脚本重新编译
 
-
+```bash
+$ src/build.sh
+```
 
 - 切换到测试项目验证默认折叠是否已生效
 
 ```bash
 $ gitbook serve
 ```
+
+最后说明,实现默认折叠左侧菜单功能仅仅需要添加一行代码,因此很有可能和项目中已引入插件存在冲突,毕竟 `sidebar` 的状态也可以被未知代码所更改!
+
+```js
+// Prepare sidebar: state and toggle button
+function init() {
+    // Close sidebar as default state 
+    gitbook.storage.set('sidebar', false);
+
+    // Open sidebar as default state 
+    // gitbook.storage.set('sidebar', true);
+
+    // Init last state if not mobile
+    if (!platform.isMobile()) {
+        toggleSidebar(gitbook.storage.get('sidebar', true), false);
+    }
+
+    // Close sidebar after clicking a link on mobile
+    $(document).on('click', '.book-summary li.chapter a', function(e) {
+        if (platform.isMobile()) toggleSidebar(false, false);
+    });
+}
+```
+
+## 从本文学到了啥
+
+- 面向搜索引擎编程学习的理论实践
+- 官方文档停更后如何查阅旧版文档
+- 如何快速定位并想办法不熟悉问题
+- 一边猜想一边验证自己的思路想法
+- 自己动手丰衣足食也不是不可能的
+- 解决问题后记得总结分享相关经验
+- 如何优雅地实现左侧菜单默认折叠
 
