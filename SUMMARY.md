@@ -64,6 +64,7 @@
     * [公众号引流](myGitbook/openwrite/README.md)
     * [常见问题](myGitbook/issue/README.md)
         * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
+        * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
     * [参考更多](myGitbook/reference/README.md)
 * [java8新特性](java8/README.md)
     * [lambda表达式](java8/lambda.md)
