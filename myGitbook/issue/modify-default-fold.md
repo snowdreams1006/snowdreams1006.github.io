@@ -119,7 +119,212 @@ $ gitbook serve
 
 一个是源码文件,另一个是输出文件,想要在庞大的 `gitbook` 项目中迅速定位到相关代码逻辑,个人能力有限,并不熟悉前端开发调试流程,因此采用最简单粗暴傻瓜式搜索方式进行排查!
 
+- 查看当前 `gitbook` 版本
 
+```bash
+$ gitbook current
+GitBook version is 3.2.3
+```
 
+- 找到 `gitbook` 安装位置
 
+`gitbook` 一般安装在 `~/.gitbook/versions/3.2.3` 目录,其中 `~` 表示用户家目录.
 
+```bash
+$ open ~/.gitbook/versions/3.2.3
+```
+
+找到该目录后拖动到 `sublime` 编辑器进行全局搜索关键字 `js-toolbar-action` 期望找到相关源码文件.
+
+![gitbook-issue-modify-default-fold-source-sublime-search.png](../images/gitbook-issue-modify-default-fold-source-sublime-search.png)
+ 
+全局搜索后主要出现两个文件包含 `js-toolbar-action` 关键字,一个是输出文件 `theme.js` ,另一个是源码文件 `toolbar.js` .
+
+```
+Searching 19744 files for "js-toolbar-action"
+
+/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/_assets/website/theme.js:
+
+...
+
+e.dropdown);l.addClass("dropdown-"+("right"==e.position?"left":"right")),u.append(l),t=u}else s.addClass(i),s.addClass(e.className),t=s;t.addClass("js-toolbar-action"),p.isNumeric(e.index)&&e.index>=0?o(n,".btn, .dropdown, h1",e.index,t):t.insertBefore(r)}function l(){p(".js-toolbar-action").remove(),d.forEach(u)}function c(e){d=p.grep(d,function(t){return t.id!=e}),l()}function f(e){d=p.grep(d,function(t){return e.indexOf(t.id)==-1}),l()}var p=e("jquery"),h=window.gitbook,d=[],g=0;h.events.on("page.change",function(){l()}),t.exports={createButton:s,removeButton:c,removeButtons:f}},{jquery:1}]},{},[10]);
+
+/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme/toolbar.js:
+  167      }
+  168  
+  169:     $result.addClass('js-toolbar-action');
+  170  
+  171      if ($.isNumeric(opts.index) && opts.index >= 0) {
+  ...
+  178  // Update all buttons
+  179  function updateAllButtons() {
+  180:     $('.js-toolbar-action').remove();
+  181      buttons.forEach(updateButton);
+  182  }
+
+4 matches across 2 files
+```
+
+可想而知,源码文件肯定是经过**编译处理**后统一打包输出,因此不仅仅要找到源码文件还要掌握如何编译.
+
+> 定位到当前 `gitbook` 目录后借助全局搜索功能定位到具体的文件路径,起作用的是 `gitbook-plugin-theme-default` 项目.
+
+### 源码在哪
+
+`/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme/toolbar.js` :
+
+```js
+// Update a button
+function updateButton(opts) {
+    var $result;
+    var $toolbar = $('.book-header');
+    var $title = $toolbar.find('h1');
+
+    // Build class name
+    var positionClass = 'pull-'+opts.position;
+
+    // Create button
+    var $btn = $('<a>', {
+        'class': 'btn',
+        'text': opts.text? ' ' + opts.text : '',
+        'aria-label': opts.label,
+        'href': '#'
+    });
+
+    // Bind click
+    $btn.click(opts.onClick);
+
+    // Prepend icon
+    if (opts.icon) {
+        $('<i>', {
+            'class': opts.icon
+        }).prependTo($btn);
+    }
+
+    // Prepare dropdown
+    if (opts.dropdown) {
+        var $container = $('<div>', {
+            'class': 'dropdown '+positionClass+' '+opts.className
+        });
+
+        // Add button to container
+        $btn.addClass('toggle-dropdown');
+        $container.append($btn);
+
+        // Create inner menu
+        var $menu = createDropdownMenu(opts.dropdown);
+
+        // Menu position
+        $menu.addClass('dropdown-'+(opts.position == 'right'? 'left' : 'right'));
+
+        $container.append($menu);
+        $result = $container;
+    } else {
+        $btn.addClass(positionClass);
+        $btn.addClass(opts.className);
+        $result = $btn;
+    }
+
+    $result.addClass('js-toolbar-action');
+
+    if ($.isNumeric(opts.index) && opts.index >= 0) {
+        insertAt($toolbar, '.btn, .dropdown, h1', opts.index, $result);
+    } else {
+        $result.insertBefore($title);
+    }
+}
+
+// Update all buttons
+function updateAllButtons() {
+    $('.js-toolbar-action').remove();
+    buttons.forEach(updateButton);
+}
+```
+
+粗略看一下,上述代码是实现触发左侧图标折叠/展开菜单的逻辑实现,还不知道谁是使用者,这种逻辑是在哪里调用的?
+
+只能顺藤摸瓜,继续往上翻看,根据基本开发常识,在该文件的同级目录中存在如下文件,其中就有 `index.js` 应该是入口文件:
+
+```bash
+snowdreams1006s-MacBook-Pro:theme snowdreams1006$ tree .
+.
+├── dropdown.js
+├── index.js
+├── keyboard.js
+├── loading.js
+├── navigation.js
+├── platform.js
+├── sidebar.js
+└── toolbar.js
+
+0 directories, 8 files
+snowdreams1006s-MacBook-Pro:theme snowdreams1006$ 
+````
+
+打开 `index.js` 文件,根据注释我们可以看到 `init()` 函数是入门函数,其中 `sidebar.init()` 和 `sidebar.toggle()` 函数无不说明 `sidebar.js` 和 `toolbar.js` 关系密切,完全有理由猜想 `sidebar.js` 是 `toolbar.js` 的使用者!
+ 
+```js
+function init() {
+    // Init sidebar
+    sidebar.init();
+
+    // Init keyboard
+    keyboard.init();
+
+    // Bind dropdown
+    dropdown.init();
+
+    // Init navigation
+    navigation.init();
+
+    // Add action to toggle sidebar
+    toolbar.createButton({
+        index: 0,
+        icon: 'fa fa-align-justify',
+        onClick: function(e) {
+            e.preventDefault();
+            sidebar.toggle();
+        }
+    });
+}
+```
+
+打开 `sidebar.js` 文件并查看 `init()` 初始化函数和 `toggle()` 触发函数,可以验证我们的猜想,这里就是控制中心!
+
+```js
+// Prepare sidebar: state and toggle button
+function init() {
+    // Init last state if not mobile
+    if (!platform.isMobile()) {
+        toggleSidebar(gitbook.storage.get('sidebar', true), false);
+    }
+
+    // Close sidebar after clicking a link on mobile
+    $(document).on('click', '.book-summary li.chapter a', function(e) {
+        if (platform.isMobile()) toggleSidebar(false, false);
+    });
+}
+```
+
+> 非手机端初始化上次状态,默认展开侧边栏,如果是手机端则折叠侧边栏.其中 toggleSidebar() 接收两个参数,第一次参数表示是展开还是折叠,第二个参数暂不可知.
+
+```js
+// Toggle sidebar with or withour animation
+function toggleSidebar(_state, animation) {
+    if (gitbook.state != null && isOpen() == _state) return;
+    if (animation == null) animation = true;
+
+    gitbook.state.$book.toggleClass('without-animation', !animation);
+    gitbook.state.$book.toggleClass('with-summary', _state);
+
+    gitbook.storage.set('sidebar', isOpen());
+}
+```
+
+> 第一个参数确实表示状态而第二个参数表示是否有动画效果,不用看具体代码逻辑而是看注释就能猜出大概逻辑了.
+
+通过上述分析,我们可以得知 `init()` 初始化函数决定了默认行为是折叠还是展开,同时 `gitbook.storage.set('sidebar', isOpen())` 和 `gitbook.storage.get('sidebar', true)` 应该是设置和获取是否展开菜单的标志!
+
+由此,如果想要默认折叠左侧菜单,那么只需要设置成 `gitbook.storage.set('sidebar', false)` 应该就会生效!
+
+### 如何编译
