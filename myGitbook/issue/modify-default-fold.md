@@ -644,5 +644,54 @@ snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$
 
 `linux` 命令行哲学告诉我们,没想消息就是好消息,全部安装项目环境后再次运行 `src/build.sh` 脚本瞬间安静了!
 
+怀着忐忑不安的心,切换到测试项目运行 `gitbook serve` 命令后,那一瞬间,感觉世界都静止了,奇迹就这么发生了?
 
+![gitbook-issue-modify-default-fold-test-serve-again-success.png](../images/gitbook-issue-modify-default-fold-test-serve-again-success.png)
+
+成功了?
+
+默认折叠左侧菜单设置的是 `false`,刚才已生效,如果设置成 `true` 应该是展开状态.
+
+```js
+// Prepare sidebar: state and toggle button
+function init() {
+    // Close sidebar as default state 
+    // gitbook.storage.set('sidebar', false);
+
+    // Open sidebar as default state 
+    gitbook.storage.set('sidebar', true);
+
+    // Init last state if not mobile
+    if (!platform.isMobile()) {
+        toggleSidebar(gitbook.storage.get('sidebar', true), false);
+    }
+
+    // Close sidebar after clicking a link on mobile
+    $(document).on('click', '.book-summary li.chapter a', function(e) {
+        if (platform.isMobile()) toggleSidebar(false, false);
+    });
+}
+```
+
+重新编译后再次启动本地测试项目,如果是展开状态,那就说明成功不是偶然而是靠技巧和努力!
+
+- 重新编译源码
+
+```bash
+$ src/build.sh
+```
+
+> /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default
+
+- 启动本地项目
+
+```bash
+$ gitbook serve
+```
+
+> /Users/snowdreams1006/Documents/workspace/test
+
+![gitbook-issue-modify-default-fold-test-serve-again-verify.png](../images/gitbook-issue-modify-default-fold-test-serve-again-verify.png)
+
+## 懒人直达和总结回顾
 
