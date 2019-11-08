@@ -695,3 +695,65 @@ $ gitbook serve
 
 ## 懒人直达和总结回顾
 
+如果你是 gitbook 普通用户或者懒得折腾,那么推荐你直接替换掉 `theme.js` 文件:
+
+- 查看正在使用的 `gitbook` 版本信息
+
+```bash
+$ gitbook current
+GitBook version is 3.2.3
+```
+
+- 打开正在使用的 `gitbook` 安装位置
+
+```bash
+$ open ~/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/
+```
+
+- 新文件替换掉原来的 `_assets/website/theme.js` 文件
+
+> 可以关注微信公众号回复 "gitbook" 获取重新编译后的新文件 `theme.js`.
+
+- 切换到测试项目验证默认折叠是否已生效
+
+```bash
+$ gitbook serve
+```
+
+如果你不怕麻烦,喜欢折腾,不妨体验一下如何重新编译源码文件.
+
+- 查看正在使用的 `gitbook` 版本信息
+
+```bash
+$ gitbook current
+GitBook version is 3.2.3
+```
+
+- 打开正在使用的 `gitbook` 安装位置
+
+```bash
+$ open ~/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/
+```
+
+- 安装 `theme-default` 默认主题项目所需依赖
+
+```bash
+$ npm install
+```
+
+- 安装 `build.sh` 构建脚本所需依赖
+
+```bash
+$ sudo npm install -g browserify uglify-js less less-plugin-clean-css
+```
+
+- 运行 `build.sh` 构建脚本重新编译
+
+
+
+- 切换到测试项目验证默认折叠是否已生效
+
+```bash
+$ gitbook serve
+```
+
