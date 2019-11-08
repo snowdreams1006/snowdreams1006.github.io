@@ -525,4 +525,124 @@ browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
 
 接下来的重点就是如何运行 `browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js` 命令了!
 
+## 重新编译焕发新春
+
+> `browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js`
+
+### 百度一下 browserify 
+
+打开熟悉的浏览器输入关键字 `browserify` 后出现一系列相关文章,很好奇为啥排名第一个都不会是官网呢?不管怎么样,找到 `browserify` 的 `github` 项目地址也是不错的!
+
+![gitbook-issue-modify-default-fold-search-browserify.png](../images/gitbook-issue-modify-default-fold-search-browserify.png)
+
+这里并不关心 `browserify` 到底是什么,只在乎如何安装基本环境而已!
+
+```bash
+$ npm install -g browserify
+```
+
+> 如果是 `mac` 电脑,全局安装需要管理员权限,应该运行 `sudo npm install -g browserify` ,如果嫌弃安装速度慢也可以运行 `cnpm install -g browserify` ,前提是已安装 `cnpm` 命令.
+
+### 谷歌一下 uglifyjs
+ 
+不吹不黑,少走一点弯路,直接就找到了 `github` 项目网址,同样的也不关心项目介绍,直接翻看如何安装部分.
+
+
+```bash
+$ npm install -g uglify-js
+```
+
+![gitbook-issue-modify-default-fold-search-uglifyjs.png](../images/gitbook-issue-modify-default-fold-search-uglifyjs.png)
+
+### 重新编译
+
+出现报错时,开始怀疑人生,难道推论不正确,环境没有全部安装吗,为啥提示找不到 `mousetrap` 模块?
+
+```bash
+$ browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
+Error: Cannot find module 'mousetrap' from '/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme'
+    at /usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:46:17
+    at process (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:173:43)
+    at ondir (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:188:17)
+    at load (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:69:43)
+    at onex (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:92:31)
+    at /usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:22:47
+    at FSReqCallback.oncomplete (fs.js:158:21)
+```
+
+那就先把 `src/build.sh` 构建脚本涉及到的其他命令全部安装一遍再试一下吧!
+
+```
+# Compile Website CSS
+lessc -clean-css src/less/website.less _assets/website/style.css
+```
+
+这里省略面向搜索编程的中间过程,安装命令如下:
+
+```bash
+$ npm install -g less less-plugin-clean-css
+```
+
+当我以为运行构建脚本的环境已经准备好了的时候,现实再一次打脸,没想到错误更多了呢,真的是没想到!
+
+```bash
+snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ src/build.sh 
+Error: Cannot find module 'jquery' from '/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/core'
+    at /usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:46:17
+    at process (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:173:43)
+    at ondir (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:188:17)
+    at load (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:69:43)
+    at onex (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:92:31)
+    at /usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:22:47
+    at FSReqCallback.oncomplete (fs.js:158:21)
+Error: Cannot find module 'mousetrap' from '/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme'
+    at /usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:46:17
+    at process (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:173:43)
+    at ondir (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:188:17)
+    at load (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:69:43)
+    at onex (/usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:92:31)
+    at /usr/local/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:22:47
+    at FSReqCallback.oncomplete (fs.js:158:21)
+FileError: '../../node_modules/font-awesome/less/font-awesome.less' wasn't found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/font-awesome/less/font-awesome.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/font-awesome/less/font-awesome.less,../../node_modules/font-awesome/less/font-awesome.less in /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/website.less on line 2, column 1:
+1 @import "base/all.less";
+2 @import "../../node_modules/font-awesome/less/font-awesome.less";
+3 @import "../../node_modules/preboot/less/preboot.less";
+
+FileError: '../../../node_modules/gitbook-markdown-css/less/mixin.less' wasn't found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/gitbook-markdown-css/less/mixin.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/node_modules/gitbook-markdown-css/less/mixin.less,../../../node_modules/gitbook-markdown-css/less/mixin.less in /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/base/mixins.less on line 1, column 1:
+1 @import "../../../node_modules/gitbook-markdown-css/less/mixin.less";
+2 
+
+FileError: '../../../node_modules/gitbook-markdown-css/less/mixin.less' wasn't found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/gitbook-markdown-css/less/mixin.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/node_modules/gitbook-markdown-css/less/mixin.less,../../../node_modules/gitbook-markdown-css/less/mixin.less in /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/base/mixins.less on line 1, column 1:
+1 @import "../../../node_modules/gitbook-markdown-css/less/mixin.less";
+2 
+
+FileError: '../../../node_modules/gitbook-markdown-css/less/mixin.less' wasn't found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/gitbook-markdown-css/less/mixin.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/node_modules/gitbook-markdown-css/less/mixin.less,../../../node_modules/gitbook-markdown-css/less/mixin.less in /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/base/mixins.less on line 1, column 1:
+1 @import "../../../node_modules/gitbook-markdown-css/less/mixin.less";
+2 
+
+FileError: '../../../node_modules/gitbook-markdown-css/less/mixin.less' wasn't found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/gitbook-markdown-css/less/mixin.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/node_modules/gitbook-markdown-css/less/mixin.less,../../../node_modules/gitbook-markdown-css/less/mixin.less in /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/base/mixins.less on line 1, column 1:
+1 @import "../../../node_modules/gitbook-markdown-css/less/mixin.less";
+2 
+
+cp: directory _assets/website/fonts/fontawesome does not exist
+cp: node_modules/gitbook-logos/output/favicon.ico: No such file or directory
+cp: node_modules/gitbook-logos/output/apple-touch-icon-152.png: No such file or directory
+```
+
+那就再扩大安装环境范围,对整个 `gitbook-plugin-theme-default` 进行 `npm install` ,这一次会发生什么情况呢?
+
+```bash
+$ npm install
+```
+
+让我们拭目以待!
+
+```bash
+snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ src/build.sh 
+snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$
+```
+
+`linux` 命令行哲学告诉我们,没想消息就是好消息,全部安装项目环境后再次运行 `src/build.sh` 脚本瞬间安静了!
+
+
 
