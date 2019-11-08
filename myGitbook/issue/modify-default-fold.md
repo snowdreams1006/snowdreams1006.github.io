@@ -56,3 +56,28 @@
 
 既然依靠别人无法解决问题,那么只能自力更生独自解决问题,是时候考验真正的技术了!
 
+为了排除无关干扰,不能再用自己的 `gitbook` 项目了,毕竟文件太多不方便后续调试,重新创建一个测试项目.
+
+- 创建测试项目
+
+```bash
+$ mkdir test && cd test
+```
+
+- 初始化测试项目
+
+```bash
+$ gitbook init
+```
+
+- 启动测试项目
+
+```bash
+$ gitbook serve
+```
+
+![gitbook-issue-modify-default-fold-test-serve.png](../images/gitbook-issue-modify-default-fold-test-serve.png)
+
+虽然一片空白,并没有什么实质性内容,但是大道至简,对于我们复现并测试问题来说,足够了!
+
+
