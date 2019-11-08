@@ -328,3 +328,201 @@ function toggleSidebar(_state, animation) {
 由此,如果想要默认折叠左侧菜单,那么只需要设置成 `gitbook.storage.set('sidebar', false)` 应该就会生效!
 
 ### 如何编译
+
+说干就干,于是乎在 `init()` 函数插入 `gitbook.storage.set('sidebar', false)` 默认折叠逻辑,接着看一下是否需要重新编译才能生效?
+
+```js
+// Prepare sidebar: state and toggle button
+function init() {
+    // Close sidebar as default state 
+    gitbook.storage.set('sidebar', false);
+
+    // Init last state if not mobile
+    if (!platform.isMobile()) {
+        toggleSidebar(gitbook.storage.get('sidebar', true), false);
+    }
+
+    // Close sidebar after clicking a link on mobile
+    $(document).on('click', '.book-summary li.chapter a', function(e) {
+        if (platform.isMobile()) toggleSidebar(false, false);
+    });
+}
+```
+
+切换到测试项目再次运行 `gitbook serve` 启动本地服务器,发现并没有任何变化,很有可能改变源码文件需要重新编译才会生效或者说更改的源码项目也没有生效?
+
+![gitbook-issue-modify-default-fold-test-serve-again-fail.png](../images/gitbook-issue-modify-default-fold-test-serve-again-fail.png)
+
+该源码文件所在的项目是 `gitbook-plugin-theme-default` ,根据 `gitbook` 插件命名规范我们知道,`gitbook-plugin-*` 一般是功能性插件,这一类的插件有 `gitbook-plugin-readmore` 阅读更多插件和 `gitbook-plugin-copyright` 版权保护插件等等.
+
+但是如果插件名以 `gitbook-plugin-theme` 开头的话,这一类插件就是主题插件,比如 `gitbook-plugin-theme-default` 就是默认主题.
+
+除此之外,只要遵守该命名规则的插件引入时无需添加 `gitbook-plugin-` 前缀,可以直接在 `gitbook.json` 文件中引入剩余的简称作为插件名.
+
+```json
+"plugins": [
+    "toc",
+    "pageview-count",
+    "mermaid-gb3",
+    "-lunr",
+    "-search",
+    "search-plus",
+    "splitter",
+    "-sharing",
+    "sharing-plus",
+    "expandable-chapters-small",
+    "anchor-navigation-ex",
+    "edit-link",
+    "copy-code-button",
+    "chart",
+    "favicon-custom",
+    "github-buttons",
+    "advanced-emoji",
+    "rss",
+    "readmore",
+    "copyright",
+    "tbfed-pagefooter",
+    "mygitalk",
+    "donate"
+]
+```
+
+`package.json` 提供了插件的配置信息,`gitbook` 插件除了是标准的 `nodejs` 包之外还有自己的约束,主要体现在提供了插件配置项相关说明 `gitbook` :
+
+```json
+"gitbook": {
+    "properties": {
+      "styles": {
+        "type": "object",
+        "title": "Custom Stylesheets",
+        "properties": {
+          "website": {
+            "title": "Stylesheet for website output",
+            "default": "styles/website.css"
+          },
+          "pdf": {
+            "title": "Stylesheet for PDF output",
+            "default": "styles/pdf.css"
+          },
+          "epub": {
+            "title": "Stylesheet for ePub output",
+            "default": "styles/epub.css"
+          },
+          "mobi": {
+            "title": "Stylesheet for Mobi output",
+            "default": "styles/mobi.css"
+          },
+          "ebook": {
+            "title": "Stylesheet for ebook outputs (PDF, ePub, Mobi)",
+            "default": "styles/ebook.css"
+          },
+          "print": {
+            "title": "Stylesheet to replace default ebook css",
+            "default": "styles/print.css"
+          }
+        }
+      },
+      "showLevel": {
+        "type": "boolean",
+        "title": "Show level indicator in TOC",
+        "default": false
+      }
+    }
+}
+```
+
+默认主题仅仅提供了两个配置项,分别是 `styles` 样式文件位置和 `showLevel` 是否显示层级配置.
+
+再一次验证了猜想的正确性,真的需要修改源码才能实现默认折叠左侧菜单的效果,找到项目源码看一下有没有二次开发文档.
+
+```json
+"repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitbookIO/theme-default.git"
+}
+```
+
+既然查到了 `github` [项目地址](https://github.com/GitbookIO/theme-default),那就去看看吧!
+
+![gitbook-issue-modify-default-fold-theme-default-github-preview.png](../images/gitbook-issue-modify-default-fold-theme-default-github-preview.png)
+
+除了一张主题预览图,别的什么都没有?!
+
+既然没有二次开发文档,那就看看项目源码有没有别的蛛丝马迹教我们如何编译?
+
+> 其实还不是因为比较菜,给了源码都不会编译,高逼格的前端开发越来越跟不上时代的潮流了呢!
+
+视角再一次切换到源码目录,除了 `js` 和 `less` 目录外,还有一个 `build.sh` 构建脚本!
+
+```bash
+snowdreams1006s-MacBook-Pro:src snowdreams1006$ tree 
+.
+├── build.sh
+├── js
+│   ├── core
+│   └── theme
+│       ├── dropdown.js
+│       ├── index.js
+│       ├── keyboard.js
+│       ├── loading.js
+│       ├── navigation.js
+│       ├── platform.js
+│       ├── sidebar.js
+│       └── toolbar.js
+└── less
+
+7 directories, 37 files
+snowdreams1006s-MacBook-Pro:src snowdreams1006$ 
+```
+
+仿佛看到了九点钟升起的太阳,未来是你们的也是我们的!
+
+```bash
+snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ cat src/build.sh 
+#! /bin/bash
+
+# Cleanup folder
+rm -rf _assets
+
+# Recreate folder
+mkdir -p _assets/website/
+mkdir -p _assets/ebook/
+
+# Compile JS
+browserify src/js/core/index.js | uglifyjs -mc > _assets/website/gitbook.js
+browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
+
+# Compile Website CSS
+lessc -clean-css src/less/website.less _assets/website/style.css
+
+# Compile eBook CSS
+lessc -clean-css src/less/ebook.less _assets/ebook/ebook.css
+lessc -clean-css src/less/pdf.less _assets/ebook/pdf.css
+lessc -clean-css src/less/mobi.less _assets/ebook/mobi.css
+lessc -clean-css src/less/epub.less _assets/ebook/epub.css
+
+# Copy fonts
+mkdir -p _assets/website/fonts
+cp -R node_modules/font-awesome/fonts/ _assets/website/fonts/fontawesome/
+
+# Copy icons
+mkdir -p _assets/website/images
+cp node_modules/gitbook-logos/output/favicon.ico _assets/website/images/
+cp node_modules/gitbook-logos/output/apple-touch-icon-152.png _assets/website/images/apple-touch-icon-precomposed-152.png
+
+snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ 
+```
+
+这一段脚本中除了看不懂 `browserify,uglifyjs,lessc -clean-css` 命令外,其余很简单,大致是编译源码文件并输出到 `_assets` 目录.
+
+编译 `js` 的命令主要有以下两条,而我们关心的 `theme.js` 仅涉及到一条,除此之外没有任何别的依赖,这一点非常好!
+
+```bash
+# Compile JS
+browserify src/js/core/index.js | uglifyjs -mc > _assets/website/gitbook.js
+browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
+```
+
+接下来的重点就是如何运行 `browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js` 命令了!
+
+
