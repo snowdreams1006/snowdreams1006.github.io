@@ -76,8 +76,28 @@ $ gitbook init
 $ gitbook serve
 ```
 
+虽然一片空白,并没有什么实质性内容,但是大道至简,对于我们复现并测试问题来说,足够了!
+
 ![gitbook-issue-modify-default-fold-test-serve.png](../images/gitbook-issue-modify-default-fold-test-serve.png)
 
-虽然一片空白,并没有什么实质性内容,但是大道至简,对于我们复现并测试问题来说,足够了!
+打开 `Chrome` 浏览器并按下 `F12` 开启调试模式,鼠标选中左侧的 `Elements` 元素选项卡并点亮左侧的小鼠标,然后在页面上找到左侧图标按钮,于是选中元素高亮了.
+
+![gitbook-issue-modify-default-fold-test-serve-selected-elements.png](../images/gitbook-issue-modify-default-fold-test-serve-selected-elements.png)
+
+```html
+<a class="btn pull-left js-toolbar-action" aria-label="" href="#"><i class="fa fa-align-justify"></i></a>
+```
+
+稍微熟悉前端的小伙伴可能很轻松就能明白 `a` 标签的 `class` 属性表示的含义,见名知意,可以这么解释:
+
+- `btn` 应该是控制外观的样式,表现得像是按钮效果.
+- `pull-left` 应该是控制元素的位置,拉倒左边.
+- `js-toolbar-action` 应该是控制元素的行为,`js` 工具栏行为动作.
+
+由此可见,点击该图标实现左侧菜单折叠/展开效果应该是 `.js-toolbar-action` 在起作用,也就是说某一段 `js` 肯定是针对该 `class` 进行了监听!
+
+![gitbook-issue-modify-default-fold-test-serve-inspection-listeners.png](../images/gitbook-issue-modify-default-fold-test-serve-inspection-listeners.png)
+
+
 
 
