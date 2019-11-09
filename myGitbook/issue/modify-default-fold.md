@@ -1,6 +1,6 @@
 # 初始化默认折叠效果
 
-## 善良的我总是有求必应
+## 善良的我选择帮助别人
 
 可能是网上关于 `gitbook` 的教程比较落后的原因吧,写文章初期做了不少关于gitbook系列教程,上个月有个好友问我能不能配置默认折叠的效果,心里有些犯难,作为 `gitbook` 的忠实粉丝,我都不知道 `gitbook` 有这方面的配置!
 
@@ -12,7 +12,7 @@
 
 > 不能复现的问题都不是我的问题,拒绝解决此类问题,搞不好是你自己环境搭建问题呢!
 
-## 寻找官方文档之路艰难
+## 蓦然回首官方文档已走
 
 问题复现后就要开始寻求解决之道,虽然印象中并没有相关配置,但是难保记忆混乱遗漏了某些配置项,所以还是先看看官方文档怎么说的吧!
 
@@ -36,7 +36,7 @@
 
 > 官方不再维护旧版文档,费尽心机找到旧版文档也无济于事,并没有提及到相关配置,很可能并未提供有关配置项!
 
-## 用一下搜索引擎又不会死
+## 百度一下你就知道了吗
 
 俗话说:互联网上绝大多数问题别人都已经遇到过并提供了解决方案,我们要做的就是找到它!
 
@@ -52,7 +52,7 @@
 
 > 多次重复搜索操作均为找到解决方案,由此可见真的很少有人想要默认折叠左侧菜单,我也是很佩服提出该问题的小伙伴骨骼惊奇啊!
 
-## 直面问题期待找到蛛丝马迹
+## 自力更生找寻蛛丝马迹
 
 既然依靠别人无法解决问题,那么只能自力更生独自解决问题,是时候考验真正的技术了!
 
@@ -110,7 +110,7 @@ $ gitbook serve
 
 > 终于发现了蛛丝马迹,修改的代码逻辑就隐藏在 `theme.js` 文件中,只要找到相关源码重新编译输出 `theme.js` 文件并替换应该就能实现默认折叠效果!
 
-## 星星之火可以燎原,但革命尚未成功
+## 不要担心黎明前的黑暗
 
 根据目前已掌握的线索,可以肯定的是有用线索主要有两个:
 
@@ -137,7 +137,7 @@ $ open ~/.gitbook/versions/3.2.3
 找到该目录后拖动到 `sublime` 编辑器进行全局搜索关键字 `js-toolbar-action` 期望找到相关源码文件.
 
 ![gitbook-issue-modify-default-fold-source-sublime-search.png](../images/gitbook-issue-modify-default-fold-source-sublime-search.png)
- 
+
 全局搜索后主要出现两个文件包含 `js-toolbar-action` 关键字,一个是输出文件 `theme.js` ,另一个是源码文件 `toolbar.js` .
 
 ```
@@ -262,7 +262,7 @@ snowdreams1006s-MacBook-Pro:theme snowdreams1006$
 ````
 
 打开 `index.js` 文件,根据注释我们可以看到 `init()` 函数是入门函数,其中 `sidebar.init()` 和 `sidebar.toggle()` 函数无不说明 `sidebar.js` 和 `toolbar.js` 关系密切,完全有理由猜想 `sidebar.js` 是 `toolbar.js` 的使用者!
- 
+
 ```js
 function init() {
     // Init sidebar
@@ -525,7 +525,7 @@ browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
 
 接下来的重点就是如何运行 `browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js` 命令了!
 
-## 重新编译焕发新春
+## 摇身一变重新编译源码
 
 > `browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js`
 
@@ -544,7 +544,7 @@ $ npm install -g browserify
 > 如果是 `mac` 电脑,全局安装需要管理员权限,应该运行 `sudo npm install -g browserify` ,如果嫌弃安装速度慢也可以运行 `cnpm install -g browserify` ,前提是已安装 `cnpm` 命令.
 
 ### 谷歌一下 uglifyjs
- 
+
 不吹不黑,少走一点弯路,直接就找到了 `github` 项目网址,同样的也不关心项目介绍,直接翻看如何安装部分.
 
 
@@ -554,7 +554,7 @@ $ npm install -g uglify-js
 
 ![gitbook-issue-modify-default-fold-search-uglifyjs.png](../images/gitbook-issue-modify-default-fold-search-uglifyjs.png)
 
-### 重新编译
+### 重新编译 others
 
 出现报错时,开始怀疑人生,难道推论不正确,环境没有全部安装吗,为啥提示找不到 `mousetrap` 模块?
 
@@ -693,7 +693,7 @@ $ gitbook serve
 
 ![gitbook-issue-modify-default-fold-test-serve-again-verify.png](../images/gitbook-issue-modify-default-fold-test-serve-again-verify.png)
 
-## 懒人直达和总结回顾
+## 懒人直达以及回顾总结
 
 如果你是 gitbook 普通用户或者懒得折腾,那么推荐你直接替换掉 `theme.js` 文件:
 
@@ -782,7 +782,7 @@ function init() {
 }
 ```
 
-## 从本文学到了啥
+## 能从本文学到点啥东东
 
 - 面向搜索引擎编程学习的理论实践
 - 官方文档停更后如何查阅旧版文档
