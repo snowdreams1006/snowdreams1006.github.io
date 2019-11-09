@@ -68,9 +68,9 @@
 
 ## 自力更生找寻蛛丝马迹
 
-既然依靠别人无法解决问题,那么只能自力更生独自解决问题,是时候考验真正的技术了!
+既然依靠别人无法解决问题,那么只能**自力更生独自解决问题**,是时候考验真正的技术了!
 
-为了排除无关干扰,不能再用自己的 `gitbook` 项目了,毕竟文件太多不方便后续调试,重新创建一个测试项目.
+为了排除无关干扰,不能再用自己的 `gitbook` 项目了,毕竟文件太多不方便后续调试,那么不妨重新创建一个测试项目.
 
 - 创建测试项目
 
@@ -98,6 +98,8 @@ $ gitbook serve
 
 ![gitbook-issue-modify-default-fold-test-serve-selected-elements.png](../images/gitbook-issue-modify-default-fold-test-serve-selected-elements.png)
 
+单独摘录 `Html` 关键代码如下:
+
 ```html
 <a class="btn pull-left js-toolbar-action" aria-label="" href="#"><i class="fa fa-align-justify"></i></a>
 ```
@@ -118,11 +120,11 @@ $ gitbook serve
 
 ![gitbook-issue-modify-default-fold-test-serve-themejs-ugly.png](../images/gitbook-issue-modify-default-fold-test-serve-themejs-ugly.png)
 
-压缩后的 `js` 代码不具备可读性,点击左下方的 `{}` 图标可以进行代码格式化,但是可能不是单纯的压缩而是进行了丑化或者混淆代码之类的逻辑,格式化后的代码仍然不可读!
+压缩后的 `js` 代码不具备可读性,点击左下方的 `{}` 图标可以进行**代码格式化**,但是可能不是单纯的压缩而是进行了丑化或者混淆代码之类的逻辑,**格式化后的代码仍然不可读**!
 
 ![gitbook-issue-modify-default-fold-test-serve-themejs-format.png](../images/gitbook-issue-modify-default-fold-test-serve-themejs-format.png)
 
-> 终于发现了蛛丝马迹,修改的代码逻辑就隐藏在 `theme.js` 文件中,只要找到相关源码重新编译输出 `theme.js` 文件并替换应该就能实现默认折叠效果!
+> 「雪之梦技术驿站」: 终于发现了蛛丝马迹,修改的代码逻辑就隐藏在 `theme.js` 文件中,只要找到相关源码重新编译输出 `theme.js` 文件并替换应该就能实现默认折叠效果!
 
 ## 不要担心黎明前的黑暗
 
@@ -131,7 +133,9 @@ $ gitbook serve
 - 监听元素 `.js-toolbar-action`
 - 输出文件 `theme.js`
 
-一个是源码文件,另一个是输出文件,想要在庞大的 `gitbook` 项目中迅速定位到相关代码逻辑,个人能力有限,并不熟悉前端开发调试流程,因此采用最简单粗暴傻瓜式搜索方式进行排查!
+一个是源码文件,另一个是输出文件,想要在庞大的 `gitbook` 项目中迅速定位到相关代码逻辑,**个人能力有限,并不熟悉前端开发调试流程,因此采用最简单粗暴傻瓜式搜索方式进行排查**!
+
+> 「雪之梦技术驿站」: 如果读者对于现代前端开发流程比较属性的话,大概过一遍项目结构应该就可以调试定位问题了,用不着像我这样傻瓜式搜索排查!
 
 - 查看当前 `gitbook` 版本
 
@@ -148,7 +152,7 @@ GitBook version is 3.2.3
 $ open ~/.gitbook/versions/3.2.3
 ```
 
-找到该目录后拖动到 `sublime` 编辑器进行全局搜索关键字 `js-toolbar-action` 期望找到相关源码文件.
+选择一款熟悉的编辑器并打开 `Gitbook` 安装目录,这里以 `sublime` 编辑器为例,选中项目后**右键**全局搜索关键字 `js-toolbar-action` 期望找到相关源码文件.
 
 ![gitbook-issue-modify-default-fold-source-sublime-search.png](../images/gitbook-issue-modify-default-fold-source-sublime-search.png)
 
@@ -161,27 +165,16 @@ Searching 19744 files for "js-toolbar-action"
 
 ...
 
-e.dropdown);l.addClass("dropdown-"+("right"==e.position?"left":"right")),u.append(l),t=u}else s.addClass(i),s.addClass(e.className),t=s;t.addClass("js-toolbar-action"),p.isNumeric(e.index)&&e.index>=0?o(n,".btn, .dropdown, h1",e.index,t):t.insertBefore(r)}function l(){p(".js-toolbar-action").remove(),d.forEach(u)}function c(e){d=p.grep(d,function(t){return t.id!=e}),l()}function f(e){d=p.grep(d,function(t){return e.indexOf(t.id)==-1}),l()}var p=e("jquery"),h=window.gitbook,d=[],g=0;h.events.on("page.change",function(){l()}),t.exports={createButton:s,removeButton:c,removeButtons:f}},{jquery:1}]},{},[10]);
-
 /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme/toolbar.js:
-  167      }
-  168  
-  169:     $result.addClass('js-toolbar-action');
-  170  
-  171      if ($.isNumeric(opts.index) && opts.index >= 0) {
-  ...
-  178  // Update all buttons
-  179  function updateAllButtons() {
-  180:     $('.js-toolbar-action').remove();
-  181      buttons.forEach(updateButton);
-  182  }
+
+...
 
 4 matches across 2 files
 ```
 
-可想而知,源码文件肯定是经过**编译处理**后统一打包输出,因此不仅仅要找到源码文件还要掌握如何编译.
+可想而知,源码文件肯定是经过**编译处理**后统一打包输出,因此**不仅仅要找到源码文件还要掌握如何编译**.
 
-> 定位到当前 `gitbook` 目录后借助全局搜索功能定位到具体的文件路径,起作用的是 `gitbook-plugin-theme-default` 项目.
+> 「雪之梦技术驿站」: 定位到当前 `gitbook` 目录后借助全局搜索功能定位到具体的文件路径,起作用的是 `gitbook-plugin-theme-default` 项目,其实这就是 `Gitbook` 的默认主题.
 
 ### 源码在哪
 
@@ -255,9 +248,9 @@ function updateAllButtons() {
 }
 ```
 
-粗略看一下,上述代码是实现触发左侧图标折叠/展开菜单的逻辑实现,还不知道谁是使用者,这种逻辑是在哪里调用的?
+粗略看一下,上述代码是实现触发左侧图标折叠/展开菜单的逻辑实现,这里只是具体实现还不知道谁是使用者,也就是说这种逻辑是在哪里调用的?
 
-只能顺藤摸瓜,继续往上翻看,根据基本开发常识,在该文件的同级目录中存在如下文件,其中就有 `index.js` 应该是入口文件:
+只能继续顺藤摸瓜,往上翻看,根据基本开发常识,在该文件的同级目录中存在如下文件,其中的 `index.js` 应该就是入口文件:
 
 ```bash
 snowdreams1006s-MacBook-Pro:theme snowdreams1006$ tree .
@@ -320,7 +313,7 @@ function init() {
 }
 ```
 
-> 非手机端初始化上次状态,默认展开侧边栏,如果是手机端则折叠侧边栏.其中 toggleSidebar() 接收两个参数,第一次参数表示是展开还是折叠,第二个参数暂不可知.
+> 「雪之梦技术驿站」: **非手机端**初始化上次状态,**默认展开**侧边栏,如果是**手机端则折叠**侧边栏.其中 toggleSidebar() 接收两个参数,第一次参数表示是展开还是折叠,第二个参数暂不可知.
 
 ```js
 // Toggle sidebar with or withour animation
@@ -335,7 +328,7 @@ function toggleSidebar(_state, animation) {
 }
 ```
 
-> 第一个参数确实表示状态而第二个参数表示是否有动画效果,不用看具体代码逻辑而是看注释就能猜出大概逻辑了.
+> 「雪之梦技术驿站」: 第一个参数确实表示状态而第二个参数表示是否有动画效果,不用看具体代码逻辑而是看注释就能猜出大概逻辑了.
 
 通过上述分析,我们可以得知 `init()` 初始化函数决定了默认行为是折叠还是展开,同时 `gitbook.storage.set('sidebar', isOpen())` 和 `gitbook.storage.get('sidebar', true)` 应该是设置和获取是否展开菜单的标志!
 
@@ -363,15 +356,17 @@ function init() {
 }
 ```
 
-切换到测试项目再次运行 `gitbook serve` 启动本地服务器,发现并没有任何变化,很有可能改变源码文件需要重新编译才会生效或者说更改的源码项目也没有生效?
+接着切换到测试项目再次运行 `gitbook serve` 启动本地服务器,**发现并没有任何变化**,很有可能改变源码文件需要重新编译才会生效或者说更改的源码项目也没有生效?
 
 ![gitbook-issue-modify-default-fold-test-serve-again-fail.png](../images/gitbook-issue-modify-default-fold-test-serve-again-fail.png)
 
-该源码文件所在的项目是 `gitbook-plugin-theme-default` ,根据 `gitbook` 插件命名规范我们知道,`gitbook-plugin-*` 一般是功能性插件,这一类的插件有 `gitbook-plugin-readmore` 阅读更多插件和 `gitbook-plugin-copyright` 版权保护插件等等.
-
-但是如果插件名以 `gitbook-plugin-theme` 开头的话,这一类插件就是主题插件,比如 `gitbook-plugin-theme-default` 就是默认主题.
+> 「雪之梦技术驿站」: 该源码文件所在的项目是 `gitbook-plugin-theme-default` ,根据 `gitbook` 插件命名规范我们知道,`gitbook-plugin-*` 一般是功能性插件,这一类的插件有 `gitbook-plugin-readmore` 阅读更多插件和 `gitbook-plugin-copyright` 版权保护插件等等.
+>
+> 但是如果插件名以 `gitbook-plugin-theme` 开头的话,这一类插件就是主题插件,比如 `gitbook-plugin-theme-default` 就是默认主题.
 
 除此之外,只要遵守该命名规则的插件引入时无需添加 `gitbook-plugin-` 前缀,可以直接在 `gitbook.json` 文件中引入剩余的简称作为插件名.
+
+摘录自 `Gitbook` 项目的配置文件,可以佐证上述规则的正确性.
 
 ```json
 "plugins": [
@@ -401,7 +396,7 @@ function init() {
 ]
 ```
 
-`package.json` 提供了插件的配置信息,`gitbook` 插件除了是标准的 `nodejs` 包之外还有自己的约束,主要体现在提供了插件配置项相关说明 `gitbook` :
+作为普通的 `nodejs` 包,开发规范规定了 `package.json` 提供了插件的配置信息,而 `Gitbook` 插件除了是标准的 `nodejs` 包之外还有自己的约束,主要体现在提供了 `gitbook` 节点属性:
 
 ```json
 "gitbook": {
@@ -447,7 +442,7 @@ function init() {
 
 默认主题仅仅提供了两个配置项,分别是 `styles` 样式文件位置和 `showLevel` 是否显示层级配置.
 
-再一次验证了猜想的正确性,真的需要修改源码才能实现默认折叠左侧菜单的效果,找到项目源码看一下有没有二次开发文档.
+再一次验证了猜想的正确性,真的需要修改源码才能实现默认折叠左侧菜单的效果,紧着继续在 `package.json` 中找到项目源码的托管地址,看一下有没有提供二次开发文档.
 
 ```json
 "repository": {
@@ -456,17 +451,15 @@ function init() {
 }
 ```
 
-既然查到了 `github` [项目地址](https://github.com/GitbookIO/theme-default),那就去看看吧!
+令人遗憾的是,项目介绍空空如也,除了一张主题预览图,别的什么都没有?!
 
 ![gitbook-issue-modify-default-fold-theme-default-github-preview.png](../images/gitbook-issue-modify-default-fold-theme-default-github-preview.png)
 
-除了一张主题预览图,别的什么都没有?!
-
 既然没有二次开发文档,那就看看项目源码有没有别的蛛丝马迹教我们如何编译?
 
-> 其实还不是因为比较菜,给了源码都不会编译,高逼格的前端开发越来越跟不上时代的潮流了呢!
+> 「雪之梦技术驿站」: 绕了这么多,其实还不是因为比较菜,人家都提供给源码都不会编译,留下来没有技术的眼泪!
 
-视角再一次切换到源码目录,除了 `js` 和 `less` 目录外,还有一个 `build.sh` 构建脚本!
+视角再一次切换到源码目录,除了 `js` 和 `less` 目录外,竟然还有一个 `build.sh` 构建脚本!
 
 ```bash
 snowdreams1006s-MacBook-Pro:src snowdreams1006$ tree 
@@ -489,7 +482,7 @@ snowdreams1006s-MacBook-Pro:src snowdreams1006$ tree
 snowdreams1006s-MacBook-Pro:src snowdreams1006$ 
 ```
 
-仿佛看到了九点钟升起的太阳,未来是你们的也是我们的!
+这一刻,仿佛看到了九点钟升起的太阳,未来是你们的也是我们的!
 
 ```bash
 snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ cat src/build.sh 
@@ -527,7 +520,7 @@ cp node_modules/gitbook-logos/output/apple-touch-icon-152.png _assets/website/im
 snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ 
 ```
 
-这一段脚本中除了看不懂 `browserify,uglifyjs,lessc -clean-css` 命令外,其余很简单,大致是编译源码文件并输出到 `_assets` 目录.
+这一段脚本中除了看不懂 `browserify,uglifyjs,lessc -clean-css` 命令外,剩下部分都很简单,大致是编译源码文件并输出到 `_assets` 目录.
 
 编译 `js` 的命令主要有以下两条,而我们关心的 `theme.js` 仅涉及到一条,除此之外没有任何别的依赖,这一点非常好!
 
@@ -545,7 +538,7 @@ browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
 
 ### 百度一下 browserify 
 
-打开熟悉的浏览器输入关键字 `browserify` 后出现一系列相关文章,很好奇为啥排名第一个都不会是官网呢?不管怎么样,找到 `browserify` 的 `github` 项目地址也是不错的!
+再一次打开熟悉的浏览器输入关键字 `browserify` 后出现一系列相关文章,很好奇为啥排名第一个都不会是官网呢?不管怎么样,找到 `browserify` 的 `github` 项目地址也是不错的!
 
 ![gitbook-issue-modify-default-fold-search-browserify.png](../images/gitbook-issue-modify-default-fold-search-browserify.png)
 
@@ -555,7 +548,7 @@ browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
 $ npm install -g browserify
 ```
 
-> 如果是 `mac` 电脑,全局安装需要管理员权限,应该运行 `sudo npm install -g browserify` ,如果嫌弃安装速度慢也可以运行 `cnpm install -g browserify` ,前提是已安装 `cnpm` 命令.
+> 「雪之梦技术驿站」:  如果是 `mac` 电脑,全局安装需要管理员权限,应该运行 `sudo npm install -g browserify` ,如果**嫌弃安装速度慢**也可以运行 `cnpm install -g browserify` ,前提是已安装 `cnpm` 命令.
 
 ### 谷歌一下 uglifyjs
 
@@ -570,7 +563,9 @@ $ npm install -g uglify-js
 
 ### 重新编译 others
 
-出现报错时,开始怀疑人生,难道推论不正确,环境没有全部安装吗,为啥提示找不到 `mousetrap` 模块?
+涉及到 `browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js` 命令的两个插件均已安装完毕,理所应当开始重新编译源码了,但是竟然报错了?
+
+当出现报错时,开始怀疑人生,难道推论不正确,难道环境没有安装成功吗,为啥提示找不到 `mousetrap` 模块?
 
 ```bash
 $ browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
@@ -584,7 +579,11 @@ Error: Cannot find module 'mousetrap' from '/Users/snowdreams1006/.gitbook/versi
     at FSReqCallback.oncomplete (fs.js:158:21)
 ```
 
-那就先把 `src/build.sh` 构建脚本涉及到的其他命令全部安装一遍再试一下吧!
+算了吧,与其费尽心思猜测为啥无法加载 `mousetrap` 模块,不如继续安装剩余依赖,最大可能性排除环境问题.
+
+那就先把 `src/build.sh` 构建脚本涉及到的其他命令全部安装一遍,然后再试一下吧!
+
+除了编译 `Js` 的命令外,还有编译 `Css` 的命令,关于构建脚本 `build.sh` 的其他内容就是基本的复制粘贴之类的操作了.
 
 ```
 # Compile Website CSS
@@ -597,7 +596,7 @@ lessc -clean-css src/less/website.less _assets/website/style.css
 $ npm install -g less less-plugin-clean-css
 ```
 
-当我以为运行构建脚本的环境已经准备好了的时候,现实再一次打脸,没想到错误更多了呢,真的是没想到!
+当我再一次运行构建脚本时,满心期待会编译成功,没想到现实再一次打脸,这时候错误更多了呢,真的是没想到!
 
 ```bash
 snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ src/build.sh 
@@ -643,7 +642,7 @@ cp: node_modules/gitbook-logos/output/favicon.ico: No such file or directory
 cp: node_modules/gitbook-logos/output/apple-touch-icon-152.png: No such file or directory
 ```
 
-那就再扩大安装环境范围,对整个 `gitbook-plugin-theme-default` 进行 `npm install` ,这一次会发生什么情况呢?
+那就继续扩大安装环境范围,这时候对整个 `gitbook-plugin-theme-default` 进行 `npm install` 安装相关依赖,这一次会发生什么情况呢?
 
 ```bash
 $ npm install
@@ -656,15 +655,17 @@ snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ src/bui
 snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$
 ```
 
-`linux` 命令行哲学告诉我们,没想消息就是好消息,全部安装项目环境后再次运行 `src/build.sh` 脚本瞬间安静了!
+命令行没有了乱七八糟的输出,世界变得安静了!
+
+ `linux` 命令行哲学告诉我们,**没有消息就是好消息**,全部安装项目环境后再次运行 `src/build.sh` 脚本命令行瞬间安静了!
 
 怀着忐忑不安的心,切换到测试项目运行 `gitbook serve` 命令后,那一瞬间,感觉世界都静止了,奇迹就这么发生了?
 
 ![gitbook-issue-modify-default-fold-test-serve-again-success.png](../images/gitbook-issue-modify-default-fold-test-serve-again-success.png)
 
-成功了?
+终于成功了,实现默认折叠效果了吗?
 
-默认折叠左侧菜单设置的是 `false`,刚才已生效,如果设置成 `true` 应该是展开状态.
+为了验证是否成功实现默认折叠失效,做一次反向测试,既然默认折叠左侧菜单设置的是 `false`,如果设置成 `true` 的话,默认应该是展开状态.
 
 ```js
 // Prepare sidebar: state and toggle button
@@ -687,7 +688,7 @@ function init() {
 }
 ```
 
-重新编译后再次启动本地测试项目,如果是展开状态,那就说明成功不是偶然而是靠技巧和努力!
+重新编译后再次启动本地测试项目,如果是展开状态,那就说明**成功不是偶然而是靠技巧和努力**!
 
 - 重新编译源码
 
@@ -707,9 +708,11 @@ $ gitbook serve
 
 ![gitbook-issue-modify-default-fold-test-serve-again-verify.png](../images/gitbook-issue-modify-default-fold-test-serve-again-verify.png)
 
+> 「雪之梦技术驿站」: 苦心人天不负,不是昙花一现的巧合而是货真价实的现实,就这么实现了默认折叠左侧菜单功能!
+
 ## 懒人直达以及回顾总结
 
-如果你是 gitbook 普通用户或者懒得折腾,那么推荐你直接替换掉 `theme.js` 文件:
+如果你是 `Gitbook` 普通用户或者懒得折腾,那么推荐你直接替换掉 `theme.js` 文件:
 
 - 查看正在使用的 `gitbook` 版本信息
 
@@ -734,7 +737,7 @@ $ open ~/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/
 $ gitbook serve
 ```
 
-如果你不怕麻烦,喜欢折腾,不妨体验一下如何重新编译源码文件.
+如果你不怕麻烦,喜欢折腾,那么不妨体验一下如何重新编译源码文件.
 
 - 查看正在使用的 `gitbook` 版本信息
 
@@ -773,7 +776,7 @@ $ src/build.sh
 $ gitbook serve
 ```
 
-最后说明,实现默认折叠左侧菜单功能仅仅需要添加一行代码,因此很有可能和项目中已引入插件存在冲突,毕竟 `sidebar` 的状态也可以被未知代码所更改!
+值得注意的是,实现默认折叠左侧菜单功能仅仅需要添加一行代码,但是也很有可能和项目中已引入插件存在冲突,毕竟 `sidebar` 的状态也可以被未知代码所更改!
 
 ```js
 // Prepare sidebar: state and toggle button
