@@ -10,11 +10,11 @@
 
 但是,善良的我总是有求必应,**不忍心拒绝**小白用户,于是我便抱着试一试的心态开始研究一下如何默认折叠?
 
-![gitbook-issue-modify-default-fold-preview.png](../images/gitbook-issue-modify-default-fold-preview.png)
+![gitbook-issue-modify-default-fold-preview.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5z7fa0cj31fs0u0wo6.jpg)
 
 当然,**解决问题前还是要先复现一下问题**,然后在命令行中熟练敲入了 `gitbook serve` 命令来启动本地服务器,为了**排除缓存**等影响,特意打开了 `Chrome` 浏览器的**无痕模式**,果不其然**默认左侧菜单是展开的**!
 
-![gitbook-issue-modify-default-fold-review.png](../images/gitbook-issue-modify-default-fold-review.png)
+![gitbook-issue-modify-default-fold-review.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xiggv4j31g90u0qck.jpg)
 
 > 「雪之梦技术驿站」: 不能复现的问题都不是我的问题,**拒绝解决此类问题**,搞不好是你自己环境搭建问题呢!
 
@@ -24,21 +24,21 @@
 
 但是,当你在浏览器中输入 `gitbook 官方文档` 时,并找不到想象中的官方文档而是**新版官网**,不信你自己去搜一下,肯定是**新版官网**.
 
-![gitbook-issue-modify-default-fold-document-search-result-preview.png](../images/gitbook-issue-modify-default-fold-document-search-result-preview.png)
+![gitbook-issue-modify-default-fold-document-search-result-preview.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5vxx5zoj31g30u07dr.jpg)
 
 当你自以为找到了官网时,点击进去查看文档部分,很遗憾,这是新版文档并不是**老版文档**,你还会继续百度一下寻求可用链接期待找到官方文档.
 
-![gitbook-issue-modify-default-fold-document-search-result-click.png](../images/gitbook-issue-modify-default-fold-document-search-result-click.png)
+![gitbook-issue-modify-default-fold-document-search-result-click.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5w4vgk4j31g30u07dr.jpg)
 
-为了节省宝贵时间,这里推荐访问个人维护的 `gitbook` 文档,点击访问: [https://snowdreams1006.github.io/gitbook-official/](https://snowdreams1006.github.io/gitbook-official/)
+为了节省宝贵时间,这里推荐访问个人维护的 `gitbook` 文档,点击访问: [gitbook 原版文档](https://snowdreams1006.github.io/gitbook-official/)
 
 目前提供了中英文两个语言版本的文档,相信可以满足大多数用户的需求了,选择任意一种语言后点击进入翻阅相关设置.
 
-![gitbook-issue-modify-default-fold-gitbook-official-preview.png](../images/gitbook-issue-modify-default-fold-gitbook-official-preview.png)
+![gitbook-issue-modify-default-fold-gitbook-official-preview.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xb7mmxj31z20fgjtu.jpg)
 
 实际上,**官方文档也并没有什么用**,因为根本就没有提到过如何更改相关配置使其**默认折叠而非展开状态**.
 
-![gitbook-issue-modify-default-fold-gitbook-official-useless.png](../images/gitbook-issue-modify-default-fold-gitbook-official-useless.png)
+![gitbook-issue-modify-default-fold-gitbook-official-useless.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5zipuo9j31o30u0n5z.jpg)
 
 > 「雪之梦技术驿站」: 官方不再维护旧版文档,费尽心机找到旧版文档也无济于事,因为并没有提及到相关配置,所以猜测很可能并未提供有关配置项!
 
@@ -48,13 +48,13 @@
 
 这也是**面向搜索编程**的核心思想,遇到**默认折叠问题**应该也不会例外,那就搜索一下吧!
 
-![gitbook-issue-modify-default-fold-search-baidu-no-result.png](../images/gitbook-issue-modify-default-fold-search-baidu-no-result.png)
+![gitbook-issue-modify-default-fold-search-baidu-no-result.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5yzvthsj31fm0u0trj.jpg)
 
 虽然百度搜索出现了一些相关文章,但是却不是我们想要的效果,大多数是基于 `gitbook` 插件实现的**目录折叠**效果,并不是**默认折叠左侧菜单**效果.
 
 不管是**换关键词重新搜索**还是谷歌搜索,**均未发现有关默认折叠左侧菜单的解决方案**,难不成面向搜索失败了,要做解决问题的第一人吗?!
 
-![gitbook-issue-modify-default-fold-search-google-no-result.png](../images/gitbook-issue-modify-default-fold-search-google-no-result.png)
+![gitbook-issue-modify-default-fold-search-google-no-result.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xknuhjj31lh0u013z.jpg)
 
 > 「雪之梦技术驿站」: 多次重复搜索操作均为找到解决方案,由此可见**真的很少有人想要默认折叠左侧菜单**,我也是很佩服提出该问题的小伙伴**骨骼惊奇**啊!
 
@@ -84,11 +84,11 @@ $ gitbook serve
 
 虽然一片空白,并没有什么实质性内容,但是大道至简,对于我们复现并测试问题来说,足够了!
 
-![gitbook-issue-modify-default-fold-test-serve.png](../images/gitbook-issue-modify-default-fold-test-serve.png)
+![gitbook-issue-modify-default-fold-test-serve.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5yvfiklj31yq0gon07.jpg)
 
 打开 `Chrome` 浏览器并按下 `F12` 开启调试模式,鼠标选中左侧的 `Elements` 元素选项卡并点亮左侧的小鼠标,然后在页面上找到左侧图标按钮,于是选中元素高亮了.
 
-![gitbook-issue-modify-default-fold-test-serve-selected-elements.png](../images/gitbook-issue-modify-default-fold-test-serve-selected-elements.png)
+![gitbook-issue-modify-default-fold-test-serve-selected-elements.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xn74jij31le0u0qbn.jpg)
 
 单独摘录 `Html` 关键代码如下:
 
@@ -106,15 +106,15 @@ $ gitbook serve
 
 此时,点击右侧的 `Event Listeners` 选项卡查看该元素已监听的 `click` 事件,定位到是哪一个具体的 `js` 文件在起作用.
 
-![gitbook-issue-modify-default-fold-test-serve-inspection-listeners.png](../images/gitbook-issue-modify-default-fold-test-serve-inspection-listeners.png)
+![gitbook-issue-modify-default-fold-test-serve-inspection-listeners.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5zk3pxqj31z40gk45v.jpg)
 
 果不其然,元素上存在 `click` 点击事件监听并且发现执行监听的逻辑代码出现在 `theme.js` 文件,点击进入文件查看具体内容.
 
-![gitbook-issue-modify-default-fold-test-serve-themejs-ugly.png](../images/gitbook-issue-modify-default-fold-test-serve-themejs-ugly.png)
+![gitbook-issue-modify-default-fold-test-serve-themejs-ugly.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5yt0jx5j31yy0gktee.jpg)
 
 压缩后的 `js` 代码不具备可读性,点击左下方的 `{}` 图标可以进行**代码格式化**,但是可能不是单纯的压缩而是进行了丑化或者混淆代码之类的逻辑,**格式化后的代码仍然不可读**!
 
-![gitbook-issue-modify-default-fold-test-serve-themejs-format.png](../images/gitbook-issue-modify-default-fold-test-serve-themejs-format.png)
+![gitbook-issue-modify-default-fold-test-serve-themejs-format.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5z49jntj31yk0g6dlj.jpg)
 
 > 「雪之梦技术驿站」: 终于发现了蛛丝马迹,修改的代码逻辑就隐藏在 `theme.js` 文件中,只要找到相关源码重新编译输出 `theme.js` 文件并替换应该就能实现默认折叠效果!
 
@@ -146,7 +146,7 @@ $ open ~/.gitbook/versions/3.2.3
 
 选择一款熟悉的编辑器并打开 `Gitbook` 安装目录,这里以 `sublime` 编辑器为例,选中项目后**右键**全局搜索关键字 `js-toolbar-action` 期望找到相关源码文件.
 
-![gitbook-issue-modify-default-fold-source-sublime-search.png](../images/gitbook-issue-modify-default-fold-source-sublime-search.png)
+![gitbook-issue-modify-default-fold-source-sublime-search.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5z0kp2pj31z405eq48.jpg)
 
 全局搜索后主要出现两个文件包含 `js-toolbar-action` 关键字,一个是输出文件 `theme.js` ,另一个是源码文件 `toolbar.js` .
 
@@ -350,7 +350,7 @@ function init() {
 
 接着切换到测试项目再次运行 `gitbook serve` 启动本地服务器,**发现并没有任何变化**,很有可能改变源码文件需要重新编译才会生效或者说更改的源码项目也没有生效?
 
-![gitbook-issue-modify-default-fold-test-serve-again-fail.png](../images/gitbook-issue-modify-default-fold-test-serve-again-fail.png)
+![gitbook-issue-modify-default-fold-test-serve-again-fail.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xck8t8j31z20da0ve.jpg)
 
 > 「雪之梦技术驿站」: 该源码文件所在的项目是 `gitbook-plugin-theme-default` ,根据 `gitbook` 插件命名规范我们知道,`gitbook-plugin-*` 一般是功能性插件,这一类的插件有 `gitbook-plugin-readmore` 阅读更多插件和 `gitbook-plugin-copyright` 版权保护插件等等.
 >
@@ -445,7 +445,7 @@ function init() {
 
 令人遗憾的是,项目介绍空空如也,除了一张主题预览图,别的什么都没有?!
 
-![gitbook-issue-modify-default-fold-theme-default-github-preview.png](../images/gitbook-issue-modify-default-fold-theme-default-github-preview.png)
+![gitbook-issue-modify-default-fold-theme-default-github-preview.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5z3a3grj31cu0u0drq.jpg)
 
 既然没有二次开发文档,那就看看项目源码有没有别的蛛丝马迹教我们如何编译?
 
@@ -532,7 +532,7 @@ browserify src/js/theme/index.js | uglifyjs -mc > _assets/website/theme.js
 
 再一次打开熟悉的浏览器输入关键字 `browserify` 后出现一系列相关文章,很好奇为啥排名第一个都不会是官网呢?不管怎么样,找到 `browserify` 的 `github` 项目地址也是不错的!
 
-![gitbook-issue-modify-default-fold-search-browserify.png](../images/gitbook-issue-modify-default-fold-search-browserify.png)
+![gitbook-issue-modify-default-fold-search-browserify.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5vzsyzfj31fy0u07kn.jpg)
 
 这里并不关心 `browserify` 到底是什么,只在乎如何安装基本环境而已!
 
@@ -551,7 +551,7 @@ $ npm install -g browserify
 $ npm install -g uglify-js
 ```
 
-![gitbook-issue-modify-default-fold-search-uglifyjs.png](../images/gitbook-issue-modify-default-fold-search-uglifyjs.png)
+![gitbook-issue-modify-default-fold-search-uglifyjs.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5w2j6hgj31g30u07dr.jpg)
 
 ### 重新编译 others
 
@@ -653,7 +653,7 @@ snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$
 
 怀着忐忑不安的心,切换到测试项目运行 `gitbook serve` 命令后,那一瞬间,感觉世界都静止了,奇迹就这么发生了?
 
-![gitbook-issue-modify-default-fold-test-serve-again-success.png](../images/gitbook-issue-modify-default-fold-test-serve-again-success.png)
+![gitbook-issue-modify-default-fold-test-serve-again-success.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xoj7kaj31z40eegnv.jpg)
 
 终于成功了,实现默认折叠效果了吗?
 
@@ -698,7 +698,7 @@ $ gitbook serve
 
 > /Users/snowdreams1006/Documents/workspace/test
 
-![gitbook-issue-modify-default-fold-test-serve-again-verify.png](../images/gitbook-issue-modify-default-fold-test-serve-again-verify.png)
+![gitbook-issue-modify-default-fold-test-serve-again-verify.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xpn1mdj31z409qmy5.jpg)
 
 > 「雪之梦技术驿站」: 苦心人天不负,不是昙花一现的巧合而是货真价实的现实,就这么实现了默认折叠左侧菜单功能!
 
