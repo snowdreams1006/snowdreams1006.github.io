@@ -180,6 +180,14 @@ $ who -u
 $ last -a | head -5
 ```
 
+## TODO 清单
+
+- [使用 ansible 做自动化运维](https://juejin.im/post/5dafb50c6fb9a04e1325f2ff)
+- [使用 docker 高效部署前端应用](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
+- [前端部署演化史](https://github.com/shfshanyue/op-note/blob/master/deploy-fe.md)
+- [linux 调优各项监控指标小记](https://juejin.im/post/5dae57fbf265da5b5b6c7881)
+
+
 ## 参考文档
 
 - [SSH简介及两种远程登录的方法](https://blog.csdn.net/li528405176/article/details/82810342)
