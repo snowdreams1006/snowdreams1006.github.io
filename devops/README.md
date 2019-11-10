@@ -126,7 +126,7 @@ Host *
   PasswordAuthentication no
 ```
 
-## linux 版本和 centos 版本
+## 系统版本
 
 - 查看系统版本
 
@@ -140,8 +140,49 @@ $ uname -a
 $ cat /etc/centos-release
 ```
 
+## 内存配额
+
+```bash
+$ free -h
+```
+
+## 公网 ip
+
+- `ifconfig.me`
+
+```bash
+$ curl ifconfig.me
+```
+
+- `icanhazip.com`
+
+```bash
+$ curl icanhazip.com
+```
+
+## 内网 ip
+
+```bash
+$ ifconfig eth0
+```
+
+## 登录用户
+
+- `who`
+
+```bash
+$ who -u
+```
+
+- `last`
+
+```bash
+$ last -a | head -5
+```
+
 ## 参考文档
 
 - [SSH简介及两种远程登录的方法](https://blog.csdn.net/li528405176/article/details/82810342)
 - [服务器快速免密ssh登录配置](https://juejin.im/post/5da724506fb9a04e2a73d96c)
+- [linux 信息查看及命令](https://juejin.im/post/5dad7681f265da5bb86ad2f5)
 
