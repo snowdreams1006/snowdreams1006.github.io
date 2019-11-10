@@ -74,7 +74,21 @@ $ ssh <名称 id>
 
 ## 推荐登录
 
-> 基于密钥形式的快速登录
+- 修改 `ssh` 配置文件 ` ~/.ssh/config`
+
+```config
+Host <名称 id>
+    HostName <服务器公网 ip>
+    User <登录账号>
+```
+
+示例:
+
+```config
+Host snowdreams1006
+    HostName 121.40.223.69
+    User root
+```
 
 -  本机生成密钥
 
@@ -92,22 +106,6 @@ $ ssh-copy-id <登录账号>@<服务器公网 ip>
 
 > `ssh-copy-id root@121.40.223.69`
 
-- 修改 `ssh` 配置文件 ` ~/.ssh/config`
-
-```config
-Host <名称 id>
-    HostName <服务器公网 ip>
-    User <登录账号>
-```
-
-示例:
-
-```config
-Host snowdreams1006
-    HostName 121.40.223.69
-    User root
-```
-
 - 远程登录
 
 ```bash
@@ -117,6 +115,16 @@ $ ssh <HostName>
 示例:
 
 > `ssh snowdreams1006`
+
+- 禁用密码登录
+
+> `/etc/ssh/ssh_config`
+
+
+```config
+Host *
+  PasswordAuthentication no
+```
 
 ## linux 版本和 centos 版本
 
@@ -131,4 +139,9 @@ $ uname -a
 ```bash
 $ cat /etc/centos-release
 ```
+
+## 参考文档
+
+- [SSH简介及两种远程登录的方法](https://blog.csdn.net/li528405176/article/details/82810342)
+- [服务器快速免密ssh登录配置](https://juejin.im/post/5da724506fb9a04e2a73d96c)
 
