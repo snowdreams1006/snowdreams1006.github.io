@@ -186,7 +186,15 @@ $ last -a | head -5
 - [使用 docker 高效部署前端应用](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
 - [前端部署演化史](https://github.com/shfshanyue/op-note/blob/master/deploy-fe.md)
 - [linux 调优各项监控指标小记](https://juejin.im/post/5dae57fbf265da5b5b6c7881)
-
+- [sed 命令使用及示例](https://juejin.im/post/5db1053df265da4d57770c30)
+- [jq: 命令行下的 json 处理工具](https://juejin.im/post/5db104f7f265da4d2e121510)
+- [博客域名更换记录以及衍生问题解决方案](https://shanyue.tech/post/domain-update-record/#https)
+- [使用 Let's Encrypt 为 Traefik 制作证书并自动续期](https://shanyue.tech/post/traefik-https/#%E5%89%8D%E8%A8%80)
+- github 托管私有仓库，并结合 github action 做 CI/CD
+- quay 构建镜像
+- cloudflare 免费的 CDN
+- sentry 异常上报
+- aws-lambda 简单的 API
 
 ## 参考文档
 
