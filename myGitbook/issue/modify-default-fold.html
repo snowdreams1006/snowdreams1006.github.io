@@ -1,0 +1,2831 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>初始化默认折叠效果 · 雪之梦技术驿站</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="snowdreams1006">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../reference/" />
+    
+    
+    <link rel="prev" href="rm-output-directory.html" />
+    
+
+    <link href="https://snowdreams1006.github.io/rss" title="雪之梦技术驿站" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"snowdreams1006","repo":"snowdreams1006.github.io","type":"star","size":"small"}]};
+    </script>
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">入门教程</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../markdown/">
+            
+                <a href="../../markdown/">
+            
+                    
+                    markdown 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../markdown/juejin.html">
+            
+                <a href="../../markdown/juejin.html">
+            
+                    
+                    掘金入门指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../markdown/imooc.html">
+            
+                <a href="../../markdown/imooc.html">
+            
+                    
+                    慕课网语法演示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../markdown/HBuilderX.html">
+            
+                <a href="../../markdown/HBuilderX.html">
+            
+                    
+                    HBuilderX语法帮助
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../markdown/csdn.html">
+            
+                <a href="../../markdown/csdn.html">
+            
+                    
+                    csdn帮助文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../git/">
+            
+                <a href="../../git/">
+            
+                    
+                    git 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../git/base/about.html">
+            
+                <a href="../../git/base/about.html">
+            
+                    
+                    初识 git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../../git/base/install.html">
+            
+                <a href="../../git/base/install.html">
+            
+                    
+                    安装 git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2" data-path="../../git/base/config.html">
+            
+                <a href="../../git/base/config.html">
+            
+                    
+                    配置 git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../git/usage/about.html">
+            
+                <a href="../../git/usage/about.html">
+            
+                    
+                    实战 git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../../git/usage/local-repository.html">
+            
+                <a href="../../git/usage/local-repository.html">
+            
+                    
+                    本地仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../../git/usage/version-manage.html">
+            
+                <a href="../../git/usage/version-manage.html">
+            
+                    
+                    版本管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.3" data-path="../../git/usage/reset.html">
+            
+                <a href="../../git/usage/reset.html">
+            
+                    
+                    回到过去
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.4" data-path="../../git/usage/concept.html">
+            
+                <a href="../../git/usage/concept.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.5" data-path="../../git/usage/version-control.html">
+            
+                <a href="../../git/usage/version-control.html">
+            
+                    
+                    版本控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.6" data-path="../../git/usage/checkout-reset.html">
+            
+                <a href="../../git/usage/checkout-reset.html">
+            
+                    
+                    撤销更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.7" data-path="../../git/usage/delete.html">
+            
+                <a href="../../git/usage/delete.html">
+            
+                    
+                    删除文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.8" data-path="../../git/usage/remote-repository.html">
+            
+                <a href="../../git/usage/remote-repository.html">
+            
+                    
+                    远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9" data-path="../../git/usage/branch-manage.html">
+            
+                <a href="../../git/usage/branch-manage.html">
+            
+                    
+                    分支管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.9.1" data-path="../../git/usage/branch-overview.html">
+            
+                <a href="../../git/usage/branch-overview.html">
+            
+                    
+                    分支总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.2" data-path="../../git/usage/branch-merge-with-conflict.html">
+            
+                <a href="../../git/usage/branch-merge-with-conflict.html">
+            
+                    
+                    冲突合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.3" data-path="../../git/usage/branch-strategy.html">
+            
+                <a href="../../git/usage/branch-strategy.html">
+            
+                    
+                    分支策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.4" data-path="../../git/usage/branch-emergency-fixbug.html">
+            
+                <a href="../../git/usage/branch-emergency-fixbug.html">
+            
+                    
+                    紧急修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.5" data-path="../../git/usage/branch-rebase.html">
+            
+                <a href="../../git/usage/branch-rebase.html">
+            
+                    
+                    变基合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.6" data-path="../../git/usage/branch-remote.html">
+            
+                <a href="../../git/usage/branch-remote.html">
+            
+                    
+                    协同开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.7" data-path="../../git/usage/local-remote-repository.html">
+            
+                <a href="../../git/usage/local-remote-repository.html">
+            
+                    
+                    本地和远程仓库的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.10" data-path="../../git/usage/tag.html">
+            
+                <a href="../../git/usage/tag.html">
+            
+                    
+                    里程碑式标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../git/custom/about.html">
+            
+                <a href="../../git/custom/about.html">
+            
+                    
+                    私人定制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.3.1" data-path="../../git/custom/ignore.html">
+            
+                <a href="../../git/custom/ignore.html">
+            
+                    
+                    忽略文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../../git/server/private.html">
+            
+                <a href="../../git/server/private.html">
+            
+                    
+                    搭建私服
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../../git/tools/about.html">
+            
+                <a href="../../git/tools/about.html">
+            
+                    
+                    扩展工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.5.1" data-path="../../git/tools/git-bash-command.html">
+            
+                <a href="../../git/tools/git-bash-command.html">
+            
+                    
+                    git bash 常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.2" data-path="../../git/tools/git-bash-relationship.html">
+            
+                <a href="../../git/tools/git-bash-relationship.html">
+            
+                    
+                    git bash 朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.3" data-path="../../git/tools/git-bash-tree.html">
+            
+                <a href="../../git/tools/git-bash-tree.html">
+            
+                    
+                    git bash 竟然没有tree命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.4" data-path="../../git/tools/git-bash-extend-up.html">
+            
+                <a href="../../git/tools/git-bash-extend-up.html">
+            
+                    
+                    git bash 扩展命令(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.5" data-path="../../git/tools/git-bash-extend-middle.html">
+            
+                <a href="../../git/tools/git-bash-extend-middle.html">
+            
+                    
+                    git bash 扩展命令(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.6" data-path="../../git/tools/git-bash-extend-down.html">
+            
+                <a href="../../git/tools/git-bash-extend-down.html">
+            
+                    
+                    git bash 扩展命令(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../../git/summary/about.html">
+            
+                <a href="../../git/summary/about.html">
+            
+                    
+                    沙海拾贝
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.6.1" data-path="../../git/summary/common.html">
+            
+                <a href="../../git/summary/common.html">
+            
+                    
+                    知识速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6.2" data-path="../../git/summary/cheatsheet-translation.html">
+            
+                <a href="../../git/summary/cheatsheet-translation.html">
+            
+                    
+                    备忘录[译]
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../github/">
+            
+                <a href="../../github/">
+            
+                    
+                    github 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../github/speedup.html">
+            
+                <a href="../../github/speedup.html">
+            
+                    
+                    github 访问速度太慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../github/badge.html">
+            
+                <a href="../../github/badge.html">
+            
+                    
+                    github 徽章从何而来
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    gitbook 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../preparation/prepare.html">
+            
+                <a href="../preparation/prepare.html">
+            
+                    
+                    准备阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1.1" data-path="../preparation/front-knowledge.html">
+            
+                <a href="../preparation/front-knowledge.html">
+            
+                    
+                    前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.1.2" data-path="../preparation/environmental-requirements.html">
+            
+                <a href="../preparation/environmental-requirements.html">
+            
+                    
+                    环境要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../experience/preview.html">
+            
+                <a href="../experience/preview.html">
+            
+                    
+                    快速体验
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.2.1" data-path="../experience/gitbook-cli.html">
+            
+                <a href="../experience/gitbook-cli.html">
+            
+                    
+                    gitbook-cli 命令行操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2.2" data-path="../experience/gitbook-editor.html">
+            
+                <a href="../experience/gitbook-editor.html">
+            
+                    
+                    gitbook-editor 编辑器操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2.3" data-path="../experience/gitbook-com.html">
+            
+                <a href="../experience/gitbook-com.html">
+            
+                    
+                    gitbook.com 官网操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../advance/advance.html">
+            
+                <a href="../advance/advance.html">
+            
+                    
+                    高级进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.3.1" data-path="../advance/plugin.html">
+            
+                <a href="../advance/plugin.html">
+            
+                    
+                    插件介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.3.1.1" data-path="../advance/plugin-practical.html">
+            
+                <a href="../advance/plugin-practical.html">
+            
+                    
+                    实用插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.1.2" data-path="../advance/plugin-theme.html">
+            
+                <a href="../advance/plugin-theme.html">
+            
+                    
+                    主题插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.1.3" data-path="../advance/plugin-develop.html">
+            
+                <a href="../advance/plugin-develop.html">
+            
+                    
+                    开发插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.2" data-path="../advance/export.html">
+            
+                <a href="../advance/export.html">
+            
+                    
+                    导出电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.3" data-path="../advance/publish.html">
+            
+                <a href="../advance/publish.html">
+            
+                    
+                    发布电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../openwrite/">
+            
+                <a href="../openwrite/">
+            
+                    
+                    公众号引流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.5.1" data-path="rm-output-directory.html">
+            
+                <a href="rm-output-directory.html">
+            
+                    
+                    热加载失败治标之法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4.5.2" data-path="modify-default-fold.html">
+            
+                <a href="modify-default-fold.html">
+            
+                    
+                    初始化默认折叠效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../reference/">
+            
+                <a href="../reference/">
+            
+                    
+                    参考更多
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../java8/">
+            
+                <a href="../../java8/">
+            
+                    
+                    java8新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../java8/lambda.html">
+            
+                <a href="../../java8/lambda.html">
+            
+                    
+                    lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../../java8/functionInterface.html">
+            
+                <a href="../../java8/functionInterface.html">
+            
+                    
+                    函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">学习笔记</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../php/">
+            
+                <a href="../../php/">
+            
+                    
+                    php 学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../php/php-setup-environment-mac.html">
+            
+                <a href="../../php/php-setup-environment-mac.html">
+            
+                    
+                    搭建开发环境( mac 版)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../php/set-timezone-method.html">
+            
+                <a href="../../php/set-timezone-method.html">
+            
+                    
+                    关于时区的那点事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../php/datetime-overview.html">
+            
+                <a href="../../php/datetime-overview.html">
+            
+                    
+                    日期时间操作一箩筐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../go/">
+            
+                <a href="../../go/">
+            
+                    
+                    go 学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../go/base/about.html">
+            
+                <a href="../../go/base/about.html">
+            
+                    
+                    初识 go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="../../go/base/setup.html">
+            
+                <a href="../../go/base/setup.html">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" data-path="../../go/base/workspace.html">
+            
+                <a href="../../go/base/workspace.html">
+            
+                    
+                    工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.3" data-path="../../go/base/ide.html">
+            
+                <a href="../../go/base/ide.html">
+            
+                    
+                    IDE编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.4" data-path="../../go/base/var-and-const.html">
+            
+                <a href="../../go/base/var-and-const.html">
+            
+                    
+                    你好,Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.5" data-path="../../go/base/grammar.html">
+            
+                <a href="../../go/base/grammar.html">
+            
+                    
+                    基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../go/container/about.html">
+            
+                <a href="../../go/container/about.html">
+            
+                    
+                    内建容器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../../go/container/array.html">
+            
+                <a href="../../go/container/array.html">
+            
+                    
+                    数组切片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.2" data-path="../../go/container/map.html">
+            
+                <a href="../../go/container/map.html">
+            
+                    
+                    字典映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../go/oop/about.html">
+            
+                <a href="../../go/oop/about.html">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" data-path="../../go/oop/encapsulation.html">
+            
+                <a href="../../go/oop/encapsulation.html">
+            
+                    
+                    再说封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.2" data-path="../../go/oop/inheritance.html">
+            
+                <a href="../../go/oop/inheritance.html">
+            
+                    
+                    能否继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.3" data-path="../../go/oop/interface.html">
+            
+                <a href="../../go/oop/interface.html">
+            
+                    
+                    初识接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.4" data-path="../../go/oop/interface-type.html">
+            
+                <a href="../../go/oop/interface-type.html">
+            
+                    
+                    再谈接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../go/functional/about.html">
+            
+                <a href="../../go/functional/about.html">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.4.1" data-path="../../go/functional/fib.html">
+            
+                <a href="../../go/functional/fib.html">
+            
+                    
+                    斐波那契数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.2" data-path="../../go/functional/closure.html">
+            
+                <a href="../../go/functional/closure.html">
+            
+                    
+                    简要理解闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../go/error/about.html">
+            
+                <a href="../../go/error/about.html">
+            
+                    
+                    错误管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.5.1" data-path="../../go/error/defer.html">
+            
+                <a href="../../go/error/defer.html">
+            
+                    
+                    延迟函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../../go/issue/faq.html">
+            
+                <a href="../../go/issue/faq.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../tools/">
+            
+                <a href="../../tools/">
+            
+                    
+                    工具资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../tools/mac-install-vmware.html">
+            
+                <a href="../../tools/mac-install-vmware.html">
+            
+                    
+                    给 mac 装个 vmware 虚拟机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1.1" data-path="../../tools/mac-vmware-install-windows.html">
+            
+                <a href="../../tools/mac-vmware-install-windows.html">
+            
+                    
+                    给 mac 虚拟机装个 windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.1.2" data-path="../../tools/mac-vmware-install-centos.html">
+            
+                <a href="../../tools/mac-vmware-install-centos.html">
+            
+                    
+                    给 mac 虚拟机装个 centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.1.3" data-path="../../tools/mac-vmware-install-ubuntu.html">
+            
+                <a href="../../tools/mac-vmware-install-ubuntu.html">
+            
+                    
+                    给 mac 虚拟机装个 ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../tools/windows-install-vmware.html">
+            
+                <a href="../../tools/windows-install-vmware.html">
+            
+                    
+                    给 windows 装个 vmware 虚拟机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.2.1" data-path="../../tools/windows-vmware-install-mac.html">
+            
+                <a href="../../tools/windows-vmware-install-mac.html">
+            
+                    
+                    给 windows 虚拟机装个 mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2.2" data-path="../../tools/windows-vmware-install-windows.html">
+            
+                <a href="../../tools/windows-vmware-install-windows.html">
+            
+                    
+                    给 windows 虚拟机装个 windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2.3" data-path="../../tools/windows-vmware-install-centos.html">
+            
+                <a href="../../tools/windows-vmware-install-centos.html">
+            
+                    
+                    给 windows 虚拟机装个 centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2.4" data-path="../../tools/windows-vmware-install-ubuntu.html">
+            
+                <a href="../../tools/windows-vmware-install-ubuntu.html">
+            
+                    
+                    给 windows 虚拟机装个 ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../../tools/chrome-extend-learn.html">
+            
+                <a href="../../tools/chrome-extend-learn.html">
+            
+                    
+                    学习开发自己的 chrome 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../write/">
+            
+                <a href="../../write/">
+            
+                    
+                    如何写作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../write/markdownOrRichText.html">
+            
+                <a href="../../write/markdownOrRichText.html">
+            
+                    
+                    markdown 和富文本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../../write/markdown2richText.html">
+            
+                <a href="../../write/markdown2richText.html">
+            
+                    
+                    markdown 转富文本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../../write/static-semi-manual-with-csv.html">
+            
+                <a href="../../write/static-semi-manual-with-csv.html">
+            
+                    
+                    csv 半手动数据统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="../../write/static-semi-manual-with-js.html">
+            
+                <a href="../../write/static-semi-manual-with-js.html">
+            
+                    
+                    js 半手动数据统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="../../write/jianshu-optimize-static.html">
+            
+                <a href="../../write/jianshu-optimize-static.html">
+            
+                    
+                    简述优选文章统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="../../write/faq.html">
+            
+                <a href="../../write/faq.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开源项目</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-official/">
+            
+                    
+                    gitbook-official
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-plugin-mygitalk/">
+            
+                    
+                    gitbook-plugin-mygitalk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/hexo-plugin-gitalk/">
+            
+                    
+                    hexo-plugin-gitalk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-plugin-readmore/">
+            
+                    
+                    gitbook-plugin-readmore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/hexo-plugin-readmore/">
+            
+                    
+                    hexo-plugin-readmore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-plugin-copyright/">
+            
+                    
+                    gitbook-plugin-copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" >
+            
+                <a target="_blank" href="https://security-plus.github.io/">
+            
+                    
+                    security-plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">读书观感</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../bigDataWave/">
+            
+                <a href="../../bigDataWave/">
+            
+                    
+                    大数据浪潮之巅:新技术商业制胜之道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">程序人生</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../greet/">
+            
+                <a href="../../greet/">
+            
+                    
+                    晚安
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../other/">
+            
+                <a href="../../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../../other/transformation.html">
+            
+                <a href="../../other/transformation.html">
+            
+                    
+                    转型之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../../other/static.html">
+            
+                <a href="../../other/static.html">
+            
+                    
+                    历史统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../../other/me.html">
+            
+                <a href="../../other/me.html">
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../../other/donate.html">
+            
+                <a href="../../other/donate.html">
+            
+                    
+                    捐赠支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">思绪乱飞</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../todo/">
+            
+                <a href="../../todo/">
+            
+                    
+                    TODO清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >初始化默认折叠效果</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+<div id="vip-container">
+    <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x521D;&#x59CB;&#x5316;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;"><b>1. </b>&#x521D;&#x59CB;&#x5316;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5584;&#x826F;&#x7684;&#x6211;&#x9009;&#x62E9;&#x5E2E;&#x52A9;&#x522B;&#x4EBA;"><b>1.1. </b>&#x5584;&#x826F;&#x7684;&#x6211;&#x9009;&#x62E9;&#x5E2E;&#x52A9;&#x522B;&#x4EBA;</a></li><li><span class="title-icon "></span><a href="#&#x84E6;&#x7136;&#x56DE;&#x9996;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x5DF2;&#x8D70;"><b>1.2. </b>&#x84E6;&#x7136;&#x56DE;&#x9996;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x5DF2;&#x8D70;</a></li><li><span class="title-icon "></span><a href="#&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x4F60;&#x5C31;&#x77E5;&#x9053;&#x4E86;&#x5417;"><b>1.3. </b>&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x4F60;&#x5C31;&#x77E5;&#x9053;&#x4E86;&#x5417;</a></li><li><span class="title-icon "></span><a href="#&#x81EA;&#x529B;&#x66F4;&#x751F;&#x627E;&#x5BFB;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;"><b>1.4. </b>&#x81EA;&#x529B;&#x66F4;&#x751F;&#x627E;&#x5BFB;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;</a></li><li><span class="title-icon "></span><a href="#&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x9ECE;&#x660E;&#x524D;&#x7684;&#x9ED1;&#x6697;"><b>1.5. </b>&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x9ECE;&#x660E;&#x524D;&#x7684;&#x9ED1;&#x6697;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6E90;&#x7801;&#x5728;&#x54EA;"><b>1.5.1. </b>&#x6E90;&#x7801;&#x5728;&#x54EA;</a></li><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x7F16;&#x8BD1;"><b>1.5.2. </b>&#x5982;&#x4F55;&#x7F16;&#x8BD1;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6447;&#x8EAB;&#x4E00;&#x53D8;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;"><b>1.6. </b>&#x6447;&#x8EAB;&#x4E00;&#x53D8;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x767E;&#x5EA6;&#x4E00;&#x4E0B;-browserify"><b>1.6.1. </b>&#x767E;&#x5EA6;&#x4E00;&#x4E0B; browserify</a></li><li><span class="title-icon "></span><a href="#&#x8C37;&#x6B4C;&#x4E00;&#x4E0B;-uglifyjs"><b>1.6.2. </b>&#x8C37;&#x6B4C;&#x4E00;&#x4E0B; uglifyjs</a></li><li><span class="title-icon "></span><a href="#&#x91CD;&#x65B0;&#x7F16;&#x8BD1;-others"><b>1.6.3. </b>&#x91CD;&#x65B0;&#x7F16;&#x8BD1; others</a></li></ul><li><span class="title-icon "></span><a href="#&#x61D2;&#x4EBA;&#x76F4;&#x8FBE;&#x4EE5;&#x53CA;&#x56DE;&#x987E;&#x603B;&#x7ED3;"><b>1.7. </b>&#x61D2;&#x4EBA;&#x76F4;&#x8FBE;&#x4EE5;&#x53CA;&#x56DE;&#x987E;&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#&#x521D;&#x59CB;&#x5316;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x521D;&#x59CB;&#x5316;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;"><a name="&#x521D;&#x59CB;&#x5316;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x521D;&#x59CB;&#x5316;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;</h1>
+<blockquote>
+<p><code>Gitbook</code> &#x662F;&#x4E00;&#x6B3E;<strong>&#x4EA7;&#x54C1;&#x6587;&#x6863;</strong>&#x6784;&#x5EFA;&#x5DE5;&#x5177;,&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;,&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x7535;&#x8111;&#x7AEF;&#x8BBF;&#x95EE;&#x65F6;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x662F;&#x5C55;&#x5F00;&#x72B6;&#x6001;,&#x53EF;&#x504F;&#x504F;&#x6709;&#x4EBA;&#x60F3;&#x8981;&#x5B9E;&#x73B0;<strong>&#x9ED8;&#x8BA4;&#x6298;&#x53E0;</strong>&#x6548;&#x679C;,&#x4E8E;&#x662F;&#x8BDE;&#x751F;&#x4E86;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;!</p>
+</blockquote>
+<h2 id="&#x5584;&#x826F;&#x7684;&#x6211;&#x9009;&#x62E9;&#x5E2E;&#x52A9;&#x522B;&#x4EBA;"><a name="&#x5584;&#x826F;&#x7684;&#x6211;&#x9009;&#x62E9;&#x5E2E;&#x52A9;&#x522B;&#x4EBA;" class="anchor-navigation-ex-anchor" href="#&#x5584;&#x826F;&#x7684;&#x6211;&#x9009;&#x62E9;&#x5E2E;&#x52A9;&#x522B;&#x4EBA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x5584;&#x826F;&#x7684;&#x6211;&#x9009;&#x62E9;&#x5E2E;&#x52A9;&#x522B;&#x4EBA;</h2>
+<p>&#x53EF;&#x80FD;&#x662F;&#x7F51;&#x4E0A;&#x5173;&#x4E8E; <code>Gitbook</code> &#x7684;&#x6559;&#x7A0B;&#x76F8;&#x5BF9;&#x6765;&#x8BF4;&#x6709;&#x4E9B;&#x843D;&#x540E;,&#x52A0;&#x4E0A;&#x5199;&#x6587;&#x7AE0;&#x65F6;&#x5206;&#x4EAB;&#x4E86;&#x4E0D;&#x5C11;&#x5173;&#x4E8E; <a href="https://snowdreams1006.github.io/myGitbook/" target="_blank">gitbook &#x7CFB;&#x5217;&#x6559;&#x7A0B;</a>,&#x56E0;&#x6B64;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x7C89;&#x4E1D;&#x597D;&#x53CB;&#x4E2D;&#x6709;&#x4E0D;&#x5C11;&#x662F;&#x6765;&#x6E90;&#x4E8E; <code>Gitbook</code>.</p>
+<p>&#x6240;&#x4EE5;&#x4E0A;&#x4E2A;&#x6708;&#x6709;&#x4E2A;&#x597D;&#x53CB;&#x95EE;&#x6211;&#x80FD;&#x4E0D;&#x80FD;&#x914D;&#x7F6E; <code>Gitbook</code> <strong>&#x9ED8;&#x8BA4;&#x6298;&#x53E0;</strong>&#x7684;&#x6548;&#x679C;,&#x5FC3;&#x91CC;&#x6709;&#x4E9B;&#x72AF;&#x96BE;,&#x4F5C;&#x4E3A; <code>gitbook</code> &#x7684;&#x5FE0;&#x5B9E;&#x7C89;&#x4E1D;,&#x6211;&#x90FD;&#x4E0D;&#x77E5;&#x9053; <code>gitbook</code> &#x8FD8;&#x6709;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x914D;&#x7F6E;?!</p>
+<p>&#x4F46;&#x662F;,&#x5584;&#x826F;&#x7684;&#x6211;&#x603B;&#x662F;&#x6709;&#x6C42;&#x5FC5;&#x5E94;,<strong>&#x4E0D;&#x5FCD;&#x5FC3;&#x62D2;&#x7EDD;</strong>&#x5C0F;&#x767D;&#x7528;&#x6237;,&#x4E8E;&#x662F;&#x6211;&#x4FBF;&#x62B1;&#x7740;&#x8BD5;&#x4E00;&#x8BD5;&#x7684;&#x5FC3;&#x6001;&#x5F00;&#x59CB;&#x7814;&#x7A76;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;?</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5z7fa0cj31fs0u0wo6.jpg" alt="gitbook-issue-modify-default-fold-preview.png"></p>
+<p>&#x5F53;&#x7136;,<strong>&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x524D;&#x8FD8;&#x662F;&#x8981;&#x5148;&#x590D;&#x73B0;&#x4E00;&#x4E0B;&#x95EE;&#x9898;</strong>,&#x7136;&#x540E;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x719F;&#x7EC3;&#x6572;&#x5165;&#x4E86; <code>gitbook serve</code> &#x547D;&#x4EE4;&#x6765;&#x542F;&#x52A8;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;,&#x4E3A;&#x4E86;<strong>&#x6392;&#x9664;&#x7F13;&#x5B58;</strong>&#x7B49;&#x5F71;&#x54CD;,&#x7279;&#x610F;&#x6253;&#x5F00;&#x4E86; <code>Chrome</code> &#x6D4F;&#x89C8;&#x5668;&#x7684;<strong>&#x65E0;&#x75D5;&#x6A21;&#x5F0F;</strong>,&#x679C;&#x4E0D;&#x5176;&#x7136;<strong>&#x9ED8;&#x8BA4;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x662F;&#x5C55;&#x5F00;&#x7684;</strong>!</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xiggv4j31g90u0qck.jpg" alt="gitbook-issue-modify-default-fold-review.png"></p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x4E0D;&#x80FD;&#x590D;&#x73B0;&#x7684;&#x95EE;&#x9898;&#x90FD;&#x4E0D;&#x662F;&#x6211;&#x7684;&#x95EE;&#x9898;,<strong>&#x62D2;&#x7EDD;&#x89E3;&#x51B3;&#x6B64;&#x7C7B;&#x95EE;&#x9898;</strong>,&#x641E;&#x4E0D;&#x597D;&#x662F;&#x4F60;&#x81EA;&#x5DF1;&#x73AF;&#x5883;&#x642D;&#x5EFA;&#x95EE;&#x9898;&#x5462;!</p>
+</blockquote>
+<h2 id="&#x84E6;&#x7136;&#x56DE;&#x9996;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x5DF2;&#x8D70;"><a name="&#x84E6;&#x7136;&#x56DE;&#x9996;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x5DF2;&#x8D70;" class="anchor-navigation-ex-anchor" href="#&#x84E6;&#x7136;&#x56DE;&#x9996;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x5DF2;&#x8D70;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x84E6;&#x7136;&#x56DE;&#x9996;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x5DF2;&#x8D70;</h2>
+<p>&#x95EE;&#x9898;&#x590D;&#x73B0;&#x540E;&#x5C31;&#x8981;&#x5F00;&#x59CB;&#x5BFB;&#x6C42;&#x89E3;&#x51B3;&#x4E4B;&#x9053;,&#x867D;&#x7136;&#x5370;&#x8C61;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x76F8;&#x5173;&#x914D;&#x7F6E;,&#x4F46;&#x662F;&#x96BE;&#x4FDD;&#x8BB0;&#x5FC6;&#x6DF7;&#x4E71;&#x9057;&#x6F0F;&#x4E86;&#x67D0;&#x4E9B;&#x914D;&#x7F6E;&#x9879;,&#x6240;&#x4EE5;&#x8FD8;&#x662F;&#x5148;&#x770B;&#x770B;<strong>&#x5B98;&#x65B9;&#x6587;&#x6863;</strong>&#x600E;&#x4E48;&#x8BF4;&#x7684;&#x5427;!</p>
+<p>&#x4F46;&#x662F;,&#x5F53;&#x4F60;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165; <code>gitbook &#x5B98;&#x65B9;&#x6587;&#x6863;</code> &#x65F6;,&#x5E76;&#x627E;&#x4E0D;&#x5230;&#x60F3;&#x8C61;&#x4E2D;&#x7684;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x800C;&#x662F;<strong>&#x65B0;&#x7248;&#x5B98;&#x7F51;</strong>,&#x4E0D;&#x4FE1;&#x4F60;&#x81EA;&#x5DF1;&#x53BB;&#x641C;&#x4E00;&#x4E0B;,&#x80AF;&#x5B9A;&#x662F;<strong>&#x65B0;&#x7248;&#x5B98;&#x7F51;</strong>.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5vxx5zoj31g30u07dr.jpg" alt="gitbook-issue-modify-default-fold-document-search-result-preview.png"></p>
+<p>&#x5F53;&#x4F60;&#x81EA;&#x4EE5;&#x4E3A;&#x627E;&#x5230;&#x4E86;&#x5B98;&#x7F51;&#x65F6;,&#x70B9;&#x51FB;&#x8FDB;&#x53BB;&#x67E5;&#x770B;&#x6587;&#x6863;&#x90E8;&#x5206;,&#x5F88;&#x9057;&#x61BE;,&#x8FD9;&#x662F;&#x65B0;&#x7248;&#x6587;&#x6863;&#x5E76;&#x4E0D;&#x662F;<strong>&#x8001;&#x7248;&#x6587;&#x6863;</strong>,&#x4F60;&#x8FD8;&#x4F1A;&#x7EE7;&#x7EED;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x5BFB;&#x6C42;&#x53EF;&#x7528;&#x94FE;&#x63A5;&#x671F;&#x5F85;&#x627E;&#x5230;&#x5B98;&#x65B9;&#x6587;&#x6863;.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5w4vgk4j31g30u07dr.jpg" alt="gitbook-issue-modify-default-fold-document-search-result-click.png"></p>
+<p>&#x4E3A;&#x4E86;&#x8282;&#x7701;&#x5B9D;&#x8D35;&#x65F6;&#x95F4;,&#x8FD9;&#x91CC;&#x63A8;&#x8350;&#x8BBF;&#x95EE;&#x4E2A;&#x4EBA;&#x7EF4;&#x62A4;&#x7684; <code>gitbook</code> &#x6587;&#x6863;,&#x70B9;&#x51FB;&#x8BBF;&#x95EE;: <a href="https://snowdreams1006.github.io/gitbook-official/" target="_blank">gitbook &#x539F;&#x7248;&#x6587;&#x6863;</a></p>
+<p>&#x76EE;&#x524D;&#x63D0;&#x4F9B;&#x4E86;&#x4E2D;&#x82F1;&#x6587;&#x4E24;&#x4E2A;&#x8BED;&#x8A00;&#x7248;&#x672C;&#x7684;&#x6587;&#x6863;,&#x76F8;&#x4FE1;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x5927;&#x591A;&#x6570;&#x7528;&#x6237;&#x7684;&#x9700;&#x6C42;&#x4E86;,&#x9009;&#x62E9;&#x4EFB;&#x610F;&#x4E00;&#x79CD;&#x8BED;&#x8A00;&#x540E;&#x70B9;&#x51FB;&#x8FDB;&#x5165;&#x7FFB;&#x9605;&#x76F8;&#x5173;&#x8BBE;&#x7F6E;.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xb7mmxj31z20fgjtu.jpg" alt="gitbook-issue-modify-default-fold-gitbook-official-preview.png"></p>
+<p>&#x5B9E;&#x9645;&#x4E0A;,<strong>&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E5F;&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x7528;</strong>,&#x56E0;&#x4E3A;&#x6839;&#x672C;&#x5C31;&#x6CA1;&#x6709;&#x63D0;&#x5230;&#x8FC7;&#x5982;&#x4F55;&#x66F4;&#x6539;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x4F7F;&#x5176;<strong>&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x800C;&#x975E;&#x5C55;&#x5F00;&#x72B6;&#x6001;</strong>.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5zipuo9j31o30u0n5z.jpg" alt="gitbook-issue-modify-default-fold-gitbook-official-useless.png"></p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x5B98;&#x65B9;&#x4E0D;&#x518D;&#x7EF4;&#x62A4;&#x65E7;&#x7248;&#x6587;&#x6863;,&#x8D39;&#x5C3D;&#x5FC3;&#x673A;&#x627E;&#x5230;&#x65E7;&#x7248;&#x6587;&#x6863;&#x4E5F;&#x65E0;&#x6D4E;&#x4E8E;&#x4E8B;,&#x56E0;&#x4E3A;&#x5E76;&#x6CA1;&#x6709;&#x63D0;&#x53CA;&#x5230;&#x76F8;&#x5173;&#x914D;&#x7F6E;,&#x6240;&#x4EE5;&#x731C;&#x6D4B;&#x5F88;&#x53EF;&#x80FD;&#x5E76;&#x672A;&#x63D0;&#x4F9B;&#x6709;&#x5173;&#x914D;&#x7F6E;&#x9879;!</p>
+</blockquote>
+<h2 id="&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x4F60;&#x5C31;&#x77E5;&#x9053;&#x4E86;&#x5417;"><a name="&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x4F60;&#x5C31;&#x77E5;&#x9053;&#x4E86;&#x5417;" class="anchor-navigation-ex-anchor" href="#&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x4F60;&#x5C31;&#x77E5;&#x9053;&#x4E86;&#x5417;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x4F60;&#x5C31;&#x77E5;&#x9053;&#x4E86;&#x5417;</h2>
+<p>&#x4FD7;&#x8BDD;&#x8BF4;:&quot;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x95EE;&#x9898;&#x522B;&#x4EBA;&#x90FD;&#x5DF2;&#x7ECF;&#x9047;&#x5230;&#x8FC7;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x89E3;&#x51B3;&#x65B9;&#x6848;,&#x6211;&#x4EEC;&#x552F;&#x4E00;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x627E;&#x5230;&#x5B83;!&quot;</p>
+<p>&#x8FD9;&#x4E5F;&#x662F;<strong>&#x9762;&#x5411;&#x641C;&#x7D22;&#x7F16;&#x7A0B;</strong>&#x7684;&#x6838;&#x5FC3;&#x601D;&#x60F3;,&#x9047;&#x5230;<strong>&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x95EE;&#x9898;</strong>&#x5E94;&#x8BE5;&#x4E5F;&#x4E0D;&#x4F1A;&#x4F8B;&#x5916;,&#x90A3;&#x5C31;&#x641C;&#x7D22;&#x4E00;&#x4E0B;&#x5427;!</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5yzvthsj31fm0u0trj.jpg" alt="gitbook-issue-modify-default-fold-search-baidu-no-result.png"></p>
+<p>&#x867D;&#x7136;&#x767E;&#x5EA6;&#x641C;&#x7D22;&#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x4E9B;&#x76F8;&#x5173;&#x6587;&#x7AE0;,&#x4F46;&#x662F;&#x5374;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x6548;&#x679C;,&#x5927;&#x591A;&#x6570;&#x662F;&#x57FA;&#x4E8E; <code>gitbook</code> &#x63D2;&#x4EF6;&#x5B9E;&#x73B0;&#x7684;<strong>&#x76EE;&#x5F55;&#x6298;&#x53E0;</strong>&#x6548;&#x679C;,&#x5E76;&#x4E0D;&#x662F;<strong>&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;</strong>&#x6548;&#x679C;.</p>
+<p>&#x4E0D;&#x7BA1;&#x662F;<strong>&#x6362;&#x5173;&#x952E;&#x8BCD;&#x91CD;&#x65B0;&#x641C;&#x7D22;</strong>&#x8FD8;&#x662F;&#x8C37;&#x6B4C;&#x641C;&#x7D22;,<strong>&#x5747;&#x672A;&#x53D1;&#x73B0;&#x6709;&#x5173;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</strong>,&#x96BE;&#x4E0D;&#x6210;&#x9762;&#x5411;&#x641C;&#x7D22;&#x5931;&#x8D25;&#x4E86;,&#x8981;&#x505A;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x7684;&#x7B2C;&#x4E00;&#x4EBA;&#x5417;?!</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xknuhjj31lh0u013z.jpg" alt="gitbook-issue-modify-default-fold-search-google-no-result.png"></p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x591A;&#x6B21;&#x91CD;&#x590D;&#x641C;&#x7D22;&#x64CD;&#x4F5C;&#x5747;&#x4E3A;&#x627E;&#x5230;&#x89E3;&#x51B3;&#x65B9;&#x6848;,&#x7531;&#x6B64;&#x53EF;&#x89C1;<strong>&#x771F;&#x7684;&#x5F88;&#x5C11;&#x6709;&#x4EBA;&#x60F3;&#x8981;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;</strong>,&#x6211;&#x4E5F;&#x662F;&#x5F88;&#x4F69;&#x670D;&#x63D0;&#x51FA;&#x8BE5;&#x95EE;&#x9898;&#x7684;&#x5C0F;&#x4F19;&#x4F34;<strong>&#x9AA8;&#x9ABC;&#x60CA;&#x5947;</strong>&#x554A;!</p>
+</blockquote>
+<h2 id="&#x81EA;&#x529B;&#x66F4;&#x751F;&#x627E;&#x5BFB;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;"><a name="&#x81EA;&#x529B;&#x66F4;&#x751F;&#x627E;&#x5BFB;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x529B;&#x66F4;&#x751F;&#x627E;&#x5BFB;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x81EA;&#x529B;&#x66F4;&#x751F;&#x627E;&#x5BFB;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;</h2>
+<p>&#x65E2;&#x7136;&#x4F9D;&#x9760;&#x522B;&#x4EBA;&#x65E0;&#x6CD5;&#x89E3;&#x51B3;&#x95EE;&#x9898;,&#x90A3;&#x4E48;&#x53EA;&#x80FD;<strong>&#x81EA;&#x529B;&#x66F4;&#x751F;&#x72EC;&#x81EA;&#x89E3;&#x51B3;&#x95EE;&#x9898;</strong>,&#x662F;&#x65F6;&#x5019;&#x8003;&#x9A8C;&#x771F;&#x6B63;&#x7684;&#x6280;&#x672F;&#x4E86;!</p>
+<p>&#x4E3A;&#x4E86;&#x6392;&#x9664;&#x65E0;&#x5173;&#x5E72;&#x6270;,&#x4E0D;&#x80FD;&#x518D;&#x7528;&#x81EA;&#x5DF1;&#x7684; <code>gitbook</code> &#x9879;&#x76EE;&#x4E86;,&#x6BD5;&#x7ADF;&#x6587;&#x4EF6;&#x592A;&#x591A;&#x4E0D;&#x65B9;&#x4FBF;&#x540E;&#x7EED;&#x8C03;&#x8BD5;,&#x90A3;&#x4E48;&#x4E0D;&#x59A8;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;.</p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;</li>
+</ul>
+<pre><code class="lang-bash">$ mkdir <span class="hljs-built_in">test</span> &amp;&amp; <span class="hljs-built_in">cd</span> <span class="hljs-built_in">test</span>
+</code></pre>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;</li>
+</ul>
+<pre><code class="lang-bash">$ gitbook init
+</code></pre>
+<ul>
+<li>&#x542F;&#x52A8;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;</li>
+</ul>
+<pre><code class="lang-bash">$ gitbook serve
+</code></pre>
+<p>&#x867D;&#x7136;&#x4E00;&#x7247;&#x7A7A;&#x767D;,&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x5B9E;&#x8D28;&#x6027;&#x5185;&#x5BB9;,&#x4F46;&#x662F;&#x5927;&#x9053;&#x81F3;&#x7B80;,&#x5BF9;&#x4E8E;&#x6211;&#x4EEC;&#x590D;&#x73B0;&#x5E76;&#x6D4B;&#x8BD5;&#x95EE;&#x9898;&#x6765;&#x8BF4;,&#x8DB3;&#x591F;&#x4E86;!</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5yvfiklj31yq0gon07.jpg" alt="gitbook-issue-modify-default-fold-test-serve.png"></p>
+<p>&#x6253;&#x5F00; <code>Chrome</code> &#x6D4F;&#x89C8;&#x5668;&#x5E76;&#x6309;&#x4E0B; <code>F12</code> &#x5F00;&#x542F;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;,&#x9F20;&#x6807;&#x9009;&#x4E2D;&#x5DE6;&#x4FA7;&#x7684; <code>Elements</code> &#x5143;&#x7D20;&#x9009;&#x9879;&#x5361;&#x5E76;&#x70B9;&#x4EAE;&#x5DE6;&#x4FA7;&#x7684;&#x5C0F;&#x9F20;&#x6807;,&#x7136;&#x540E;&#x5728;&#x9875;&#x9762;&#x4E0A;&#x627E;&#x5230;&#x5DE6;&#x4FA7;&#x56FE;&#x6807;&#x6309;&#x94AE;,&#x4E8E;&#x662F;&#x9009;&#x4E2D;&#x5143;&#x7D20;&#x9AD8;&#x4EAE;&#x4E86;.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xn74jij31le0u0qbn.jpg" alt="gitbook-issue-modify-default-fold-test-serve-selected-elements.png"></p>
+<p>&#x5355;&#x72EC;&#x6458;&#x5F55; <code>Html</code> &#x5173;&#x952E;&#x4EE3;&#x7801;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn pull-left js-toolbar-action&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-align-justify&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>&#x7A0D;&#x5FAE;&#x719F;&#x6089;&#x524D;&#x7AEF;&#x7684;&#x5C0F;&#x4F19;&#x4F34;&#x53EF;&#x80FD;&#x5F88;&#x8F7B;&#x677E;&#x5C31;&#x80FD;&#x660E;&#x767D; <code>a</code> &#x6807;&#x7B7E;&#x7684; <code>class</code> &#x5C5E;&#x6027;&#x8868;&#x793A;&#x7684;&#x542B;&#x4E49;,&#x89C1;&#x540D;&#x77E5;&#x610F;,&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x89E3;&#x91CA;:</p>
+<ul>
+<li><code>btn</code> &#x5E94;&#x8BE5;&#x662F;&#x63A7;&#x5236;&#x5916;&#x89C2;&#x7684;&#x6837;&#x5F0F;,&#x8868;&#x73B0;&#x5F97;&#x50CF;&#x662F;&#x6309;&#x94AE;&#x6548;&#x679C;.</li>
+<li><code>pull-left</code> &#x5E94;&#x8BE5;&#x662F;&#x63A7;&#x5236;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;,&#x62C9;&#x5012;&#x5DE6;&#x8FB9;.</li>
+<li><code>js-toolbar-action</code> &#x5E94;&#x8BE5;&#x662F;&#x63A7;&#x5236;&#x5143;&#x7D20;&#x7684;&#x884C;&#x4E3A;,<code>js</code> &#x5DE5;&#x5177;&#x680F;&#x884C;&#x4E3A;&#x52A8;&#x4F5C;.</li>
+</ul>
+<p>&#x7531;&#x6B64;&#x53EF;&#x89C1;,&#x70B9;&#x51FB;&#x8BE5;&#x56FE;&#x6807;&#x5B9E;&#x73B0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x6298;&#x53E0;/&#x5C55;&#x5F00;&#x6548;&#x679C;&#x5E94;&#x8BE5;&#x662F; <code>.js-toolbar-action</code> &#x5728;&#x8D77;&#x4F5C;&#x7528;,&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x67D0;&#x4E00;&#x6BB5; <code>js</code> &#x80AF;&#x5B9A;&#x662F;&#x9488;&#x5BF9;&#x8BE5; <code>class</code> &#x8FDB;&#x884C;&#x4E86;&#x76D1;&#x542C;!</p>
+<p>&#x6B64;&#x65F6;,&#x70B9;&#x51FB;&#x53F3;&#x4FA7;&#x7684; <code>Event Listeners</code> &#x9009;&#x9879;&#x5361;&#x67E5;&#x770B;&#x8BE5;&#x5143;&#x7D20;&#x5DF2;&#x76D1;&#x542C;&#x7684; <code>click</code> &#x4E8B;&#x4EF6;,&#x5B9A;&#x4F4D;&#x5230;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684; <code>js</code> &#x6587;&#x4EF6;&#x5728;&#x8D77;&#x4F5C;&#x7528;.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5zk3pxqj31z40gk45v.jpg" alt="gitbook-issue-modify-default-fold-test-serve-inspection-listeners.png"></p>
+<p>&#x679C;&#x4E0D;&#x5176;&#x7136;,&#x5143;&#x7D20;&#x4E0A;&#x5B58;&#x5728; <code>click</code> &#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5E76;&#x4E14;&#x53D1;&#x73B0;&#x6267;&#x884C;&#x76D1;&#x542C;&#x7684;&#x903B;&#x8F91;&#x4EE3;&#x7801;&#x51FA;&#x73B0;&#x5728; <code>theme.js</code> &#x6587;&#x4EF6;,&#x70B9;&#x51FB;&#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x67E5;&#x770B;&#x5177;&#x4F53;&#x5185;&#x5BB9;.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5yt0jx5j31yy0gktee.jpg" alt="gitbook-issue-modify-default-fold-test-serve-themejs-ugly.png"></p>
+<p>&#x538B;&#x7F29;&#x540E;&#x7684; <code>js</code> &#x4EE3;&#x7801;&#x4E0D;&#x5177;&#x5907;&#x53EF;&#x8BFB;&#x6027;,&#x70B9;&#x51FB;&#x5DE6;&#x4E0B;&#x65B9;&#x7684; <code>{}</code> &#x56FE;&#x6807;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;<strong>&#x4EE3;&#x7801;&#x683C;&#x5F0F;&#x5316;</strong>,&#x4F46;&#x662F;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x5355;&#x7EAF;&#x7684;&#x538B;&#x7F29;&#x800C;&#x662F;&#x8FDB;&#x884C;&#x4E86;&#x4E11;&#x5316;&#x6216;&#x8005;&#x6DF7;&#x6DC6;&#x4EE3;&#x7801;&#x4E4B;&#x7C7B;&#x7684;&#x903B;&#x8F91;,<strong>&#x683C;&#x5F0F;&#x5316;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4ECD;&#x7136;&#x4E0D;&#x53EF;&#x8BFB;</strong>!</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5z49jntj31yk0g6dlj.jpg" alt="gitbook-issue-modify-default-fold-test-serve-themejs-format.png"></p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x7EC8;&#x4E8E;&#x53D1;&#x73B0;&#x4E86;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;,&#x4FEE;&#x6539;&#x7684;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x5C31;&#x9690;&#x85CF;&#x5728; <code>theme.js</code> &#x6587;&#x4EF6;&#x4E2D;,&#x53EA;&#x8981;&#x627E;&#x5230;&#x76F8;&#x5173;&#x6E90;&#x7801;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x8F93;&#x51FA; <code>theme.js</code> &#x6587;&#x4EF6;&#x5E76;&#x66FF;&#x6362;&#x5E94;&#x8BE5;&#x5C31;&#x80FD;&#x5B9E;&#x73B0;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;!</p>
+</blockquote>
+<h2 id="&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x9ECE;&#x660E;&#x524D;&#x7684;&#x9ED1;&#x6697;"><a name="&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x9ECE;&#x660E;&#x524D;&#x7684;&#x9ED1;&#x6697;" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x9ECE;&#x660E;&#x524D;&#x7684;&#x9ED1;&#x6697;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x9ECE;&#x660E;&#x524D;&#x7684;&#x9ED1;&#x6697;</h2>
+<p>&#x6839;&#x636E;&#x76EE;&#x524D;&#x5DF2;&#x638C;&#x63E1;&#x7684;&#x7EBF;&#x7D22;,&#x53EF;&#x4EE5;&#x80AF;&#x5B9A;&#x7684;&#x662F;&#x6709;&#x7528;&#x7EBF;&#x7D22;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x4E2A;:</p>
+<ul>
+<li>&#x76D1;&#x542C;&#x5143;&#x7D20; <code>.js-toolbar-action</code></li>
+<li>&#x8F93;&#x51FA;&#x6587;&#x4EF6; <code>theme.js</code></li>
+</ul>
+<p>&#x4E00;&#x4E2A;&#x662F;&#x6E90;&#x7801;&#x6587;&#x4EF6;,&#x53E6;&#x4E00;&#x4E2A;&#x662F;&#x8F93;&#x51FA;&#x6587;&#x4EF6;,&#x60F3;&#x8981;&#x5728;&#x5E9E;&#x5927;&#x7684; <code>gitbook</code> &#x9879;&#x76EE;&#x4E2D;&#x8FC5;&#x901F;&#x5B9A;&#x4F4D;&#x5230;&#x76F8;&#x5173;&#x4EE3;&#x7801;&#x903B;&#x8F91;,<strong>&#x4E2A;&#x4EBA;&#x80FD;&#x529B;&#x6709;&#x9650;,&#x5E76;&#x4E0D;&#x719F;&#x6089;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8C03;&#x8BD5;&#x6D41;&#x7A0B;,&#x56E0;&#x6B64;&#x91C7;&#x7528;&#x6700;&#x7B80;&#x5355;&#x7C97;&#x66B4;&#x50BB;&#x74DC;&#x5F0F;&#x641C;&#x7D22;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x6392;&#x67E5;</strong>!</p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x5982;&#x679C;&#x8BFB;&#x8005;&#x5BF9;&#x4E8E;&#x73B0;&#x4EE3;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x6BD4;&#x8F83;&#x5C5E;&#x6027;&#x7684;&#x8BDD;,&#x5927;&#x6982;&#x8FC7;&#x4E00;&#x904D;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x5E94;&#x8BE5;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x8BD5;&#x5B9A;&#x4F4D;&#x95EE;&#x9898;&#x4E86;,&#x7528;&#x4E0D;&#x7740;&#x50CF;&#x6211;&#x8FD9;&#x6837;&#x50BB;&#x74DC;&#x5F0F;&#x641C;&#x7D22;&#x6392;&#x67E5;!</p>
+</blockquote>
+<ul>
+<li>&#x67E5;&#x770B;&#x5F53;&#x524D; <code>gitbook</code> &#x7248;&#x672C;</li>
+</ul>
+<pre><code class="lang-bash">$ gitbook current
+GitBook version is 3.2.3
+</code></pre>
+<ul>
+<li>&#x627E;&#x5230; <code>gitbook</code> &#x5B89;&#x88C5;&#x4F4D;&#x7F6E;</li>
+</ul>
+<p><code>gitbook</code> &#x4E00;&#x822C;&#x5B89;&#x88C5;&#x5728; <code>~/.gitbook/versions/3.2.3</code> &#x76EE;&#x5F55;,&#x5176;&#x4E2D; <code>~</code> &#x8868;&#x793A;&#x7528;&#x6237;&#x5BB6;&#x76EE;&#x5F55;.</p>
+<pre><code class="lang-bash">$ open ~/.gitbook/versions/3.2.3
+</code></pre>
+<p>&#x9009;&#x62E9;&#x4E00;&#x6B3E;&#x719F;&#x6089;&#x7684;&#x7F16;&#x8F91;&#x5668;&#x5E76;&#x6253;&#x5F00; <code>Gitbook</code> &#x5B89;&#x88C5;&#x76EE;&#x5F55;,&#x8FD9;&#x91CC;&#x4EE5; <code>sublime</code> &#x7F16;&#x8F91;&#x5668;&#x4E3A;&#x4F8B;,&#x9009;&#x4E2D;&#x9879;&#x76EE;&#x540E;<strong>&#x53F3;&#x952E;</strong>&#x5168;&#x5C40;&#x641C;&#x7D22;&#x5173;&#x952E;&#x5B57; <code>js-toolbar-action</code> &#x671F;&#x671B;&#x627E;&#x5230;&#x76F8;&#x5173;&#x6E90;&#x7801;&#x6587;&#x4EF6;.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5z0kp2pj31z405eq48.jpg" alt="gitbook-issue-modify-default-fold-source-sublime-search.png"></p>
+<p>&#x5168;&#x5C40;&#x641C;&#x7D22;&#x540E;&#x4E3B;&#x8981;&#x51FA;&#x73B0;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5305;&#x542B; <code>js-toolbar-action</code> &#x5173;&#x952E;&#x5B57;,&#x4E00;&#x4E2A;&#x662F;&#x8F93;&#x51FA;&#x6587;&#x4EF6; <code>theme.js</code> ,&#x53E6;&#x4E00;&#x4E2A;&#x662F;&#x6E90;&#x7801;&#x6587;&#x4EF6; <code>toolbar.js</code> .</p>
+<pre><code>Searching 19744 files for &quot;js-toolbar-action&quot;
+
+/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/_assets/website/theme.js:
+
+...
+
+/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme/toolbar.js:
+
+...
+
+4 matches across 2 files
+</code></pre><p>&#x53EF;&#x60F3;&#x800C;&#x77E5;,&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x80AF;&#x5B9A;&#x662F;&#x7ECF;&#x8FC7;<strong>&#x7F16;&#x8BD1;&#x5904;&#x7406;</strong>&#x540E;&#x7EDF;&#x4E00;&#x6253;&#x5305;&#x8F93;&#x51FA;,&#x56E0;&#x6B64;<strong>&#x4E0D;&#x4EC5;&#x4EC5;&#x8981;&#x627E;&#x5230;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x8FD8;&#x8981;&#x638C;&#x63E1;&#x5982;&#x4F55;&#x7F16;&#x8BD1;</strong>.</p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x5B9A;&#x4F4D;&#x5230;&#x5F53;&#x524D; <code>gitbook</code> &#x76EE;&#x5F55;&#x540E;&#x501F;&#x52A9;&#x5168;&#x5C40;&#x641C;&#x7D22;&#x529F;&#x80FD;&#x5B9A;&#x4F4D;&#x5230;&#x5177;&#x4F53;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;,&#x8D77;&#x4F5C;&#x7528;&#x7684;&#x662F; <code>gitbook-plugin-theme-default</code> &#x9879;&#x76EE;,&#x5176;&#x5B9E;&#x8FD9;&#x5C31;&#x662F; <code>Gitbook</code> &#x7684;&#x9ED8;&#x8BA4;&#x4E3B;&#x9898;.</p>
+</blockquote>
+<h3 id="&#x6E90;&#x7801;&#x5728;&#x54EA;"><a name="&#x6E90;&#x7801;&#x5728;&#x54EA;" class="anchor-navigation-ex-anchor" href="#&#x6E90;&#x7801;&#x5728;&#x54EA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1. &#x6E90;&#x7801;&#x5728;&#x54EA;</h3>
+<p><code>/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme/toolbar.js</code> :</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Update a button</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateButton</span>(<span class="hljs-params">opts</span>) </span>{
+    <span class="hljs-keyword">var</span> $result;
+    <span class="hljs-keyword">var</span> $toolbar = $(<span class="hljs-string">&apos;.book-header&apos;</span>);
+    <span class="hljs-keyword">var</span> $title = $toolbar.find(<span class="hljs-string">&apos;h1&apos;</span>);
+
+    <span class="hljs-comment">// Build class name</span>
+    <span class="hljs-keyword">var</span> positionClass = <span class="hljs-string">&apos;pull-&apos;</span>+opts.position;
+
+    <span class="hljs-comment">// Create button</span>
+    <span class="hljs-keyword">var</span> $btn = $(<span class="hljs-string">&apos;&lt;a&gt;&apos;</span>, {
+        <span class="hljs-string">&apos;class&apos;</span>: <span class="hljs-string">&apos;btn&apos;</span>,
+        <span class="hljs-string">&apos;text&apos;</span>: opts.text? <span class="hljs-string">&apos; &apos;</span> + opts.text : <span class="hljs-string">&apos;&apos;</span>,
+        <span class="hljs-string">&apos;aria-label&apos;</span>: opts.label,
+        <span class="hljs-string">&apos;href&apos;</span>: <span class="hljs-string">&apos;#&apos;</span>
+    });
+
+    <span class="hljs-comment">// Bind click</span>
+    $btn.click(opts.onClick);
+
+    <span class="hljs-comment">// Prepend icon</span>
+    <span class="hljs-keyword">if</span> (opts.icon) {
+        $(<span class="hljs-string">&apos;&lt;i&gt;&apos;</span>, {
+            <span class="hljs-string">&apos;class&apos;</span>: opts.icon
+        }).prependTo($btn);
+    }
+
+    <span class="hljs-comment">// Prepare dropdown</span>
+    <span class="hljs-keyword">if</span> (opts.dropdown) {
+        <span class="hljs-keyword">var</span> $container = $(<span class="hljs-string">&apos;&lt;div&gt;&apos;</span>, {
+            <span class="hljs-string">&apos;class&apos;</span>: <span class="hljs-string">&apos;dropdown &apos;</span>+positionClass+<span class="hljs-string">&apos; &apos;</span>+opts.className
+        });
+
+        <span class="hljs-comment">// Add button to container</span>
+        $btn.addClass(<span class="hljs-string">&apos;toggle-dropdown&apos;</span>);
+        $container.append($btn);
+
+        <span class="hljs-comment">// Create inner menu</span>
+        <span class="hljs-keyword">var</span> $menu = createDropdownMenu(opts.dropdown);
+
+        <span class="hljs-comment">// Menu position</span>
+        $menu.addClass(<span class="hljs-string">&apos;dropdown-&apos;</span>+(opts.position == <span class="hljs-string">&apos;right&apos;</span>? <span class="hljs-string">&apos;left&apos;</span> : <span class="hljs-string">&apos;right&apos;</span>));
+
+        $container.append($menu);
+        $result = $container;
+    } <span class="hljs-keyword">else</span> {
+        $btn.addClass(positionClass);
+        $btn.addClass(opts.className);
+        $result = $btn;
+    }
+
+    $result.addClass(<span class="hljs-string">&apos;js-toolbar-action&apos;</span>);
+
+    <span class="hljs-keyword">if</span> ($.isNumeric(opts.index) &amp;&amp; opts.index &gt;= <span class="hljs-number">0</span>) {
+        insertAt($toolbar, <span class="hljs-string">&apos;.btn, .dropdown, h1&apos;</span>, opts.index, $result);
+    } <span class="hljs-keyword">else</span> {
+        $result.insertBefore($title);
+    }
+}
+
+<span class="hljs-comment">// Update all buttons</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateAllButtons</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">&apos;.js-toolbar-action&apos;</span>).remove();
+    buttons.forEach(updateButton);
+}
+</code></pre>
+<p>&#x7C97;&#x7565;&#x770B;&#x4E00;&#x4E0B;,&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x662F;&#x5B9E;&#x73B0;&#x89E6;&#x53D1;&#x5DE6;&#x4FA7;&#x56FE;&#x6807;&#x6298;&#x53E0;/&#x5C55;&#x5F00;&#x83DC;&#x5355;&#x7684;&#x903B;&#x8F91;&#x5B9E;&#x73B0;,&#x8FD9;&#x91CC;&#x53EA;&#x662F;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x8FD8;&#x4E0D;&#x77E5;&#x9053;&#x8C01;&#x662F;&#x4F7F;&#x7528;&#x8005;,&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8FD9;&#x79CD;&#x903B;&#x8F91;&#x662F;&#x5728;&#x54EA;&#x91CC;&#x8C03;&#x7528;&#x7684;?</p>
+<p>&#x53EA;&#x80FD;&#x7EE7;&#x7EED;&#x987A;&#x85E4;&#x6478;&#x74DC;,&#x5F80;&#x4E0A;&#x7FFB;&#x770B;,&#x6839;&#x636E;&#x57FA;&#x672C;&#x5F00;&#x53D1;&#x5E38;&#x8BC6;,&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x540C;&#x7EA7;&#x76EE;&#x5F55;&#x4E2D;&#x5B58;&#x5728;&#x5982;&#x4E0B;&#x6587;&#x4EF6;,&#x5176;&#x4E2D;&#x7684; <code>index.js</code> &#x5E94;&#x8BE5;&#x5C31;&#x662F;&#x5165;&#x53E3;&#x6587;&#x4EF6;:</p>
+<pre><code class="lang-bash">snowdreams1006s-MacBook-Pro:theme snowdreams1006$ tree .
+.
+&#x251C;&#x2500;&#x2500; dropdown.js
+&#x251C;&#x2500;&#x2500; index.js
+&#x251C;&#x2500;&#x2500; keyboard.js
+&#x251C;&#x2500;&#x2500; loading.js
+&#x251C;&#x2500;&#x2500; navigation.js
+&#x251C;&#x2500;&#x2500; platform.js
+&#x251C;&#x2500;&#x2500; sidebar.js
+&#x2514;&#x2500;&#x2500; toolbar.js
+
+0 directories, 8 files
+snowdreams1006s-MacBook-Pro:theme snowdreams1006$ 
+`
+</code></pre>
+<p>&#x6253;&#x5F00; <code>index.js</code> &#x6587;&#x4EF6;,&#x6839;&#x636E;&#x6CE8;&#x91CA;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>init()</code> &#x51FD;&#x6570;&#x662F;&#x5165;&#x95E8;&#x51FD;&#x6570;,&#x5176;&#x4E2D; <code>sidebar.init()</code> &#x548C; <code>sidebar.toggle()</code> &#x51FD;&#x6570;&#x65E0;&#x4E0D;&#x8BF4;&#x660E; <code>sidebar.js</code> &#x548C; <code>toolbar.js</code> &#x5173;&#x7CFB;&#x5BC6;&#x5207;,&#x5B8C;&#x5168;&#x6709;&#x7406;&#x7531;&#x731C;&#x60F3; <code>sidebar.js</code> &#x662F; <code>toolbar.js</code> &#x7684;&#x4F7F;&#x7528;&#x8005;!</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Init sidebar</span>
+    sidebar.init();
+
+    <span class="hljs-comment">// Init keyboard</span>
+    keyboard.init();
+
+    <span class="hljs-comment">// Bind dropdown</span>
+    dropdown.init();
+
+    <span class="hljs-comment">// Init navigation</span>
+    navigation.init();
+
+    <span class="hljs-comment">// Add action to toggle sidebar</span>
+    toolbar.createButton({
+        index: <span class="hljs-number">0</span>,
+        icon: <span class="hljs-string">&apos;fa fa-align-justify&apos;</span>,
+        onClick: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+            e.preventDefault();
+            sidebar.toggle();
+        }
+    });
+}
+</code></pre>
+<p>&#x6253;&#x5F00; <code>sidebar.js</code> &#x6587;&#x4EF6;&#x5E76;&#x67E5;&#x770B; <code>init()</code> &#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x548C; <code>toggle()</code> &#x89E6;&#x53D1;&#x51FD;&#x6570;,&#x53EF;&#x4EE5;&#x9A8C;&#x8BC1;&#x6211;&#x4EEC;&#x7684;&#x731C;&#x60F3;,&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x63A7;&#x5236;&#x4E2D;&#x5FC3;!</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Prepare sidebar: state and toggle button</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Init last state if not mobile</span>
+    <span class="hljs-keyword">if</span> (!platform.isMobile()) {
+        toggleSidebar(gitbook.storage.get(<span class="hljs-string">&apos;sidebar&apos;</span>, <span class="hljs-literal">true</span>), <span class="hljs-literal">false</span>);
+    }
+
+    <span class="hljs-comment">// Close sidebar after clicking a link on mobile</span>
+    $(<span class="hljs-built_in">document</span>).on(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-string">&apos;.book-summary li.chapter a&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">if</span> (platform.isMobile()) toggleSidebar(<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>);
+    });
+}
+</code></pre>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: <strong>&#x975E;&#x624B;&#x673A;&#x7AEF;</strong>&#x521D;&#x59CB;&#x5316;&#x4E0A;&#x6B21;&#x72B6;&#x6001;,<strong>&#x9ED8;&#x8BA4;&#x5C55;&#x5F00;</strong>&#x4FA7;&#x8FB9;&#x680F;,&#x5982;&#x679C;&#x662F;<strong>&#x624B;&#x673A;&#x7AEF;&#x5219;&#x6298;&#x53E0;</strong>&#x4FA7;&#x8FB9;&#x680F;.&#x5176;&#x4E2D; toggleSidebar() &#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;,&#x7B2C;&#x4E00;&#x6B21;&#x53C2;&#x6570;&#x8868;&#x793A;&#x662F;&#x5C55;&#x5F00;&#x8FD8;&#x662F;&#x6298;&#x53E0;,&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x6682;&#x4E0D;&#x53EF;&#x77E5;.</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-comment">// Toggle sidebar with or withour animation</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleSidebar</span>(<span class="hljs-params">_state, animation</span>) </span>{
+    <span class="hljs-keyword">if</span> (gitbook.state != <span class="hljs-literal">null</span> &amp;&amp; isOpen() == _state) <span class="hljs-keyword">return</span>;
+    <span class="hljs-keyword">if</span> (animation == <span class="hljs-literal">null</span>) animation = <span class="hljs-literal">true</span>;
+
+    gitbook.state.$book.toggleClass(<span class="hljs-string">&apos;without-animation&apos;</span>, !animation);
+    gitbook.state.$book.toggleClass(<span class="hljs-string">&apos;with-summary&apos;</span>, _state);
+
+    gitbook.storage.set(<span class="hljs-string">&apos;sidebar&apos;</span>, isOpen());
+}
+</code></pre>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x786E;&#x5B9E;&#x8868;&#x793A;&#x72B6;&#x6001;&#x800C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x662F;&#x5426;&#x6709;&#x52A8;&#x753B;&#x6548;&#x679C;,&#x4E0D;&#x7528;&#x770B;&#x5177;&#x4F53;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x800C;&#x662F;&#x770B;&#x6CE8;&#x91CA;&#x5C31;&#x80FD;&#x731C;&#x51FA;&#x5927;&#x6982;&#x903B;&#x8F91;&#x4E86;.</p>
+</blockquote>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x5206;&#x6790;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F97;&#x77E5; <code>init()</code> &#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x51B3;&#x5B9A;&#x4E86;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x662F;&#x6298;&#x53E0;&#x8FD8;&#x662F;&#x5C55;&#x5F00;,&#x540C;&#x65F6; <code>gitbook.storage.set(&apos;sidebar&apos;, isOpen())</code> &#x548C; <code>gitbook.storage.get(&apos;sidebar&apos;, true)</code> &#x5E94;&#x8BE5;&#x662F;&#x8BBE;&#x7F6E;&#x548C;&#x83B7;&#x53D6;&#x662F;&#x5426;&#x5C55;&#x5F00;&#x83DC;&#x5355;&#x7684;&#x6807;&#x5FD7;!</p>
+<p>&#x7531;&#x6B64;,&#x5982;&#x679C;&#x60F3;&#x8981;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;,&#x90A3;&#x4E48;&#x53EA;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x6210; <code>gitbook.storage.set(&apos;sidebar&apos;, false)</code> &#x5E94;&#x8BE5;&#x5C31;&#x4F1A;&#x751F;&#x6548;!</p>
+<h3 id="&#x5982;&#x4F55;&#x7F16;&#x8BD1;"><a name="&#x5982;&#x4F55;&#x7F16;&#x8BD1;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x7F16;&#x8BD1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.2. &#x5982;&#x4F55;&#x7F16;&#x8BD1;</h3>
+<p>&#x8BF4;&#x5E72;&#x5C31;&#x5E72;,&#x4E8E;&#x662F;&#x4E4E;&#x5728; <code>init()</code> &#x51FD;&#x6570;&#x63D2;&#x5165; <code>gitbook.storage.set(&apos;sidebar&apos;, false)</code> &#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x903B;&#x8F91;,&#x63A5;&#x7740;&#x770B;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x624D;&#x80FD;&#x751F;&#x6548;?</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Prepare sidebar: state and toggle button</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Close sidebar as default state </span>
+    gitbook.storage.set(<span class="hljs-string">&apos;sidebar&apos;</span>, <span class="hljs-literal">false</span>);
+
+    <span class="hljs-comment">// Init last state if not mobile</span>
+    <span class="hljs-keyword">if</span> (!platform.isMobile()) {
+        toggleSidebar(gitbook.storage.get(<span class="hljs-string">&apos;sidebar&apos;</span>, <span class="hljs-literal">true</span>), <span class="hljs-literal">false</span>);
+    }
+
+    <span class="hljs-comment">// Close sidebar after clicking a link on mobile</span>
+    $(<span class="hljs-built_in">document</span>).on(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-string">&apos;.book-summary li.chapter a&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">if</span> (platform.isMobile()) toggleSidebar(<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>);
+    });
+}
+</code></pre>
+<p>&#x63A5;&#x7740;&#x5207;&#x6362;&#x5230;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;&#x518D;&#x6B21;&#x8FD0;&#x884C; <code>gitbook serve</code> &#x542F;&#x52A8;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;,<strong>&#x53D1;&#x73B0;&#x5E76;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x53D8;&#x5316;</strong>,&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x6539;&#x53D8;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x624D;&#x4F1A;&#x751F;&#x6548;&#x6216;&#x8005;&#x8BF4;&#x66F4;&#x6539;&#x7684;&#x6E90;&#x7801;&#x9879;&#x76EE;&#x4E5F;&#x6CA1;&#x6709;&#x751F;&#x6548;?</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xck8t8j31z20da0ve.jpg" alt="gitbook-issue-modify-default-fold-test-serve-again-fail.png"></p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x8BE5;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x9879;&#x76EE;&#x662F; <code>gitbook-plugin-theme-default</code> ,&#x6839;&#x636E; <code>gitbook</code> &#x63D2;&#x4EF6;&#x547D;&#x540D;&#x89C4;&#x8303;&#x6211;&#x4EEC;&#x77E5;&#x9053;,<code>gitbook-plugin-*</code> &#x4E00;&#x822C;&#x662F;&#x529F;&#x80FD;&#x6027;&#x63D2;&#x4EF6;,&#x8FD9;&#x4E00;&#x7C7B;&#x7684;&#x63D2;&#x4EF6;&#x6709; <code>gitbook-plugin-readmore</code> &#x9605;&#x8BFB;&#x66F4;&#x591A;&#x63D2;&#x4EF6;&#x548C; <code>gitbook-plugin-copyright</code> &#x7248;&#x6743;&#x4FDD;&#x62A4;&#x63D2;&#x4EF6;&#x7B49;&#x7B49;.</p>
+<p>&#x4F46;&#x662F;&#x5982;&#x679C;&#x63D2;&#x4EF6;&#x540D;&#x4EE5; <code>gitbook-plugin-theme</code> &#x5F00;&#x5934;&#x7684;&#x8BDD;,&#x8FD9;&#x4E00;&#x7C7B;&#x63D2;&#x4EF6;&#x5C31;&#x662F;&#x4E3B;&#x9898;&#x63D2;&#x4EF6;,&#x6BD4;&#x5982; <code>gitbook-plugin-theme-default</code> &#x5C31;&#x662F;&#x9ED8;&#x8BA4;&#x4E3B;&#x9898;.</p>
+</blockquote>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;,&#x53EA;&#x8981;&#x9075;&#x5B88;&#x8BE5;&#x547D;&#x540D;&#x89C4;&#x5219;&#x7684;&#x63D2;&#x4EF6;&#x5F15;&#x5165;&#x65F6;&#x65E0;&#x9700;&#x6DFB;&#x52A0; <code>gitbook-plugin-</code> &#x524D;&#x7F00;,&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728; <code>gitbook.json</code> &#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x5165;&#x5269;&#x4F59;&#x7684;&#x7B80;&#x79F0;&#x4F5C;&#x4E3A;&#x63D2;&#x4EF6;&#x540D;.</p>
+<p>&#x6458;&#x5F55;&#x81EA; <code>Gitbook</code> &#x9879;&#x76EE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;,&#x53EF;&#x4EE5;&#x4F50;&#x8BC1;&#x4E0A;&#x8FF0;&#x89C4;&#x5219;&#x7684;&#x6B63;&#x786E;&#x6027;.</p>
+<pre><code class="lang-json"><span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;toc&quot;</span>,
+    <span class="hljs-string">&quot;pageview-count&quot;</span>,
+    <span class="hljs-string">&quot;mermaid-gb3&quot;</span>,
+    <span class="hljs-string">&quot;-lunr&quot;</span>,
+    <span class="hljs-string">&quot;-search&quot;</span>,
+    <span class="hljs-string">&quot;search-plus&quot;</span>,
+    <span class="hljs-string">&quot;splitter&quot;</span>,
+    <span class="hljs-string">&quot;-sharing&quot;</span>,
+    <span class="hljs-string">&quot;sharing-plus&quot;</span>,
+    <span class="hljs-string">&quot;expandable-chapters-small&quot;</span>,
+    <span class="hljs-string">&quot;anchor-navigation-ex&quot;</span>,
+    <span class="hljs-string">&quot;edit-link&quot;</span>,
+    <span class="hljs-string">&quot;copy-code-button&quot;</span>,
+    <span class="hljs-string">&quot;chart&quot;</span>,
+    <span class="hljs-string">&quot;favicon-custom&quot;</span>,
+    <span class="hljs-string">&quot;github-buttons&quot;</span>,
+    <span class="hljs-string">&quot;advanced-emoji&quot;</span>,
+    <span class="hljs-string">&quot;rss&quot;</span>,
+    <span class="hljs-string">&quot;readmore&quot;</span>,
+    <span class="hljs-string">&quot;copyright&quot;</span>,
+    <span class="hljs-string">&quot;tbfed-pagefooter&quot;</span>,
+    <span class="hljs-string">&quot;mygitalk&quot;</span>,
+    <span class="hljs-string">&quot;donate&quot;</span>
+]
+</code></pre>
+<p>&#x4F5C;&#x4E3A;&#x666E;&#x901A;&#x7684; <code>nodejs</code> &#x5305;,&#x5F00;&#x53D1;&#x89C4;&#x8303;&#x89C4;&#x5B9A;&#x4E86; <code>package.json</code> &#x63D0;&#x4F9B;&#x4E86;&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;,&#x800C; <code>Gitbook</code> &#x63D2;&#x4EF6;&#x9664;&#x4E86;&#x662F;&#x6807;&#x51C6;&#x7684; <code>nodejs</code> &#x5305;&#x4E4B;&#x5916;&#x8FD8;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7EA6;&#x675F;,&#x4E3B;&#x8981;&#x4F53;&#x73B0;&#x5728;&#x63D0;&#x4F9B;&#x4E86; <code>gitbook</code> &#x8282;&#x70B9;&#x5C5E;&#x6027;:</p>
+<pre><code class="lang-json"><span class="hljs-string">&quot;gitbook&quot;</span>: {
+    <span class="hljs-string">&quot;properties&quot;</span>: {
+      <span class="hljs-string">&quot;styles&quot;</span>: {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Custom Stylesheets&quot;</span>,
+        <span class="hljs-string">&quot;properties&quot;</span>: {
+          <span class="hljs-string">&quot;website&quot;</span>: {
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Stylesheet for website output&quot;</span>,
+            <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;styles/website.css&quot;</span>
+          },
+          <span class="hljs-string">&quot;pdf&quot;</span>: {
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Stylesheet for PDF output&quot;</span>,
+            <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;styles/pdf.css&quot;</span>
+          },
+          <span class="hljs-string">&quot;epub&quot;</span>: {
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Stylesheet for ePub output&quot;</span>,
+            <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;styles/epub.css&quot;</span>
+          },
+          <span class="hljs-string">&quot;mobi&quot;</span>: {
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Stylesheet for Mobi output&quot;</span>,
+            <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;styles/mobi.css&quot;</span>
+          },
+          <span class="hljs-string">&quot;ebook&quot;</span>: {
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Stylesheet for ebook outputs (PDF, ePub, Mobi)&quot;</span>,
+            <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;styles/ebook.css&quot;</span>
+          },
+          <span class="hljs-string">&quot;print&quot;</span>: {
+            <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Stylesheet to replace default ebook css&quot;</span>,
+            <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-string">&quot;styles/print.css&quot;</span>
+          }
+        }
+      },
+      <span class="hljs-string">&quot;showLevel&quot;</span>: {
+        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+        <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Show level indicator in TOC&quot;</span>,
+        <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-literal">false</span>
+      }
+    }
+}
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x4E3B;&#x9898;&#x4EC5;&#x4EC5;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#x9879;,&#x5206;&#x522B;&#x662F; <code>styles</code> &#x6837;&#x5F0F;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;&#x548C; <code>showLevel</code> &#x662F;&#x5426;&#x663E;&#x793A;&#x5C42;&#x7EA7;&#x914D;&#x7F6E;.</p>
+<p>&#x518D;&#x4E00;&#x6B21;&#x9A8C;&#x8BC1;&#x4E86;&#x731C;&#x60F3;&#x7684;&#x6B63;&#x786E;&#x6027;,&#x771F;&#x7684;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x6E90;&#x7801;&#x624D;&#x80FD;&#x5B9E;&#x73B0;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x7684;&#x6548;&#x679C;,&#x7D27;&#x7740;&#x7EE7;&#x7EED;&#x5728; <code>package.json</code> &#x4E2D;&#x627E;&#x5230;&#x9879;&#x76EE;&#x6E90;&#x7801;&#x7684;&#x6258;&#x7BA1;&#x5730;&#x5740;,&#x770B;&#x4E00;&#x4E0B;&#x6709;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x6587;&#x6863;.</p>
+<pre><code class="lang-json"><span class="hljs-string">&quot;repository&quot;</span>: {
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;git&quot;</span>,
+    <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;git+https://github.com/GitbookIO/theme-default.git&quot;</span>
+}
+</code></pre>
+<p>&#x4EE4;&#x4EBA;&#x9057;&#x61BE;&#x7684;&#x662F;,&#x9879;&#x76EE;&#x4ECB;&#x7ECD;&#x7A7A;&#x7A7A;&#x5982;&#x4E5F;,&#x9664;&#x4E86;&#x4E00;&#x5F20;&#x4E3B;&#x9898;&#x9884;&#x89C8;&#x56FE;,&#x522B;&#x7684;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x6709;?!</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5z3a3grj31cu0u0drq.jpg" alt="gitbook-issue-modify-default-fold-theme-default-github-preview.png"></p>
+<p>&#x65E2;&#x7136;&#x6CA1;&#x6709;&#x4E8C;&#x6B21;&#x5F00;&#x53D1;&#x6587;&#x6863;,&#x90A3;&#x5C31;&#x770B;&#x770B;&#x9879;&#x76EE;&#x6E90;&#x7801;&#x6709;&#x6CA1;&#x6709;&#x522B;&#x7684;&#x86DB;&#x4E1D;&#x9A6C;&#x8FF9;&#x6559;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x7F16;&#x8BD1;?</p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x7ED5;&#x4E86;&#x8FD9;&#x4E48;&#x591A;,&#x5176;&#x5B9E;&#x8FD8;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x6BD4;&#x8F83;&#x83DC;,&#x4EBA;&#x5BB6;&#x90FD;&#x63D0;&#x4F9B;&#x7ED9;&#x6E90;&#x7801;&#x90FD;&#x4E0D;&#x4F1A;&#x7F16;&#x8BD1;,&#x7559;&#x4E0B;&#x6765;&#x6CA1;&#x6709;&#x6280;&#x672F;&#x7684;&#x773C;&#x6CEA;!</p>
+</blockquote>
+<p>&#x89C6;&#x89D2;&#x518D;&#x4E00;&#x6B21;&#x5207;&#x6362;&#x5230;&#x6E90;&#x7801;&#x76EE;&#x5F55;,&#x9664;&#x4E86; <code>js</code> &#x548C; <code>less</code> &#x76EE;&#x5F55;&#x5916;,&#x7ADF;&#x7136;&#x8FD8;&#x6709;&#x4E00;&#x4E2A; <code>build.sh</code> &#x6784;&#x5EFA;&#x811A;&#x672C;!</p>
+<pre><code class="lang-bash">snowdreams1006s-MacBook-Pro:src snowdreams1006$ tree 
+.
+&#x251C;&#x2500;&#x2500; build.sh
+&#x251C;&#x2500;&#x2500; js
+&#x2502;   &#x251C;&#x2500;&#x2500; core
+&#x2502;   &#x2514;&#x2500;&#x2500; theme
+&#x2502;       &#x251C;&#x2500;&#x2500; dropdown.js
+&#x2502;       &#x251C;&#x2500;&#x2500; index.js
+&#x2502;       &#x251C;&#x2500;&#x2500; keyboard.js
+&#x2502;       &#x251C;&#x2500;&#x2500; loading.js
+&#x2502;       &#x251C;&#x2500;&#x2500; navigation.js
+&#x2502;       &#x251C;&#x2500;&#x2500; platform.js
+&#x2502;       &#x251C;&#x2500;&#x2500; sidebar.js
+&#x2502;       &#x2514;&#x2500;&#x2500; toolbar.js
+&#x2514;&#x2500;&#x2500; less
+
+7 directories, 37 files
+snowdreams1006s-MacBook-Pro:src snowdreams1006$
+</code></pre>
+<p>&#x8FD9;&#x4E00;&#x523B;,&#x4EFF;&#x4F5B;&#x770B;&#x5230;&#x4E86;&#x4E5D;&#x70B9;&#x949F;&#x5347;&#x8D77;&#x7684;&#x592A;&#x9633;,&#x672A;&#x6765;&#x662F;&#x4F60;&#x4EEC;&#x7684;&#x4E5F;&#x662F;&#x6211;&#x4EEC;&#x7684;!</p>
+<pre><code class="lang-bash">snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ cat src/build.sh 
+<span class="hljs-meta">#! /bin/bash
+</span>
+<span class="hljs-comment"># Cleanup folder</span>
+rm -rf _assets
+
+<span class="hljs-comment"># Recreate folder</span>
+mkdir -p _assets/website/
+mkdir -p _assets/ebook/
+
+<span class="hljs-comment"># Compile JS</span>
+browserify src/js/core/index.js | uglifyjs -mc &gt; _assets/website/gitbook.js
+browserify src/js/theme/index.js | uglifyjs -mc &gt; _assets/website/theme.js
+
+<span class="hljs-comment"># Compile Website CSS</span>
+lessc -clean-css src/less/website.less _assets/website/style.css
+
+<span class="hljs-comment"># Compile eBook CSS</span>
+lessc -clean-css src/less/ebook.less _assets/ebook/ebook.css
+lessc -clean-css src/less/pdf.less _assets/ebook/pdf.css
+lessc -clean-css src/less/mobi.less _assets/ebook/mobi.css
+lessc -clean-css src/less/epub.less _assets/ebook/epub.css
+
+<span class="hljs-comment"># Copy fonts</span>
+mkdir -p _assets/website/fonts
+cp -R node_modules/font-awesome/fonts/ _assets/website/fonts/fontawesome/
+
+<span class="hljs-comment"># Copy icons</span>
+mkdir -p _assets/website/images
+cp node_modules/gitbook-logos/output/favicon.ico _assets/website/images/
+cp node_modules/gitbook-logos/output/apple-touch-icon-152.png _assets/website/images/apple-touch-icon-precomposed-152.png
+
+snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$
+</code></pre>
+<p>&#x8FD9;&#x4E00;&#x6BB5;&#x811A;&#x672C;&#x4E2D;&#x9664;&#x4E86;&#x770B;&#x4E0D;&#x61C2; <code>browserify,uglifyjs,lessc -clean-css</code> &#x547D;&#x4EE4;&#x5916;,&#x5269;&#x4E0B;&#x90E8;&#x5206;&#x90FD;&#x5F88;&#x7B80;&#x5355;,&#x5927;&#x81F4;&#x662F;&#x7F16;&#x8BD1;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x5E76;&#x8F93;&#x51FA;&#x5230; <code>_assets</code> &#x76EE;&#x5F55;.</p>
+<p>&#x7F16;&#x8BD1; <code>js</code> &#x7684;&#x547D;&#x4EE4;&#x4E3B;&#x8981;&#x6709;&#x4EE5;&#x4E0B;&#x4E24;&#x6761;,&#x800C;&#x6211;&#x4EEC;&#x5173;&#x5FC3;&#x7684; <code>theme.js</code> &#x4EC5;&#x6D89;&#x53CA;&#x5230;&#x4E00;&#x6761;,&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x522B;&#x7684;&#x4F9D;&#x8D56;,&#x8FD9;&#x4E00;&#x70B9;&#x975E;&#x5E38;&#x597D;!</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Compile JS</span>
+browserify src/js/core/index.js | uglifyjs -mc &gt; _assets/website/gitbook.js
+browserify src/js/theme/index.js | uglifyjs -mc &gt; _assets/website/theme.js
+</code></pre>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x91CD;&#x70B9;&#x5C31;&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x884C; <code>browserify src/js/theme/index.js | uglifyjs -mc &gt; _assets/website/theme.js</code> &#x547D;&#x4EE4;&#x4E86;!</p>
+<h2 id="&#x6447;&#x8EAB;&#x4E00;&#x53D8;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;"><a name="&#x6447;&#x8EAB;&#x4E00;&#x53D8;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x6447;&#x8EAB;&#x4E00;&#x53D8;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x6447;&#x8EAB;&#x4E00;&#x53D8;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;</h2>
+<blockquote>
+<p><code>browserify src/js/theme/index.js | uglifyjs -mc &gt; _assets/website/theme.js</code></p>
+</blockquote>
+<h3 id="&#x767E;&#x5EA6;&#x4E00;&#x4E0B;-browserify"><a name="&#x767E;&#x5EA6;&#x4E00;&#x4E0B;-browserify" class="anchor-navigation-ex-anchor" href="#&#x767E;&#x5EA6;&#x4E00;&#x4E0B;-browserify"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1. &#x767E;&#x5EA6;&#x4E00;&#x4E0B; browserify</h3>
+<p>&#x518D;&#x4E00;&#x6B21;&#x6253;&#x5F00;&#x719F;&#x6089;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;&#x5173;&#x952E;&#x5B57; <code>browserify</code> &#x540E;&#x51FA;&#x73B0;&#x4E00;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x6587;&#x7AE0;,&#x5F88;&#x597D;&#x5947;&#x4E3A;&#x5565;&#x6392;&#x540D;&#x7B2C;&#x4E00;&#x4E2A;&#x90FD;&#x4E0D;&#x4F1A;&#x662F;&#x5B98;&#x7F51;&#x5462;?&#x4E0D;&#x7BA1;&#x600E;&#x4E48;&#x6837;,&#x627E;&#x5230; <code>browserify</code> &#x7684; <code>github</code> &#x9879;&#x76EE;&#x5730;&#x5740;&#x4E5F;&#x662F;&#x4E0D;&#x9519;&#x7684;!</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5vzsyzfj31fy0u07kn.jpg" alt="gitbook-issue-modify-default-fold-search-browserify.png"></p>
+<p>&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x5173;&#x5FC3; <code>browserify</code> &#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;,&#x53EA;&#x5728;&#x4E4E;&#x5982;&#x4F55;&#x5B89;&#x88C5;&#x57FA;&#x672C;&#x73AF;&#x5883;&#x800C;&#x5DF2;!</p>
+<pre><code class="lang-bash">$ npm install -g browserify
+</code></pre>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;:  &#x5982;&#x679C;&#x662F; <code>mac</code> &#x7535;&#x8111;,&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;,&#x5E94;&#x8BE5;&#x8FD0;&#x884C; <code>sudo npm install -g browserify</code> ,&#x5982;&#x679C;<strong>&#x5ACC;&#x5F03;&#x5B89;&#x88C5;&#x901F;&#x5EA6;&#x6162;</strong>&#x4E5F;&#x53EF;&#x4EE5;&#x8FD0;&#x884C; <code>cnpm install -g browserify</code> ,&#x524D;&#x63D0;&#x662F;&#x5DF2;&#x5B89;&#x88C5; <code>cnpm</code> &#x547D;&#x4EE4;.</p>
+</blockquote>
+<h3 id="&#x8C37;&#x6B4C;&#x4E00;&#x4E0B;-uglifyjs"><a name="&#x8C37;&#x6B4C;&#x4E00;&#x4E0B;-uglifyjs" class="anchor-navigation-ex-anchor" href="#&#x8C37;&#x6B4C;&#x4E00;&#x4E0B;-uglifyjs"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.2. &#x8C37;&#x6B4C;&#x4E00;&#x4E0B; uglifyjs</h3>
+<p>&#x4E0D;&#x5439;&#x4E0D;&#x9ED1;,&#x5C11;&#x8D70;&#x4E00;&#x70B9;&#x5F2F;&#x8DEF;,&#x76F4;&#x63A5;&#x5C31;&#x627E;&#x5230;&#x4E86; <code>github</code> &#x9879;&#x76EE;&#x7F51;&#x5740;,&#x540C;&#x6837;&#x7684;&#x4E5F;&#x4E0D;&#x5173;&#x5FC3;&#x9879;&#x76EE;&#x4ECB;&#x7ECD;,&#x76F4;&#x63A5;&#x7FFB;&#x770B;&#x5982;&#x4F55;&#x5B89;&#x88C5;&#x90E8;&#x5206;.</p>
+<pre><code class="lang-bash">$ npm install -g uglify-js
+</code></pre>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5w2j6hgj31g30u07dr.jpg" alt="gitbook-issue-modify-default-fold-search-uglifyjs.png"></p>
+<h3 id="&#x91CD;&#x65B0;&#x7F16;&#x8BD1;-others"><a name="&#x91CD;&#x65B0;&#x7F16;&#x8BD1;-others" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x65B0;&#x7F16;&#x8BD1;-others"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.3. &#x91CD;&#x65B0;&#x7F16;&#x8BD1; others</h3>
+<p>&#x6D89;&#x53CA;&#x5230; <code>browserify src/js/theme/index.js | uglifyjs -mc &gt; _assets/website/theme.js</code> &#x547D;&#x4EE4;&#x7684;&#x4E24;&#x4E2A;&#x63D2;&#x4EF6;&#x5747;&#x5DF2;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;,&#x7406;&#x6240;&#x5E94;&#x5F53;&#x5F00;&#x59CB;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;&#x4E86;,&#x4F46;&#x662F;&#x7ADF;&#x7136;&#x62A5;&#x9519;&#x4E86;?</p>
+<p>&#x5F53;&#x51FA;&#x73B0;&#x62A5;&#x9519;&#x65F6;,&#x5F00;&#x59CB;&#x6000;&#x7591;&#x4EBA;&#x751F;,&#x96BE;&#x9053;&#x63A8;&#x8BBA;&#x4E0D;&#x6B63;&#x786E;,&#x96BE;&#x9053;&#x73AF;&#x5883;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x5417;,&#x4E3A;&#x5565;&#x63D0;&#x793A;&#x627E;&#x4E0D;&#x5230; <code>mousetrap</code> &#x6A21;&#x5757;?</p>
+<pre><code class="lang-bash">$ browserify src/js/theme/index.js | uglifyjs -mc &gt; _assets/website/theme.js
+Error: Cannot find module <span class="hljs-string">&apos;mousetrap&apos;</span> from <span class="hljs-string">&apos;/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme&apos;</span>
+    at /usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:46:17
+    at process (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:173:43)
+    at ondir (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:188:17)
+    at load (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:69:43)
+    at onex (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:92:31)
+    at /usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:22:47
+    at FSReqCallback.oncomplete (fs.js:158:21)
+</code></pre>
+<p>&#x7B97;&#x4E86;&#x5427;,&#x4E0E;&#x5176;&#x8D39;&#x5C3D;&#x5FC3;&#x601D;&#x731C;&#x6D4B;&#x4E3A;&#x5565;&#x65E0;&#x6CD5;&#x52A0;&#x8F7D; <code>mousetrap</code> &#x6A21;&#x5757;,&#x4E0D;&#x5982;&#x7EE7;&#x7EED;&#x5B89;&#x88C5;&#x5269;&#x4F59;&#x4F9D;&#x8D56;,&#x6700;&#x5927;&#x53EF;&#x80FD;&#x6027;&#x6392;&#x9664;&#x73AF;&#x5883;&#x95EE;&#x9898;.</p>
+<p>&#x90A3;&#x5C31;&#x5148;&#x628A; <code>src/build.sh</code> &#x6784;&#x5EFA;&#x811A;&#x672C;&#x6D89;&#x53CA;&#x5230;&#x7684;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x5168;&#x90E8;&#x5B89;&#x88C5;&#x4E00;&#x904D;,&#x7136;&#x540E;&#x518D;&#x8BD5;&#x4E00;&#x4E0B;&#x5427;!</p>
+<p>&#x9664;&#x4E86;&#x7F16;&#x8BD1; <code>Js</code> &#x7684;&#x547D;&#x4EE4;&#x5916;,&#x8FD8;&#x6709;&#x7F16;&#x8BD1; <code>Css</code> &#x7684;&#x547D;&#x4EE4;,&#x5173;&#x4E8E;&#x6784;&#x5EFA;&#x811A;&#x672C; <code>build.sh</code> &#x7684;&#x5176;&#x4ED6;&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x57FA;&#x672C;&#x7684;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x4E4B;&#x7C7B;&#x7684;&#x64CD;&#x4F5C;&#x4E86;.</p>
+<pre><code># Compile Website CSS
+lessc -clean-css src/less/website.less _assets/website/style.css
+</code></pre><p>&#x8FD9;&#x91CC;&#x7701;&#x7565;&#x9762;&#x5411;&#x641C;&#x7D22;&#x7F16;&#x7A0B;&#x7684;&#x4E2D;&#x95F4;&#x8FC7;&#x7A0B;,&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-bash">$ npm install -g less less-plugin-clean-css
+</code></pre>
+<p>&#x5F53;&#x6211;&#x518D;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#x6784;&#x5EFA;&#x811A;&#x672C;&#x65F6;,&#x6EE1;&#x5FC3;&#x671F;&#x5F85;&#x4F1A;&#x7F16;&#x8BD1;&#x6210;&#x529F;,&#x6CA1;&#x60F3;&#x5230;&#x73B0;&#x5B9E;&#x518D;&#x4E00;&#x6B21;&#x6253;&#x8138;,&#x8FD9;&#x65F6;&#x5019;&#x9519;&#x8BEF;&#x66F4;&#x591A;&#x4E86;&#x5462;,&#x771F;&#x7684;&#x662F;&#x6CA1;&#x60F3;&#x5230;!</p>
+<pre><code class="lang-bash">snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ src/build.sh 
+Error: Cannot find module <span class="hljs-string">&apos;jquery&apos;</span> from <span class="hljs-string">&apos;/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/core&apos;</span>
+    at /usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:46:17
+    at process (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:173:43)
+    at ondir (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:188:17)
+    at load (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:69:43)
+    at onex (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:92:31)
+    at /usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:22:47
+    at FSReqCallback.oncomplete (fs.js:158:21)
+Error: Cannot find module <span class="hljs-string">&apos;mousetrap&apos;</span> from <span class="hljs-string">&apos;/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme&apos;</span>
+    at /usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:46:17
+    at process (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:173:43)
+    at ondir (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:188:17)
+    at load (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:69:43)
+    at onex (/usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:92:31)
+    at /usr/<span class="hljs-built_in">local</span>/lib/node_modules/browserify/node_modules/_resolve@1.1.7@resolve/lib/async.js:22:47
+    at FSReqCallback.oncomplete (fs.js:158:21)
+FileError: <span class="hljs-string">&apos;../../node_modules/font-awesome/less/font-awesome.less&apos;</span> wasn<span class="hljs-string">&apos;t found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/font-awesome/less/font-awesome.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/font-awesome/less/font-awesome.less,../../node_modules/font-awesome/less/font-awesome.less in /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/website.less on line 2, column 1:
+1 @import &quot;base/all.less&quot;;
+2 @import &quot;../../node_modules/font-awesome/less/font-awesome.less&quot;;
+3 @import &quot;../../node_modules/preboot/less/preboot.less&quot;;
+
+FileError: &apos;</span>../../../node_modules/gitbook-markdown-css/less/mixin.less<span class="hljs-string">&apos; wasn&apos;</span>t found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/gitbook-markdown-css/less/mixin.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/node_modules/gitbook-markdown-css/less/mixin.less,../../../node_modules/gitbook-markdown-css/less/mixin.less <span class="hljs-keyword">in</span> /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/base/mixins.less on line 1, column 1:
+1 @import <span class="hljs-string">&quot;../../../node_modules/gitbook-markdown-css/less/mixin.less&quot;</span>;
+2 
+
+FileError: <span class="hljs-string">&apos;../../../node_modules/gitbook-markdown-css/less/mixin.less&apos;</span> wasn<span class="hljs-string">&apos;t found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/gitbook-markdown-css/less/mixin.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/node_modules/gitbook-markdown-css/less/mixin.less,../../../node_modules/gitbook-markdown-css/less/mixin.less in /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/base/mixins.less on line 1, column 1:
+1 @import &quot;../../../node_modules/gitbook-markdown-css/less/mixin.less&quot;;
+2 
+
+FileError: &apos;</span>../../../node_modules/gitbook-markdown-css/less/mixin.less<span class="hljs-string">&apos; wasn&apos;</span>t found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/gitbook-markdown-css/less/mixin.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/node_modules/gitbook-markdown-css/less/mixin.less,../../../node_modules/gitbook-markdown-css/less/mixin.less <span class="hljs-keyword">in</span> /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/base/mixins.less on line 1, column 1:
+1 @import <span class="hljs-string">&quot;../../../node_modules/gitbook-markdown-css/less/mixin.less&quot;</span>;
+2 
+
+FileError: <span class="hljs-string">&apos;../../../node_modules/gitbook-markdown-css/less/mixin.less&apos;</span> wasn<span class="hljs-string">&apos;t found. Tried - /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/node_modules/gitbook-markdown-css/less/mixin.less,/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/node_modules/gitbook-markdown-css/less/mixin.less,../../../node_modules/gitbook-markdown-css/less/mixin.less in /Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/less/base/mixins.less on line 1, column 1:
+1 @import &quot;../../../node_modules/gitbook-markdown-css/less/mixin.less&quot;;
+2 
+
+cp: directory _assets/website/fonts/fontawesome does not exist
+cp: node_modules/gitbook-logos/output/favicon.ico: No such file or directory
+cp: node_modules/gitbook-logos/output/apple-touch-icon-152.png: No such file or directory
+</span></code></pre>
+<p>&#x90A3;&#x5C31;&#x7EE7;&#x7EED;&#x6269;&#x5927;&#x5B89;&#x88C5;&#x73AF;&#x5883;&#x8303;&#x56F4;,&#x8FD9;&#x65F6;&#x5019;&#x5BF9;&#x6574;&#x4E2A; <code>gitbook-plugin-theme-default</code> &#x8FDB;&#x884C; <code>npm install</code> &#x5B89;&#x88C5;&#x76F8;&#x5173;&#x4F9D;&#x8D56;,&#x8FD9;&#x4E00;&#x6B21;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x5462;?</p>
+<pre><code class="lang-bash">$ npm install
+</code></pre>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x62ED;&#x76EE;&#x4EE5;&#x5F85;!</p>
+<pre><code class="lang-bash">snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$ src/build.sh 
+snowdreams1006s-MacBook-Pro:gitbook-plugin-theme-default snowdreams1006$
+</code></pre>
+<p>&#x547D;&#x4EE4;&#x884C;&#x6CA1;&#x6709;&#x4E86;&#x4E71;&#x4E03;&#x516B;&#x7CDF;&#x7684;&#x8F93;&#x51FA;,&#x4E16;&#x754C;&#x53D8;&#x5F97;&#x5B89;&#x9759;&#x4E86;!</p>
+<p> <code>linux</code> &#x547D;&#x4EE4;&#x884C;&#x54F2;&#x5B66;&#x544A;&#x8BC9;&#x6211;&#x4EEC;,<strong>&#x6CA1;&#x6709;&#x6D88;&#x606F;&#x5C31;&#x662F;&#x597D;&#x6D88;&#x606F;</strong>,&#x5168;&#x90E8;&#x5B89;&#x88C5;&#x9879;&#x76EE;&#x73AF;&#x5883;&#x540E;&#x518D;&#x6B21;&#x8FD0;&#x884C; <code>src/build.sh</code> &#x811A;&#x672C;&#x547D;&#x4EE4;&#x884C;&#x77AC;&#x95F4;&#x5B89;&#x9759;&#x4E86;!</p>
+<p>&#x6000;&#x7740;&#x5FD0;&#x5FD1;&#x4E0D;&#x5B89;&#x7684;&#x5FC3;,&#x5207;&#x6362;&#x5230;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;&#x8FD0;&#x884C; <code>gitbook serve</code> &#x547D;&#x4EE4;&#x540E;,&#x90A3;&#x4E00;&#x77AC;&#x95F4;,&#x611F;&#x89C9;&#x4E16;&#x754C;&#x90FD;&#x9759;&#x6B62;&#x4E86;,&#x5947;&#x8FF9;&#x5C31;&#x8FD9;&#x4E48;&#x53D1;&#x751F;&#x4E86;?</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xoj7kaj31z40eegnv.jpg" alt="gitbook-issue-modify-default-fold-test-serve-again-success.png"></p>
+<p>&#x7EC8;&#x4E8E;&#x6210;&#x529F;&#x4E86;,&#x5B9E;&#x73B0;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x6548;&#x679C;&#x4E86;&#x5417;?</p>
+<p>&#x4E3A;&#x4E86;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x6210;&#x529F;&#x5B9E;&#x73B0;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5931;&#x6548;,&#x505A;&#x4E00;&#x6B21;&#x53CD;&#x5411;&#x6D4B;&#x8BD5;,&#x65E2;&#x7136;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x8BBE;&#x7F6E;&#x7684;&#x662F; <code>false</code>,&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x6210; <code>true</code> &#x7684;&#x8BDD;,&#x9ED8;&#x8BA4;&#x5E94;&#x8BE5;&#x662F;&#x5C55;&#x5F00;&#x72B6;&#x6001;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Prepare sidebar: state and toggle button</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Close sidebar as default state </span>
+    <span class="hljs-comment">// gitbook.storage.set(&apos;sidebar&apos;, false);</span>
+
+    <span class="hljs-comment">// Open sidebar as default state </span>
+    gitbook.storage.set(<span class="hljs-string">&apos;sidebar&apos;</span>, <span class="hljs-literal">true</span>);
+
+    <span class="hljs-comment">// Init last state if not mobile</span>
+    <span class="hljs-keyword">if</span> (!platform.isMobile()) {
+        toggleSidebar(gitbook.storage.get(<span class="hljs-string">&apos;sidebar&apos;</span>, <span class="hljs-literal">true</span>), <span class="hljs-literal">false</span>);
+    }
+
+    <span class="hljs-comment">// Close sidebar after clicking a link on mobile</span>
+    $(<span class="hljs-built_in">document</span>).on(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-string">&apos;.book-summary li.chapter a&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">if</span> (platform.isMobile()) toggleSidebar(<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>);
+    });
+}
+</code></pre>
+<p>&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x540E;&#x518D;&#x6B21;&#x542F;&#x52A8;&#x672C;&#x5730;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;,&#x5982;&#x679C;&#x662F;&#x5C55;&#x5F00;&#x72B6;&#x6001;,&#x90A3;&#x5C31;&#x8BF4;&#x660E;<strong>&#x6210;&#x529F;&#x4E0D;&#x662F;&#x5076;&#x7136;&#x800C;&#x662F;&#x9760;&#x6280;&#x5DE7;&#x548C;&#x52AA;&#x529B;</strong>!</p>
+<ul>
+<li>&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;</li>
+</ul>
+<pre><code class="lang-bash">$ src/build.sh
+</code></pre>
+<blockquote>
+<p>/Users/snowdreams1006/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default</p>
+</blockquote>
+<ul>
+<li>&#x542F;&#x52A8;&#x672C;&#x5730;&#x9879;&#x76EE;</li>
+</ul>
+<pre><code class="lang-bash">$ gitbook serve
+</code></pre>
+<blockquote>
+<p>/Users/snowdreams1006/Documents/workspace/test</p>
+</blockquote>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8s5xpn1mdj31z409qmy5.jpg" alt="gitbook-issue-modify-default-fold-test-serve-again-verify.png"></p>
+<blockquote>
+<p>&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;: &#x82E6;&#x5FC3;&#x4EBA;&#x5929;&#x4E0D;&#x8D1F;,&#x4E0D;&#x662F;&#x6619;&#x82B1;&#x4E00;&#x73B0;&#x7684;&#x5DE7;&#x5408;&#x800C;&#x662F;&#x8D27;&#x771F;&#x4EF7;&#x5B9E;&#x7684;&#x73B0;&#x5B9E;,&#x5C31;&#x8FD9;&#x4E48;&#x5B9E;&#x73B0;&#x4E86;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x529F;&#x80FD;!</p>
+</blockquote>
+<h2 id="&#x61D2;&#x4EBA;&#x76F4;&#x8FBE;&#x4EE5;&#x53CA;&#x56DE;&#x987E;&#x603B;&#x7ED3;"><a name="&#x61D2;&#x4EBA;&#x76F4;&#x8FBE;&#x4EE5;&#x53CA;&#x56DE;&#x987E;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x61D2;&#x4EBA;&#x76F4;&#x8FBE;&#x4EE5;&#x53CA;&#x56DE;&#x987E;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x61D2;&#x4EBA;&#x76F4;&#x8FBE;&#x4EE5;&#x53CA;&#x56DE;&#x987E;&#x603B;&#x7ED3;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x662F; <code>Gitbook</code> &#x666E;&#x901A;&#x7528;&#x6237;&#x6216;&#x8005;&#x61D2;&#x5F97;&#x6298;&#x817E;,&#x90A3;&#x4E48;&#x63A8;&#x8350;&#x4F60;&#x76F4;&#x63A5;&#x66FF;&#x6362;&#x6389; <code>theme.js</code> &#x6587;&#x4EF6;:</p>
+<ul>
+<li>&#x67E5;&#x770B;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684; <code>gitbook</code> &#x7248;&#x672C;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-bash">$ gitbook current
+GitBook version is 3.2.3
+</code></pre>
+<ul>
+<li>&#x6253;&#x5F00;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684; <code>gitbook</code> &#x5B89;&#x88C5;&#x4F4D;&#x7F6E;</li>
+</ul>
+<pre><code class="lang-bash">$ open ~/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/
+</code></pre>
+<ul>
+<li>&#x65B0;&#x6587;&#x4EF6;&#x66FF;&#x6362;&#x6389;&#x539F;&#x6765;&#x7684; <code>_assets/website/theme.js</code> &#x6587;&#x4EF6;</li>
+</ul>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5173;&#x6CE8;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#x56DE;&#x590D; &quot;gitbook&quot; &#x83B7;&#x53D6;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x65B0;&#x6587;&#x4EF6; <code>theme.js</code>.</p>
+</blockquote>
+<ul>
+<li>&#x5207;&#x6362;&#x5230;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;&#x9A8C;&#x8BC1;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x662F;&#x5426;&#x5DF2;&#x751F;&#x6548;</li>
+</ul>
+<pre><code class="lang-bash">$ gitbook serve
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x6015;&#x9EBB;&#x70E6;,&#x559C;&#x6B22;&#x6298;&#x817E;,&#x90A3;&#x4E48;&#x4E0D;&#x59A8;&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6E90;&#x7801;&#x6587;&#x4EF6;.</p>
+<ul>
+<li>&#x67E5;&#x770B;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684; <code>gitbook</code> &#x7248;&#x672C;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-bash">$ gitbook current
+GitBook version is 3.2.3
+</code></pre>
+<ul>
+<li>&#x6253;&#x5F00;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684; <code>gitbook</code> &#x5B89;&#x88C5;&#x4F4D;&#x7F6E;</li>
+</ul>
+<pre><code class="lang-bash">$ open ~/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/
+</code></pre>
+<ul>
+<li>&#x5B89;&#x88C5; <code>theme-default</code> &#x9ED8;&#x8BA4;&#x4E3B;&#x9898;&#x9879;&#x76EE;&#x6240;&#x9700;&#x4F9D;&#x8D56;</li>
+</ul>
+<pre><code class="lang-bash">$ npm install
+</code></pre>
+<ul>
+<li>&#x5B89;&#x88C5; <code>build.sh</code> &#x6784;&#x5EFA;&#x811A;&#x672C;&#x6240;&#x9700;&#x4F9D;&#x8D56;</li>
+</ul>
+<pre><code class="lang-bash">$ sudo npm install -g browserify uglify-js less less-plugin-clean-css
+</code></pre>
+<ul>
+<li>&#x8FD0;&#x884C; <code>build.sh</code> &#x6784;&#x5EFA;&#x811A;&#x672C;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;</li>
+</ul>
+<pre><code class="lang-bash">$ src/build.sh
+</code></pre>
+<ul>
+<li>&#x5207;&#x6362;&#x5230;&#x6D4B;&#x8BD5;&#x9879;&#x76EE;&#x9A8C;&#x8BC1;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x662F;&#x5426;&#x5DF2;&#x751F;&#x6548;</li>
+</ul>
+<pre><code class="lang-bash">$ gitbook serve
+</code></pre>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;,&#x5B9E;&#x73B0;&#x9ED8;&#x8BA4;&#x6298;&#x53E0;&#x5DE6;&#x4FA7;&#x83DC;&#x5355;&#x529F;&#x80FD;&#x4EC5;&#x4EC5;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x4EE3;&#x7801;,&#x4F46;&#x662F;&#x4E5F;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x548C;&#x9879;&#x76EE;&#x4E2D;&#x5DF2;&#x5F15;&#x5165;&#x63D2;&#x4EF6;&#x5B58;&#x5728;&#x51B2;&#x7A81;,&#x6BD5;&#x7ADF; <code>sidebar</code> &#x7684;&#x72B6;&#x6001;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x672A;&#x77E5;&#x4EE3;&#x7801;&#x6240;&#x66F4;&#x6539;!</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Prepare sidebar: state and toggle button</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Close sidebar as default state </span>
+    gitbook.storage.set(<span class="hljs-string">&apos;sidebar&apos;</span>, <span class="hljs-literal">false</span>);
+
+    <span class="hljs-comment">// Open sidebar as default state </span>
+    <span class="hljs-comment">// gitbook.storage.set(&apos;sidebar&apos;, true);</span>
+
+    <span class="hljs-comment">// Init last state if not mobile</span>
+    <span class="hljs-keyword">if</span> (!platform.isMobile()) {
+        toggleSidebar(gitbook.storage.get(<span class="hljs-string">&apos;sidebar&apos;</span>, <span class="hljs-literal">true</span>), <span class="hljs-literal">false</span>);
+    }
+
+    <span class="hljs-comment">// Close sidebar after clicking a link on mobile</span>
+    $(<span class="hljs-built_in">document</span>).on(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-string">&apos;.book-summary li.chapter a&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-keyword">if</span> (platform.isMobile()) toggleSidebar(<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>);
+    });
+}
+</code></pre>
+<p>&#x6700;&#x540E;&#x5E0C;&#x671B;&#x672C;&#x6587;&#x5BF9;&#x4F60;&#x6709;&#x6240;&#x5E2E;&#x52A9;,&#x9762;&#x5411;&#x641C;&#x7D22;&#x7F16;&#x7A0B;&#x53D8;&#x5F97;&#x4E0D;&#x53EF;&#x7528;&#x65F6;,&#x81EA;&#x529B;&#x66F4;&#x751F;&#x4E5F;&#x672A;&#x5C1D;&#x4E0D;&#x53EF;,&#x5982;&#x679C;&#x5927;&#x5BB6;&#x5728;&#x4F7F;&#x7528; <code>Gitbook</code> &#x4E2D;&#x9047;&#x5230;&#x4EFB;&#x4F55;&#x95EE;&#x9898;,&#x6B22;&#x8FCE;&#x7559;&#x8A00;&#x8BC4;&#x8BBA;&#x544A;&#x8BC9;&#x6211;,&#x5F53;&#x7136;&#x6211;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#x4FDD;&#x8BC1;&#x89E3;&#x51B3;,&#x4E07;&#x4E00;&#x54EA;&#x5929;&#x5FC3;&#x8840;&#x6765;&#x6F6E;&#x7FFB;&#x770B;&#x4E00;&#x4E0B;&#x6E90;&#x7801;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#x5462;!</p>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
+
+<pre><code class="lang-html">&#x4F5C;&#x8005;: &#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;
+&#x94FE;&#x63A5;: https://snowdreams1006.github.io/myGitbook/issue/modify-default-fold.html
+&#x6765;&#x6E90;: &#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;
+&#x672C;&#x6587;&#x539F;&#x521B;&#x53D1;&#x5E03;&#x4E8E;&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;,&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;,&#x8C22;&#x8C22;&#x5408;&#x4F5C;!
+</code></pre>
+<p><img src="https://snowdreams1006.github.io/snowdreams1006-wechat-open.png" alt="https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"> </p>
+<p><footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2019-11-09 23:04:40
+</span></footer></p>
+<div id="gitalk-container"></div>
+</div>
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rm-output-directory.html" class="navigation navigation-prev " aria-label="Previous page: 热加载失败治标之法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../reference/" class="navigation navigation-next " aria-label="Next page: 参考更多">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"初始化默认折叠效果","level":"2.4.5.2","depth":3,"next":{"title":"参考更多","level":"2.4.6","depth":2,"path":"myGitbook/reference/README.md","ref":"myGitbook/reference/README.md","articles":[]},"previous":{"title":"热加载失败治标之法","level":"2.4.5.1","depth":3,"path":"myGitbook/issue/rm-output-directory.md","ref":"myGitbook/issue/rm-output-directory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toc","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-custom","github-buttons","advanced-emoji","rss","readmore","copyright","tbfed-pagefooter","mygitalk","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"copyright":{"site":"https://snowdreams1006.github.io/","author":"雪之梦技术驿站","website":"雪之梦技术驿站","image":"https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"},"toc":{"addClass":true,"className":"toc"},"favicon-custom":{"appleTouchIconPrecomposed152":"./favicon.ico","favicon":"./favicon.ico"},"readmore":{"blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"雪之梦技术驿站","description":"雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io","author":"snowdreams1006","site_url":"https://snowdreams1006.github.io/","feed_url":"https://snowdreams1006.github.io/rss","managingEditor":"snowdreams1006@163.com","webMaster":"snowdreams1006@163.com"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":"favicon.ico","pageview-count":{},"appleTouchIconPrecomposed152":"apple-touch-icon-precomposed-152.png","github-buttons":{"buttons":[{"user":"snowdreams1006","repo":"snowdreams1006.github.io","type":"star","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"snowdreams1006.github.io","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006搭建的 Gitbook 个人博客,详情请访问 https://snowdreams1006.github.io/"},"file":{"path":"myGitbook/issue/modify-default-fold.md","mtime":"2019-11-09T15:04:40.541Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-10T01:25:05.584Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copyright/copyright.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+<script>
+var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+if (!isMobile) {
+    var btw = new BTWPlugin();
+    btw.init({
+        "id": "vip-container",
+        "blogId": "15702-1569305559839-744",
+        "name": "雪之梦技术驿站",
+        "qrcode": "https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg",
+        "keyword": "vip"
+    });
+}
+</script>
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

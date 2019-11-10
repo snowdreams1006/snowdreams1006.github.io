@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 18 Oct 2019 10:59:39 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 10 Nov 2019 01:25:54 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -471,6 +471,13 @@ csdn
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[初始化默认折叠效果]]></title>
+            <description><![CDATA[可能是网上关于 Gitbook 的教程相对来说有些落后,加上写文章时分享了不少关于 gitbook 系列教程,因此关注我的粉丝好友中有不少是来源于 Gitbook.]]></description>
+            <link>https://snowdreams1006.github.io/myGitbook/issue/modify-default-fold.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/issue/modify-default-fold.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[更多学习笔记]]></title>
             <link>https://snowdreams1006.github.io/myGitbook/reference/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/reference/README.html</guid>
@@ -658,6 +665,13 @@ csdn
             <description><![CDATA[Go 语言中有个 defer 关键字,常用于实现延迟函数来保证关键代码的最终执行,常言道: "未雨绸缪方可有备无患".]]></description>
             <link>https://snowdreams1006.github.io/go/error/about.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/error/about.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[延迟函数]]></title>
+            <description><![CDATA[go-error-defer-parenthesized-fail.png]]></description>
+            <link>https://snowdreams1006.github.io/go/error/defer.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/go/error/defer.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
