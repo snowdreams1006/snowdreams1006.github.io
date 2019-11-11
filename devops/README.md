@@ -202,3 +202,9 @@ $ last -a | head -5
 - [服务器快速免密ssh登录配置](https://juejin.im/post/5da724506fb9a04e2a73d96c)
 - [linux 信息查看及命令](https://juejin.im/post/5dad7681f265da5bb86ad2f5)
 
+## LICENSE
+
+![知识共享许可协议 Figure: 知识共享许可协议](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)
+
+[知识共享许可协议 Figure: 知识共享许可协议](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+
