@@ -1,7 +1,9 @@
 # docker 环境
 
 
-[官方文档](https://docs.docker.com/)
+[ `Docker` 官方文档](https://docs.docker.com/),[ `CentOS` 官方安装文档](https://docs.docker.com/install/linux/docker-ce/centos/).
+
+> 注意: 以下方式安装的是社区免费版 `docker-ce`
 
 ## 前提条件
 
@@ -24,15 +26,13 @@ uname -r
 
 ```shell
 sudo yum remove docker \
-               docker-client \
-               docker-client-latest \
-               docker-common \
-               docker-latest \
-               docker-latest-logrotate \
-               docker-logrotate \
-               docker-selinux \
-               docker-engine-selinux \
-              docker-engine
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
 ```
 
 - 安装必要系统依赖
@@ -134,8 +134,110 @@ sudo service docker start
 docker version
 ```
 
+## 安装记录
+
+- 卸载旧版本
+
+```shell
+[root@iZbp19ryeo103foh7nc3rmZ ~]# sudo yum remove docker \
+                   docker-client \
+                   docker-client-latest \
+                   docker-common \
+                   docker-latest \
+                   docker-latest-logrotate \
+                   docker-logrotate \
+                   docker-engine
+```
+
+- 安装必要软件
+
+```shell
+sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+```
+
+- 添加软件源
+
+官方源
+
+```
+sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+```
+
+阿里源
+
+```
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+- 更新缓存
+
+```shell
+sudo yum makecache fast
+```
+
+- 安装 docker-ce
+
+```shell
+sudo yum install -y docker-ce docker-ce-cli containerd.io
+```
+
+- docker 版本
+
+```shell
+docker version
+```
+
+- 启动 docker
+
+```shell
+sudo systemctl start docker
+```
+
+- 查看状态
+
+```shell
+sudo systemctl status docker
+```
+
+- 测试 docker
+
+```shell
+sudo docker run hello-world
+```
+
+- 镜像加速
+
+针对Docker客户端版本大于 1.10.0 的用户
+
+> `/etc/docker/daemon.json`
+
+阿里私人镜像地址:
+
+例如：
+公网Mirror：[系统分配前缀].mirror.aliyuncs.com
+
+> `https://8upnmlh3.mirror.aliyuncs.com`
+
+
+重新加载
+
+```shell
+systemctl daemon-reload
+```
+
+重启 docker
+
+```
+sudo systemctl restart docker
+```
+
 ## 参考资料
 
 - [Get Docker Engine - Community for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 - [Linux（Centos版本）如何快速安装docker](https://mp.weixin.qq.com/s/tIVct-qXzGl3zZDQpwOfLA)
 - [安装Docker](https://help.aliyun.com/document_detail/60742.html?spm=5176.2020520101.0.0.173d4df5FIWY8L)
+- [官方镜像加速](https://help.aliyun.com/document_detail/60750.html?spm=5176.12818093.0.0.6db816d0JElLE4)
