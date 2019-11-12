@@ -1,11 +1,8 @@
 pages:
   stage: deploy
-  script:
-    - mkdir public
-    - cp -rf _book/* public
   artifacts:
     paths:
-      - public
+      - .
   only:
     - master
 
