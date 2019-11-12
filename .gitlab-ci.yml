@@ -4,6 +4,7 @@ pages:
     - tar -zcvf ./public.tar.gz ./*
     - mkdir ./public
     - tar -zxvf ./public.tar.gz -C ./public
+    - rm -rf ./public.tar.gz
   artifacts:
     paths:
       - public
