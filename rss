@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 10 Nov 2019 01:25:54 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 12 Nov 2019 03:33:48 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -678,6 +678,32 @@ csdn
             <title><![CDATA[常见问题]]></title>
             <link>https://snowdreams1006.github.io/go/issue/faq.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/issue/faq.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[运维部署]]></title>
+            <description><![CDATA[示例:]]></description>
+            <link>https://snowdreams1006.github.io/devops/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker 环境]]></title>
+            <description><![CDATA[ Docker 官方文档, CentOS 官方安装文档.]]></description>
+            <link>https://snowdreams1006.github.io/devops/docker-env.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-env.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker 操作]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-ops.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-ops.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + gitbook]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-gitbook.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitbook.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

@@ -454,3 +454,7 @@ git push -u origin master
 cd existing_git_repo
 git remote add origin git@gitee.com:snowdreams1006/private-cloud-backup.git
 git push -u origin master
+
+```bash
+git remote set-url --add origin git@gitee.com:snowdreams1006/snowdreams1006.git
+```
