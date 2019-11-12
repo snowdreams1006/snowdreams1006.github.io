@@ -425,3 +425,32 @@ function foo() exit (elapsed 5.0005382s)
 defer后面的函数值和参数会被求值但是实际函数调用却要等到最后
 
 这里函数值就是trace()返回的匿名函数，函数参数当然就是字符串字面值"foo()"， 对trace("foo()")的求值会输出function foo() enter， 实际函数调用trace("foo()")()即输出function foo() exit(elapsed x.x)会推迟到return执行(如果return会更新返回值变量，则会在更新后才执行defer的函数)。
+
+
+快速设置— 如果你知道该怎么操作，直接使用下面的地址
+ 
+git@gitee.com:snowdreams1006/private-cloud-backup.git
+我们强烈建议所有的git仓库都有一个README, LICENSE, .gitignore文件
+
+Git入门？查看 帮助 , Visual Studio / TortoiseGit / Eclipse / Xcode 下如何连接本站, 如何导入仓库
+
+简易的命令行入门教程:
+Git 全局设置:
+
+git config --global user.name "snowdreams1006"
+git config --global user.email "snowdreams1006@163.com"
+创建 git 仓库:
+
+mkdir private-cloud-backup
+cd private-cloud-backup
+git init
+touch README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin git@gitee.com:snowdreams1006/private-cloud-backup.git
+git push -u origin master
+已有仓库?
+
+cd existing_git_repo
+git remote add origin git@gitee.com:snowdreams1006/private-cloud-backup.git
+git push -u origin master

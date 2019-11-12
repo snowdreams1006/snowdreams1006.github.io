@@ -223,6 +223,9 @@ sudo docker run hello-world
 > `https://8upnmlh3.mirror.aliyuncs.com`
 
 
+- docker info
+
+
 重新加载
 
 ```shell
@@ -241,3 +244,4 @@ sudo systemctl restart docker
 - [Linux（Centos版本）如何快速安装docker](https://mp.weixin.qq.com/s/tIVct-qXzGl3zZDQpwOfLA)
 - [安装Docker](https://help.aliyun.com/document_detail/60742.html?spm=5176.2020520101.0.0.173d4df5FIWY8L)
 - [官方镜像加速](https://help.aliyun.com/document_detail/60750.html?spm=5176.12818093.0.0.6db816d0JElLE4)
+- [镜像仓库概述](https://cloud.tencent.com/document/product/457/9113)

@@ -134,6 +134,10 @@ Host *
 $ uname -a
 ```
 
+```bash
+cat /proc/version
+```
+
 - 查看 centos 版本号
 
 ```bash
