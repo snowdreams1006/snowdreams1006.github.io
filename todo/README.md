@@ -456,5 +456,12 @@ git remote add origin git@gitee.com:snowdreams1006/private-cloud-backup.git
 git push -u origin master
 
 ```bash
+git remote --verbose
+```
+
+![如何同步多个 git 远程仓库](https://my.oschina.net/taadis/blog/3073220)
+
+```bash
 git remote set-url --add origin git@gitee.com:snowdreams1006/snowdreams1006.git
 ```
+
