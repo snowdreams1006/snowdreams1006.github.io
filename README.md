@@ -17,6 +17,9 @@
 
 如果读者实际运行效果和教程演示效果有出入,很可能是版本问题,系统环境等原因,希望能及时反馈,避免更多人踩坑,谢谢!
 
+- Github : [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/)
+- Gitee : [https://snowdreams1006.gitee.io/](https://snowdreams1006.gitee.io/)
+
 ## 特点
 
 - 面向初学者,适合零基础入门;
