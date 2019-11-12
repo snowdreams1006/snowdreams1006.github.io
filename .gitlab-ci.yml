@@ -1,8 +1,11 @@
 pages:
   stage: deploy
+  script:
+    - zip -r ./public.zip ./* 
+    - unzip -o ./public.zip -d ./public
   artifacts:
     paths:
-      - .
+      - public
   only:
     - master
 
