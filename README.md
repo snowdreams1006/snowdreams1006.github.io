@@ -20,6 +20,7 @@
 - Github : [https://snowdreams1006.github.io/](https://snowdreams1006.github.io/)
 - Gitee : [https://snowdreams1006.gitee.io/](https://snowdreams1006.gitee.io/)
 - GitLab: [https://snowdreams1006.gitlab.io/](https://snowdreams1006.gitlab.io/)
+- Gitbook: [https://snowdreams1006.gitbook.io/www/](https://snowdreams1006.gitbook.io/www/)
 
 ## 特点
 
