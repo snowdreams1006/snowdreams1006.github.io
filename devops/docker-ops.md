@@ -194,6 +194,41 @@ docker tag 860c279d2fec runoob/centos:dev
 
 ## web 应用
 
+- 随机映射
+
 ```bash
 docker run -d -P training/webapp python app.py
 ```
+
+- 指定端口
+
+```bash
+docker run -d -p 5000:5000 training/webapp python app.py
+```
+
+- 指定地址
+
+```bash
+docker run -d -p 127.0.0.1:5001:5000 training/webapp python app.py
+```
+
+## 容器互联
+
+- 命名容器
+
+```bash
+docker run -d -P --name runoob training/webapp python app.py
+```
+
+- 新建网络
+
+```bash
+docker network create -d bridge test-net
+```
+
+- 连接容器
+
+```bash
+docker run -itd --name test1 --network test-net ubuntu /bin/bash
+```
+
