@@ -77,3 +77,58 @@ docker stop <容器 ID>
 docker restart <容器 ID>
 ```
 
+- 进入容器
+
+> `docker attach` 和 `docker exec`
+
+```bash
+docker attach 1e560fca3906 
+```
+
+> 注意: 如果从这个容器退出,会导致容器的停止.
+
+```bash
+docker exec -it 243c32535da7 /bin/bash
+```
+
+- 导出容器
+
+```bash
+docker export 1e560fca3906 > ubuntu.tar
+```
+
+- 导入容器
+
+```bash
+docker import - test/ubuntu:v1
+```
+
+- 删除容器
+
+```bash
+docker rm -f 1e560fca3906
+```
+
+- 清理掉所有处于终止状态的容器
+
+```bash
+docker container prune
+```
+
+- 端口映射
+
+```bash
+docker port bf08b7f2cd89
+```
+
+- 查看容器日志
+
+```bash
+docker logs -f bf08b7f2cd89
+```
+
+- 查看容器进程
+
+```bash
+docker top wizardly_chandrasekhar
+```
