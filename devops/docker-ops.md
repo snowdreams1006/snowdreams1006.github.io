@@ -132,3 +132,68 @@ docker logs -f bf08b7f2cd89
 ```bash
 docker top wizardly_chandrasekhar
 ```
+
+## 镜像操作
+
+- 列出镜像
+
+```bash
+docker images
+```
+
+- 下载镜像
+
+```bash
+docker pull
+```
+
+- 查找镜像
+
+```bash
+docker search httpd
+```
+
+- 删除镜像
+
+```bash
+docker rmi hello-world
+```
+
+- 创建镜像
+
+```bash
+docker commit -m="updated" -a="snowdreams1006" eb3c83541f05 snowdreams1006/ubuntu
+```
+
+- 构建镜像
+
+```
+FROM    centos:6.7
+MAINTAINER      Fisher "fisher@sudops.com"
+
+RUN     /bin/echo 'root:123456' |chpasswd
+RUN     useradd runoob
+RUN     /bin/echo 'runoob:123456' |chpasswd
+RUN     /bin/echo -e "LANG=\"en_US.UTF-8\"" >/etc/default/local
+EXPOSE  22
+EXPOSE  80
+CMD     /usr/sbin/sshd -D
+```
+
+> Dockerfile
+
+```bash
+docker build -t runoob/centos:6.7 .
+```
+
+- 设置镜像标签
+
+```bash
+docker tag 860c279d2fec runoob/centos:dev
+```
+
+## web 应用
+
+```bash
+docker run -d -P training/webapp python app.py
+```
