@@ -13,7 +13,7 @@ jobs:
     - name: Build Blog
       run: |
         npm install -g gitbook-cli
-        gitbook install 
+        gitbook install
         gitbook build 
     - uses: manyuanrong/setup-ossutil@v1.0
       with:
@@ -21,4 +21,4 @@ jobs:
         access-key-id: ${{ secrets.ALI_OSS_ACCESS_KEY_ID }}
         access-key-secret: ${{ secrets.ALI_OSS_ACCESS_KEY_SECRET }}
     - name: Deply To OSS
-      run: ossutil cp -rf _boook oss://snowdreams1006/ 
+      run: ossutil cp -rf _book oss://snowdreams1006/ 
