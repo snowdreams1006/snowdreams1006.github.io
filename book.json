@@ -1,9 +1,14 @@
 {
     "title": "雪之梦技术驿站",
     "author": "snowdreams1006",
-    "description": "雪之梦技术驿站,snowdreams1006搭建的 Gitbook 个人博客,详情请访问 https://snowdreams1006.github.io/",
+    "description": "雪之梦技术驿站,snowdreams1006 搭建的 Gitbook 个人博客,详情请访问 https://snowdreams1006.github.io/",
     "language": "zh-hans",
     "gitbook": "3.2.3",
+    "links": {
+        "sidebar": {
+            "技术博客": "https://snowdreams1006.tech"
+        }
+    },
     "plugins": [
         "toc",
         "pageview-count",

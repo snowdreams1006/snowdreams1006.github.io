@@ -6,6 +6,9 @@ rm -rf _book/ && gitbook build
 # copy to docs
 cp -rf _book/ .
 
+# pull lastest 
+git pull
+
 # add commits
 git add .
 
