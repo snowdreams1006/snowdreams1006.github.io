@@ -32,6 +32,7 @@
         * [里程碑式标签](git/usage/tag.md)
     * [私人定制](git/custom/about.md)
         * [忽略文件](git/custom/ignore.md)
+        * [同步推送多Git仓库](git/custom/sync-remote-repo.md)
     * [搭建私服](git/server/private.md)
     * [扩展工具](git/tools/about.md)
         * [git bash 常见命令](git/tools/git-bash-command.md)
@@ -98,6 +99,8 @@
     * [常见问题](go/issue/faq.md)
 
 ## 运维部署
+* [从零开始搭建个人服务器](zero2devops/README.md)
+    * [登录和登出远程服务器](zero2devops/login-and-logout.md)
 * [运维部署](devops/README.md)
     * [docker 环境](devops/docker-env.md)
     * [docker 操作](devops/docker-ops.md)

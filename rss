@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 13 Nov 2019 09:30:01 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 15 Nov 2019 09:18:53 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -245,6 +245,12 @@ csdn
             <description><![CDATA["并不是所有的牛奶都叫特仑苏",在版本控制系统中也有相似的表达,那就是"并不是所有的文件都需要提交".]]></description>
             <link>https://snowdreams1006.github.io/git/custom/ignore.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/git/custom/ignore.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[同步推送多Git仓库]]></title>
+            <link>https://snowdreams1006.github.io/git/custom/sync-remote-repo.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/git/custom/sync-remote-repo.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -678,6 +684,19 @@ csdn
             <title><![CDATA[常见问题]]></title>
             <link>https://snowdreams1006.github.io/go/issue/faq.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/issue/faq.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[从零开始搭建个人服务器]]></title>
+            <link>https://snowdreams1006.github.io/zero2devops/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[登录和登出远程服务器]]></title>
+            <description><![CDATA[示例:]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/login-and-logout.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/login-and-logout.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
