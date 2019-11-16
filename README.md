@@ -4,13 +4,13 @@
 
 如果读者实际运行效果和教程演示效果有出入,很可能是版本问题,系统环境等原因,希望能及时反馈,避免更多人踩坑,谢谢!
 
-- [![雪之梦技术驿站](https://img.shields.io/badge/雪之梦技术驿站-snowdreams1006.tech-brightgreen.svg)](https://snowdreams1006.tech/)
+- [![雪之梦技术驿站](https://img.shields.io/badge/雪之梦技术驿站-snowdreams1006.tech-brightgreen.svg)](http://121.40.223.69/)
 - [![Gitee](https://img.shields.io/badge/Gitee-snowdreams1006.gitee.io-brightgreen.svg)](https://snowdreams1006.gitee.io/)
 - [![Github](https://img.shields.io/badge/Github-snowdreams1006.github.io-brightgreen.svg)](https://snowdreams1006.github.io/)
 - [![GitLab](https://img.shields.io/badge/GitLab-snowdreams1006.gitlab.io-brightgreen.svg)](https://snowdreams1006.gitlab.io/)
 - [![Gitbook](https://img.shields.io/badge/Gitbook-snowdreams1006.gitbook.io-brightgreen.svg)](https://snowdreams1006.gitbook.io/)
 
-> 国内用户推荐访问 [snowdreams1006.tech](https://snowdreams1006.tech/) ,速度非常快并且和 [snowdreams1006.github.io](https://snowdreams1006.github.io/) **保持同步更新**.
+> 国内用户推荐访问 [snowdreams1006.tech](http://121.40.223.69/) ,速度非常快并且和 [snowdreams1006.github.io](https://snowdreams1006.github.io/) **保持同步更新**.
 
 ## 教程特点
 
@@ -31,7 +31,6 @@
 
 ### 第三方平台
 
-- [![github](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
 - [![wechat](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg)
 - [![今日头条](https://img.shields.io/badge/%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://www.toutiao.com/c/user/86185341500/#mid=1624534658539532)
 - [![Bilibili](https://img.shields.io/badge/Bilibili-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://space.bilibili.com/236627025)
