@@ -22,8 +22,8 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.KEY }}
       with:
-        source: ${{ secrets.SOURCE }}
-        target: ${{ secrets.TARGET }}
+        source: _book/*
+        target: /root/snowdreams1006.github.io
     - name: Deploy Blog
       uses: appleboy/ssh-action@master
       with:
@@ -31,5 +31,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         script: |
-          mv ${{ secrets.SOURCE }} ${{ secrets.TARGET }}
-          rm -rf ${{ secrets.SOURCE }}
+          ls
+          mv _book/* /root/snowdreams1006.github.io
+          rm -rf _book
+          docker run -p 80:80 -d nginx
