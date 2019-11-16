@@ -24,6 +24,7 @@ jobs:
       with:
         source: _book/*
         target: /root/snowdreams1006.github.io
+        strip_components: 1
     - name: Deploy Blog
       uses: appleboy/ssh-action@master
       with:
@@ -31,7 +32,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         script: |
-          ls
-          mv _book/* /root/snowdreams1006.github.io
-          rm -rf _book
-          docker run -p 80:80 -d nginx
+          docker restart nginx

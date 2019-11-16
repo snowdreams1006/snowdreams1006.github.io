@@ -102,8 +102,10 @@ scp -r /Users/snowdreams1006/Documents/workspace/snowdreams1006.github.io/_book/
 docker run -d -p 80:80 --name blob.snowdreams1006.cn -v ~/nginx/www:/usr/share/nginx/html -v ~/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v ~/nginx/logs:/var/log/nginx nginx
 ```
 
+
 ## 参考资料
 
+- [Docker 安装 Nginx](https://blog.csdn.net/alangshan/article/details/90675525)
 - [检查TCP 80端口是否正常工作](https://help.aliyun.com/document_detail/59367.html?spm=a2c4g.11186623.2.31.13f72976esK0p4)
 - [安全组应用案例](
 https://help.aliyun.com/document_detail/25475.html?spm=5176.2020520101.0.0.1cd94df5IffacN)
