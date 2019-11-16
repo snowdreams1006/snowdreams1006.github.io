@@ -15,12 +15,12 @@ jobs:
         npm install -g gitbook-cli
         gitbook install
         gitbook build 
-    - name: copy file via ssh key
+    - name: Upload Blog
       uses: appleboy/scp-action@master
       env:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.KEY }}
       with:
-        source: "_book"
-        target: "/root/snowdreams1006.github.io"  
+        source: ${{ secrets.SOURCE }}
+        target: ${{ secrets.TARGET }}
