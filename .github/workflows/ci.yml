@@ -15,10 +15,12 @@ jobs:
         npm install -g gitbook-cli
         gitbook install
         gitbook build 
-    - uses: manyuanrong/setup-ossutil@v1.0
+    - name: copy file via ssh key
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        KEY: ${{ secrets.KEY }}
       with:
-        endpoint: "oss-cn-hongkong.aliyuncs.com"
-        access-key-id: ${{ secrets.ALI_OSS_ACCESS_KEY_ID }}
-        access-key-secret: ${{ secrets.ALI_OSS_ACCESS_KEY_SECRET }}
-    - name: Deply To OSS
-      run: ossutil cp _book oss://snowdreams1006/ -rf
+        source: "_book"
+        target: "/root/snowdreams1006.github.io"  
