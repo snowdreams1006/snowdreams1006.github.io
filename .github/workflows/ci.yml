@@ -26,3 +26,5 @@ jobs:
         target: ${{ secrets.TARGET }}
     - name: Deploy Blog
       uses: jcblw/bash@1.0.0
+      with:
+        args: ["mv _book/* ."]
