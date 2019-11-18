@@ -57,16 +57,30 @@ func funcWithMultipleDeferAndPanic() {
 
 关于这一句话的详细解读,请参考 [go 学习笔记之解读什么是defer延迟函数](https://mp.weixin.qq.com/s/XttOuCEk7kgySKLOCqVMRQ),示例源码见 [snowdreams1006/learn-go/tree/master/error](https://github.com/snowdreams1006/learn-go/tree/master/error)
 
-如果你真的试图去理解 `defer` 的执行时机,最好看一下汇编代码的具体实现,推荐一下大佬的 [defer关键字](https://tiancaiamao.gitbooks.io/go-internals/content/zh/03.4.html)
+如果你真的试图去理解 `defer` 的**执行时机**,最好看一下**汇编代码**的具体实现,推荐一下大佬的 [defer关键字](https://tiancaiamao.gitbooks.io/go-internals/content/zh/03.4.html)
+
+关于 `defer` 关键字相关解释,摘录如下: 
+
+> 当函数包含 `defer` 语句,则汇编代码:
+
+> c
+> call runtime.deferreturn，
+> add xx SP
+> return
+
+> `goroutine` 的控制结构中,有一张表记录 `defer` ,调用 `runtime.deferproc` 时会将需要 `defer` 的表达式记录在表中,而在调用 `runtime.deferreturn` 的时候，则会依次从 `defer` 表中出栈并执行。
 
 但是,从语义上理解会更加简单,问一下自己为什么需要 `defer` 关键字,到底解决了什么问题?
 
-一旦理解了 `defer` 关键字的实现意图,那么自然而然就能大概猜出有关执行顺序,所以何必深究实现细节呢?
+![go-error-defer-question.png](../images/go-error-defer-question.png)
 
+一旦理解了 `defer` 关键字的实现意图,那么自然而然就能大概猜出有关执行顺序,所以何必深究实现细节呢?
 
 简而言之,`defer` 关键字是确保程序一定会执行的代码逻辑,不管程序是正常 `return` 还是意外 `panic` ,包围函数一旦存在 `defer` 关键字就要保证延迟函数一定执行!
 
 当存在多个 `defer` 关键字时,意味着有多个紧急任务需要处理,时间紧迫,当然是事故发生点最近的优先执行,离`return` 或 `panic` 越远的越晚执行.
+
+所以**以防万一和就近原则**是理解 `defer` 执行时机的最佳途径: 万一哪天发生火灾,第一反应自然是就近救人啊!
 
 ## 支持什么又不支持哪些
 
