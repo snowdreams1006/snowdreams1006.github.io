@@ -182,9 +182,48 @@ func TestBuiltinFuncCallWithDefer(t *testing.T) {
 Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked. Instead, deferred functions are invoked immediately before the surrounding function returns, in the reverse order they were deferred. That is, if the surrounding function returns through an explicit return statement, deferred functions are executed after any result parameters are set by that return statement but before the function returns to its caller. If a deferred function value evaluates to nil, execution panics when the function is invoked, not when the "defer" statement is executed.
 ```
 
-### 第一句
+### 打蛇打七寸
+
+![go-error-defer-emphasis.jpeg](../images/go-error-defer-emphasis.jpeg)
 
 > Each time a "defer" statement executes, **the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked**.
+
+```go
+func trace(funcName string) func(){
+    start := time.Now()
+    fmt.Printf("function %s enter at %s \n",funcName,start)
+
+    return func(){
+        fmt.Printf("function %s exit at %s(elapsed %s)",funcName,time.Now(),time.Since(start))
+    }
+}
+
+func foo(){
+    fmt.Printf("foo begin at %s \n",time.Now())
+
+    defer trace("foo")()
+    time.Sleep(5*time.Second)
+
+    fmt.Printf("foo end at %s \n",time.Now())
+}
+
+func TestFoo(t *testing.T) {
+    foo()
+}
+```
+
+`trace` 函数实现了**函数计时**功能,而 `foo` 函数则是包围函数用于演示 `defer` 关键字的逻辑,`TestFoo` 是测试函数,输出测试结果.
+
+测试结果如下:
+
+> === RUN   TestFoo
+> foo begin at 2019-11-18 23:12:38.519097 +0800 CST m=+0.000735902 
+> function foo enter at 2019-11-18 23:12:38.519287 +0800 CST m=+0.000926011 
+> foo end at 2019-11-18 23:12:43.524445 +0800 CST m=+5.005934027 
+> function foo exit at 2019-11-18 23:12:43.524549 +0800 CST m=+5.006038281(elapsed > 5.005112612s)--- PASS: TestFoo (5.01s)
+> PASS
+
+> Process finished with exit code 0
 
 ### 第二句
 
@@ -220,4 +259,4 @@ For instance, if the deferred function is a function literal and the surrounding
 - [Built-in_functions](https://golang.google.cn/ref/spec#Built-in_functions)
 - [Go语言规格说明书 之 内建函数（Built-in functions）](https://www.cnblogs.com/luo630/p/9669966.html)
 - [go语言快速入门：内建函数(6)](https://blog.csdn.net/liumiaocn/article/details/54804074)
-
+- [你知道defer的坑吗？](https://www.jianshu.com/p/9a7364762714)
