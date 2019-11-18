@@ -36,7 +36,7 @@ func funcWithMultipleDeferAndEnd() {
 
 > 运行结果: `3 2 1` .
 >
-> 「雪之梦技术驿站」: 比上个示例简单一些,虽然包围函数 `funcWithMultipleDeferAndEnd` 并没有显示声明 `return` 语句,但是当函数运行结束前依然不会忘记执行延迟语句.所以 `fmt.Println(3)` 执行完后,程序并没有立即结束而是紧接着执行延迟语句 `defer fmt.Println(2)` 和 `defer fmt.Println(1)`.
+> 「雪之梦技术驿站」: 比 `funcWithMultipleDeferAndReturn` 示例简单一些,虽然包围函数 `funcWithMultipleDeferAndEnd` 并没有显示声明 `return` 语句,但是当函数运行结束前依然不会忘记执行延迟语句.所以 `fmt.Println(3)` 执行完后,程序并没有立即结束而是紧接着执行延迟语句 `defer fmt.Println(2)` 和 `defer fmt.Println(1)`.
 
 - 当前协程惊慌失措中
 
@@ -50,7 +50,23 @@ func funcWithMultipleDeferAndPanic() {
 }
 ```
 
+> 运行结果: `3 2 1` .
+>
+> 「雪之梦技术驿站」: 和 `funcWithMultipleDeferAndReturn` 示例有点类似,只不过由原来的 `return` 语句换成了 `panic("panic")`. 我们知道延迟语句 `defer fmt.Println(1)` 和 `defer fmt.Println(2)` 肯定会被延迟执行,所以并不会先输出 `1,2` 而是先执行了 `fmt.Println(3)` ,下一步就遇到了 `panic("panic")` ,此时顾不上惊慌失措,先让已存在的 `defer` 语句先执行再说!
+> 同时,`defer` 是倒序执行的,因而先输出 `defer fmt.Println(2)` 再输出 `defer fmt.Println(1)` ,最后完成使命,光荣挂掉,至于 `fmt.Println(4)` 就无法执行了!
+
 关于这一句话的详细解读,请参考 [go 学习笔记之解读什么是defer延迟函数](https://mp.weixin.qq.com/s/XttOuCEk7kgySKLOCqVMRQ),示例源码见 [snowdreams1006/learn-go/tree/master/error](https://github.com/snowdreams1006/learn-go/tree/master/error)
+
+如果你真的试图去理解 `defer` 的执行时机,最好看一下汇编代码的具体实现,推荐一下大佬的 [defer关键字](https://tiancaiamao.gitbooks.io/go-internals/content/zh/03.4.html)
+
+但是,从语义上理解会更加简单,问一下自己为什么需要 `defer` 关键字,到底解决了什么问题?
+
+一旦理解了 `defer` 关键字的实现意图,那么自然而然就能大概猜出有关执行顺序,所以何必深究实现细节呢?
+
+
+简而言之,`defer` 关键字是确保程序一定会执行的代码逻辑,不管程序是正常 `return` 还是意外 `panic` ,包围函数一旦存在 `defer` 关键字就要保证延迟函数一定执行!
+
+当存在多个 `defer` 关键字时,意味着有多个紧急任务需要处理,时间紧迫,当然是事故发生点最近的优先执行,离`return` 或 `panic` 越远的越晚执行.
 
 ## 支持什么又不支持哪些
 
