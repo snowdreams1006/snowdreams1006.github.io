@@ -5,12 +5,50 @@
 ```
 A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
 ```
- 
-延迟函数的**执行时机**主要分为三种情况:
 
-- 包围函数**返回前**执行延迟语句
-- 包围函数执行到返回声明
-- 相应协程发生错误
+延迟函数的**运行时机**一般有三种情况:
+
+- 周围函数遇到返回时
+
+```go
+func funcWithMultipleDeferAndReturn() {
+    defer fmt.Println(1)
+    defer fmt.Println(2)
+    fmt.Println(3)
+    return
+    fmt.Println(4)
+}
+```
+
+> 运行结果: `3 2 1` .
+> 
+> 「雪之梦技术驿站」: `defer fmt.Println(1)` 和 `defer fmt.Println(2)` 两个语句由于前面存在 `defer` 关键字,因此均**被延迟**到正常语句 `return` 前.当多个 `defer` 语句均被延迟时,倒序执行延迟语句,这种特点非常类似于数据结构的**栈**(先入后出).所以依次输出 `fmt.Println(3)` ,`defer fmt.Println(2)` ,`defer fmt.Println(1)` .
+
+- 周围函数函数体结尾处
+
+```go
+func funcWithMultipleDeferAndEnd() {
+    defer fmt.Println(1)
+    defer fmt.Println(2)
+    fmt.Println(3)
+}
+```
+
+> 运行结果: `3 2 1` .
+>
+> 「雪之梦技术驿站」: 比上个示例简单一些,虽然包围函数 `funcWithMultipleDeferAndEnd` 并没有显示声明 `return` 语句,但是当函数运行结束前依然不会忘记执行延迟语句.所以 `fmt.Println(3)` 执行完后,程序并没有立即结束而是紧接着执行延迟语句 `defer fmt.Println(2)` 和 `defer fmt.Println(1)`.
+
+- 当前协程惊慌失措中
+
+```go
+func funcWithMultipleDeferAndPanic() {
+    defer fmt.Println(1)
+    defer fmt.Println(2)
+    fmt.Println(3)
+    panic("panic")
+    fmt.Println(4)
+}
+```
 
 关于这一句话的详细解读,请参考 [go 学习笔记之解读什么是defer延迟函数](https://mp.weixin.qq.com/s/XttOuCEk7kgySKLOCqVMRQ),示例源码见 [snowdreams1006/learn-go/tree/master/error](https://github.com/snowdreams1006/learn-go/tree/master/error)
 
@@ -35,7 +73,7 @@ func TestFuncCallWithDefer(t *testing.T) {
 
     fmt.Println("TestFuncInvokeWithDefer function call has ended")
 }
-``` 
+```
 
 - 支持方法调用
 
