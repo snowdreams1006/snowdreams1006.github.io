@@ -2,6 +2,8 @@
 
 ## 温故知新不忘延迟基础
 
+![go-error-defer-learn-from-old.jpg](../images/go-error-defer-learn-from-old.jpg)
+
 ```
 A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
 ```
@@ -81,6 +83,8 @@ func funcWithMultipleDeferAndPanic() {
 当存在多个 `defer` 关键字时,意味着有多个紧急任务需要处理,时间紧迫,当然是事故发生点最近的优先执行,离`return` 或 `panic` 越远的越晚执行.
 
 所以**以防万一和就近原则**是理解 `defer` 执行时机的最佳途径: 万一哪天发生火灾,第一反应自然是就近救人啊!
+
+![go-error-defer-fire-and-save.jpg](../images/go-error-defer-fire-and-save.jpg)
 
 ## 支持什么又不支持哪些
 
