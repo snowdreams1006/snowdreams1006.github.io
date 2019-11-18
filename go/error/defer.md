@@ -5,6 +5,14 @@
 ```
 A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
 ```
+ 
+延迟函数的**执行时机**主要分为三种情况:
+
+- 包围函数**返回前**执行延迟语句
+- 包围函数执行到返回声明
+- 相应协程发生错误
+
+关于这一句话的详细解读,请参考 [go 学习笔记之解读什么是defer延迟函数](https://mp.weixin.qq.com/s/XttOuCEk7kgySKLOCqVMRQ),示例源码见 [snowdreams1006/learn-go/tree/master/error](https://github.com/snowdreams1006/learn-go/tree/master/error)
 
 ## 支持什么又不支持哪些
 
