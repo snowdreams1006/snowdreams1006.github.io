@@ -2,7 +2,7 @@
 
 ## 温故知新不忘延迟基础
 
-![go-error-defer-learn-from-old.jpg](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp2ux15j30gp08c0ts.jpg)
+![go-error-defer-learn-from-old.jpg](../images/go-error-defer-learn-from-old.jpg)
 
 ```
 A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
@@ -74,7 +74,7 @@ func funcWithMultipleDeferAndPanic() {
 
 但是,从语义上理解会更加简单,问一下自己为什么需要 `defer` 关键字,到底解决了什么问题?
 
-![go-error-defer-question.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp5i28cj30aa08wmx8.jpg)
+![go-error-defer-question.png](../images/go-error-defer-question.png)
 
 一旦理解了 `defer` 关键字的实现意图,那么自然而然就能大概猜出有关执行顺序,所以何必深究实现细节呢?
 
@@ -84,7 +84,7 @@ func funcWithMultipleDeferAndPanic() {
 
 所以**以防万一和就近原则**是理解 `defer` 执行时机的最佳途径: 万一哪天发生火灾,第一反应自然是就近救人啊!
 
-![go-error-defer-fire-and-save.jpg](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp6h573j30jg0cstay.jpg)
+![go-error-defer-fire-and-save.jpg](../images/go-error-defer-fire-and-save.jpg)
 
 ## 支持什么又不支持哪些
 
@@ -137,7 +137,7 @@ func TestMethodCallWithDefer(t *testing.T) {
 
 - 不可以被括号包裹
 
-![go-error-defer-parenthesized-fail.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp9o8eaj30x409kdhs.jpg)
+![go-error-defer-parenthesized-fail.png](../images/go-error-defer-parenthesized-fail.png)
 
 - 内建函数和表达式一样受限
 
@@ -184,7 +184,7 @@ Each time a "defer" statement executes, the function value and parameters to the
 
 ### 打蛇打七寸
 
-![go-error-defer-emphasis.jpeg](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp8vxe9j30r80r8tah.jpg)
+![go-error-defer-emphasis.jpeg](../images/go-error-defer-emphasis.jpeg)
 
 > Each time a "defer" statement executes, **the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked**.
 
@@ -231,7 +231,7 @@ func TestFoo(t *testing.T) {
 
 如果此时试图去解释上述运行结果,很遗憾铩羽而归!
 
-![go-error-defer-foo-explain-fail.jpeg](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp3nv60j30go0goq48.jpg)
+![go-error-defer-foo-explain-fail.jpeg](../images/go-error-defer-foo-explain-fail.jpeg)
 
 记得官方文档中关于 `defer` 描述的第一句话就阐明了**延迟函数的执行时机**,原文如下:
 
@@ -287,7 +287,7 @@ func TestFooWithoutDefer(t *testing.T) {
 
 由此可见,延迟函数其实并不简单,想要弄清楚 `defer` 关键字还要继续读下去才有可能!
 
-![go-error-defer-foo-result-diff.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp6zjo8j31ek0hsn5h.jpg)
+![go-error-defer-foo-result-diff.png](../images/go-error-defer-foo-result-diff.png)
 
 这一点也是我最大的疑惑,潜意识告诉我: 只要无法真正理解 `Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked.` 这句话的含义,那么永远不可能彻底弄清 `defer` 关键字!
 
@@ -517,7 +517,7 @@ func deferWithExplicitReturnByExplain() (result int) {
 
 > 「雪之梦技术驿站」: 延迟函数会在 `return` 返回前有机会对返回值进行更改,这里演示了及时雨插入的逻辑,输出结果不变还是 `11`.
 
-![go-error-defer-deferWithExplicitReturnByExplain-result.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hpbq5upj31xc0ca40q.jpg)
+![go-error-defer-deferWithExplicitReturnByExplain-result.png](../images/go-error-defer-deferWithExplicitReturnByExplain-result.png)
 
 下面提供一些例题,请自行思考
 
@@ -594,7 +594,7 @@ func TestDeferWithNil(t *testing.T) {
 }
 ```
 
-![go-error-defer-deferWithNil-result.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp7x0s4j31wi0dadj4.jpg)
+![go-error-defer-deferWithNil-result.png](../images/go-error-defer-deferWithNil-result.png)
 
 ## 公布答案以及总结全文
 
@@ -636,7 +636,7 @@ func TestDeferFuncWhenReturn(t *testing.T) {
 
 这个消防员到底干了什么才能保证重要人物安全的同时也能让他们不遭受财产损失?
 
-![go-error-defer-panic.png](https://tva1.sinaimg.cn/large/006y8mN6ly1g93hp4mohcj30aa08wq30.jpg)
+![go-error-defer-panic.png](../images/go-error-defer-panic.png)
 
 请补充你的答案,感谢你的阅读与关注,下一节再见~
 
