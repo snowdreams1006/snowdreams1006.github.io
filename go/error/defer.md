@@ -287,6 +287,117 @@ func TestFooWithoutDefer(t *testing.T) {
 
 这一点也是我最大的疑惑,潜意识告诉我: 只要无法真正理解 `Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked.` 这句话的含义,那么永远不可能彻底弄清 `defer` 关键字!
 
+通过直接调换 `defer` 语句的出现位置并没有解释测试结果,反而告诉我们 `defer` 语句可不是简简单单的延迟执行.
+
+任何函数都会或多或少依赖相应的执行环境,`defer` 延迟函数也不例外,在本示例中 `defer trace("foo")()` 延迟函数的 `trace("foo")` 函数的返回值是函数,然后 `trace("foo")()` 相当于立即执行返回函数,因而问题可能出现在 `trace("foo")` 函数中,那么不妨继续看看吧!
+
+```go
+func foo(){
+    fmt.Printf("foo begin at %s \n",time.Now())
+
+    defer trace("foo")()
+    time.Sleep(5*time.Second)
+
+    fmt.Printf("foo end at %s \n",time.Now())
+}
+
+func trace(funcName string) func(){
+    start := time.Now()
+    fmt.Printf("function %s enter at %s \n",funcName,start)
+
+    return func(){
+        fmt.Printf("function %s exit at %s(elapsed %s)",funcName,time.Now(),time.Since(start))
+    }
+}
+```
+
+`1. foo begin at 2019-11-19 14:06:42.385982 +0800 CST m=+0.000943615` 暗示着已经开始进入 `foo()` 函数内部,接下来的 `function foo enter at 2019-11-19 14:06:42.38623 +0800 CST m=+0.001191025 ` 意味着函数并没有执行 `time.Sleep(5*time.Second)` 而是直接进入了 `defer trace("foo")()` 语句内部,可见函数依旧是顺序执行,但是 `trace(funcName string) func()` 函数内部会返回函数,此时函数返回值并没有执行,因为此时并不存在打印输出的日志.
+
+所以 `trace(funcName string) func()` 函数应该是已经执行了,接下来返回上一层回到主函数 `foo()` 就遇到了 `time.Sleep(5*time.Second)` 休息 `5s` 语句,所以在执行 `fmt.Printf("foo end at %s \n",time.Now())` 语句时输出的时间和最近的上一句差了大概 `5s` .
+
+`foo end at 2019-11-19 14:06:47.391581 +0800 CST m=+5.006394415` 输出后也就意味着 `foo()` 函数运行到包围函数的结束处,此时按照延迟语句的第一句,我们知道是时候执行真正的延迟逻辑了.
+
+所以下一句就是 `trace("foo")()` 的函数返回值的调用,输出了 `function foo exit at 2019-11-19 14:06:47.391706 +0800 CST m=+5.006518615(elapsed 5.005327927s)--- PASS: TestFoo (5.01s)`
+
+至此,延迟函数执行完毕,单元测试函数也输出了 `PASS` .
+
+```
+=== RUN   TestFoo
+foo begin at 2019-11-19 14:06:42.385982 +0800 CST m=+0.000943615 
+function foo enter at 2019-11-19 14:06:42.38623 +0800 CST m=+0.001191025 
+foo end at 2019-11-19 14:06:47.391581 +0800 CST m=+5.006394415 
+function foo exit at 2019-11-19 14:06:47.391706 +0800 CST m=+5.006518615(elapsed 5.005327927s)--- PASS: TestFoo (5.01s)
+PASS
+```
+
+通过上述分析,可以这么理解,延迟函数也是需要执行环境的,而执行环境就是依赖于定义 `defer` 语句时的相关环境,这也就是延迟函数的**准备阶段**或者说**入栈**.
+
+当遇到包围函数体返回时或到达包围函数体结尾处或发生错误时,包围函数就会调用已存在的延迟函数,这部分就是延迟函数的**执行阶段**或者说**出栈**.
+
+- 无论是否存在延迟函数,均**顺序执行**函数逻辑
+- 准备阶段的入栈操作会正常运行但**不会调用函数**
+- 执行阶段的出栈操作在**合适时机时会调用函数**
+
+同样地,仍然以消防队员作为 `Go` 的调度器,平民百姓作为无 `defer` 保护的对比参考,而有 `defer` 保护的特殊人群作为延迟函数.
+
+有一天,普通百姓和特殊人士都在商场逛街,突发火灾,附近消防员迅速赶紧救人,任务只要一个:那就是按照**就近原则快速救出**全部特殊人群,因为这些特殊人群都是有头有脸的人物,每个人都有自己的脾气个性.
+
+明星 A : 我进商场前拿着限量版的 `LV` 包包,这个我也要拿出去!
+富二代 B : 我进商场前答应小女友要给他买个礼物,这个是寄存柜地址,别忘了把礼物也带回来!
+暴发户 C : 我在商场有个保险柜,存放了大量金条,一定要给我带出去!
+
+消防员很无奈,心里咒骂了一句: 这都生死攸关了,还管什么身外之物啊!
+
+可是,埋怨归埋怨,对于这些特殊人群的照顾,那是一丁点也不敢怠慢,只能照办,终于全部救出了!
+
+> A 表示声明 `defer` 语句时已经传递了参数,等到执行 `defer` 时调用的就是刚才的参数值,而 `Go` 语言中参数的传递只能是**值传递**,所以虽然看起来还是那个包,其实已经变了,这里并不是特别准确!
+> B 表示声明 `defer` 语句时传递的参数不是具体值而是引用,当执行 `defer` 逻辑时会按图索骥,因此虽然给的是一张寄存柜的密码纸,最后拿出来的却是存在柜子里的礼物.
+> C 表示声明 `defer` 时什么都没有传递,没有任何入参但是执行 `defer` 语句中遇到了访问包围函数的需求,这时候延迟函数会扩大搜索范围向上寻找直到找到商场的金库为止.
+
+- 零依赖而无顾虑
+
+```go
+func deferWithoutParams() {
+    // 2 1
+    defer fmt.Println(1)
+    fmt.Println(2)
+}
+```
+
+> 「雪之梦技术驿站」: 入栈时没有任何依赖,出栈时也不会有任何顾虑,非常简单直观输出了 `2 1` .
+
+- 随身携带的牵挂
+
+```go
+func deferWithValueParams() {
+    x := 10
+    defer func(n int) {
+        // 10
+        fmt.Println(n)
+    }(x)
+    x++
+}
+```
+
+> 「雪之梦技术驿站」: 入栈时存在值参数 `func(n int)(10)`,出栈时需要输出参数的值,而 `fmt.Println(n)` 涉及到的 `n` 刚好保存在入栈环境中,所以等到 `deferWithValueParams` 运行到函数结束后输出的结果就是已缓存的副本 `10` .
+
+如果此时匿名函数调用的不是 `n` 而是 `x`,而变量 `x` 并不存在于入栈环境中,此时就会继续扩大范围搜到 `deferWithValueParams` 函数是否存在变量 `x` 的声明,本示例中找到的 `x=11`.
+
+```go
+func deferWithOuterParams() {
+    x := 10
+    defer func(n int) {
+        // 11
+        fmt.Println(x)
+    }(x)
+    x++
+}
+```
+
+- 心有牵挂放不下
+
+
+ 
 ### 第二句
 
 > Instead, **deferred functions are invoked immediately** before the surrounding function returns, **in the reverse order they were deferred**.
@@ -322,3 +433,5 @@ For instance, if the deferred function is a function literal and the surrounding
 - [Go语言规格说明书 之 内建函数（Built-in functions）](https://www.cnblogs.com/luo630/p/9669966.html)
 - [go语言快速入门：内建函数(6)](https://blog.csdn.net/liumiaocn/article/details/54804074)
 - [你知道defer的坑吗？](https://www.jianshu.com/p/9a7364762714)
+- [golang语言defer特性详解.md](https://www.jianshu.com/p/57acdbc8b30a)
+- [Golang之轻松化解defer的温柔陷阱](https://segmentfault.com/a/1190000018169295)
