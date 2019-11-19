@@ -222,8 +222,20 @@ func TestFoo(t *testing.T) {
 > foo end at 2019-11-18 23:12:43.524445 +0800 CST m=+5.005934027 
 > function foo exit at 2019-11-18 23:12:43.524549 +0800 CST m=+5.006038281(elapsed > 5.005112612s)--- PASS: TestFoo (5.01s)
 > PASS
-
+> 
 > Process finished with exit code 0
+
+记得官方文档中关于 `defer` 描述的第一句话就介绍了执行时机,原文如下:
+
+```
+A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
+```
+
+但是如果按照这句话来解释此次示例的运行结果,显然是解释不通的!
+
+
+这一点也是我最大的疑惑,以至于根本无法真正理解 `Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked.` ,那么原因到底出现在哪里呢?
+
 
 ### 第二句
 
