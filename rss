@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 16 Nov 2019 09:08:43 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 Nov 2019 04:06:12 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -664,7 +664,7 @@
         </item>
         <item>
             <title><![CDATA[延迟函数]]></title>
-            <description><![CDATA[go-error-defer-parenthesized-fail.png]]></description>
+            <description><![CDATA[go-error-defer-learn-from-old.jpg]]></description>
             <link>https://snowdreams1006.github.io/go/error/defer.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/error/defer.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
