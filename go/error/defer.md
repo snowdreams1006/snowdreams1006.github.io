@@ -188,6 +188,10 @@ Each time a "defer" statement executes, the function value and parameters to the
 
 > Each time a "defer" statement executes, **the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked**.
 
+Each time a "defer" statement executes, **the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked**.
+
+每次延迟语句执行时,函数值和调用参数会像以往一样被评估和保存,但是实际函数并不会被调用.
+
 ```go
 func trace(funcName string) func(){
     start := time.Now()
@@ -396,19 +400,185 @@ func deferWithOuterParams() {
 
 - 心有牵挂放不下
 
+```go
+func deferWithReferParams() {
+    x := 10
+    defer func(n *int) {
+        // 11
+        fmt.Println(*n)
+    }(&x)
+    x++
+}
+```
 
- 
-### 第二句
+> 「雪之梦技术驿站」: 入栈时保存的不再是值而是地址,因此出栈时会按图索骥,找到该地址对应的值,也就是 `11` .
+
+相信以上案例应该帮助读者理解 `defer` 语句的一些注意事项了吧?
+
+延迟函数准备阶段的入栈会收集函数运行所需的环境依赖,比如说入参的值,收集结束后即使外界再改变该值也不会影响延迟函数,因为延迟函数用的是缓存副本啊!
+
+### 出栈会倒序
 
 > Instead, **deferred functions are invoked immediately** before the surrounding function returns, **in the reverse order they were deferred**.
 
-### 第三句
+相反的,延迟函数会在包围函数返回之前按照被延迟顺序逆序调用.
+
+```go
+func TestFuncWithMultipleDefer(t *testing.T) {
+    // 「雪之梦技术驿站」: 猜测 defer 底层实现数据结构可能是栈,先进后出.
+    t.Log(" 「雪之梦技术驿站」: 猜测 defer 底层实现数据结构可能是栈,先进后出.")
+
+    // 3 2 1
+    defer t.Log(1)
+    defer t.Log(2)
+    t.Log(3)
+}
+```
+
+> 「雪之梦技术驿站」: 运行阶段的出栈操作会倒序执行多个 `defer` 延迟函数,所以输出了 `3 2 1` .
+
+### 及时雨插入
 
 > That is, if the **surrounding function** returns through an **explicit return statement**, **deferred functions** are executed **after any result parameters are set by** that return statement but **before the function returns** to its caller.
+
+当包围函数通过明确的 `return` 返回语句返回时,`defer` 延迟函数会在 `result parameters` 结果参数被赋值之后且在函数 `return` 返回之前执行.
+
+按照这句话可以将下面这种代码进行拆解: 
+
+```go
+defer yyy
+return xxx
+```
+
+其中 `return xxx` 相当于拆开了两步并且最终返回前及时插入了 `defer` 语句的执行逻辑,如下:
+
+```go
+1. result parameters = xxx
+2. 调用 defer 函数
+3. return
+```
+
+同样地,我们举例说明:
+
+```go
+func deferWithExplicitReturn() (result int) {
+    defer func() {
+        // 2. before : result = 10
+        fmt.Printf("before : result = %v\n", result)
+
+        result++
+
+        // 3. after : result = 11
+        fmt.Printf("after : result = %v\n", result)
+    }()
+
+    result = 10
+
+    // 1. return : result = 10
+    fmt.Printf("return : result = %v\n", result)
+
+    return result
+}
+```
+
+关于 `defer` 延迟函数的执行顺序和输出结果已经不再是难点了,现在主要关注下 `deferWithExplicitReturn()` 函数运行结束后的返回值到底是 `10` 还是 `11` .
+
+```go
+func TestDeferWithExplicitReturn(t *testing.T) {
+    // TestDeferWithExplicitReturn result = 11
+    fmt.Printf("TestDeferWithExplicitReturn result = %d\n",deferWithExplicitReturn())
+}
+```
+
+> 「雪之梦技术驿站」: 测试结果输出了 `11`,很显然这里是因为延迟函数内部执行了 `result++` 操作最终影响了外部函数的返回值.
+
+如果对上述示例进行改造,下面的代码就清晰看出了为什么会影响返回值了.
+
+```go
+func deferWithExplicitReturnByExplain() (result int) {
+    result = 10
+
+    // 1. return : result = 10
+    fmt.Printf("return : result = %v\n", result)
+    
+    func() {
+        // 2. before : result = 10
+        fmt.Printf("before : result = %v\n", result)
+
+        result++
+
+        // 3. after : result = 11
+        fmt.Printf("after : result = %v\n", result)
+    }()
+
+    return
+}
+```
+
+> 「雪之梦技术驿站」: 延迟函数会在 `return` 返回前有机会对返回值进行更改,这里演示了及时雨插入的逻辑,输出结果不变还是 `11`.
+
+![go-error-defer-deferWithExplicitReturnByExplain-result.png](../images/go-error-defer-deferWithExplicitReturnByExplain-result.png)
+
+下面提供一些例题,请自行思考
+
+```go
+func surroundingFuncEvaluatedNotInvoked(init int) int {
+    fmt.Printf("1.init=%d\n",init)
+
+    defer func() {
+        fmt.Printf("2.init=%d\n",init)
+
+        init ++
+
+        fmt.Printf("3.init=%d\n",init)
+    }()
+
+    fmt.Printf("4.init=%d\n",init)
+
+    return init
+}
+
+func noDeferFuncOrderWhenReturn() (result int) {
+    func() {
+        // 1. before : result = 0
+        fmt.Printf("before : result = %v\n", result)
+
+        result++
+
+        // 2. after : result = 1
+        fmt.Printf("after : result = %v\n", result)
+    }()
+
+    // 3. return : result = 1
+    fmt.Printf("return : result = %v\n", result)
+
+    return 0
+}
+
+
+func deferFuncWithAnonymousReturnValue() int {
+    var retVal int
+    defer func() {
+        retVal++
+    }()
+    return 0
+}
+
+func deferFuncWithNamedReturnValue() (retVal int) {
+    defer func() {
+        retVal++
+    }()
+    return 0
+}
+```
 
 ### 第四句
 
 > If a **deferred function** value **evaluates to nil**, **execution panics when the function is invoked**, not when the "defer" statement is executed.
+
+如果延迟函数值为 `nil`,函数调用时发生错误异常 `panic` 而不是 `defer` 语句执行时报错.
+
+
 
 ## 理论加实践才是硬道理
 
