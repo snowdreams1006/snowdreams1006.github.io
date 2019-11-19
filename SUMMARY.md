@@ -4,10 +4,6 @@
 
 ## 入门教程
 * [markdown 入门教程](markdown/README.md)
-    * [掘金入门指南](markdown/juejin.md)
-    * [慕课网语法演示](markdown/imooc.md)
-    * [HBuilderX语法帮助](markdown/HBuilderX.md)
-    * [csdn帮助文档](markdown/csdn.md)
 * [git 入门教程](git/README.md)
     * [初识 git](git/base/about.md)
         * [安装 git](git/base/install.md)
@@ -101,6 +97,7 @@
 ## 运维部署
 * [从零开始搭建个人服务器](zero2devops/README.md)
     * [登录和登出远程服务器](zero2devops/login-and-logout.md)
+    * [免费实现https访问网站](zero2devops/nginx-https.md)
 * [运维部署](devops/README.md)
     * [docker 环境](devops/docker-env.md)
     * [docker 操作](devops/docker-ops.md)
