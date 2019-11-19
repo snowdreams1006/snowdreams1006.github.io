@@ -572,29 +572,73 @@ func deferFuncWithNamedReturnValue() (retVal int) {
 }
 ```
 
-### 第四句
+> 「雪之梦技术驿站」: 如果一眼看不出答案,不妨复制到编辑器直接运行,然后在思考为什么.
+
+### 调用时报错
 
 > If a **deferred function** value **evaluates to nil**, **execution panics when the function is invoked**, not when the "defer" statement is executed.
 
-如果延迟函数值为 `nil`,函数调用时发生错误异常 `panic` 而不是 `defer` 语句执行时报错.
+如果延迟函数值为 `nil`,则函数调用时发生错误异常 `panic` 而不是 `defer` 语句执行时报错.
 
+```go
+func deferWithNil() func() {
+    return nil
+}
 
+func TestDeferWithNil(t *testing.T) {
+    fmt.Println("begin exec deferWithNil()()")
 
-## 理论加实践才是硬道理
+    defer deferWithNil()()
 
+    fmt.Println("end exec deferWithNil()()")
+}
 ```
-For instance, if the deferred function is a function literal and the surrounding function has named result parameters that are in scope within the literal, the deferred function may access and modify the result parameters before they are returned. If the deferred function has any return values, they are discarded when the function completes. (See also the section on handling panics.)
-```
 
-### 第一句
-
-> For instance, if the **deferred function** is a **function litera**l and the **surrounding function** has **named result parameters** that are in scope within the literal, **the deferred function may access and modify the result parameters before they are returned**.
-
-### 第二句
-
-> If the **deferred function** has any **return values**, they are **discarded** when the function completes. (See also the section on handling panics.)
+![go-error-defer-deferWithNil-result.png](../images/go-error-defer-deferWithNil-result.png)
 
 ## 公布答案以及总结全文
+
+在上篇文章中留下了两个小问题,相信看到这篇文章的人都能独立完成并自行解释了吧?
+
+下面给出问题以及答案!
+
+```go
+func deferFuncWithAnonymousReturnValue() int {
+    var retVal int
+    defer func() {
+        retVal++
+    }()
+    return 0
+}
+
+func deferFuncWithNamedReturnValue() (retVal int) {
+    defer func() {
+        retVal++
+    }()
+    return 0
+}
+
+func TestDeferFuncWhenReturn(t *testing.T) {
+    // 0
+    t.Log(deferFuncWithAnonymousReturnValue())
+    // 1
+    t.Log(deferFuncWithNamedReturnValue())
+}
+```
+
+> 「雪之梦技术驿站」: `deferFuncWithAnonymousReturnValue()` 函数无明确的返回值参数,而 `deferFuncWithNamedReturnValue()` 函数已经声明了 `(retVal int)` 返回值,因为延迟函数并不会影响未命名的函数.
+
+通过本文,我们知道了延迟函数的执行时机以及一些细节,关键是理解 `Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked.` 这句话,绝对是**重中之重**!
+
+简而言之,延迟函数在声明时会收集相关参数赋值拷贝一份**入栈**,时机合适时再从入栈环境中寻找相关环境参数,如果找不到就扩大范围寻找外层函数是否包含所需变量,执行过程也就是延迟函数的**出栈**.
+
+有一个消防员专门负责保卫商场的安全,每天商场进进出出很多人流,总有一些重要人物也会来到商场购物,突然有一天,发生了火灾,正在大家惊慌失措中...
+
+这个消防员到底干了什么才能保证重要人物安全的同时也能让他们不遭受财产损失?
+
+![go-error-defer-panic.png](../images/go-error-defer-panic.png)
+
+请补充你的答案,感谢你的阅读与关注,下一节再见~
 
 ## 阅读延伸以及参考文档
 
