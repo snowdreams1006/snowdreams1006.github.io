@@ -225,7 +225,11 @@ func TestFoo(t *testing.T) {
 > 
 > Process finished with exit code 0
 
-记得官方文档中关于 `defer` 描述的第一句话就介绍了执行时机,原文如下:
+如果此时试图去解释上述运行结果,很遗憾铩羽而归!
+
+![go-error-defer-foo-explain-fail.jpeg](../images/go-error-defer-foo-explain-fail.jpeg)
+
+记得官方文档中关于 `defer` 描述的第一句话就阐明了**延迟函数的执行时机**,原文如下:
 
 ```
 A "defer" statement invokes a function whose execution is deferred to the moment the surrounding function returns, either because the surrounding function executed a return statement, reached the end of its function body, or because the corresponding goroutine is panicking.
@@ -233,9 +237,55 @@ A "defer" statement invokes a function whose execution is deferred to the moment
 
 但是如果按照这句话来解释此次示例的运行结果,显然是解释不通的!
 
+```go
+func foo(){
+    fmt.Printf("foo begin at %s \n",time.Now())
 
-这一点也是我最大的疑惑,以至于根本无法真正理解 `Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked.` ,那么原因到底出现在哪里呢?
+    defer trace("foo")()
+    time.Sleep(5*time.Second)
 
+    fmt.Printf("foo end at %s \n",time.Now())
+}
+
+func TestFoo(t *testing.T) {
+    foo()
+}
+```
+
+如果 `defer trace("foo")()` 延迟函数真的被延迟到**函数体结束之前**,那么上述 `foo()` 函数应该等价于这种形式:
+
+```go
+func fooWithoutDefer(){
+    fmt.Printf("foo begin at %s \n",time.Now())
+
+    time.Sleep(5*time.Second)
+
+    fmt.Printf("foo end at %s \n",time.Now())
+
+    trace("foo")()
+}
+
+func TestFooWithoutDefer(t *testing.T) {
+    fooWithoutDefer()
+}
+```
+
+但是对于 `fooWithoutDefer` 函数的执行结果直接实力打脸:
+
+> === RUN   TestFooWithoutDefer
+> foo begin at 2019-11-19 11:44:20.066554 +0800 CST m=+0.001290523 
+> foo end at 2019-11-19 11:44:25.068724 +0800 CST m=+5.003312582 
+> function foo enter at 2019-11-19 11:44:25.068796 +0800 CST m=+5.003384341 
+> function foo exit at 2019-11-19 11:44:25.068847 +0800 CST m=+5.003435185(elapsed 51.196µs)--- PASS: TestFooWithoutDefer (5.00s)
+> PASS
+>
+> Process finished with exit code 0
+
+由此可见,延迟函数其实并不简单,想要弄清楚 `defer` 关键字还要继续读下去才有可能!
+
+![go-error-defer-foo-result-diff.png](../images/go-error-defer-foo-result-diff.png)
+
+这一点也是我最大的疑惑,潜意识告诉我: 只要无法真正理解 `Each time a "defer" statement executes, the function value and parameters to the call are evaluated as usual and saved anew but the actual function is not invoked.` 这句话的含义,那么永远不可能彻底弄清 `defer` 关键字!
 
 ### 第二句
 
