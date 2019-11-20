@@ -4,13 +4,13 @@
 
 如果读者实际运行效果和教程演示效果有出入,很可能是版本问题,系统环境等原因,希望能及时反馈,避免更多人踩坑,谢谢!
 
-- [![雪之梦技术驿站](https://img.shields.io/badge/雪之梦技术驿站-snowdreams1006.tech-brightgreen.svg)](http://121.40.223.69/)
+- [![雪之梦技术驿站](https://img.shields.io/badge/雪之梦技术驿站-blob.snowdreams1006.cn-brightgreen.svg)](https://blob.snowdreams1006.cn/)
 - [![Gitee](https://img.shields.io/badge/Gitee-snowdreams1006.gitee.io-brightgreen.svg)](https://snowdreams1006.gitee.io/)
 - [![Github](https://img.shields.io/badge/Github-snowdreams1006.github.io-brightgreen.svg)](https://snowdreams1006.github.io/)
 - [![GitLab](https://img.shields.io/badge/GitLab-snowdreams1006.gitlab.io-brightgreen.svg)](https://snowdreams1006.gitlab.io/)
 - [![Gitbook](https://img.shields.io/badge/Gitbook-snowdreams1006.gitbook.io-brightgreen.svg)](https://snowdreams1006.gitbook.io/)
 
-> 国内用户推荐访问 [snowdreams1006.tech](http://121.40.223.69/) ,速度非常快并且和 [snowdreams1006.github.io](https://snowdreams1006.github.io/) **保持同步更新**.
+> 国内用户推荐访问 [blob.snowdreams1006.cn](https://blob.snowdreams1006.cn/) ,速度非常快并且和 [snowdreams1006.github.io](https://snowdreams1006.github.io/) **保持同步更新**.
 
 ## 教程特点
 
