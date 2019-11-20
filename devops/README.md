@@ -222,6 +222,7 @@ ClientAliveCountMax 2
 - [SSH简介及两种远程登录的方法](https://blog.csdn.net/li528405176/article/details/82810342)
 - [服务器快速免密ssh登录配置](https://juejin.im/post/5da724506fb9a04e2a73d96c)
 - [linux 信息查看及命令](https://juejin.im/post/5dad7681f265da5bb86ad2f5)
+- [github连接报"ssh: connect to host github.com port 22: Connection timed out"错误](https://www.cnblogs.com/jpfss/p/8094005.html)
 
 ## LICENSE
 
