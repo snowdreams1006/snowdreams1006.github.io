@@ -171,10 +171,39 @@ server {
 ```
 
 
+```bash
+certbot certonly  -d *.snowdreams1006.cn --manual \
+--preferred-challenges dns \
+--server https://acme-v02.api.letsencrypt.org/directory
+```
+
+```
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/snowdreams1006.cn-0001/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/snowdreams1006.cn-0001/privkey.pem
+   Your cert will expire on 2020-02-18. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+```
+
+```
+ls /etc/letsencrypt/live/snowdreams1006.cn/
+```
+
 ## 参考文档
 
+- [User Guide](https://certbot.eff.org/docs/using.html)
 - [centos7下docker部署nginx使用let's encrypt免费证书](https://blog.csdn.net/zxian610/article/details/78679743)
 - [ImportError: No module named 'requests.packages.urllib3](https://blog.csdn.net/qq_41781322/article/details/90288555)
 - [centos crontab详解](https://www.cnblogs.com/tiandi/p/7147031.html)
 - [在Docker容器环境中用Let's Encrypt部署HTTPS](https://www.jianshu.com/p/5afc6bbeb28c)
 - [Docker环境下自动更新Let’s Encrypt SSL证书](https://www.jianshu.com/p/ea090833f766)
+- [申请 Let's Encrypt 通配符 HTTPS 证书](https://blog.51cto.com/wzlinux/2405940)
+- [Centos通过acme申请Let’s Encrypt通配符HTTPS证书-简单粗暴](https://blog.hlogc.com/2019/07/19/centos%E9%80%9A%E8%BF%87acme%E7%94%B3%E8%AF%B7lets-encrypt%E9%80%9A%E9%85%8D%E7%AC%A6https%E8%AF%81%E4%B9%A6-%E7%AE%80%E5%8D%95%E7%B2%97%E6%9A%B4/)
