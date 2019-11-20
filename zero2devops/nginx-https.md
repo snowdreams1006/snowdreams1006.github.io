@@ -170,9 +170,23 @@ server {
 }
 ```
 
+```bash
+yum install -y bind-utils
+```
 
 ```bash
-certbot certonly  -d *.snowdreams1006.cn --manual \
+dig www.baidu.com
+```
+
+```
+# 注xxx.com请根据自己的域名自行更改
+./certbot-auto --server https://acme-v02.api.letsencrypt.org/directory -d "*.xxx.com" --manual --preferred-challenges dns-01 certonly
+
+./certbot-auto --server https://acme-v02.api.letsencrypt.org/directory -d "*.xxx.com" -d "xxx.com" --manual --preferred-challenges dns-01 certonly
+```
+
+```bash
+certbot certonly -d snowdreams1006.cn -d *.snowdreams1006.cn --manual \
 --preferred-challenges dns \
 --server https://acme-v02.api.letsencrypt.org/directory
 ```
@@ -197,6 +211,191 @@ IMPORTANT NOTES:
 ls /etc/letsencrypt/live/snowdreams1006.cn/
 ```
 
+## 最佳实践
+
+- 添加 epel 源
+
+```bash
+curl -o /etc/yum.repos.d/epel-7.repo https://mirrors.aliyun.com/repo/epel-7.repo
+```
+
+- 安装 Certbot 工具
+
+```bash
+yum install -y certbot
+```
+
+- 申请证书
+
+```bash
+certbot certonly -d snowdreams1006.cn -d *.snowdreams1006.cn --manual \
+--preferred-challenges dns \
+--server https://acme-v02.api.letsencrypt.org/directory
+```
+
+- 配置 dns 解析
+
+```
+_acme-challenge.snowdreams1006.cn with the following value:
+
+AioofHwGnTzH7J_sKQczQnYc2QcXde_4lj42VNKk6FA
+
+Please deploy a DNS TXT record under the name
+_acme-challenge.snowdreams1006.cn with the following value:
+
+hKdp1-NVK9uSSZje3tePc_tLrh_d-LUhEUBVM6wlJhc
+
+Before continuing, verify the record is deployed.
+(This must be set up in addition to the previous challenges; do not remove,
+replace, or undo the previous challenge tasks yet. Note that you might be
+asked to create multiple distinct TXT records with the same name. This is
+permitted by DNS standards.)
+```
+
+- 验证 dns 解析
+
+```bash
+dig -t txt _acme-challenge.snowdreams1006.cn
+```
+
+- 生成提示
+
+```
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem
+   Your cert will expire on 2020-02-18. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+
+ - We were unable to subscribe you the EFF mailing list because your
+   e-mail address appears to be invalid. You can try again later by
+   visiting https://act.eff.org.
+```
+
+```bash
+tree /etc/letsencrypt
+/etc/letsencrypt
+├── accounts
+│   └── acme-v02.api.letsencrypt.org
+│       └── directory
+│           └── 41c8e91d7dcd718b2f48c09ab9a32cc4
+│               ├── meta.json
+│               ├── private_key.json
+│               └── regr.json
+├── archive
+│   └── snowdreams1006.cn
+│       ├── cert1.pem
+│       ├── chain1.pem
+│       ├── fullchain1.pem
+│       └── privkey1.pem
+├── csr
+│   └── 0000_csr-certbot.pem
+├── keys
+│   └── 0000_key-certbot.pem
+├── live
+│   ├── README
+│   └── snowdreams1006.cn
+│       ├── cert.pem -> ../../archive/snowdreams1006.cn/cert1.pem
+│       ├── chain.pem -> ../../archive/snowdreams1006.cn/chain1.pem
+│       ├── fullchain.pem -> ../../archive/snowdreams1006.cn/fullchain1.pem
+│       ├── privkey.pem -> ../../archive/snowdreams1006.cn/privkey1.pem
+│       └── README
+├── renewal
+│   └── snowdreams1006.cn.conf
+└── renewal-hooks
+    ├── deploy
+    ├── post
+    └── pre
+
+15 directories, 16 files
+```
+
+- 查看命令有效期
+
+```bash
+openssl x509 -noout -dates -in /etc/letsencrypt/live/snowdreams1006.cn/cert.pem
+```
+
+- 设置定时任务自动更新
+
+> 配置crontab，每月1好5时更新证书，并重启docker容器
+
+```bash
+00 01 01 * * sudo /usr/bin/certbot renew --quiet && sudo docker restart nginx
+```
+
+- 生成 PFS 键值
+
+```bash
+#创建目录
+mkdir -p /etc/ssl/private/ 
+
+#执行命令
+cd /etc/ssl/private/
+
+openssl dhparam 2048 -out dhparam-2048.pem
+```
+
+- 配置 nginx
+
+```conf
+server {
+    listen 443 ssl http2;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn blog.snowdreams1006.cn;
+    index index.html index.htm;
+    root  /usr/share/nginx/html/;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+    
+    ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
+}
+
+server {
+    listen          80;
+    server_name snowdreams1006.cn www.snowdreams1006.cn blog.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+```
+
+- 启动 nginx
+
+```bash
+docker run -p 80:80 -p 443:443 \
+    -v ~/snowdreams1006.github.io:/usr/share/nginx/html \
+    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
+    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
+    -v ~/nginx/logs:/var/log/nginx \
+    -v /etc/letsencrypt:/etc/letsencrypt \
+    -v /etc/ssl:/etc/ssl \
+    nginx    
+```
+
+```bash
+docker run --name nginx -d -p 80:80 -p 443:443 \
+    -v ~/snowdreams1006.github.io:/usr/share/nginx/html \
+    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
+    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
+    -v ~/nginx/logs:/var/log/nginx \
+    -v /etc/letsencrypt:/etc/letsencrypt \
+    -v /etc/ssl:/etc/ssl \
+    nginx    
+```
+
 ## 参考文档
 
 - [User Guide](https://certbot.eff.org/docs/using.html)
@@ -207,3 +406,4 @@ ls /etc/letsencrypt/live/snowdreams1006.cn/
 - [Docker环境下自动更新Let’s Encrypt SSL证书](https://www.jianshu.com/p/ea090833f766)
 - [申请 Let's Encrypt 通配符 HTTPS 证书](https://blog.51cto.com/wzlinux/2405940)
 - [Centos通过acme申请Let’s Encrypt通配符HTTPS证书-简单粗暴](https://blog.hlogc.com/2019/07/19/centos%E9%80%9A%E8%BF%87acme%E7%94%B3%E8%AF%B7lets-encrypt%E9%80%9A%E9%85%8D%E7%AC%A6https%E8%AF%81%E4%B9%A6-%E7%AE%80%E5%8D%95%E7%B2%97%E6%9A%B4/)
+- [centos 安装 dig](https://blog.csdn.net/u013397318/article/details/56024773)
