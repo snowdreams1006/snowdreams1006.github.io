@@ -472,12 +472,6 @@ server {
 
 ## 宿主机 nginx
 
-- 查看 nginx
-
-```bash
-find -name nginx  
-```
-
 - nginx 默认目录
 
 ```bash
@@ -504,10 +498,26 @@ sudo yum install -y nginx
 sudo systemctl start nginx.service
 ```
 
+- 查看开机自启
+
+```bash
+sudo systemctl list-unit-files
+```
+
+```bash
+systemctl list-unit-files | grep enable
+```
+
 - 设置开机自启动
 
 ```bash
 sudo systemctl enable nginx.service
+```
+
+- 关闭开机自启
+
+```bash
+sudo systemctl disable nginx.service
 ```
 
 - 查看 nginx 效果
@@ -608,26 +618,43 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
 
     ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
+
+    ssl_session_cache shared:SSL:1m;
+    ssl_session_timeout  10m;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
 }
 
 server {
     listen       80;
-    server_name  artipub.snowdreams1006.cn;
-    return 301 https://$server_name$request_uri;
+    server_name  test.snowdreams1006.cn;
+
+    location / {
+      proxy_pass http://172.16.166.99:4000;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+  }
 }
 
 server {
   listen 443 ssl http2;
-  server_name  artipub.snowdreams1006.cn;
+  server_name  test.snowdreams1006.cn;
 
-  ssl on;
   ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
 
   ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
 
+  ssl_session_cache shared:SSL:1m;
+  ssl_session_timeout  10m;
+  ssl_ciphers HIGH:!aNULL:!MD5;
+  ssl_prefer_server_ciphers on;
+
   location / {
-      proxy_pass http://127.0.0.1:8000;
+      proxy_pass https://172.16.166.99:4000;
       proxy_http_version 1.1;
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP $remote_addr;
@@ -637,7 +664,115 @@ server {
 }
 ```
 
+- 启动 docker 容器 nginx
 
+```
+server {
+    listen       80;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn blog.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn blog.snowdreams1006.cn;
+    
+    index index.html index.htm;
+    root  /usr/share/nginx/html;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+
+    ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
+
+    ssl_session_cache shared:SSL:1m;
+    ssl_session_timeout  10m;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
+}
+
+server {
+    listen       80;
+    server_name  resume.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;  
+}
+
+server {
+  listen 443 ssl http2;
+  server_name  resume.snowdreams1006.cn;
+
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+
+  ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
+
+  ssl_session_cache shared:SSL:1m;
+  ssl_session_timeout  10m;
+  ssl_ciphers HIGH:!aNULL:!MD5;
+  ssl_prefer_server_ciphers on;
+
+  location / {
+      proxy_pass http://172.16.166.99:1006;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+
+server {
+    listen       80;
+    server_name  artipub.snowdreams1006.cn;
+
+    location / {
+      proxy_pass http://172.16.166.99:8000;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+server {
+    listen       80;
+    server_name  artipubapi.snowdreams1006.cn;
+
+    location / {
+      proxy_pass http://172.16.166.99:3000;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+```bash
+docker run -p 80:80 -p 443:443 \
+    -v ~/snowdreams1006.github.io:/usr/share/nginx/html \
+    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
+    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
+    -v ~/nginx/logs:/var/log/nginx \
+    -v /etc/letsencrypt:/etc/letsencrypt \
+    -v /etc/ssl:/etc/ssl \
+    nginx   
+```
+
+```bash
+docker run --name nginx -d -p 80:80 -p 443:443 \
+    -v ~/snowdreams1006.github.io:/usr/share/nginx/html \
+    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
+    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
+    -v ~/nginx/logs:/var/log/nginx \
+    -v /etc/letsencrypt:/etc/letsencrypt \
+    -v /etc/ssl:/etc/ssl \
+    nginx    
+```
 
 ## 参考文档
 
