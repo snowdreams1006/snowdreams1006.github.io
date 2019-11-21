@@ -396,6 +396,249 @@ docker run --name nginx -d -p 80:80 -p 443:443 \
     nginx    
 ```
 
+```bash
+docker run -d -p 8888:80 -v ~/test:/usr/share/nginx/html nginx 
+```
+
+- 端口转发
+
+```
+server {
+    listen 443 ssl http2;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn blog.snowdreams1006.cn;
+    index index.html index.htm;
+    root  /usr/share/nginx/html/;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+
+    ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
+}
+
+server {
+    listen          80;
+    server_name snowdreams1006.cn www.snowdreams1006.cn blog.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name  artipub.snowdreams1006.cn;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+
+    ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
+
+    location / {
+        proxy_pass http://172.16.166.99:8000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+server {
+    listen       80;
+    server_name  artipub.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+```
+
+```
+server {
+    listen       80;
+    server_name  test.snowdreams1006.cn;
+    location / {
+        proxy_pass http://127.0.0.1:8888;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+- 访问效果
+
+- https://snowdreams1006.cn/
+- https://www.snowdreams1006.cn/
+- https://blog.snowdreams1006.cn/
+
+
+## 宿主机 nginx
+
+- 查看 nginx
+
+```bash
+find -name nginx  
+```
+
+- nginx 默认目录
+
+```bash
+whereis nginx
+```
+
+- 添加安装源
+
+```bash
+sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+```
+
+> 安装该rpm后，我们就能在/etc/yum.repos.d/ 目录中看到一个名为nginx.repo 的文件。
+
+- 安装 nginx
+
+```bash
+sudo yum install -y nginx
+```
+
+- 启动 nginx
+
+```bash
+sudo systemctl start nginx.service
+```
+
+- 设置开机自启动
+
+```bash
+sudo systemctl enable nginx.service
+```
+
+- 查看 nginx 效果
+
+```bash
+curl http://www.example.com/
+```
+
+- 启动 nginx
+
+```bash
+nginx
+```
+
+- 测试配置文件
+
+```bash
+nginx -t
+```
+
+- 优雅重启
+
+```bash
+nginx -s reload
+```
+
+- 查看nginx 进程号
+
+```bash
+ps -ef |grep nginx
+```
+
+- 停止 nginx
+
+```bash
+nginx -s stop
+```
+
+```bash
+kill -9 pid
+```
+
+- `/etc/nginx/nginx.conf`
+
+```
+user root;
+worker_processes auto;
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
+
+include /usr/share/nginx/modules/*.conf;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile            on;
+    tcp_nopush          on;
+    tcp_nodelay         on;
+    keepalive_timeout   65;
+    types_hash_max_size 2048;
+
+    include             /etc/nginx/mime.types;
+    default_type        application/octet-stream;
+
+    # Load modular configuration files from the /etc/nginx/conf.d directory.
+    # See http://nginx.org/en/docs/ngx_core_module.html#include
+    # for more information.
+    include /etc/nginx/conf.d/*.conf;
+}
+```
+
+- `/etc/nginx/conf.d/default.conf`
+
+```
+server {
+    listen       80;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn blog.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn blog.snowdreams1006.cn;
+    
+    index index.html index.htm;
+    root  /root/snowdreams1006.github.io;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+
+    ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
+}
+
+server {
+    listen       80;
+    server_name  artipub.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+  listen 443 ssl http2;
+  server_name  artipub.snowdreams1006.cn;
+
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+
+  ssl_dhparam /etc/ssl/private/dhparam-2048.pem;
+
+  location / {
+      proxy_pass http://127.0.0.1:8000;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+```
+
+
+
 ## 参考文档
 
 - [User Guide](https://certbot.eff.org/docs/using.html)
@@ -407,3 +650,5 @@ docker run --name nginx -d -p 80:80 -p 443:443 \
 - [申请 Let's Encrypt 通配符 HTTPS 证书](https://blog.51cto.com/wzlinux/2405940)
 - [Centos通过acme申请Let’s Encrypt通配符HTTPS证书-简单粗暴](https://blog.hlogc.com/2019/07/19/centos%E9%80%9A%E8%BF%87acme%E7%94%B3%E8%AF%B7lets-encrypt%E9%80%9A%E9%85%8D%E7%AC%A6https%E8%AF%81%E4%B9%A6-%E7%AE%80%E5%8D%95%E7%B2%97%E6%9A%B4/)
 - [centos 安装 dig](https://blog.csdn.net/u013397318/article/details/56024773)
+- [CentOS 7，使用yum安装Nginx](https://www.centos.bz/2018/01/centos-7%EF%BC%8C%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85nginx/)
+- [CentOS7中使用yum安装Nginx的方法](https://www.cnblogs.com/songxingzhu/p/8568432.html)
