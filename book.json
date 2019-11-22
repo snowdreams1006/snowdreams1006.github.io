@@ -35,7 +35,7 @@
         "donate"
     ],
     "pluginsConfig": {
-        "favicon": "/favicon.ico",
+        "favicon": "favicon.ico",
         "appleTouchIconPrecomposed152": "apple-touch-icon-precomposed-152.png",
         "toc": {
             "addClass": true,
