@@ -121,15 +121,6 @@
     * [简述优选文章统计](write/jianshu-optimize-static.md)
     * [常见问题](write/faq.md)
 
-## 开源项目
-* [gitbook-official](https://snowdreams1006.github.io/gitbook-official/)
-* [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
-* [hexo-plugin-gitalk](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
-* [gitbook-plugin-readmore](https://snowdreams1006.github.io/gitbook-plugin-readmore/)
-* [hexo-plugin-readmore](https://snowdreams1006.github.io/hexo-plugin-readmore/)
-* [gitbook-plugin-copyright](https://snowdreams1006.github.io/gitbook-plugin-copyright/)
-* [security-plus](https://security-plus.github.io/)
-
 ## 读书观感
 * [大数据浪潮之巅:新技术商业制胜之道](bigDataWave/README.md)
 
@@ -143,4 +134,14 @@
 
 ## 思绪乱飞
 * [TODO清单](todo/README.md)
+
+## 开源项目
+* [gitbook-official](https://snowdreams1006.github.io/gitbook-official/)
+* [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
+* [gitbook-plugin-readmore](https://snowdreams1006.github.io/gitbook-plugin-readmore/)
+* [gitbook-plugin-favicon-absolute](https://snowdreams1006.github.io/gitbook-plugin-favicon-absolute/)
+* [hexo-plugin-gitalk](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
+* [hexo-plugin-readmore](https://snowdreams1006.github.io/hexo-plugin-readmore/)
+* [gitbook-plugin-copyright](https://snowdreams1006.github.io/gitbook-plugin-copyright/)
+* [security-plus](https://security-plus.github.io/)
 

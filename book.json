@@ -24,7 +24,7 @@
         "edit-link",
         "copy-code-button",
         "chart",
-        "favicon-custom",
+        "favicon-absolute",
         "github-buttons",
         "advanced-emoji",
         "rss",
@@ -35,8 +35,10 @@
         "donate"
     ],
     "pluginsConfig": {
-        "favicon": "favicon.ico",
-        "appleTouchIconPrecomposed152": "apple-touch-icon-precomposed-152.png",
+        "favicon-absolute": {
+            "favicon": "/favicon.ico",
+            "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png"
+        },
         "toc": {
             "addClass": true,
             "className": "toc"
