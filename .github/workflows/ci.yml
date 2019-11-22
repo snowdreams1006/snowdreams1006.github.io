@@ -24,7 +24,7 @@ jobs:
       with:
         source: _book/*
         target: /root/snowdreams1006.github.io
-        rm: /root/snowdreams1006.github.io/*
+        rm: /root/snowdreams1006.github.io
         strip_components: 1
     - name: Deploy Blog
       uses: appleboy/ssh-action@master
