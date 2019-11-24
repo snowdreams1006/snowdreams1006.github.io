@@ -2149,7 +2149,7 @@
                                 
                                 
                 <div id="vip-container">
-                    <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#webhook"><b>1. </b>webhook</a></li><ul><li><span class="title-icon "></span><a href="#&#x5378;&#x8F7D;"><b>1.1. </b>&#x5378;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#centos-install-webhook"><b>1.2. </b>centos install webhook</a></li></ul></ul></div><a href="#webhook" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="webhook"><a name="webhook" class="anchor-navigation-ex-anchor" href="#webhook"><i class="fa fa-link" aria-hidden="true"></i></a>1. webhook</h1>
+                    <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#webhook"><b>1. </b>webhook</a></li><ul><li><span class="title-icon "></span><a href="#&#x5378;&#x8F7D;"><b>1.1. </b>&#x5378;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#centos-install-webhook"><b>1.2. </b>centos install webhook</a></li><li><span class="title-icon "></span><a href="#hooksjson"><b>1.3. </b>hooks.json</a></li></ul></ul></div><a href="#webhook" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="webhook"><a name="webhook" class="anchor-navigation-ex-anchor" href="#webhook"><i class="fa fa-link" aria-hidden="true"></i></a>1. webhook</h1>
 <blockquote>
 <p><a href="https://snapcraft.io/install/webhook/centos" target="_blank">https://snapcraft.io/install/webhook/centos</a></p>
 </blockquote>
@@ -2265,6 +2265,126 @@ docker stop resume
 </ul>
 <pre><code class="lang-bash">curl https://webhook.snowdreams1006.cn/hooks/<span class="hljs-built_in">test</span>
 </code></pre>
+<h2 id="hooksjson"><a name="hooksjson" class="anchor-navigation-ex-anchor" href="#hooksjson"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. hooks.json</h2>
+<pre><code class="lang-bash">[
+  {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;test&quot;</span>,
+    <span class="hljs-string">&quot;execute-command&quot;</span>: <span class="hljs-string">&quot;/etc/webhook/test.sh&quot;</span>,
+    <span class="hljs-string">&quot;command-working-directory&quot;</span>: <span class="hljs-string">&quot;/etc/webhook&quot;</span>,
+    <span class="hljs-string">&quot;response-message&quot;</span>: <span class="hljs-string">&quot;Test received successfully!&quot;</span>
+  },
+  {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;github&quot;</span>,
+    <span class="hljs-string">&quot;execute-command&quot;</span>: <span class="hljs-string">&quot;/etc/webhook/github.sh&quot;</span>,
+    <span class="hljs-string">&quot;command-working-directory&quot;</span>: <span class="hljs-string">&quot;/etc/webhook&quot;</span>,
+    <span class="hljs-string">&quot;response-message&quot;</span>: <span class="hljs-string">&quot;Github received successfully!&quot;</span>,
+    <span class="hljs-string">&quot;pass-arguments-to-command&quot;</span>:
+    [
+      {
+        <span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;payload&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;head_commit.id&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;payload&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;pusher.name&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;payload&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;pusher.email&quot;</span>
+      }
+    ],
+    <span class="hljs-string">&quot;trigger-rule&quot;</span>:
+    {
+      <span class="hljs-string">&quot;and&quot;</span>:
+      [
+        {
+          <span class="hljs-string">&quot;match&quot;</span>:
+          {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;payload-hash-sha1&quot;</span>,
+            <span class="hljs-string">&quot;secret&quot;</span>: <span class="hljs-string">&quot;blog.snowdreams1006.cn&quot;</span>,
+            <span class="hljs-string">&quot;parameter&quot;</span>:
+            {
+              <span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;header&quot;</span>,
+              <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;X-Hub-Signature&quot;</span>
+            }
+          }
+        },
+        {
+          <span class="hljs-string">&quot;match&quot;</span>:
+          {
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;value&quot;</span>,
+            <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;refs/heads/master&quot;</span>,
+            <span class="hljs-string">&quot;parameter&quot;</span>:
+            {
+              <span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;payload&quot;</span>,
+              <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;ref&quot;</span>
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;query&quot;</span>,
+    <span class="hljs-string">&quot;execute-command&quot;</span>: <span class="hljs-string">&quot;/etc/webhook/query.sh&quot;</span>,
+    <span class="hljs-string">&quot;command-working-directory&quot;</span>: <span class="hljs-string">&quot;/etc/webhook&quot;</span>,
+    <span class="hljs-string">&quot;response-message&quot;</span>: <span class="hljs-string">&quot;Query received successfully!&quot;</span>
+  },
+  {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;file&quot;</span>,
+    <span class="hljs-string">&quot;execute-command&quot;</span>: <span class="hljs-string">&quot;/etc/webhook/file.sh&quot;</span>,
+    <span class="hljs-string">&quot;command-working-directory&quot;</span>: <span class="hljs-string">&quot;/etc/webhook&quot;</span>,
+    <span class="hljs-string">&quot;response-message&quot;</span>: <span class="hljs-string">&quot;File received successfully!&quot;</span>,
+    <span class="hljs-string">&quot;pass-file-to-command&quot;</span>:
+    [
+      {
+        <span class="hljs-string">&quot;source&quot;</span>: <span class="hljs-string">&quot;payload&quot;</span>,
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;file&quot;</span>,
+        <span class="hljs-string">&quot;envname&quot;</span>: <span class="hljs-string">&quot;ENV_VARIABLE&quot;</span>, 
+        <span class="hljs-string">&quot;base64decode&quot;</span>: <span class="hljs-literal">false</span>
+      }
+    ],
+    <span class="hljs-string">&quot;include-command-output-in-response&quot;</span>: <span class="hljs-literal">true</span>
+  }
+]
+</code></pre>
+<ul>
+<li>test.sh</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/sh
+</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Test received successfully!&quot;</span>
+</code></pre>
+<ul>
+<li>github.sh</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/sh
+</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Github received successfully!&quot;</span>
+</code></pre>
+<ul>
+<li>query.sh</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/sh
+</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Query received successfully!&quot;</span>
+</code></pre>
+<ul>
+<li>trigger</li>
+</ul>
+<pre><code class="lang-bash">curl https://webhook.snowdreams1006.cn/hooks/<span class="hljs-built_in">test</span>
+</code></pre>
+<pre><code class="lang-bash">curl https://webhook.snowdreams1006.cn/hooks/github
+</code></pre>
+<pre><code class="lang-bash">curl https://webhook.snowdreams1006.cn/hooks/query
+</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;file&quot;</span>:<span class="hljs-string">&quot;iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEzMTA4RDI0QzMxQjExRTBCMzYzRjY1QUQ1Njc4QzFBIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEzMTA4RDIzQzMxQjExRTBCMzYzRjY1QUQ1Njc4QzFBIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzMgV2luZG93cyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ1dWlkOkFDMUYyRTgzMzI0QURGMTFBQUI4QzUzOTBEODVCNUIzIiBzdFJlZjpkb2N1bWVudElEPSJ1dWlkOkM5RDM0OTY2NEEzQ0REMTFCMDhBQkJCQ0ZGMTcyMTU2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+IBFgEwAAAmJJREFUeNqkk89rE1EQx2d/NNq0xcYYayPYJDWC9ODBsKIgAREjBmvEg2cvHnr05KHQ9iB49SL+/BMEfxBQKHgwCEbTNNIYaqgaoanFJi+rcXezye4689jYkIMIDnx47837zrx583YFx3Hgf0xA6/dJyAkkgUy4vgryAnmNWH9L4EVmotFoKplMHgoGg6PkrFarjXQ6/bFcLj/G5W1E+3NaX4KZeDx+dX5+7kg4HBlmrC6JoiDFYrGhROLM/mp1Y6JSqdCd3/SW0GUqEAjkl5ZyHTSHKBQKnO6a9khD2m5cr91IJBJ1VVWdiM/n6LruNJtNDs3JR3ukIW03SHTHi8iVsbG9I51OG1bW16HVasHQZopDc/JZVgdIQ1o3BmTkEnJXURS/KIpgGAYPkCQJPi0u8uzDKQN0XQPbtgE1MmrHs9nsfSqAEjxCNtHxZHLy4G4smUQgyzL4LzOegDGGp1ucVqsNqKVrpJCM7F4hg6iaZvhqtZrg8XjA4xnAU3XeKLqWaRImoIZeQXVjQO5pYp4xNVirsR1erxer2O4yfa227WCwhtWoJmn7m0h270NxmemFW4706zMm8GCgxBGEASCfhnukIW03iFdQnOPz0LNKp3362JqQzSw4u2LXBe+Bs3xD+/oc1NxN55RiC9fOme0LEQiRf2rBzaKEeJJ37ZWTVunBeGN2WmQjg/DeLTVP89nzAive2dMwlo9bpFVC2xWMZr+A720FVn88fAUb3wDMOjyN7YNc6TvUSHQ4AH6TOUdLL7em68UtWPsJqxgTpgeiLu1EBt1R+Me/mF7CQPTfAgwAGxY2vOTrR3oAAAAASUVORK5CYII=&quot;</span>
+}
+</code></pre>
+<pre><code class="lang-bash">curl -H <span class="hljs-string">&quot;Content-Type:application/json&quot;</span> -X POST <span class="hljs-_">-d</span> @file.json \
+https://webhook.snowdreams1006.cn/hooks/file
+</code></pre>
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
 
 <pre><code class="lang-html">&#x4F5C;&#x8005;: &#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;
@@ -2274,7 +2394,7 @@ docker stop resume
 </code></pre>
 <p><img src="https://snowdreams1006.github.io/snowdreams1006-wechat-open.png" alt="https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"> </p>
 <p><footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
-2019-11-24 15:39:42
+2019-11-24 17:15:53
 </span></footer></p>
 <div id="gitalk-container"></div>
                 </div>
@@ -2328,7 +2448,7 @@ docker stop resume
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"webhook","level":"4.1.3","depth":2,"next":{"title":"运维部署","level":"4.2","depth":1,"path":"devops/README.md","ref":"devops/README.md","articles":[{"title":"docker 环境","level":"4.2.1","depth":2,"path":"devops/docker-env.md","ref":"devops/docker-env.md","articles":[]},{"title":"docker 操作","level":"4.2.2","depth":2,"path":"devops/docker-ops.md","ref":"devops/docker-ops.md","articles":[]},{"title":"docker + gitbook","level":"4.2.3","depth":2,"path":"devops/docker-gitbook.md","ref":"devops/docker-gitbook.md","articles":[]}]},"previous":{"title":"免费实现https访问网站","level":"4.1.2","depth":2,"path":"zero2devops/nginx-https.md","ref":"zero2devops/nginx-https.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toc","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-absolute","github-buttons","advanced-emoji","rss","readmore","copyright","tbfed-pagefooter","mygitalk","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"copyright":{"site":"https://snowdreams1006.github.io/","author":"雪之梦技术驿站","website":"雪之梦技术驿站","image":"https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"},"toc":{"addClass":true,"className":"toc"},"readmore":{"blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/favicon.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"雪之梦技术驿站","description":"雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io","author":"snowdreams1006","site_url":"https://snowdreams1006.github.io/","feed_url":"https://snowdreams1006.github.io/rss","managingEditor":"snowdreams1006@163.com","webMaster":"snowdreams1006@163.com"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"buttons":[{"user":"snowdreams1006","repo":"snowdreams1006.github.io","type":"star","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"snowdreams1006.github.io","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"技术博客":"https://blob.snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006 搭建的 Gitbook 个人博客,详情请访问 https://snowdreams1006.github.io/"},"file":{"path":"zero2devops/webhook.md","mtime":"2019-11-24T07:39:42.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-24T07:41:18.485Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"webhook","level":"4.1.3","depth":2,"next":{"title":"运维部署","level":"4.2","depth":1,"path":"devops/README.md","ref":"devops/README.md","articles":[{"title":"docker 环境","level":"4.2.1","depth":2,"path":"devops/docker-env.md","ref":"devops/docker-env.md","articles":[]},{"title":"docker 操作","level":"4.2.2","depth":2,"path":"devops/docker-ops.md","ref":"devops/docker-ops.md","articles":[]},{"title":"docker + gitbook","level":"4.2.3","depth":2,"path":"devops/docker-gitbook.md","ref":"devops/docker-gitbook.md","articles":[]}]},"previous":{"title":"免费实现https访问网站","level":"4.1.2","depth":2,"path":"zero2devops/nginx-https.md","ref":"zero2devops/nginx-https.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toc","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-absolute","github-buttons","advanced-emoji","rss","readmore","copyright","tbfed-pagefooter","mygitalk","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"copyright":{"site":"https://snowdreams1006.github.io/","author":"雪之梦技术驿站","website":"雪之梦技术驿站","image":"https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"},"toc":{"addClass":true,"className":"toc"},"readmore":{"blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/favicon.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"雪之梦技术驿站","description":"雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io","author":"snowdreams1006","site_url":"https://snowdreams1006.github.io/","feed_url":"https://snowdreams1006.github.io/rss","managingEditor":"snowdreams1006@163.com","webMaster":"snowdreams1006@163.com"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"buttons":[{"user":"snowdreams1006","repo":"snowdreams1006.github.io","type":"star","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"snowdreams1006.github.io","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"技术博客":"https://blob.snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006 搭建的 Gitbook 个人博客,详情请访问 https://snowdreams1006.github.io/"},"file":{"path":"zero2devops/webhook.md","mtime":"2019-11-24T09:15:53.725Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-24T09:27:28.275Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
