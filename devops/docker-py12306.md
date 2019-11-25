@@ -35,17 +35,36 @@ docker run --rm --name py12306 -p 8008:8008 -d -v $(pwd):/config -v py12306:/dat
 tail -f 12306.log
 ```
 
-## docker-compose
-
-- 复制配置文件
+- 检测
 
 ```bash
-docker cp py12306:/code/docker-compose.yml.example docker-compose.yml
+python main.py -t
 ```
-
-- 启动配置文件
 
 ```bash
-docker-compose up -d
+python main.py -t -n
 ```
+
+## test
+
+```bash
+mkdir py12306 && cd py12306
+```
+
+```bash
+docker run --rm pjialin/py12306 cat /config/env.py > env.py
+```
+
+```bash
+docker run --rm --name py12306 -p 8008:8008 -d -v $(pwd):/config -v py12306:/data pjialin/py12306
+```
+
+```bash
+docker run --rm --name py12306 -p 8008:8008 -d -v $(pwd):/config -v $(pwd)/data:/data pjialin/py12306
+```
+
+```bash
+docker exec py12306 python main.py -c /config/env.py -t
+```
+
 
