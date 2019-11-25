@@ -279,6 +279,14 @@ echo "Github received successfully!"
 echo "Query received successfully!"
 ```
 
+- file.sh
+
+```bash
+#! /bin/sh
+
+echo "File received successfully!"
+```
+
 - trigger
 
 ```bash
@@ -302,4 +310,33 @@ curl https://webhook.snowdreams1006.cn/hooks/query
 ```bash
 curl -H "Content-Type:application/json" -X POST -d @file.json \
 https://webhook.snowdreams1006.cn/hooks/file
+```
+
+```bash
+#! /bin/sh
+
+echo "Query received successfully!"
+
+curl https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=服务器又发来新消息啦!&desp=欢迎访问[雪之梦技术驿站](https://blob.snowdreams1006.cn/),请关注微信公众号:「 雪之梦技术驿站 」 ![wechat:snowdreams1006](https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg)
+```
+
+```bash
+#! /bin/sh
+
+echo "Query received successfully!"
+
+curl https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=服务器又发来新消息啦!&desp=欢迎访问雪之梦技术驿站 : https://blob.snowdreams1006.cn
+```
+
+```bash
+#! /bin/sh
+
+echo "Query received successfully!"
+
+curl -i -X GET \
+ "https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%88%E5%8F%91%E6%9D%A5%E6%96%B0%E6%B6%88%E6%81%AF%E5%95%A6!&desp=%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE%5B%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99%5D(https%3A%2F%2Fblob.snowdreams1006.cn%3FtokenId%3D$(uuidgen))%2C%E8%AF%B7%E5%85%B3%E6%B3%A8%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%3A%E3%80%8C+%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99+%E3%80%8D+!%5Bwechat%3Asnowdreams1006%5D(https%3A%2F%2Fsnowdreams1006.github.io%2Fsnowdreams1006-wechat-public.jpeg)" 
+```
+
+```bash
+curl https://webhook.snowdreams1006.cn/hooks/query
 ```
