@@ -184,23 +184,6 @@ $ who -u
 $ last -a | head -5
 ```
 
-高设置SSH空闲超时退出时间 | 服务配置
-描述
-
-设置SSH空闲超时退出时间,可降低未授权用户访问其他用户ssh会话的风险
-
-检查提示
-
---
-
-加固建议
-
-编辑/etc/ssh/sshd_config，将ClientAliveInterval 设置为300到900，即5-15分钟，将ClientAliveCountMax设置为0-3之间。
-
-ClientAliveInterval 600
-ClientAliveCountMax 2
-
-
 ## TODO 清单
 
 - [使用 ansible 做自动化运维](https://juejin.im/post/5dafb50c6fb9a04e1325f2ff)

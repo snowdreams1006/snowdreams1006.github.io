@@ -232,3 +232,5 @@ docker network create -d bridge test-net
 docker run -itd --name test1 --network test-net ubuntu /bin/bash
 ```
 
+sudo docker logs -f -t --tail 10 s12
+
