@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 26 Nov 2019 06:00:15 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 Nov 2019 11:31:08 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -712,6 +712,12 @@
             <title><![CDATA[docker + wechat-work-message-push-go]]></title>
             <link>https://snowdreams1006.github.io/devops/docker-wechat-work-message-push-go.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-wechat-work-message-push-go.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + email]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-email.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-email.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
