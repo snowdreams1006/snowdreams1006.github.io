@@ -765,7 +765,6 @@ docker run -p 80:80 -p 443:443 \
 
 ```bash
 docker run --name nginx -d -p 80:80 -p 443:443 \
-    -v ~/snowdreams1006.github.io:/usr/share/nginx/html \
     -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
     -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
     -v ~/nginx/logs:/var/log/nginx \
@@ -774,21 +773,6 @@ docker run --name nginx -d -p 80:80 -p 443:443 \
     nginx    
 ```
 
-```bash
-docker run --name nginx -d -p 80:80 -p 443:443 \
-    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
-    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
-    -v ~/nginx/logs:/var/log/nginx \
-    -v /etc/letsencrypt:/etc/letsencrypt \
-    -v /etc/ssl:/etc/ssl \
-    nginx    
-```
-
-```bash
-docker run --name blog -d -p 4000:80 \
-    -v ~/snowdreams1006.github.io:/usr/share/nginx/html \
-    nginx    
-```
 
 ## 参考文档
 

@@ -23,7 +23,7 @@ jobs:
         KEY: ${{ secrets.KEY }}
       with:
         source: _book/*
-        target: /root/snowdreams1006.github.io
+        target: /root/blog
         rm: true
         strip_components: 1
     - name: Deploy blog
