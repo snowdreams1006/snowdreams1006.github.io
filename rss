@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 28 Nov 2019 09:21:17 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 Nov 2019 09:33:19 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -735,6 +735,7 @@
         </item>
         <item>
             <title><![CDATA[docker + redis]]></title>
+            <description><![CDATA[// 注意，这个是容器运行的ip，可通过 docker inspect redis_s | grep IPAddress 查看]]></description>
             <link>https://snowdreams1006.github.io/devops/docker-redis.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-redis.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
