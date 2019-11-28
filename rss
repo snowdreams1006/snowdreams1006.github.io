@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 28 Nov 2019 06:30:41 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 Nov 2019 09:21:17 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -725,6 +725,18 @@
             <title><![CDATA[docker + mysql]]></title>
             <link>https://snowdreams1006.github.io/devops/docker-mysql.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-mysql.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + springboot]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-springboot.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-springboot.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + redis]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-redis.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-redis.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
