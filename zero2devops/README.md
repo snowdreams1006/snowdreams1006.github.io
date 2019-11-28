@@ -45,3 +45,14 @@ docker run --name blog -d -p 4000:80 --restart=always \
 	-v ~/blog:/usr/share/nginx/html \
     nginx    
 ```
+
+- mysql
+
+```bash
+docker run --name mysql -d -p 3306:3306 --restart=always \
+    -v ~/mysql/conf:/etc/mysql \
+    -v ~/mysql/logs:/var/log/mysql \
+    -v ~/mysql/data:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=123456 \
+    mysql:5.7
+```
