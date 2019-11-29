@@ -1,4 +1,4 @@
-name: snowdreams1006.tech
+name: blog
 
 on: [push]
 
@@ -23,7 +23,7 @@ jobs:
         KEY: ${{ secrets.KEY }}
       with:
         source: _book/*
-        target: /root/blog
+        target: ~/blog
         rm: true
         strip_components: 1
     - name: Deploy blog

@@ -331,7 +331,7 @@ openssl x509 -noout -dates -in /etc/letsencrypt/live/snowdreams1006.cn/cert.pem
 
 - 设置定时任务自动更新
 
-> 配置crontab，每月1好5时更新证书，并重启docker容器
+> 配置 crontab，每月1好5时更新证书，并重启docker容器
 
 ```bash
 00 01 01 * * sudo /usr/bin/certbot renew --quiet && sudo docker restart nginx
@@ -463,6 +463,7 @@ server {
     }
 }
 ```
+
 - 访问效果
 
 - https://snowdreams1006.cn/
