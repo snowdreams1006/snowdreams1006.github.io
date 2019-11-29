@@ -67,6 +67,12 @@ sudo yum -y install docker-ce
 sudo systemctl start docker
 ```
 
+- 开机自启
+
+```shell
+sudo systemctl enable docker
+```
+
 - 测试 hello-world
 
 ```shell
@@ -224,7 +230,6 @@ sudo docker run hello-world
 
 
 - docker info
-
 
 重新加载
 

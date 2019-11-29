@@ -102,6 +102,7 @@
 * [运维部署](devops/README.md)
     * [docker 环境](devops/docker-env.md)
     * [docker 操作](devops/docker-ops.md)
+    * [docker + nginx](devops/docker-nginx.md)
     * [docker + gitbook](devops/docker-gitbook.md)
     * [docker + Bark](devops/docker-bark.md)
     * [docker + py12306](devops/docker-py12306.md)
