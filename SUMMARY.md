@@ -96,7 +96,7 @@
 
 ## 运维部署
 * [从零开始搭建个人服务器](zero2devops/README.md)
-    * [登录和登出远程服务器](zero2devops/login-and-logout.md)
+    * [从登录服务器开始](zero2devops/login-and-logout.md)
     * [免费实现https访问网站](zero2devops/nginx-https.md)
     * [webhook](zero2devops/webhook.md)
 * [运维部署](devops/README.md)
@@ -111,6 +111,8 @@
     * [docker + mysql](devops/docker-mysql.md)
     * [docker + springboot](devops/docker-springboot.md)
     * [docker + redis](devops/docker-redis.md)
+    * [docker + gogs](devops/docker-gogs.md)
+    * [docker + gitlab](devops/docker-gitlab.md)
 * [工具资源](tools/README.md)
     * [给 mac 装个 vmware 虚拟机](tools/mac-install-vmware.md)
         * [给 mac 虚拟机装个 windows](tools/mac-vmware-install-windows.md)

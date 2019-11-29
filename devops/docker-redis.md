@@ -22,8 +22,9 @@ docker run --name redis -d -p 6379:6379 --restart=always \
     -v ~/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf \
     -v ~/mysql/data:/var/lib/mysql \
     -e MYSQL_ROOT_PASSWORD=123456 \
-    redis redis-server /usr/local/etc/redis/redis.conf --appendonly yes
+    redis redis-server /usr/local/etc/redis/redis.conf --appendonly yes --requirepass "redis123"
 ```
 
 - [Docker安装redis](https://www.jianshu.com/p/2f95680f21c5)
 - [Docker安装运行Redis](https://www.cnblogs.com/zhzhlong/p/9465670.html)
+- [docker启动redis并设置密码](https://blog.csdn.net/qq_35981283/article/details/80338306)
