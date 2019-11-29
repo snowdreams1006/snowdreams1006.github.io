@@ -381,6 +381,45 @@ docker restart nginx
 curl https://blog.snowdreams1006.cn
 ```
 
+```yml
+name: blog
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: "12.x"
+    - name: Build blog
+      run: |
+        npm install -g gitbook-cli
+        gitbook install
+        gitbook build 
+    - name: Upload blog
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        KEY: ${{ secrets.KEY }}
+      with:
+        source: _book/*
+        target: ~/blog
+        rm: true
+        strip_components: 1
+    - name: Deploy blog
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        script: |
+          docker restart blog
+```
+
 
 
 - [Nginx部署 Let’s Encrypt时报错：Another instance of Certbot is already running](http://lininn.cn/?post=297)

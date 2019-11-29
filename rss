@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 28 Nov 2019 09:33:19 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 29 Nov 2019 05:20:05 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -645,7 +645,7 @@
         </item>
         <item>
             <title><![CDATA[登录和登出远程服务器]]></title>
-            <description><![CDATA[示例:]]></description>
+            <description><![CDATA[远程连接->连接密码->用户名/密码]]></description>
             <link>https://snowdreams1006.github.io/zero2devops/login-and-logout.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/login-and-logout.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
@@ -682,6 +682,18 @@
             <description><![CDATA[sudo docker logs -f -t --tail 10 s12]]></description>
             <link>https://snowdreams1006.github.io/devops/docker-ops.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-ops.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + nginx]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-nginx.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-nginx.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + blog]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-blog.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-blog.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -738,6 +750,18 @@
             <description><![CDATA[// 注意，这个是容器运行的ip，可通过 docker inspect redis_s | grep IPAddress 查看]]></description>
             <link>https://snowdreams1006.github.io/devops/docker-redis.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-redis.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + gogs]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-gogs.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gogs.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + gitlab]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-gitlab.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitlab.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
