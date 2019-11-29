@@ -340,3 +340,138 @@ curl -i -X GET \
 ```bash
 curl https://webhook.snowdreams1006.cn/hooks/query
 ```
+
+```json
+[
+  {
+    "id": "query",
+    "execute-command": "/etc/webhook/query.sh",
+    "command-working-directory": "/etc/webhook",
+    "response-message": "webhook.snowdreams1006.cn received successfully!",
+    "pass-arguments-to-command":
+    [
+      {
+        "source": "url",
+        "name": "title"
+      },
+      {
+        "source": "url",
+        "name": "body"
+      }
+    ]
+  },
+  {
+    "id": "github",
+    "execute-command": "/etc/webhook/github.sh",
+    "command-working-directory": "/etc/webhook",
+    "pass-arguments-to-command":
+    [
+      {
+        "source": "payload",
+        "name": "head_commit.id"
+      },
+      {
+        "source": "payload",
+        "name": "pusher.name"
+      },
+      {
+        "source": "payload",
+        "name": "pusher.email"
+      }
+    ],
+    "trigger-rule":
+    {
+      "and":
+      [
+        {
+          "match":
+          {
+            "type": "payload-hash-sha1",
+            "secret": "blog.snowdreams1006.cn",
+            "parameter":
+            {
+              "source": "header",
+              "name": "X-Hub-Signature"
+            }
+          }
+        },
+        {
+          "match":
+          {
+            "type": "value",
+            "value": "refs/heads/master",
+            "parameter":
+            {
+              "source": "payload",
+              "name": "ref"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
+```
+
+```bash
+#! /bin/sh
+
+title=$1
+body=$2
+
+echo "title=${title},body=${body}"
+
+curl -i -X GET \
+ "https://bark.snowdreams1006.cn/DtuwQJ6JYWD5CX3hCtwKnd/${title}/${body}?automaticallyCopy=1&copy=${body}"
+
+curl -i -X GET \
+ "https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=${title}---$(uuidgen)&desp=${body}"
+```
+
+```bash
+#! /bin/sh
+
+title="雪之梦技术驿站博客更新啦!"
+body="Github发来了贺电,雪之梦技术驿站博客更新啦!"
+
+echo "title=${title} body=${body}"
+
+curl -i -X GET \
+ "https://bark.snowdreams1006.cn/DtuwQJ6JYWD5CX3hCtwKnd/${title}/${body}?automaticallyCopy=1&copy=${body}&url=https://blog.snowdreams1006.cn/"
+
+curl -i -X GET \
+ "https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=${title}---$(uuidgen)&desp=${body}"
+```
+
+```bash
+#! /bin/sh
+
+title="雪之梦技术驿站博客更新啦!"
+body="Github发来了贺电,雪之梦技术驿站博客更新啦!"
+
+echo "title=${title} body=${body}"
+
+curl -i -X GET \
+ "https://bark.snowdreams1006.cn/DtuwQJ6JYWD5CX3hCtwKnd/${title}/${body}?automaticallyCopy=1&copy=${body}&url=https://blog.snowdreams1006.cn/"
+
+curl -i -X GET \
+ "https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=${title}---$(uuidgen)&desp=${body}"
+```
+
+```bash
+#! /bin/sh
+
+leftDays=$((($(date +%s -d '20191215') - $(date +%s ))/86400))
+title="跳跳真的快要来了!"
+body="现在距离接驾日期还剩${leftDays}天,您真的准备好了吗?"
+
+echo "title=${title} body=${body}"
+
+curl -i -X GET \
+ "https://bark.snowdreams1006.cn/DtuwQJ6JYWD5CX3hCtwKnd/${title}/${body}?automaticallyCopy=1&copy=${body}&url=https://blog.snowdreams1006.cn/"
+
+curl -i -X GET \
+ "https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=${title}---$(uuidgen)&desp=${body}"
+```
+
+> [https://github.com/adnanh/webhook](https://github.com/adnanh/webhook)

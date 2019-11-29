@@ -104,6 +104,7 @@
     * [docker 操作](devops/docker-ops.md)
     * [docker + nginx](devops/docker-nginx.md)
     * [docker + blog](devops/docker-blog.md)
+    * [docker + resume](devops/docker-resume.md)
     * [docker + gitbook](devops/docker-gitbook.md)
     * [docker + Bark](devops/docker-bark.md)
     * [docker + py12306](devops/docker-py12306.md)
@@ -140,6 +141,7 @@
 ## 程序人生
 * [晚安](greet/README.md)
 * [其他](other/README.md)
+    * [倒计时提醒](other/reminder.md)
     * [转型之路](other/transformation.md)
     * [历史统计](other/static.md)
     * [关于作者](other/me.md)
