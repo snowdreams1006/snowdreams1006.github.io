@@ -2,7 +2,9 @@
 
 双 11 期间入手了一台云服务器,备案花了一两个星期,这两天终于备案通过了.于是在个人服务器上装了 `Docker` 容器用于部署项目,准备尽量把所有的服务都打包成容器,方便统一管理运维.
 
-千里之行始于足下,一切还要从登录登出远程服务器开始,本文基于 `Centos7.6` 环境,不保证其他环境正常.
+于是利用 `docker` 搭建了 `nginx` 作为反向代理服务器,负责请求分发,用 `nginx` 部署静态博客,用 `mysql` 暴露给个人项目使用...
+
+但是千里之行始于足下,一切还要从登录登出远程服务器开始,本文基于 `Centos7.6` 环境,不保证其他环境正常.
 
 ## 环境准备
 
@@ -506,7 +508,7 @@ $ ssh <主机 id>
 
 > `ssh snowdreams1006.cn`
 
-## 参考文档
+## 阅读更多
 
 - [CentOS下开启SSH Server服务](https://www.cnblogs.com/DiDiao-Liang/articles/8283686.html)
 - [linux 远程连接ssh提示IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY解决](https://blog.csdn.net/watsy/article/details/12611919)
