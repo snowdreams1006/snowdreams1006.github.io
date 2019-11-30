@@ -40,7 +40,15 @@
 
 > `Github` 仓库内容更新后触发 `Github Action` 自动构建并部署远程服务器静态博客,同时发送的 `Webhook` 事件给 `webhook` 钩子容器,紧接着调用 `bark` 消息推送容器,实现消息推送到微信消息以及 app 通知.
 
-![docker-snowdreams1006.cn-blog-whole-preview.png](./images/docker-snowdreams1006.cn-blog-whole-preview.png)
+![docker-snowdreams1006.cn-blog-action-preview.png](./images/docker-snowdreams1006.cn-blog-action-preview.png)
+
+> `Github` 仓库更新后自动运行 `Github Action` 源码构建静态博客并上传到远程服务器,`blog` 容器会立即重启完成内容更新.
+
+![docker-snowdreams1006.cn-blog-notice-preview.jpeg](./images/docker-snowdreams1006.cn-blog-notice-preview.jpeg)
+
+> `Github` 仓库更新后发送 `Webhooks` 到远程服务器,`webhook` 容器接收到请求后转发给 `bark` 容器,进而推送给手机.
+
+无论是熟悉的开源项目还是陌生的开源项目,`Docker` 让这些不一样变得一样,统一的管理方式使得使用成本大大降低,更加优雅地部署项目不止是说说而已!
 
 ## 前提条件
 
@@ -697,6 +705,97 @@ Run 'docker COMMAND --help' for more information on a command.
 那么问题来了,如果给你一个集装箱,你能安全快速运输到目的地吗?如果你手头上已经有一批货需要这种集装箱服务,如何快速封装成集装箱呢?
 
 对于第一个问题,本文已经给出答案,那就是 `docker` + `docker COMMAND --help` 查询支持的命令以及查看命令的帮助文档.
+
+```bash
+[root@snowdreams1006 ~]# docker
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  engine      Manage the docker engine
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+```
 
 对于第二个问题,请先预习 `docker` 相关命令,下一次将实例分享如何使用 `docker` 运输集装箱,感谢你的阅读!
  
