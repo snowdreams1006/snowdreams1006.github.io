@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 30 Nov 2019 03:11:38 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 Nov 2019 09:36:51 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -645,7 +645,7 @@
         </item>
         <item>
             <title><![CDATA[登录和登出远程服务器]]></title>
-            <description><![CDATA[远程连接->连接密码->用户名/密码]]></description>
+            <description><![CDATA[双 11 期间入手了一台云服务器,备案花了一两个星期,这两天终于备案通过了.于是在个人服务器上装了 Docker 容器用于部署项目,准备尽量把所有的服务都打包成容器,方便统一管理运维.]]></description>
             <link>https://snowdreams1006.github.io/zero2devops/login-and-logout.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/login-and-logout.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
