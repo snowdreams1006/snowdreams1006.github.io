@@ -98,6 +98,7 @@
     * [常见问题](go/issue/faq.md)
 
 ## 运维部署
+* 个人博客
 * [运维部署](devops/README.md)
     * [docker 环境](devops/docker-env.md)
     * [docker 操作](devops/docker-ops.md)
