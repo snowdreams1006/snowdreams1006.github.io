@@ -100,9 +100,11 @@ systemctl disable sshd
 
 针对立即购买服务器的小伙伴,请私信联系我,用我的推广链接购买,你有优惠,我有分成,何乐而不为呢?
 
+> [我要购买云服务器](https://webhook.snowdreams1006.cn/hooks/query?title=有人打算购买云服务器啦&body=赶紧去查一下阿里云服务器购买链接私信告诉他/她!),最好还是留言或者私信告诉我!
+
 针对免费安装虚拟机体验的用户,可以根据自己的操作系统,参考以下推文进行安装,有问题也可以联系我!
 
-#### `Window` 用户
+> [我想安装虚拟机](https://webhook.snowdreams1006.cn/hooks/query?title=有人想要安装虚拟机&body=赶紧去查一下虚拟机安装教程!),最好还是留言或者私信告诉我!
 
 - [给你的计算机一种全新的体验](https://mp.weixin.qq.com/s/7_ZxBsxlMoCIr-Qcw1G8Qg)
 
@@ -111,8 +113,6 @@ systemctl disable sshd
 - [给 windows 虚拟机装个 centos](https://mp.weixin.qq.com/s/7_ZxBsxlMoCIr-Qcw1G8Qg)
 
 > 在 `Windows` 电脑已经装好 `VMware`虚拟机的基础上,装个 `Centos` 镜像就拥有了自己的 `Centos` 服务器.
-
-#### `Mac` 用户
 
 - [工具资源系列之给mac装个虚拟机](https://mp.weixin.qq.com/s/ToXjx06xlehHpsCcfOWliw)
 
