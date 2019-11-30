@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 29 Nov 2019 05:20:05 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 Nov 2019 01:21:20 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -697,6 +697,12 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[docker + resume]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-resume.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-resume.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[docker + gitbook]]></title>
             <link>https://snowdreams1006.github.io/devops/docker-gitbook.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitbook.html</guid>
@@ -762,6 +768,12 @@
             <title><![CDATA[docker + gitlab]]></title>
             <link>https://snowdreams1006.github.io/devops/docker-gitlab.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitlab.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + gitea]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-gitea.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitea.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -1029,6 +1041,12 @@
             <title><![CDATA[其他]]></title>
             <link>https://snowdreams1006.github.io/other/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[倒计时提醒]]></title>
+            <link>https://snowdreams1006.github.io/other/reminder.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/other/reminder.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
