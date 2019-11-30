@@ -10,47 +10,47 @@
 
 > 体验地址: [https://snowdreams1006.cn/](https://snowdreams1006.cn/)
 
-![docker-snowdreams1006.cn-nginx-https-preview.png](./images/docker-snowdreams1006.cn-nginx-https-preview.png)
+![docker-snowdreams1006.cn-nginx-https-preview.png](https://tva1.sinaimg.cn/large/006tNbRwly1g9gkpatkbaj31du0u0ajk.jpg)
 
 - `Docker` 部署的 `letsencrypt` **免费制作泛域名证书**并整合反向代理服务 `nginx` 实现 `https` 访问.
 
 > 体验地址: [https://www.snowdreams1006.cn/](https://www.snowdreams1006.cn/)
 
-![docker-snowdreams1006.cn-letsencrypt-https-preview.png](./images/docker-snowdreams1006.cn-letsencrypt-https-preview.png)
+![docker-snowdreams1006.cn-letsencrypt-https-preview.png](https://tva1.sinaimg.cn/large/006tNbRwly1g9gkp3wm1xj30qw0lo0vf.jpg)
 
 - `Docker` 部署的 `nginx` 作为静态服务器,部署**静态网站**用于演示静态博客功能.
 
 > 体验地址: [https://resume.snowdreams1006.cn/](https://resume.snowdreams1006.cn/)
 
-![docker-snowdreams1006.cn-nginx-static-preview.png](./images/docker-snowdreams1006.cn-nginx-static-preview.png)
+![docker-snowdreams1006.cn-nginx-static-preview.png](https://tva1.sinaimg.cn/large/006tNbRwly1g9gkpszn8aj31g30u0qgd.jpg)
 
 - `Docker` 部署的 `bark` 作为后端服务器,部署开源项目用于充当**消息推送**服务器.
 
 > 体验地址: [https://bark.snowdreams1006.cn/ping](https://bark.snowdreams1006.cn/ping)
 
-![docker-snowdreams1006.cn-bark-go-preview.png](./images/docker-snowdreams1006.cn-bark-go-preview.png)
+![docker-snowdreams1006.cn-bark-go-preview.png](https://tva1.sinaimg.cn/large/006tNbRwly1g9gkp7o3o6j31yq07imz7.jpg)
 
 - `Docker` 部署的 `webhook` 作为后端服务器,部署开源项目用于接收 `Webhook` 事件回调.
 
 > 体验地址: [https://webhook.snowdreams1006.cn/hooks/github](https://webhook.snowdreams1006.cn/hooks/github)
 
-![docker-snowdreams1006.cn-webhook-github-preview.png](./images/docker-snowdreams1006.cn-webhook-github-preview.png)
+![docker-snowdreams1006.cn-webhook-github-preview.png](https://tva1.sinaimg.cn/large/006tNbRwly1g9gkp681djj31lp0u0qaa.jpg)
 
 - `Docker` 部署的 `blog` 作为静态服务器,基于 `Github Action` 或 `Webhook` 实现博客内容**自动更新并推送消息**.
 
 > `Github` 仓库内容更新后触发 `Github Action` 自动构建并部署远程服务器静态博客,同时发送的 `Webhook` 事件给 `webhook` 钩子容器,紧接着调用 `bark` 消息推送容器,实现消息推送到微信消息以及 app 通知.
 
-![docker-snowdreams1006.cn-blog-action-preview.png](./images/docker-snowdreams1006.cn-blog-action-preview.png)
+![docker-snowdreams1006.cn-blog-action-preview.png](https://tva1.sinaimg.cn/large/006tNbRwly1g9gkpd5kyyj31gw0u0tgr.jpg)
 
 > `Github` 仓库更新后自动运行 `Github Action` 源码构建静态博客并上传到远程服务器,`blog` 容器会立即重启完成内容更新.
 
-![docker-snowdreams1006.cn-blog-notice-preview.jpeg](./images/docker-snowdreams1006.cn-blog-notice-preview.jpeg)
+![docker-snowdreams1006.cn-blog-notice-preview.jpeg](https://tva1.sinaimg.cn/large/006tNbRwly1g9gkpfp8ksj30u01hcwr6.jpg)
 
 > `Github` 仓库更新后发送 `Webhooks` 到远程服务器,`webhook` 容器接收到请求后转发给 `bark` 容器,进而推送给手机.
 
 无论是熟悉的开源项目还是陌生的开源项目,**`Docker` 让这些不一样变得一样**,统一的管理方式使得使用成本大大降低,更加优雅地部署项目,真的不止是说说而已!
 
-![docker-logo-whale.jpg](./images/docker-logo-whale.jpg)
+![docker-logo-whale.jpg](https://tva1.sinaimg.cn/large/006tNbRwly1g9gkp71as4j30go0evmxx.jpg)
 
 ## 前提条件
 

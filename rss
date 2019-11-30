@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 30 Nov 2019 13:10:49 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 Nov 2019 17:34:39 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -652,7 +652,7 @@
         </item>
         <item>
             <title><![CDATA[更好的部署方式]]></title>
-            <description><![CDATA[ Docker 官方文档, CentOS 官方安装文档.]]></description>
+            <description><![CDATA[如果你需要经常性需要多处部署同样的项目,如果你曾经也遇到过"明明在我电脑运行得好好的"问题,如果听说过 Docker 但还没用过,如果你不确定你到底需不需要 Docker ,那么,希望你花时间阅读一下这篇文章!]]></description>
             <link>https://snowdreams1006.github.io/zero2devops/docker.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/docker.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
