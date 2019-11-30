@@ -345,6 +345,8 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4Iupo
 
 本地客户端将自己的公钥文件内容追加到远程服务器的授权文件中就能完成免密登录,那么问题来了,公钥文件保存在哪呢?
 
+答案是: `~/.ssh/authorized_keys`
+
 ```
 [root@snowdreams1006 ~]# cat ~/.ssh/authorized_keys 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4IupoSLQKkdUJVxSfkmL5JZEkr7JNySD7Y52ukRcxx1ZMW0oK7lq+FvfEwzIfAOqVoM4bCoh2D/iC6Xf43ilxCM6oMhpWyITGtxPVzW/ZmmxRGcQzeVrrvoSLhOt0+L0rvFuiQZmnhkV0zqGTRKTQ5uEKycigfdItEaHFIg9fMxugN/bgeflJoEBZjAJHXkqd0mq/4AqeAbkoruEz6D+OiqBhoN8CsbaPCaccMoKd8Tze5UszC3PsQWo96nQoXMXk7HYoFwvJCAgAfKP0CaTwGEK/D7SFvXm3UMlFwAHxELr2bbTv snowdreams1006@163.com
@@ -352,52 +354,69 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4Iupo
 
 这里可以看出,远程服务器的 `~/.ssh/authorized_keys` 内容包含了本地客户端的 `~/.ssh/id_rsa.pub` 公钥内容.
 
+所以接下来的动作就是复制粘贴的操作,复制本地客户端的 `~/.ssh/id_rsa.pub` 公钥文件内容,粘贴到远程服务器的 `~/.ssh/authorized_keys` 文件中.
 
+只不过这里需要用到 `vim` 操作,这也是对于新手来说唯一的挑战了,但是我们还有神器来简化这种复制粘贴操作!
 
-- 密码登录
+那就是: `ssh-copy-id root@snowdreams1006.cn`
 
-> 直接登录
-
-```bash
-$ ssh <登录账号>@<服务器公网 ip>
-```
-
-> `ssh root@snowdreams1006.cn`
-
-> 禁用密码登录
-
-> `/etc/ssh/ssh_config`
-
-```config
-Host *
-  PasswordAuthentication no
-```
-
-- 密钥登录
+首先确保本地客户端已经生成公钥,这里查看一下公钥文件的内容: `cat ~/.ssh/id_rsa.pub`
 
 ```bash
-$ ssh-keygen -t rsa
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1UGGBXbqINEfQNCweCOWDlqvRfw3iIqkX9UnI71GgyJkkPUZbycw3L4dVeBkpo76OJjJhJmsAGbHAuhYLloqoNjD9+c/hk7vgP0uZHqVXehqKuP5VvOOkqeLXZkjdXQ49MhARHBVm1LaD44iOOneYclSPiRjKs+6eCxU9SQp+dVUcZMrbAE1lktGgDQEkjtFl8BE9BQkCU24r8xcOUix4iZgdDIa5gnE9YLg1rNXO6LgQG61JLvErrc2g7KkkR4i2P1R+0uV3KdYyMv8Y2aYwYGqY1PjqXUVfaJjTor4Dr8HHBp4VHE3kNVZitLJ2S7RFYuYGFXTEX0xmi6o1r5xP Administrator@snowdreams1006
 ```
+
+这里是 `Windows` 电脑,演示前并没有配置免密登录,所以执行完 `ssh-copy-id root@snowdreams1006.cn` 应该也像 `Mac` 电脑一样支持免密登录.
+ 
+```
+$ ssh-copy-id root@snowdreams1006.cn
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/c/Users/Administrator/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@snowdreams1006.cn's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'root@snowdreams1006.cn'"
+and check to make sure that only the key(s) you wanted were added.
+```
+
+这里接着用已经免密登录到远程服务器的 `Mac` 电脑验证一下,`Windows` 电脑的公钥是否已经添加到远程服务器的 `~/.ssh/authorized_keys` .
 
 ```bash
-$ ssh-copy-id <登录账号>@<服务器公网 ip>
+[root@snowdreams1006 ~]# cat ~/.ssh/authorized_keys 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4IupoSLQKkdUJVxSfkmL5JZEkr7JNySD7Y52ukRcxx1ZMW0oK7lq+FvfEwzIfAOqVoM4bCoh2D/iC6Xf43ilxCM6oMhpWyITGtxPVzW/ZmmxRGcQzeVrrvoSLhOt0+L0rvFuiQZmnhkV0zqGTRKTQ5uEKycigfdItEaHFIg9fMxugN/bgeflJoEBZjAJHXkqd0mq/4AqeAbkoruEz6D+OiqBhoN8CsbaPCaccMoKd8Tze5UszC3PsQWo96nQoXMXk7HYoFwvJCAgAfKP0CaTwGEK/D7SFvXm3UMlFwAHxELr2bbTv snowdreams1006@163.com
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1UGGBXbqINEfQNCweCOWDlqvRfw3iIqkX9UnI71GgyJkkPUZbycw3L4dVeBkpo76OJjJhJmsAGbHAuhYLloqoNjD9+c/hk7vgP0uZHqVXehqKuP5VvOOkqeLXZkjdXQ49MhARHBVm1LaD44iOOneYclSPiRjKs+6eCxU9SQp+dVUcZMrbAE1lktGgDQEkjtFl8BE9BQkCU24r8xcOUix4iZgdDIa5gnE9YLg1rNXO6LgQG61JLvErrc2g7KkkR4i2P1R+0uV3KdYyMv8Y2aYwYGqY1PjqXUVfaJjTor4Dr8HHBp4VHE3kNVZitLJ2S7RFYuYGFXTEX0xmi6o1r5xP Administrator@snowdreams1006
 ```
 
-> `ssh-copy-id root@snowdreams1006.cn`
+可以看到,远程服务器已经保存了 `Windows` 电脑刚刚上传的公钥文件内容,所以说 `ssh-copy-id` 简直就是神器,再也不用手动复制粘贴公钥了!
 
-```bash
-$ ssh <登录账号>@<服务器公网 ip>
-```
+至于登陆后可以做什么,我想你还是可以到此一游,顺便再踢出其他终端之类的,最后别忘了退出登录 `exit` 命令哟!
 
-> `ssh root@snowdreams1006.cn`
+### 别名登录
 
-- 简化登录
+无论是密码登录还是密钥登录,我们都是采用 `ssh` 协议进行登录,而密钥登录的配置也是依赖于密码登录,不管怎么说,两者敲入的命令都不少!
 
-```
+怎不能快速登录呢?
+
+答案是: 可以的!
+
+既然想要快速登录,但是登录信息肯定是必不可少的,所以无外乎是将必要的登录信息写到配置文件中,登录时再读取配置文件进行登录.
+
+原理很好理解,关键是实现过程需要我们自己去实现么?
+
+幸运的是: 不需要!
+
+同样地,编辑 `ssh` 的配置文件设置一些登录信息即可,配置文件的位于 `~/.ssh/config` .
+
+```conf
 Host <主机 id>
 User <登录账号>
 HostName <主机名称>
 ```
+
+按照上述格式,将登录信息配置如下:
 
 ```
 Host github.com
@@ -409,18 +428,79 @@ User root
 Hostname ssh.snowdreams1006.cn
 ```
 
+其中 `Host` 是对外暴露的唯一标识,通过 `Host` 就可以代替账号和 ip 了,两个变成一个是不是简化了呢?
+
+原来的登录命令是 `ssh <登录账号>@<服务器公网 ip>` 而现在则是 `ssh <主机 id>`
+
+```bash
+$ ssh snowdreams1006.cn
+Last login: **** from *.*.*.*
+
+Welcome to Alibaba Cloud Elastic Compute Service !
+
+[root@snowdreams1006 ~]# 
+```
+
+## 图形化登录
+
+推荐 `SecureCRT` 图形化工具远程连接 `Linux`  实例,图形化工具基本上很容易上手,配置一下就可以登录成功了,这里已 `Windows` 电脑为例演示一下相关过程.
+
+首次登录后会弹出快速连接配置,基本上是关于服务域名端口之类的,并没有密码的配置项.
+
+![login-and-logout-securecrt-quick-connect-preview.png](./images/login-and-logout-securecrt-quick-connect-preview.png)
+
+点击连接后会弹出是否加入主机指纹之类的,选择接受并保存.
+
+![login-and-logout-securecrt-quick-connect-confirm.png](./images/login-and-logout-securecrt-quick-connect-confirm.png)
+
+输入密码后选择确定,过一会就连接到服务器了.
+
+![login-and-logout-securecrt-quick-connect-password.png](./images/login-and-logout-securecrt-quick-connect-password.png)
+
+来都来了,还是随便敲个命令再走吧!
+
+![login-and-logout-securecrt-quick-connect-whoami.png](./images/login-and-logout-securecrt-quick-connect-whoami.png)
+
+## 云服务登录
+
+登录控制台找到 `ECS 服务器` ,然后找到自己的云服务器,因此远程连接->连接密码->用户名/密码,然后就可以登录成功了!
+
+![login-and-logout-aliyun-ecs-connect-preview.png](./images/login-and-logout-aliyun-ecs-connect-preview.png)
+
+## 回顾总结
+
+密码登录和密钥登录两者均存在适合场景,如果觉得密码登录不安全的话,也可以禁用密码登录只保留密钥登录!
+
+远程登录到服务器,找到 `/etc/ssh/ssh_config` 文件并编辑如下内容来禁用密码登录.
+
+```config
+Host *
+  PasswordAuthentication no
+```
+
+- 密码登录
+
+```bash
+$ ssh <登录账号>@<服务器公网 ip>
+```
+
+> `ssh root@snowdreams1006.cn`
+
+- 密钥登录
+
+```bash
+$ ssh <登录账号>@<服务器公网 ip>
+```
+
+> `ssh root@snowdreams1006.cn`
+
+- 简化登录
+
 ```bash
 $ ssh <主机 id>
 ```
 
 > `ssh snowdreams1006.cn`
-
-## 图形化登录
-
-
-## 云服务登录
-
-远程连接->连接密码->用户名/密码
 
 ## 参考文档
 
@@ -431,4 +511,5 @@ $ ssh <主机 id>
 - [服务器快速免密ssh登录配置](https://juejin.im/post/5da724506fb9a04e2a73d96c)
 - [linux 信息查看及命令](https://juejin.im/post/5dad7681f265da5bb86ad2f5)
 - [linux下踢出已登录用户](https://blog.csdn.net/wzzfeitian/article/details/9321027)
-
+- [Mac安装SecureCRT](https://www.jianshu.com/p/983f2f226579)
+- [SecureCRT 8.1.4 破解教程](https://www.jianshu.com/p/2bfd1fbf31bc)
