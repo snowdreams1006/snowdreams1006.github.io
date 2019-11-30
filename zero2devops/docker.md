@@ -318,155 +318,173 @@ For more examples and ideas, visit:
 
 ## 卸载 docker
 
-```shell
+假如发现意外想要重新安装 `Docker` 服务或者就是想要卸载 `Docker` ,那么只需要简单运行下列命令就能清除掉 `Docker` 环境!
+
+```bash
 sudo yum remove docker-ce
 sudo rm -rf /var/lib/docker
 ```
 
-## 快速安装
+此时再次运行 `docker` 命令就会提示 `command not found` ,期待下一次相见会让人焕然一新!
 
-- 安装
+## 基本命令
 
-```shell
-# step 1: 安装必要的一些系统工具
-sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+正如初次见面的那样,当我们成功安装 `Docker` 后控制台输出了一大堆关于用法的介绍,只不过当时年少轻狂并不在乎,蓦然回首,竟发现如此有用!
 
-# Step 2: 添加软件源信息
-sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+```bash
+[root@snowdreams1006 ~]# docker
 
-# Step 3: 更新并安装Docker-CE
-sudo yum makecache fast
-sudo yum -y install docker-ce
+Usage:	docker [OPTIONS] COMMAND
 
-# Step 4: 开启Docker服务
-sudo service docker start
+A self-sufficient runtime for containers
 
-# 注意：
-# 官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源置为可用，您可以通过以下方式开启。同理可以开启各种测试版本等。
-# vim /etc/yum.repos.d/docker-ee.repo
-#   将[docker-ce-test]下方的enabled=0修改为enabled=1
-#
-# 安装指定版本的Docker-CE:
-# Step 1: 查找Docker-CE的版本:
-# yum list docker-ce.x86_64 --showduplicates | sort -r
-#   Loading mirror speeds from cached hostfile
-#   Loaded plugins: branch, fastestmirror, langpacks
-#   docker-ce.x86_64            17.03.1.ce-1.el7.centos            docker-ce-stable
-#   docker-ce.x86_64            17.03.1.ce-1.el7.centos            @docker-ce-stable
-#   docker-ce.x86_64            17.03.0.ce-1.el7.centos            docker-ce-stable
-#   Available Packages
-# Step2: 安装指定版本的Docker-CE: (VERSION例如上面的17.03.0.ce.1-1.el7.centos)
-# sudo yum -y install docker-ce-[VERSION]
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  engine      Manage the docker engine
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
 ```
 
-- 验证
+### 自我介绍
 
-```shell
-docker version
+用法介绍的第一段就是自我介绍,用法是: `docker [OPTIONS] COMMAND` ,即 `docker + 可选选项 + 必选命令`.
+
+表示的含义就是 `A self-sufficient runtime for containers` 为容器提供一个自包含的运行环境!
+
+``` bash
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
 ```
 
-## 安装记录
+`Docker` 类似于生活中超级货轮,运输着统一规格的集装箱,而集装箱装着各种各样的货物,开往不同的目的地.
 
-- 卸载旧版本
+容器则是集装箱,货轮为集装箱提供了自包含的环境,集装箱之间是相互独立的,这也是对第一段话的简单解释.
 
-```shell
-[root@iZbp19ryeo103foh7nc3rmZ ~]# sudo yum remove docker \
-                   docker-client \
-                   docker-client-latest \
-                   docker-common \
-                   docker-latest \
-                   docker-latest-logrotate \
-                   docker-logrotate \
-                   docker-engine
+### 选项配置
+
+下面我们继续看第二段内容,主要解释了有哪些配置项以及这些配置项背后表示的具体含义.
+
+```bash
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
 ```
 
-- 安装必要软件
+只要有一定英语基础的人应该都能看懂其中的意思,如果对个人细节不是很清楚的话,可以复制粘贴到浏览器在线翻译,这里就不全文解释了.
 
-```shell
-sudo yum install -y yum-utils \
-  device-mapper-persistent-data \
-  lvm2
+不消息看到了最后一个 `-v, --version` 选项,表示的意思是打印版本信息并且退出.
+
+看到这里我们就明白了,原来之前运行的 `docker version` 和这里的 `--version` 并不是一回事啊!
+
+```bash
+[root@snowdreams1006 ~]# docker -v
+Docker version 19.03.5, build 633a0ea
+[root@snowdreams1006 ~]# docker --version
+Docker version 19.03.5, build 633a0ea
 ```
 
-- 添加软件源
+单纯从输出结果来说,`docker --version` 更加简洁,如果只是验证环境安装是否成功,还是运行`docker --version` 比较简单明了.
 
-官方源
-
-```
-sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-```
-
-阿里源
-
-```
-sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
-```
-
-- 更新缓存
-
-```shell
-sudo yum makecache fast
-```
-
-- 安装 docker-ce
-
-```shell
-sudo yum install -y docker-ce docker-ce-cli containerd.io
+```bash
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  engine      Manage the docker engine
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
 ```
 
-- docker 版本
 
-```shell
-docker version
-```
-
-- 启动 docker
-
-```shell
-sudo systemctl start docker
-```
-
-- 查看状态
-
-```shell
-sudo systemctl status docker
-```
-
-- 测试 docker
-
-```shell
-sudo docker run hello-world
-```
-
-- 镜像加速
-
-针对Docker客户端版本大于 1.10.0 的用户
-
-> `/etc/docker/daemon.json`
-
-阿里私人镜像地址:
-
-例如：
-公网Mirror：[系统分配前缀].mirror.aliyuncs.com
-
-> `https://8upnmlh3.mirror.aliyuncs.com`
-
-
-- docker info
-
-重新加载
-
-```shell
-systemctl daemon-reload
-```
-
-重启 docker
-
-```
-sudo systemctl restart docker
-```
 
 ## 参考资料
 
