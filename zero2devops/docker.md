@@ -1,30 +1,30 @@
 # 更好的部署方式
 
-如果你需要经常性不止一处地部署同样的项目,如果你曾经也遇到过"明明在我电脑运行得好好的"问题,如果听说过 `Docker` 但还没用过,如果你不确定你到底需不需要 `Docker` ,那么,希望你花时间阅读一下这篇文章!
+如果你需要**经常性**需要多处部署同样的项目,如果你曾经也遇到过"***明明在我电脑运行得好好的***"问题,如果听说过 `Docker` 但还没用过,如果你不确定你到底需不需要 `Docker` ,那么,**希望你花时间阅读一下这篇文章**!
 
-因为 `Docker` 将帮助你轻松运行自己不熟悉语言编写的开源项目,帮助你更加优雅简单部署自己的项目,帮助你省去重复的下载环境配置环境的繁琐过程...
+因为 `Docker` 将帮助你轻松运行自己不熟悉语言编写的开源项目,帮助你更加优雅地部署自己的项目,省去重复下载并配置环境的繁琐过程...
 
-让我们先睹为快,预览一下基于 `Docker` 部署项目的实际效果,对 `Docker` 实现的大致效果有个直观印象.
+现在让我们先睹为快,预览一下基于 `Docker` 部署项目的实际效果,希望能让你对 `Docker` 有个初步的印象!
 
-- `Docker` 部署的 `nginx` 作为反向代理服务器,支持 `https` 访问以及泛域名解析.
+- `Docker` 部署的 `nginx` 作为**反向代理**服务器,支持 `https` 访问以及**泛域名**解析.
 
 > 体验地址: [https://snowdreams1006.cn/](https://snowdreams1006.cn/)
 
 ![docker-snowdreams1006.cn-nginx-https-preview.png](./images/docker-snowdreams1006.cn-nginx-https-preview.png)
 
-- `Docker` 部署的 `letsencrypt` 免费制作泛域名证书并整合反向代理服务 `nginx` 实现 `https` 访问.
+- `Docker` 部署的 `letsencrypt` **免费制作泛域名证书**并整合反向代理服务 `nginx` 实现 `https` 访问.
 
 > 体验地址: [https://www.snowdreams1006.cn/](https://www.snowdreams1006.cn/)
 
 ![docker-snowdreams1006.cn-letsencrypt-https-preview.png](./images/docker-snowdreams1006.cn-letsencrypt-https-preview.png)
 
-- `Docker` 部署的 `nginx` 作为静态服务器,部署静态网站用于演示静态博客功能.
+- `Docker` 部署的 `nginx` 作为静态服务器,部署**静态网站**用于演示静态博客功能.
 
 > 体验地址: [https://resume.snowdreams1006.cn/](https://resume.snowdreams1006.cn/)
 
 ![docker-snowdreams1006.cn-nginx-static-preview.png](./images/docker-snowdreams1006.cn-nginx-static-preview.png)
 
-- `Docker` 部署的 `bark` 作为后端服务器,部署开源项目用于充当消息推送服务器.
+- `Docker` 部署的 `bark` 作为后端服务器,部署开源项目用于充当**消息推送**服务器.
 
 > 体验地址: [https://bark.snowdreams1006.cn/ping](https://bark.snowdreams1006.cn/ping)
 
@@ -36,7 +36,7 @@
 
 ![docker-snowdreams1006.cn-webhook-github-preview.png](./images/docker-snowdreams1006.cn-webhook-github-preview.png)
 
-- `Docker` 部署的 `blog` 作为静态服务器,基于 `Github Action` 或 `Webhook` 实现博客内容自动更新并推送消息通知.
+- `Docker` 部署的 `blog` 作为静态服务器,基于 `Github Action` 或 `Webhook` 实现博客内容**自动更新并推送消息**.
 
 > `Github` 仓库内容更新后触发 `Github Action` 自动构建并部署远程服务器静态博客,同时发送的 `Webhook` 事件给 `webhook` 钩子容器,紧接着调用 `bark` 消息推送容器,实现消息推送到微信消息以及 app 通知.
 
@@ -48,7 +48,9 @@
 
 > `Github` 仓库更新后发送 `Webhooks` 到远程服务器,`webhook` 容器接收到请求后转发给 `bark` 容器,进而推送给手机.
 
-无论是熟悉的开源项目还是陌生的开源项目,`Docker` 让这些不一样变得一样,统一的管理方式使得使用成本大大降低,更加优雅地部署项目不止是说说而已!
+无论是熟悉的开源项目还是陌生的开源项目,**`Docker` 让这些不一样变得一样**,统一的管理方式使得使用成本大大降低,更加优雅地部署项目,真的不止是说说而已!
+
+![docker-logo-whale.jpg](./images/docker-logo-whale.jpg)
 
 ## 前提条件
 
@@ -59,7 +61,7 @@
 - Fedora : 24、25
 - Ubuntu : 16.04(Xenial LTS)、14.04(Trusty LTS)、17.04(Zesty)
 
-上述前提条件基本上新服务器都满足要求,并未深入实验,可以自行验证,下面主要以 `Centos7.6` 为例讲解如何安装 `Docker` .
+一方面上述前提条件基本上新服务器都会满足,另一方面笔者对此并未深入实验,请读者自行验证,下面主要以 `Centos7.6` 为例讲解如何安装 `Docker` .
 
 ## 验证环境
 
@@ -67,9 +69,9 @@
 
 - 调用 `docker` 命令
 
-连接到远程服务器后运行 `docker` 命令,如果像下面那样输出一大堆用法介绍,那么证明 `Docker` 已经成功安装过,并且可能已经配置好相关环境了.
+首先连接到远程服务器后运行 `docker` 命令,如果像下面那样输出一大堆用法介绍,那么证明 `Docker` 已经成功安装过,并且可能已经配置好相关环境了.
 
-你现在唯一要做的就是学习一下 `Docker` 的基本用法,不能自己重头安装环境,基本上可以不必往下看了.
+你现在唯一要做的就是学习一下 `Docker` 的基本用法,因为不用自己安装 `Docker` 环境,基本上也可以不必往下看了.
 
 ```bash
 [root@snowdreams1006 ~]# docker
@@ -171,7 +173,7 @@ sudo yum remove docker \
                   docker-engine
 ```
 
-> 这一步是可选的,是因为 `Docker` 的名称发现了变化,为了保证安装的是最新版的 `Docker-CE` ,所以首先卸载可能已经安装过的旧版本.
+> 这一步是可选的,是因为最新版 `Docker` 的名称已经发生了变化,为了保证安装的是最新版的 `Docker-CE` ,所以首先卸载可能已经安装过的旧版本.
 
 2. `Step 2` : 安装必要系统依赖
 
@@ -179,7 +181,7 @@ sudo yum remove docker \
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
-> 安装一些必要依赖,跟着官方教程说明走就好了,即使系统已存在该环境也可以再次运行安装命令,放心复制粘贴吧!
+> 安装一些必要依赖,跟着官方教程说明走就好了,即使系统已存在该环境也可以再次运行,放心复制粘贴吧!
 
 3. `Step 3` : 添加软件源信息
 
@@ -347,7 +349,7 @@ For more examples and ideas, visit:
 `Github` 没有镜像加速地址并不能为我们加速访问,但是 `Docker` 项目仓库是有镜像仓库的,国内提供这种镜像服务的有不少,基本上都需要注册账号获取镜像地址之类的.
 
 这里提供一下网易的镜像仓库地址 `http://hub-mirror.c.163.com` 以及阿里云的个人镜像仓库地址 `https://8upnmlh3.mirror.aliyuncs.com` .
- 
+
 只要将镜像地址配置给 `Docker` ,下一次再下载项目时速度应该就会得到明显提升!
 
 首选打开并编辑 `/etc/docker/daemon.json` 文件,如果没有的话就新建该文件,内容如下:
@@ -798,7 +800,9 @@ Run 'docker COMMAND --help' for more information on a command.
 ```
 
 对于第二个问题,请先预习 `docker` 相关命令,下一次将实例分享如何使用 `docker` 运输集装箱,感谢你的阅读!
- 
+
+如果想要更方便地查看系列文章,欢迎访问我的网站 [https://snowdreams1006.tech/](https://snowdreams1006.tech/) 或者 [https://blog.snowdreams1006.cn/](https://blog.snowdreams1006.cn/) ,喜欢就点个赞再走呗!
+
 ## 参考资料
 
 - [Get Docker Engine - Community for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
