@@ -372,7 +372,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1UGGBXbqINEfQNCweCOWDlqvRfw3iIqkX9UnI71Gg
 ```
 
 这里是 `Windows` 电脑,演示前并没有配置免密登录,所以执行完 `ssh-copy-id root@snowdreams1006.cn` 应该也像 `Mac` 电脑一样支持免密登录.
- 
+
 ```
 $ ssh-copy-id root@snowdreams1006.cn
 /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/c/Users/Administrator/.ssh/id_rsa.pub"
@@ -455,15 +455,15 @@ Welcome to Alibaba Cloud Elastic Compute Service !
 
 点击连接后会弹出是否加入主机指纹之类的,选择接受并保存.
 
-![login-and-logout-securecrt-quick-connect-confirm.png](./images/login-and-logout-securecrt-quick-connect-confirm.png)
+![login-and-logout-securecrt-quick-connect-confirm.jpg](./images/login-and-logout-securecrt-quick-connect-confirm.jpg)
 
 输入密码后选择确定,过一会就连接到服务器了.
 
-![login-and-logout-securecrt-quick-connect-password.png](./images/login-and-logout-securecrt-quick-connect-password.png)
+![login-and-logout-securecrt-quick-connect-password.jpg](./images/login-and-logout-securecrt-quick-connect-password.jpg)
 
 来都来了,还是随便敲个命令再走吧!
 
-![login-and-logout-securecrt-quick-connect-whoami.png](./images/login-and-logout-securecrt-quick-connect-whoami.png)
+![login-and-logout-securecrt-quick-connect-whoami.jpg](./images/login-and-logout-securecrt-quick-connect-whoami.jpg)
 
 ## 云服务登录
 
