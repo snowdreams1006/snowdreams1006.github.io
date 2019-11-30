@@ -1,10 +1,46 @@
 # 更好的部署方式
 
+如果你需要经常性不止一处地部署同样的项目,如果你曾经也遇到过"明明在我电脑运行得好好的"问题,如果听说过 `Docker` 但还没用过,如果你不确定你到底需不需要 `Docker` ,那么,希望你花时间阅读一下这篇文章!
 
+因为 `Docker` 将帮助你轻松运行自己不熟悉语言编写的开源项目,帮助你更加优雅简单部署自己的项目,帮助你省去重复的下载环境配置环境的繁琐过程...
 
-[ `Docker` 官方文档](https://docs.docker.com/),[ `CentOS` 官方安装文档](https://docs.docker.com/install/linux/docker-ce/centos/).
+让我们先睹为快,预览一下基于 `Docker` 部署项目的实际效果,对 `Docker` 实现的大致效果有个直观印象.
 
-> 注意: 以下方式安装的是社区免费版 `docker-ce`
+- `Docker` 部署的 `nginx` 作为反向代理服务器,支持 `https` 访问以及泛域名解析.
+
+> 体验地址: [https://snowdreams1006.cn/](https://snowdreams1006.cn/)
+
+![docker-snowdreams1006.cn-nginx-https-preview.png](./images/docker-snowdreams1006.cn-nginx-https-preview.png)
+
+- `Docker` 部署的 `letsencrypt` 免费制作泛域名证书并整合反向代理服务 `nginx` 实现 `https` 访问.
+
+> 体验地址: [https://www.snowdreams1006.cn/](https://www.snowdreams1006.cn/)
+
+![docker-snowdreams1006.cn-letsencrypt-https-preview.png](./images/docker-snowdreams1006.cn-letsencrypt-https-preview.png)
+
+- `Docker` 部署的 `nginx` 作为静态服务器,部署静态网站用于演示静态博客功能.
+
+> 体验地址: [https://resume.snowdreams1006.cn/](https://resume.snowdreams1006.cn/)
+
+![docker-snowdreams1006.cn-nginx-static-preview.png](./images/docker-snowdreams1006.cn-nginx-static-preview.png)
+
+- `Docker` 部署的 `bark` 作为后端服务器,部署开源项目用于充当消息推送服务器.
+
+> 体验地址: [https://bark.snowdreams1006.cn/ping](https://bark.snowdreams1006.cn/ping)
+
+![docker-snowdreams1006.cn-bark-go-preview.png](./images/docker-snowdreams1006.cn-bark-go-preview.png)
+
+- `Docker` 部署的 `webhook` 作为后端服务器,部署开源项目用于接收 `Webhook` 事件回调.
+
+> 体验地址: [https://webhook.snowdreams1006.cn/hooks/github](https://webhook.snowdreams1006.cn/hooks/github)
+
+![docker-snowdreams1006.cn-webhook-github-preview.png](./images/docker-snowdreams1006.cn-webhook-github-preview.png)
+
+- `Docker` 部署的 `blog` 作为静态服务器,基于 `Github Action` 或 `Webhook` 实现博客内容自动更新并推送消息通知.
+
+> `Github` 仓库内容更新后触发 `Github Action` 自动构建并部署远程服务器静态博客,同时发送的 `Webhook` 事件给 `webhook` 钩子容器,紧接着调用 `bark` 消息推送容器,实现消息推送到微信消息以及 app 通知.
+
+![docker-snowdreams1006.cn-blog-whole-preview.png](./images/docker-snowdreams1006.cn-blog-whole-preview.png)
 
 ## 前提条件
 
@@ -464,6 +500,10 @@ Docker version 19.03.5, build 633a0ea
 
 单纯从输出结果来说,`docker --version` 更加简洁,如果只是验证环境安装是否成功,还是运行`docker --version` 比较简单明了.
 
+### 管理命令
+
+第三部分是 `Docker` 支持的管理命令,现在不去深究细节,只要有印象就行,注意这里有个关于镜像的命令 `docker image`
+
 ```bash
 Management Commands:
   builder     Manage builds
@@ -484,8 +524,182 @@ Management Commands:
   volume      Manage volumes
 ```
 
+因为自我介绍中关于用法是 `docker [OPTIONS] COMMAND` ,而中括号 `[]` 表示该内容是可选的,所以不加任何选项的基本用法就是 `docker COMMAND` ,因此其中关于 `image` 命令的完整用法就是: `docker image` .
 
+```bash
+[root@snowdreams1006 ~]# docker image
 
+Usage:	docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+```
+
+别有洞天,管理命令中还有子命令,大概用法和之前介绍的内容大致相同,基本用法是: `docker image COMMAND` .
+
+其中支持的命令中有 `ls` ,因此调用 `ls` 命令的最终完整命令就是: `docker image ls` .
+
+```bash
+# docker image ls
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+hello-world            latest              fce289e99eb9        11 months ago       1.84kB
+```
+
+服务器已安装的 `image` 中就包括我们熟悉的 `hello-world` ,至于什么是 `REPOSITORY` ,什么是 `IMAGE` 暂时也不用深究,只需要知道如何无文档使用这些命令即可!
+
+如果用心留意的话,可以看到 `Run 'docker image COMMAND --help' for more information on a command.` 这么一句话,看来我们有现成的帮助文档供我们学习啊!
+
+还是以 `ls` 命令为例,演示一下如何使用 `docker image COMMAND --help` 查看帮助文档.
+
+```bash
+[root@snowdreams1006 ~]# docker image ls --help
+
+Usage:	docker image ls [OPTIONS] [REPOSITORY[:TAG]]
+
+List images
+
+Aliases:
+  ls, images, list
+
+Options:
+  -a, --all             Show all images (default hides intermediate images)
+      --digests         Show digests
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print images using a Go template
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only show numeric IDs
+```
+
+麻雀虽小五脏俱全,没想到 `ls` 命令还有更加细粒度的用法说明,支持可选参数和 `[REPOSITORY[:TAG]]` ,除此之外还有 `ls, images, list` 别名!
+
+如果 `ls` 有 `images` 和 `list` 别名,那么岂不是意味着 `docker image ls` 等价于 `docker image images` 和 `docker image list` ?
+
+```bash
+[root@snowdreams1006 ~]# docker image list
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+hello-world            latest              fce289e99eb9        11 months ago       1.84kB
+[root@snowdreams1006 ~]# docker image images
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+hello-world            latest              fce289e99eb9        11 months ago       1.84kB
+```
+
+从上述输出结果来看,三者的运行效果确实是一样的,看来又发现了新大陆!
+
+### 普通命令
+
+回到 `docker` 命令的主线,除了管理命令外还是普通命令,这部分命令也是经常性使用到的命令也是重点学习掌握的命令!
+
+```bash
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+```
+
+命令虽好但不可贪多,还是找到最简单刚刚用过的 `docker run` 和 `docker version` 命令吧!
+
+- `docker run` : `Run a command in a new container`
+
+表示在新的容器内运行命令,翻译成生活语言就是在集装箱内做着不可告人的神秘操作!
+
+- `docker version` : `Show the Docker version information`
+
+显示 `Docker` 版本信息,还记得 `docker --version` 吗?
+
+忘记了的话,往上翻翻看,`--version` 的描述是 `Print version information and quit` ,是一种更加简单的版本信息.
+
+无论是管理命令还是普通命令,直接输入命令后都会有相应的用法说明以及帮助信息,同样地追加 `--help` 即可!
+
+```bash
+[root@snowdreams1006 ~]# docker run
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+```
+
+### 帮助信息
+
+最后的才是亮点,在命令结尾处追加 `--help` 可以获取更加详细的帮助信息,这一点不仅适合一级命令 `docker image --help` 还适合二级子命令 `docker image ls --help` .
+
+```bash
+Run 'docker COMMAND --help' for more information on a command.
+```
+
+所以,遇到不懂的或者陌生的命令请一定要记住 `--help` 帮助命令,这是 `docker` 全部命令中最重要的一点!
+
+## 回忆总结
+
+`Docker` 是一种规范化的部署运维新方式,相对于传统打包部署的来说,更加统一规范化,货物是各种各样的正如开发语言的多样性一样,但是集装箱的出现却颠覆了物流运输,带来了巨大的进步!
+
+如果你是 `Java` 后台开发,或多或少肯定有着自己独立部署项目的经历,先登录服务器装个 `Java` 环境再装个 `Tomcat` 环境,最后在上传自己的 `War` 包到 `Tomcat` 部署目录,如此重复繁琐的劳动还不一定能保证一次性成功!
+
+因为有时你的代码中很有可能有些绝对路径,部署到服务器肯定会报错,如果缺少了个人文件也会报错等等,这时候就出现了经典的对话:明明在我的电脑运行地好好的啊!
+
+`Docker` 的出现在一定程度上解决了这种问题,将应用打包到集装箱,`Docker` 作为超级货轮承载着集装箱安全快速地运送到目的地,集装箱内的环境是自给自足的封闭环境,所有的相关依赖一次性全部都给你.
+
+无论是本机运输这个封闭的集装箱还是远程服务器运输这个集装箱结果都是一样的,再也不会出现环境不一致而导致的相互埋怨情况的发生了!
+
+那么问题来了,如果给你一个集装箱,你能安全快速运输到目的地吗?如果你手头上已经有一批货需要这种集装箱服务,如何快速封装成集装箱呢?
+
+对于第一个问题,本文已经给出答案,那就是 `docker` + `docker COMMAND --help` 查询支持的命令以及查看命令的帮助文档.
+
+对于第二个问题,请先预习 `docker` 相关命令,下一次将实例分享如何使用 `docker` 运输集装箱,感谢你的阅读!
+ 
 ## 参考资料
 
 - [Get Docker Engine - Community for CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
@@ -493,238 +707,3 @@ Management Commands:
 - [安装Docker](https://help.aliyun.com/document_detail/60742.html?spm=5176.2020520101.0.0.173d4df5FIWY8L)
 - [官方镜像加速](https://help.aliyun.com/document_detail/60750.html?spm=5176.12818093.0.0.6db816d0JElLE4)
 - [镜像仓库概述](https://cloud.tencent.com/document/product/457/9113)
-
-## docker login
-
-```shell
-sudo docker login --username=雪之梦技术驿站 registry.cn-hangzhou.aliyuncs.com
-```
-
-- config.json
-
-```bash
-cat ~/.docker/config.json
-``
-
-## docker pull
-
-## docker images
-
-## docker push
-
-## 从零开始学习 docker
-
-```shell
-docker
-```
-
-
-```bash
-docker
-```
-
-- 帮助命令
-
-```bash
-docker command --help
-```
-
-- 运行容器
-
-> `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
-
-```bash
-docker run -it ubuntu /bin/bash
-```
-
-- 退出容器
-
-> `exit`
-
-- 查看容器
-
-```bash
-docker ps -a
-```
-
-- 启动容器
-
-```bash
-docker start b750bbbcfd88 
-```
-
-## 后台运行
-
-```bash
-docker run -itd --name ubuntu-test ubuntu /bin/bash
-```
-
-- 停止容器
-
-```bash
-docker stop <容器 ID>
-```
-
-- 重启容器
-
-```bash
-docker restart <容器 ID>
-```
-
-- 进入容器
-
-> `docker attach` 和 `docker exec`
-
-```bash
-docker attach 1e560fca3906 
-```
-
-> 注意: 如果从这个容器退出,会导致容器的停止.
-
-```bash
-docker exec -it 243c32535da7 /bin/bash
-```
-
-- 导出容器
-
-```bash
-docker export 1e560fca3906 > ubuntu.tar
-```
-
-- 导入容器
-
-```bash
-docker import - test/ubuntu:v1
-```
-
-- 删除容器
-
-```bash
-docker rm -f 1e560fca3906
-```
-
-- 清理掉所有处于终止状态的容器
-
-```bash
-docker container prune
-```
-
-- 端口映射
-
-```bash
-docker port bf08b7f2cd89
-```
-
-- 查看容器日志
-
-```bash
-docker logs -f bf08b7f2cd89
-```
-
-- 查看容器进程
-
-```bash
-docker top wizardly_chandrasekhar
-```
-
-## 镜像操作
-
-- 列出镜像
-
-```bash
-docker images
-```
-
-- 下载镜像
-
-```bash
-docker pull
-```
-
-- 查找镜像
-
-```bash
-docker search httpd
-```
-
-- 删除镜像
-
-```bash
-docker rmi hello-world
-```
-
-- 创建镜像
-
-```bash
-docker commit -m="updated" -a="snowdreams1006" eb3c83541f05 snowdreams1006/ubuntu
-```
-
-- 构建镜像
-
-```
-FROM    centos:6.7
-MAINTAINER      Fisher "fisher@sudops.com"
-
-RUN     /bin/echo 'root:123456' |chpasswd
-RUN     useradd runoob
-RUN     /bin/echo 'runoob:123456' |chpasswd
-RUN     /bin/echo -e "LANG=\"en_US.UTF-8\"" >/etc/default/local
-EXPOSE  22
-EXPOSE  80
-CMD     /usr/sbin/sshd -D
-```
-
-> Dockerfile
-
-```bash
-docker build -t runoob/centos:6.7 .
-```
-
-- 设置镜像标签
-
-```bash
-docker tag 860c279d2fec runoob/centos:dev
-```
-
-## web 应用
-
-- 随机映射
-
-```bash
-docker run -d -P training/webapp python app.py
-```
-
-- 指定端口
-
-```bash
-docker run -d -p 5000:5000 training/webapp python app.py
-```
-
-- 指定地址
-
-```bash
-docker run -d -p 127.0.0.1:5001:5000 training/webapp python app.py
-```
-
-## 容器互联
-
-- 命名容器
-
-```bash
-docker run -d -P --name runoob training/webapp python app.py
-```
-
-- 新建网络
-
-```bash
-docker network create -d bridge test-net
-```
-
-- 连接容器
-
-```bash
-docker run -itd --name test1 --network test-net ubuntu /bin/bash
-```
-
-sudo docker logs -f -t --tail 10 s12
-
