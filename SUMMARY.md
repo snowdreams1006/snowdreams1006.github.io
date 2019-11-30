@@ -4,10 +4,6 @@
 
 ## 入门教程
 * [markdown 入门教程](markdown/README.md)
-    * [掘金入门指南](markdown/juejin.md)
-    * [慕课网语法演示](markdown/imooc.md)
-    * [HBuilderX语法帮助](markdown/HBuilderX.md)
-    * [csdn帮助文档](markdown/csdn.md)
 * [git 入门教程](git/README.md)
     * [初识 git](git/base/about.md)
         * [安装 git](git/base/install.md)
@@ -32,6 +28,7 @@
         * [里程碑式标签](git/usage/tag.md)
     * [私人定制](git/custom/about.md)
         * [忽略文件](git/custom/ignore.md)
+        * [同步推送多Git仓库](git/custom/sync-remote-repo.md)
     * [搭建私服](git/server/private.md)
     * [扩展工具](git/tools/about.md)
         * [git bash 常见命令](git/tools/git-bash-command.md)
@@ -98,11 +95,28 @@
     * [常见问题](go/issue/faq.md)
 
 ## 运维部署
-* 个人博客
+* [从零开始搭建个人服务器](zero2devops/README.md)
+    * [从登录服务器开始](zero2devops/login-and-logout.md)
+    * [免费实现https访问网站](zero2devops/nginx-https.md)
+    * [webhook](zero2devops/webhook.md)
 * [运维部署](devops/README.md)
     * [docker 环境](devops/docker-env.md)
     * [docker 操作](devops/docker-ops.md)
+    * [docker + nginx](devops/docker-nginx.md)
+    * [docker + blog](devops/docker-blog.md)
+    * [docker + resume](devops/docker-resume.md)
     * [docker + gitbook](devops/docker-gitbook.md)
+    * [docker + Bark](devops/docker-bark.md)
+    * [docker + py12306](devops/docker-py12306.md)
+    * [docker + mojo-Weixin](devops/docker-mojo-Weixin.md)
+    * [docker + wechat-work-message-push-go](devops/docker-wechat-work-message-push-go.md)
+    * [docker + email](devops/docker-email.md)
+    * [docker + mysql](devops/docker-mysql.md)
+    * [docker + springboot](devops/docker-springboot.md)
+    * [docker + redis](devops/docker-redis.md)
+    * [docker + gogs](devops/docker-gogs.md)
+    * [docker + gitlab](devops/docker-gitlab.md)
+    * [docker + gitea](devops/docker-gitea.md)
 * [工具资源](tools/README.md)
     * [给 mac 装个 vmware 虚拟机](tools/mac-install-vmware.md)
         * [给 mac 虚拟机装个 windows](tools/mac-vmware-install-windows.md)
@@ -122,21 +136,13 @@
     * [简述优选文章统计](write/jianshu-optimize-static.md)
     * [常见问题](write/faq.md)
 
-## 开源项目
-* [gitbook-official](https://snowdreams1006.github.io/gitbook-official/)
-* [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
-* [hexo-plugin-gitalk](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
-* [gitbook-plugin-readmore](https://snowdreams1006.github.io/gitbook-plugin-readmore/)
-* [hexo-plugin-readmore](https://snowdreams1006.github.io/hexo-plugin-readmore/)
-* [gitbook-plugin-copyright](https://snowdreams1006.github.io/gitbook-plugin-copyright/)
-* [security-plus](https://security-plus.github.io/)
-
 ## 读书观感
 * [大数据浪潮之巅:新技术商业制胜之道](bigDataWave/README.md)
 
 ## 程序人生
 * [晚安](greet/README.md)
 * [其他](other/README.md)
+    * [倒计时提醒](other/reminder.md)
     * [转型之路](other/transformation.md)
     * [历史统计](other/static.md)
     * [关于作者](other/me.md)
@@ -144,4 +150,14 @@
 
 ## 思绪乱飞
 * [TODO清单](todo/README.md)
+
+## 开源项目
+* [gitbook-official](https://snowdreams1006.github.io/gitbook-official/)
+* [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
+* [gitbook-plugin-readmore](https://snowdreams1006.github.io/gitbook-plugin-readmore/)
+* [gitbook-plugin-favicon-absolute](https://snowdreams1006.github.io/gitbook-plugin-favicon-absolute/)
+* [hexo-plugin-gitalk](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
+* [hexo-plugin-readmore](https://snowdreams1006.github.io/hexo-plugin-readmore/)
+* [gitbook-plugin-copyright](https://snowdreams1006.github.io/gitbook-plugin-copyright/)
+* [security-plus](https://security-plus.github.io/)
 

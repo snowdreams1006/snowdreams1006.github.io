@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 13 Nov 2019 09:30:01 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 Nov 2019 01:23:18 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -17,18 +17,7 @@
         <category><![CDATA[php]]></category>
         <item>
             <title><![CDATA[简介]]></title>
-            <description><![CDATA[github
-wechat
-今日头条
-Bilibili
-慕课网
-简书
-csdn
-博客园
-掘金
-思否
-开源中国
-腾讯云社区]]></description>
+            <description><![CDATA[教程分享均是笔者亲身学习经验总结,涉及到的知识点均亲身试验,但有时为了知识完整性,可能并未亲自确认,对于这部分内容会明确指出,到时由读者确认试验.]]></description>
             <link>https://snowdreams1006.github.io/</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
@@ -38,44 +27,6 @@ csdn
             <description><![CDATA[markdown 不止是 HTML 的简化版,更重要的是 txt 的升级版,word 的轻量版,是笔记的最佳载体.]]></description>
             <link>https://snowdreams1006.github.io/markdown/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/markdown/README.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[掘金入门指南]]></title>
-            <description><![CDATA[欢迎使用 掘金－Markdown 编辑器撰写技术文章，只专注于内容和技术，不再费心排版的问题。这是一份简要的 Markdown 引导指南，希望可以帮助您顺利的开始使用 Markdown 编辑器。]]></description>
-            <link>https://snowdreams1006.github.io/markdown/juejin.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/markdown/juejin.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[慕课网语法演示]]></title>
-            <description><![CDATA[Markdown 编辑器使用一套简单实用的标记语言来实现简单的文本排版，可以让你专注于键盘码字而非排版，化繁为简，回归写作本质，带来前所未有的书写体验！]]></description>
-            <link>https://snowdreams1006.github.io/markdown/imooc.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/markdown/imooc.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[HBuilderX语法帮助]]></title>
-            <description><![CDATA[=================================================]]></description>
-            <link>https://snowdreams1006.github.io/markdown/HBuilderX.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/markdown/HBuilderX.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[csdn帮助文档]]></title>
-            <description><![CDATA[撤销：Ctrl/Command + Z
-重做：Ctrl/Command + Y
-加粗：Ctrl/Command + B
-斜体：Ctrl/Command + I
-标题：Ctrl/Command + Shift + H
-无序列表：Ctrl/Command + Shift + U
-有序列表：Ctrl/Command + Shift + O
-检查列表：Ctrl/Command + Shift + C
-插入代码：Ctrl/Command + Shift + K
-插入链接：Ctrl/Command + Shift + L
-插入图片：Ctrl/Command + Shift + G]]></description>
-            <link>https://snowdreams1006.github.io/markdown/csdn.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/markdown/csdn.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -245,6 +196,12 @@ csdn
             <description><![CDATA["并不是所有的牛奶都叫特仑苏",在版本控制系统中也有相似的表达,那就是"并不是所有的文件都需要提交".]]></description>
             <link>https://snowdreams1006.github.io/git/custom/ignore.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/git/custom/ignore.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[同步推送多Git仓库]]></title>
+            <link>https://snowdreams1006.github.io/git/custom/sync-remote-repo.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/git/custom/sync-remote-repo.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -669,7 +626,7 @@ csdn
         </item>
         <item>
             <title><![CDATA[延迟函数]]></title>
-            <description><![CDATA[go-error-defer-parenthesized-fail.png]]></description>
+            <description><![CDATA[go-error-defer-learn-from-old.jpg]]></description>
             <link>https://snowdreams1006.github.io/go/error/defer.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/error/defer.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
@@ -678,6 +635,32 @@ csdn
             <title><![CDATA[常见问题]]></title>
             <link>https://snowdreams1006.github.io/go/issue/faq.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/go/issue/faq.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[从零开始搭建个人服务器]]></title>
+            <link>https://snowdreams1006.github.io/zero2devops/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[登录和登出远程服务器]]></title>
+            <description><![CDATA[远程连接->连接密码->用户名/密码]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/login-and-logout.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/login-and-logout.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[免费实现https访问网站]]></title>
+            <description><![CDATA[Let's Encrypt免费证书签发过程包含以下三个阶段：]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/nginx-https.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/nginx-https.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[webhook]]></title>
+            <link>https://snowdreams1006.github.io/zero2devops/webhook.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/webhook.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -696,14 +679,101 @@ csdn
         </item>
         <item>
             <title><![CDATA[docker 操作]]></title>
+            <description><![CDATA[sudo docker logs -f -t --tail 10 s12]]></description>
             <link>https://snowdreams1006.github.io/devops/docker-ops.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-ops.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + nginx]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-nginx.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-nginx.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + blog]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-blog.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-blog.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + resume]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-resume.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-resume.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[docker + gitbook]]></title>
             <link>https://snowdreams1006.github.io/devops/docker-gitbook.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitbook.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + Bark]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-bark.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-bark.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + py12306]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-py12306.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-py12306.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + mojo-Weixin]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-mojo-Weixin.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-mojo-Weixin.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + wechat-work-message-push-go]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-wechat-work-message-push-go.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-wechat-work-message-push-go.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + email]]></title>
+            <description><![CDATA[scp /Users/snowdreams1006/Downloads/docker-compose.yml root@snowdreams1006.cn:/root/mail]]></description>
+            <link>https://snowdreams1006.github.io/devops/docker-email.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-email.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + mysql]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-mysql.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-mysql.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + springboot]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-springboot.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-springboot.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + redis]]></title>
+            <description><![CDATA[// 注意，这个是容器运行的ip，可通过 docker inspect redis_s | grep IPAddress 查看]]></description>
+            <link>https://snowdreams1006.github.io/devops/docker-redis.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-redis.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + gogs]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-gogs.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gogs.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + gitlab]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-gitlab.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitlab.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + gitea]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-gitea.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitea.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -971,6 +1041,12 @@ csdn
             <title><![CDATA[其他]]></title>
             <link>https://snowdreams1006.github.io/other/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[倒计时提醒]]></title>
+            <link>https://snowdreams1006.github.io/other/reminder.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/other/reminder.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

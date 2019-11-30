@@ -1,0 +1,2934 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>docker + nginx · 雪之梦技术驿站</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="snowdreams1006">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="docker-blog.html" />
+    
+    
+    <link rel="prev" href="docker-ops.html" />
+    
+
+    <link href="https://snowdreams1006.github.io/rss" title="雪之梦技术驿站" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"snowdreams1006","repo":"snowdreams1006.github.io","type":"star","size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-precomposed-152.png">
+    
+    
+        
+    
+    
+        
+    
+
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://blob.snowdreams1006.cn/" target="_blank" class="custom-link">技术博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">入门教程</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../markdown/">
+            
+                <a href="../markdown/">
+            
+                    
+                    markdown 入门教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    git 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../git/base/about.html">
+            
+                <a href="../git/base/about.html">
+            
+                    
+                    初识 git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../git/base/install.html">
+            
+                <a href="../git/base/install.html">
+            
+                    
+                    安装 git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2" data-path="../git/base/config.html">
+            
+                <a href="../git/base/config.html">
+            
+                    
+                    配置 git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../git/usage/about.html">
+            
+                <a href="../git/usage/about.html">
+            
+                    
+                    实战 git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../git/usage/local-repository.html">
+            
+                <a href="../git/usage/local-repository.html">
+            
+                    
+                    本地仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../git/usage/version-manage.html">
+            
+                <a href="../git/usage/version-manage.html">
+            
+                    
+                    版本管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.3" data-path="../git/usage/reset.html">
+            
+                <a href="../git/usage/reset.html">
+            
+                    
+                    回到过去
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.4" data-path="../git/usage/concept.html">
+            
+                <a href="../git/usage/concept.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.5" data-path="../git/usage/version-control.html">
+            
+                <a href="../git/usage/version-control.html">
+            
+                    
+                    版本控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.6" data-path="../git/usage/checkout-reset.html">
+            
+                <a href="../git/usage/checkout-reset.html">
+            
+                    
+                    撤销更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.7" data-path="../git/usage/delete.html">
+            
+                <a href="../git/usage/delete.html">
+            
+                    
+                    删除文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.8" data-path="../git/usage/remote-repository.html">
+            
+                <a href="../git/usage/remote-repository.html">
+            
+                    
+                    远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9" data-path="../git/usage/branch-manage.html">
+            
+                <a href="../git/usage/branch-manage.html">
+            
+                    
+                    分支管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.9.1" data-path="../git/usage/branch-overview.html">
+            
+                <a href="../git/usage/branch-overview.html">
+            
+                    
+                    分支总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.2" data-path="../git/usage/branch-merge-with-conflict.html">
+            
+                <a href="../git/usage/branch-merge-with-conflict.html">
+            
+                    
+                    冲突合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.3" data-path="../git/usage/branch-strategy.html">
+            
+                <a href="../git/usage/branch-strategy.html">
+            
+                    
+                    分支策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.4" data-path="../git/usage/branch-emergency-fixbug.html">
+            
+                <a href="../git/usage/branch-emergency-fixbug.html">
+            
+                    
+                    紧急修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.5" data-path="../git/usage/branch-rebase.html">
+            
+                <a href="../git/usage/branch-rebase.html">
+            
+                    
+                    变基合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.6" data-path="../git/usage/branch-remote.html">
+            
+                <a href="../git/usage/branch-remote.html">
+            
+                    
+                    协同开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.9.7" data-path="../git/usage/local-remote-repository.html">
+            
+                <a href="../git/usage/local-remote-repository.html">
+            
+                    
+                    本地和远程仓库的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.10" data-path="../git/usage/tag.html">
+            
+                <a href="../git/usage/tag.html">
+            
+                    
+                    里程碑式标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../git/custom/about.html">
+            
+                <a href="../git/custom/about.html">
+            
+                    
+                    私人定制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.3.1" data-path="../git/custom/ignore.html">
+            
+                <a href="../git/custom/ignore.html">
+            
+                    
+                    忽略文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3.2" data-path="../git/custom/sync-remote-repo.html">
+            
+                <a href="../git/custom/sync-remote-repo.html">
+            
+                    
+                    同步推送多Git仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../git/server/private.html">
+            
+                <a href="../git/server/private.html">
+            
+                    
+                    搭建私服
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../git/tools/about.html">
+            
+                <a href="../git/tools/about.html">
+            
+                    
+                    扩展工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.5.1" data-path="../git/tools/git-bash-command.html">
+            
+                <a href="../git/tools/git-bash-command.html">
+            
+                    
+                    git bash 常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.2" data-path="../git/tools/git-bash-relationship.html">
+            
+                <a href="../git/tools/git-bash-relationship.html">
+            
+                    
+                    git bash 朋友圈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.3" data-path="../git/tools/git-bash-tree.html">
+            
+                <a href="../git/tools/git-bash-tree.html">
+            
+                    
+                    git bash 竟然没有tree命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.4" data-path="../git/tools/git-bash-extend-up.html">
+            
+                <a href="../git/tools/git-bash-extend-up.html">
+            
+                    
+                    git bash 扩展命令(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.5" data-path="../git/tools/git-bash-extend-middle.html">
+            
+                <a href="../git/tools/git-bash-extend-middle.html">
+            
+                    
+                    git bash 扩展命令(中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.6" data-path="../git/tools/git-bash-extend-down.html">
+            
+                <a href="../git/tools/git-bash-extend-down.html">
+            
+                    
+                    git bash 扩展命令(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="../git/summary/about.html">
+            
+                <a href="../git/summary/about.html">
+            
+                    
+                    沙海拾贝
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.6.1" data-path="../git/summary/common.html">
+            
+                <a href="../git/summary/common.html">
+            
+                    
+                    知识速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6.2" data-path="../git/summary/cheatsheet-translation.html">
+            
+                <a href="../git/summary/cheatsheet-translation.html">
+            
+                    
+                    备忘录[译]
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../github/">
+            
+                <a href="../github/">
+            
+                    
+                    github 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../github/speedup.html">
+            
+                <a href="../github/speedup.html">
+            
+                    
+                    github 访问速度太慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../github/badge.html">
+            
+                <a href="../github/badge.html">
+            
+                    
+                    github 徽章从何而来
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../myGitbook/">
+            
+                <a href="../myGitbook/">
+            
+                    
+                    gitbook 入门教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../myGitbook/preparation/prepare.html">
+            
+                <a href="../myGitbook/preparation/prepare.html">
+            
+                    
+                    准备阶段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1.1" data-path="../myGitbook/preparation/front-knowledge.html">
+            
+                <a href="../myGitbook/preparation/front-knowledge.html">
+            
+                    
+                    前置知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.1.2" data-path="../myGitbook/preparation/environmental-requirements.html">
+            
+                <a href="../myGitbook/preparation/environmental-requirements.html">
+            
+                    
+                    环境要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../myGitbook/experience/preview.html">
+            
+                <a href="../myGitbook/experience/preview.html">
+            
+                    
+                    快速体验
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.2.1" data-path="../myGitbook/experience/gitbook-cli.html">
+            
+                <a href="../myGitbook/experience/gitbook-cli.html">
+            
+                    
+                    gitbook-cli 命令行操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2.2" data-path="../myGitbook/experience/gitbook-editor.html">
+            
+                <a href="../myGitbook/experience/gitbook-editor.html">
+            
+                    
+                    gitbook-editor 编辑器操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2.3" data-path="../myGitbook/experience/gitbook-com.html">
+            
+                <a href="../myGitbook/experience/gitbook-com.html">
+            
+                    
+                    gitbook.com 官网操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../myGitbook/advance/advance.html">
+            
+                <a href="../myGitbook/advance/advance.html">
+            
+                    
+                    高级进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.3.1" data-path="../myGitbook/advance/plugin.html">
+            
+                <a href="../myGitbook/advance/plugin.html">
+            
+                    
+                    插件介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.3.1.1" data-path="../myGitbook/advance/plugin-practical.html">
+            
+                <a href="../myGitbook/advance/plugin-practical.html">
+            
+                    
+                    实用插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.1.2" data-path="../myGitbook/advance/plugin-theme.html">
+            
+                <a href="../myGitbook/advance/plugin-theme.html">
+            
+                    
+                    主题插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.1.3" data-path="../myGitbook/advance/plugin-develop.html">
+            
+                <a href="../myGitbook/advance/plugin-develop.html">
+            
+                    
+                    开发插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.2" data-path="../myGitbook/advance/export.html">
+            
+                <a href="../myGitbook/advance/export.html">
+            
+                    
+                    导出电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3.3" data-path="../myGitbook/advance/publish.html">
+            
+                <a href="../myGitbook/advance/publish.html">
+            
+                    
+                    发布电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="../myGitbook/openwrite/">
+            
+                <a href="../myGitbook/openwrite/">
+            
+                    
+                    公众号引流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="../myGitbook/issue/">
+            
+                <a href="../myGitbook/issue/">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.5.1" data-path="../myGitbook/issue/rm-output-directory.html">
+            
+                <a href="../myGitbook/issue/rm-output-directory.html">
+            
+                    
+                    热加载失败治标之法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5.2" data-path="../myGitbook/issue/modify-default-fold.html">
+            
+                <a href="../myGitbook/issue/modify-default-fold.html">
+            
+                    
+                    初始化默认折叠效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="../myGitbook/reference/">
+            
+                <a href="../myGitbook/reference/">
+            
+                    
+                    参考更多
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../java8/">
+            
+                <a href="../java8/">
+            
+                    
+                    java8新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../java8/lambda.html">
+            
+                <a href="../java8/lambda.html">
+            
+                    
+                    lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../java8/functionInterface.html">
+            
+                <a href="../java8/functionInterface.html">
+            
+                    
+                    函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">学习笔记</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../php/">
+            
+                <a href="../php/">
+            
+                    
+                    php 学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../php/php-setup-environment-mac.html">
+            
+                <a href="../php/php-setup-environment-mac.html">
+            
+                    
+                    搭建开发环境( mac 版)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../php/set-timezone-method.html">
+            
+                <a href="../php/set-timezone-method.html">
+            
+                    
+                    关于时区的那点事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../php/datetime-overview.html">
+            
+                <a href="../php/datetime-overview.html">
+            
+                    
+                    日期时间操作一箩筐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../go/">
+            
+                <a href="../go/">
+            
+                    
+                    go 学习笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../go/base/about.html">
+            
+                <a href="../go/base/about.html">
+            
+                    
+                    初识 go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="../go/base/setup.html">
+            
+                <a href="../go/base/setup.html">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" data-path="../go/base/workspace.html">
+            
+                <a href="../go/base/workspace.html">
+            
+                    
+                    工作空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.3" data-path="../go/base/ide.html">
+            
+                <a href="../go/base/ide.html">
+            
+                    
+                    IDE编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.4" data-path="../go/base/var-and-const.html">
+            
+                <a href="../go/base/var-and-const.html">
+            
+                    
+                    你好,Go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.5" data-path="../go/base/grammar.html">
+            
+                <a href="../go/base/grammar.html">
+            
+                    
+                    基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../go/container/about.html">
+            
+                <a href="../go/container/about.html">
+            
+                    
+                    内建容器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../go/container/array.html">
+            
+                <a href="../go/container/array.html">
+            
+                    
+                    数组切片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.2" data-path="../go/container/map.html">
+            
+                <a href="../go/container/map.html">
+            
+                    
+                    字典映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../go/oop/about.html">
+            
+                <a href="../go/oop/about.html">
+            
+                    
+                    面向对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" data-path="../go/oop/encapsulation.html">
+            
+                <a href="../go/oop/encapsulation.html">
+            
+                    
+                    再说封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.2" data-path="../go/oop/inheritance.html">
+            
+                <a href="../go/oop/inheritance.html">
+            
+                    
+                    能否继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.3" data-path="../go/oop/interface.html">
+            
+                <a href="../go/oop/interface.html">
+            
+                    
+                    初识接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.4" data-path="../go/oop/interface-type.html">
+            
+                <a href="../go/oop/interface-type.html">
+            
+                    
+                    再谈接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../go/functional/about.html">
+            
+                <a href="../go/functional/about.html">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.4.1" data-path="../go/functional/fib.html">
+            
+                <a href="../go/functional/fib.html">
+            
+                    
+                    斐波那契数列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4.2" data-path="../go/functional/closure.html">
+            
+                <a href="../go/functional/closure.html">
+            
+                    
+                    简要理解闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../go/error/about.html">
+            
+                <a href="../go/error/about.html">
+            
+                    
+                    错误管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.5.1" data-path="../go/error/defer.html">
+            
+                <a href="../go/error/defer.html">
+            
+                    
+                    延迟函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../go/issue/faq.html">
+            
+                <a href="../go/issue/faq.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">运维部署</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../zero2devops/">
+            
+                <a href="../zero2devops/">
+            
+                    
+                    从零开始搭建个人服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../zero2devops/login-and-logout.html">
+            
+                <a href="../zero2devops/login-and-logout.html">
+            
+                    
+                    从登录服务器开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../zero2devops/nginx-https.html">
+            
+                <a href="../zero2devops/nginx-https.html">
+            
+                    
+                    免费实现https访问网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../zero2devops/webhook.html">
+            
+                <a href="../zero2devops/webhook.html">
+            
+                    
+                    webhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    运维部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="docker-env.html">
+            
+                <a href="docker-env.html">
+            
+                    
+                    docker 环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="docker-ops.html">
+            
+                <a href="docker-ops.html">
+            
+                    
+                    docker 操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2.3" data-path="docker-nginx.html">
+            
+                <a href="docker-nginx.html">
+            
+                    
+                    docker + nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="docker-blog.html">
+            
+                <a href="docker-blog.html">
+            
+                    
+                    docker + blog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="docker-resume.html">
+            
+                <a href="docker-resume.html">
+            
+                    
+                    docker + resume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="docker-gitbook.html">
+            
+                <a href="docker-gitbook.html">
+            
+                    
+                    docker + gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="docker-bark.html">
+            
+                <a href="docker-bark.html">
+            
+                    
+                    docker + Bark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="docker-py12306.html">
+            
+                <a href="docker-py12306.html">
+            
+                    
+                    docker + py12306
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.9" data-path="docker-mojo-Weixin.html">
+            
+                <a href="docker-mojo-Weixin.html">
+            
+                    
+                    docker + mojo-Weixin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.10" data-path="docker-wechat-work-message-push-go.html">
+            
+                <a href="docker-wechat-work-message-push-go.html">
+            
+                    
+                    docker + wechat-work-message-push-go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.11" data-path="docker-email.html">
+            
+                <a href="docker-email.html">
+            
+                    
+                    docker + email
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.12" data-path="docker-mysql.html">
+            
+                <a href="docker-mysql.html">
+            
+                    
+                    docker + mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.13" data-path="docker-springboot.html">
+            
+                <a href="docker-springboot.html">
+            
+                    
+                    docker + springboot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.14" data-path="docker-redis.html">
+            
+                <a href="docker-redis.html">
+            
+                    
+                    docker + redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.15" data-path="docker-gogs.html">
+            
+                <a href="docker-gogs.html">
+            
+                    
+                    docker + gogs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.16" data-path="docker-gitlab.html">
+            
+                <a href="docker-gitlab.html">
+            
+                    
+                    docker + gitlab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.17" data-path="docker-gitea.html">
+            
+                <a href="docker-gitea.html">
+            
+                    
+                    docker + gitea
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../tools/">
+            
+                <a href="../tools/">
+            
+                    
+                    工具资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../tools/mac-install-vmware.html">
+            
+                <a href="../tools/mac-install-vmware.html">
+            
+                    
+                    给 mac 装个 vmware 虚拟机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1.1" data-path="../tools/mac-vmware-install-windows.html">
+            
+                <a href="../tools/mac-vmware-install-windows.html">
+            
+                    
+                    给 mac 虚拟机装个 windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.1.2" data-path="../tools/mac-vmware-install-centos.html">
+            
+                <a href="../tools/mac-vmware-install-centos.html">
+            
+                    
+                    给 mac 虚拟机装个 centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.1.3" data-path="../tools/mac-vmware-install-ubuntu.html">
+            
+                <a href="../tools/mac-vmware-install-ubuntu.html">
+            
+                    
+                    给 mac 虚拟机装个 ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../tools/windows-install-vmware.html">
+            
+                <a href="../tools/windows-install-vmware.html">
+            
+                    
+                    给 windows 装个 vmware 虚拟机
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.2.1" data-path="../tools/windows-vmware-install-mac.html">
+            
+                <a href="../tools/windows-vmware-install-mac.html">
+            
+                    
+                    给 windows 虚拟机装个 mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2.2" data-path="../tools/windows-vmware-install-windows.html">
+            
+                <a href="../tools/windows-vmware-install-windows.html">
+            
+                    
+                    给 windows 虚拟机装个 windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2.3" data-path="../tools/windows-vmware-install-centos.html">
+            
+                <a href="../tools/windows-vmware-install-centos.html">
+            
+                    
+                    给 windows 虚拟机装个 centos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2.4" data-path="../tools/windows-vmware-install-ubuntu.html">
+            
+                <a href="../tools/windows-vmware-install-ubuntu.html">
+            
+                    
+                    给 windows 虚拟机装个 ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../tools/chrome-extend-learn.html">
+            
+                <a href="../tools/chrome-extend-learn.html">
+            
+                    
+                    学习开发自己的 chrome 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../write/">
+            
+                <a href="../write/">
+            
+                    
+                    如何写作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../write/markdownOrRichText.html">
+            
+                <a href="../write/markdownOrRichText.html">
+            
+                    
+                    markdown 和富文本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="../write/markdown2richText.html">
+            
+                <a href="../write/markdown2richText.html">
+            
+                    
+                    markdown 转富文本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="../write/static-semi-manual-with-csv.html">
+            
+                <a href="../write/static-semi-manual-with-csv.html">
+            
+                    
+                    csv 半手动数据统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.4" data-path="../write/static-semi-manual-with-js.html">
+            
+                <a href="../write/static-semi-manual-with-js.html">
+            
+                    
+                    js 半手动数据统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.5" data-path="../write/jianshu-optimize-static.html">
+            
+                <a href="../write/jianshu-optimize-static.html">
+            
+                    
+                    简述优选文章统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.6" data-path="../write/faq.html">
+            
+                <a href="../write/faq.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">读书观感</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../bigDataWave/">
+            
+                <a href="../bigDataWave/">
+            
+                    
+                    大数据浪潮之巅:新技术商业制胜之道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">程序人生</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../greet/">
+            
+                <a href="../greet/">
+            
+                    
+                    晚安
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../other/reminder.html">
+            
+                <a href="../other/reminder.html">
+            
+                    
+                    倒计时提醒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../other/transformation.html">
+            
+                <a href="../other/transformation.html">
+            
+                    
+                    转型之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../other/static.html">
+            
+                <a href="../other/static.html">
+            
+                    
+                    历史统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../other/me.html">
+            
+                <a href="../other/me.html">
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../other/donate.html">
+            
+                <a href="../other/donate.html">
+            
+                    
+                    捐赠支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">思绪乱飞</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../todo/">
+            
+                <a href="../todo/">
+            
+                    
+                    TODO清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开源项目</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-official/">
+            
+                    
+                    gitbook-official
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-plugin-mygitalk/">
+            
+                    
+                    gitbook-plugin-mygitalk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-plugin-readmore/">
+            
+                    
+                    gitbook-plugin-readmore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-plugin-favicon-absolute/">
+            
+                    
+                    gitbook-plugin-favicon-absolute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/hexo-plugin-gitalk/">
+            
+                    
+                    hexo-plugin-gitalk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/hexo-plugin-readmore/">
+            
+                    
+                    hexo-plugin-readmore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" >
+            
+                <a target="_blank" href="https://snowdreams1006.github.io/gitbook-plugin-copyright/">
+            
+                    
+                    gitbook-plugin-copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" >
+            
+                <a target="_blank" href="https://security-plus.github.io/">
+            
+                    
+                    security-plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >docker + nginx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                
+                <div id="vip-container">
+                    <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#docker--nginx"><b>1. </b>docker + nginx</a></li><ul><li><span class="title-icon "></span><a href="#bark"><b>1.1. </b>bark</a></li><li><span class="title-icon "></span><a href="#webhook"><b>1.2. </b>webhook</a></li><li><span class="title-icon "></span><a href="#blog"><b>1.3. </b>blog</a></li><li><span class="title-icon "></span><a href="#resume"><b>1.4. </b>resume</a></li></ul></ul></div><a href="#docker--nginx" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="docker--nginx"><a name="docker--nginx" class="anchor-navigation-ex-anchor" href="#docker--nginx"><i class="fa fa-link" aria-hidden="true"></i></a>1. docker + nginx</h1>
+<pre><code class="lang-bash">docker pull nginx
+</code></pre>
+<pre><code class="lang-bash">docker run --name nginx --rm -p 80:80 <span class="hljs-_">-d</span> nginx
+</code></pre>
+<pre><code class="lang-bash">docker stop nginx
+</code></pre>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> nginx whereis nginx
+</code></pre>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> nginx ls /etc/nginx
+</code></pre>
+<pre><code class="lang-bash">docker cp nginx:/etc/nginx/nginx.conf ~/nginx
+</code></pre>
+<pre><code class="lang-bash">yum install -y tree
+</code></pre>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> nginx ls /etc/nginx/conf.d
+</code></pre>
+<pre><code class="lang-bash">docker cp nginx:/etc/nginx/conf.d ~/nginx/conf.d
+</code></pre>
+<pre><code class="lang-bash">docker run --name nginx <span class="hljs-_">-d</span> -p 80:80 -p 443:443 \
+    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
+    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
+    -v ~/nginx/logs:/var/<span class="hljs-built_in">log</span>/nginx \
+    -v /etc/letsencrypt:/etc/letsencrypt \
+    nginx
+</code></pre>
+<pre><code class="lang-bash">docker stop nginx
+</code></pre>
+<pre><code class="lang-bash">docker run --name nginx --rm <span class="hljs-_">-d</span> -p 80:80 -p 443:443 \
+    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
+    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
+    -v ~/nginx/logs:/var/<span class="hljs-built_in">log</span>/nginx \
+    nginx
+</code></pre>
+<pre><code class="lang-bash">curl -o /etc/yum.repos.d/epel-7.repo https://mirrors.aliyun.com/repo/epel-7.repo
+</code></pre>
+<pre><code class="lang-bash">yum install -y certbot
+</code></pre>
+<pre><code class="lang-bash">pip install --upgrade --force-reinstall <span class="hljs-string">&apos;requests==2.6.0&apos;</span> urllib3
+</code></pre>
+<pre><code class="lang-bash">certbot certonly <span class="hljs-_">-d</span> *.snowdreams1006.cn <span class="hljs-_">-d</span> snowdreams1006.cn --manual \
+--preferred-challenges dns \
+--server https://acme-v02.api.letsencrypt.org/directory
+</code></pre>
+<pre><code>Please deploy a DNS TXT record under the name
+_acme-challenge.snowdreams1006.cn with the following value:
+
+2_F8ljNNjU_P6_fUVpaaB0A3QprSIiA4ODWvd77HFnQ
+
+Before continuing, verify the record is deployed.
+</code></pre><pre><code>Please deploy a DNS TXT record under the name
+_acme-challenge.snowdreams1006.cn with the following value:
+
+Lwb2Ef3Fch7YFyG7iWDTRanoP3AyuUiYYgIIckCzGcQ
+
+Before continuing, verify the record is deployed.
+(This must be set up in addition to the previous challenges; do not remove,
+replace, or undo the previous challenge tasks yet. Note that you might be
+asked to create multiple distinct TXT records with the same name. This is
+permitted by DNS standards.)
+</code></pre><pre><code class="lang-bash">find / -type f -name <span class="hljs-string">&quot;.certbot.lock&quot;</span> -exec rm {} \;
+</code></pre>
+<pre><code class="lang-bash">IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem
+   Your cert will expire on 2020-02-27. To obtain a new or tweaked
+   version of this certificate <span class="hljs-keyword">in</span> the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   <span class="hljs-string">&quot;certbot renew&quot;</span>
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let<span class="hljs-string">&apos;s Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+</span></code></pre>
+<pre><code>[root@snowdreams1006 nginx]# tree /etc/letsencrypt
+/etc/letsencrypt
+&#x251C;&#x2500;&#x2500; accounts
+&#x2502;   &#x2514;&#x2500;&#x2500; acme-v02.api.letsencrypt.org
+&#x2502;       &#x2514;&#x2500;&#x2500; directory
+&#x2502;           &#x2514;&#x2500;&#x2500; 4a7ed3e412c035edcf077438d642b1e7
+&#x2502;               &#x251C;&#x2500;&#x2500; meta.json
+&#x2502;               &#x251C;&#x2500;&#x2500; private_key.json
+&#x2502;               &#x2514;&#x2500;&#x2500; regr.json
+&#x251C;&#x2500;&#x2500; archive
+&#x2502;   &#x2514;&#x2500;&#x2500; snowdreams1006.cn
+&#x2502;       &#x251C;&#x2500;&#x2500; cert1.pem
+&#x2502;       &#x251C;&#x2500;&#x2500; chain1.pem
+&#x2502;       &#x251C;&#x2500;&#x2500; fullchain1.pem
+&#x2502;       &#x2514;&#x2500;&#x2500; privkey1.pem
+&#x251C;&#x2500;&#x2500; csr
+&#x2502;   &#x251C;&#x2500;&#x2500; 0000_csr-certbot.pem
+&#x2502;   &#x2514;&#x2500;&#x2500; 0001_csr-certbot.pem
+&#x251C;&#x2500;&#x2500; keys
+&#x2502;   &#x251C;&#x2500;&#x2500; 0000_key-certbot.pem
+&#x2502;   &#x2514;&#x2500;&#x2500; 0001_key-certbot.pem
+&#x251C;&#x2500;&#x2500; live
+&#x2502;   &#x251C;&#x2500;&#x2500; README
+&#x2502;   &#x2514;&#x2500;&#x2500; snowdreams1006.cn
+&#x2502;       &#x251C;&#x2500;&#x2500; cert.pem -&gt; ../../archive/snowdreams1006.cn/cert1.pem
+&#x2502;       &#x251C;&#x2500;&#x2500; chain.pem -&gt; ../../archive/snowdreams1006.cn/chain1.pem
+&#x2502;       &#x251C;&#x2500;&#x2500; fullchain.pem -&gt; ../../archive/snowdreams1006.cn/fullchain1.pem
+&#x2502;       &#x251C;&#x2500;&#x2500; privkey.pem -&gt; ../../archive/snowdreams1006.cn/privkey1.pem
+&#x2502;       &#x2514;&#x2500;&#x2500; README
+&#x251C;&#x2500;&#x2500; renewal
+&#x2502;   &#x2514;&#x2500;&#x2500; snowdreams1006.cn.conf
+&#x2514;&#x2500;&#x2500; renewal-hooks
+    &#x251C;&#x2500;&#x2500; deploy
+    &#x251C;&#x2500;&#x2500; post
+    &#x2514;&#x2500;&#x2500; pre
+
+15 directories, 18 files
+</code></pre><pre><code class="lang-bash">crontab <span class="hljs-_">-e</span>
+</code></pre>
+<pre><code class="lang-bash">00 01 01 * * sudo /usr/bin/certbot renew --quiet &amp;&amp; sudo docker restart nginx
+</code></pre>
+<pre><code class="lang-conf">server {
+    listen       80;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+}
+</code></pre>
+<pre><code class="lang-bash">docker run --name nginx --rm <span class="hljs-_">-d</span> -p 80:80 -p 443:443 \
+    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
+    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
+    -v ~/nginx/logs:/var/<span class="hljs-built_in">log</span>/nginx \
+    -v /etc/letsencrypt:/etc/letsencrypt \
+    nginx
+</code></pre>
+<h2 id="bark"><a name="bark" class="anchor-navigation-ex-anchor" href="#bark"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. bark</h2>
+<pre><code class="lang-bash">docker run --name bark -dt -p 8888:8080 --restart=always \
+    -v ~/bark/data:/data \
+    finab/bark-server
+</code></pre>
+<pre><code class="lang-bash">curl http://0.0.0.0:8888/ping
+</code></pre>
+<pre><code class="lang-conf">server {
+    listen       80;
+    server_name  bark.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;  
+}
+
+server {
+  listen 443 ssl http2;
+  server_name  bark.snowdreams1006.cn;
+
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+  location / {
+      proxy_pass http://172.16.166.99:8888;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+</code></pre>
+<pre><code class="lang-bash">docker restart nginx
+</code></pre>
+<pre><code class="lang-bash">curl https://bark.snowdreams1006.cn/ping
+</code></pre>
+<h2 id="webhook"><a name="webhook" class="anchor-navigation-ex-anchor" href="#webhook"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. webhook</h2>
+<pre><code class="lang-bash">docker pull hongkongkiwi/webhook
+</code></pre>
+<pre><code class="lang-bash">docker run <span class="hljs-_">-d</span> -p 9000:9000 --name=webhook \
+    -v ~/webhook:/etc/webhook \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /usr/bin/docker:/usr/bin/docker \
+  hongkongkiwi/webhook -verbose -hooks=/etc/webhook/hooks.json -hotreload
+</code></pre>
+<pre><code class="lang-json">[
+  {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;query&quot;</span>,
+    <span class="hljs-string">&quot;execute-command&quot;</span>: <span class="hljs-string">&quot;/etc/webhook/query.sh&quot;</span>,
+    <span class="hljs-string">&quot;command-working-directory&quot;</span>: <span class="hljs-string">&quot;/etc/webhook&quot;</span>,
+    <span class="hljs-string">&quot;response-message&quot;</span>: <span class="hljs-string">&quot;webhook.snowdreams1006.cn received successfully!&quot;</span>
+  }
+]
+</code></pre>
+<blockquote>
+<p><code>hooks.json</code></p>
+</blockquote>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/sh
+</span>
+curl -i -X GET \
+ <span class="hljs-string">&quot;https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%88%E5%8F%91%E6%9D%A5%E6%96%B0%E6%B6%88%E6%81%AF%E5%95%A6!&amp;desp=%E6%AC%A2%E8%BF%8E%E8%AE%BF%E9%97%AE%5B%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99%5D(https%3A%2F%2Fblob.snowdreams1006.cn%3FtokenId%3D<span class="hljs-variable">$(uuidgen)</span>)%2C%E8%AF%B7%E5%85%B3%E6%B3%A8%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%3A%E3%80%8C+%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99+%E3%80%8D+!%5Bwechat%3Asnowdreams1006%5D(https%3A%2F%2Fsnowdreams1006.github.io%2Fsnowdreams1006-wechat-public.jpeg)&quot;</span>
+</code></pre>
+<blockquote>
+<p><code>query.sh</code></p>
+</blockquote>
+<pre><code class="lang-bash">chmod +x query.sh
+</code></pre>
+<pre><code class="lang-bash">curl http://0.0.0.0:9000/hooks/query
+</code></pre>
+<pre><code class="lang-bash">curl https://webhook.snowdreams1006.cn/hooks/query
+</code></pre>
+<pre><code class="lang-conf">server {
+    listen       80;
+    server_name  webhook.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;  
+}
+
+server {
+  listen 443 ssl http2;
+  server_name  webhook.snowdreams1006.cn;
+
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+  location / {
+      proxy_pass http://172.16.166.99:9000;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+</code></pre>
+<pre><code class="lang-bash">docker restart nginx
+</code></pre>
+<pre><code class="lang-bash">curl https://webhook.snowdreams1006.cn/hooks/query
+</code></pre>
+<h2 id="blog"><a name="blog" class="anchor-navigation-ex-anchor" href="#blog"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. blog</h2>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> nginx whereis nginx
+</code></pre>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> nginx ls /usr/share/nginx/html
+</code></pre>
+<pre><code class="lang-bash">docker cp nginx:/usr/share/nginx/html/index.html ~/blog
+</code></pre>
+<pre><code class="lang-bash">docker run --name blog <span class="hljs-_">-d</span> -p 4000:80 --restart=always -v ~/blog:/usr/share/nginx/html nginx
+</code></pre>
+<pre><code class="lang-conf">server {
+    listen       80;
+    server_name  blog.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name  blog.snowdreams1006.cn;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+    location / {
+      proxy_pass http://172.16.166.99:4000;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+</code></pre>
+<pre><code class="lang-bash">docker restart nginx
+</code></pre>
+<pre><code class="lang-bash">curl https://blog.snowdreams1006.cn
+</code></pre>
+<pre><code class="lang-yml"><span class="hljs-attr">name:</span> blog
+
+<span class="hljs-attr">on:</span> [push]
+
+<span class="hljs-attr">jobs:</span>
+<span class="hljs-attr">  build:</span>
+<span class="hljs-attr">    runs-on:</span> ubuntu-latest
+<span class="hljs-attr">    steps:</span>
+<span class="hljs-attr">    - uses:</span> actions/checkout@v1
+<span class="hljs-attr">    - uses:</span> actions/setup-node@v1
+<span class="hljs-attr">      with:</span>
+<span class="hljs-attr">        node-version:</span> <span class="hljs-string">&quot;12.x&quot;</span>
+<span class="hljs-attr">    - name:</span> Build blog
+<span class="hljs-attr">      run:</span> <span class="hljs-string">|
+        npm install -g gitbook-cli
+        gitbook install
+        gitbook build 
+</span><span class="hljs-attr">    - name:</span> Upload blog
+<span class="hljs-attr">      uses:</span> appleboy/scp-action@master
+<span class="hljs-attr">      env:</span>
+<span class="hljs-attr">        HOST:</span> ${{ secrets.HOST }}
+<span class="hljs-attr">        USERNAME:</span> ${{ secrets.USERNAME }}
+<span class="hljs-attr">        KEY:</span> ${{ secrets.KEY }}
+<span class="hljs-attr">      with:</span>
+<span class="hljs-attr">        source:</span> _book/*
+<span class="hljs-attr">        target:</span> ~/blog
+<span class="hljs-attr">        rm:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">        strip_components:</span> <span class="hljs-number">1</span>
+<span class="hljs-attr">    - name:</span> Deploy blog
+<span class="hljs-attr">      uses:</span> appleboy/ssh-action@master
+<span class="hljs-attr">      with:</span>
+<span class="hljs-attr">        host:</span> ${{ secrets.HOST }}
+<span class="hljs-attr">        username:</span> ${{ secrets.USERNAME }}
+<span class="hljs-attr">        key:</span> ${{ secrets.KEY }}
+<span class="hljs-attr">        script:</span> <span class="hljs-string">|
+          docker restart blog
+</span></code></pre>
+<pre><code class="lang-bash">curl https://blog.snowdreams1006.cn
+</code></pre>
+<pre><code class="lang-conf">server {
+    listen       80;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name  snowdreams1006.cn www.snowdreams1006.cn;
+
+    location / {
+      proxy_pass http://172.16.166.99:4000;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+}
+</code></pre>
+<pre><code class="lang-bash">docker stop nginx
+</code></pre>
+<pre><code class="lang-bash">docker run --name nginx <span class="hljs-_">-d</span> -p 80:80 -p 443:443 --restart=always \
+    -v ~/nginx/nginx.conf:/etc/nginx/nginx.conf \
+    -v ~/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf \
+    -v ~/nginx/logs:/var/<span class="hljs-built_in">log</span>/nginx \
+    -v /etc/letsencrypt:/etc/letsencrypt \
+    nginx
+</code></pre>
+<pre><code class="lang-bash">curl https://snowdreams1006.cn
+curl https://www.snowdreams1006.cn
+curl https://blog.snowdreams1006.cn
+</code></pre>
+<h2 id="resume"><a name="resume" class="anchor-navigation-ex-anchor" href="#resume"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. resume</h2>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> nginx whereis nginx
+</code></pre>
+<pre><code class="lang-bash">docker <span class="hljs-built_in">exec</span> nginx ls /usr/share/nginx/html
+</code></pre>
+<pre><code class="lang-bash">docker cp nginx:/usr/share/nginx/html/index.html ~/resume
+</code></pre>
+<pre><code class="lang-bash">docker run --name resume <span class="hljs-_">-d</span> -p 1006:80 --restart=always -v ~/resume:/usr/share/nginx/html nginx
+</code></pre>
+<pre><code class="lang-conf">server {
+    listen       80;
+    server_name  resume.snowdreams1006.cn;
+    return 301 https://$server_name$request_uri;  
+}
+
+server {
+  listen 443 ssl http2;
+  server_name  resume.snowdreams1006.cn;
+
+  ssl on;
+  ssl_certificate /etc/letsencrypt/live/snowdreams1006.cn/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/snowdreams1006.cn/privkey.pem;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+  location / {
+      proxy_pass http://172.16.166.99:1006;
+      proxy_http_version 1.1;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+</code></pre>
+<pre><code class="lang-bash">docker restart nginx
+</code></pre>
+<pre><code class="lang-bash">curl https://resume.snowdreams1006.cn
+</code></pre>
+<pre><code class="lang-yml"><span class="hljs-attr">name:</span> resume.snowdreams1006.cn
+
+<span class="hljs-attr">on:</span> [push]
+
+<span class="hljs-attr">jobs:</span>
+<span class="hljs-attr">  build:</span>
+<span class="hljs-attr">    runs-on:</span> ubuntu-latest
+<span class="hljs-attr">    steps:</span>
+<span class="hljs-attr">    - uses:</span> actions/checkout@v1
+<span class="hljs-attr">    - name:</span> Upload resume
+<span class="hljs-attr">      uses:</span> appleboy/scp-action@master
+<span class="hljs-attr">      env:</span>
+<span class="hljs-attr">        HOST:</span> ${{ secrets.HOST }}
+<span class="hljs-attr">        USERNAME:</span> ${{ secrets.USERNAME }}
+<span class="hljs-attr">        KEY:</span> ${{ secrets.KEY }}
+<span class="hljs-attr">      with:</span>
+<span class="hljs-attr">        source:</span> static,index.html,README.md,LICENSE
+<span class="hljs-attr">        target:</span> /root/resume
+<span class="hljs-attr">        rm:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    - name:</span> Deploy resume
+<span class="hljs-attr">      uses:</span> appleboy/ssh-action@master
+<span class="hljs-attr">      with:</span>
+<span class="hljs-attr">        host:</span> ${{ secrets.HOST }}
+<span class="hljs-attr">        username:</span> ${{ secrets.USERNAME }}
+<span class="hljs-attr">        key:</span> ${{ secrets.KEY }}
+<span class="hljs-attr">        script:</span> <span class="hljs-string">|
+          docker restart resume
+</span></code></pre>
+<pre><code class="lang-bash">curl https://resume.snowdreams1006.cn
+</code></pre>
+<ul>
+<li><a href="http://lininn.cn/?post=297" target="_blank">Nginx&#x90E8;&#x7F72; Let&#x2019;s Encrypt&#x65F6;&#x62A5;&#x9519;&#xFF1A;Another instance of Certbot is already running</a></li>
+<li><a href="https://hub.docker.com/r/certbot/certbot" target="_blank">certbot/certbot</a></li>
+<li><a href="https://quay.io/repository/letsencrypt/letsencrypt?tag=latest&amp;tab=tags" target="_blank">quay.io/letsencrypt/letsencrypt:latest</a></li>
+<li><a href="https://certbot.eff.org/docs/using.html" target="_blank">User Guide</a></li>
+<li><a href="https://blog.csdn.net/zxian610/article/details/78679743" target="_blank">centos7&#x4E0B;docker&#x90E8;&#x7F72;nginx&#x4F7F;&#x7528;let&apos;s encrypt&#x514D;&#x8D39;&#x8BC1;&#x4E66;</a></li>
+<li><a href="https://blog.csdn.net/qq_41781322/article/details/90288555" target="_blank">ImportError: No module named &apos;requests.packages.urllib3</a></li>
+<li><a href="https://www.cnblogs.com/tiandi/p/7147031.html" target="_blank">centos crontab&#x8BE6;&#x89E3;</a></li>
+<li><a href="https://www.jianshu.com/p/5afc6bbeb28c" target="_blank">&#x5728;Docker&#x5BB9;&#x5668;&#x73AF;&#x5883;&#x4E2D;&#x7528;Let&apos;s Encrypt&#x90E8;&#x7F72;HTTPS</a></li>
+<li><a href="https://www.jianshu.com/p/ea090833f766" target="_blank">Docker&#x73AF;&#x5883;&#x4E0B;&#x81EA;&#x52A8;&#x66F4;&#x65B0;Let&#x2019;s Encrypt SSL&#x8BC1;&#x4E66;</a></li>
+<li><a href="https://blog.51cto.com/wzlinux/2405940" target="_blank">&#x7533;&#x8BF7; Let&apos;s Encrypt &#x901A;&#x914D;&#x7B26; HTTPS &#x8BC1;&#x4E66;</a></li>
+<li><a href="https://blog.hlogc.com/2019/07/19/centos%E9%80%9A%E8%BF%87acme%E7%94%B3%E8%AF%B7lets-encrypt%E9%80%9A%E9%85%8D%E7%AC%A6https%E8%AF%81%E4%B9%A6-%E7%AE%80%E5%8D%95%E7%B2%97%E6%9A%B4/" target="_blank">Centos&#x901A;&#x8FC7;acme&#x7533;&#x8BF7;Let&#x2019;s Encrypt&#x901A;&#x914D;&#x7B26;HTTPS&#x8BC1;&#x4E66;-&#x7B80;&#x5355;&#x7C97;&#x66B4;</a></li>
+</ul>
+<script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
+
+<pre><code class="lang-html">&#x4F5C;&#x8005;: &#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;
+&#x94FE;&#x63A5;: https://snowdreams1006.github.io/devops/docker-nginx.html
+&#x6765;&#x6E90;: &#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;
+&#x672C;&#x6587;&#x539F;&#x521B;&#x53D1;&#x5E03;&#x4E8E;&#x300C;&#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;&#x300D;,&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;,&#x8C22;&#x8C22;&#x5408;&#x4F5C;!
+</code></pre>
+<p><img src="https://snowdreams1006.github.io/snowdreams1006-wechat-open.png" alt="https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"> </p>
+<p><footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
+2019-11-29 16:28:00
+</span></footer></p>
+<div id="gitalk-container"></div>
+                </div>
+                <script src="https://my.openwrite.cn/js/readmore.js"></script>
+                <script>
+                    var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+                    if (!isMobile) {
+                        var btw = new BTWPlugin();
+                        btw.init({"blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip","id":"vip-container"});
+                    }
+                </script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="docker-ops.html" class="navigation navigation-prev " aria-label="Previous page: docker 操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="docker-blog.html" class="navigation navigation-next " aria-label="Next page: docker + blog">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"docker + nginx","level":"4.2.3","depth":2,"next":{"title":"docker + blog","level":"4.2.4","depth":2,"path":"devops/docker-blog.md","ref":"devops/docker-blog.md","articles":[]},"previous":{"title":"docker 操作","level":"4.2.2","depth":2,"path":"devops/docker-ops.md","ref":"devops/docker-ops.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toc","pageview-count","mermaid-gb3","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link","copy-code-button","chart","favicon-absolute","github-buttons","advanced-emoji","rss","readmore","copyright","tbfed-pagefooter","mygitalk","donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"copyright":{"site":"https://snowdreams1006.github.io/","author":"雪之梦技术驿站","website":"雪之梦技术驿站","image":"https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"},"toc":{"addClass":true,"className":"toc"},"readmore":{"blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"/alipay.jpg","alipayText":"支付宝","button":"赏","title":"","wechat":"/wechat.jpg","wechatText":"微信"},"favicon-absolute":{"appleTouchIconMore":{},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{},"favicon":"/favicon.ico"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"雪之梦技术驿站","description":"雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io","author":"snowdreams1006","site_url":"https://snowdreams1006.github.io/","feed_url":"https://snowdreams1006.github.io/rss","managingEditor":"snowdreams1006@163.com","webMaster":"snowdreams1006@163.com"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"pageview-count":{},"github-buttons":{"buttons":[{"user":"snowdreams1006","repo":"snowdreams1006.github.io","type":"star","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"snowdreams1006.github.io","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"技术博客":"https://blob.snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006 搭建的 Gitbook 个人博客,详情请访问 https://snowdreams1006.github.io/"},"file":{"path":"devops/docker-nginx.md","mtime":"2019-11-29T08:28:00.766Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-30T01:22:31.240Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copyright/copyright.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
