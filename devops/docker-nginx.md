@@ -251,7 +251,7 @@ docker pull hongkongkiwi/webhook
 ```
 
 ```bash
-docker run -d -p 9000:9000 --name=webhook \
+docker run -d -p 9000:9000 --name=webhook --restart=always \
 	-v ~/webhook:/etc/webhook \
 	-v /var/run/docker.sock:/var/run/docker.sock \
 	-v /usr/bin/docker:/usr/bin/docker \
