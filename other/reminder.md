@@ -5,16 +5,16 @@
 #! /bin/sh
 
 leftDays=$((($(date +%s -d '20191215') - $(date +%s ))/86400))
-title="跳跳真的快要来了!"
-body="现在距离接驾日期还剩${leftDays}天,您真的准备好了吗?"
+title="***!"
+body="***${leftDays}天,您真的准备好了吗?"
 
 echo "title=${title} body=${body}"
 
 curl -i -X GET \
- "https://bark.snowdreams1006.cn/DtuwQJ6JYWD5CX3hCtwKnd/${title}/${body}?automaticallyCopy=1&copy=${body}&url=https://blog.snowdreams1006.cn/"
+ "https://bark.snowdreams1006.cn/***/${title}/${body}?automaticallyCopy=1&copy=${body}&url=https://blog.snowdreams1006.cn/"
 
 curl -i -X GET \
- "https://sc.ftqq.com/SCU67099T95840f46f3bad01fae1c893c968be0e25dd94acd8217a.send?text=${title}---$(uuidgen)&desp=${body}"
+ "https://sc.ftqq.com/***.send?text=${title}---$(uuidgen)&desp=${body}"
 ```
 
 ```bash
@@ -33,6 +33,10 @@ crontab -e
 
 ```bash
 crontab -l
+```
+
+```
+00 08,10,14,17,22 * * * sudo ~/reminder/tiaotiao.sh >> ~/reminder/tiaotiao.log
 ```
 
 - [crontab 在线表达式](https://tool.lu/crontab/)
