@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 30 Nov 2019 09:36:51 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 Nov 2019 12:44:55 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -651,6 +651,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[更好的部署方式]]></title>
+            <description><![CDATA[ Docker 官方文档, CentOS 官方安装文档.]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/docker.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/docker.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[免费实现https访问网站]]></title>
             <description><![CDATA[Let's Encrypt免费证书签发过程包含以下三个阶段：]]></description>
             <link>https://snowdreams1006.github.io/zero2devops/nginx-https.html</link>
@@ -665,7 +672,7 @@
         </item>
         <item>
             <title><![CDATA[运维部署]]></title>
-            <description><![CDATA[示例:]]></description>
+            <description><![CDATA[知识共享许可协议 Figure: 知识共享许可协议]]></description>
             <link>https://snowdreams1006.github.io/devops/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/README.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
