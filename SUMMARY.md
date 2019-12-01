@@ -98,6 +98,7 @@
 * [从零开始搭建服务器](zero2devops/README.md)
     * [从登录服务器开始](zero2devops/login-and-logout.md)
     * [更加优雅地部署项目](zero2devops/docker.md)
+    * [利用阿里云 OSS部署静态网站](zero2devops/aliyun-oss-static.md)
     * [免费实现https访问网站](zero2devops/nginx-https.md)
     * [webhook](zero2devops/webhook.md)
 * [运维部署](devops/README.md)
