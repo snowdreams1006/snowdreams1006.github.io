@@ -129,6 +129,32 @@ jobs:
       run: ossutil cp -rf ./_book oss://snowdreams1006/    
 ```
 
+```
+https://snowdreams1006.tech/
+
+https://blog.snowdreams1006.cn/
+```
+
+```
+https://snowdreams1006.tech/markdown/
+
+https://blog.snowdreams1006.cn/markdown/
+
+https://blog.snowdreams1006.cn/git/
+
+https://blog.snowdreams1006.cn/git/base/about.html
+
+https://blog.snowdreams1006.cn/git/base/install.html
+
+https://blog.snowdreams1006.cn/git/server/private.html
+```
+
+```
+^/(.*?)/$
+/$1/index.html
+break
+```
+
 - [Github Action 部署博客到阿里云OSS](https://www.jianshu.com/p/99952652b2dd)
 - [在阿里云OSS托管你的个人网站](https://shanyue.tech/op/deploy-fe-with-alioss.html#%E6%96%B0%E5%BB%BA-bucket-%E5%8F%8A%E8%AE%BE%E7%BD%AE)
 - [manyuanrong/setup-ossutil](https://github.com/manyuanrong/setup-ossutil)
