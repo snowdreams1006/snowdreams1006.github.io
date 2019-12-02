@@ -29,7 +29,6 @@
         "advanced-emoji",
         "rss",
         "sitemap-general",
-        "siteverification",
         "readmore",
         "copyright",
         "tbfed-pagefooter",
@@ -103,9 +102,6 @@
         },
         "sitemap-general": {
             "prefix": "https://snowdreams1006.github.io/"
-        },
-        "siteVerification": {
-            "baidu": "u39n1ANFw3"
         },
         "readmore": {
             "blogId": "15702-1569305559839-744",
