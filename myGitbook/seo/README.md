@@ -44,6 +44,7 @@ npm install hexo-generator-baidu-sitemap --save
 ```
 
 - [gitbook-plugin-sitemap-general](https://www.npmjs.com/package/gitbook-plugin-sitemap-general)
+- [gitbook-plugin-siteverification](https://www.npmjs.com/package/gitbook-plugin-siteverification)
 - [gitbook-plugin-push-bd](https://www.npmjs.com/package/gitbook-plugin-push-bd)
 - [hexo-generator-sitemap](https://www.npmjs.com/package/hexo-generator-sitemap)
 - [hexo-generator-baidu-sitemap](https://www.npmjs.com/package/hexo-generator-baidu-sitemap)
