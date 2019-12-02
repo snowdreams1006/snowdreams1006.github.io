@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 01 Dec 2019 04:32:31 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 02 Dec 2019 05:41:41 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -415,6 +415,12 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[优化搜索]]></title>
+            <link>https://snowdreams1006.github.io/myGitbook/seo/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/seo/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[常见问题]]></title>
             <link>https://snowdreams1006.github.io/myGitbook/issue/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/issue/README.html</guid>
@@ -655,6 +661,19 @@
             <description><![CDATA[如果你需要经常性需要多处部署同样的项目,如果你曾经也遇到过"明明在我电脑运行得好好的"问题,如果听说过 Docker 但还没用过,如果你不确定你到底需不需要 Docker ,那么,希望你花时间阅读一下这篇文章!]]></description>
             <link>https://snowdreams1006.github.io/zero2devops/docker.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/docker.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[快速尝鲜基于 Docker 部署项目]]></title>
+            <description><![CDATA[平时工作学习中不可避免要接触到服务器运维工作,简单的 linux 操作是基础工作,打包上传部署应用更是家常便饭,如果只是为了应付工作需求,相信部署应用也不是特别麻烦伤神的一件事.]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/docker-example.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/docker-example.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[利用阿里云 OSS部署静态网站]]></title>
+            <link>https://snowdreams1006.github.io/zero2devops/aliyun-oss-static.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/aliyun-oss-static.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

@@ -28,6 +28,7 @@
         "github-buttons",
         "advanced-emoji",
         "rss",
+        "sitemap-general",
         "readmore",
         "copyright",
         "tbfed-pagefooter",
@@ -98,6 +99,9 @@
                 "java",
                 "php"
             ]
+        },
+        "sitemap-general": {
+            "prefix": "https://snowdreams1006.github.io/"
         },
         "readmore": {
             "blogId": "15702-1569305559839-744",

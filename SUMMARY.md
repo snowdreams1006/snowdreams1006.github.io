@@ -59,6 +59,7 @@
         * [导出电子书](myGitbook/advance/export.md)
         * [发布电子书](myGitbook/advance/publish.md)
     * [公众号引流](myGitbook/openwrite/README.md)
+    * [优化搜索](myGitbook/seo/README.md)
     * [常见问题](myGitbook/issue/README.md)
         * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
         * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
