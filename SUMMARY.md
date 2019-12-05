@@ -147,6 +147,7 @@
 * [晚安](greet/README.md)
 * [其他](other/README.md)
     * [倒计时提醒](other/reminder.md)
+    * [微信防撤回](other/anti-withdrawback-wechat.md)
     * [转型之路](other/transformation.md)
     * [历史统计](other/static.md)
     * [关于作者](other/me.md)

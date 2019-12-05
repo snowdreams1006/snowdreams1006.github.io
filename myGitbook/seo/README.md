@@ -77,6 +77,7 @@ npm install hexo-generator-baidu-sitemap --save
 - [如何做好个人博客的seo呢](https://cloud.tencent.com/developer/article/1476882)
 - [酒香也怕巷子深，教你一招，轻松让百度收录你的个人站点](https://blog.csdn.net/Mculover666/article/details/101756755)
 - [hexo干货系列：（六）hexo提交搜索引擎（百度+谷歌）](https://www.cnblogs.com/tengj/p/5357879.html)
+- [让GitHub Pages博客支持百度搜索引擎收录](https://segmentfault.com/a/1190000002953535)
 - [博客推广——提交搜索引擎](https://selfboot.cn/2014/12/21/add_blog_to_google/)
 - [各大搜索引擎提交入口](https://blog.csdn.net/qq_20343517/article/details/80565639)
 - [搜索引擎提交入口](http://www.xusseo.com/seogongju/tjrk/)
