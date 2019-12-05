@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 02 Dec 2019 07:33:03 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Dec 2019 09:13:54 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -1073,6 +1073,12 @@
             <title><![CDATA[倒计时提醒]]></title>
             <link>https://snowdreams1006.github.io/other/reminder.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/reminder.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信防撤回]]></title>
+            <link>https://snowdreams1006.github.io/other/anti-withdrawback-wechat.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/other/anti-withdrawback-wechat.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
