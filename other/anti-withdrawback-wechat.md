@@ -395,8 +395,78 @@ launchctl load -/Library/LaunchAgents/com.usbmux.iproxy.plist
 7. 安装 `iterm2` , 点击 `Preferences` ,然后点击 `Profiles Command` 为 `ssh 5c`
 以后只需要 `Command + O` ，打开对应的 `Profile` 即可。
 
+## App的结构与构建过程
 
+示例运行方式:执行 `make all`，生成 `ipa` 文件
 
+使用正确 `Team ID`
+
+1. 编辑 `make` 文件，在 `plist` 部分的 `CFBundleldentifie` 填写可用的 `Team ID`
+2. 编辑 `entitlementsplist` 文件，配置 `Team ID`
+
+正确地签名:
+
+1. 编辑 `make` 文件，在 `codesign` 部分填写正确的开发名证书 `ID`；
+2. 将包含 `device ID` 的 `provision` 的文件放到 `make` 文件同级目录;
+
+itools: [http://www.itools.cn/](http://www.itools.cn/)
+
+### 寻找控件背后的代码
+
+`lldb` 打印页层级结构
+
+```bash 
+po ［UIApplteation abaredlpplication］.keywindow.recursivaDeseription
+```
+
+获取 `UIControl` 的 `action` 的需要的方法:
+
+```bash
+allTargets
+allControlEvents
+actionsForTarget:forControlEvent:
+```
+
+### 数据存储
+
+获取沙盒目录:
+
+```bash
+//沙盒根目录
+NSHomaDirectory（）
+//cache目录
+NSSearchPathPorDirectoriesInDomainaNSCacheaDirectory， NSUsarDomainMaak， YES）
+```
+
+plst文件格式转换:
+
+```bash
+plutil -convert xnl1 plist＿binary＿file
+或
+pluti1 -convart pliat＿binary＿file -0 xx.plist
+``` 
+
+keychain信息导出工具:
+ 
+Keychain-Dumper
+
+iOs文件系统
+ 
+ httpe:fideveloper.apple.camdibrarylcontent/documentatian FileManagemenUCor/. htn
+
+### 类与方法
+
+打印 instance size
+
+```bash
+p（int）class_getInstanceSize([AppDelegate class])
+```
+
+arm64 从 isa 获 class 的方法
+
+```bash
+p/x （Class）（isa＿content &（long）＿debag＿1sa＿elaas＿mask）
+```
 
 
 
