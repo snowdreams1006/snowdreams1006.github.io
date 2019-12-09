@@ -79,8 +79,8 @@
         "edit-link-plus": {
             "base": {
               "snowdreams1006.github.io":"https://github.com/snowdreams1006/snowdreams1006.github.io/edit/master",
-              "snowdreams1006.gitlab.io":"https://gitlab.com/snowdreams1006/snowdreams1006.github.io/edit/master",
-              "snowdreams1006.gitee.io":"https://gitee.com/snowdreams1006/snowdreams1006.github.io/edit/master"
+              "snowdreams1006.gitlab.io":"https://gitlab.com/snowdreams1006/snowdreams1006.gitlab.io/edit/master",
+              "snowdreams1006.gitee.io":"https://gitee.com/snowdreams1006/snowdreams1006/edit/master"
             },
             "defaultBase": "https://github.com/snowdreams1006/snowdreams1006.github.io/edit/master",
             "label": "编辑本页"
