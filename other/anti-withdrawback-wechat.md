@@ -280,6 +280,59 @@ cat /tmp/id_rsa.pub >> .ssh/authorized_keys
 ```
 
 
+### 三、通过USB连接
+
+下载地址: [https://cgit.sukimashita.com/usbmuxd.git](https://cgit.sukimashita.com/usbmuxd.git)
+
+usbmuxd-1.0.8
+
+```bash
+python tcprelay.py -t 22:2222
+ssh root@localhost -p 2222
+scp -P 2222 ./test.txt root@localhost:/tmp
+```
+
+### 四、SSH中文
+
+1. 创建".inputrc"
+
+```bash
+set convert- meta off 
+set meta-flag on
+set output-meta on
+```
+
+2. 导入文件到 `var/root` 下面
+
+### 五、key不匹配的问题
+
+打开 `/Users/monkey/.ssh/know_hosts` 文件，删除对应 `IP` 的 `key` 即可。
+
+### 六、查看进程列表
+
+```bash
+ps aux | grep xXx
+```
+      
+## 快速SSH登入设备的方法
+
+这里给大家安利一个快速快速SSH登录设备的方法。
+
+1. 切换到目最
+
+```bash
+cd /Users/monkey/.ssh  #monkey为当前用户名
+```
+
+2.如果没有 `config` 文件，新建一个。
+
+```bash
+touch config
+```
+
+3. 编辑内容
+
+
 
 
 - [Shell 教程](https://www.runoob.com/linux/linux-shell.html)
