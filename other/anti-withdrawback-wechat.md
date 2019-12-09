@@ -468,7 +468,7 @@ arm64 从 isa 获 class 的方法
 p/x （Class）（isa＿content &（long）＿debag＿1sa＿elaas＿mask）
 ```
 
-
+![http://imgkr.cn-bj.ufileos.com/6532a17d-a97d-4f75-bbdd-4184cf4bc153.png](http://imgkr.cn-bj.ufileos.com/6532a17d-a97d-4f75-bbdd-4184cf4bc153.png)
 
 - [Shell 教程](https://www.runoob.com/linux/linux-shell.html)
 - [linux：shell脚本（逻辑判断和字符串比较）](https://blog.csdn.net/wxc_qlu/article/details/82826106)
