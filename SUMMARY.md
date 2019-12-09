@@ -159,12 +159,15 @@
 * [TODO清单](todo/README.md)
 
 ## 开源项目
-* [gitbook-official](https://snowdreams1006.github.io/gitbook-official/)
-* [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
-* [gitbook-plugin-readmore](https://snowdreams1006.github.io/gitbook-plugin-readmore/)
-* [gitbook-plugin-favicon-absolute](https://snowdreams1006.github.io/gitbook-plugin-favicon-absolute/)
-* [hexo-plugin-gitalk](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
-* [hexo-plugin-readmore](https://snowdreams1006.github.io/hexo-plugin-readmore/)
-* [gitbook-plugin-copyright](https://snowdreams1006.github.io/gitbook-plugin-copyright/)
+* [gitbook 插件项目](opensource/gitbook/README.md)
+    * [gitbook-official](https://snowdreams1006.github.io/gitbook-official/)
+    * [gitbook-plugin-mygitalk](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
+    * [gitbook-plugin-readmore](https://snowdreams1006.github.io/gitbook-plugin-readmore/)
+    * [gitbook-plugin-favicon-absolute](https://snowdreams1006.github.io/gitbook-plugin-favicon-absolute/)
+    * [gitbook-plugin-copyright](https://snowdreams1006.github.io/gitbook-plugin-copyright/)
+    * [gitbook-plugin-edit-link-plus](https://snowdreams1006.github.io/gitbook-plugin-edit-link-plus/)
+* [hexo 插件项目](opensource/hexo/README.md)
+    * [hexo-plugin-gitalk](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
+    * [hexo-plugin-readmore](https://snowdreams1006.github.io/hexo-plugin-readmore/)
 * [security-plus](https://security-plus.github.io/)
 
