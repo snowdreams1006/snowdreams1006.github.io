@@ -324,13 +324,74 @@ ps aux | grep xXx
 cd /Users/monkey/.ssh  #monkey为当前用户名
 ```
 
-2.如果没有 `config` 文件，新建一个。
+2. 如果没有 `config` 文件，新建一个。
 
 ```bash
 touch config
 ```
 
 3. 编辑内容
+
+```conf
+Host 5c  #这个名称是自定义的设备名,自己定义一个就行
+Hostname localhost  #我是通过USB端口映射,所以写localhost
+User root  #以root用户登录
+Port 2222  #指定端口号为映射的端口号 2222
+IdentityFile /Users/monkey/.ssh/id_rsa #rsa key的路径
+```
+
+4. 端口映射
+
+```bash
+python tcprelay.py 22:2222
+```
+
+5. 一键登录
+
+```bash
+ssh 5c
+```
+
+6. 设置启动时端口自动映射:
+
+安装:
+
+```bash
+brew install libimobiledevice
+```
+
+创建文件:
+
+```bash
+-/Library/LaunchAgents/com.usbmux.iproxy.plist
+```
+
+写入内容:
+
+```xml
+<?xml version ="l.0" encoding ="UTF- -8"?><IDOCTYPE plist PUBLIC "-//Apple//DTD PLIST1.0//EN" "http://www.apple.com/DTDs/PropertyList-l.0.dtd">
+<plist version="l.0">
+    <dict>
+        <key>Label</key>
+        <string>com.usbmux.iproxy</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/local/bin/iproxy</string>
+            <string>2222</string>
+            <string>22</string>
+        </array>
+        <key>RunAtLoad</key><true/>
+        <key>KeepAlive</key><true/>
+    </dict>
+</plist>
+```
+
+执行命令: 
+
+```bash
+launchctl load -/Library/LaunchAgents/com.usbmux.iproxy.plist
+```
+
 
 
 
