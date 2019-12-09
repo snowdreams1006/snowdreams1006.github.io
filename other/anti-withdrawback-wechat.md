@@ -392,6 +392,10 @@ brew install libimobiledevice
 launchctl load -/Library/LaunchAgents/com.usbmux.iproxy.plist
 ```
 
+7. 安装 `iterm2` , 点击 `Preferences` ,然后点击 `Profiles Command` 为 `ssh 5c`
+以后只需要 `Command + O` ，打开对应的 `Profile` 即可。
+
+
 
 
 
