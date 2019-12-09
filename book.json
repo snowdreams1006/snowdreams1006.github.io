@@ -21,7 +21,7 @@
         "sharing-plus",
         "expandable-chapters-small",
         "anchor-navigation-ex",
-        "edit-link",
+        "edit-link-plus",
         "copy-code-button",
         "chart",
         "favicon-absolute",
@@ -76,10 +76,16 @@
                 "pocket", "stumbleupon"
             ]
         },
-        "edit-link": {
-            "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",
+        "edit-link-plus": {
+            "base": {
+              "snowdreams1006.github.io":"https://github.com/snowdreams1006/snowdreams1006.github.io/edit/master",
+              "snowdreams1006.gitlab.io":"https://gitlab.com/snowdreams1006/snowdreams1006.github.io/edit/master",
+              "snowdreams1006.gitee.io":"https://gitee.com/snowdreams1006/snowdreams1006.github.io/edit/master"
+            },
+            "defaultBase": "https://github.com/snowdreams1006/snowdreams1006.github.io/edit/master",
             "label": "编辑本页"
         },
+
         "chart": {
             "type": "c3"
         },
