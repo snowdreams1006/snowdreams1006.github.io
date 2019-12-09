@@ -233,36 +233,51 @@ ldb: [http://lldb.llvm.org/](http://lldb.llvm.org/)
 
 lipo , otool
 
-认识越狱设备
+## 认识越狱设备
 
-本节课中涉及Cydia里面的工具:系统定制工具: Cloaky命令行工具: adv-cmds文件管理工具: iFile
+本节课中涉及Cydia里面的工具:
 
-越狱环境配置
+系统定制工具: Cloaky
+
+命令行工具: adv-cmds
+
+文件管理工具: iFile
+
+### 越狱环境配置
 
 本节课涉及到的一些工具:
 
-      ●usbmuxd●appsync
+- OpenSSH
 
-      ●Apple File Conduit“2"
+- usbmuxd
 
-一、OpenSSH安装使用
+- appsync
 
-ssh rooteip
+- Apple File Conduit'2'
+
+### 一、OpenSSH安装使用
+
+```bash
+ssh root@ip
 
 password:alpine
+```
 
 修改密码
 
+```bash
 passwd
 
 passwd mobile
+```
 
-二、免密码登录
+### 二、免密码登录
 
-ssh- lkeygen -t rsa -P "
-
-      scp /Users/用户名/ .ssh/id rsa. pub root@Ip:/tmpcat /tmp/id_ rsa.pub >> . ssh/authorized_ keys
-
+```bash
+ssh-keygen -t rsa -P ''
+scp /Users/用户名/.ssh/id_rsa.pub root@Ip:/tmp
+cat /tmp/id_rsa.pub >> .ssh/authorized_keys
+```
 
 
 
