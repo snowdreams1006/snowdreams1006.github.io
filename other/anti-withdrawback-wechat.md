@@ -166,5 +166,106 @@ echo "\n\t未发现微信小助手"
 fi
 ```
 
+
+## 初识逆向工程
+
+下面是在iOS逆向分析中使用到的一些工具，大家可以先看看了解下，在后面的课程中会给大家讲解一些工具的使用及其原理。
+
+### 一、砸壳工具:
+
+- dumpdecrypted: [https://github.com/stefanesser/dumpdecrypted](https://github.com/stefanesser/dumpdecrypted)
+
+- Clutch: [https://github.com/KJCracks/Clutch](https://github.com/KJCracks/Clutch)
+
+### 二、界面分析工具:
+
+Reveal: [https://revealapp.com/](https://revealapp.com/)
+
+### 三、监控工具:
+
+- snoop-it: https://code.google.com/archive/p/snoop-it
+
+- introspy: [https://github.com/iSECPartners/Introspy-iOS](https://github.com/iSECPartners/Introspy-iOS)
+
+### 四、静态分析工具
+
+- IDA: [https://www.hex-rays.com/products/ida/support/download_demo.shtml](https://www.hex-rays.com/products/ida/support/download_demo.shtml)
+
+- Hopper: [https://www.hopperapp.com/](https://www.hopperapp.com/)
+
+### 五、动态调试工具
+
+ldb: [http://lldb.llvm.org/](http://lldb.llvm.org/)
+
+### 六、动态脚本工具
+
+- cycript: [http://www.cycript.org/](http://www.cycript.org/)
+
+- frida: [http://www.frida.re](https://www.frida.re/)
+
+### 七、抓包工具
+
+- BurpSuite: [https://portswigger.net/burp/download.html](https://portswigger.net/burp/download.html)
+
+- Charles: [https://www.charlesproxy.com/](https://www.charlesproxy.com/)
+
+- Wireshark: [https://www.wireshark.org/download.html](https://www.wireshark.org/download.html)
+
+### 八、Mac工具
+
+- MachOView: [http://github.com/gdbinit/MachOView](https://github.com/gdbinit/MachOView)
+
+- class-dump: [https://github.com/nygard/class-dump](https://github.com/nygard/class-dump)
+
+- thoes: [https://github.com/theos/theos/wiki/installation](https://github.com/theos/theos/wiki/installation)
+
+- iOSOpenDev: https://code.google.com/archive/p/iosopendev/downloads
+
+- insert_dylib: [https://github.com/Tyilo/insert_dylib](https://github.com/Tyilo/insert_dylib)
+
+- iTerm: [http://www.iterm2.com/](https://www.iterm2.com/)
+
+- Alfred: [https://www.alfredapp.com/](https://www.alfredapp.com/)
+
+- iTools: [http:/wwW.itools.cn/](http://www.itools.cn/)
+
+- iFunBox: [http://www.i-funbox.com/](http://www.i-funbox.com/)
+
+lipo , otool
+
+认识越狱设备
+
+本节课中涉及Cydia里面的工具:系统定制工具: Cloaky命令行工具: adv-cmds文件管理工具: iFile
+
+越狱环境配置
+
+本节课涉及到的一些工具:
+
+      ●usbmuxd●appsync
+
+      ●Apple File Conduit“2"
+
+一、OpenSSH安装使用
+
+ssh rooteip
+
+password:alpine
+
+修改密码
+
+passwd
+
+passwd mobile
+
+二、免密码登录
+
+ssh- lkeygen -t rsa -P "
+
+      scp /Users/用户名/ .ssh/id rsa. pub root@Ip:/tmpcat /tmp/id_ rsa.pub >> . ssh/authorized_ keys
+
+
+
+
+
 - [Shell 教程](https://www.runoob.com/linux/linux-shell.html)
 - [linux：shell脚本（逻辑判断和字符串比较）](https://blog.csdn.net/wxc_qlu/article/details/82826106)
