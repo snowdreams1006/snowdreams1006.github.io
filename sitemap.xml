@@ -100,6 +100,7 @@
 <url> <loc>https://snowdreams1006.github.io/devops/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/devops/docker-env.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/devops/docker-ops.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/devops/docker-compose.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/devops/docker-nginx.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/devops/docker-blog.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/devops/docker-resume.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -115,6 +116,7 @@
 <url> <loc>https://snowdreams1006.github.io/devops/docker-gogs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/devops/docker-gitlab.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/devops/docker-gitea.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/devops/docker-crawlab.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/mac-install-vmware.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/mac-vmware-install-windows.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -143,5 +145,7 @@
 <url> <loc>https://snowdreams1006.github.io/other/me.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/donate.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/todo/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/opensource/gitbook/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/opensource/hexo/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GLOSSARY.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

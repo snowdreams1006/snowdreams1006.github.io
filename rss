@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 05 Dec 2019 09:13:54 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Dec 2019 05:02:39 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -711,6 +711,12 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[docker compose]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-compose.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-compose.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[docker + nginx]]></title>
             <link>https://snowdreams1006.github.io/devops/docker-nginx.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-nginx.html</guid>
@@ -800,6 +806,12 @@
             <title><![CDATA[docker + gitea]]></title>
             <link>https://snowdreams1006.github.io/devops/docker-gitea.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-gitea.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker + crawlab]]></title>
+            <link>https://snowdreams1006.github.io/devops/docker-crawlab.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/docker-crawlab.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -1077,6 +1089,7 @@
         </item>
         <item>
             <title><![CDATA[微信防撤回]]></title>
+            <description><![CDATA[下面是在iOS逆向分析中使用到的一些工具，大家可以先看看了解下，在后面的课程中会给大家讲解一些工具的使用及其原理。]]></description>
             <link>https://snowdreams1006.github.io/other/anti-withdrawback-wechat.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/anti-withdrawback-wechat.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
@@ -1184,6 +1197,18 @@ npm ERR! To permanently fix this problem, please run:
 npm ERR!   sudo chown -R 501:20 "/Users/sunpo/.npm"]]></description>
             <link>https://snowdreams1006.github.io/todo/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/todo/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[gitbook 插件项目]]></title>
+            <link>https://snowdreams1006.github.io/opensource/gitbook/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/opensource/gitbook/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[hexo 插件项目]]></title>
+            <link>https://snowdreams1006.github.io/opensource/hexo/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/opensource/hexo/README.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
