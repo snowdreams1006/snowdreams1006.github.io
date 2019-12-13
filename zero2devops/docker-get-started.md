@@ -24,10 +24,19 @@
 
 > 现在打开你的浏览器,搜索 `docker` 关键字看看官方出现在什么位置,欢迎评论区留言告诉我!
 
-## 宾至如归的部署项目
+## 宾至如归地部署项目
+
+> 官方网站: [https://www.docker.com/](https://www.docker.com/)
+
+根据上文找到官网后,首先映入眼帘的便是简明扼要的自我介绍,`Debug your app, not your environment` 翻译成中文是说**不在你的环境调试你的应用**,这句话可能有些歧义,调试自己的应用时难道不是自己的开发环境?
+
+所以下方还有略小的说明文字辅助解释,`Securely build, share and run any application, anywhere` 即 **安全地构建,分享,运行任何应用到任何地方**. 
+
+由此可见,`Debug your app, not your environment` 其实表达的意思是问题场景,而 `Securely build, share and run any application, anywhere` 说的才是功能介绍.
+
+- 问题: 如果遇到非本地开发环境情况下,需要调试你的应用怎么办?
+- 回答: `docker` 可以安全构建,分享并运行任何程序到任意地方.(弦外之音是说无论身在何处,真实运行环境都和你本地开发环境保持一致,还会怕因为环境不同步而导致的意外 bug 吗)
+
+如果让我一句话概况 `docker` 到底是什么,那么我会说: `是一种宾至如部署项目的工具!`
 
 ![zero2devops-docker-get-started-docker-welcome.png](./images/zero2devops-docker-get-started-docker-welcome.png)
-
-
-Debug your app, not your environment
-Securely build, share and run any application, anywhere
