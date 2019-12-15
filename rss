@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 11 Dec 2019 04:18:56 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 15 Dec 2019 05:13:54 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -661,6 +661,13 @@
             <description><![CDATA[如果你需要经常性需要多处部署同样的项目,如果你曾经也遇到过"明明在我电脑运行得好好的"问题,如果听说过 Docker 但还没用过,如果你不确定你到底需不需要 Docker ,那么,希望你花时间阅读一下这篇文章!]]></description>
             <link>https://snowdreams1006.github.io/zero2devops/docker.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/docker.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[跟着官方体验 Docker]]></title>
+            <description><![CDATA[传统部署开发项目时往往需要上传项目,安装依赖环境,配置环境变量等等操作才能启动项目,而更加优雅的部署项目应该可以简化上述步骤,这种需求的刺激下 Docker 也就应运而生.]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/docker-get-started.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/docker-get-started.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
