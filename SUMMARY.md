@@ -168,6 +168,7 @@
     * [gitbook-plugin-copyright](https://snowdreams1006.github.io/gitbook-plugin-copyright/)
     * [gitbook-plugin-edit-link-plus](https://snowdreams1006.github.io/gitbook-plugin-edit-link-plus/)
     * [gitbook-plugin-multilingual-index](https://snowdreams1006.github.io/gitbook-plugin-multilingual-index/)
+    * [gitbook-plugin-icp](https://snowdreams1006.github.io/gitbook-plugin-icp/)
 * [hexo 插件项目](opensource/hexo/README.md)
     * [hexo-plugin-gitalk](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
     * [hexo-plugin-readmore](https://snowdreams1006.github.io/hexo-plugin-readmore/)

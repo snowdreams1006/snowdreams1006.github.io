@@ -693,9 +693,3 @@ $ gitbook serve
 ```
 
 ![gitbook-plugin-search-plus-preview.png](./images/gitbook-plugin-search-plus-preview.png)
-
-
-
-
-
- 
