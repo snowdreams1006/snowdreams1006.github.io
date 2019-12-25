@@ -97,8 +97,7 @@
 * [python 学习笔记](python/README.md)
     * [搭建开发环境](python/environment.md)
     * [基础数据类型](python/type.md)
-
-## 运维部署
+    * [爬虫看小说](python/crawler-novel.md)
 * [从零开始搭建服务器](zero2devops/README.md)
     * [从登录服务器开始](zero2devops/login-and-logout.md)
     * [更加优雅地部署项目](zero2devops/docker.md)
