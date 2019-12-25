@@ -69,10 +69,6 @@
     * [函数式接口](java8/functionInterface.md)
 
 ## 学习笔记
-* [php 学习笔记](php/README.md)
-    * [搭建开发环境( mac 版)](php/php-setup-environment-mac.md)
-    * [关于时区的那点事](php/set-timezone-method.md)
-    * [日期时间操作一箩筐](php/datetime-overview.md)
 * [go 学习笔记](go/README.md)
     * [初识 go](go/base/about.md)
         * [环境搭建](go/base/setup.md)
@@ -94,6 +90,13 @@
     * [错误管理](go/error/about.md)
         * [延迟函数](go/error/defer.md)
     * [常见问题](go/issue/faq.md)
+* [php 学习笔记](php/README.md)
+    * [搭建开发环境( mac 版)](php/php-setup-environment-mac.md)
+    * [关于时区的那点事](php/set-timezone-method.md)
+    * [日期时间操作一箩筐](php/datetime-overview.md)
+* [python 学习笔记](python/README.md)
+    * [搭建开发环境](python/environment.md)
+    * [基础数据类型](python/type.md)
 
 ## 运维部署
 * [从零开始搭建服务器](zero2devops/README.md)
