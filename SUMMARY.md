@@ -96,6 +96,7 @@
     * [日期时间操作一箩筐](php/datetime-overview.md)
 * [python 学习笔记](python/README.md)
     * [搭建开发环境](python/environment.md)
+    * [requests类库](python/requests.md)
     * [基础数据类型](python/type.md)
     * [爬虫看小说](python/crawler-novel.md)
 * [从零开始搭建服务器](zero2devops/README.md)
