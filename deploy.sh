@@ -1,7 +1,15 @@
 #! /bin/bash
 
-# re-generate docs
-rm -rf _book/ && gitbook build
+# run gitsubmodule
+cd python
+/bin/bash deploy.sh
+cd ../
+
+# remove cache dir
+rm -rf _book/
+
+# generate docs 
+gitbook build 
 
 # copy to docs
 cp -rf _book/ .
@@ -16,4 +24,4 @@ git add .
 git commit -m "auto deploy website"
 
 # push to github and others
-git push origin master
+# git push origin master
