@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 25 Dec 2019 07:25:43 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jan 2020 03:48:38 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -641,25 +641,6 @@
             <description><![CDATA[php-datetime-overview-doc.png]]></description>
             <link>https://snowdreams1006.github.io/php/datetime-overview.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/php/datetime-overview.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[learn-python]]></title>
-            <link>https://snowdreams1006.github.io/python/README.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/python/README.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[搭建开发环境]]></title>
-            <link>https://snowdreams1006.github.io/python/environment.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/python/environment.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[基础数据类型]]></title>
-            <description><![CDATA[python 基本环境已经安装并配置成功,可以在任意目录中运行 python 脚本命令.]]></description>
-            <link>https://snowdreams1006.github.io/python/type.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/python/type.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
