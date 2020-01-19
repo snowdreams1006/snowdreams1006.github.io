@@ -1,10 +1,5 @@
 #! /bin/bash
 
-# run gitsubmodule
-cd python
-/bin/bash deploy.sh
-cd ../
-
 # remove cache dir
 rm -rf _book/
 
