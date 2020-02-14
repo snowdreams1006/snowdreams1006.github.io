@@ -1474,6 +1474,659 @@ chromeHelper.prototype = {
 }
 ```
 
+### step 4 : 获取机器信息
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 机器码信息,来源于getpackStr中的this.getMachineCode()
+     */
+    getMachineCode: function() {
+      // 机器码信息,若数据无效则返回 new
+      var machineCodeArr = [];
+
+      // uuid代码
+      machineCodeArr.push(this.getUUIDCode());
+      // cookie代码
+      machineCodeArr.push(this.getCookieCode());
+      // 用户代理代码
+      machineCodeArr.push(this.getUserAgentCode(1));
+      // 源高度代码
+      machineCodeArr.push(this.getScrHeightCode(1));
+      // 源宽度代码
+      machineCodeArr.push(this.getScrWidthCode(1));
+      // 可用高度代码
+      machineCodeArr.push(this.getScrAvailHeightCode(1));
+      // 可用宽度代码
+      machineCodeArr.push(this.getScrAvailWidthCode(1));
+      // 颜色深度代码
+      machineCodeArr.push(this.getMd5ScrColorDepthCode(1));
+      // 源设备XDPI代码
+      machineCodeArr.push(this.getScrDeviceXDPICode());
+      // app代码名称代码
+      machineCodeArr.push(this.getAppCodeNameCode(1));
+      // app名称代码
+      machineCodeArr.push(this.getAppNameCode(1));
+      // Java是否启用代码
+      machineCodeArr.push(this.getJavaEnabledCode(1));
+      // 媒体类型代码
+      machineCodeArr.push(this.getMimeTypesCode(1));
+      // 平台代码
+      machineCodeArr.push(this.getPlatformCode(1));
+      // app次版本代码
+      machineCodeArr.push(this.getAppMinorVersionCode());
+      // 浏览器语言代码
+      machineCodeArr.push(this.getBrowserLanguageCode(1));
+      // Cookie是否启用代码
+      machineCodeArr.push(this.getCookieEnabledCode(1));
+      // Cpu类型代码
+      machineCodeArr.push(this.getCpuClassCode());
+      // 是否在线代码
+      machineCodeArr.push(this.getOnLineCode(1));
+      // 系统语言代码
+      machineCodeArr.push(this.getSystemLanguageCode());
+      // 用户语言代码
+      machineCodeArr.push(this.getUserLanguageCode());
+      // 时区偏移代码
+      machineCodeArr.push(this.getTimeZoneCode(1));
+      // flash版本代码
+      machineCodeArr.push(this.getFlashVersionCode(1));
+      // 历史记录条数代码
+      machineCodeArr.push(this.getHistoryListCode(1));
+      // 自定义ID代码
+      machineCodeArr.push(this.getCustIdCode());
+      // 发送平台代码
+      machineCodeArr.push(this.getSendPlatformCode());
+
+      return machineCodeArr;
+    }
+}
+```
+
+- 浏览器uuid代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 浏览器uuid代码,例如: "new"
+     */
+    getUUIDCode: function() {
+      return {
+        "key": "cookieCode",
+        "value": "new"
+      }
+    }
+}
+```
+
+- cookie 代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * cookie 代码,例如: "new" | "FGH3kVgP6_yvbDscWdJ4k6j4SoYuWlLf"
+     */
+    getCookieCode: function(trueOrFake) {
+      // 初次加载时可忽略该选项,再次加载时会读取本地缓存查找RAIL_DEVICEID的值,该值正是初次请求/otn/HttpZF/logdevice返回的cookieCode
+      return {
+        "key": "cookieCode",
+        "value": "new"
+      }
+    }
+}
+```
+
+- 用户代理代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 用户代理代码,例如: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36"
+     */
+    getUserAgentCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "userAgent",
+          "value": navigator.userAgent.replace(/\&|\+/g, "").toString()
+        }
+      }
+      return {
+        "key": "userAgent",
+        "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36"
+      }
+    }
+}
+```
+
+- 源高度代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 源高度代码,例如: "800"
+     */
+    getScrHeightCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "scrHeight",
+          "value": window.screen.height.toString()
+        }
+      }
+      return {
+        "key": "scrHeight",
+        "value": "800"
+      }
+    }
+}
+```
+
+- 源宽度代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 源宽度代码,例如: "1280"
+     */
+    getScrWidthCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "scrWidth",
+          "value": window.screen.width.toString()
+        }
+      }
+      return {
+        "key": "scrWidth",
+        "value": "1280"
+      }
+    }
+}
+```
+
+- 可用宽度代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 可用宽度代码,例如: "777"
+     */
+    getScrAvailHeightCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "scrAvailHeight",
+          "value": window.screen.availHeight.toString()
+        }
+      }
+      return {
+        "key": "scrAvailHeight",
+        "value": "777"
+      }
+    }
+}
+```
+
+- 可用宽度代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 可用宽度代码,例如: "1280"
+     */
+    getScrAvailWidthCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "scrAvailWidth",
+          "value": window.screen.availWidth.toString()
+        }
+      }
+      return {
+        "key": "scrAvailWidth",
+        "value": "1280"
+      }
+    }
+}
+```
+
+- 颜色深度代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 颜色深度代码,例如: "24"
+     */
+    getMd5ScrColorDepthCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "scrColorDepth",
+          "value": window.screen.colorDepth.toString()
+        }
+      }
+      return {
+        "key": "scrColorDepth",
+        "value": "24"
+      }
+    }
+}
+```
+
+- 源设备XDPI代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 源设备XDPI代码(Chrome 不支持!!!),例如: ""
+     */
+    getScrDeviceXDPICode: function() {
+      return {
+        "key": "scrDeviceXDPI",
+        "value": ""
+      }
+    }
+}
+```
+
+- app代码名称代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * app代码名称代码,例如: "Mozilla"
+     */
+    getAppCodeNameCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "appCodeName",
+          "value": navigator.appCodeName.toString()
+        }
+      }
+      return {
+        "key": "appCodeName",
+        "value": "Mozilla"
+      }
+    }
+}
+```
+
+- app名称代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * app名称代码,例如: "Netscape"
+     */
+    getAppNameCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "appName",
+          "value": navigator.appName.toString()
+        }
+      }
+      return {
+        "key": "appName",
+        "value": "Netscape"
+      }
+    }
+}
+```
+
+- Java是否启用代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * Java是否启用代码,例如: "0"
+     */
+    getJavaEnabledCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "javaEnabled",
+          "value": navigator.javaEnabled() ? "1" : "0"
+        }
+      }
+      return {
+        "key": "javaEnabled",
+        "value": "0"
+      }
+    }
+}
+```
+
+- 媒体类型代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 媒体类型代码,例如: "52d67b2a5aa5e031084733d5006cc664"
+     */
+    getMimeTypesCode: function(trueOrFake) {
+      if (trueOrFake) {
+        for (var a = navigator.mimeTypes, b = "", c = 0; c < a.length; c++) {
+          b += a[c].type + "#";
+        }
+        var code = ba(b.substr(0, b.length - 1));
+        return {
+          "key": "mimeTypes",
+          "value": code
+        }
+      }
+      return {
+        "key": "mimeTypes",
+        "value": "52d67b2a5aa5e031084733d5006cc664"
+      }
+    }
+}
+```
+
+- 平台代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 平台代码,例如: "MacIntel"
+     */
+    getPlatformCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "os",
+          "value": navigator.platform.toString()
+        }
+      }
+      return {
+        "key": "os",
+        "value": "MacIntel"
+      }
+    }
+}
+```
+
+- app次版本信息
+
+```js
+chromeHelper.prototype = {
+    /**
+     * app次版本信息(Chrome 不支持!!!),例如: ""
+     */
+    getAppMinorVersionCode: function() {
+      return {
+        "key": "appMinorVersion",
+        "value": ""
+      }
+    }
+}
+```
+
+- 浏览器语言代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 浏览器语言代码,例如: "zh-CN"
+     */
+    getBrowserLanguageCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "browserLanguage",
+          "value": navigator.language.toString()
+        }
+      }
+      return {
+        "key": "browserLanguage",
+        "value": "zh-CN"
+      }
+    }
+}
+```
+
+- cookie是否启用代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * cookie是否启用代码,例如: "1"
+     */
+    getCookieEnabledCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "cookieEnabled",
+          "value": navigator.cookieEnabled ? "1" : "0"
+        }
+      }
+      return {
+        "key": "cookieEnabled",
+        "value": "1"
+      }
+    }
+}
+```
+
+- cpu类型代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * cpu类型代码(Chrome 不支持!!!),例如: ""
+     */
+    getCpuClassCode: function() {
+      return {
+        "key": "cpuClass",
+        "value": ""
+      }
+    }
+}
+```
+
+- 是否在线代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 是否在线代码,例如: "true"
+     */
+    getOnLineCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "onLine",
+          "value": navigator.onLine.toString()
+        }
+      }
+      return {
+        "key": "onLine",
+        "value": "true"
+      }
+    }
+}
+```
+
+- 系统语言代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 系统语言代码(Chrome 不支持!!!),例如: ""
+     */
+    getSystemLanguageCode: function() {
+      return {
+        "key": "systemLanguage",
+        "value": ""
+      }
+    }
+}
+```
+
+- 用户语言代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 用户语言代码(Chrome 不支持!!!),例如: ""
+     */
+    getUserLanguageCode: function() {
+      return {
+        "key": "userLanguage",
+        "value": ""
+      }
+    }
+}
+```
+
+- 偏移时区代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 偏移时区代码,例如: -8
+     */
+    getTimeZoneCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "timeZone",
+          "value": (new Date).getTimezoneOffset() / 60
+        }
+      }
+      return {
+        "key": "timeZone",
+        "value": -8
+      }
+    }
+}
+```
+
+- flash 版本代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * flash 版本代码,例如: 0
+     */
+    getFlashVersionCode: function(trueOrFake) {
+      if (trueOrFake) {
+        var code = 0;
+        navigator.plugins && 0 < navigator.plugins.length && (flash = navigator.plugins["Shockwave Flash"]) && (flashArr = flash.description.split(" "),
+          code = flashArr[2] + " " + flashArr[3]);
+        return {
+          "key": "flashVersion",
+          "value": code
+        }
+      }
+      return {
+        "key": "flashVersion",
+        "value": 0
+      }
+    }
+}
+```
+
+- 历史记录条数代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 历史记录条数代码,例如: 2
+     */
+    getHistoryListCode: function(trueOrFake) {
+      if (trueOrFake) {
+        return {
+          "key": "historyList",
+          "value": window.history.length
+        }
+      }
+      return {
+        "key": "historyList",
+        "value": 2
+      }
+    }
+}
+```
+
+- 自定义ID代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 自定义ID代码,例如: "133"
+     */
+    getCustIdCode: function() {
+      return {
+        "key": "custID",
+        "value": "133"
+      }
+    }
+}
+```
+
+- 发送平台代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 发送平台代码,例如: "WEB"
+     */
+    getSendPlatformCode: function() {
+      return {
+        "key": "platform",
+        "value": "WEB"
+      }
+    }
+}
+```
+
+
+
+```js
+chromeHelper.prototype = {
+    
+}
+```
+
+
+```js
+chromeHelper.prototype = {
+    
+}
+```
+
+```js
+chromeHelper.prototype = {
+    
+}
+```
+
+
+```js
+chromeHelper.prototype = {
+    
+}
+```
+
+
+```js
+chromeHelper.prototype = {
+    
+}
+```
+
+
+```js
+chromeHelper.prototype = {
+    
+}
+```
+
+
+
+```js
+chromeHelper.prototype = {
+    
+}
+```
+
+
+```js
+chromeHelper.prototype = {
+    
+}
+```
+
+
 ## 源码下载
 
 ## 回顾总结
