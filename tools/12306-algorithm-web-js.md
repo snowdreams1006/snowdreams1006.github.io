@@ -2069,63 +2069,838 @@ chromeHelper.prototype = {
 }
 ```
 
-
-
-```js
-chromeHelper.prototype = {
-    
-}
-```
-
+### step 5 : 组合指纹信息
 
 ```js
 chromeHelper.prototype = {
-    
+    /**
+     * 获取浏览器原始指纹信息,来源于initEc中的l = c.getpackStr(b)
+     */
+    getOriginBrowserFingerPrintInfo: function() {
+      // 浏览器指纹信息
+      var originBrowserFingerPrintArr = [];
+
+      // 基本信息,用于生成更多信息
+      var basicInfoArr = this.getBasicInfoArr();
+      // 基本信息加密摘要
+      var encryptedStr = this.encryptedBasicInfoArr(basicInfoArr);
+      // 更多信息,用于组合机器码信息
+      var moreInfoArr = this.getDfpMoreInfo(basicInfoArr, encryptedStr);
+      // 机器码信息
+      var machineCodeArr = this.getMachineCode(moreInfoArr);
+      // 组合信息并重新排序
+      originBrowserFingerPrintArr = this.concatMachineCodeAndDfpMoreInfo(machineCodeArr, moreInfoArr);
+
+      return originBrowserFingerPrintArr;
+    }
 }
 ```
 
 ```js
 chromeHelper.prototype = {
-    
+    /**
+     * 组合机器码和浏览器更多信息构成原始指纹,来源于getpackStr中的getpackStr
+     */
+    concatMachineCodeAndDfpMoreInfo: function(machineCodeArr, moreInfoArr) {
+      // 机器码合并更多信息
+      var tempArr = machineCodeArr.concat(moreInfoArr);
+      // 重新排序
+      tempArr.sort(function(a, b) {
+        var c, d;
+        if ("object" === typeof a && "object" === typeof b && a && b)
+          return c = a.key,
+            d = b.key,
+            c === d ? 0 : typeof c === typeof d ? c < d ? -1 : 1 : typeof c < typeof d ? -1 : 1;
+        throw "error";
+      });
+      return tempArr;
+    }
 }
 ```
 
+### step 6 : 重新分类指纹
 
 ```js
 chromeHelper.prototype = {
-    
+    /**
+     * 获取浏览器指纹信息,来源于initEc中的k.push(new p("scrAvailSize",h));
+     */
+    getClassifiedBrowserFingerPrintInfo: function() {
+      // 浏览器指纹信息
+      var originBrowserFingerPrintArr = this.getOriginBrowserFingerPrintInfo();
+
+      // 分类键名
+      var Gb = "appCodeName appMinorVersion appName cpuClass onLine systemLanguage userLanguage historyList hasLiedLanguages hasLiedResolution hasLiedOs hasLiedBrowser".split(" "),
+        Hb = ["scrAvailWidth", "scrAvailHeight"],
+        Ib = ["scrDeviceXDPI", "scrColorDepth", "scrWidth", "scrHeight"],
+        Jb = ["sessionStorage", "localStorage", "indexedDb", "openDatabase"];
+
+      // 本地存储类,键名对应 Jb
+      var storeDbArr = [];
+      // 屏幕实际尺寸类,键名对应 Ib
+      var srcScreenSizeArr = [];
+      // 屏幕可用尺寸类,键名对应 Hb
+      var scrAvailSizeArr = [];
+      // 其他类也是分类后的浏览器指纹信息
+      var classifiedBrowserFingerPrintArr = []
+
+      // 提取出本地存储类,屏幕实际尺寸类,屏幕可用尺寸类以及其他类
+      for (var i = 0; i < originBrowserFingerPrintArr.length; i++) {
+        var browserFingerPrint = originBrowserFingerPrintArr[i];
+        var name = browserFingerPrint.key;
+        var value = browserFingerPrint.value;
+        "new" != value && -1 == Gb.indexOf(name) && (-1 != Jb.indexOf(name) ? storeDbArr.push(browserFingerPrint) : -1 != Hb.indexOf(name) ? scrAvailSizeArr.push(browserFingerPrint) : -1 != Ib.indexOf(name) ? srcScreenSizeArr.push(browserFingerPrint) : classifiedBrowserFingerPrintArr.push(browserFingerPrint));
+      }
+
+      // 本地存储
+      storeDb = "";
+      for (i = 0; i < storeDbArr.length; i++) {
+        storeDb = storeDb + storeDbArr[i].key.charAt(0) + storeDbArr[i].value;
+      }
+
+      // 屏幕实际尺寸
+      srcScreenSize = "";
+      for (i = 0; i < srcScreenSizeArr.length; i++) {
+        srcScreenSize = 0 == i ? srcScreenSize + srcScreenSizeArr[i].value : srcScreenSize + "x" + srcScreenSizeArr[i].value;
+      }
+
+      // 屏幕可用尺寸
+      scrAvailSize = "";
+      for (i = 0; i < scrAvailSizeArr.length; i++) {
+        scrAvailSize = 0 == i ? scrAvailSize + scrAvailSizeArr[i].value : scrAvailSize + "x" + scrAvailSizeArr[i].value;
+      }
+
+      // 添加到其他类构成完整的指纹信息
+      classifiedBrowserFingerPrintArr.push({
+        "key": "storeDb",
+        "value": storeDb
+      });
+      classifiedBrowserFingerPrintArr.push({
+        "key": "srcScreenSize",
+        "value": srcScreenSize
+      });
+      classifiedBrowserFingerPrintArr.push({
+        "key": "scrAvailSize",
+        "value": scrAvailSize
+      });
+
+      return classifiedBrowserFingerPrintArr;
+    }
 }
 ```
 
+### step 7 : 加密分类指纹
 
 ```js
 chromeHelper.prototype = {
-    
+    /**
+     * 获取初始化浏览器设备信息,来源于initEc中的e = c.hashAlg(k, a, e);
+     */
+    encryptedFingerPrintInfo: function() {
+      // 获取分类后的浏览器指纹信息
+      classifiedBrowserFingerPrintInfoArr = this.getClassifiedBrowserFingerPrintInfo();
+      encryptedFingerPrintInfoMap = this.hashAlg(classifiedBrowserFingerPrintInfoArr, "", "");
+
+      return encryptedFingerPrintInfoMap;
+    }
 }
 ```
 
+- hashAlg
 
 ```js
 chromeHelper.prototype = {
-    
+    /**
+     * 加密算法每天都可能更新,主要是调整加密次序,核心逻辑并没有实质性改变!
+     */
+    hashAlg: function(data, param, hashcode) {
+      // 将对象数组按照字母表排序键名
+      data = this.sortArray(data);
+
+      // 处理对象数组中的值并加密参数键名
+      param_hashcode_map = this.encryptedKeyInArray(data, param, hashcode);
+      param = param_hashcode_map['param'];
+      hashcode = param_hashcode_map['hashcode'];
+
+      // 反转字符串
+      reverse_hashcode = this.reverse(hashcode);
+      // 按照次序分为两部分
+      reverse_two_part_hashcode = this.split2partInOrder(reverse_hashcode);
+      // 按照次序分成三部分
+      reverse_two_part_three_part_hashcode = this.split3partInOrder(reverse_two_part_hashcode);
+      // 按照次序分为两部分
+      reverse_two_part_three_part_two_part_hashcode = this.split2partInOrder(reverse_two_part_three_part_hashcode);
+      // 转换成字母码
+      reverse_two_part_three_part_two_part_charCode_hashcode = this.covert2charCode(reverse_two_part_three_part_two_part_hashcode)
+      // 对请求参数进行第三次加密
+      encrypted_hashcode = ya(reverse_two_part_three_part_two_part_charCode_hashcode);
+
+      return {
+        "key": param,
+        "value": encrypted_hashcode
+      }
+    }
 }
 ```
 
-
+- sortArray
 
 ```js
 chromeHelper.prototype = {
-    
+    sortArray: function(data) {
+      // 数据列表进行排序,按照字母表升序排序
+      data.sort(function(self, other) {
+        // 正在参与比较的键名和另外的键名
+        var selfKey, otherKey;
+        // 参与比较的对象是键值对map类型
+        if ("object" === typeof self && "object" === typeof other && self && other) {
+          selfKey = self.key;
+          otherKey = other.key;
+          if (selfKey === otherKey) {
+            return 0;
+          } else {
+            if (typeof selfKey === typeof otherKey) {
+              if (selfKey < otherKey) {
+                return -1;
+              } else {
+                return 1;
+              }
+            } else {
+              if (typeof selfKey < typeof otherKey) {
+                return -1;
+              } else {
+                return 1;
+              }
+            }
+          }
+        }
+        throw "error";
+      });
+      return data
+    }
 }
 ```
 
+- encryptedKeyInArray
 
 ```js
 chromeHelper.prototype = {
-    
+    encryptedKeyInArray: function(data, param, hashcode) {
+      // 原始参数和加密参数对应关系
+      var param_relationship = {
+        adblock: "FMQw",
+        scrAvailSize: "TeRS",
+        appMinorVersion: "qBVW",
+        scrColorDepth: "qmyu",
+        userLanguage: "hLzX",
+        hasLiedLanguages: "j5po",
+        systemLanguage: "e6OK",
+        scrHeight: "5Jwy",
+        plugins: "ks0Q",
+        historyList: "kU5z",
+        storeDb: "Fvje",
+        timeZone: "q5aJ",
+        appcodeName: "qT7b",
+        hasLiedResolution: "3neK",
+        hasLiedBrowser: "2xC5",
+        doNotTrack: "VEek",
+        indexedDb: "3sw-",
+        mimeTypes: "jp76",
+        cookieEnabled: "VPIf",
+        online: "9vyE",
+        browserName: "-UVA",
+        scrAvailHeight: "88tV",
+        scrAvailWidth: "E-lJ",
+        cookieCode: "VySQ",
+        hasLiedOs: "ci5c",
+        userAgent: "0aew",
+        scrDeviceXDPI: "3jCe",
+        webSmartID: "E3gR",
+        cpuClass: "Md7A",
+        localStorage: "XM7l",
+        scrWidth: "ssI5",
+        jsFonts: "EOQP",
+        browserVersion: "d435",
+        localCode: "lEnu",
+        os: "hAqN",
+        openDatabase: "V8vl",
+        browserLanguage: "q4f3",
+        flashVersion: "dzuS",
+        srcScreenSize: "tOHY",
+        javaEnabled: "yD16",
+        touchSupport: "wNLf",
+        sessionStorage: "HVia"
+      };
+
+      // 翻译数据字段实现加密请求参数
+      for (var i = 0; i < data.length; i++) {
+        // 键名如存在%则剔除
+        var key = data[i].key.replace(RegExp("%", "gm"), "");
+        // 键值如是字符串则剔除其中的%字符
+        var value = data[i].value;
+        if ("string" == typeof value) {
+          value = value.replace(RegExp("%", "gm"), "");
+        }
+        // 将数据对象列表处理成字符串:追加原始字符串和加密字符串
+        if ("" !== value) {
+          hashcode += key + value;
+          param += "\x26" + (void 0 == param_relationship[key] ? key : param_relationship[key]) + "\x3d" + value;
+        }
+      }
+
+      return {
+        param: param,
+        hashcode: hashcode
+      }
+    }
 }
 ```
 
+- reverse
+
+```js
+chromeHelper.prototype = {
+    reverse: function(str) {
+      temp = ''
+      for (i = str.length - 1; 0 <= i; i--) {
+        temp += str.charAt(i);
+      }
+      return temp
+    }
+}
+```
+
+- split2partInOrder
+
+```js
+chromeHelper.prototype = {
+    split2partInOrder: function(str) {
+      temp = '';
+      len = str.length;
+      if (0 == len % 2) {
+        first_str = str.substring(len / 2, len);
+        second_str = str.substring(0, len / 2);
+
+        temp = first_str + second_str;
+      } else {
+        first_str = str.substring(len / 2 + 1, len);
+        second_str = str.charAt(len / 2);
+        third_str = str.substring(0, len / 2);
+
+        temp = first_str + second_str + third_str;
+      }
+
+      return temp
+    }
+}
+```
+
+- split3partInOrder
+
+```js
+chromeHelper.prototype = {
+    split3partInOrder: function(str) {
+      temp = "";
+      temp_len = 0;
+      len = str.length;
+      if (0 == len % 3) {
+        temp_len = parseInt(len / 3);
+      } else {
+        temp_len = parseInt(len / 3) + 1;
+      }
+      if (3 > len) {
+        temp = str;
+      } else {
+        first_str = str.substring(0, 1 * temp_len);
+        second_str = str.substring(1 * temp_len, 2 * temp_len);
+        third_str = str.substring(2 * temp_len, len);
+
+        temp = second_str + third_str + first_str;
+      }
+
+      return temp
+    },
+}
+```
+
+- covert2charCode
+
+```js
+chromeHelper.prototype = {
+    covert2charCode: function(str) {
+      temp = "";
+      len = str.length;
+
+      for (i = 0; i < len; i++) {
+        temp_code = str.charAt(i).charCodeAt(0);
+        if (127 === temp_code) {
+          temp = temp + String.fromCharCode(0);
+        } else {
+          temp = temp + String.fromCharCode(temp_code + 1);
+        }
+      }
+
+      return temp
+    }
+}
+```
+
+- 加密算法核心代码
+
+```js
+    var Ja;
+    if (!(Ja = Y)) {
+    var da = Math,
+      pa = {},
+      qa = pa.lib = {},
+      ab = function() {},
+      ea = qa.Base = {
+        create: function() {
+          var a = this.extend();
+          a.init.apply(a, arguments);
+          return a
+        },
+        init: function() {},
+        clone: function() {
+          return this.init.prototype.extend(this)
+        },
+        mixIn: function(a) {
+          for (var b in a)
+            a.hasOwnProperty(b) && (this[b] = a[b]);
+          a.hasOwnProperty("toString") && (this.toString = a.toString)
+        },
+        extend: function(a) {
+          ab.prototype = this;
+          var b = new ab;
+          a && b.mixIn(a);
+          b.hasOwnProperty("init") || (b.init = function() {
+            b.$super.init.apply(this, arguments)
+          });
+          b.init.prototype = b;
+          b.$super = this;
+          return b
+        }
+      },
+      fa = qa.WordArray = ea.extend({
+        clone: function() {
+          var a = ea.clone.call(this);
+          a.words = this.words.slice(0);
+          return a
+        },
+        init: function(a, b) {
+          a = this.words = a || [];
+          this.sigBytes = void 0 != b ? b : 4 * a.length
+        },
+        toString: function(a) {
+          return (a || vb).stringify(this)
+        },
+        random: function(a) {
+          for (var b = [], c = 0; c < a; c += 4)
+            b.push(4294967296 * da.random() | 0);
+          return new fa.init(b, a)
+        },
+        concat: function(a) {
+          var b = this.words,
+            c = a.words,
+            d = this.sigBytes;
+          a = a.sigBytes;
+          this.clamp();
+          if (d % 4)
+            for (var e = 0; e < a; e++)
+              b[d + e >>> 2] |= (c[e >>> 2] >>> 24 - e % 4 * 8 & 255) << 24 - (d + e) % 4 * 8;
+          else if (65535 < c.length)
+            for (e = 0; e < a; e += 4)
+              b[d + e >>> 2] = c[e >>> 2];
+          else
+            b.push.apply(b, c);
+          this.sigBytes += a;
+          return this
+        },
+        clamp: function() {
+          var a = this.words,
+            b = this.sigBytes;
+          a[b >>> 2] &= 4294967295 << 32 - b % 4 * 8;
+          a.length = da.ceil(b / 4)
+        }
+      }),
+      Ka = pa.enc = {},
+      vb = Ka.Hex = {
+        parse: function(a) {
+          for (var b = a.length, c = [], d = 0; d < b; d += 2)
+            c[d >>> 3] |= parseInt(a.substr(d, 2), 16) << 24 - d % 8 * 4;
+          return new fa.init(c, b / 2)
+        },
+        stringify: function(a) {
+          var b = a.words;
+          a = a.sigBytes;
+          for (var c = [], d = 0; d < a; d++) {
+            var e = b[d >>> 2] >>> 24 - d % 4 * 8 & 255;
+            c.push((e >>> 4).toString(16));
+            c.push((e & 15).toString(16))
+          }
+          return c.join("")
+        }
+      },
+      bb = Ka.Latin1 = {
+        stringify: function(a) {
+          var b = a.words;
+          a = a.sigBytes;
+          for (var c = [], d = 0; d < a; d++)
+            c.push(String.fromCharCode(b[d >>> 2] >>> 24 - d % 4 * 8 & 255));
+          return c.join("")
+        },
+        parse: function(a) {
+          for (var b = a.length, c = [], d = 0; d < b; d++)
+            c[d >>> 2] |= (a.charCodeAt(d) & 255) << 24 - d % 4 * 8;
+          return new fa.init(c, b)
+        }
+      },
+      wb = Ka.Utf8 = {
+        parse: function(a) {
+          return bb.parse(unescape(encodeURIComponent(a)))
+        },
+        stringify: function(a) {
+          try {
+            return decodeURIComponent(escape(bb.stringify(a)))
+          } catch (b) {
+            throw Error("Malformed UTF-8 data");
+          }
+        }
+      },
+      cb = qa.BufferedBlockAlgorithm = ea.extend({
+        _process: function(a) {
+          var b = this._data,
+            c = b.words,
+            d = b.sigBytes,
+            e = this.blockSize,
+            f = d / (4 * e),
+            f = a ? da.ceil(f) : da.max((f | 0) - this._minBufferSize, 0);
+          a = f * e;
+          d = da.min(4 * a, d);
+          if (a) {
+            for (var h = 0; h < a; h += e)
+              this._doProcessBlock(c, h);
+            h = c.splice(0, a);
+            b.sigBytes -= d
+          }
+          return new fa.init(h, d)
+        },
+        reset: function() {
+          this._data = new fa.init;
+          this._nDataBytes = 0
+        },
+        _append: function(a) {
+          "string" == typeof a && (a = wb.parse(a));
+          this._data.concat(a);
+          this._nDataBytes += a.sigBytes
+        },
+        clone: function() {
+          var a = ea.clone.call(this);
+          a._data = this._data.clone();
+          return a
+        },
+        _minBufferSize: 0
+      });
+    qa.Hasher = cb.extend({
+      reset: function() {
+        cb.reset.call(this);
+        this._doReset()
+      },
+      _createHmacHelper: function(a) {
+        return function(b, c) {
+          return (new xb.HMAC.init(a, c)).finalize(b)
+        }
+      },
+      _createHelper: function(a) {
+        return function(b, c) {
+          return (new a.init(c)).finalize(b)
+        }
+      },
+      blockSize: 16,
+      init: function(a) {
+        this.cfg = this.cfg.extend(a);
+        this.reset()
+      },
+      update: function(a) {
+        this._append(a);
+        this._process();
+        return this
+      },
+      cfg: ea.extend(),
+      finalize: function(a) {
+        a && this._append(a);
+        return this._doFinalize()
+      }
+    });
+    var xb = pa.algo = {};
+    Ja = pa
+    }
+    for (var Y = Ja, ra = Math, sa = Y, R = sa.lib, yb = R.WordArray, ta = R.Hasher, R = sa.algo, db = [], eb = [], ua = 2, ga = 0; 64 > ga;) {
+    var W;
+    a: {
+      W = ua;
+      for (var zb = ra.sqrt(W), La = 2; La <= zb; La++)
+        if (!(W % La)) {
+          W = !1;
+          break a
+        }
+      W = !0
+    }
+    W && (8 > ga && (db[ga] = Ya(ra.pow(ua, .5))),
+      eb[ga] = Ya(ra.pow(ua, 1 / 3)),
+      ga++);
+    ua++
+    }
+    var S = [],
+    R = R.SHA256 = ta.extend({
+      _doFinalize: function() {
+        var a = this._data,
+          b = a.words,
+          c = 8 * this._nDataBytes,
+          d = 8 * a.sigBytes;
+        b[d >>> 5] |= 128 << 24 - d % 32;
+        b[(d + 64 >>> 9 << 4) + 14] = ra.floor(c / 4294967296);
+        b[(d + 64 >>> 9 << 4) + 15] = c;
+        a.sigBytes = 4 * b.length;
+        this._process();
+        return this._hash
+      },
+      _doProcessBlock: function(a, b) {
+        for (var c = this._hash.words, d = c[0], e = c[1], f = c[2], h = c[3], m = c[4], k = c[5], g = c[6], N = c[7], l = 0; 64 > l; l++) {
+          if (16 > l)
+            S[l] = a[b + l] | 0;
+          else {
+            var p = S[l - 15],
+              n = S[l - 2];
+            S[l] = ((p << 25 | p >>> 7) ^ (p << 14 | p >>> 18) ^ p >>> 3) + S[l - 7] + ((n << 15 | n >>> 17) ^ (n << 13 | n >>> 19) ^ n >>> 10) + S[l - 16]
+          }
+          p = N + ((m << 26 | m >>> 6) ^ (m << 21 | m >>> 11) ^ (m << 7 | m >>> 25)) + (m & k ^ ~m & g) + eb[l] + S[l];
+          n = ((d << 30 | d >>> 2) ^ (d << 19 | d >>> 13) ^ (d << 10 | d >>> 22)) + (d & e ^ d & f ^ e & f);
+          N = g;
+          g = k;
+          k = m;
+          m = h + p | 0;
+          h = f;
+          f = e;
+          e = d;
+          d = p + n | 0
+        }
+        c[0] = c[0] + d | 0;
+        c[1] = c[1] + e | 0;
+        c[2] = c[2] + f | 0;
+        c[3] = c[3] + h | 0;
+        c[4] = c[4] + m | 0;
+        c[5] = c[5] + k | 0;
+        c[6] = c[6] + g | 0;
+        c[7] = c[7] + N | 0
+      },
+      clone: function() {
+        var a = ta.clone.call(this);
+        a._hash = this._hash.clone();
+        return a
+      },
+      _doReset: function() {
+        this._hash = new yb.init(db.slice(0))
+      }
+    });
+    sa.SHA256 = ta._createHelper(R);
+    sa.HmacSHA256 = ta._createHmacHelper(R);
+    var fb = Y,
+    Ab = fb.lib.WordArray;
+    fb.enc.Base64 = {
+    parse: function(a) {
+      var b = a.length,
+        c = this._map,
+        d = c.charAt(64);
+      d && (d = a.indexOf(d), -1 != d && (b = d));
+      for (var d = [], e = 0, f = 0; f < b; f++)
+        if (f % 4) {
+          var h = c.indexOf(a.charAt(f - 1)) << f % 4 * 2,
+            m = c.indexOf(a.charAt(f)) >>> 6 - f % 4 * 2;
+          d[e >>> 2] |= (h | m) << 24 - e % 4 * 8;
+          e++
+        }
+      return Ab.create(d, e)
+    },
+    stringify: function(a) {
+      var b = a.words,
+        c = a.sigBytes,
+        d = this._map;
+      a.clamp();
+      a = [];
+      for (var e = 0; e < c; e += 3)
+        for (var f = (b[e >>> 2] >>> 24 - e % 4 * 8 & 255) << 16 | (b[e + 1 >>> 2] >>> 24 - (e + 1) % 4 * 8 & 255) << 8 | b[e + 2 >>> 2] >>> 24 - (e + 2) % 4 * 8 & 255, h = 0; 4 > h && e + .75 * h < c; h++)
+          a.push(d.charAt(f >>> 6 * (3 - h) & 63));
+      if (b = d.charAt(64))
+        for (; a.length % 4;)
+          a.push(b);
+      return a.join("")
+    },
+    _map: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
+    };
+
+    function Ya(a) {
+    return 4294967296 * (a - (a | 0)) | 0
+    }
+
+    /**
+    * 标准加密算法实现
+    */
+    function ya(a) {
+    return Y.SHA256(a).toString(Y.enc.Base64)
+    }
+
+    /**
+    * 自定义加密算法实现
+    */
+    function rb(a) {
+    var b = a.split(".");
+    if (4 !== b.length)
+      throw Error("Invalid format -- expecting a.b.c.d");
+    for (var c = a = 0; c < b.length; ++c) {
+      var d = parseInt(b[c], 10);
+      if (Number.isNaN(d) || 0 > d || 255 < d)
+        throw Error("Each octet must be between 0 and 255");
+      a |= d << 8 * (b.length - c - 1);
+      a >>>= 0
+    }
+    return a
+    }
+
+    function Ya(a) {
+        return 4294967296 * (a - (a | 0)) | 0
+    }
+
+    /**
+   * 自定义加密算法实现
+   */
+  function ba(a) {
+    var ca = 8;
+    for (var b = [], c = (1 << ca) - 1, d = 0; d < a.length * ca; d += ca)
+      b[d >> 5] |= (a.charCodeAt(d / ca) & c) << d % 32;
+    a = a.length * ca;
+    b[a >> 5] |= 128 << a % 32;
+    b[(a + 64 >>> 9 << 4) + 14] = a;
+    a = 1732584193;
+    for (var c = -271733879, d = -1732584194, e = 271733878, f = 0; f < b.length; f += 16) {
+      var h = a,
+        p = c,
+        g = d,
+        m = e;
+      a = E(a, c, d, e, b[f + 0], 7, -680876936);
+      e = E(e, a, c, d, b[f + 1], 12, -389564586);
+      d = E(d, e, a, c, b[f + 2], 17, 606105819);
+      c = E(c, d, e, a, b[f + 3], 22, -1044525330);
+      a = E(a, c, d, e, b[f + 4], 7, -176418897);
+      e = E(e, a, c, d, b[f + 5], 12, 1200080426);
+      d = E(d, e, a, c, b[f + 6], 17, -1473231341);
+      c = E(c, d, e, a, b[f + 7], 22, -45705983);
+      a = E(a, c, d, e, b[f + 8], 7, 1770035416);
+      e = E(e, a, c, d, b[f + 9], 12, -1958414417);
+      d = E(d, e, a, c, b[f + 10], 17, -42063);
+      c = E(c, d, e, a, b[f + 11], 22, -1990404162);
+      a = E(a, c, d, e, b[f + 12], 7, 1804603682);
+      e = E(e, a, c, d, b[f + 13], 12, -40341101);
+      d = E(d, e, a, c, b[f + 14], 17, -1502002290);
+      c = E(c, d, e, a, b[f + 15], 22, 1236535329);
+      a = C(a, c, d, e, b[f + 1], 5, -165796510);
+      e = C(e, a, c, d, b[f + 6], 9, -1069501632);
+      d = C(d, e, a, c, b[f + 11], 14, 643717713);
+      c = C(c, d, e, a, b[f + 0], 20, -373897302);
+      a = C(a, c, d, e, b[f + 5], 5, -701558691);
+      e = C(e, a, c, d, b[f + 10], 9, 38016083);
+      d = C(d, e, a, c, b[f + 15], 14, -660478335);
+      c = C(c, d, e, a, b[f + 4], 20, -405537848);
+      a = C(a, c, d, e, b[f + 9], 5, 568446438);
+      e = C(e, a, c, d, b[f + 14], 9, -1019803690);
+      d = C(d, e, a, c, b[f + 3], 14, -187363961);
+      c = C(c, d, e, a, b[f + 8], 20, 1163531501);
+      a = C(a, c, d, e, b[f + 13], 5, -1444681467);
+      e = C(e, a, c, d, b[f + 2], 9, -51403784);
+      d = C(d, e, a, c, b[f + 7], 14, 1735328473);
+      c = C(c, d, e, a, b[f + 12], 20, -1926607734);
+      a = A(c ^ d ^ e, a, c, b[f + 5], 4, -378558);
+      e = A(a ^ c ^ d, e, a, b[f + 8], 11, -2022574463);
+      d = A(e ^ a ^ c, d, e, b[f + 11], 16, 1839030562);
+      c = A(d ^ e ^ a, c, d, b[f + 14], 23, -35309556);
+      a = A(c ^ d ^ e, a, c, b[f + 1], 4, -1530992060);
+      e = A(a ^ c ^ d, e, a, b[f + 4], 11, 1272893353);
+      d = A(e ^ a ^ c, d, e, b[f + 7], 16, -155497632);
+      c = A(d ^ e ^ a, c, d, b[f + 10], 23, -1094730640);
+      a = A(c ^ d ^ e, a, c, b[f + 13], 4, 681279174);
+      e = A(a ^ c ^ d, e, a, b[f + 0], 11, -358537222);
+      d = A(e ^ a ^ c, d, e, b[f + 3], 16, -722521979);
+      c = A(d ^ e ^ a, c, d, b[f + 6], 23, 76029189);
+      a = A(c ^ d ^ e, a, c, b[f + 9], 4, -640364487);
+      e = A(a ^ c ^ d, e, a, b[f + 12], 11, -421815835);
+      d = A(e ^ a ^ c, d, e, b[f + 15], 16, 530742520);
+      c = A(d ^ e ^ a, c, d, b[f + 2], 23, -995338651);
+      a = D(a, c, d, e, b[f + 0], 6, -198630844);
+      e = D(e, a, c, d, b[f + 7], 10, 1126891415);
+      d = D(d, e, a, c, b[f + 14], 15, -1416354905);
+      c = D(c, d, e, a, b[f + 5], 21, -57434055);
+      a = D(a, c, d, e, b[f + 12], 6, 1700485571);
+      e = D(e, a, c, d, b[f + 3], 10, -1894986606);
+      d = D(d, e, a, c, b[f + 10], 15, -1051523);
+      c = D(c, d, e, a, b[f + 1], 21, -2054922799);
+      a = D(a, c, d, e, b[f + 8], 6, 1873313359);
+      e = D(e, a, c, d, b[f + 15], 10, -30611744);
+      d = D(d, e, a, c, b[f + 6], 15, -1560198380);
+      c = D(c, d, e, a, b[f + 13], 21, 1309151649);
+      a = D(a, c, d, e, b[f + 4], 6, -145523070);
+      e = D(e, a, c, d, b[f + 11], 10, -1120210379);
+      d = D(d, e, a, c, b[f + 2], 15, 718787259);
+      c = D(c, d, e, a, b[f + 9], 21, -343485551);
+      a = N(a, h);
+      c = N(c, p);
+      d = N(d, g);
+      e = N(e, m)
+    }
+    b = [a, c, d, e];
+    a = rb ? "0123456789ABCDEF" : "0123456789abcdef";
+    c = "";
+    for (d = 0; d < 4 * b.length; d++)
+      c += a.charAt(b[d >> 2] >> d % 4 * 8 + 4 & 15) + a.charAt(b[d >> 2] >> d % 4 * 8 & 15);
+    return c.toLowerCase()
+  }
+
+  /**
+   * ba->E->A->N
+   */
+  function E(a, b, c, d, e, f, h) {
+    return A(b & c | ~b & d, a, b, e, f, h)
+  }
+
+  /**
+   * ba->C->A->N
+   */
+  function C(a, b, c, d, e, f, h) {
+    return A(b & d | c & ~d, a, b, e, f, h)
+  }
+
+  /**
+   * ba->A->N
+   */
+  function A(a, b, c, d, e, f) {
+    a = N(N(b, a), N(d, f));
+    return N(a << e | a >>> 32 - e, c)
+  }
+
+  /**
+   * ba->D->A->N
+   */
+  function D(a, b, c, d, e, f, h) {
+    return A(c ^ (b | ~d), a, b, e, f, h)
+  }
+
+  /**
+   * ba->N
+   */
+  function N(a, b) {
+    var c = (a & 65535) + (b & 65535);
+    return (a >> 16) + (b >> 16) + (c >> 16) << 16 | c & 65535
+  }
+```
 
 ## 源码下载
 
