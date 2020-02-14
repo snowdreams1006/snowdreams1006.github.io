@@ -11,7 +11,7 @@
 
 ## 算法分析
 
-### step 1 : 获取浏览器基本信息
+### step 1 : 获取基本信息
 
 ```js
 chromeHelper.prototype = {
@@ -959,6 +959,220 @@ chromeHelper.prototype = {
 }
 ```
 
+### step 2 : 加密基本信息
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 加密浏览器基本信息,来源于aa的get中var f = c.x64hash128(d.join("~~~"), 31);
+     */
+    encryptedBasicInfoArr: function(basicInfoArr) {
+      // 剔除无效 undefined 数据并处理数组对象
+      concatArr = [];
+      for (i = 0; i < basicInfoArr.length; i++) {
+        var basicInfoValue = basicInfoArr[i].value;
+
+        // 值对应的也有可能是数组,针对这种情况也转成字符串.
+        if ("undefined" !== typeof basicInfoValue) {
+          if (Object.prototype.toString.call(basicInfoValue) === '[object Array]') {
+            basicInfoValue = basicInfoValue.join(";");
+          }
+          concatArr.push(basicInfoValue);
+        }
+      }
+
+      // 加密基本信息
+      return this.x64hash128(concatArr.join("~~~"), 31);
+    }
+}
+```
+
+- x64hash128
+
+```js
+chromeHelper.prototype = {
+    x64hash128: function(a, b) {
+      a = a || "";
+      b = b || 0;
+      for (var c = a.length % 16, d = a.length - c, e = [0, b], f = [0, b], g, p, h = [2277735313, 289559509], m = [1291169091, 658871167], l = 0; l < d; l += 16)
+        g = [a.charCodeAt(l + 4) & 255 | (a.charCodeAt(l + 5) & 255) << 8 | (a.charCodeAt(l + 6) & 255) << 16 | (a.charCodeAt(l + 7) & 255) << 24, a.charCodeAt(l) & 255 | (a.charCodeAt(l + 1) & 255) << 8 | (a.charCodeAt(l + 2) & 255) << 16 | (a.charCodeAt(l + 3) & 255) << 24],
+        p = [a.charCodeAt(l + 12) & 255 | (a.charCodeAt(l + 13) & 255) << 8 | (a.charCodeAt(l + 14) & 255) << 16 | (a.charCodeAt(l + 15) & 255) << 24, a.charCodeAt(l + 8) & 255 | (a.charCodeAt(l + 9) & 255) << 8 | (a.charCodeAt(l + 10) & 255) << 16 | (a.charCodeAt(l + 11) & 255) << 24],
+        g = this.x64Multiply(g, h),
+        g = this.x64Rotl(g, 31),
+        g = this.x64Multiply(g, m),
+        e = this.x64Xor(e, g),
+        e = this.x64Rotl(e, 27),
+        e = this.x64Add(e, f),
+        e = this.x64Add(this.x64Multiply(e, [0, 5]), [0, 1390208809]),
+        p = this.x64Multiply(p, m),
+        p = this.x64Rotl(p, 33),
+        p = this.x64Multiply(p, h),
+        f = this.x64Xor(f, p),
+        f = this.x64Rotl(f, 31),
+        f = this.x64Add(f, e),
+        f = this.x64Add(this.x64Multiply(f, [0, 5]), [0, 944331445]);
+      g = [0, 0];
+      p = [0, 0];
+      switch (c) {
+        case 15:
+          p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 14)], 48));
+        case 14:
+          p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 13)], 40));
+        case 13:
+          p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 12)], 32));
+        case 12:
+          p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 11)], 24));
+        case 11:
+          p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 10)], 16));
+        case 10:
+          p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 9)], 8));
+        case 9:
+          p = this.x64Xor(p, [0, a.charCodeAt(l + 8)]),
+            p = this.x64Multiply(p, m),
+            p = this.x64Rotl(p, 33),
+            p = this.x64Multiply(p, h),
+            f = this.x64Xor(f, p);
+        case 8:
+          g = this.x64Xor(g, this.x64LeftShift([0, a.charCodeAt(l + 7)], 56));
+        case 7:
+          g = this.x64Xor(g, this.x64LeftShift([0, a.charCodeAt(l + 6)], 48));
+        case 6:
+          g = this.x64Xor(g, this.x64LeftShift([0, a.charCodeAt(l + 5)], 40));
+        case 5:
+          g = this.x64Xor(g, this.x64LeftShift([0, a.charCodeAt(l + 4)], 32));
+        case 4:
+          g = this.x64Xor(g, this.x64LeftShift([0, a.charCodeAt(l + 3)], 24));
+        case 3:
+          g = this.x64Xor(g, this.x64LeftShift([0, a.charCodeAt(l + 2)], 16));
+        case 2:
+          g = this.x64Xor(g, this.x64LeftShift([0, a.charCodeAt(l + 1)], 8));
+        case 1:
+          g = this.x64Xor(g, [0, a.charCodeAt(l)]),
+            g = this.x64Multiply(g, h),
+            g = this.x64Rotl(g, 31),
+            g = this.x64Multiply(g, m),
+            e = this.x64Xor(e, g)
+      }
+      e = this.x64Xor(e, [0, a.length]);
+      f = this.x64Xor(f, [0, a.length]);
+      e = this.x64Add(e, f);
+      f = this.x64Add(f, e);
+      e = this.x64Fmix(e);
+      f = this.x64Fmix(f);
+      e = this.x64Add(e, f);
+      f = this.x64Add(f, e);
+      return ("00000000" + (e[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (e[1] >>> 0).toString(16)).slice(-8) + ("00000000" + (f[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (f[1] >>> 0).toString(16)).slice(-8)
+    }
+}
+```
+
+- x64Multiply
+
+```js
+chromeHelper.prototype = {
+    x64Multiply: function(a, b) {
+      a = [a[0] >>> 16, a[0] & 65535, a[1] >>> 16, a[1] & 65535];
+      b = [b[0] >>> 16, b[0] & 65535, b[1] >>> 16, b[1] & 65535];
+      var c = [0, 0, 0, 0];
+      c[3] += a[3] * b[3];
+      c[2] += c[3] >>> 16;
+      c[3] &= 65535;
+      c[2] += a[2] * b[3];
+      c[1] += c[2] >>> 16;
+      c[2] &= 65535;
+      c[2] += a[3] * b[2];
+      c[1] += c[2] >>> 16;
+      c[2] &= 65535;
+      c[1] += a[1] * b[3];
+      c[0] += c[1] >>> 16;
+      c[1] &= 65535;
+      c[1] += a[2] * b[2];
+      c[0] += c[1] >>> 16;
+      c[1] &= 65535;
+      c[1] += a[3] * b[1];
+      c[0] += c[1] >>> 16;
+      c[1] &= 65535;
+      c[0] += a[0] * b[3] + a[1] * b[2] + a[2] * b[1] + a[3] * b[0];
+      c[0] &= 65535;
+      return [c[0] << 16 | c[1], c[2] << 16 | c[3]]
+    }
+}
+```
+
+- x64Rotl
+
+```js
+chromeHelper.prototype = {
+    x64Rotl: function(a, b) {
+      b %= 64;
+      if (32 === b)
+        return [a[1], a[0]];
+      if (32 > b)
+        return [a[0] << b | a[1] >>> 32 - b, a[1] << b | a[0] >>> 32 - b];
+      b -= 32;
+      return [a[1] << b | a[0] >>> 32 - b, a[0] << b | a[1] >>> 32 - b]
+    }
+}
+```
+
+- x64Add
+
+```js
+chromeHelper.prototype = {
+    x64Add: function(a, b) {
+      a = [a[0] >>> 16, a[0] & 65535, a[1] >>> 16, a[1] & 65535];
+      b = [b[0] >>> 16, b[0] & 65535, b[1] >>> 16, b[1] & 65535];
+      var c = [0, 0, 0, 0];
+      c[3] += a[3] + b[3];
+      c[2] += c[3] >>> 16;
+      c[3] &= 65535;
+      c[2] += a[2] + b[2];
+      c[1] += c[2] >>> 16;
+      c[2] &= 65535;
+      c[1] += a[1] + b[1];
+      c[0] += c[1] >>> 16;
+      c[1] &= 65535;
+      c[0] += a[0] + b[0];
+      c[0] &= 65535;
+      return [c[0] << 16 | c[1], c[2] << 16 | c[3]]
+    }
+}
+```
+
+- x64Xor
+
+```js
+chromeHelper.prototype = {
+    x64Xor: function(a, b) {
+      return [a[0] ^ b[0], a[1] ^ b[1]]
+    }
+}
+```
+
+- x64Fmix
+
+```js
+chromeHelper.prototype = {
+    x64Fmix: function(a) {
+      a = this.x64Xor(a, [0, a[0] >>> 1]);
+      a = this.x64Multiply(a, [4283543511, 3981806797]);
+      a = this.x64Xor(a, [0, a[0] >>> 1]);
+      a = this.x64Multiply(a, [3301882366, 444984403]);
+      return a = this.x64Xor(a, [0, a[0] >>> 1])
+    }
+}
+```
+
+- x64LeftShift
+
+```js
+chromeHelper.prototype = {
+    x64LeftShift: function(a, b) {
+      b %= 64;
+      return 0 === b ? a : 32 > b ? [a[0] << b | a[1] >>> 32 - b, a[1] << b] : [a[1] << b - 32, 0]
+    }
+}
+```
 
 
 ## 源码下载
