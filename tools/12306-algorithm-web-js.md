@@ -11,6 +11,59 @@
 
 ## 算法分析
 
+算法整体采用闭包设计面向对象的编程风格,基于原型链特性实现原始对象的加密逻辑,添加特有方法用于临时修改浏览器相关信息,最后将自定义对象 `chromeHelper` 直接挂载于 `window` 属性,方便外部调用.
+
+```js
+/**
+ * chrome 浏览器简化版,主要还原初次加载 RAIL_OkLJUJ 和 RAIL_DEVICEID 的基本流程,如许更新 RAIL_DEVICEID 需要结合 RAIL_OkLJUJ 一起加密,仅仅多增加一个 cookieCode 参数而已,除此之外并无特殊之处,不再赘述.
+ * @author: snowdreams1006
+ * @wechat: snowdreams1006(雪之梦技术驿站)
+ */
+(function(window) {
+
+  /**
+   * 默认空构造函数
+   */
+  function chromeHelper() {
+
+  }
+
+  /**
+   * 设置用户代理,检测方式: navigator.userAgent
+   */
+  chromeHelper.setUserAgent = function(userAgent) {
+    if (!userAgent) {
+      userAgent = "Mozilla5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit537.36 (KHTML, like Gecko) Chrome80.0.3987.87 Safari537.36";
+    }
+    Object.defineProperty(navigator, "userAgent", {
+      value: userAgent,
+      writable: false
+    });
+  }
+   
+  /**
+   * 基于原型链实现面向对象编程的继承特性
+   */
+  chromeHelper.prototype = {
+    /**
+     * 获取初始化浏览器设备信息,来源于initEc中的e = c.hashAlg(k, a, e);
+     */
+    encryptedFingerPrintInfo: function() {
+      // 获取分类后的浏览器指纹信息
+      classifiedBrowserFingerPrintInfoArr = this.getClassifiedBrowserFingerPrintInfo();
+      encryptedFingerPrintInfoMap = this.hashAlg(classifiedBrowserFingerPrintInfoArr, "", "");
+
+      return encryptedFingerPrintInfoMap;
+    }
+  }
+
+  /**
+   * 直接挂载在全局变量 window 对象方便直接调用.
+   */
+  window.chromeHelper = chromeHelper;
+})(window);
+```
+
 ### step 1 : 获取基本信息
 
 ```js
