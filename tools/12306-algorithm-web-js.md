@@ -1,6 +1,11 @@
 # 还原 12306 前端加密算法
 
+> 声明:
+> 本文仅供学习研究,禁止用于非法用途,否则后果自负,如有侵权,烦请告知删除,谢谢合作!
+
 ## 效果预览
+
+在浏览器控制台运行 `chromeHelper.prototype.encryptedFingerPrintInfo()` 方法时会计算真实信息,如果发现计算结果中的 `value` 值和真正请求 [https://kyfw.12306.cn/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice?algID=mBxuYhGXYR&hashCode=owRJc8M4EkFMvcTkzibRFJoDSkUKCx6N9ictZIJLIeY&FMQw=0&q4f3=zh-CN&VPIf=1&custID=133&VEek=unknown&dzuS=0&yD16=0&EOQP=c227b88b01f5c513710d4b9f16a5ce52&jp76=52d67b2a5aa5e031084733d5006cc664&hAqN=MacIntel&platform=WEB&ks0Q=d22ca0b81584fbea62237b14bd04c866&TeRS=777x1280&tOHY=24xx800x1280&Fvje=i1l1o1s1&q5aJ=-8&wNLf=99115dfb07133750ba677d055874de87&0aew=Mozilla/5.0%20(Macintosh;%20Intel%20Mac%20OS%20X%2010_15_2)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/80.0.3987.87%20Safari/537.36&E3gR=9f7fa43e794048f6193187756181b3b9) 的 `hashcode` 值相同,那么恭喜您,说明 12306 相关算法还没更新,如果不相同估计算法又稍微调整了!
 
 ```json
 {
@@ -3488,4 +3493,87 @@ chromeHelper.prototype = {
 
 ## 发送请求
 
+亲测构造请求 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice)时,关于参数 `algID` 经常性发生变化,因此无法提供静态的请求方法,建议根据实际情况实时改变.
 
+通过翻阅源码实现,最终发现关于发送请求的代码是这样的:
+
+```json
+e = c.hashAlg(m, a, e);
+a = e.key;
+e = e.value;
+a += "\x26timestamp\x3d" + (new Date).getTime();
+$a.getJSON("https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3dmBxuYhGXYR\x26hashCode\x3d" + e + a), null, function(a) {
+    var b = JSON.parse(a);
+    void 0 != mb && mb.postMessage(a, r.parent);
+    for (var d in b)
+        "dfp" == d ? G("RAIL_DEVICEID") != b[d] && (V("RAIL_DEVICEID", b[d], 1E3),
+        c.deviceEc.set("RAIL_DEVICEID", b[d])) : "exp" == d ? V("RAIL_EXPIRATION", b[d], 1E3) : "cookieCode" == d && (c.ec.set("RAIL_OkLJUJ", b[d]),
+        V("RAIL_OkLJUJ", "", 0))
+})
+```
+
+其中,参数 `a` 表示的是加密后的浏览器指纹信息,`(new Date).getTime()` 是当前时间戳,而 `algID\x3dmBxuYhGXYR\x26hashCode\x3d` 这部分的 `algID` 算法参数是暂时性静态的,比如今天一段时间都是 `mBxuYhGXYR` 而第二天这个值就变成其他值了.
+
+`hashCode` 参数的值就是程序运行结果的 `value` 值,最后面的变量 `a` 代表的是剩下的浏览器指纹信息,即运行结果的 `key`.
+
+假设以此时此刻为例,演示如何使用该 js 文件:
+
+```js
+function ajax(req){
+    var xhr=new XMLHttpRequest();
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState===4){
+            req.success&&req.success(xhr.responseText,xhr.status);
+        }
+    }
+    req.method=req.method?req.method.toUpperCase():'GET';
+    var data=null;
+    var url=req.url;
+    if(req.data){
+        var arg='';
+        for(var n in req.data){
+            arg+=n+'='+encodeURIComponent(req.data[n])+'&'
+        }
+        arg=arg.slice(0,-1);
+        if(req.method==='GET'){
+            url=url+'?'+arg;
+        }else{
+            data=arg;
+        }
+    }
+    if(req.headers){
+        for(var h in req.headers){
+            var v=req.headers[h];
+            xhr.setRequestHeader(h,v);
+        }
+    }
+    xhr.open(req.method,url);
+    xhr.send(data);
+}
+
+e = chromeHelper.prototype.encryptedFingerPrintInfo();
+a = e.key;
+e = e.value;
+a += "\x26timestamp\x3d" + (new Date).getTime();
+ajax({
+    url:"https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3dmBxuYhGXYR\x26hashCode\x3d" + e + a),
+    success:function(data){
+        console.log("data",data);
+
+        startIndex = "callbackFunction('".length;
+        endIndex = data.lastIndexOf("')");
+        jsonStrData = data.substring(startIndex,endIndex);
+        console.log("jsonStrData",jsonStrData);
+
+        jsonData = JSON.parse(jsonStrData);
+        console.log("jsonData",jsonData);
+
+        exp = jsonData.exp;
+        cookieCode = jsonData.cookieCode;
+        dfp = jsonData.dfp;
+        console.log("RAIL_DEVICEID::: "+dfp+" RAIL_EXPIRATION::: " + exp +" RAIL_OkLJUJ::: " + cookieCode);
+    }
+});
+```
+
+![12306-algorithm-web-js-website-console-ajax.png](./images/12306-algorithm-web-js-website-console-ajax.png)
