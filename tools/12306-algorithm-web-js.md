@@ -9,6 +9,55 @@
 }
 ```
 
+- step 1 : 使用 Chrome 浏览器打开 12306 网站并清空该站点全部缓存数据.
+
+> 请确保当前正在使用的是谷歌 Chrome 浏览器,IE和 firefox 等浏览器暂未测试.
+
+![12306-algorithm-web-js-website-clear-storage.png](./images/12306-algorithm-web-js-website-clear-storage.png)
+
+- step 2 : 手动清空 `window.name` 属性,保证浏览器处于首次打开 12306 网站状态.
+
+> 因为非首次加载会携带上一次的请求信息,不方便学习验证,经过分析试验发现历史状态还保存在 window 对象的 name 属性,因此仅仅清空缓存还不够,还需要手动清空 name 属性的值.
+
+![12306-algorithm-web-js-website-clear-name.png](./images/12306-algorithm-web-js-website-clear-name.png)
+
+- step 3 : 强制刷新当前页面并保持记录请求信息,过滤请求类型 `js` ,找到 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 请求.
+
+在找到该请求保存查询参数名为 `hashCode: owRJc8M4EkFMvcTkzibRFJoDSkUKCx6N9ictZIJLIeY` ,方便和之后的计算方式生成的结果做对比.
+
+![12306-algorithm-web-js-website-find-logdevice.png](./images/12306-algorithm-web-js-website-find-logdevice.png)
+
+除了查询请求信息外,更为重要的是查看响应信息,当初次请求 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 时除了返回过期时间 `exp` 和 `dfp` 设备信息之外,还会返回 `cookieCode` 设备唯一标识.
+
+如果等到过期时间或手动清空站点缓存后,[/otn/HttpZF/GetJS](https://kyfw.12306.cn/otn/HttpZF/GetJS) 脚本中的相关逻辑会再次发起 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 请求,那时候的响应内容再也没有 `cookieCode` 参数了.
+
+让我们再好好看一看初次请求的响应信息吧!
+
+```jsonp
+callbackFunction('{"exp":"1581948102442","cookieCode":"FGHcXsVmjf3oV0zm5qTDPFt-VcNhuDA-","dfp":"QNCYH1J5E9M7rl97uo_PUR1OSwRTcCe1xdnbX7h2V6Ewcq6kML0qzXD5y11rLv3FPX1ndOnhL_bjVkwwgtWTsHMFums60_4H9Lr-vJzJGq4tkaUEGfRNXN9IJlvptReSBa5PP7N5gxpSOBo-YlF5Ac98f-YlNlxi"}')
+```
+
+如果将 `callbackFunction()` 回调函数去掉,不难发现其实返回数据是 `json` 格式,格式化后发现响应内容如下:
+
+```json
+{
+    "exp": "1581948102442",
+    "cookieCode": "FGHcXsVmjf3oV0zm5qTDPFt-VcNhuDA-",
+    "dfp": "QNCYH1J5E9M7rl97uo_PUR1OSwRTcCe1xdnbX7h2V6Ewcq6kML0qzXD5y11rLv3FPX1ndOnhL_bjVkwwgtWTsHMFums60_4H9Lr-vJzJGq4tkaUEGfRNXN9IJlvptReSBa5PP7N5gxpSOBo-YlF5Ac98f-YlNlxi"
+}
+```
+
+这里不得不佩服 12306 的设计思路了,故布疑阵,当你误以为自己已经更新了 `RAIL_DEVICEID` 的值,实际上 `cookieCode` 的值才是唯一标识而它恰恰没有设置到 cookie 中去,仅仅作为本地缓存保持了,用于再次请求 `RAIL_DEVICEID`.
+
+![12306-algorithm-web-js-website-cache-OkLJUJ.png](./images/12306-algorithm-web-js-website-cache-OkLJUJ.png)
+
+- step 4 : 复制源码实现到控制台,输入 `chromeHelper.prototype.encryptedFingerPrintInfo()` 获取请求 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 的查询参数,提取出其中的 `value` 值和真正的请求参数作对比.
+
+> 假设真正请求参数 hashcode 的值已设置成变量,`chromeHelper.prototype.encryptedFingerPrintInfo().value === hashcode` 返回结果 `true` 说明复现算法实现还在正常运行,否则很可能是相关算法又更新了!
+
+![12306-algorithm-web-js-website-generate-compare.png](./images/12306-algorithm-web-js-website-generate-compare.png)
+
+
 ## 算法复现
 
 算法整体采用闭包设计面向对象的编程风格,基于原型链特性实现原始对象的加密逻辑,添加特有方法用于临时修改浏览器相关信息,最后将自定义对象 `chromeHelper` 直接挂载于 `window` 属性,方便外部调用.
@@ -3436,5 +3485,7 @@ chromeHelper.prototype = {
     }
   }
 ```
+
+## 发送请求
 
 
