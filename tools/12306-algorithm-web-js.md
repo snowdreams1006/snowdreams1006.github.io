@@ -1,4 +1,4 @@
-# 攻克 12306 前端加密算法
+# 还原 12306 前端加密算法
 
 ## 效果预览
 
@@ -9,7 +9,7 @@
 }
 ```
 
-## 算法分析
+## 算法复现
 
 算法整体采用闭包设计面向对象的编程风格,基于原型链特性实现原始对象的加密逻辑,添加特有方法用于临时修改浏览器相关信息,最后将自定义对象 `chromeHelper` 直接挂载于 `window` 属性,方便外部调用.
 
@@ -2122,7 +2122,7 @@ chromeHelper.prototype = {
 }
 ```
 
-### step 5 : 组合指纹信息
+### step 5 : 合成指纹信息
 
 ```js
 chromeHelper.prototype = {
@@ -2955,9 +2955,486 @@ chromeHelper.prototype = {
   }
 ```
 
-## 源码下载
+## 伪造模拟
 
-## 回顾总结
+- 设置用户代理
 
-## 启发感想
+```js
+  /**
+   * 设置用户代理,检测方式: navigator.userAgent
+   */
+  chromeHelper.setUserAgent = function(userAgent) {
+    if (!userAgent) {
+      userAgent = "Mozilla5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit537.36 (KHTML, like Gecko) Chrome80.0.3987.87 Safari537.36";
+    }
+    Object.defineProperty(navigator, "userAgent", {
+      value: userAgent,
+      writable: false
+    });
+  }
+```
+
+- 设置浏览器语言
+
+```js
+  /**
+   * 设置浏览器语言,检测方式: navigator.language
+   */
+  chromeHelper.setLanguage = function(language) {
+    if (!language) {
+      language = "zh-CN";
+    }
+    Object.defineProperty(navigator, "language", {
+      value: language,
+      writable: false
+    });
+  }
+```
+
+- 设置浏览器语言
+
+```js
+  /**
+   * 设置浏览器语言,检测方式: navigator.languages
+   */
+  chromeHelper.setLanguages = function(languages) {
+    if (!languages) {
+      languages = ["zh-CN", "zh", "en"];
+    }
+    Object.defineProperty(navigator, "languages", {
+      value: languages,
+      writable: false
+    });
+  }
+```
+
+- 设置屏幕颜色深度
+
+```js
+  /**
+   * 设置屏幕颜色深度,检测方式: screen.colorDepth
+   */
+  chromeHelper.setColorDepth = function(colorDepth) {
+    if (!colorDepth) {
+      colorDepth = 24;
+    }
+    Object.defineProperty(screen, "colorDepth", {
+      value: colorDepth,
+      writable: false
+    });
+  }
+```
+
+- 设置设备像素比率
+
+```js
+  /**
+   * 设置设备像素比率,检测方式: window.devicePixelRatio
+   */
+  chromeHelper.setDevicePixelRatio = function(devicePixelRatio) {
+    if (!devicePixelRatio) {
+      devicePixelRatio = 24;
+    }
+    Object.defineProperty(window, "devicePixelRatio", {
+      value: devicePixelRatio,
+      writable: false
+    });
+  }
+```
+
+- 设置屏幕宽度
+
+```js
+  /**
+   * 设置屏幕宽度,检测方式: screen.width
+   */
+  chromeHelper.setWidth = function(width) {
+    if (!width) {
+      width = 1280;
+    }
+    Object.defineProperty(screen, "width", {
+      value: width,
+      writable: false
+    });
+  }
+```
+
+- 设置屏幕高度
+
+```js
+  /**
+   * 设置屏幕高度,检测方式: screen.height
+   */
+  chromeHelper.setHeight = function(height) {
+    if (!height) {
+      height = 800;
+    }
+    Object.defineProperty(screen, "height", {
+      value: height,
+      writable: false
+    });
+  }
+```
+
+- 设置屏幕可用宽度
+
+```js
+  /**
+   * 设置屏幕可用宽度,检测方式: screen.availWidth
+   */
+  chromeHelper.setAvailWidth = function(availWidth) {
+    if (!availWidth) {
+      availWidth = 1280;
+    }
+    Object.defineProperty(screen, "availWidth", {
+      value: availWidth,
+      writable: false
+    });
+  }
+```
+
+- 设置屏幕可用高度
+
+```js
+  /**
+   * 设置屏幕可用高度,检测方式: screen.availHeight
+   */
+  chromeHelper.setAvailHeight = function(availHeight) {
+    if (!availHeight) {
+      availHeight = 777;
+    }
+    Object.defineProperty(screen, "availHeight", {
+      value: availHeight,
+      writable: false
+    });
+  }
+```
+
+- 设置Session存储
+
+```js
+  /**
+   * 设置Session存储,检测方式: !!window.sessionStorage
+   */
+  chromeHelper.setSessionStorage = function(sessionStorage) {
+    if (!sessionStorage) {
+      sessionStorage = 1;
+    }
+    if (sessionStorage) {
+      window.sessionStorage = 1
+    } else {
+      delete window.sessionStorage
+    }
+  }
+```
+
+- 设置Local存储
+
+```js
+  /**
+   * 设置Local存储,检测方式: !!window.localStorage
+   */
+  chromeHelper.setLocalStorage = function(localStorage) {
+    if (!localStorage) {
+      localStorage = 1;
+    }
+    if (localStorage) {
+      window.localStorage = 1
+    } else {
+      delete window.localStorage
+    }
+  }
+```
+
+- 设置indexedDB存储
+
+```js
+  /**
+   * 设置indexedDB存储,检测方式: !!window.indexedDB
+   */
+  chromeHelper.setIndexedDB = function(indexedDB) {
+    if (!indexedDB) {
+      indexedDB = 1;
+    }
+    if (indexedDB) {
+      window.indexedDB = 1
+    } else {
+      delete window.indexedDB
+    }
+  }
+```
+
+- 设置addBehavior存储
+
+```js
+  /**
+   * 设置addBehavior存储,检测方式: !!document.body.addBehavior
+   */
+  chromeHelper.setAddBehavior = function(addBehavior) {
+    if (!addBehavior) {
+      addBehavior = 1;
+    }
+    if (addBehavior) {
+      document.body.addBehavior = 1
+    } else {
+      delete document.body.addBehavior
+    }
+  }
+```
+
+- 设置Cpu类型
+
+```js
+  /**
+   * 设置Cpu类型,检测方式: navigator.cpuClass
+   */
+  chromeHelper.setCpuClass = function(cpuClass) {
+    if (!cpuClass) {
+      cpuClass = "unknown";
+    }
+    Object.defineProperty(navigator, "cpuClass", {
+      value: cpuClass,
+      writable: false
+    });
+  }
+```
+
+- 设置平台类型
+
+```js
+  /**
+   * 设置平台类型,检测方式: navigator.platform
+   */
+  chromeHelper.setPlatform = function(platform) {
+    if (!platform) {
+      platform = "MacIntel";
+    }
+    Object.defineProperty(navigator, "platform", {
+      value: platform,
+      writable: false
+    });
+  }
+```
+
+- 设置反追踪
+
+```js
+  /**
+   * 设置反追踪,检测方式: navigator.doNotTrack
+   */
+  chromeHelper.setDoNotTrack = function(doNotTrack) {
+    if (!doNotTrack) {
+      doNotTrack = "unknown";
+    }
+    Object.defineProperty(navigator, "doNotTrack", {
+      value: doNotTrack,
+      writable: false
+    });
+  }
+```
+
+- 设置插件
+
+```js
+  /**
+   * 设置插件,检测方式: navigator.plugins
+   */
+  chromeHelper.setPlugins = function(plugins) {
+
+  }
+```
+
+- 设置Canvas
+
+```js
+  /**
+   * 设置Canvas,检测方式: TODO
+   */
+  chromeHelper.setCanvas = function(canvas) {
+
+  }
+```
+
+- 设置Webgl
+
+```js
+  /**
+   * 设置Webgl,检测方式: TODO
+   */
+  chromeHelper.setWebgl = function(webgl) {
+
+  }
+```
+
+- 设置AdBlock
+
+```js
+  /**
+   * 设置AdBlock,检测方式: TODO
+   */
+  chromeHelper.setAdBlock = function(AdBlock) {
+
+  }
+```
+
+- 设置AdBlock
+
+```js
+  /**
+   * 设置AdBlock,检测方式: TODO
+   */
+  chromeHelper.setAdBlock = function(AdBlock) {
+
+  }
+```
+
+- 设置字体
+
+```js
+  /**
+   * 设置字体,检测方式: TODO
+   */
+  chromeHelper.setFonts = function(fonts) {
+
+  }
+```
+
+- 设置最多触控点
+
+```js
+  /**
+   * 设置最多触控点,检测方式: navigator.maxTouchPoints
+   */
+  chromeHelper.setMaxTouchPoints = function(maxTouchPoints) {
+    if (!maxTouchPoints) {
+      maxTouchPoints = 0;
+    }
+    Object.defineProperty(navigator, "maxTouchPoints", {
+      value: maxTouchPoints,
+      writable: false
+    });
+  }
+```
+
+- 设置ontouchstart事件
+
+```js
+  /**
+   * 设置ontouchstart事件,检测方式: "ontouchstart" in window
+   */
+  chromeHelper.setTouchEvent = function(ontouchstart) {
+    if (!ontouchstart) {
+      ontouchstart = false;
+    }
+    if (ontouchstart) {
+      window.ontouchstart = true
+    } else {
+      delete window.ontouchstart
+    }
+  }
+```
+
+- 设置app代码名称代码
+
+```js
+  /**
+   * 设置app代码名称代码,检测方式: navigator.appCodeName.toString()
+   */
+  chromeHelper.setAppCodeName = function(appCodeName) {
+    if (!appCodeName) {
+      appCodeName = "Mozilla";
+    }
+    Object.defineProperty(navigator, "appCodeName", {
+      value: appCodeName,
+      writable: false
+    });
+  }
+```
+
+- 设置app代码名称代码
+
+```js
+  /**
+   * 设置app代码名称代码,检测方式: navigator.appName.toString()
+   */
+  chromeHelper.setAppName = function(appName) {
+    if (!appName) {
+      appName = "Netscape";
+    }
+    Object.defineProperty(navigator, "appName", {
+      value: appName,
+      writable: false
+    });
+  }
+```
+
+- 设置Java是否启用
+
+```js
+  /**
+   * 设置Java是否启用,检测方式: navigator.javaEnabled()
+   */
+  chromeHelper.setJavaEnabled = function(javaEnabled) {
+
+  }
+```
+
+- 设置媒体类型
+
+```js
+  /**
+   * 设置媒体类型,检测方式: navigator.mimeTypes
+   */
+  chromeHelper.setMimeTypes = function(mimeTypes) {
+
+  }
+```
+
+- 设置cookie是否启用
+
+```js
+  /**
+   * 设置cookie是否启用,检测方式: navigator.cookieEnabled
+   */
+  chromeHelper.setCookieEnabled = function(cookieEnabled) {
+    if (!cookieEnabled) {
+      cookieEnabled = true;
+    }
+    Object.defineProperty(navigator, "cookieEnabled", {
+      value: cookieEnabled,
+      writable: false
+    });
+  }
+```
+
+- 设置是否在线
+
+```js
+  /**
+   * 设置是否在线,检测方式: navigator.onLine.toString()
+   */
+  chromeHelper.setOnLine = function(onLine) {
+    if (!onLine) {
+      onLine = true;
+    }
+    Object.defineProperty(navigator, "onLine", {
+      value: onLine,
+      writable: false
+    });
+  }
+```
+
+- 添加历史记录
+
+```js
+  /**
+   * 添加历史记录,检测方式: window.history
+   */
+  chromeHelper.pushHistory = function(newUrls) {
+    for (url in newUrls) {
+      history.pushState(null, '', url);
+    }
+  }
+```
+
 
