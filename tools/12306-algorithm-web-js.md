@@ -1174,6 +1174,305 @@ chromeHelper.prototype = {
 }
 ```
 
+### step 3 : 获取更多信息
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取浏览器更多信息,来源于getpackStr中的b = b.concat(this.moreInfoArray);
+     */
+    getDfpMoreInfo: function(basicInfoArr, encryptedStr) {
+      // 更多信息
+      var moreInfoArr = [];
+
+      // 添加画布信息
+      moreInfoArr.push(this.getCanvansCode(encryptedStr + ""));
+
+      // 添加浏览器本地存储累以及语言插件类信息
+      for (var index in basicInfoArr) {
+        var name = basicInfoArr[index].key;
+        var value = basicInfoArr[index].value + "";
+
+        switch (name) {
+          case "session_storage":
+            moreInfoArr.push(this.getSessionStorageCode(value));
+            break;
+          case "local_storage":
+            moreInfoArr.push(this.getLocalStorageCode(value));
+            break;
+          case "indexed_db":
+            moreInfoArr.push(this.getIndexedDbCode(value));
+            break;
+          case "open_database":
+            moreInfoArr.push(this.getOpenDatabaseCode(value));
+            break;
+          case "do_not_track":
+            moreInfoArr.push(this.getDoNotTrackCode(value));
+            break;
+          case "regular_plugins":
+            moreInfoArr.push(this.getPluginsCode());
+            break;
+          case "adblock":
+            moreInfoArr.push(this.getAdblockCode(value));
+            break;
+          case "has_lied_languages":
+            moreInfoArr.push(this.getHasLiedLanguagesCode(value));
+            break;
+          case "has_lied_resolution":
+            moreInfoArr.push(this.getHasLiedResolutionCode(value));
+            break;
+          case "has_lied_os":
+            moreInfoArr.push(this.getHasLiedOsCode(value));
+            break;
+          case "has_lied_browser":
+            moreInfoArr.push(this.getHasLiedBrowserCode(value));
+            break;
+          case "touch_support":
+            moreInfoArr.push(this.getTouchSupportCode(value));
+            break;
+          case "js_fonts":
+            moreInfoArr.push(this.getJsFontsCode(value));
+            break;
+        }
+      }
+
+      return moreInfoArr;
+    }
+}
+```
+
+- 获取画布代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取画布代码,例如: "9f7fa43e794048f6193187756181b3b9"
+     */
+    getCanvansCode: function(code) {
+      return {
+        "key": "webSmartID",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取Session存储代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取Session存储代码,例如: "1"
+     */
+    getSessionStorageCode: function(code) {
+      return {
+        "key": "sessionStorage",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取Local存储代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取Local存储代码,例如: "1"
+     */
+    getLocalStorageCode: function(code) {
+      return {
+        "key": "localStorage",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取IndexedDb存储代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取IndexedDb存储代码,例如: "1"
+     */
+    getIndexedDbCode: function(code) {
+      return {
+        "key": "indexedDb",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取Websql存储代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取Websql存储代码,例如: "1"
+     */
+    getOpenDatabaseCode: function(code) {
+      return {
+        "key": "openDatabase",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取反追踪代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取反追踪代码,例如: "unknown"
+     */
+    getDoNotTrackCode: function(code) {
+      return {
+        "key": "doNotTrack",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取插件代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取插件代码,例如: "d22ca0b81584fbea62237b14bd04c866"
+     */
+    getPluginsCode: function(code) {
+      if (!code) {
+        a = navigator.plugins;
+        var b = "";
+        for (i = 0; i < a.length; i++)
+          b += a[i].name.toString() + "#";
+        code = ba(b);
+      }
+      return {
+        "key": "plugins",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取广告拦截代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取广告拦截代码,例如: "0"
+     */
+    getAdblockCode: function(code) {
+      return {
+        "key": "adblock",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取说谎语言代码代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取说谎语言代码代码,例如: "false"
+     */
+    getHasLiedLanguagesCode: function(code) {
+      return {
+        "key": "hasLiedLanguages",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取说谎分辨率代码代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取说谎分辨率代码代码,例如: "false"
+     */
+    getHasLiedResolutionCode: function(code) {
+      return {
+        "key": "hasLiedResolution",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取说谎操作系统代码代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取说谎操作系统代码代码,例如: "false"
+     */
+    getHasLiedOsCode: function(code) {
+      return {
+        "key": "hasLiedOs",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取说谎浏览器代码代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取说谎浏览器代码代码,例如: "false"
+     */
+    getHasLiedBrowserCode: function(code) {
+      return {
+        "key": "hasLiedBrowser",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取说谎浏览器代码代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取说谎浏览器代码代码,例如: "99115dfb07133750ba677d055874de87"
+     */
+    getTouchSupportCode: function(code) {
+      code = ba(code.replace(RegExp(",", "gm"), "#"));
+      return {
+        "key": "touchSupport",
+        "value": code
+      }
+    }
+}
+```
+
+- 获取说谎字体代码
+
+```js
+chromeHelper.prototype = {
+    /**
+     * 获取说谎字体代码,例如: "99115dfb07133750ba677d055874de87"
+     */
+    getJsFontsCode: function(code) {
+      code = ba(code.replace(RegExp(",", "gm"), "#"));
+      return {
+        "key": "jsFonts",
+        "value": code
+      }
+    }
+}
+```
 
 ## 源码下载
 
