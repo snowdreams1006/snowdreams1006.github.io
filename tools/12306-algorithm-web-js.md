@@ -23,7 +23,7 @@
 
 下面简单验证一下说明谁才是真正的浏览器唯一标识:
 
-- 复制第一次获取到的 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值
+- step 1 : 复制当前获取到的 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值
 
 打开控制台(Console),通过 js 代码方式取出本地存储(localStorage) 的值:
 
@@ -57,16 +57,41 @@ copy("RAIL_OkLJUJ:::"+localStorage.getItem("RAIL_OkLJUJ"));
 // RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
 ```
 
-- 清空全部缓存并清空 window.name 的属性
+- step 2 : 等待 5 min 后再次获取 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值
 
+```js
+copy("RAIL_DEVICEID:::"+localStorage.getItem("RAIL_DEVICEID"));
+// RAIL_DEVICEID:::VUye37EEUdGHgrpJGo9J95hWMNSIUFPeYBjabDgCiYJbQIr53iVzIPQJwcLhbijL4OyPVGmzolsVEK8Pw7_DG_oPrUDpfbnRe7HvMWMJvU2MAbk-7EwNEePAlpnVb9QVZz4dtOUSCRVbS2zlwgS0xe2BOThpR9oy
 
+copy("RAIL_OkLJUJ:::"+localStorage.getItem("RAIL_OkLJUJ"));
+// RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
+```
 
+> 或者清空网站 cookie 后再次刷新当前网页,总是就是想办法触发浏览器再次运行相关逻辑重新生成 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` .
+
+- step 3 : 对比第一次和第二次获取到的 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值
+
+```
+RAIL_DEVICEID:::E5BDkKrPkZ6nuZruqUj9-3lUG1LBM7t9aTDbZwFSdrboaFG6odrWZ9yuphnas4Jwq5E_FXIwwqlRoSXFbJULUiBNwNGt61Ow6Zv0GFXRABipaeDJJ0Ub7G2g_B_aGwMF5DNZ5KJR4eWVl-P3zSHGKbczLB3WN0z-
+
+RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
+
+RAIL_DEVICEID:::VUye37EEUdGHgrpJGo9J95hWMNSIUFPeYBjabDgCiYJbQIr53iVzIPQJwcLhbijL4OyPVGmzolsVEK8Pw7_DG_oPrUDpfbnRe7HvMWMJvU2MAbk-7EwNEePAlpnVb9QVZz4dtOUSCRVbS2zlwgS0xe2BOThpR9oy
+
+RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
+```
+
+显而易见,肉眼直接就能看出两次请求时 `RAIL_OkLJUJ` 的值并没有变化而 `RAIL_DEVICEID` 的值很大可能会发生改变.
+
+因此,`RAIL_DEVICEID` 应该并不是浏览器唯一标识,而 `RAIL_OkLJUJ` 才是真正的唯一标识!
+
+本文并不适合全部读者,如果你属于以下情况之一,那么本文对你绝对帮助甚多,否则对你来说只能算是浪费生命.
 
 - 适合对自主抢票或者脚本抢票有需求的天涯游子
 - 适合拥有一定 web 前端开发相关知识的开发者
 - 适合耐得住寂寞能够独自研究加密算法的孤独人
 
-最后的核心前提是有网状态,WiFi更佳,否则流量真的吃不消啊!
+最后的核心前提是有网,当然WiFi更佳,否则流量真的吃不消啊!
 
 ## 故事背景
 
@@ -185,10 +210,39 @@ callbackFunction('{"exp":"1581948102442","cookieCode":"FGHcXsVmjf3oV0zm5qTDPFt-V
 
 ![12306-algorithm-web-js-login-wrong.png](./images/12306-algorithm-web-js-login-wrong.png)
 
-再次输入正确的相关信息
+再次输入正确的登录信息成功登录后进行买票行为等操作,但是无需付款,只要正常操作到下单完成即可视为整个购票流程.
 
+![12306-algorithm-web-js-purse-ticket.png](./images/12306-algorithm-web-js-purse-ticket.png)
+
+![12306-algorithm-web-js-order-ticket.png](./images/12306-algorithm-web-js-order-ticket.png)
+
+下单成功后整个购票流程已经基本完成,接下来开始全局搜索关键字 `RAIL_DEVICEID` 查看在哪里生成又在何处使用?
 
 ### 全局模糊查找关键字
+
+现在整个购票流程基本上已经完成,接下来开始全局搜索全部请求中是否包含关键字 `RAIL_DEVICEID` 吧!
+
+首先打开网络(network)选项卡,从左往右数第四个放大镜图标就是搜素功能,输入搜素关键字 `RAIL_DEVICEID` 会过滤符合条件的网络请求.
+
+![12306-algorithm-web-js-network-search.png](./images/12306-algorithm-web-js-network-search.png)
+
+不搜不要紧,一搜一大把,只能看出来大部分网络请求都会自动携带该 cookie,反而淹没了到底是哪个网络请求生成的 cookie?
+
+![12306-algorithm-web-js-network-search-result.png](./images/12306-algorithm-web-js-network-search-result.png)
+
+所以必须想办法精确搜索,过滤出生成该 cookie 的网络请求,所以接下来的问题就变成了如果 `RAIL_DEVICEID` 属于后端直接设置的行为,那么这样的网络请求应该长啥样的?
+
+最好的学习就是模仿,假设并不知道真实的设置过程如何,但是我们可以查看其它 cookie 的设置过程啊!
+
+同样地,在网络(network)选项卡选择第三个过滤器漏斗图标,展开网络请求类型,大致分为 All|XHR|JS|CSS|Img|Media|Font|Doc|WS|Manifest|Other等类型.
+
+简单说一下网络请求类型的相关含义,整理出表格直观感受一下:
+
+
+
+```
+Set-Cookie: JSESSIONID=D4CE095F5A21B38DF3389070F1E01FE6; Path=/otn
+```
 
 ### 判定到底是谁在控制
 
