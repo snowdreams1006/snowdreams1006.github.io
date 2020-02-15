@@ -377,7 +377,7 @@ $a.getJSON("https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3drblubbXDx3
 
 ![12306-algorithm-web-js-source-getjs-backup.png](./images/12306-algorithm-web-js-source-getjs-backup.png)
 
-### 从迷宫般的代码找线索
+### 高楼大厦寻关键线索
 
 Js文件中关于网络请求最典型的就是异步回调,将原本简单的操作复杂化,非要你等我,我等他,他还等着他的她.
 
@@ -608,7 +608,78 @@ js 是典型的事件驱动型编程语言,当发生什么什么事件后我要�
   }
 })();
 ```
- 
+
+从以上代码分析中,相信你会发现相关逻辑应该兼容 IE 浏览器,同时设置了定时程序反复更新 cookie 值,并且还有远程 RTC 保持通信,不得不说做得还真不错,不愧是国民出行的代步工具啊!
+
+精力有限,这里选择最简单的一种情况进行算法还原过程的研究,浏览器选择谷歌 Chrome 浏览器,这样就可以屏蔽关于 IE 的兼容性补丁处理,同时也不考虑 `RTCPeerConnection` 的情况,于是乎,代码逻辑简化成这样:
+
+
+```js
+(function() {
+  document.addEventListener("DOMContentLoaded", Pa,false)
+
+  function Pa() {
+    (new ja).getFingerPrint();
+  }
+
+  function ja() {
+    this.ec = new evercookie;
+    this.deviceEc = new evercookie;
+    this.cfp = new aa;
+    this.packageString = "";
+    this.moreInfoArray = []
+  }
+
+  ja.prototype = {
+    getFingerPrint: function() {
+        this.initEc()
+    },
+    initEc: function(a) {
+      var b = ""
+        , c = this
+        , d = void 0 != a && void 0 != a.localAddr ? a.localAddr : "";
+      c.checkWapOrWeb();
+      this.ec.get("RAIL_OkLJUJ", function(a) {
+          b = a;
+          c.getDfpMoreInfo(function() {
+              if (!(9E5 < F("RAIL_EXPIRATION") - (new Date).getTime() & null != F("RAIL_DEVICEID") & void 0 != F("RAIL_DEVICEID") & !c.NeedUpdate())) {
+                  for (var a = "", e = "", g = c.getpackStr(b), m = [], q = [], t = [], k = [], n = 0; n < g.length; n++)
+                      "new" != g[n].value && -1 == Fb.indexOf(g[n].key) && (-1 != Gb.indexOf(g[n].key) ? q.push(g[n]) : -1 != Ib.indexOf(g[n].key) ? t.push(g[n]) : -1 != Hb.indexOf(g[n].key) ? k.push(g[n]) : m.push(g[n]));
+                  g = "";
+                  for (n = 0; n < q.length; n++)
+                      g = g + q[n].key.charAt(0) + q[n].value;
+                  q = "";
+                  for (n = 0; n < k.length; n++)
+                      q = 0 == n ? q + k[n].value : q + "x" + k[n].value;
+                  k = "";
+                  for (n = 0; n < t.length; n++)
+                      k = 0 == n ? k + t[n].value : k + "x" + t[n].value;
+                  m.push(new l("storeDb",g));
+                  m.push(new l("srcScreenSize",q));
+                  m.push(new l("scrAvailSize",k));
+                  "" != d && m.push(new l("localCode",pb(d)));
+                  e = c.hashAlg(m, a, e);
+                  a = e.key;
+                  e = e.value;
+                  a += "\x26timestamp\x3d" + (new Date).getTime();
+                  $a.getJSON("https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3drblubbXDx3\x26hashCode\x3d" + e + a), null, function(a) {
+                      var b = JSON.parse(a);
+                      void 0 != lb && lb.postMessage(a, r.parent);
+                      for (var d in b)
+                          "dfp" == d ? F("RAIL_DEVICEID") != b[d] && (W("RAIL_DEVICEID", b[d], 1E3),
+                          c.deviceEc.set("RAIL_DEVICEID", b[d])) : "exp" == d ? W("RAIL_EXPIRATION", b[d], 1E3) : "cookieCode" == d && (c.ec.set("RAIL_OkLJUJ", b[d]),
+                          W("RAIL_OkLJUJ", "", 0))
+                  })
+              }
+          })
+      }, 1)
+    }
+  }
+})();
+```
+
+所以现在问题的核心在于搞清楚 `initEc` 函数的数据流向,还原算法实现过程不是梦!
+
 ### 断点调试追踪调用栈
 
 ### 异步异步到处是异步
