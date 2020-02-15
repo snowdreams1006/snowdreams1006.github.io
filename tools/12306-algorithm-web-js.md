@@ -348,10 +348,267 @@ Chrome 浏览器除了可以看出网络请求也能看到最终呈现给用户�
 
 ### 直捣黄龙还往哪里跑
 
+找到该文件后点击查看,红蓝黑密密麻麻一大片js 代码,绝对不是给人看的而是给机器看的,想要给人阅读还需要美化一下,将源码丑化混淆成难以阅读的代码也是防止他人偷窥复制拷贝自己的劳动成果,同时也能减少文件大小,加速网络传输数据,让你的网站速度更快一些.
+
+![12306-algorithm-web-js-source-getjs-pretty.png](./images/12306-algorithm-web-js-source-getjs-pretty.png)
+
+点击中间区域的左下角格式化图标进行美化代码,然后在文件中搜素关键字 `RAIL_DEVICEID` 定位到具体代码.
+
+非常人性化的是,搜索功能是通用的快捷键 Ctrl + F,现在定位到具体代码,截图留念下,接下来才是真正考验技术的时刻!
+
+![12306-algorithm-web-js-source-getjs-search.png](./images/12306-algorithm-web-js-source-getjs-search.png)
+
+```js
+$a.getJSON("https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3drblubbXDx3\x26hashCode\x3d" + e + a), null, function(a) {
+    var b = JSON.parse(a);
+    void 0 != lb && lb.postMessage(a, r.parent);
+    for (var d in b)
+        "dfp" == d ? F("RAIL_DEVICEID") != b[d] && (W("RAIL_DEVICEID", b[d], 1E3),
+        c.deviceEc.set("RAIL_DEVICEID", b[d])) : "exp" == d ? W("RAIL_EXPIRATION", b[d], 1E3) : "cookieCode" == d && (c.ec.set("RAIL_OkLJUJ", b[d]),
+        W("RAIL_OkLJUJ", "", 0))
+})
+```
+
 ### 本地备份js方便复现
 
-### 高楼大厦先找突破口
+既然已经找到关键文件,自然需要留存快照进行存档操作,否则哪一天文件更新了都不知道哪里发生变化了,难不成还要从头再分析一遍,我选择差量更新而不是全量覆盖!
 
+选中源文件右键弹出菜单,选择任意一款喜欢的方式复制源文件到本地留作学习备份,准备工作就绪后准备大干一场.
+
+![12306-algorithm-web-js-source-getjs-backup.png](./images/12306-algorithm-web-js-source-getjs-backup.png)
+
+### 从迷宫般的代码找线索
+
+Js文件中关于网络请求最典型的就是异步回调,将原本简单的操作复杂化,非要你等我,我等他,他还等着他的她.
+
+最终直接结果就是整个请求流程反过来了,假设正常流程:是 A->B->C-D-E-F,那么异步请求很可能陷入这样的陷阱: F <- E <- D <- C <- B <- A
+
+所以一层又一层的回调函数真的是难以维护,这种技术也在慢慢淘汰更新成更容易维护的方式,还是不再展开了,回到正题上来,还是先找到程序到底什么时候开始调用的吧!
+
+```js
+ja.prototype = {
+  initEc: function(a) {
+      var b = ""
+        , c = this
+        , d = void 0 != a && void 0 != a.localAddr ? a.localAddr : "";
+      c.checkWapOrWeb();
+      this.ec.get("RAIL_OkLJUJ", function(a) {
+          b = a;
+          c.getDfpMoreInfo(function() {
+              if (!(9E5 < F("RAIL_EXPIRATION") - (new Date).getTime() & null != F("RAIL_DEVICEID") & void 0 != F("RAIL_DEVICEID") & !c.NeedUpdate())) {
+                  for (var a = "", e = "", g = c.getpackStr(b), m = [], q = [], t = [], k = [], n = 0; n < g.length; n++)
+                      "new" != g[n].value && -1 == Fb.indexOf(g[n].key) && (-1 != Gb.indexOf(g[n].key) ? q.push(g[n]) : -1 != Ib.indexOf(g[n].key) ? t.push(g[n]) : -1 != Hb.indexOf(g[n].key) ? k.push(g[n]) : m.push(g[n]));
+                  g = "";
+                  for (n = 0; n < q.length; n++)
+                      g = g + q[n].key.charAt(0) + q[n].value;
+                  q = "";
+                  for (n = 0; n < k.length; n++)
+                      q = 0 == n ? q + k[n].value : q + "x" + k[n].value;
+                  k = "";
+                  for (n = 0; n < t.length; n++)
+                      k = 0 == n ? k + t[n].value : k + "x" + t[n].value;
+                  m.push(new l("storeDb",g));
+                  m.push(new l("srcScreenSize",q));
+                  m.push(new l("scrAvailSize",k));
+                  "" != d && m.push(new l("localCode",pb(d)));
+                  e = c.hashAlg(m, a, e);
+                  a = e.key;
+                  e = e.value;
+                  a += "\x26timestamp\x3d" + (new Date).getTime();
+                  $a.getJSON("https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3drblubbXDx3\x26hashCode\x3d" + e + a), null, function(a) {
+                      var b = JSON.parse(a);
+                      void 0 != lb && lb.postMessage(a, r.parent);
+                      for (var d in b)
+                          "dfp" == d ? F("RAIL_DEVICEID") != b[d] && (W("RAIL_DEVICEID", b[d], 1E3),
+                          c.deviceEc.set("RAIL_DEVICEID", b[d])) : "exp" == d ? W("RAIL_EXPIRATION", b[d], 1E3) : "cookieCode" == d && (c.ec.set("RAIL_OkLJUJ", b[d]),
+                          W("RAIL_OkLJUJ", "", 0))
+                  })
+              }
+          })
+      }, 1)
+  }
+}
+```
+
+核心代码最外层函数是 `initEc` 函数,而该函数的写法明显是传统 js 的属性方法,因此判断挂载于该对象的属性方法应该都是完成某些相同的功能.
+
+暂时先不着急继续寻找谁在调用 `initEc` 函数,先搞懂整个函数结构是什么轮廓.
+
+```js
+function ja() {
+    this.ec = new evercookie;
+    this.deviceEc = new evercookie;
+    this.cfp = new aa;
+    this.packageString = "";
+    this.moreInfoArray = []
+}
+
+ja.prototype = {
+  getScrWidth: function() {
+      return new l("scrWidth",r.screen.width.toString())
+  },
+  ...
+  ,
+   checkWapOrWeb: function() {
+      return "WindowsPhone" == Ha() || "iOS" == Ha() || "Android" == Ha() ? !0 : !1
+  }
+}
+```
+
+如果熟悉 web 开发,那么你一定不难发现这是标准的面向对象的写法,`ja` 函数作为构造函数内置了一大堆成员变量,并且在原型链上继承了一大堆方法.
+
+更何况,对象属性中还有三个带有 `new` 关键字的构造函数,估计也是类似于 `ja` 这种设计思路,高楼大厦平地起,还原相关算法之路预期并不简单!
+
+但是想一想车票真难抢还动不动访问错误,是可忍孰不可忍,还是要研究算法一劳永逸搞定 `RAIL_DEVICEID` 的生成逻辑,自己用算法计算实现完美伪装浏览器!
+
+现在以 `initEc` 函数名继续搜素,寻找到底是谁在调用,轻而易举又找到了新的函数名: `getFingerPrint`
+
+```js
+ja.prototype = {
+  getFingerPrint: function() {
+      var a = this;
+      r.RTCPeerConnection || r.webkitRTCPeerConnection || r.mozRTCPeerConnection ? nb(function(b) {
+          a.initEc(b)
+      }) : a.initEc()
+  }
+}
+```
+
+同样地,不再过多停留,继续以 `getFingerPrint` 为关键字搜索,找到了 `Pa` 函数,终于不再是 `ja` 的方法了.
+
+```js
+function Pa() {
+    if (-1 == F("RAIL_EXPIRATION"))
+        for (var a = 0; 10 > a; a++)
+            G(function() {
+                (new ja).getFingerPrint()
+            }, 20 + 2E3 * Math.pow(a, 2));
+    else
+        (new ja).getFingerPrint();
+    G(function() {
+        r.setInterval(function() {
+            (new ja).getFingerPrint()
+        }, 3E5)
+    }, 3E5)
+}
+```
+
+与此同时,`Pa` 函数也是 js 文件的第一行代码,来都来了,那就顺便看一眼 js 的整体结构代码吧!
+
+```js
+(function() {
+   
+})();
+```
+
+自执行的匿名函数实现的闭包,这样的好处在于函数内的变量不会污染其他文件,更何况混淆之后的变量名称充斥着大量的变量 a,b,c,d,e,f之类的,不用闭包也不行啊!
+
+现在继续以 `Pa` 为线索搜索,最终发现了函数入口,除此之外再无其他.
+
+```js
+var mb = !1;
+u.addEventListener ? u.addEventListener("DOMContentLoaded", function b() {
+    u.removeEventListener("DOMContentLoaded", b, !1);
+    Pa()
+}, !1) : u.attachEvent && u.attachEvent("onreadystatechange", function c() {
+    mb || "interactive" != u.readyState && "complete" != u.readyState || (u.detachEvent("onreadystatechange", c),
+    Pa(),
+    mb = !0)
+})
+```
+
+js 是典型的事件驱动型编程语言,当发生什么什么事件后我要干这个,页面加载时我要开始工作了,按钮被点击了我要登录了,页面关闭时我要下班了等等诸如此类的逻辑.
+
+上述代码实现的就是页面元素加载成功后开始执行 `Pa()` 函数,而 `Pa` 函数又会执行 `(new ja).getFingerPrint()` ,紧接着又会执行 `initEc` 函数.
+
+现在基本流程已经大致清楚了,总结一下基本代码逻辑如下:
+
+```js
+(function() {
+   var mb = !1;
+  u.addEventListener ? u.addEventListener("DOMContentLoaded", function b() {
+      u.removeEventListener("DOMContentLoaded", b, !1);
+      Pa()
+  }, !1) : u.attachEvent && u.attachEvent("onreadystatechange", function c() {
+      mb || "interactive" != u.readyState && "complete" != u.readyState || (u.detachEvent("onreadystatechange", c),
+      Pa(),
+      mb = !0)
+  })
+
+  function Pa() {
+    if (-1 == F("RAIL_EXPIRATION"))
+        for (var a = 0; 10 > a; a++)
+            G(function() {
+                (new ja).getFingerPrint()
+            }, 20 + 2E3 * Math.pow(a, 2));
+    else
+        (new ja).getFingerPrint();
+    G(function() {
+        r.setInterval(function() {
+            (new ja).getFingerPrint()
+        }, 3E5)
+    }, 3E5)
+  }
+
+  function ja() {
+    this.ec = new evercookie;
+    this.deviceEc = new evercookie;
+    this.cfp = new aa;
+    this.packageString = "";
+    this.moreInfoArray = []
+  }
+
+  ja.prototype = {
+    getFingerPrint: function() {
+        var a = this;
+        r.RTCPeerConnection || r.webkitRTCPeerConnection || r.mozRTCPeerConnection ? nb(function(b) {
+            a.initEc(b)
+        }) : a.initEc()
+    },
+    initEc: function(a) {
+      var b = ""
+        , c = this
+        , d = void 0 != a && void 0 != a.localAddr ? a.localAddr : "";
+      c.checkWapOrWeb();
+      this.ec.get("RAIL_OkLJUJ", function(a) {
+          b = a;
+          c.getDfpMoreInfo(function() {
+              if (!(9E5 < F("RAIL_EXPIRATION") - (new Date).getTime() & null != F("RAIL_DEVICEID") & void 0 != F("RAIL_DEVICEID") & !c.NeedUpdate())) {
+                  for (var a = "", e = "", g = c.getpackStr(b), m = [], q = [], t = [], k = [], n = 0; n < g.length; n++)
+                      "new" != g[n].value && -1 == Fb.indexOf(g[n].key) && (-1 != Gb.indexOf(g[n].key) ? q.push(g[n]) : -1 != Ib.indexOf(g[n].key) ? t.push(g[n]) : -1 != Hb.indexOf(g[n].key) ? k.push(g[n]) : m.push(g[n]));
+                  g = "";
+                  for (n = 0; n < q.length; n++)
+                      g = g + q[n].key.charAt(0) + q[n].value;
+                  q = "";
+                  for (n = 0; n < k.length; n++)
+                      q = 0 == n ? q + k[n].value : q + "x" + k[n].value;
+                  k = "";
+                  for (n = 0; n < t.length; n++)
+                      k = 0 == n ? k + t[n].value : k + "x" + t[n].value;
+                  m.push(new l("storeDb",g));
+                  m.push(new l("srcScreenSize",q));
+                  m.push(new l("scrAvailSize",k));
+                  "" != d && m.push(new l("localCode",pb(d)));
+                  e = c.hashAlg(m, a, e);
+                  a = e.key;
+                  e = e.value;
+                  a += "\x26timestamp\x3d" + (new Date).getTime();
+                  $a.getJSON("https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3drblubbXDx3\x26hashCode\x3d" + e + a), null, function(a) {
+                      var b = JSON.parse(a);
+                      void 0 != lb && lb.postMessage(a, r.parent);
+                      for (var d in b)
+                          "dfp" == d ? F("RAIL_DEVICEID") != b[d] && (W("RAIL_DEVICEID", b[d], 1E3),
+                          c.deviceEc.set("RAIL_DEVICEID", b[d])) : "exp" == d ? W("RAIL_EXPIRATION", b[d], 1E3) : "cookieCode" == d && (c.ec.set("RAIL_OkLJUJ", b[d]),
+                          W("RAIL_OkLJUJ", "", 0))
+                  })
+              }
+          })
+      }, 1)
+    }
+  }
+})();
+```
+ 
 ### 断点调试追踪调用栈
 
 ### 异步异步到处是异步
