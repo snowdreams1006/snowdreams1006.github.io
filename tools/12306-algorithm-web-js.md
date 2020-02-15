@@ -13,6 +13,53 @@
 
 你以为你的爬虫已经可以正常模仿真正的浏览器,殊不知,只要没搞懂谁才是真正的浏览器标识,那么再怎么换马甲(navigator.userAgent)也难逃造假身份.
 
+![12306-algorithm-web-js-index-cookie-id.png](./images/12306-algorithm-web-js-index-cookie-id.png)
+
+上图展示了 `RAIL_OkLJUJ` 的存在位置,可能是为了兼容市面上绝大数浏览器,也可能是为了联合各种前端缓存技术作为特征码,总是除了 cookie 之外,`RAIL_OkLJUJ` 存在于 `Local Storage` , `Session Storage` , `IndexedDB` 和`Web SQL` 等.
+
+然而,cookie 中故意没有设置 `RAIL_OkLJUJ` ,如果清空全部缓存后再次刷新网页,你就会发现 `RAIL_DEVICEID` 已经发生变化了而 `RAIL_OkLJUJ` 依旧没变!
+
+![12306-algorithm-web-js-index-cookie-RAIL_DEVICEID.png](./images/12306-algorithm-web-js-index-cookie-RAIL_DEVICEID.png)
+
+下面简单验证一下说明谁才是真正的浏览器唯一标识:
+
+- 复制第一次获取到的 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值
+
+打开控制台(Console),通过 js 代码方式取出本地存储(localStorage) 的值:
+
+```js
+localStorage.getItem("RAIL_DEVICEID");
+
+localStorage.getItem("RAIL_OkLJUJ");
+```
+
+控制台会立即返回该值,接下来需要手动复制到其他地方等待和第二次结果作比较.
+
+但是程序员总是喜欢能偷懒就偷懒,手动复制也懒得复制怎么办?
+
+当然,继续使用js 代码复制了啊!
+
+```js
+copy('雪之梦技术驿站欢迎您的访问,https://snowdreams1006.cn');
+```
+
+比如这句代码就会把文本`'雪之梦技术驿站欢迎您的访问,https://snowdreams1006.cn'`复制到剪贴板,接下来选择文本编辑器右键粘贴就能看到效果啦!
+
+所以改造一下代码就能复制第一次访问 12306 网站获取到的 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值.
+
+![12306-algorithm-web-js-index-copy-cookie-id.png](./images/12306-algorithm-web-js-index-copy-cookie-id.png)
+
+```js
+copy("RAIL_DEVICEID:::"+localStorage.getItem("RAIL_DEVICEID"));
+// RAIL_DEVICEID:::E5BDkKrPkZ6nuZruqUj9-3lUG1LBM7t9aTDbZwFSdrboaFG6odrWZ9yuphnas4Jwq5E_FXIwwqlRoSXFbJULUiBNwNGt61Ow6Zv0GFXRABipaeDJJ0Ub7G2g_B_aGwMF5DNZ5KJR4eWVl-P3zSHGKbczLB3WN0z-
+
+copy("RAIL_OkLJUJ:::"+localStorage.getItem("RAIL_OkLJUJ"));
+// RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
+```
+
+- 清空全部缓存并清空 window.name 的属性
+
+
 
 
 - 适合对自主抢票或者脚本抢票有需求的天涯游子
