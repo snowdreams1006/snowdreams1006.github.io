@@ -266,12 +266,85 @@ callbackFunction('{"exp":"1581948102442","cookieCode":"FGHcXsVmjf3oV0zm5qTDPFt-V
 - Doc 请求大多数是后端在控制,方便设置各种页面元素的表现形式,但是也不排除前端使用相关的模板引擎结合 XHR 数据在控制生成文档.
 - Doc 请求设置包括 cookie 在内的一系列网络行为,转发和重定向更是权限控制的常用做法.
 
+下面我们已包括 `RAIL_DEVICEID` 关键字的网络请求,简单感受一下两者的差异性.
+
+XHR 请求重点在于如何请求数据和接收数据,主要体现在 Request Data 和 Response Data 两方面,至于请求头一般都是默认设置.
+
+![12306-algorithm-web-js-network-search-result-xhr.png](./images/12306-algorithm-web-js-network-search-result-xhr.png)
+
+Doc 请求的重点就不一样了,绝大多数请求就是输入网址后自动跳转页面,因而关注的重点应该放在请求头和响应头信息上,因为 cookie 的值就是通过请求头进行发送到后端服务器,后端如需新增或修改 cookie 值就是通过响应头进行设置的.
+
+![12306-algorithm-web-js-network-search-result-doc.png](./images/12306-algorithm-web-js-network-search-result-doc.png)
+
+柿子还要先捏软柿子,现在无法判定 `RAIL_DEVICEID` 到底是服务端直接设置还是客户端自行设置的,而客户端的行为不太直观,所以相对而言还是先捏服务端软柿子吧!
+
+回顾刚才讲解的 Doc 网络请求,不难发现设置 cookie 的行为代码类似如下:
 
 ```
 Set-Cookie: JSESSIONID=D4CE095F5A21B38DF3389070F1E01FE6; Path=/otn
 ```
 
-### 判定到底是谁在控制
+现在找到了学习对象,开始模仿查找类似请求的关键字应该是: `Set-Cookie: RAIL_DEVICEID=`
+
+![12306-algorithm-web-js-network-search-cookie-RAIL_DEVICEID.png](./images/12306-algorithm-web-js-network-search-cookie-RAIL_DEVICEID.png)
+
+查无结果!
+
+一般情况下出现无结果很可能是以下原因之一:
+
+- 恭喜您,真的查无结果,可以换条思路继续探索了.
+- 很遗憾,当前网络请求数据不足刚好缺失符合条件的请求.
+- 日了狗,操作不当误输多余符号或者本是关键字搜索实际上却开启了正则匹配等
+
+所以逐一排查以上原因,首先考虑换一个关键字 `Set-Cookie: JSESSIONID` 能否查找出相应的结果.
+
+![12306-algorithm-web-js-network-search-cookie-JSESSIONID.png](./images/12306-algorithm-web-js-network-search-cookie-JSESSIONID.png)
+
+事实胜于雄辩,查询过程并没有任何问题而是查询结果真的不存在,如此一来一次性排查两个原因,那么很有可能生成逻辑在于前端而非后端.
+
+接下来只能在众多请求中碰碰运气寻找前端到底是在何处生成的 `RAIL_DEVICEID` ,然而请求众多还是要稍微讲究一下策略方向的.
+
+既然是前端在控制 cookie 的生成逻辑,那么很有可能是某个 js 文件在起作用,当然也不排除其他类型的文件有操作浏览器行为的能力.
+
+因此,通过分析进一步缩小范围:在请求类型为 `JS` 的网络请求中查找包括关键字 `RAIL_DEVICEID` 的全部请求.
+
+![12306-algorithm-web-js-network-search-js-cookie-RAIL_DEVICEID.png](./images/12306-algorithm-web-js-network-search-js-cookie-RAIL_DEVICEID.png)
+
+理想很丰满,现实太骨感,本以为选中 js 再搜索关键字能够一起生效,结果并没有,请求类型依旧没有过滤出去,还是一大片的请求!
+
+同时随便选中任意请求可以看到此时网络选项卡搜索匹配大结果其实是请求头这些基本信息,应该并没有包括 js 或者 doc 源码,方向错了,走再多路也是浪费时间.
+
+![12306-algorithm-web-js-network-search-js-cookie-analysis-RAIL_DEVICEID.png](./images/12306-algorithm-web-js-network-search-js-cookie-analysis-RAIL_DEVICEID.png)
+
+虽然我不知道你从哪里来,中间经历了什么,但是我知道你的最终归宿一定会落到网络文件系统.
+
+Chrome 浏览器除了可以看出网络请求也能看到最终呈现给用户的文件系统,既然中间过程找不到你,那么我直接到目的地去搜索吧!
+
+打开源码(Source)选项卡,整个面板大致分为三部分,左侧文件数,中间文件区,右侧调试区.
+
+![12306-algorithm-web-js-source-workspace-pannel.png](./images/12306-algorithm-web-js-source-workspace-pannel.png)
+
+其中左侧的文件结构可以清楚看到当前所处的层级结构,有利于快速掌握项目轮廓.右侧的调试区针对心中有想法但还不确定是否正确提供了非常好的验证工具,调试别人的代码就如本地开发那样边预言边验证.
+
+中间的文件区域面积最大,功能自然也不能太弱,选中左侧具体文件后可以显示源码,方便查看,进而去调试验证心有所想.
+
+所以问题来了,这一切的一切都要源于心有所想才能有行动,那么应该去哪里搜索包括关键字 `RAIL_DEVICEID` 的文件呢?
+
+一般而言,良好的用户体验是不需要告诉你用户手册的,给你一大堆详尽的说明文档也未必会耐得住去看一篇,先用用再说!
+
+人生苦短,不要浪费太多时间放在无聊的事情上面,简短的三行提醒富含哲理性,第一行告诉你怎么打开文件,第二行告诉你如何运行命令,第三行告诉你如何操作实现什么效果.
+
+如果三行代码还不足以解决你的问题,阅读更多自己慢慢琢磨说明文档吧!
+
+当然,这里和在文件系统中查找包含关键字 `RAIL_DEVICEID` 的需求最为接近的应该就是第二行,运行命令了,那就试试看吧!
+
+![12306-algorithm-web-js-source-command-search.png](./images/12306-algorithm-web-js-source-command-search.png)
+
+输入搜索 `search` 后果然弹出了相关搜索命令,于是点击开发工具(DevTools)后出现了搜索框,顺理成章输入关键字 `RAIL_DEVICEID` 进行搜索了啊!
+
+![12306-algorithm-web-js-source-search-result.png](./images/12306-algorithm-web-js-source-search-result.png)
+
+终于等到你,还好我没放弃,你就是我的唯一,看样子和 `RAIL_DEVICEID` 有关的处理逻辑全部都在这么一个 js 文件里,看你还往哪里跑!
 
 ### 直捣黄龙还往哪里跑
 
