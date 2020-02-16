@@ -4340,6 +4340,10 @@ chromeHelper.prototype = {
 
 ## 模拟伪装
 
+现在已经还原了算法的实现逻辑,下一步就是如何更好地伪造自己,本文提供临时设置的实现方式,方便在不修改之前复现代码的基础上实现扩展,当然也可以直接在还原算法源码中写入伪造代码.
+
+值得注意的是,这种 `Object.defineProperty` 方式只会临时生效而且仅仅针对使用 js 代码获取对象属性的值,并不会真正修改对象属性!
+
 - 设置用户代理
 
 ```js
@@ -4909,4 +4913,15 @@ ajax({
 
 ## 回顾展望
 
+
+
 ## 参考资料
+
+- [Chrome - JavaScript调试技巧总结（浏览器调试JS）](https://cloud.tencent.com/developer/article/1503476)
+- [如何使用Chrome DevTools花式打断点](https://segmentfault.com/a/1190000016671687?utm_source=tag-newest#item-1)
+- [【译】Chrome浏览器开发者工具的13个有趣技巧——希望你已经掌握](https://www.jianshu.com/p/553d7b7b78fe?utm_source=oschina-app)
+- [HTML5前端数据库——Web SQL Database](https://www.jianshu.com/p/64ded82068b0)
+- [localStorage兼容ie6/7 用addBehavior 实现](https://www.cnblogs.com/tongchuanxing/p/5664379.html)
+- [前端存储之indexedDB](https://www.cnblogs.com/liujianshe1990-/p/11059796.html)
+- [localstorage || globalStorage || userData](https://www.cnblogs.com/jiechn/p/4080503.html)
+- [navigator，JS检测浏览器插件](https://www.cnblogs.com/wuyuchang/p/4245621.html)
