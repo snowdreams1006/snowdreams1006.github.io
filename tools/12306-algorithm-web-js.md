@@ -613,7 +613,6 @@ js 是典型的事件驱动型编程语言,当发生什么什么事件后我要�
 
 精力有限,这里选择最简单的一种情况进行算法还原过程的研究,浏览器选择谷歌 Chrome 浏览器,这样就可以屏蔽关于 IE 的兼容性补丁处理,同时也不考虑 `RTCPeerConnection` 的情况,于是乎,代码逻辑简化成这样:
 
-
 ```js
 (function() {
   document.addEventListener("DOMContentLoaded", Pa,false)
@@ -682,17 +681,716 @@ js 是典型的事件驱动型编程语言,当发生什么什么事件后我要�
 
 ### 断点调试追踪调用栈
 
-### 异步异步到处是异步
+静态分析程序结构后开始断电调试观察一下数据流向,做到心中有数,同时为了该过程具有可重复性需要保持每一次操作环境一致.
 
-### 硬啃js异步调用逻辑
+具体而言,首先 Chrome 浏览器处于无痕模式,接着是每次试验时清空站点缓存,最后就可以愉快刷新当前网页等待进入下一轮断电调试了.
 
-### 心中无异步便是同步
+![12306-algorithm-web-js-source-getjs-debug.png](./images/12306-algorithm-web-js-source-getjs-debug.png)
 
-### 动态调试保存节点值
+提前在关键点打入断点(鼠标左键点击行号),然后等待程序进入调试模式,稍等一会后进入断点可以一步一步看到程序运行的值,在调试区还可以监控变量的值.
+
+当然也可以有函数调用栈的关系,这一切只是辅助手段,最关键还是要靠自己分析弄清楚函数的调用顺序流程,原则上先大后小,先整体再细节.
+
+![12306-algorithm-web-js-source-getjs-debug-watch.png](./images/12306-algorithm-web-js-source-getjs-debug-watch.png)
+
+函数最后会发送 ajax 请求获取 cookie 并写入本地以及 cookie 中,亲测数据如下:
+
+```json
+{"exp":"1582097104310","cookieCode":"FGH8SO9zGaWtwuld2jrurRzwmZKeXABx","dfp":"EKLLyLS1K7tqtcuZ6LEPYoUKsxmVNyrAlWNLDi3P-gA-tJMLkTxMuhsRNHEhbk7ntCFCsIpymD57I4AyfPUoWB4D_a_Fe5usS8sfJxP_OJjoun5QjAfgDBBmDLh_m2OeRVN2NnRK0-paM6dCSVKdjFGILKUOJYWT"}
+```
+
+![12306-algorithm-web-js-source-getjs-debug-finally.png](./images/12306-algorithm-web-js-source-getjs-debug-finally.png)
+
+一次请求完成后顺利生成了 cookie 也写入了本地缓存中,如果不清空那么进入下一次断点的流程就和这一次不一样了,所以为了可重复操作,再次断点调试时需要还原操作环境.
+
+![12306-algorithm-web-js-source-getjs-debug-write.png](./images/12306-algorithm-web-js-source-getjs-debug-write.png)
+
+首次加载时变量 a 并没有值,一不小心进入下一个过程时,这一次 a 已经有值了,多次试验后搞清楚了数据流向也明白了如何还原操作环境,保持实验结果的一致性.
+
+![12306-algorithm-web-js-source-getjs-debug-repeat.png](./images/12306-algorithm-web-js-source-getjs-debug-repeat.png)
+
+经过多次重复试验,先将基本数据流向还原如下:
+
+```js
+(function() {
+  ja.prototype = {
+    // C:initEc
+    initEc: function(a) {
+      this.ec.get("RAIL_OkLJUJ", function(a) {
+          c.getDfpMoreInfo(function() {
+
+          })
+      }, 1)
+    },
+    // c.getDfpMoreInfo:A
+    getDfpMoreInfo: function(a) {
+        
+    }
+  }
+
+  // this.ec.get("RAIL_OkLJUJ":B
+  window.evercookie = window.Evercookie = function(a) {
+      this.get = function(a, b, c) {
+
+      }
+  }
+})();
+```
+
+异步请求 C <- B <- A 换算成实际情况是 : initEc 函数依赖于 `this.ec.get("RAIL_OkLJUJ"` 函数,等到 `window.evercookie.get` 运行完成后会调用 `c.getDfpMoreInfo` 函数,等到 `getDfpMoreInfo` 函数运行结束后会调用函数核心关键代码.
+
+除了总的来看是各种异步请求相互回调之外,不少细节中也充斥着大量的回调函数,以 `getDfpMoreInfo` 函数为例,居然要收集这么多信息才开始做自己的事情!
+
+```js
+  ja.prototype = {
+    getDfpMoreInfo: function(a) {
+        var b = this;
+        this.moreInfoArray = [];
+        b.cfp.get(function(c, d) {
+            b.moreInfoArray.push(b.getCanvansCode(c + ""));
+            for (var e in d) {
+                c = d[e].key;
+                var f = d[e].value + "";
+                switch (c) {
+                case "session_storage":
+                    b.moreInfoArray.push(b.getSessionStorage(f));
+                    break;
+                case "local_storage":
+                    b.moreInfoArray.push(b.getLocalStorage(f));
+                    break;
+                case "indexed_db":
+                    b.moreInfoArray.push(b.getIndexedDb(f));
+                    break;
+                case "open_database":
+                    b.moreInfoArray.push(b.getOpenDatabase(f));
+                    break;
+                case "do_not_track":
+                    b.moreInfoArray.push(b.getDoNotTrack(f));
+                    break;
+                case "ie_plugins":
+                    b.moreInfoArray.push(b.getPlugins(f));
+                    break;
+                case "regular_plugins":
+                    b.moreInfoArray.push(b.getPlugins());
+                    break;
+                case "adblock":
+                    b.moreInfoArray.push(b.getAdblock(f));
+                    break;
+                case "has_lied_languages":
+                    b.moreInfoArray.push(b.getHasLiedLanguages(f));
+                    break;
+                case "has_lied_resolution":
+                    b.moreInfoArray.push(b.getHasLiedResolution(f));
+                    break;
+                case "has_lied_os":
+                    b.moreInfoArray.push(b.getHasLiedOs(f));
+                    break;
+                case "has_lied_browser":
+                    b.moreInfoArray.push(b.getHasLiedBrowser(f));
+                    break;
+                case "touch_support":
+                    b.moreInfoArray.push(b.getTouchSupport(f));
+                    break;
+                case "js_fonts":
+                    b.moreInfoArray.push(b.getJsFonts(f))
+                }
+            }
+            "function" == typeof a && a()
+        })
+      }
+  }
+
+  function aa(a) {
+      if (!(this instanceof aa))
+          return new aa(a);
+      this.options = this.extend(a, {
+          detectScreenOrientation: !0,
+          swfPath: "flash/compiled/FontList.swf",
+          sortPluginsFor: [/palemoon/i],
+          swfContainerId: "fingerprintjs2",
+          userDefinedFonts: []
+      });
+      this.nativeForEach = Array.prototype.forEach;
+      this.nativeMap = Array.prototype.map
+  }
+
+  aa.prototype = {
+    get: function(a) {
+        var b = []
+          , b = this.userAgentKey(b)
+          , b = this.languageKey(b)
+          , b = this.colorDepthKey(b)
+          , b = this.pixelRatioKey(b)
+          , b = this.screenResolutionKey(b)
+          , b = this.availableScreenResolutionKey(b)
+          , b = this.timezoneOffsetKey(b)
+          , b = this.sessionStorageKey(b)
+          , b = this.localStorageKey(b)
+          , b = this.indexedDbKey(b)
+          , b = this.addBehaviorKey(b)
+          , b = this.openDatabaseKey(b)
+          , b = this.cpuClassKey(b)
+          , b = this.platformKey(b)
+          , b = this.doNotTrackKey(b)
+          , b = this.pluginsKey(b)
+          , b = this.canvasKey(b)
+          , b = this.webglKey(b)
+          , b = this.adBlockKey(b)
+          , b = this.hasLiedLanguagesKey(b)
+          , b = this.hasLiedResolutionKey(b)
+          , b = this.hasLiedOsKey(b)
+          , b = this.hasLiedBrowserKey(b)
+          , b = this.touchSupportKey(b)
+          , c = this;
+        this.fontsKey(b, function(b) {
+            var d = [];
+            c.each(b, function(a) {
+                var b = a.value;
+                "undefined" !== typeof a.value.join && (b = a.value.join(";"));
+                d.push(b)
+            });
+            var f = c.x64hash128(d.join("~~~"), 31);
+            return a(f, b)
+        })
+    }
+  }
+```
+
+`getDfpMoreInfo` 函数的执行过程中首先会运行 `b.cfp.get` 函数,通过搜索追根溯源发现是 `aa.prototype.get` 函数,这个函数除了获取浏览器简单信息外还涉及到字体的加密处理: `var f = c.x64hash128(d.join("~~~"), 31);` 
+
+然而想要继续分析 `getDfpMoreInfo` 函数需要先弄清楚 `b.cfp.get(function(c, d) {` 和 `getDfpMoreInfo: function(a) {` 中的回调函数参数到底是什么,因此必须从头到尾逐一分析,这也是异步请求的陷阱.
+
+看似请求逻辑一气呵成,真的要维护时却困难重重,想要分析 C 必须先分析 B,没想到 B 又要依赖于 A.
+
+所以下一步的操作就是先从突破口 `initEc` 函数顺藤摸瓜,找到最初的函数 A 再根据断点调试看看是如何回调一步步回到 `initEc` 函数的,也就是将异步请求改造成同步请求的过程.
 
 ### 一步一步慢慢转同步
 
+```js
+(function() {
+  ja.prototype = {
+    // C:initEc
+    initEc: function(a) {
+      this.ec.get("RAIL_OkLJUJ", function(a) {
+          c.getDfpMoreInfo(function() {
+
+          })
+      }, 1)
+    },
+    // c.getDfpMoreInfo:A
+    getDfpMoreInfo: function(a) {
+        
+    }
+  }
+
+  // this.ec.get("RAIL_OkLJUJ":B
+  window.evercookie = window.Evercookie = function(a) {
+      this.get = function(a, b, c) {
+
+      }
+  }
+})();
+```
+
+顺着这条路继续分析 `getDfpMoreInfo` 的调用过程,可以添加更多的调用细节,因此现在完善成如下代码:
+
+其中约定标记为字母表 A,B,C的同步调用顺序,对应异步请求 C <- B <- A,深入分析其中的 A 时,依然采用 C,B,A的标记方式.
+
+为了表现出层次性,第二层的 C,B,A 可以表示为 AC,AB,AA,以此类推.
+
+这样最终技能通过层级调用关系形成调用树状图,最终效果大致如下:
+
+```bash
+.
+├── C
+│   ├── CC
+│   ├── CB
+│   └── CA
+├── B
+│   ├── BC
+│   ├── BB
+│   └── BA
+└── A
+    ├── AC
+    ├── AB
+    └── AA
+```
+
+调用栈树状图浏览异步函数调用顺序一目了然,仿照数据结构的栈结构进行设计,后进先出是最外层的 C,然后发现 C 还要依赖B,B 要依赖 A,执行完返回上一层继续执行,这个设计感觉很棒啊,为自己点赞!
+
+```js
+(function() {
+  ja.prototype = {
+    // C
+    initEc: function(a) {
+      this.ec.get("RAIL_OkLJUJ", function(a) {
+          c.getDfpMoreInfo(function() {
+
+          })
+      }, 1)
+    },
+    // A
+    getDfpMoreInfo: function(a) {
+        
+    }
+  }
+
+  // AC
+  aa.prototype = {
+    get: function(a) {
+        
+    }
+  }
+
+  // B
+  window.evercookie = window.Evercookie = function(a) {
+      this.get = function(a, b, c) {
+
+      }
+  }
+
+})();
+```
+
+然而实际分析过程中发现同级请求不总是三级 ABC的形式,这里可以根据实际情况按照这个思路自行分析研究再结合断点调试验证猜想.
+
+- step 1 : 获取基本信息并在获取加密字体后回调
+
+```js
+aa.prototype = {
+    get: function(a) {
+        var b = []
+          , b = this.userAgentKey(b)
+          , b = this.languageKey(b)
+          , b = this.colorDepthKey(b)
+          , b = this.pixelRatioKey(b)
+          , b = this.screenResolutionKey(b)
+          , b = this.availableScreenResolutionKey(b)
+          , b = this.timezoneOffsetKey(b)
+          , b = this.sessionStorageKey(b)
+          , b = this.localStorageKey(b)
+          , b = this.indexedDbKey(b)
+          , b = this.addBehaviorKey(b)
+          , b = this.openDatabaseKey(b)
+          , b = this.cpuClassKey(b)
+          , b = this.platformKey(b)
+          , b = this.doNotTrackKey(b)
+          , b = this.pluginsKey(b)
+          , b = this.canvasKey(b)
+          , b = this.webglKey(b)
+          , b = this.adBlockKey(b)
+          , b = this.hasLiedLanguagesKey(b)
+          , b = this.hasLiedResolutionKey(b)
+          , b = this.hasLiedOsKey(b)
+          , b = this.hasLiedBrowserKey(b)
+          , b = this.touchSupportKey(b)
+          , c = this;
+        this.fontsKey(b, function(b) {
+            var d = [];
+            c.each(b, function(a) {
+                var b = a.value;
+                "undefined" !== typeof a.value.join && (b = a.value.join(";"));
+                d.push(b)
+            });
+            var f = c.x64hash128(d.join("~~~"), 31);
+            return a(f, b)
+        })
+    }
+  }
+```
+
+> `var f = c.x64hash128(d.join("~~~"), 31);` 涉及到一系列的加密操作,暂时不用管,最重要的下面这句 `return a(f, b)` 会执行回调函数继续下一个逻辑.
+
+- step 2 : 获取浏览器更多信息并在最后回调
+
+```js
+  ja.prototype = {
+    getDfpMoreInfo: function(a) {
+        var b = this;
+        this.moreInfoArray = [];
+        b.cfp.get(function(c, d) {
+            b.moreInfoArray.push(b.getCanvansCode(c + ""));
+            for (var e in d) {
+                c = d[e].key;
+                var f = d[e].value + "";
+                switch (c) {
+                case "session_storage":
+                    b.moreInfoArray.push(b.getSessionStorage(f));
+                    break;
+                case "local_storage":
+                    b.moreInfoArray.push(b.getLocalStorage(f));
+                    break;
+                case "indexed_db":
+                    b.moreInfoArray.push(b.getIndexedDb(f));
+                    break;
+                case "open_database":
+                    b.moreInfoArray.push(b.getOpenDatabase(f));
+                    break;
+                case "do_not_track":
+                    b.moreInfoArray.push(b.getDoNotTrack(f));
+                    break;
+                case "ie_plugins":
+                    b.moreInfoArray.push(b.getPlugins(f));
+                    break;
+                case "regular_plugins":
+                    b.moreInfoArray.push(b.getPlugins());
+                    break;
+                case "adblock":
+                    b.moreInfoArray.push(b.getAdblock(f));
+                    break;
+                case "has_lied_languages":
+                    b.moreInfoArray.push(b.getHasLiedLanguages(f));
+                    break;
+                case "has_lied_resolution":
+                    b.moreInfoArray.push(b.getHasLiedResolution(f));
+                    break;
+                case "has_lied_os":
+                    b.moreInfoArray.push(b.getHasLiedOs(f));
+                    break;
+                case "has_lied_browser":
+                    b.moreInfoArray.push(b.getHasLiedBrowser(f));
+                    break;
+                case "touch_support":
+                    b.moreInfoArray.push(b.getTouchSupport(f));
+                    break;
+                case "js_fonts":
+                    b.moreInfoArray.push(b.getJsFonts(f))
+                }
+            }
+            "function" == typeof a && a()
+        })
+      }
+  }
+```
+
+> `b.cfp.get(function(c, d) {})` 函数就是上一步的 `aa.prototype.get()` 函数.
+
+- step 3 : 打包参数前先获取浏览器机器码
+
+```js
+ja.prototype = {
+    getMachineCode: function() {
+          return [this.getUUID(), this.getCookieCode(), this.getUserAgent(), this.getScrHeight(), this.getScrWidth(), this.getScrAvailHeight(), this.getScrAvailWidth(), this.md5ScrColorDepth(), this.getScrDeviceXDPI(), this.getAppCodeName(), this.getAppName(), this.getJavaEnabled(), this.getMimeTypes(), this.getPlatform(), this.getAppMinorVersion(), this.getBrowserLanguage(), this.getCookieEnabled(), this.getCpuClass(), this.getOnLine(), this.getSystemLanguage(), this.getUserLanguage(), this.getTimeZone(), this.getFlashVersion(), this.getHistoryList(), this.getCustId(), this.getSendPlatform()]
+      }
+  }
+```
+
+> 该函数来自于 `initEc` 函数中 `c.getDfpMoreInfo(` 回调函数里的 `g = c.getpackStr(b)`,`this.getMachineCode()` 心机很深,暗藏玄机.
+
+- step 4 : 打包参数前再组合更多信息并重新排序
+
+```js
+ja.prototype = {
+    getpackStr: function(a) {
+          var b = []
+            , b = []
+            , b = this.getMachineCode()
+            , b = b.concat(this.moreInfoArray);
+          null != a && void 0 != a && "" != a && 32 == a.length && b.push(new l("cookieCode",a));
+          b.sort(function(a, b) {
+              var c, d;
+              if ("object" === typeof a && "object" === typeof b && a && b)
+                  return c = a.key,
+                  d = b.key,
+                  c === d ? 0 : typeof c === typeof d ? c < d ? -1 : 1 : typeof c < typeof d ? -1 : 1;
+              throw "error";
+          });
+          return b
+      }
+  }
+```
+
+> 该函数同样来自于 `initEc` 函数中 `c.getDfpMoreInfo(` 回调函数里的 `g = c.getpackStr(b)`,值得学习研究!
+
+- step 5 : 重新分类浏览器信息并加密生成请求参数
+
+```js
+ja.prototype = {
+    initEc: function(a) {
+        var b = ""
+          , c = this
+          , d = void 0 != a && void 0 != a.localAddr ? a.localAddr : "";
+        c.checkWapOrWeb();
+        this.ec.get("RAIL_OkLJUJ", function(a) {
+            b = a;
+            c.getDfpMoreInfo(function() {
+                if (!(9E5 < F("RAIL_EXPIRATION") - (new Date).getTime() & null != F("RAIL_DEVICEID") & void 0 != F("RAIL_DEVICEID") & !c.NeedUpdate())) {
+                    for (var a = "", e = "", g = c.getpackStr(b), m = [], q = [], t = [], k = [], n = 0; n < g.length; n++)
+                        "new" != g[n].value && -1 == Fb.indexOf(g[n].key) && (-1 != Gb.indexOf(g[n].key) ? q.push(g[n]) : -1 != Ib.indexOf(g[n].key) ? t.push(g[n]) : -1 != Hb.indexOf(g[n].key) ? k.push(g[n]) : m.push(g[n]));
+                    g = "";
+                    for (n = 0; n < q.length; n++)
+                        g = g + q[n].key.charAt(0) + q[n].value;
+                    q = "";
+                    for (n = 0; n < k.length; n++)
+                        q = 0 == n ? q + k[n].value : q + "x" + k[n].value;
+                    k = "";
+                    for (n = 0; n < t.length; n++)
+                        k = 0 == n ? k + t[n].value : k + "x" + t[n].value;
+                    m.push(new l("storeDb",g));
+                    m.push(new l("srcScreenSize",q));
+                    m.push(new l("scrAvailSize",k));
+                    "" != d && m.push(new l("localCode",pb(d)));
+                    e = c.hashAlg(m, a, e);
+                    a = e.key;
+                    e = e.value;
+                    a += "\x26timestamp\x3d" + (new Date).getTime();
+                    $a.getJSON("https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3drblubbXDx3\x26hashCode\x3d" + e + a), null, function(a) {
+                        var b = JSON.parse(a);
+                        void 0 != lb && lb.postMessage(a, r.parent);
+                        for (var d in b)
+                            "dfp" == d ? F("RAIL_DEVICEID") != b[d] && (W("RAIL_DEVICEID", b[d], 1E3),
+                            c.deviceEc.set("RAIL_DEVICEID", b[d])) : "exp" == d ? W("RAIL_EXPIRATION", b[d], 1E3) : "cookieCode" == d && (c.ec.set("RAIL_OkLJUJ", b[d]),
+                            W("RAIL_OkLJUJ", "", 0))
+                    })
+                }
+            })
+        }, 1)
+    }
+  }
+```
+
+> `e = c.hashAlg(m, a, e);` 加密过程比基本信息的加密更加复杂,但是总体来说难度也不大,主要涉及到字符串反转,分段组装,哈希算法以及 base64 编码等等.
+
 ### 遇到瓶颈则略过细节
+
+通读全文并结合断点调试反复验证猜想后,我们发现为了最终请求[https://kyfw.12306.cn/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 时的参数可真的为呕心沥血,费心尽力啊!
+
+总体来说,获取浏览器各种信息并且还涉及兼容 IE 浏览器而处理的各种补丁,对于原始信息较长时采用独特的加密算法进行加密处理,仅此还不够,还存在判断是否伪造浏览器参数的相关逻辑判断,真的是大写的服!
+
+关于获取浏览器的相关信息反而很简单,只要结合如何识别是否说谎的代码一起设置就能绕过这部分逻辑,比如说常见的设置浏览器用户代码如下:
+
+```js
+  aa.prototype = {
+    userAgentKey: function(a) {
+        this.options.excludeUserAgent || a.push({
+            key: "user_agent",
+            value: this.getUserAgent()
+        });
+        return a
+    },
+    getUserAgent: function() {
+        var a = g.userAgent;
+        return a = a.replace(/\&|\+|\?|\%|\#|\/|\=/g, "")
+    }
+  }
+
+  ja.prototype = {
+    getUserAgent: function() {
+        var a = g.userAgent
+          , a = a.replace(/\&|\+/g, "");
+        return new l("userAgent",a.toString())
+    }
+  }
+```
+
+不同对象对同一个用户代理的处理逻辑不同,类似上述例子还有很多,简单到处都是陷阱,不看源码根本就不知道,看完以后你还会吐槽 12306 技术垃圾吗?
+
+接下来的是三个加密算法,一个是最初基本信息加密,一个字体信息加密,还有一个是最终分类信息加密.
+
+```js
+  function ba(a) {
+      for (var b = [], c = (1 << ca) - 1, d = 0; d < a.length * ca; d += ca)
+          b[d >> 5] |= (a.charCodeAt(d / ca) & c) << d % 32;
+      a = a.length * ca;
+      b[a >> 5] |= 128 << a % 32;
+      b[(a + 64 >>> 9 << 4) + 14] = a;
+      a = 1732584193;
+      for (var c = -271733879, d = -1732584194, e = 271733878, f = 0; f < b.length; f += 16) {
+          var h = a
+            , p = c
+            , g = d
+            , m = e;
+          a = D(a, c, d, e, b[f + 0], 7, -680876936);
+          e = D(e, a, c, d, b[f + 1], 12, -389564586);
+          d = D(d, e, a, c, b[f + 2], 17, 606105819);
+          c = D(c, d, e, a, b[f + 3], 22, -1044525330);
+          a = D(a, c, d, e, b[f + 4], 7, -176418897);
+          e = D(e, a, c, d, b[f + 5], 12, 1200080426);
+          d = D(d, e, a, c, b[f + 6], 17, -1473231341);
+          c = D(c, d, e, a, b[f + 7], 22, -45705983);
+          a = D(a, c, d, e, b[f + 8], 7, 1770035416);
+          e = D(e, a, c, d, b[f + 9], 12, -1958414417);
+          d = D(d, e, a, c, b[f + 10], 17, -42063);
+          c = D(c, d, e, a, b[f + 11], 22, -1990404162);
+          a = D(a, c, d, e, b[f + 12], 7, 1804603682);
+          e = D(e, a, c, d, b[f + 13], 12, -40341101);
+          d = D(d, e, a, c, b[f + 14], 17, -1502002290);
+          c = D(c, d, e, a, b[f + 15], 22, 1236535329);
+          a = C(a, c, d, e, b[f + 1], 5, -165796510);
+          e = C(e, a, c, d, b[f + 6], 9, -1069501632);
+          d = C(d, e, a, c, b[f + 11], 14, 643717713);
+          c = C(c, d, e, a, b[f + 0], 20, -373897302);
+          a = C(a, c, d, e, b[f + 5], 5, -701558691);
+          e = C(e, a, c, d, b[f + 10], 9, 38016083);
+          d = C(d, e, a, c, b[f + 15], 14, -660478335);
+          c = C(c, d, e, a, b[f + 4], 20, -405537848);
+          a = C(a, c, d, e, b[f + 9], 5, 568446438);
+          e = C(e, a, c, d, b[f + 14], 9, -1019803690);
+          d = C(d, e, a, c, b[f + 3], 14, -187363961);
+          c = C(c, d, e, a, b[f + 8], 20, 1163531501);
+          a = C(a, c, d, e, b[f + 13], 5, -1444681467);
+          e = C(e, a, c, d, b[f + 2], 9, -51403784);
+          d = C(d, e, a, c, b[f + 7], 14, 1735328473);
+          c = C(c, d, e, a, b[f + 12], 20, -1926607734);
+          a = A(c ^ d ^ e, a, c, b[f + 5], 4, -378558);
+          e = A(a ^ c ^ d, e, a, b[f + 8], 11, -2022574463);
+          d = A(e ^ a ^ c, d, e, b[f + 11], 16, 1839030562);
+          c = A(d ^ e ^ a, c, d, b[f + 14], 23, -35309556);
+          a = A(c ^ d ^ e, a, c, b[f + 1], 4, -1530992060);
+          e = A(a ^ c ^ d, e, a, b[f + 4], 11, 1272893353);
+          d = A(e ^ a ^ c, d, e, b[f + 7], 16, -155497632);
+          c = A(d ^ e ^ a, c, d, b[f + 10], 23, -1094730640);
+          a = A(c ^ d ^ e, a, c, b[f + 13], 4, 681279174);
+          e = A(a ^ c ^ d, e, a, b[f + 0], 11, -358537222);
+          d = A(e ^ a ^ c, d, e, b[f + 3], 16, -722521979);
+          c = A(d ^ e ^ a, c, d, b[f + 6], 23, 76029189);
+          a = A(c ^ d ^ e, a, c, b[f + 9], 4, -640364487);
+          e = A(a ^ c ^ d, e, a, b[f + 12], 11, -421815835);
+          d = A(e ^ a ^ c, d, e, b[f + 15], 16, 530742520);
+          c = A(d ^ e ^ a, c, d, b[f + 2], 23, -995338651);
+          a = E(a, c, d, e, b[f + 0], 6, -198630844);
+          e = E(e, a, c, d, b[f + 7], 10, 1126891415);
+          d = E(d, e, a, c, b[f + 14], 15, -1416354905);
+          c = E(c, d, e, a, b[f + 5], 21, -57434055);
+          a = E(a, c, d, e, b[f + 12], 6, 1700485571);
+          e = E(e, a, c, d, b[f + 3], 10, -1894986606);
+          d = E(d, e, a, c, b[f + 10], 15, -1051523);
+          c = E(c, d, e, a, b[f + 1], 21, -2054922799);
+          a = E(a, c, d, e, b[f + 8], 6, 1873313359);
+          e = E(e, a, c, d, b[f + 15], 10, -30611744);
+          d = E(d, e, a, c, b[f + 6], 15, -1560198380);
+          c = E(c, d, e, a, b[f + 13], 21, 1309151649);
+          a = E(a, c, d, e, b[f + 4], 6, -145523070);
+          e = E(e, a, c, d, b[f + 11], 10, -1120210379);
+          d = E(d, e, a, c, b[f + 2], 15, 718787259);
+          c = E(c, d, e, a, b[f + 9], 21, -343485551);
+          a = N(a, h);
+          c = N(c, p);
+          d = N(d, g);
+          e = N(e, m)
+      }
+      b = [a, c, d, e];
+      a = rb ? "0123456789ABCDEF" : "0123456789abcdef";
+      c = "";
+      for (d = 0; d < 4 * b.length; d++)
+          c += a.charAt(b[d >> 2] >> d % 4 * 8 + 4 & 15) + a.charAt(b[d >> 2] >> d % 4 * 8 & 15);
+      return c
+  }
+
+  aa.prototype = {
+    x64hash128: function(a, b) {
+          a = a || "";
+          b = b || 0;
+          for (var c = a.length % 16, d = a.length - c, e = [0, b], f = [0, b], h, p, g = [2277735313, 289559509], m = [1291169091, 658871167], l = 0; l < d; l += 16)
+              h = [a.charCodeAt(l + 4) & 255 | (a.charCodeAt(l + 5) & 255) << 8 | (a.charCodeAt(l + 6) & 255) << 16 | (a.charCodeAt(l + 7) & 255) << 24, a.charCodeAt(l) & 255 | (a.charCodeAt(l + 1) & 255) << 8 | (a.charCodeAt(l + 2) & 255) << 16 | (a.charCodeAt(l + 3) & 255) << 24],
+              p = [a.charCodeAt(l + 12) & 255 | (a.charCodeAt(l + 13) & 255) << 8 | (a.charCodeAt(l + 14) & 255) << 16 | (a.charCodeAt(l + 15) & 255) << 24, a.charCodeAt(l + 8) & 255 | (a.charCodeAt(l + 9) & 255) << 8 | (a.charCodeAt(l + 10) & 255) << 16 | (a.charCodeAt(l + 11) & 255) << 24],
+              h = this.x64Multiply(h, g),
+              h = this.x64Rotl(h, 31),
+              h = this.x64Multiply(h, m),
+              e = this.x64Xor(e, h),
+              e = this.x64Rotl(e, 27),
+              e = this.x64Add(e, f),
+              e = this.x64Add(this.x64Multiply(e, [0, 5]), [0, 1390208809]),
+              p = this.x64Multiply(p, m),
+              p = this.x64Rotl(p, 33),
+              p = this.x64Multiply(p, g),
+              f = this.x64Xor(f, p),
+              f = this.x64Rotl(f, 31),
+              f = this.x64Add(f, e),
+              f = this.x64Add(this.x64Multiply(f, [0, 5]), [0, 944331445]);
+          h = [0, 0];
+          p = [0, 0];
+          switch (c) {
+          case 15:
+              p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 14)], 48));
+          case 14:
+              p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 13)], 40));
+          case 13:
+              p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 12)], 32));
+          case 12:
+              p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 11)], 24));
+          case 11:
+              p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 10)], 16));
+          case 10:
+              p = this.x64Xor(p, this.x64LeftShift([0, a.charCodeAt(l + 9)], 8));
+          case 9:
+              p = this.x64Xor(p, [0, a.charCodeAt(l + 8)]),
+              p = this.x64Multiply(p, m),
+              p = this.x64Rotl(p, 33),
+              p = this.x64Multiply(p, g),
+              f = this.x64Xor(f, p);
+          case 8:
+              h = this.x64Xor(h, this.x64LeftShift([0, a.charCodeAt(l + 7)], 56));
+          case 7:
+              h = this.x64Xor(h, this.x64LeftShift([0, a.charCodeAt(l + 6)], 48));
+          case 6:
+              h = this.x64Xor(h, this.x64LeftShift([0, a.charCodeAt(l + 5)], 40));
+          case 5:
+              h = this.x64Xor(h, this.x64LeftShift([0, a.charCodeAt(l + 4)], 32));
+          case 4:
+              h = this.x64Xor(h, this.x64LeftShift([0, a.charCodeAt(l + 3)], 24));
+          case 3:
+              h = this.x64Xor(h, this.x64LeftShift([0, a.charCodeAt(l + 2)], 16));
+          case 2:
+              h = this.x64Xor(h, this.x64LeftShift([0, a.charCodeAt(l + 1)], 8));
+          case 1:
+              h = this.x64Xor(h, [0, a.charCodeAt(l)]),
+              h = this.x64Multiply(h, g),
+              h = this.x64Rotl(h, 31),
+              h = this.x64Multiply(h, m),
+              e = this.x64Xor(e, h)
+          }
+          e = this.x64Xor(e, [0, a.length]);
+          f = this.x64Xor(f, [0, a.length]);
+          e = this.x64Add(e, f);
+          f = this.x64Add(f, e);
+          e = this.x64Fmix(e);
+          f = this.x64Fmix(f);
+          e = this.x64Add(e, f);
+          f = this.x64Add(f, e);
+          return ("00000000" + (e[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (e[1] >>> 0).toString(16)).slice(-8) + ("00000000" + (f[0] >>> 0).toString(16)).slice(-8) + ("00000000" + (f[1] >>> 0).toString(16)).slice(-8)
+      }
+  }
+
+  ja.prototype = {
+    hashAlg: function(a, b, c) {
+          a.sort(function(a, b) {
+              var c, d;
+              if ("object" === typeof a && "object" === typeof b && a && b)
+                  return c = a.key,
+                  d = b.key,
+                  c === d ? 0 : typeof c === typeof d ? c < d ? -1 : 1 : typeof c < typeof d ? -1 : 1;
+              throw "error";
+          });
+          for (var d = 0; d < a.length; d++) {
+              var e = a[d].key.replace(RegExp("%", "gm"), "")
+                , f = ""
+                , f = "string" == typeof a[d].value ? a[d].value.replace(RegExp("%", "gm"), "") : a[d].value;
+              "" !== f && (c += e + f,
+              b += "\x26" + (void 0 == hb[e] ? e : hb[e]) + "\x3d" + f)
+          }
+          a = c;
+          c = "";
+          d = a.length;
+          for (e = 0; e < d; e++)
+              f = a.charAt(e).charCodeAt(0),
+              c = 127 === f ? c + String.fromCharCode(0) : c + String.fromCharCode(f + 1);
+          a = c;
+          c = a.length;
+          d = 0 == c % 3 ? parseInt(c / 3) : parseInt(c / 3) + 1;
+          3 > c || (e = a.substring(0, 1 * d),
+          f = a.substring(1 * d, 2 * d),
+          a = a.substring(2 * d, c) + e + f);
+          a = Qa(a);
+          a = Qa(a);
+          c = R.SHA256(a).toString(R.enc.Base64);
+          c = R.SHA256(c).toString(R.enc.Base64);
+          return new l(b,c)
+      }
+  }
+```
+
+这三个算法看起来比较吓人,实际上只要耐心调试是可以慢慢还原的,不过是字母的各种排列组合顺序而已,谁让他没有加密能让我们看到源码呢,仅仅的变量名称替换是难不倒聪明才智的开发者的,更何况这部分和业务逻辑关心不大,暂且略过吧.
 
 ### 框架初现已尽在掌控
 
