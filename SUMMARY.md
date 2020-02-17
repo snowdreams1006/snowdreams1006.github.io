@@ -70,6 +70,7 @@
     * [函数式接口](java8/functionInterface.md)
 
 ## 学习笔记
+* [go 学习笔记](https://snowdreams1006.github.io/learn-go/)
 * [go 学习笔记](go/README.md)
     * [初识 go](go/base/about.md)
         * [环境搭建](go/base/setup.md)
