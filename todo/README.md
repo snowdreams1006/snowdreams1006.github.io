@@ -465,3 +465,10 @@ git remote --verbose
 git remote set-url --add origin git@gitee.com:snowdreams1006/snowdreams1006.git
 ```
 
+```
+url = git@gitee.com:snowdreams1006/snowdreams1006.git
+url = git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git
+url = git@e.coding.net:snowdreams1006/snowdreams1006.coding.me.git
+url = git@git.dev.tencent.com:snowdreams1006/snowdreams1006.git
+```
+

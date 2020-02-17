@@ -69,13 +69,12 @@
     * [lambda表达式](java8/lambda.md)
     * [函数式接口](java8/functionInterface.md)
 
-## 学习笔记
+## 编程笔记
 * [go 学习笔记](https://snowdreams1006.github.io/learn-go/)
-* [php 学习笔记](php/README.md)
-    * [搭建开发环境( mac 版)](php/php-setup-environment-mac.md)
-    * [关于时区的那点事](php/set-timezone-method.md)
-    * [日期时间操作一箩筐](php/datetime-overview.md)
+* [php 学习笔记](https://snowdreams1006.github.io/learn-php/)
 * [python 学习笔记](https://snowdreams1006.github.io/learn-python/)
+
+## 兴趣开发
 * [从零开始搭建服务器](zero2devops/README.md)
     * [从登录服务器开始](zero2devops/login-and-logout.md)
     * [更加优雅地部署项目](zero2devops/docker.md)
