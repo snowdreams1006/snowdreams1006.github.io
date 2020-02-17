@@ -65,11 +65,9 @@
         * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
         * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
     * [参考更多](myGitbook/reference/README.md)
-* [java8新特性](java8/README.md)
-    * [lambda表达式](java8/lambda.md)
-    * [函数式接口](java8/functionInterface.md)
 
 ## 编程笔记
+* [java 学习笔记](https://snowdreams1006.github.io/learn-java/)
 * [go 学习笔记](https://snowdreams1006.github.io/learn-go/)
 * [php 学习笔记](https://snowdreams1006.github.io/learn-php/)
 * [python 学习笔记](https://snowdreams1006.github.io/learn-python/)
