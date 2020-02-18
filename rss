@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 16 Jan 2020 04:36:59 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 18 Feb 2020 09:49:06 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -447,203 +447,6 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[java8新特性]]></title>
-            <description><![CDATA[java8作为 java的一个重要版本,目前为大多数企业和个人所接受,了解其本身为我们提供了哪些改变有助于我们去解决实际问题,窥探其今后可能的发展方向.]]></description>
-            <link>https://snowdreams1006.github.io/java8/README.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/java8/README.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[lambda表达式]]></title>
-            <description><![CDATA[下面通过对比 java8 之前的普通实现和 java8 引入lambda 表达式的实现,帮助读者快速了解代码差异性,眼见为实,赶紧开始吧!]]></description>
-            <link>https://snowdreams1006.github.io/java8/lambda.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/java8/lambda.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[函数式接口]]></title>
-            <description><![CDATA[小结
-值得说明的是,默认接口实现应该是对所有的实现类来说有价值的默认实现,接口是对行为的规范,对接口的定义必须相当谨慎.那我们熟悉的 List 来说,查询源码,搜索@since发现,大多 api 是1.2,1.3,1.4...竟然没有,而1.8新增的也是 default 接口,为什么?
-因为增加接口就需要实现,所以轻易不会新增接口,但是 jdk8允许有默认接口实现,这就解决了需要重新实现接口方法的问题,这也是为什么我们认为这是 jdk8的重大更新;
-这里需要说明下 jdk8新增了默认接口实现方法,我们称之为默认接口实现方法,而 lambda 表达式实现的接口方法,我们称之为默认方法吧;]]></description>
-            <link>https://snowdreams1006.github.io/java8/functionInterface.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/java8/functionInterface.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go 学习笔记]]></title>
-            <description><![CDATA[Go 是一种开源编程语言,可以轻松构建简单,可靠,高效的软件.]]></description>
-            <link>https://snowdreams1006.github.io/go/README.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/README.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[go 学习笔记]]></title>
-            <description><![CDATA[go-index-gopher.jpg]]></description>
-            <link>https://snowdreams1006.github.io/go/base/about.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/about.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[环境搭建]]></title>
-            <description><![CDATA[千里之行始于足下,开始 Go 语言学习之旅前,首先要搭建好本地开发环境,然后就可以放心大胆瞎折腾了.]]></description>
-            <link>https://snowdreams1006.github.io/go/base/setup.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/setup.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[工作空间]]></title>
-            <description><![CDATA[搭建好 Go 的基本环境后,现在可以正式开始 Go 语言的学习之旅,初学时建议在默认的 GOPATH 工作空间规范编写代码,基本目录结构大概是这个样子.]]></description>
-            <link>https://snowdreams1006.github.io/go/base/workspace.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/workspace.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[IDE编辑器]]></title>
-            <description><![CDATA[工欲善其事必先利其器,命令行工具虽然能够在一定程度上满足基本操作的需求,但实际工作中总不能一直使用命令行工具进行编码操作吧?]]></description>
-            <link>https://snowdreams1006.github.io/go/base/ide.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/ide.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[变量和常量]]></title>
-            <description><![CDATA[首先希望学习 Go 语言的爱好者至少拥有其他语言的编程经验,如果是完全零基础的小白用户,本教程可能并不适合阅读或尝试阅读看看,系列笔记的目标是站在其他语言的角度学习新的语言,理解 Go 语言,进而写出真正的 Go 程序.]]></description>
-            <link>https://snowdreams1006.github.io/go/base/var-and-const.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/var-and-const.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[基础语法]]></title>
-            <description><![CDATA[在上篇文章中,我们动手亲自编写了第一个 Go 语言版本的 Hello World,并且认识了 Go 语言中有意思的变量和不安分的常量.]]></description>
-            <link>https://snowdreams1006.github.io/go/base/grammar.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/base/grammar.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[内建容器]]></title>
-            <description><![CDATA[上篇文章中详细介绍了 Go 的基础语言,指出了 Go 和其他主流的编程语言的差异性,比较侧重于语法细节,相信只要稍加记忆就能轻松从已有的编程语言切换到 Go 语言的编程习惯中,尽管这种切换可能并不是特别顺畅,但多加练习尤其是多多试错,总是可以慢慢感受 Go 语言之美!]]></description>
-            <link>https://snowdreams1006.github.io/go/container/about.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/container/about.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[数组切片]]></title>
-            <description><![CDATA[字符串]]></description>
-            <link>https://snowdreams1006.github.io/go/container/array.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/container/array.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[字典映射]]></title>
-            <description><![CDATA[结构的定义]]></description>
-            <link>https://snowdreams1006.github.io/go/container/map.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/container/map.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[面向对象]]></title>
-            <description><![CDATA[go-oop-about-oop-elephant.jpg]]></description>
-            <link>https://snowdreams1006.github.io/go/oop/about.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/about.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[再说封装]]></title>
-            <description><![CDATA[虽然在上篇文章中,我们通过尝试性学习探索了 Go 语言中关于面向对象的相关概念,更确切的说是关于封装的基本概念以及相关实现.]]></description>
-            <link>https://snowdreams1006.github.io/go/oop/encapsulation.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/encapsulation.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[能否继承]]></title>
-            <description><![CDATA[熟悉面向对象的小伙伴们可能会知道封装,继承和多态是最主要的特性,为什么前辈们会如此看重这三种特性,真的那么重要吗?]]></description>
-            <link>https://snowdreams1006.github.io/go/oop/inheritance.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/inheritance.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[初识接口]]></title>
-            <description><![CDATA[在上篇文章中,我们编撰了一则简短的小故事用于讲解了什么是面向对象的继承特性以及 Go 语言是如何实现这种继承语义的,这一节我们将继续探讨新的场景,希望能顺便讲解面向对象的接口概念.]]></description>
-            <link>https://snowdreams1006.github.io/go/oop/interface.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/interface.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[再谈接口]]></title>
-            <description><![CDATA[如果你还了解编程概念中的接口概念,那么我建议你最好还是先阅读上一篇文章.详情请点击 go 学习笔记之万万没想到宠物店竟然催生出面向接口编程? ,否则的话,请自动忽略上文,继续探索 Go 语言的接口有什么不同之处.]]></description>
-            <link>https://snowdreams1006.github.io/go/oop/interface-type.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/oop/interface-type.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[函数式编程]]></title>
-            <description><![CDATA[在编程世界中向来就没有一家独大的编程风格,至少目前还是百家争鸣的春秋战国,除了众所周知的面向对象编程还有日渐流行的函数式编程,当然这也是本系列文章的重点.]]></description>
-            <link>https://snowdreams1006.github.io/go/functional/about.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/functional/about.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[斐波那契数列]]></title>
-            <description><![CDATA[本篇文章是 Go 语言学习笔记之函数式编程系列文章的第二篇,上一篇介绍了函数基础,这一篇文章重点介绍函数的重要应用之一: 闭包]]></description>
-            <link>https://snowdreams1006.github.io/go/functional/fib.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/functional/fib.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[简要理解闭包]]></title>
-            <description><![CDATA[闭包是主流编程语言中的一种通用技术,常常和函数式编程进行强强联合,本文主要是介绍 Go 语言中什么是闭包以及怎么理解闭包.]]></description>
-            <link>https://snowdreams1006.github.io/go/functional/closure.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/functional/closure.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[错误管理]]></title>
-            <description><![CDATA[Go 语言中有个 defer 关键字,常用于实现延迟函数来保证关键代码的最终执行,常言道: "未雨绸缪方可有备无患".]]></description>
-            <link>https://snowdreams1006.github.io/go/error/about.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/error/about.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[延迟函数]]></title>
-            <description><![CDATA[go-error-defer-learn-from-old.jpg]]></description>
-            <link>https://snowdreams1006.github.io/go/error/defer.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/error/defer.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[常见问题]]></title>
-            <link>https://snowdreams1006.github.io/go/issue/faq.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/go/issue/faq.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[php 学习笔记]]></title>
-            <link>https://snowdreams1006.github.io/php/README.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/php/README.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[搭建开发环境( mac 版)]]></title>
-            <description><![CDATA[Mac 系统默认集成了很多开发工具,其中就包括 php 所需要的一些软件工具.]]></description>
-            <link>https://snowdreams1006.github.io/php/php-setup-environment-mac.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/php/php-setup-environment-mac.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[关于时区的那点事]]></title>
-            <description><![CDATA[众所周知,地球绕着太阳转的同时也会自转,因此同一时刻不同地区所接收到太阳照射的情况不同,所以有的地区是日出,有的地区是日落,还有的地区可能是黑夜.]]></description>
-            <link>https://snowdreams1006.github.io/php/set-timezone-method.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/php/set-timezone-method.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[日期时间操作一箩筐]]></title>
-            <description><![CDATA[php-datetime-overview-doc.png]]></description>
-            <link>https://snowdreams1006.github.io/php/datetime-overview.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/php/datetime-overview.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
             <title><![CDATA[从零开始搭建个人服务器]]></title>
             <link>https://snowdreams1006.github.io/zero2devops/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/README.html</guid>
@@ -895,6 +698,13 @@
             <title><![CDATA[学习开发自己的 chrome 插件]]></title>
             <link>https://snowdreams1006.github.io/tools/chrome-extend-learn.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/chrome-extend-learn.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[还原 12306 前端加密算法]]></title>
+            <description><![CDATA[本文针对自主开发的抢票脚本在抢票过程中常常遇到的请求无效等问题,简单分析了 12306 网站的前端加密算法,更准确的说,是探究 RAIL_DEVICEID 的生成过程.]]></description>
+            <link>https://snowdreams1006.github.io/tools/12306-algorithm-web-js.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/12306-algorithm-web-js.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
