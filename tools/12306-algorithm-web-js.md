@@ -3,6 +3,185 @@
 > 郑重声明:
 > 本文仅供学习使用,禁止用于非法用途,否则后果自负,如有侵权,烦请告知删除,谢谢合作!
 
+## 开篇明义
+
+本文针对**自主开发**的**抢票**脚本在抢票过程中常常遇到的**请求无效**等问题,简单分析了 12306 网站的前端加密算法,更准确的说,是探究 `RAIL_DEVICEID` 的生成过程.
+
+因为该 cookie 值是抢票请求的**核心基础**,没有它将无法正确发送请求,或者一段时间后就会到期失效需要重新获取,或者明明更改了浏览器用户代理(navigator.userAgent)标识却还是被限制访问...
+
+因为它并不是真正的客户端标识,只是迷惑性战术,浏览器唯一标识其实是 `RAIL_OkLJUJ` 而它却被 12306 网站设计者**故意没有添加到 cookie** ,因此造成了很强的欺骗性,编程真的是一门艺术!
+
+你以为你的爬虫已经可以正常模仿浏览器,殊不知,只要没搞懂谁才是真正的浏览器标识,那么再怎么换马甲也**难逃造假事实**.
+
+![12306-algorithm-web-js-index-cookie-id.png](./images/12306-algorithm-web-js-index-cookie-id.png)
+
+上图展示了 `RAIL_OkLJUJ` 的存在位置,可能是为了**兼容市面上绝大数浏览器**,也可能是为了**联合各种前端缓存技术作为特征码**,总是除了 cookie 之外,`RAIL_OkLJUJ` 存在于 `Local Storage` , `Session Storage` , `IndexedDB` 和`Web SQL` 等.
+
+值得注意的是,cookie 中**故意没有设置** `RAIL_OkLJUJ` ,如果清空全部缓存后再次刷新网页,你就会发现 `RAIL_DEVICEID` 已经发生变化了而 `RAIL_OkLJUJ` 依旧没变!
+
+![12306-algorithm-web-js-index-cookie-RAIL_DEVICEID.png](./images/12306-algorithm-web-js-index-cookie-RAIL_DEVICEID.png)
+
+下面简单验证一下说明谁才是真正的浏览器唯一标识:
+
+- step 1 : 复制当前获取到的 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值
+
+打开控制台(Console),通过 js 代码方式取出本地存储(localStorage) 的值:
+
+```js
+localStorage.getItem("RAIL_DEVICEID");
+
+localStorage.getItem("RAIL_OkLJUJ");
+```
+
+控制台会立即返回该值,接下来需要**手动复制到其他地方**等待和第二次结果作比较.
+
+但是程序员总是喜欢能偷懒就偷懒,手动复制也懒得复制怎么办?
+
+当然,继续使用js 代码复制了啊!
+
+```js
+copy('雪之梦技术驿站欢迎您的访问,https://snowdreams1006.cn');
+```
+
+比如这句代码就会把文本`'雪之梦技术驿站欢迎您的访问,https://snowdreams1006.cn'`复制到剪贴板,接下来选择文本编辑器右键粘贴就能看到效果啦!
+
+所以改造一下代码就能复制第一次访问 12306 网站获取到的 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值.
+
+![12306-algorithm-web-js-index-copy-cookie-id.png](./images/12306-algorithm-web-js-index-copy-cookie-id.png)
+
+```js
+copy("RAIL_DEVICEID:::"+localStorage.getItem("RAIL_DEVICEID"));
+// RAIL_DEVICEID:::E5BDkKrPkZ6nuZruqUj9-3lUG1LBM7t9aTDbZwFSdrboaFG6odrWZ9yuphnas4Jwq5E_FXIwwqlRoSXFbJULUiBNwNGt61Ow6Zv0GFXRABipaeDJJ0Ub7G2g_B_aGwMF5DNZ5KJR4eWVl-P3zSHGKbczLB3WN0z-
+
+copy("RAIL_OkLJUJ:::"+localStorage.getItem("RAIL_OkLJUJ"));
+// RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
+```
+
+- step 2 : 等待 5 min 后再次获取 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值
+
+```js
+copy("RAIL_DEVICEID:::"+localStorage.getItem("RAIL_DEVICEID"));
+// RAIL_DEVICEID:::VUye37EEUdGHgrpJGo9J95hWMNSIUFPeYBjabDgCiYJbQIr53iVzIPQJwcLhbijL4OyPVGmzolsVEK8Pw7_DG_oPrUDpfbnRe7HvMWMJvU2MAbk-7EwNEePAlpnVb9QVZz4dtOUSCRVbS2zlwgS0xe2BOThpR9oy
+
+copy("RAIL_OkLJUJ:::"+localStorage.getItem("RAIL_OkLJUJ"));
+// RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
+```
+
+> 或者清空网站 cookie 后再次刷新当前网页,总之就是**想办法触发浏览器再次运行相关逻辑**重新生成 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` .
+
+- step 3 : 对比第一次和第二次获取到的 `RAIL_DEVICEID` 和 `RAIL_OkLJUJ` 的值
+
+```
+RAIL_DEVICEID:::E5BDkKrPkZ6nuZruqUj9-3lUG1LBM7t9aTDbZwFSdrboaFG6odrWZ9yuphnas4Jwq5E_FXIwwqlRoSXFbJULUiBNwNGt61Ow6Zv0GFXRABipaeDJJ0Ub7G2g_B_aGwMF5DNZ5KJR4eWVl-P3zSHGKbczLB3WN0z-
+
+RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
+
+RAIL_DEVICEID:::VUye37EEUdGHgrpJGo9J95hWMNSIUFPeYBjabDgCiYJbQIr53iVzIPQJwcLhbijL4OyPVGmzolsVEK8Pw7_DG_oPrUDpfbnRe7HvMWMJvU2MAbk-7EwNEePAlpnVb9QVZz4dtOUSCRVbS2zlwgS0xe2BOThpR9oy
+
+RAIL_OkLJUJ:::FGFOJ75VdD8dQc2yh3yTJf2RBWES6uGI
+```
+
+显而易见,肉眼直接就能看出两次请求时 `RAIL_OkLJUJ` 的值并没有变化而 `RAIL_DEVICEID` 的值很大可能会发生改变.
+
+因此,`RAIL_DEVICEID` 应该并不是浏览器唯一标识,而 `RAIL_OkLJUJ` 才是**真正的唯一标识**!
+
+本文并不适合全部读者,如果你属于以下情况之一,那么本文对你绝对帮助甚多,否则对你来说只能算是浪费生命.
+
+- 适合对自主抢票或者脚本抢票有需求的天涯游子
+- 适合拥有一定 web 前端开发相关知识的开发者
+- 适合耐得住寂寞能够独自研究加密算法的孤独人
+
+最后的**核心前提是有网**,当然WiFi更佳,否则流量真的吃不消啊!
+
+## 故事背景
+
+```
+独在异乡为异客 每逢佳节要抢票
+手动自动一起上 时常掉线心好伤
+动手实践出真理 原来身份是唯一
+想要封你没商量 只能动手来伪装
+加密请求在前端 后端返还控制权
+还原算法改身份 稳定抢票不担心
+多种途径齐上阵 车票速速快现身
+```
+
+不知道你是否遭遇过一票难求的困境,尽管网络上关于第三方工具的**加速包是否加速**有过辟谣,但是每逢节假日总是会遇到抢不到车票的问题,大部分人还是会选择买个心理安慰吧!
+
+目前为止,12306 官方线上售票渠道**仅仅包括 12306 网站以及手机 app 客户端**,因此市面上流行的第三方抢票软件均为非正常途径,而这些第三方渠道中最简单的实现方式应该就算是**爬虫技术**了.
+
+不论是网页端还是手机端,统统称为客户端,客户端的作用仅仅是传声筒,真正负责执行命令的人就是服务端.
+
+当你提交购票需求时,客户端会把这些车票信息一起打包发送给服务端,如果服务端有票的话,那么有可能就会返回给客户端成功信息,恭喜你订票成功.
+
+但是尽管有票也不一定会给你,唯一确定的是无票一定会失败,总之不管结果如何服务端和客户端总是按照既定的约定协议在默默交流着.....
+
+尽管官方渠道最可靠也最准确,可官方也还是没能给你买到车票啊!
+
+所以想要抢票还是得亲自动手,不能完全依靠官方,这里就诞生了**爬虫技术来冒充客户端**,想要成功骗过服务端就要先了解真正的客户端到底有哪些特征?
+
+由于本文篇幅有限,暂时不做关于抢票方面的相关论述,直奔重点,讲解 `RAIL_DEVICEID` 的请求过程,带你一步一步还原 12306 网站的前端加密算法的实现逻辑!
+
+## 效果预览
+
+在浏览器控制台运行 `chromeHelper.prototype.encryptedFingerPrintInfo()` 方法时会计算真实浏览器信息,如果发现计算结果中的 `value` 值和真正请求 [https://kyfw.12306.cn/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice?algID=mBxuYhGXYR&hashCode=owRJc8M4EkFMvcTkzibRFJoDSkUKCx6N9ictZIJLIeY&FMQw=0&q4f3=zh-CN&VPIf=1&custID=133&VEek=unknown&dzuS=0&yD16=0&EOQP=c227b88b01f5c513710d4b9f16a5ce52&jp76=52d67b2a5aa5e031084733d5006cc664&hAqN=MacIntel&platform=WEB&ks0Q=d22ca0b81584fbea62237b14bd04c866&TeRS=777x1280&tOHY=24xx800x1280&Fvje=i1l1o1s1&q5aJ=-8&wNLf=99115dfb07133750ba677d055874de87&0aew=Mozilla/5.0%20(Macintosh;%20Intel%20Mac%20OS%20X%2010_15_2)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/80.0.3987.87%20Safari/537.36&E3gR=9f7fa43e794048f6193187756181b3b9) 的 `hashcode` 值相同,那么恭喜您,说明 12306 相关算法还没更新,如果不相同估计算法又稍微调整了!
+
+事实证明,12306 算法虽然在变但都是小打小闹,根本没有伤筋动骨,所以自己动手改改又能满血复活了哟!
+
+```json
+{
+  "key": "&FMQw=0&q4f3=zh-CN&VPIf=1&custID=133&VEek=unknown&dzuS=0&yD16=0&EOQP=c227b88b01f5c513710d4b9f16a5ce52&jp76=52d67b2a5aa5e031084733d5006cc664&hAqN=MacIntel&platform=WEB&ks0Q=d22ca0b81584fbea62237b14bd04c866&TeRS=777x1280&tOHY=24xx800x1280&Fvje=i1l1o1s1&q5aJ=-8&wNLf=99115dfb07133750ba677d055874de87&0aew=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36&E3gR=9f7fa43e794048f6193187756181b3b9",
+  "value": "owRJc8M4EkFMvcTkzibRFJoDSkUKCx6N9ictZIJLIeY"
+}
+```
+
+- step 1 : 使用 Chrome 浏览器打开 12306 网站并清空该站点全部缓存数据.
+
+> 请确保当前正在使用的是谷歌 Chrome 浏览器,IE和 firefox 等浏览器暂未测试.
+
+![12306-algorithm-web-js-website-clear-storage.png](./images/12306-algorithm-web-js-website-clear-storage.png)
+
+- step 2 : 手动清空 `window.name` 属性,保证浏览器处于首次打开 12306 网站状态.
+
+> 因为非首次加载会携带上一次的请求信息,不方便学习验证,经过分析试验发现历史状态还保存在 window 对象的 name 属性,因此仅仅清空缓存还不够,还需要手动清空 name 属性的值.
+
+![12306-algorithm-web-js-website-clear-name.png](./images/12306-algorithm-web-js-website-clear-name.png)
+
+- step 3 : 强制刷新当前页面并保持记录请求信息,过滤请求类型 `js` ,找到 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 请求.
+
+在找到该请求保存查询参数名为 `hashCode: owRJc8M4EkFMvcTkzibRFJoDSkUKCx6N9ictZIJLIeY` ,方便和之后的计算方式生成的结果做对比.
+
+![12306-algorithm-web-js-website-find-logdevice.png](./images/12306-algorithm-web-js-website-find-logdevice.png)
+
+除了查询请求信息外,更为重要的是查看响应信息,当初次请求 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 时除了返回过期时间 `exp` 和 `dfp` 设备信息之外,还会返回 `cookieCode` 设备唯一标识.
+
+如果等到过期时间或手动清空站点缓存后,[/otn/HttpZF/GetJS](https://kyfw.12306.cn/otn/HttpZF/GetJS) 脚本中的相关逻辑会再次发起 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 请求,那时候的响应内容再也没有 `cookieCode` 参数了.
+
+让我们再好好看一看初次请求的响应信息吧!
+
+```jsonp
+callbackFunction('{"exp":"1581948102442","cookieCode":"FGHcXsVmjf3oV0zm5qTDPFt-VcNhuDA-","dfp":"QNCYH1J5E9M7rl97uo_PUR1OSwRTcCe1xdnbX7h2V6Ewcq6kML0qzXD5y11rLv3FPX1ndOnhL_bjVkwwgtWTsHMFums60_4H9Lr-vJzJGq4tkaUEGfRNXN9IJlvptReSBa5PP7N5gxpSOBo-YlF5Ac98f-YlNlxi"}')
+```
+
+如果将 `callbackFunction()` 回调函数去掉,不难发现其实返回数据是 `json` 格式,格式化后发现响应内容如下:
+
+```json
+{
+    "exp": "1581948102442",
+    "cookieCode": "FGHcXsVmjf3oV0zm5qTDPFt-VcNhuDA-",
+    "dfp": "QNCYH1J5E9M7rl97uo_PUR1OSwRTcCe1xdnbX7h2V6Ewcq6kML0qzXD5y11rLv3FPX1ndOnhL_bjVkwwgtWTsHMFums60_4H9Lr-vJzJGq4tkaUEGfRNXN9IJlvptReSBa5PP7N5gxpSOBo-YlF5Ac98f-YlNlxi"
+}
+```
+
+这里不得不佩服 12306 的设计思路了,故布疑阵,当你误以为自己已经更新了 `RAIL_DEVICEID` 的值,实际上 `cookieCode` 的值才是唯一标识而它恰恰没有设置到 cookie 中去,仅仅作为本地缓存保持了,用于再次请求 `RAIL_DEVICEID`.
+
+![12306-algorithm-web-js-website-cache-OkLJUJ.png](./images/12306-algorithm-web-js-website-cache-OkLJUJ.png)
+
+- step 4 : 复制源码实现到控制台,输入 `chromeHelper.prototype.encryptedFingerPrintInfo()` 获取请求 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice) 的查询参数,提取出其中的 `value` 值和真正的请求参数作对比.
+
+> 假设真正请求参数 hashcode 的值已设置成变量,`chromeHelper.prototype.encryptedFingerPrintInfo().value === hashcode` 返回结果 `true` 说明复现算法实现还在正常运行,否则很可能是相关算法又更新了!
+
+![12306-algorithm-web-js-website-generate-compare.png](./images/12306-algorithm-web-js-website-generate-compare.png)
+
 ## 直奔重点
 
 如果你正在学习自动抢票或者打算研究如何自动抢票,那么我可以负责任得告诉你,`RAIL_DEVICEID` 的值绝对是绕不过去的坎,**堪称 12306 反爬虫技术的最精华手段**!
@@ -4647,8 +4826,130 @@ chromeHelper.prototype = {
   }
 ```
 
-## 未完待续
+## 使用示例
 
-实际上通过上中两篇文章已经分析差不多了,但是为了教程的严谨性还是决定再更新最后一篇,下一篇将介绍如何使用以及回顾展望整个流程,感谢你的阅读.
+亲测构造请求 [/otn/HttpZF/logdevice](https://kyfw.12306.cn/otn/HttpZF/logdevice)时,关于参数 `algID` **经常性发生变化**,因此无法提供静态的请求方法,建议根据实际情况实时改变.
 
-关注**雪之梦技术驿站**不迷路,动动小手期待最后一篇哟!
+通过翻阅源码实现,最终发现关于发送请求的代码是这样的:
+
+```json
+e = c.hashAlg(m, a, e);
+a = e.key;
+e = e.value;
+a += "\x26timestamp\x3d" + (new Date).getTime();
+$a.getJSON("https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3dmBxuYhGXYR\x26hashCode\x3d" + e + a), null, function(a) {
+    var b = JSON.parse(a);
+    void 0 != mb && mb.postMessage(a, r.parent);
+    for (var d in b)
+        "dfp" == d ? G("RAIL_DEVICEID") != b[d] && (V("RAIL_DEVICEID", b[d], 1E3),
+        c.deviceEc.set("RAIL_DEVICEID", b[d])) : "exp" == d ? V("RAIL_EXPIRATION", b[d], 1E3) : "cookieCode" == d && (c.ec.set("RAIL_OkLJUJ", b[d]),
+        V("RAIL_OkLJUJ", "", 0))
+})
+```
+
+其中,参数 `a` 表示的是加密后的浏览器指纹信息,`(new Date).getTime()` 是当前时间戳,而 `algID\x3dmBxuYhGXYR\x26hashCode\x3d` 这部分的 `algID` 算法参数是暂时性静态的,比如今天一段时间都是 `mBxuYhGXYR` 而第二天这个值就变成其他值了.
+
+`hashCode` 参数的值就是程序运行结果的 `value` 值,最后面的变量 `a` 代表的是剩下的浏览器指纹信息,即运行结果的 `key`.
+
+假设此时此刻为例,演示如何使用该 js 文件:
+
+```js
+function ajax(req){
+    var xhr=new XMLHttpRequest();
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState===4){
+            req.success&&req.success(xhr.responseText,xhr.status);
+        }
+    }
+    req.method=req.method?req.method.toUpperCase():'GET';
+    var data=null;
+    var url=req.url;
+    if(req.data){
+        var arg='';
+        for(var n in req.data){
+            arg+=n+'='+encodeURIComponent(req.data[n])+'&'
+        }
+        arg=arg.slice(0,-1);
+        if(req.method==='GET'){
+            url=url+'?'+arg;
+        }else{
+            data=arg;
+        }
+    }
+    if(req.headers){
+        for(var h in req.headers){
+            var v=req.headers[h];
+            xhr.setRequestHeader(h,v);
+        }
+    }
+    xhr.open(req.method,url);
+    xhr.send(data);
+}
+
+e = chromeHelper.prototype.encryptedFingerPrintInfo();
+a = e.key;
+e = e.value;
+a += "\x26timestamp\x3d" + (new Date).getTime();
+ajax({
+    url:"https://kyfw.12306.cn/otn/HttpZF/logdevice" + ("?algID\x3dmBxuYhGXYR\x26hashCode\x3d" + e + a),
+    success:function(data){
+        console.log("data",data);
+
+        startIndex = "callbackFunction('".length;
+        endIndex = data.lastIndexOf("')");
+        jsonStrData = data.substring(startIndex,endIndex);
+        console.log("jsonStrData",jsonStrData);
+
+        jsonData = JSON.parse(jsonStrData);
+        console.log("jsonData",jsonData);
+
+        exp = jsonData.exp;
+        cookieCode = jsonData.cookieCode;
+        dfp = jsonData.dfp;
+        console.log("RAIL_DEVICEID::: "+dfp+" RAIL_EXPIRATION::: " + exp +" RAIL_OkLJUJ::: " + cookieCode);
+    }
+});
+```
+
+![12306-algorithm-web-js-website-console-ajax.png](./images/12306-algorithm-web-js-website-console-ajax.png)
+
+## 回顾展望
+
+在还原算法实现过程中,充分复习了 web 前端开发的调试技巧,针对**通篇无意义的变量命名方式**,有效的应对方式就是采用**正则表达式精确匹配**进行查找.
+
+同时,为了验证自己的猜想是否正确,还需要结合**断点调试**,如果存在反调试手段,那么只能靠自己**硬啃压缩混淆代码**了,我只能说:考验真正技术的时候,到了!
+
+本文给我们留下了不少启发供后续工作学习使用,从开发者的角度上来讲:
+
+- 不完全依靠现成加密技术,哪怕真正加密时没自己实现也要在加密前后实现自己的混淆逻辑.
+
+> 例如重新打乱字符串,将字符串分隔成三份,按照首尾中或者尾中首等反人类次序重新排序等.
+
+- 重复使用同一数据时也不一定要抽象成同一个方法,不同对象调用不同的处理逻辑,更是让人防不胜防,陷入思维惯性误区.
+
+> 例如获取用户代理采用不同的正则表达式进行替换,获取浏览器语言时采用另外的途径验证上一步获取结果是否造假等.
+
+- 无序更胜似有序,看似规整优美的代码是给开发人员看的而不该给机器看,一定不能使用源码上线而是要加密处理或者其他处理.
+
+> 只有要基本的开发经验很容易一叶知秋,进而判断相关技术栈,因为技术都是通用的方案,非常容易复制,打造独特的技术流会增大破解成本,进而吓退一部分菜鸟小白.
+
+- 前端和后端需要密切配合协同协作,缺少统一指挥难以避免一方或者多方偷懒进而暴露我方阵地.
+
+> 重要的业务逻辑肯定是放在后端进行处理,哪怕前端已经处理过相同逻辑也不能偷懒,更要保证前后端处理逻辑的一致性.
+
+攻防是矛与盾,作为攻克方要做的一点就是打铁还需自身硬,多了解不同的技术栈才能做到有的放矢而不至于临阵脱逃,望而却步!
+
+最后祝大家抢票愉快,需要买票时人人都有票,再也不需要抢票回家,人生苦短何必浪费生命去抢票?
+
+> 再次声明,本文仅供学习研究,一切用作它途的行为均与本人无关,如有侵权,烦请告知,谢谢合作.
+
+## 参考资料
+
+- [Chrome - JavaScript调试技巧总结（浏览器调试JS）](https://cloud.tencent.com/developer/article/1503476)
+- [如何使用Chrome DevTools花式打断点](https://segmentfault.com/a/1190000016671687?utm_source=tag-newest#item-1)
+- [【译】Chrome浏览器开发者工具的13个有趣技巧——希望你已经掌握](https://www.jianshu.com/p/553d7b7b78fe?utm_source=oschina-app)
+- [HTML5前端数据库——Web SQL Database](https://www.jianshu.com/p/64ded82068b0)
+- [localStorage兼容ie6/7 用addBehavior 实现](https://www.cnblogs.com/tongchuanxing/p/5664379.html)
+- [前端存储之indexedDB](https://www.cnblogs.com/liujianshe1990-/p/11059796.html)
+- [localstorage || globalStorage || userData](https://www.cnblogs.com/jiechn/p/4080503.html)
+- [navigator，JS检测浏览器插件](https://www.cnblogs.com/wuyuchang/p/4245621.html)
