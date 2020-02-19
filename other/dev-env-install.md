@@ -76,8 +76,88 @@ ueVAuBRvI9MSV3nJKoNoC12V+ZYHeAtxu6daHjOwGVtBAbXbWSJWbvfvor1tjAuy
 
 Chrome 浏览器虽然是国外网站,但是下载速度还是很快的,文件大小也只有 90MB 左右,安装后需要先解决上网问题再同步云设置,心有余力时再手动检查一遍设置是否完成.
 
-## markdown 编辑器
+## 开发环境最佳实践
 
-> 下载链接传送门: [https://www.typora.io/download/Typora.dmg](https://www.typora.io/download/Typora.dmg)
+开发环境主要包括基础环境以及语言环境,比如版本控制工具 git 或者 svn 就是管理源码的网盘,无论是 python 环境还是 java 环境,只要涉及到源码就需要做版本控制,所以先保证这一部分基础环境安装正常才能继续搭建语言环境.
 
-![dev-env-install-markdown-editor-typora.png](../dev-env-install-markdown-editor-typora.png)
+### 基本工具开发环境
+
+- 版本控制工具 git
+
+默认情况下,Mac 自带 git 环境,因此不需要额外下载,只需要配置 git 账号保证能够正常查看并提交代码即可.
+
+```bash
+$ git --version
+#git version 2.10.1 (Apple Git-78)
+```
+
+Git 的配置过程包括本地开发环境以及远程开发环境,如果仅仅是个人单独使用 Git 不涉及多人合作,并不需要配置远程开发环境.
+
+- step 1 : 配置本地开发环境
+
+> 这里修改成自己的用户名和邮箱,例如我的用户名是: `git config --global user.name "snowdreams1006"`
+
+```bash
+$ git config --global user.name "your username" 
+# 配置 Git 账号用户名
+
+$ git config --global user.email "example@example.com"
+# 配置 Git 账号邮箱
+```
+
+- step  2 : 配置远程开发环境
+
+> 这里要修改成自己的邮箱,例如我的邮箱是: `ssh-keygen -t rsa -C "snowdreams1006@163.com"`,生成 ssh 密钥对的过程一路回车默认设置即可,最后生成的公钥文件位于 `~/.ssh/id_rsa.pub`
+
+```bash
+$ ssh-keygen -t rsa -C "youremail@example.com"
+# 配置 Git 账号邮箱
+
+$ cat ~/.ssh/id_rsa.pub
+# 查看生成 ssh 公钥
+```
+
+- step 3 : 上传公钥到远程服务器
+
+如果远程服务器是 Github 网站的话,可以复制公钥内容粘贴到 Github 网站,完成后就可以使用 ssh 方式免密拉取或提交代码了.
+
+![dev-env-install-tools-github-ssh.png](../dev-env-install-tools-github-ssh..png)
+
+如果远程服务器是自搭建的 Git 服务器,那么需要将公钥内容追加到服务器认证文件(`~/.ssh/authorized_keys`),实现免密使用 Git 协议的目的.
+
+### nodejs 开发环境
+
+```
+npm config set registry https://registry.npmjs.org
+npm config set registry=https://registry.npm.taobao.org
+```
+
+### python 开发环境
+
+- 安装真实环境
+
+> 下载链接传送门: [https://www.python.org/ftp/python/3.8.1/python-3.8.1-macosx10.9.pkg](https://www.python.org/ftp/python/3.8.1/python-3.8.1-macosx10.9.pkg)
+
+
+阿里云: http://mirrors.aliyun.com/pypi/simple/
+清华大学：https://pypi.tuna.tsinghua.edu.cn/simple/
+中科大 https://pypi.mirrors.ustc.edu.cn/simple/
+豆瓣: http://pypi.douban.com/simple/
+
+
+pip3 install -i https://pypi.doubanio.com/simple/ virtualenv
+
+pip3 install -i https://pypi.doubanio.com/simple/ -r requirements.txt
+
+pip install -r requirements.txt
+
+- 安装虚拟环境
+
+```bash
+pip3 install virtualenv
+```
+
+- [让python pip使用国内镜像](https://www.cnblogs.com/songzhixue/p/11296720.html)
+
+### java 开发环境
+
