@@ -128,8 +128,10 @@ $ cat ~/.ssh/id_rsa.pub
 ### nodejs 开发环境
 
 ```
-npm config set registry https://registry.npmjs.org
-npm config set registry=https://registry.npm.taobao.org
+https://registry.npmjs.org
+
+https://registry.npm.taobao.org
+
 ```
 
 ### python 开发环境
@@ -144,20 +146,17 @@ npm config set registry=https://registry.npm.taobao.org
 中科大 https://pypi.mirrors.ustc.edu.cn/simple/
 豆瓣: http://pypi.douban.com/simple/
 
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ virtualenv
 
-pip3 install -i https://pypi.doubanio.com/simple/ virtualenv
-
-pip3 install -i https://pypi.doubanio.com/simple/ -r requirements.txt
-
-pip install -r requirements.txt
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ -r requirements.txt
+```
 
 - 安装虚拟环境
 
 ```bash
 pip3 install virtualenv
 ```
-
-- [让python pip使用国内镜像](https://www.cnblogs.com/songzhixue/p/11296720.html)
 
 ### java 开发环境
 
