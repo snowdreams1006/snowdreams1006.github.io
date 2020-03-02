@@ -19,4 +19,4 @@ git add .
 git commit -m "auto deploy website"
 
 # push to github and others
-# git push origin master
+git push origin master
