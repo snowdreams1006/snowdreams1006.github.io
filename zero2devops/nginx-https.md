@@ -788,3 +788,4 @@ docker run --name nginx -d -p 80:80 -p 443:443 \
 - [centos 安装 dig](https://blog.csdn.net/u013397318/article/details/56024773)
 - [CentOS 7，使用yum安装Nginx](https://www.centos.bz/2018/01/centos-7%EF%BC%8C%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85nginx/)
 - [CentOS7中使用yum安装Nginx的方法](https://www.cnblogs.com/songxingzhu/p/8568432.html)
+- [CertBot自签Let's Encrypt免费SSL单域名证书和泛域名证书](https://linuxops.org/blog/linux/certbot.html)

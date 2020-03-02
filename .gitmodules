@@ -7,7 +7,6 @@
 [submodule "python"]
 	path = python
 	url = https://github.com/snowdreams1006/learn-python.git
-
 [submodule "java"]
 	path = java
 	url = https://github.com/snowdreams1006/learn-java.git

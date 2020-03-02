@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 18 Feb 2020 09:49:06 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 02 Mar 2020 17:37:14 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -257,6 +257,12 @@
             <description><![CDATA[已投稿给脚本之家公众号,如需查看请访问:]]></description>
             <link>https://snowdreams1006.github.io/git/tools/git-bash-extend-down.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/git/tools/git-bash-extend-down.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[git submodule 父子模块]]></title>
+            <link>https://snowdreams1006.github.io/git/tools/git-submodule-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/git/tools/git-submodule-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -896,6 +902,13 @@
             <title><![CDATA[其他]]></title>
             <link>https://snowdreams1006.github.io/other/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[重装开发环境]]></title>
+            <description><![CDATA[由于莫名其妙的原因,系统总是在我正在敲代码敲得正入迷时意外重启,我以为这一次和往常一样只要关机再重新开机就能恢复正常状态.]]></description>
+            <link>https://snowdreams1006.github.io/other/dev-env-install.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/other/dev-env-install.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

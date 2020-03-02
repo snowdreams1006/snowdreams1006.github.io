@@ -35,6 +35,7 @@
 <url> <loc>https://snowdreams1006.github.io/git/tools/git-bash-extend-up.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/git/tools/git-bash-extend-middle.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/git/tools/git-bash-extend-down.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/git/tools/git-submodule-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/git/summary/about.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/git/summary/common.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/git/summary/cheatsheet-translation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -112,6 +113,7 @@
 <url> <loc>https://snowdreams1006.github.io/bigDataWave/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/greet/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/other/dev-env-install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/reminder.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/anti-withdrawback-wechat.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/transformation.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
