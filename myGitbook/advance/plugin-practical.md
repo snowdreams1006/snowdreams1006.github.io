@@ -16,7 +16,7 @@
 
 示例:
 
-```
+```json
 {
     "plugins": ["tbfed-pagefooter"],
     "pluginsConfig": {
@@ -33,7 +33,7 @@
 
 示例:
 
-```
+```bash
 $ gitbook install
 ```
 
@@ -45,7 +45,7 @@ $ gitbook install
 
 示例:
 
-```
+```bash
 $ gitbook serve
 ```
 
@@ -119,7 +119,7 @@ $ gitbook serve
 
 示例:
 
-```
+```json
 {
     "plugins": ["disqus"],
     "pluginsConfig": {
@@ -134,7 +134,7 @@ $ gitbook serve
 
 示例:
 
-```
+```bash
 $ gitbook install
 ```
 

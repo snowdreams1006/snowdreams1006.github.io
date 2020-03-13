@@ -472,3 +472,18 @@ url = git@e.coding.net:snowdreams1006/snowdreams1006.coding.me.git
 url = git@git.dev.tencent.com:snowdreams1006/snowdreams1006.git
 ```
 
+````markdown
+```mind:height=300,title=a mind map of something,color
+# 1
+## 1.1
+### 1.1.1
+## 1.2
+# 2
+# 3
+```
+````
+
+- [JS:SVG转图片的完美方法](https://my.oschina.net/xmqywx/blog/1923732)
+- [js svg转图片格式 - Marydon - 博客园](https://www.cnblogs.com/Marydon20170307/p/11187571.html)
+
+
