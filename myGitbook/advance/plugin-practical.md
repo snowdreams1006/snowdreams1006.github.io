@@ -693,3 +693,223 @@ $ gitbook serve
 ```
 
 ![gitbook-plugin-search-plus-preview.png](./images/gitbook-plugin-search-plus-preview.png)
+
+## `diff` 代码差异插件
+
+在写教程文档时有时会遇到这种场景,需要将前后两次代码进行差异化展示,通常有两种做法,一种是 PS 截图标注好修改内容,另一种就是手动计算出差异性代码,然后使用 `diff` 代码块展示前后差异.
+
+`diff` 插件采用的就是后一种方式,不同之处在于自动计算差异而非手动计算,同时支持多种方式来计算前后差异,下面是使用效果.
+
+[链接地址](https://www.npmjs.com/package/gitbook-plugin-diff): https://snowdreams1006.github.io/gitbook-plugin-diff/
+
+![gitbook-plugin-diff-preview.png](./images/gitbook-plugin-diff-preview.png)
+
+### 激活插件配置
+
+在 `book.json` 中配置 `diff` 插件,详细说明请参考 [diff 插件](https://snowdreams1006.github.io/gitbook-plugin-diff/).
+
+示例:
+
+```json
+{
+    "plugins": ["diff"]
+}
+```
+
+### 安装 `diff` 插件
+
+示例:
+
+```
+$ gitbook install
+```
+
+### 测试 `diff` 插件
+
+`diff` 插件采用自定义 tag 语法方式获取前后代码块从而计算出代码块差异,为了更好地计算出代码差异,建议使用时指定计算方式,常见的计算方式有以下几种:
+
+- `diffChars`
+
+> 逐字符比较,适合比较单词字符改动情况.
+
+````markdown
+{% diff method="diffChars" %}
+```js
+cat
+```
+```js
+cap
+```
+{% enddiff %}
+````
+
+{% diff method="diffChars" %}
+```js
+cat
+```
+```js
+cap
+```
+{% enddiff %}
+
+- `diffWords`
+
+> 逐单词比较,适合比较单行单词改动情况
+
+````markdown
+{% diff method="diffWords" %}
+```bash
+beep boop  
+```
+```bash
+beep boob blah
+```
+{% enddiff %}
+````
+
+{% diff method="diffWords" %}
+```bash
+beep boop  
+```
+```bash
+beep boob blah
+```
+{% enddiff %}
+
+- `diffLines`
+
+> 逐行比较,适合比较多行文本改动情况
+
+````markdown
+{% diff method="diffLines" %}
+```bash
+beep boop
+the cat is palying with cap
+what
+```
+```bash
+beep boob blah
+the cat is palying with cap
+who
+```
+{% enddiff %}
+````
+
+{% diff method="diffLines" %}
+```bash
+beep boop
+the cat is palying with cap
+what
+```
+```bash
+beep boob blah
+the cat is palying with cap
+who
+```
+{% enddiff %}
+
+- `diffJson`
+
+> `json` 对比,适合比较 `json` 对象改动情况
+
+````markdown
+{% diff method="diffJson" %}
+```json
+{
+  "name": "gitbook-plugin-simple-mind-map",
+  "version": "0.2.1",
+  "description": "A gitBook plugin for generating and exporting mind map within markdown"
+}
+```
+```json
+{
+  "name": "gitbook-plugin-diff",
+  "version": "0.2.1",
+  "description": "A gitbook plugin for showing the differences between the codes within markdown"
+}
+```
+{% enddiff %}
+````
+
+{% diff method="diffJson" %}
+```json
+{
+  "name": "gitbook-plugin-simple-mind-map",
+  "version": "0.2.1",
+  "description": "A gitBook plugin for generating and exporting mind map within markdown"
+}
+```
+```json
+{
+  "name": "gitbook-plugin-diff",
+  "version": "0.2.1",
+  "description": "A gitbook plugin for showing the differences between the codes within markdown"
+}
+```
+{% enddiff %}
+
+- `diffArrays`
+
+> 数组对比,适合比较数组对象改动情况
+
+````markdown
+{% diff method="diffArrays" %}
+```json
+[
+    "Vue",
+    "Python",
+    "Java",
+    "flutter",
+    "springboot",
+    "docker",
+    "React",
+    "小程序"
+]
+```
+```json
+[
+    "Vuejs",
+    "Nodejs",
+    "Java",
+    "flutter",
+    "springboot",
+    "docker",
+    "React"
+]
+```
+{% enddiff %}
+````
+
+{% diff method="diffArrays" %}
+```json
+[
+    "Vue",
+    "Python",
+    "Java",
+    "flutter",
+    "springboot",
+    "docker",
+    "React",
+    "小程序"
+]
+```
+```json
+[
+    "Vuejs",
+    "Nodejs",
+    "Java",
+    "flutter",
+    "springboot",
+    "docker",
+    "React"
+]
+```
+{% enddiff %}
+
+示例:
+
+```
+$ gitbook serve
+```
+
+![gitbook-plugin-diff-preview.png](./images/gitbook-plugin-diff-preview.png)
