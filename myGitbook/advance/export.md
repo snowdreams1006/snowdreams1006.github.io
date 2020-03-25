@@ -18,13 +18,13 @@
 
 - 下载应用
 
-```
+```bash
 $ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
 ```
 
 - 配置软链接
 
-```
+```bash
 $ sudo ln -s /usr/bin/nodejs /usr/bin/node
 ```
 
@@ -38,13 +38,13 @@ $ sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 - 配置软链接
 
-```
-$ sudo ln -s ~/Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin
+```bash
+$ sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 ```
 
 - 测试命令
 
-```
+```bash
 $ ebook-convert --version
 ```
 
@@ -111,7 +111,7 @@ $ gitbook mobi ./ ./myBook.mobi --log=debug
 
 示例:
  
-```
+```bash
 $ gitbook pdf
 ```
 
@@ -123,7 +123,7 @@ $ gitbook pdf
 
 示例:
 
-```
+```bash
 $ gitbook epub
 ```
 
@@ -135,7 +135,7 @@ $ gitbook epub
 
 示例:
 
-```
+```bash
 $ gitbook mobi
 ```
 
@@ -150,5 +150,3 @@ $ gitbook mobi
 随着电子书内容越来越多,生成电子书所花费的时间也越来越久,实属正常,耐心等待即可.
 
 > 输出 `PDF` 文件并输出 `debug` 日志: `gitbook pdf --log=debug`
-
-
