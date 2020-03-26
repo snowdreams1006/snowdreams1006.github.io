@@ -121,7 +121,8 @@
             "site": "https://snowdreams1006.github.io/",
             "author": "雪之梦技术驿站",
             "website": "雪之梦技术驿站",
-            "image": "https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"
+            "image": "https://snowdreams1006.github.io/snowdreams1006-wechat-open.png",
+            "copyProtect": false
         },
         "tbfed-pagefooter": {
             "copyright": "&copy snowdreams1006",
