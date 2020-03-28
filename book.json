@@ -36,7 +36,8 @@
         "donate",
         "icp",
         "diff",
-        "simple-mind-map"
+        "simple-mind-map",
+        "hide-element"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -147,6 +148,9 @@
         },
         "icp": {
             "number": "浙ICP备18042346号"
+        },
+        "hide-element": {
+            "elements": ["a.gitbook-link[href='https://www.gitbook.com']"]
         }
     }
 }
