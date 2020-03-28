@@ -1,8 +1,5 @@
 #! /bin/bash
 
-# pull lastest 
-git pull
-
 # remove cache dir
 rm -rf _book/
 
