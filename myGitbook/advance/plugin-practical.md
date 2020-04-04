@@ -919,3 +919,4 @@ $ gitbook serve
 - 外链视频 : [gitbook-plugin-chinese-video](https://www.npmjs.com/package/gitbook-plugin-chinese-video)
 - 视频播放 : [gitbook-plugin-html5-video](https://www.npmjs.com/package/gitbook-plugin-html5-video)
 - 音频播放 : [gitbook-plugin-audio_image](https://www.npmjs.com/package/gitbook-plugin-audio_image)
+- 文件压缩 : [gitbook-plugin-minifier](https://www.npmjs.com/package/gitbook-plugin-minifier)
