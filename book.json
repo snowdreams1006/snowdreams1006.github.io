@@ -39,7 +39,8 @@
         "simple-mind-map",
         "hide-element",
         "addcssjs",
-        "minifier"
+        "chinese-video",
+        "html5-video"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
