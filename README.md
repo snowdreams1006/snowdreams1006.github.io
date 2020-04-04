@@ -14,6 +14,18 @@
 
 > 国内用户推荐访问 [snowdreams1006.tech](https://snowdreams1006.tech/) ,速度非常快并且和 [snowdreams1006.github.io](https://snowdreams1006.github.io/) **保持同步更新**.
 
+## 资源下载
+
+- 在线阅读
+    + [国外服务器](https://snowdreams1006.github.io/)
+    + [国内服务器](https://www.snowdreams1006.tech/)
+- 离线阅读
+    - [下载 `pdf` 格式](./assets/output/snowdreams1006.pdf)
+    - [下载 `mobi` 格式](./assets/output/snowdreams1006.epub)
+    - [下载 `epub` 格式](./assets/output/snowdreams1006.mobi)
+
+> **请勿用于商业用途** : 允许其他类型的规范转载,请注明来源并提供相关链接.
+
 ## 教程特点
 
 - 面向初学者,适合零基础入门;
