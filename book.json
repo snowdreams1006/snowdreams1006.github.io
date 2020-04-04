@@ -38,7 +38,8 @@
         "diff",
         "simple-mind-map",
         "hide-element",
-        "addcssjs"
+        "addcssjs",
+        "minifier"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
