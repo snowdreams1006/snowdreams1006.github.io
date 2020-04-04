@@ -913,3 +913,9 @@ $ gitbook serve
 ```
 
 ![gitbook-plugin-diff-preview.png](./images/gitbook-plugin-diff-preview.png)
+
+## 其余插件列表
+
+- 外链视频 : [gitbook-plugin-chinese-video](https://www.npmjs.com/package/gitbook-plugin-chinese-video)
+- 视频播放 : [gitbook-plugin-html5-video](https://www.npmjs.com/package/gitbook-plugin-html5-video)
+- 音频播放 : [gitbook-plugin-audio_image](https://www.npmjs.com/package/gitbook-plugin-audio_image)

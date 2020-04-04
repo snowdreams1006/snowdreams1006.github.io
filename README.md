@@ -1,18 +1,10 @@
 # 简介 
 
-![mourn.jpg](./assets/image/mourn.jpg)
-
-{% video %}https://www.domain.com/video.mp4{% endvideo %}
-
-```
-1585974241809896.mp4
-```
-
-{% video %}./assets/video/1585974241809896.mp4{% endvideo %}
+{% aimg audiocontrols=""%}
+./assets/image/mourn.webp,./assets/audio/wuwuwu.ogg
+{% endaimg %}
 
 ---
-
-
 
 教程分享均是笔者亲身学习经验总结,涉及到的知识点均亲身试验,但有时为了知识完整性,可能并未亲自确认,对于这部分内容会明确指出,到时由读者确认试验.
 
