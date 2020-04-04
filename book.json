@@ -37,7 +37,8 @@
         "icp",
         "diff",
         "simple-mind-map",
-        "hide-element"
+        "hide-element",
+        "addcssjs"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -151,6 +152,9 @@
         },
         "hide-element": {
             "elements": ["a.gitbook-link[href='https://www.gitbook.com']"]
+        },
+        "addcssjs": {
+            "css": ["assets/css/mourn.css"] 
         }
     }
 }
