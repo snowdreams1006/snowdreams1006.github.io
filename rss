@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 28 Mar 2020 13:21:24 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 04 Apr 2020 02:01:14 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -17,7 +17,7 @@
         <category><![CDATA[php]]></category>
         <item>
             <title><![CDATA[简介]]></title>
-            <description><![CDATA[教程分享均是笔者亲身学习经验总结,涉及到的知识点均亲身试验,但有时为了知识完整性,可能并未亲自确认,对于这部分内容会明确指出,到时由读者确认试验.]]></description>
+            <description><![CDATA[mourn.jpg]]></description>
             <link>https://snowdreams1006.github.io/</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
