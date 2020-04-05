@@ -920,3 +920,4 @@ $ gitbook serve
 - 视频播放 : [gitbook-plugin-html5-video](https://www.npmjs.com/package/gitbook-plugin-html5-video)
 - 音频播放 : [gitbook-plugin-audio_image](https://www.npmjs.com/package/gitbook-plugin-audio_image)
 - 文件压缩 : [gitbook-plugin-minifier](https://www.npmjs.com/package/gitbook-plugin-minifier)
+- 添加css|js : [gitbook-plugin-addcssjs](https://www.npmjs.com/package/gitbook-plugin-addcssjs)

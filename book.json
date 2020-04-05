@@ -38,7 +38,6 @@
         "diff",
         "simple-mind-map",
         "hide-element",
-        "addcssjs",
         "html5-video",
         "audio_image"
     ],
@@ -154,9 +153,6 @@
         },
         "hide-element": {
             "elements": ["a.gitbook-link[href='https://www.gitbook.com']"]
-        },
-        "addcssjs": {
-            "css": ["assets/css/mourn.css"] 
         }
     }
 }
