@@ -67,6 +67,51 @@
 
 ![snowdreams1109-wechat-private.jpg](snowdreams1109-wechat-private.jpg)
 
+## 下载源码
+
+**核心思路** 
+
+如果以 `Github` 作为远程仓库，全量下载项目代码时切换到 `Gitee` 远程仓库地址进行下载，增量更新时切换回 `Github` 远程仓库地址进行更新，以此保持最新代码状态。
+
+- 全量下载 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
+
+```bash
+# 使用 https 方式下载 Gitee 源码
+git clone https://gitee.com/snowdreams1006/snowdreams1006.git
+
+# 切换回 Github 远程仓库地址
+git remote set-url origin https://github.com/snowdreams1006/snowdreams1006.github.io.git
+```
+
+- 增量更新 [Github](https://github.com/snowdreams1006/snowdreams1006.github.io.git)
+
+```bash
+# 切换远程仓库地址为 Gitee 地址
+git remote set-url origin https://gitee.com/snowdreams1006/snowdreams1006.git
+
+# 更新项目源码
+git Pull
+
+# 切换回 Github 远程仓库地址
+git remote set-url origin https://github.com/snowdreams1006/snowdreams1006.github.io.git
+```
+
+如果以 `Gitee` 作为远程仓库，无论下载还是更新均无需切换远程项目地址，忽略下述操作过程。
+
+- 全量下载 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
+
+```bash
+# 使用 https 方式下载 Gitee 源码
+git clone https://gitee.com/snowdreams1006/snowdreams1006.git
+```
+
+- 增量更新 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
+
+```bash
+# 更新项目源码
+git Pull
+```
+
 ## 相关说明
 
 本教程源码托管在 [snowdreams1006.github.io](https://github.com/snowdreams1006/snowdreams1006.github.io) ,在线阅读请访问 [snowdreams1006.github.io](http://snowdreams1006.github.io/).

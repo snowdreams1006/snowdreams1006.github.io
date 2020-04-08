@@ -512,3 +512,7 @@ Emitted 'error' event at:
 目前还没有找到问题的根源,下一次将深入源码继续探讨到底是哪里出问题导致 `Windows` 系统无法重启.
 
 虽然及时删除 `_book` 目录并不算是很好的解决方案,但至少 `markdown` 灰姑娘又能化妆成 `html` 小姐姐了呢!
+
+> C:\Users\Administrator\.gitbook\versions\3.2.3\lib\output\website
+> 
+> [GitBook运行报错 - no such file or directory](https://blog.csdn.net/prufeng/article/details/83301895)
