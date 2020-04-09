@@ -9,26 +9,9 @@
 - 如何自己给自己发推送提醒;
 - 怎么运行24h不间断定时程序.
 
-## 本节目录大纲
+## 大纲
 
-{% simplemindmap preset="colorful",style={"height":"350px"} %}
-```markdown
-- 钉钉签到提醒
-    - 前言
-        + 提醒闹钟
-        + 极速打卡
-    - 效果
-    - 原理
-        + 极速打卡
-        + URL Scheme
-        + 定时唤醒
-    - 实现
-        + 钉钉设置
-        + 唤醒链接
-        + 定时唤醒
-    - 总结
-```
-{% endsimplemindmap %}
+![dingtalk-reminder-simple-mind-map.png](./images/dingtalk-reminder-simple-mind-map.png)
 
 ## 前言
 
@@ -49,10 +32,7 @@
 
 所以最简单操作流程如下:
 
-```mermaid
-graph LR
-    拿出手机-- 心里盘算时间 --> 打开钉钉 -- 快捷入口/极速打卡 --> 打卡签到
-```
+![dingtalk-reminder-before-flow.png](./images/dingtalk-reminder-before-flow.png)
 
 上述流程中让我觉得不爽的是每次除了打开 app 响应时间过长之外,还有就是每次打卡都要**自己心里盘算着打卡时间**,浪费了为数不多的脑细胞.
 
@@ -144,6 +124,16 @@ curl -i -X GET \
 
 ## 总结
 
+**关键词**
+
+```mardown
++ 前提条件
++ 核心重点
++ 实现步骤
++ 主要技术
++ 感谢支持
+```
+
 本文的主要目的是解决钉钉上下班签到打卡问题,**提醒闹钟和极速打开只能二者选其一**,并且也没有**定时自动签到**功能,所以本文的解决思路是利用 `URL Scheme` 定时唤醒 app,然后借助**极速打卡**实现自动签到功能.
 
 **前提条件**
@@ -170,8 +160,15 @@ curl -i -X GET \
 
 由于不需要心里暗自计算上下班时间,只需要接收到推送后手动点击进行签到确认,所以大大节省了不少脑细胞,剩下的时间又可以愉快敲代码了!
 
-```mermaid
-graph LR
-    推送通知 -- 定时提醒 --> 点击确认 -- 自动完成 --> 打开钉钉 -- 极速打卡 --> 打卡签到
-```
+![dingtalk-reminder-after-flow.png](./images/dingtalk-reminder-after-flow.png)
 
+**主要技术**
+
+- 高度自定义的网页跳转协议 : `dingtalk`
+- 不知疲倦的定时任务命令: `crontab`
+- 命令行下的网络请求命令: `curl`
+- 自己给自己发推送通知软件: `bark`
+
+**感谢支持**
+
+如果本文对你有所帮助,欢迎点赞留言告诉我一声,你的支持和鼓励将会是我继续创作的动力!
