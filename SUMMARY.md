@@ -128,6 +128,7 @@
 * [晚安](greet/README.md)
 * [其他](other/README.md)
     * [重装开发环境](other/dev-env-install.md)
+    * [钉钉签到提醒](other/dingtalk-reminder.md)
     * [倒计时提醒](other/reminder.md)
     * [微信防撤回](other/anti-withdrawback-wechat.md)
     * [转型之路](other/transformation.md)
