@@ -67,11 +67,15 @@
 
 ![snowdreams1109-wechat-private.jpg](snowdreams1109-wechat-private.jpg)
 
-## 下载源码
+## 克隆网站
+
+### 下载项目
+
+`Github` 作为远程项目服务器时下载速度感人,而国内用户使用 `Gitee` 进行下载时速度明显提升,因此下载项目时推荐使用 `Gitee` 作为远程项目仓库.
 
 **核心思路** 
 
-如果以 `Github` 作为远程仓库，全量下载项目代码时切换到 `Gitee` 远程仓库地址进行下载，增量更新时切换回 `Github` 远程仓库地址进行更新，以此保持最新代码状态。
+如果以 `Github` 作为远程仓库,全量下载项目代码时切换到 `Gitee` 远程仓库地址进行下载,增量更新时切换回 `Github` 远程仓库地址进行更新,以此保持最新代码状态.
 
 - 全量下载 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
 
@@ -96,7 +100,7 @@ git Pull
 git remote set-url origin https://github.com/snowdreams1006/snowdreams1006.github.io.git
 ```
 
-如果以 `Gitee` 作为远程仓库，无论下载还是更新均无需切换远程项目地址，忽略下述操作过程。
+如果以 `Gitee` 作为远程仓库,无论下载还是更新均无需切换远程项目地址,正常下载更新即可.
 
 - 全量下载 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
 
@@ -110,6 +114,90 @@ git clone https://gitee.com/snowdreams1006/snowdreams1006.git
 ```bash
 # 更新项目源码
 git Pull
+```
+
+### 部署项目
+
+不论是直接下载 `zip` 压缩包还是命令行克隆项目,接下来需要使用 `gitbook` 相关命令进行启动本地服务,正常情况下运行效果和线上环境相差无二.
+
+> `gitbook` 环境需要本机安装 `nodejs` 环境,个别插件可能还需要额外环境依赖,具体情况请参考 [gitbook入门教程](/myGitbook/)
+
+```bash
+# 安装项目插件
+gitbook install
+
+# 运行本地服务
+gitbook serve
+```
+
+一般情况下,服务启动后会在本机 `4000` 端口开启服务,可以打开浏览器访问 `localhost:4000` 或者 `127.0.0.1:4000` 进行访问.
+
+本地服务确认无误后,可使用 `gitbook build` 生成静态网站,然后将其上传到服务器直接部署即可,例如可以将 `_book/` 文件夹下的静态网站全部上传到 `Github` 网站,上传成功后即可访问在线网站: `https://snowdreams1006.github.io/`
+
+```bash
+# 生成静态网站,生成完毕后全部网站文件位于_book文件夹中.
+gitbook build
+
+# 将静态网站文件夹_book全部复制到当前目录,保证首页存在index.html文件
+cp -rf ./book/* ./
+
+# 添加到版本库等待上传 Github
+git add .
+
+# 添加更新说明
+git commit -m "regenerate website"
+
+# 推送到远程仓库,推送成功后等待一段时间后在线服务即可开启.
+git push
+```
+
+> 推送到远程仓库要求用户对该仓库具有写权限,因此建议 fork 本项目到个人空间,这样就可以体验完整的个人博客搭建流程.
+
+### 多处备份
+
+如果远程仓库只有`Github` 一种,发生意外情况的话将直接影响到网站运行,所以可以考虑将网站进行多处备份,目前本项目已经备份到 `Gitee` 和 `Gitlab` 网站.
+
+-  一个 pull + 多个 push
+
+本项目以 `Github` 为主,`Gitee` 和 `Gitlab` 为辅,具体表现为: 当本地环境需要更新项目时,拉取自 `Github` 仓库源码,推送项目时,一次性同时推送到多个仓库.
+
+```bash
+# 添加 Gitee 推送地址
+git remote set-url --add git@gitee.com:snowdreams1006/snowdreams1006.git
+
+# 添加 Gitlab 推送地址
+git remote set-url --add git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git
+```
+
+设置完成后,以后使用 `git push` 进行推送就会一次性同步到多个远程仓库,当然需要先确保已将该项目导入到相应的仓库并且能正常通讯.
+
+- 多套 pull + push
+
+如果希望拉取地址和推送地址是对应的,可以使用下面这种方式建立多套远程仓库地址.
+
+```bash
+# 添加 Gitee 远程仓库地址,拉取或推送时需要指定仓库名称,例如: git push gitee master
+git remote set-url gitee git@gitee.com:snowdreams1006/snowdreams1006.git
+
+# 添加 Gitlab 远程仓库地址,拉取或推送时需要指定仓库名称,例如: git push gitlab master
+git remote set-url gitlab git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git
+```
+
+上述两种方式并不冲突,如果愿意的话也可以两者同时设置,好处是一般情况下拉取源码时从 `Github` 下载,推送源码时自动同步到多个远程仓库.
+如果遇到特殊情况也可以单独指定远程仓库,例如长时间没更新项目再次更新下载速度比较慢,也可以指定远程仓库 `Gitee` 等等.
+
+最后,运行 `git remote -v` 命令可查看远程项目关联情况,实现一份代码多处备份.
+
+```bash
+$ git remote -v
+gitee   git@gitee.com:snowdreams1006/snowdreams1006.git (fetch)
+gitee   git@gitee.com:snowdreams1006/snowdreams1006.git (push)
+gitlab  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (fetch)
+gitlab  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (push)
+origin  git@github.com:snowdreams1006/snowdreams1006.github.io.git (fetch)
+origin  git@github.com:snowdreams1006/snowdreams1006.github.io.git (push)
+origin  git@gitee.com:snowdreams1006/snowdreams1006.git (push)
+origin  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (push)
 ```
 
 ## 相关说明

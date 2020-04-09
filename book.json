@@ -22,7 +22,7 @@
         "expandable-chapters-small",
         "anchor-navigation-ex",
         "edit-link-plus",
-        "copy-code-button",
+        "code",
         "chart",
         "favicon-absolute",
         "github-buttons",
@@ -38,7 +38,6 @@
         "diff",
         "simple-mind-map",
         "hide-element",
-        "html5-video",
         "audio_image"
     ],
     "pluginsConfig": {
