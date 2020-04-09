@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 05 Apr 2020 18:30:56 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 09 Apr 2020 14:57:11 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -909,6 +909,13 @@
             <description><![CDATA[由于莫名其妙的原因,系统总是在我正在敲代码敲得正入迷时意外重启,我以为这一次和往常一样只要关机再重新开机就能恢复正常状态.]]></description>
             <link>https://snowdreams1006.github.io/other/dev-env-install.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/dev-env-install.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[钉钉签到提醒]]></title>
+            <description><![CDATA[本文主要介绍了如何利用现成软件快速实现钉钉自动签到功能,核心思路非常简单,甚至无任何编程基础的小白也能轻松实现定时自动打卡功能.]]></description>
+            <link>https://snowdreams1006.github.io/other/dingtalk-reminder.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/other/dingtalk-reminder.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
