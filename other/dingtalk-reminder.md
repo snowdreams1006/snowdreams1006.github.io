@@ -135,7 +135,7 @@ https://api.day.app/yourkey/钉钉打卡提醒/带我去极速打卡?url=dingtal
 
 ```bash
 curl -i -X GET \
- "https://bark.snowdreams1006.cn/YiXJwsoHt7Kx6DevAtte4W/%E9%92%89%E9%92%89%E6%89%93%E5%8D%A1%E6%8F%90%E9%86%92/%E5%B8%A6%E6%88%91%E5%8E%BB%E6%9E%81%E9%80%9F%E6%89%93%E5%8D%A1?url=dingtalk://snowdreams1006.tech"
+ "https://api.day.app/yourkey/%E9%92%89%E9%92%89%E6%89%93%E5%8D%A1%E6%8F%90%E9%86%92/%E5%B8%A6%E6%88%91%E5%8E%BB%E6%9E%81%E9%80%9F%E6%89%93%E5%8D%A1?url=dingtalk://snowdreams1006.tech"
 ```
 
 ![dingtalk-reminder-bark-push.png](./images/dingtalk-reminder-bark-push.png)
@@ -172,6 +172,6 @@ curl -i -X GET \
 
 ```mermaid
 graph LR
-    推送签到通知 -- 定时提醒 --> 点击确认 -- 自动完成 --> 打开钉钉 -- 极速打卡 --> 打卡签到
+    推送通知 -- 定时提醒 --> 点击确认 -- 自动完成 --> 打开钉钉 -- 极速打卡 --> 打卡签到
 ```
 
