@@ -206,3 +206,7 @@ origin  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (push)
 
 如果你觉得本教程对你有所帮助,请不吝 `Star`.
 如果你想贡献一份力量,欢迎提交 `Pull Request`.
+
+**感谢支持**
+
+如果本文对你有所帮助,欢迎点赞留言告诉我一声,你的支持和鼓励将会是我继续创作的动力!
