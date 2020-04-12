@@ -721,7 +721,7 @@ $ open ~/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/
 
 - 新文件替换掉原来的 `_assets/website/theme.js` 文件
 
-> 可以关注微信公众号回复 "gitbook" 获取重新编译后的新文件 `theme.js`.
+> 可以关注微信公众号回复 `20200409` 获取重新编译后的新文件 `theme.js`.
 
 - 切换到测试项目验证默认折叠是否已生效
 
@@ -769,6 +769,8 @@ $ gitbook serve
 ```
 
 值得注意的是,实现默认折叠左侧菜单功能仅仅需要添加一行代码,但是也很有可能和项目中已引入插件存在冲突,毕竟 `sidebar` 的状态也可以被未知代码所更改!
+
+> 文件位置: `~/.gitbook/versions/3.2.3/node_modules/gitbook-plugin-theme-default/src/js/theme/sidebar.js`
 
 ```js
 // Prepare sidebar: state and toggle button
