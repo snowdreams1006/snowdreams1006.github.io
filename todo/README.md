@@ -6,6 +6,9 @@
 - [nodejs模拟登录-request模块](https://blog.csdn.net/zzwwjjdj1/article/details/77472398)
 - [GitHub Wiki 页面的添加和设置](https://juejin.im/post/5a3216c8f265da43333e6b54)
 - [Kingfisher](https://github.com/onevcat/Kingfisher)
+- [Selenium 初探-Nodejs+Selenium环境搭建及基础用法](https://www.jianshu.com/p/0893e1d773ef)
+- [Selenium-webdriver基本使用](https://www.cnblogs.com/yxi-liu/p/node-selenium-driver.html)
+- [Selenium Web element](https://www.selenium.dev/documentation/en/webdriver/web_element/)
 
 ```bash
 $ npm version patch
