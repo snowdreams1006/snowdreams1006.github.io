@@ -167,8 +167,7 @@
 ***
 
 ## 图片
-
-> ![图片alt](图片src "图片title")
+![图片alt](图片src "图片title")
 
 其中,图片alt表示图片的解释文字,图片src是图片地址,支持本地路径和网络路径,图片title是图片的标题,可选.
 
@@ -183,8 +182,7 @@
 ![preview.png](images/preview.png "preview.png")
 
 ## 超链接
-
-> [超链接text](超链接url "超链接title")
+[超链接text](超链接url "超链接title")
 
 其中,超链接text表示超链接的解释文字,超链接url支持本地路径和网络路径,超链接title是超链接的标题,可选.
 

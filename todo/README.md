@@ -9,6 +9,8 @@
 - [Selenium 初探-Nodejs+Selenium环境搭建及基础用法](https://www.jianshu.com/p/0893e1d773ef)
 - [Selenium-webdriver基本使用](https://www.cnblogs.com/yxi-liu/p/node-selenium-driver.html)
 - [Selenium Web element](https://www.selenium.dev/documentation/en/webdriver/web_element/)
+- [nodejs爬虫selenium](https://www.cnblogs.com/learnings/p/7772915.html)
+
 
 ```bash
 $ npm version patch
