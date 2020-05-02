@@ -45,12 +45,21 @@
 
 绘制新的流程图
 
+### 方向
+
+**关键词**
+
+```mardown
+- TB
+- BT
+- LR
+- RL
+```
+
 ```
 graph TD
     Start --> Stop
 ```
-
-### 方向
 
 `<layout>` 布局方向,其中可选值: `TB` (从上到下),`BT` (从下到上),`LR` (从左往右)和 `RL` (从右往左)四种方向布局.
 
@@ -88,6 +97,125 @@ graph LR
 ```
 graph BT
     Start --> Stop
+```
+
+### 形状
+
+**关键词**
+
+```mardown
+- []
+- ()
+- {}
+- >]
+```
+
+```
+graph TD
+    id
+```
+
+#### 一次性节点
+
+默认属于矩形节点,其内容是 id,适合一次性节点,不存在重复引用的情况.
+
+```
+graph TD
+    id
+```
+
+#### 可重复节点
+
+指定节点形状,其内容是 `<node shape>`,可选值包括: `[]`(矩形) ,`()` (圆角) 和 `{}` (菱形) 等有限组合. 
+
+- 矩形
+
+> `[node description]`
+
+```
+graph LR
+    id1[This is the text in the box]
+```
+
+- 圆角矩形
+
+> `(node description)`
+
+```
+graph LR
+    id1(This is the text in the box)
+```
+
+- 体育场
+
+> `([node description])`
+
+```
+graph LR
+    id1([This is the text in the box])
+```
+
+- 圆柱
+
+> `[(node description)]`
+
+```
+graph LR
+    id1[(Database)]
+```
+
+- 圆形
+
+> `((node description))`
+
+```
+graph LR
+    id1((This is the text in the circle))
+```
+
+- 不对称
+
+- `>node description]`
+
+```
+graph LR
+    id1>This is the text in the box]
+```
+
+- 菱形
+
+> `{node description}`
+
+```
+graph LR
+    id1{This is the text in the box}
+```
+
+- 六角形
+
+> `{{node description}}`
+
+```
+graph LR
+    id1{{This is the text in the box}}
+```
+
+- 平行四边形
+
+> `[/node description/]`
+
+```
+graph TD
+    id1[/This is the text in the box/]
+```
+
+- 另一种平行四边形
+
+> `[\node description\]`
+
+```
+graph TD
+    id1[\This is the text in the box\]
 ```
 
 ## 参考资料
