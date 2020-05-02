@@ -43,8 +43,55 @@
 
 ---
 
+绘制新的流程图
+
+```
+graph TD
+    Start --> Stop
+```
+
+### 方向
+
+`<layout>` 布局方向,其中可选值: `TB` (从上到下),`BT` (从下到上),`LR` (从左往右)和 `RL` (从右往左)四种方向布局.
+
+- TB
+
+> 从上到下: from **T**op to **B**ottom
+
+```
+graph TB
+    Start --> Stop
+```
+
+- BT 
+
+> 从下到上: from **B**ottom to **T**op
+
+```
+graph BT
+    Start --> Stop
+```
+
+- LR
+
+> 从左往右: from **L**eft to **R**ight
+
+```
+graph LR
+    Start --> Stop
+```
+
+- RL
+
+> 从右往左: from **R**ight to **L**eft
+
+```
+graph BT
+    Start --> Stop
+```
+
 ## 参考资料
 
 - 在线体验编辑器: [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/)
 - 流程图官方文档: [Flowcharts - Basic Syntax](https://mermaid-js.github.io/mermaid/#/flowchart)
-- `Github` 开源项目地址: [/mermaid-js/mermaid](https://github.com/mermaid-js/mermaid)
+- 本项目托管地址: [/mermaid-js/mermaid](https://github.com/mermaid-js/mermaid)
