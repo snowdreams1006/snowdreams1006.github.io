@@ -440,6 +440,40 @@ graph LR
     A["A double quote:#quot;"] -->B["A dec char:#9829;"]
 ```
 
+- 嵌套子流程图
+
+定义:
+
+```
+subgraph title
+    graph definition
+end
+```
+
+示例:
+
+```
+graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end
+```
+
+- 注释语法
+
+```
+graph LR
+%% this is a comment A -- text --> B{node}
+   A -- text --> B -- text2 --> C
+```
+
 ## 参考资料
 
 - 在线体验编辑器: [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/)
