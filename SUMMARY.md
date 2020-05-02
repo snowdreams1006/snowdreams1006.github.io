@@ -119,6 +119,7 @@
     * [csv 半手动数据统计](write/static-semi-manual-with-csv.md)
     * [js 半手动数据统计](write/static-semi-manual-with-js.md)
     * [简述优选文章统计](write/jianshu-optimize-static.md)
+    * [快速上手Mermaid流程图](write/mermaid-flow-chart.md)
     * [常见问题](write/faq.md)
 
 ## 读书观感
