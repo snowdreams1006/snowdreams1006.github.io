@@ -152,6 +152,9 @@
         },
         "hide-element": {
             "elements": ["a.gitbook-link[href='https://www.gitbook.com']"]
+        },
+        "simple-mind-map":{
+            "preset": "colorful"
         }
     }
 }
