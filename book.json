@@ -12,7 +12,6 @@
     "plugins": [
         "toc",
         "pageview-count",
-        "mermaid-gb3",
         "-lunr",
         "-search",
         "search-plus",
@@ -38,8 +37,7 @@
         "diff",
         "simple-mind-map",
         "hide-element",
-        "audio_image",
-        "mermaid-gb3"
+        "audio_image"
     ],
     "pluginsConfig": {
         "favicon-absolute": {

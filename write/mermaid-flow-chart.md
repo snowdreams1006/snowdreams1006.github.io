@@ -88,6 +88,8 @@
 ```
 {% endsimplemindmap %}
 
+![mermaid-flow-chart-simplemindmap-preview.png](./images/mermaid-flow-chart-simplemindmap-preview.png)
+
 ## 什么是Mermaid流程图
 
 ## Mermaid流程图快速入门
