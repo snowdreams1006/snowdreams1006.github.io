@@ -8,13 +8,12 @@
 - 掌握并能记住如何绘制`Mermaid`流程图;
 - 了解 `Gitbook` 写作环境的相关集成插件.
 
-{% simplemindmap style={'height':'550px','border': '1px solid lightgray;'} %}
 ```markdown
 - 快速上手Mermaid流程图
     + 什么是Mermaid流程图
         - 项目地址
         - 在线编辑
-        - 在线文档
+        - 官方文档
     + Mermaid流程图快速入门
         - 布局方向
             + TB
@@ -86,60 +85,88 @@
         - 几何化形状
         - 有限语法
 ```
-{% endsimplemindmap %}
+
+> simplemindmap style={'height':'550px','border': '1px solid lightgray;'}
 
 ![mermaid-flow-chart-simplemindmap-preview.png](./images/mermaid-flow-chart-simplemindmap-preview.png)
 
 ## 什么是Mermaid流程图
 
+**关键词**
+
+```mardown
+- 项目地址
+- 在线编辑
+- 官方文档
+```
+
+千言万语不如一张图,使用图形展示事物处理流程的图形称之为**流程图**.
+
+`Mermaid`是一个基于 `Javascript` 的图解和制图工具.它基于 `markdown` 语法来简化和加速生成流程图的过程,也不止于生成流程图.
+
+**源码**
+
+```
+graph TD
+  A[Christmas] -->|Get money| B(Go shopping)
+  B --> C{Let me think}
+  C -->|One| D[Laptop]
+  C -->|Two| E[iPhone]
+  C -->|Three| F[fa:fa-car Car]
+```
+
+**效果**
+
+```mermaid
+graph TD
+  A[Christmas] -->|Get money| B(Go shopping)
+  B --> C{Let me think}
+  C -->|One| D[Laptop]
+  C -->|Two| E[iPhone]
+  C -->|Three| F[fa:fa-car Car]
+```
+
+- 项目地址: [https://github.com/mermaid-js/mermaid](https://github.com/mermaid-js/mermaid)
+- 在线编辑: [https://mermaidjs.github.io/mermaid-live-editor/](https://mermaidjs.github.io/mermaid-live-editor/)
+- 官方文档: [https://mermaid-js.github.io/mermaid/#/flowchart](https://mermaid-js.github.io/mermaid/#/flowchart)
+
 ## Mermaid流程图快速入门
 
-## Mermaid流程图高级进阶
-
-## 快速入门流程图回顾总结
-
-
-
-
-### 方向
+### 布局方向
 
 **关键词**
 
 ```mardown
-- TB
-- BT
-- LR
-- RL
++ TB
++ BT
++ LR
++ RL
 ```
 
 {% simplemindmap style={'height':'100px','border': '1px solid lightgray;'} %}
 ```markdown
-+ 方向
-    - TB(从上到下)
-    - BT(从下到上)
-    - LR(从左往右)
-    - RL(从右往左)
+- 布局方向
+    + TB(从上到下)
+    + BT(从下到上)
+    + LR(从左往右)
+    + RL(从右往左)
 ```
 {% endsimplemindmap %}
 
-> 上下左右的英文首字母大写组合,分别是 `top`, `bottom` ,`left` 和 `right` .
-> 例如: `TB` 表示 `top` 和 `bottom` 单词首字母的组合,即从上到下.
-
-```mermaid
-graph TD
-    Start --> Stop
-```
-
-`<layout>` 布局方向,其中可选值: `TB` (从上到下),`BT` (从下到上),`LR` (从左往右)和 `RL` (从右往左)四种方向布局.
+流程图布局方向,由四种基本方向组成,分别是英文单词: `top`(上), `bottom`(下),`left`(左)和 `right`(右).其中可选值: `TB` (从上到下),`BT` (从下到上),`LR` (从左往右)和 `RL` (从右往左)四种.
 
 - TB
 
 > 从上到下: from **T**op to **B**ottom
 
+**源码**
+
 ```
 graph TB
     Start --> Stop
 ```
+
+**效果**
 
 ```mermaid
 graph TB
@@ -150,10 +177,14 @@ graph TB
 
 > 从下到上: from **B**ottom to **T**op
 
+**源码**
+
 ```
 graph BT
     Start --> Stop
 ```
+
+**效果**
 
 ```mermaid
 graph BT
@@ -164,10 +195,14 @@ graph BT
 
 > 从左往右: from **L**eft to **R**ight
 
+**源码**
+
 ```
 graph LR
     Start --> Stop
 ```
+
+**效果**
 
 ```mermaid
 graph LR
@@ -178,15 +213,31 @@ graph LR
 
 > 从右往左: from **R**ight to **L**eft
 
+**源码**
+
 ```
 graph BT
     Start --> Stop
 ```
 
+**效果**
+
 ```mermaid
 graph BT
     Start --> Stop
 ```
+
+## Mermaid流程图高级进阶
+
+## 快速入门流程图回顾总结
+
+
+
+
+
+
+
+
 
 ### 形状
 
