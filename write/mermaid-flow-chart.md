@@ -313,7 +313,7 @@ graph TD
 
 - 矩形
 
-> 一般格式: `[node description]` ,`[]` 中括号表示节点是矩形形状,`node description` 是节点的描述文本.
+> 一般格式: `[node description]` ,`[]` 中括号表示节点是**矩形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -331,7 +331,7 @@ graph LR
 
 - 圆角矩形
 
-> 一般格式: `(node description)` ,`()` 小括号表示节点是圆角矩形形状,`node description` 是节点的描述文本.
+> 一般格式: `(node description)` ,`()` 小括号表示节点是**圆角矩形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -349,7 +349,7 @@ graph LR
 
 - 体育场
 
-> 一般格式: `([node description])` ,`()` 小括号嵌套 `[]` 中括号表示节点是大弧度的圆角矩形形状,也就是体育场形状,`node description` 是节点的描述文本.
+> 一般格式: `([node description])` ,`()` 小括号嵌套 `[]` 中括号表示节点是大弧度的圆角矩形形状,也就是**体育场**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -367,7 +367,7 @@ graph LR
 
 - 圆柱
 
-> 一般格式: `[(node description)]` ,`[]` 中括号嵌套 `()` 小括号表示节点是圆柱形状,`node description` 是节点的描述文本.
+> 一般格式: `[(node description)]` ,`[]` 中括号嵌套 `()` 小括号表示节点是**圆柱**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -385,7 +385,7 @@ graph LR
 
 - 圆形
 
-> `((node description))`
+> 一般格式: `((node description))` ,`()` 小括号嵌套 `()` 小括号表示节点是**圆形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -393,10 +393,17 @@ graph LR
 graph LR
     id1((This is the text in the circle))
 ```
-**效果**
-- 不对称
 
-`>node description]`
+**效果**
+
+```mermaid
+graph LR
+    id1((This is the text in the circle))
+```
+
+- 不对称矩形
+
+> 一般格式: `>node description]` ,左边是右尖括号 `>` ,右边是右中括号 `]` 表示**不对称矩形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -404,10 +411,17 @@ graph LR
 graph LR
     id1>This is the text in the box]
 ```
+
 **效果**
+
+```mermaid
+graph LR
+    id1>This is the text in the box]
+```
+
 - 菱形
 
-> `{node description}`
+> 一般格式: `{node description}` ,`{}` 大括号表示**菱形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -415,10 +429,17 @@ graph LR
 graph LR
     id1{This is the text in the box}
 ```
+
 **效果**
+
+```mermaid
+graph LR
+    id1{This is the text in the box}
+```
+
 - 六角形
 
-> `{`{`node description`}`}`
+> 一般格式: `{`{`node description`}`}` ,`{}` 大括号嵌套 `{}` 大括号表示**六角形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -426,10 +447,17 @@ graph LR
 graph LR
     id1{{This is the text in the box}}
 ```
+
 **效果**
+
+```mermaid
+graph LR
+    id1{{This is the text in the box}}
+```
+
 - 平行四边形
 
-> `[/node description/]`
+> 一般格式: `[/node description/]` ,`[]` 中括号嵌套 `//` 左斜杠表示**左斜平行四边形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -437,10 +465,17 @@ graph LR
 graph TD
     id1[/This is the text in the box/]
 ```
-**效果**
-- 另一种平行四边形
 
-> `[\node description\]`
+**效果**
+
+```mermaid
+graph TD
+    id1[/This is the text in the box/]
+```
+
+- 平行四边形
+
+> 一般格式: `[\node description\]` ,`[]` 中括号嵌套 `\\` 右斜杠表示**右斜平行四边形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -448,10 +483,17 @@ graph TD
 graph TD
     id1[\This is the text in the box\]
 ```
+
 **效果**
+
+```mermaid
+graph TD
+    id1[\This is the text in the box\]
+```
+
 - 梯形
 
-> `[/node description\]`
+> 一般格式: `[/node description\]` ,`[]` 中括号嵌套 `/\` 左右斜杠表示**上短下长梯形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
@@ -459,14 +501,28 @@ graph TD
 graph TD
     A[/Christmas\]
 ```
+
 **效果**
+
+```mermaid
+graph TD
+    A[/Christmas\]
+```
+
 - 另一种梯形
 
-> `[\node description/]`
+> 一般格式: `[\node description/]` ,`[]` 中括号嵌套 `\/` 右左斜杠表示**上长下短梯形**形状,`node description` 是节点的描述文本.
 
 **源码**
 
 ```
+graph TD
+    B[\Go shopping/]
+```
+
+**效果**
+
+```mermaid
 graph TD
     B[\Go shopping/]
 ```
