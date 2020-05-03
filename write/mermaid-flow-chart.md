@@ -527,21 +527,6 @@ graph TD
     B[\Go shopping/]
 ```
 
-## Mermaid流程图高级进阶
-
-## 快速入门流程图回顾总结
-
-
-
-
-
-
-
-
-
-
-
-
 ### 连接线
 
 **关键词**
@@ -810,8 +795,6 @@ graph LR
    A -- text --> B -- text2 --> C
 ```
 
-## 参考资料
+## Mermaid流程图高级进阶
 
-- 在线体验编辑器: [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/)
-- 流程图官方文档: [Flowcharts - Basic Syntax](https://mermaid-js.github.io/mermaid/#/flowchart)
-- 本项目托管地址: [/mermaid-js/mermaid](https://github.com/mermaid-js/mermaid)
+## 快速入门流程图回顾总结
