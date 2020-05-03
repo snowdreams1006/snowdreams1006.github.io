@@ -329,6 +329,148 @@ graph LR
     id1[This is the text in the box]
 ```
 
+- 圆角矩形
+
+> 一般格式: `(node description)` ,`()` 小括号表示节点是圆角矩形形状,`node description` 是节点的描述文本.
+
+**源码**
+
+```
+graph LR
+    id1(This is the text in the box)
+```
+
+**效果**
+
+```mermaid
+graph LR
+    id1(This is the text in the box)
+```
+
+- 体育场
+
+> 一般格式: `([node description])` ,`()` 小括号嵌套 `[]` 中括号表示节点是大弧度的圆角矩形形状,也就是体育场形状,`node description` 是节点的描述文本.
+
+**源码**
+
+```
+graph LR
+    id1([This is the text in the box])
+```
+
+**效果**
+
+```mermaid
+graph LR
+    id1([This is the text in the box])
+```
+
+- 圆柱
+
+> 一般格式: `[(node description)]` ,`[]` 中括号嵌套 `()` 小括号表示节点是圆柱形状,`node description` 是节点的描述文本.
+
+**源码**
+
+```
+graph LR
+    id1[(Database)]
+```
+
+**效果**
+
+```mermaid
+graph LR
+    id1[(Database)]
+```
+
+- 圆形
+
+> `((node description))`
+
+**源码**
+
+```
+graph LR
+    id1((This is the text in the circle))
+```
+**效果**
+- 不对称
+
+`>node description]`
+
+**源码**
+
+```
+graph LR
+    id1>This is the text in the box]
+```
+**效果**
+- 菱形
+
+> `{node description}`
+
+**源码**
+
+```
+graph LR
+    id1{This is the text in the box}
+```
+**效果**
+- 六角形
+
+> `{`{`node description`}`}`
+
+**源码**
+
+```
+graph LR
+    id1{{This is the text in the box}}
+```
+**效果**
+- 平行四边形
+
+> `[/node description/]`
+
+**源码**
+
+```
+graph TD
+    id1[/This is the text in the box/]
+```
+**效果**
+- 另一种平行四边形
+
+> `[\node description\]`
+
+**源码**
+
+```
+graph TD
+    id1[\This is the text in the box\]
+```
+**效果**
+- 梯形
+
+> `[/node description\]`
+
+**源码**
+
+```
+graph TD
+    A[/Christmas\]
+```
+**效果**
+- 另一种梯形
+
+> `[\node description/]`
+
+**源码**
+
+```
+graph TD
+    B[\Go shopping/]
+```
+
 ## Mermaid流程图高级进阶
 
 ## 快速入门流程图回顾总结
@@ -343,104 +485,6 @@ graph LR
 
 
 
-- 圆角矩形
-
-> `(node description)`
-
-```
-graph LR
-    id1(This is the text in the box)
-```
-
-- 体育场
-
-> `([node description])`
-
-```
-graph LR
-    id1([This is the text in the box])
-```
-
-- 圆柱
-
-> `[(node description)]`
-
-```
-graph LR
-    id1[(Database)]
-```
-
-- 圆形
-
-> `((node description))`
-
-```
-graph LR
-    id1((This is the text in the circle))
-```
-
-- 不对称
-
-- `>node description]`
-
-```
-graph LR
-    id1>This is the text in the box]
-```
-
-- 菱形
-
-> `{node description}`
-
-```
-graph LR
-    id1{This is the text in the box}
-```
-
-- 六角形
-
-> `{`{`node description`}`}`
-
-```
-graph LR
-    id1{{This is the text in the box}}
-```
-
-- 平行四边形
-
-> `[/node description/]`
-
-```
-graph TD
-    id1[/This is the text in the box/]
-```
-
-- 另一种平行四边形
-
-> `[\node description\]`
-
-```
-graph TD
-    id1[\This is the text in the box\]
-```
-
-- 梯形
-
-> `[/node description\]`
-
-```
-graph TD
-    A[/Christmas\]
-```
-
-- 另一种梯形
-
-> `[\node description/]`
-
-```
-graph TD
-    B[\Go shopping/]
-```
 
 ### 连接线
 
