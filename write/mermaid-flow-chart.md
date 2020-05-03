@@ -574,9 +574,8 @@ graph TD
         + ===|描述文字|
 ```
 
-{% simplemindmap style={'height':'550px','border': '1px solid lightgray;'} %}
 ```markdown
-- 连接线
+- 连接线样式
     + 实线/虚线
         - 实线: --
         - 虚线: -.
@@ -622,88 +621,189 @@ graph TD
             + 左边位置: ==描述文字===
             + 右边位置: ===|描述文字|
 ```
-{% endsimplemindmap %}
 
-> `实线过渡到虚线,有箭头对应无箭头,先划线再加描述,位置可左可右`,其中 `--` 代表实线,实线中间多一点 `-.-` 代表虚线,添加箭头用右尖括号 `>` ,没有箭头继续用短横线 `-`.
+> simplemindmap style={'height':'550px','border': '1px solid lightgray;'}
+
+![mermaid-flow-line-simplemindmap.png](./images/mermaid-flow-line-simplemindmap.png)
+
+流程图连接线样式,支持实线和虚线以及有箭头样式和无箭头样式,除此之外还支持添加连接线描述文字,其中 `--` 代表实线,实线中间多一点 `-.-` 代表虚线,添加箭头用右尖括号 `>` ,没有箭头继续用短横线 `-`.
+
+> **核心**: 先实线再虚线,先有箭头再去箭头,左边位置添加描述文字需要区分实现还是虚线,右边位置添加描述文字格式一致.
+
+- 有箭头无描述实线
+
+> 一般格式: `-->` ,其中 `--` 表示实线,`>` 表示有箭头.
+
+**源码**
 
 ```
 graph LR
     A-->B
 ```
 
-- 有箭头无描述实线
+**效果**
 
-> `-->`
-
-```
+```mermaid
 graph LR
     A-->B
 ```
 
 - 无箭头实线
 
+> 一般格式: `---` ,其中 `--` 表示实线,`-` 表示无箭头.
+
+**源码**
+
 ```
+graph LR
+    A --- B
+```
+
+**效果**
+
+```mermaid
 graph LR
     A --- B
 ```
 
 - 带描述的有箭头实线
 
-> `--connection line description-->`
+> 一般格式: `--connection line description-->` ,其中左边的 `--` 添加到**实线左边位置**,右边的 `-->` 表示**带箭头的实线**.
+
+**源码**
 
 ```
 graph LR
     A-- text -->B
 ```
 
-> `-->|connection line description|`
+**效果**
+
+```mermaid
+graph LR
+    A-- text -->B
+```
+
+> 一般格式: `|connection line description|` ,其中 `||` 添加到**连接线右边位置**.
+
+**源码**
 
 ```
 graph LR
     A-->|text|B
 ```
 
+**效果**
+
+```mermaid
+graph LR
+    A-->|text|B
+```
+
 - 带描述的无箭头实线
 
-> `--connection line description---`
+> 一般格式: `--connection line description` ,其中左边的 `--` 添加到**实线左边位置**,右边的 `---` 表示**不带箭头的实线**.
+
+**源码**
 
 ```
 graph LR
     A-- This is the text ---B
 ```
 
-> `---|connection line description|`
+**效果**
+
+```mermaid
+graph LR
+    A-- This is the text ---B
+```
+
+> 一般格式: `|connection line description|` ,其中 `||` 添加到**连接线右边位置**.
+
+**源码**
 
 ```
 graph LR
     A---|This is the text|B
 ```
 
+**效果**
+
+```mermaid
+graph LR
+    A---|This is the text|B
+```
+
 - 有箭头虚线
 
-> `-.connection line description.->`
+> 一般格式: `-.connection line description.->` ,其中左边的 `-.` 添加到**虚线左边位置**,右边的 `.->` 表示**带箭头的虚线**.
+
+**源码**
 
 ```
 graph LR
    A-. text .-> B
 ```
 
+**效果**
+
+```mermaid
+graph LR
+   A-. text .-> B
+```
+
 - 有箭头加粗实线
 
-> `==>`
+> 一般格式: `==>` ,表示加粗实线.
+
+**源码**
 
 ```
 graph LR
    A ==> B
 ```
 
+**效果**
+
+```mermaid
+graph LR
+   A ==> B
+```
+
 - 带描述的有箭头加粗实线
 
-> `==connection line description==>`
+> 一般格式: `==connection line description` ,左边的 `==` 添加到加粗实现左边,右边的 `==>` 代表加粗实线.
+
+**源码**
 
 ```
 graph LR
    A == text ==> B
+```
+
+**效果**
+
+```mermaid
+graph LR
+   A == text ==> B
+```
+
+- 带描述的有箭头加粗实线
+
+> 一般格式: `|connection line description|` ,其中 `||` 添加到**连接线右边位置**.
+
+**源码**
+
+```
+graph LR
+   A ==>|text| B
+```
+
+**效果**
+
+```mermaid
+graph LR
+   A ==>|text| B
 ```
 
 ### 高级用法
