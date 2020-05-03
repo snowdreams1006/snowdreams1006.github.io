@@ -213,7 +213,7 @@ graph LR
 
 - 六角形
 
-> `{{node description}}`
+> `{{`node description`}}`
 
 ```
 graph LR
