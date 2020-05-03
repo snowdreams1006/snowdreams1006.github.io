@@ -808,37 +808,118 @@ graph LR
 
 ### 高级用法
 
+**关键词**
+
+```mardown
++ -->-->
++ &
++ ""
++ %%
++ subgraph
+```
+
+```markdown
+- 高级用法
+    + -->-->
+    + &
+    + ""
+    + %%
+    + subgraph
+```
+
+{% simplemindmap style={'height':'150px','border': '1px solid lightgray;'} %}
+```markdown
+- 高级用法
+    + 链式连接: -->-->
+        - 概念
+        - 原理
+    + 共同连接: &
+    + 特殊字符: ""
+    + 添加备注: %%
+    + 嵌套图解: subgraph
+```
+{% endsimplemindmap %}
+
+> simplemindmap style={'height':'100px','border': '1px solid lightgray;'}
+
+![mermaid-flow-chart-advance-simplemindmap.png](./images/mermaid-flow-chart-advance-simplemindmap.png)
+
 - 多节点链式连接
+
+**源码**
 
 ```
 graph LR
    A -- text --> B -- text2 --> C
 ```
 
+**效果**
+
+```mermaid
+graph LR
+   A -- text --> B -- text2 --> C
+```
+
 - 多节点共同连接
+
+**源码**
 
 ```
 graph LR
    a --> b & c--> d
 ```
 
+**效果**
+
+```mermaid
+graph LR
+   a --> b & c--> d
+```
+
 - 多节点相互连接
+
+**源码**
 
 ```
 graph TB
     A & B--> C & D
 ```
 
+**效果**
+
+```mermaid
+graph TB
+    A & B--> C & D
+```
+
 - 双引号包裹特殊字符
+
+**源码**
 
 ```
 graph LR
     id1["This is the (text) in the box"]
 ```
 
+**效果**
+
+```mermaid
+graph LR
+    id1["This is the (text) in the box"]
+```
+
 - 双引号包裹转义字符
 
+**源码**
+
 ```
+graph LR
+    A["A double quote:#quot;"] -->B["A dec char:#9829;"]
+```
+
+**效果**
+
+```mermaid
 graph LR
     A["A double quote:#quot;"] -->B["A dec char:#9829;"]
 ```
