@@ -8,86 +8,6 @@
 - 掌握并能记住如何绘制`Mermaid`流程图;
 - 了解 `Gitbook` 写作环境的相关集成插件.
 
-```markdown
-- 快速上手Mermaid流程图
-    + 什么是Mermaid流程图
-        - 项目地址
-        - 在线编辑
-        - 官方文档
-    + Mermaid流程图快速入门
-        - 布局方向
-            + TB
-            + BT
-            + LR
-            + RL
-        - 节点形状
-            + [矩形]
-                - [(圆柱)]
-                - [/平行四边形/]
-                - [\平行四边形\]
-                - [/梯形\]
-                - [\梯形/]
-            + (圆角矩形)
-                - ((圆形))
-                - ([体育场])
-            + {菱形}
-                - {{六边形}}
-            + >不对称矩形]
-        - 连接线样式
-            + 实线/虚线
-                - --
-                - -.
-            + 有箭头/无箭头
-                - >
-                - -
-            + 有描述/无描述
-                - 实线
-                    + --描述文字
-                    + |描述文字|
-                - 虚线
-                    + -.描述文字
-                    + |描述文字|
-            + 加粗
-                - ==
-            + 组合形式
-                - -->
-                - ---
-                - -.->
-                - -.-
-                - 有描述实线有箭头
-                    + --描述文字-->
-                    + -->|描述文字|
-                - 有描述实线无箭头
-                    + --描述文字---
-                    + ---|描述文字|
-                - 有描述虚线有箭头
-                    + -.描述文字-.->
-                    + -.->|描述文字|
-                - 有描述虚线无箭头
-                    + -.描述文字-.-
-                    + -.-|描述文字|
-                - ==>
-                - ===
-                - 有描述加粗实线有箭头(2)
-                    + ==描述文字==>
-                    + ==>|描述文字|
-                - 有描述加粗实线无箭头(2)
-                    + ==描述文字===
-                    + ===|描述文字|
-        - 高级用法
-            + -->-->
-            + &
-            + ""
-            + %%
-            + subgraph
-    + 快速入门流程图回顾总结
-        - 英文单词缩写
-        - 几何化形状
-        - 有限语法
-```
-
-> simplemindmap style={'height':'550px','border': '1px solid lightgray;'}
-
 ![mermaid-flow-chart-simplemindmap-preview.png](./images/mermaid-flow-chart-simplemindmap-preview.png)
 
 ## 什么是Mermaid流程图
@@ -142,16 +62,6 @@ graph TD
 + LR
 + RL
 ```
-
-```markdown
-- 布局方向
-    + TB(从上到下)
-    + BT(从下到上)
-    + LR(从左往右)
-    + RL(从右往左)
-```
-
-> simplemindmap style={'height':'100px','border': '1px solid lightgray;'}
 
 ![mermaid-flow-chart-layout-simplemindmap.png](./images/mermaid-flow-chart-layout-simplemindmap.png)
 
@@ -255,29 +165,6 @@ graph BT
         - {(暂不支持)}
     + >不对称矩形]
 ```
-
-```markdown
-- 节点形状
-    + [矩形]
-        - [[暂不支持]]
-        - [(圆柱)]
-        - [{暂不支持}]
-        - [/平行四边形/]
-        - [\平行四边形\\]
-        - [/梯形\\]
-        - [\梯形/]
-    + (圆角矩形)
-        - ((圆形))
-        - ([体育场])
-        - ({暂不支持})
-    + {菱形}
-        - {{六边形}}
-        - {[暂不支持]}
-        - {(暂不支持)}
-    + \>不对称矩形]
-```
-
-> simplemindmap style={'height':'250px','border': '1px solid lightgray;'}
 
 ![mermaid-flow-chart-shape-simplemindmap.png](./images/mermaid-flow-chart-shape-simplemindmap.png)
 
@@ -576,56 +463,6 @@ graph TD
         + ===|描述文字|
 ```
 
-```markdown
-- 连接线样式
-    + 实线/虚线
-        - 实线: --
-        - 虚线: -.
-    + 有箭头/无箭头
-        - 有箭头: >
-        - 无箭头: -
-    + 有描述/无描述
-        - 实线
-            + 左边位置: --描述文字
-            + 右边位置: |描述文字|
-        - 虚线
-            + 左边位置: -.描述文字
-            + 右边位置: |描述文字|
-    + 加粗
-        - 实线: ==
-        - 虚线: 不支持
-    + 组合形式
-        - 无描述实线有箭头: -->
-        - 无描述实线无箭头: ---
-        - 无描述虚线有箭头
-            + 推荐: -.->
-            + 支持: .->
-            + 不支持: -.>
-        - 无描述虚线无箭头: -.-
-        - 有描述实线有箭头
-            + 左边位置: --描述文字-->
-            + 右边位置: -->|描述文字|
-        - 有描述实线无箭头
-            + 左边位置: --描述文字---
-            + 右边位置: ---|描述文字|
-        - 有描述虚线有箭头
-            + 左边位置: -.描述文字-.->
-            + 右边位置: -.->|描述文字|
-        - 有描述虚线无箭头
-            + 左边位置: -.描述文字-.-
-            + 右边位置: -.-|描述文字|
-        - 无描述加粗实线有箭头: ==>
-        - 无描述加粗实线无箭头: ===
-        - 有描述加粗实线有箭头
-            + 左边位置: ==描述文字==>
-            + 右边位置: ==>|描述文字|
-        - 有描述加粗实线无箭头
-            + 左边位置: ==描述文字===
-            + 右边位置: ===|描述文字|
-```
-
-> simplemindmap style={'height':'550px','border': '1px solid lightgray;'}
-
 ![mermaid-flow-line-simplemindmap.png](./images/mermaid-flow-line-simplemindmap.png)
 
 流程图连接线样式,支持实线和虚线以及有箭头样式和无箭头样式,除此之外还支持添加连接线描述文字,其中 `--` 代表实线,实线中间多一点 `-.-` 代表虚线,添加箭头用右尖括号 `>` ,没有箭头继续用短横线 `-`.
@@ -820,17 +657,6 @@ graph LR
 + subgraph
 ```
 
-```markdown
-- 高级用法
-    + 链式连接: -->-->
-    + 共同连接: &
-    + 特殊字符: ""
-    + 添加备注: %%
-    + 嵌套图解: subgraph
-```
-
-> simplemindmap style={'height':'100px','border': '1px solid lightgray;'}
-
 ![mermaid-flow-chart-advance-simplemindmap.png](./images/mermaid-flow-chart-advance-simplemindmap.png)
 
 - 多节点链式连接
@@ -968,27 +794,6 @@ graph LR
 - 几何化形状
 - 有限语法
 ```
-
-```markdown
-- 快速入门流程图回顾总结
-    + 英文单词缩写
-        - 上: top
-        - 下: bottom
-        - 左: left
-        - 右: right
-    + 几何化形状
-        - 矩形: []
-        - 圆角矩形: ()
-        - 菱形: {}
-    + 有限语法
-        - 不支持正方形: [[]]
-        - 不支持棱柱: [{}]
-        - 不支持圆弧: ({})
-        - 不支持多边形: {[]}
-        - 不支持圆弧: {()}
-```
-
-> simplemindmap style={'height':'250px','border': '1px solid lightgray;'}
 
 ![mermaid-flow-chart-summary-simplemindmap.png](./images/mermaid-flow-chart-summary-simplemindmap.png)
 
