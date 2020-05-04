@@ -445,14 +445,16 @@ graph LR
 
 ```
 graph LR
-    id1{{This is the text in the box}}
+    id1\{\{This is the text in the box\}\}
 ```
+
+> `Gitbook` 语法中双大括号 `{}` 表示特殊意义,上述源码只能转义处理,实际上并不需要 `\` 进行转义.
 
 **效果**
 
 ```mermaid
 graph LR
-    id1{{This is the text in the box}}
+    id1\{\{This is the text in the box\}\}
 ```
 
 - 平行四边形
@@ -958,4 +960,65 @@ graph LR
 ```
 
 ## 快速入门流程图回顾总结
+
+**关键词**
+
+```mardown
+- 英文单词缩写
+- 几何化形状
+- 有限语法
+```
+
+```markdown
+- 快速入门流程图回顾总结
+    + 英文单词缩写
+        - 上: top
+        - 下: bottom
+        - 左: left
+        - 右: right
+    + 几何化形状
+        - 矩形: []
+        - 圆角矩形: ()
+        - 菱形: {}
+    + 有限语法
+        - 不支持正方形: [[]]
+        - 不支持棱柱: [{}]
+        - 不支持圆弧: ({})
+        - 不支持多边形: {[]}
+        - 不支持圆弧: {()}
+```
+
+> simplemindmap style={'height':'250px','border': '1px solid lightgray;'}
+
+![mermaid-flow-chart-summary-simplemindmap.png](./images/mermaid-flow-chart-summary-simplemindmap.png)
+
+
+`Mermaid` 是一款开源的制图工具,可使用 `Markdown` 语法绘制流程图,支持更改流程图节点形状,添加描述文字以及更改连接线样式等等.
+
+### 英文单词缩写
+
+|中文|英文|示例|
+|:-:|:-:|:-:|
+|图解|graph|`graph` 流程图类型标识|
+|子图|subgraph|`subgraph` 嵌套子流程图标识|
+|上|top|`TB` 或 `BT` ,从上到下或从下到上的布局方向|
+|下|bottom|`BT` 或 `TB`,从下到上或从上到下的布局方向|
+|左|left|`LR` 或 `RL`,从左往右或从右往左的布局方向|
+|右|right|`RL` 或 `LR`,从右往左或从左往右的布局方向|
+
+### 几何化形状
+
+### 有限语法
+
+
+
+除了提供最基础的操作节点的能力之外,还可以根据 `JS` 和 `CSS` 相关知识高度自定义流程图行为表现,具体可参考官方文档.
+
+- 交互能力 Interaction : [https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction](https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction)
+- 外观样式 Styling and classes : [https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction](https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction)
+- 字体支持 Basic support for fontawesome: [https://mermaid-js.github.io/mermaid/#/flowchart?id=basic-support-for-fontawesome](https://mermaid-js.github.io/mermaid/#/flowchart?id=basic-support-for-fontawesome)
+- 空格分隔 [https://mermaid-js.github.io/mermaid/#/flowchart?id=graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon](https://mermaid-js.github.io/mermaid/#/flowchart?id=graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon)
+
+> 官方文档: [https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes](https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes)
+
 
