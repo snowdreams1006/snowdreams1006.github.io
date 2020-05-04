@@ -139,7 +139,7 @@ gitbook serve
 gitbook build
 
 # 将静态网站文件夹_book全部复制到当前目录,保证首页存在index.html文件
-cp -rf ./book/* ./
+cp -rf ./_book/* ./
 
 # 添加到版本库等待上传 Github
 git add .
