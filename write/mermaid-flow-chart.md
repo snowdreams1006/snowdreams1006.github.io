@@ -820,25 +820,12 @@ graph LR
 
 ```markdown
 - 高级用法
-    + -->-->
-    + &
-    + ""
-    + %%
-    + subgraph
-```
-
-{% simplemindmap style={'height':'150px','border': '1px solid lightgray;'} %}
-```markdown
-- 高级用法
     + 链式连接: -->-->
-        - 概念
-        - 原理
     + 共同连接: &
     + 特殊字符: ""
     + 添加备注: %%
     + 嵌套图解: subgraph
 ```
-{% endsimplemindmap %}
 
 > simplemindmap style={'height':'100px','border': '1px solid lightgray;'}
 
