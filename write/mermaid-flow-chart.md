@@ -594,10 +594,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-   A -- text --> B -- text2 --> C
-```
+![mermaid-flow-chart-chain-link-mermaid.png](./images/mermaid-flow-chart-chain-link-mermaid.png)
 
 - 多节点共同连接
 
@@ -612,10 +609,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-   a --> b & c--> d
-```
+![mermaid-flow-chart-common-link-mermaid.png](./images/mermaid-flow-chart-common-link-mermaid.png)
 
 - 多节点相互连接
 
@@ -630,10 +624,7 @@ graph TB
 
 **效果**
 
-```mermaid
-graph TB
-    A & B--> C & D
-```
+![mermaid-flow-chart-eachother-link-mermaid.png](./images/mermaid-flow-chart-eachother-link-mermaid.png)
 
 - 双引号包裹特殊字符
 
@@ -648,10 +639,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    id1["This is the (text) in the box"]
-```
+![mermaid-flow-chart-special-character-mermaid.png](./images/mermaid-flow-chart-special-character-mermaid.png)
 
 - 双引号包裹转义字符
 
@@ -666,10 +654,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    A["A double quote:#quot;"] -->B["A dec char:#9829;"]
-```
+![mermaid-flow-chart-escape-character-mermaid.png](./images/mermaid-flow-chart-escape-character-mermaid.png)
 
 - 嵌套子流程图
 
@@ -697,6 +682,8 @@ graph TB
     end
 ```
 
+![mermaid-flow-chart-subgraph-mermaid.png](./images/mermaid-flow-chart-subgraph-mermaid.png)
+
 - 注释语法
 
 注释以 `%%` 开头并且独占一行.
@@ -706,6 +693,8 @@ graph LR
 %% this is a comment A -- text --> B{node}
    A -- text --> B -- text2 --> C
 ```
+
+![mermaid-flow-chart-comment-mermaid.png](./images/mermaid-flow-chart-comment-mermaid.png)
 
 ## 快速入门流程图回顾总结
 
@@ -718,7 +707,6 @@ graph LR
 ```
 
 ![mermaid-flow-chart-summary-simplemindmap.png](./images/mermaid-flow-chart-summary-simplemindmap.png)
-
 
 `Mermaid` 是一款开源的制图工具,可使用 `Markdown` 语法绘制流程图,支持更改流程图节点形状,添加描述文字以及更改连接线样式等等.
 
