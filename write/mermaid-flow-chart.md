@@ -279,6 +279,8 @@ graph LR
 
 **效果**
 
+![mermaid-flow-chart-diamond-mermaid.png](./images/mermaid-flow-chart-diamond-mermaid.png)
+
 ```mermaid
 graph LR
     id1{This is the text in the box}
@@ -299,10 +301,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    id1\{\{This is the text in the box\}\}
-```
+![mermaid-flow-chart-hexagonal-mermaid.png](./images/mermaid-flow-chart-hexagonal-mermaid.png)
 
 - 平行四边形
 
@@ -317,10 +316,7 @@ graph TD
 
 **效果**
 
-```mermaid
-graph TD
-    id1[/This is the text in the box/]
-```
+![mermaid-flow-chart-left-oblique-parallelogram-mermaid.png](./images/mermaid-flow-chart-left-oblique-parallelogram-mermaid.png)
 
 - 平行四边形
 
@@ -335,10 +331,7 @@ graph TD
 
 **效果**
 
-```mermaid
-graph TD
-    id1[\This is the text in the box\]
-```
+![mermaid-flow-chart-right-oblique-parallelogram-mermaid.png](./images/mermaid-flow-chart-right-oblique-parallelogram-mermaid.png)
 
 - 梯形
 
@@ -353,10 +346,7 @@ graph TD
 
 **效果**
 
-```mermaid
-graph TD
-    A[/Christmas\]
-```
+![mermaid-flow-chart-top-trapezoidal-mermaid.png](./images/mermaid-flow-chart-top-trapezoidal-mermaid.png)
 
 - 另一种梯形
 
@@ -371,10 +361,7 @@ graph TD
 
 **效果**
 
-```mermaid
-graph TD
-    B[\Go shopping/]
-```
+![mermaid-flow-chart-bottom-trapezoidal-mermaid.png](./images/mermaid-flow-chart-bottom-trapezoidal-mermaid.png)
 
 ### 连接线
 
