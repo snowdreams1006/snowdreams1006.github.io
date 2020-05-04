@@ -37,7 +37,8 @@
         "diff",
         "simple-mind-map",
         "hide-element",
-        "audio_image"
+        "audio_image",
+        "mermaid-gb3"
     ],
     "pluginsConfig": {
         "favicon-absolute": {

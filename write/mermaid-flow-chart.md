@@ -37,14 +37,7 @@ graph TD
 
 **效果**
 
-```mermaid
-graph TD
-  A[Christmas] -->|Get money| B(Go shopping)
-  B --> C{Let me think}
-  C -->|One| D[Laptop]
-  C -->|Two| E[iPhone]
-  C -->|Three| F[fa:fa-car Car]
-```
+![mermaid-flow-chart-letmethink-mermaid.png](./images/mermaid-flow-chart-letmethink-mermaid.png)
 
 - 项目地址: [https://github.com/mermaid-js/mermaid](https://github.com/mermaid-js/mermaid)
 - 在线编辑: [https://mermaidjs.github.io/mermaid-live-editor/](https://mermaidjs.github.io/mermaid-live-editor/)
@@ -82,10 +75,7 @@ graph TB
 
 **效果**
 
-```mermaid
-graph TB
-    Start --> Stop
-```
+![mermaid-flow-chart-TB-mermaid.png](./images/mermaid-flow-chart-TB-mermaid.png)
 
 - BT 
 
@@ -100,10 +90,7 @@ graph BT
 
 **效果**
 
-```mermaid
-graph BT
-    Start --> Stop
-```
+![mermaid-flow-chart-BT-mermaid.png](./images/mermaid-flow-chart-BT-mermaid.png)
 
 - LR
 
@@ -118,10 +105,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    Start --> Stop
-```
+![mermaid-flow-chart-LR-mermaid.png](./images/mermaid-flow-chart-LR-mermaid.png)
 
 - RL
 
@@ -130,16 +114,13 @@ graph LR
 **源码**
 
 ```
-graph BT
+graph RL
     Start --> Stop
 ```
 
 **效果**
 
-```mermaid
-graph BT
-    Start --> Stop
-```
+![mermaid-flow-chart-RL-mermaid.png](./images/mermaid-flow-chart-RL-mermaid.png)
 
 ### 形状
 
@@ -187,10 +168,7 @@ graph TD
 
 **效果**
 
-```mermaid
-graph TD
-    id
-```
+![mermaid-flow-chart-id-mermaid.png](./images/mermaid-flow-chart-id-mermaid.png)
 
 #### 可重复节点
 
@@ -211,10 +189,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    id1[This is the text in the box]
-```
+![mermaid-flow-chart-rectangular-mermaid.png](./images/mermaid-flow-chart-rectangular-mermaid.png)
 
 - 圆角矩形
 
@@ -229,10 +204,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    id1(This is the text in the box)
-```
+![mermaid-flow-chart-rounded-rectangular-mermaid.png](./images/mermaid-flow-chart-rounded-rectangular-mermaid.png)
 
 - 体育场
 
@@ -247,10 +219,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    id1([This is the text in the box])
-```
+![mermaid-flow-chart-stadium-mermaid.png](./images/mermaid-flow-chart-stadium-mermaid.png)
 
 - 圆柱
 
@@ -265,10 +234,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    id1[(Database)]
-```
+![mermaid-flow-chart-cylindrical-mermaid.png](./images/mermaid-flow-chart-cylindrical-mermaid.png)
 
 - 圆形
 
@@ -283,10 +249,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    id1((This is the text in the circle))
-```
+![mermaid-flow-chart-circle-mermaid.png](./images/mermaid-flow-chart-circle-mermaid.png)
 
 - 不对称矩形
 
@@ -301,10 +264,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    id1>This is the text in the box]
-```
+![mermaid-flow-chart-asymmetrical-rectangle-mermaid.png](./images/mermaid-flow-chart-asymmetrical-rectangle-mermaid.png)
 
 - 菱形
 
