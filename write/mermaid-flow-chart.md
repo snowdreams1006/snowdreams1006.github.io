@@ -997,6 +997,8 @@ graph LR
 
 ### 英文单词缩写
 
+> 四种布局方向的值是英文单词首字母大写缩写形式,默认仅支持垂直方向.
+
 |中文|英文|示例|
 |:-:|:-:|:-:|
 |图解|graph|`graph` 流程图类型标识|
@@ -1008,17 +1010,76 @@ graph LR
 
 ### 几何化形状
 
+> 键盘符号形象化几何形状,组合形式表示形状的叠加,其中最外层符号是主形状,嵌套符号是辅助形状.
+
+- 基本单元
+
+|表示法|含义|类型|备注|
+|:-:|:-:|:-:|
+|`[]`|矩形|节点形状|支持|
+|`()`|圆角矩形|节点形状|支持|
+|`{}`|菱形|节点形状|支持|
+|`<>`|菱形|节点形状|不支持|
+|`--`|实线|连接线样式|支持|
+|`-.`|虚线|连接线样式|支持|
+|`==`|加粗实线|连接线样式|支持|
+|`=:`|加粗虚线|连接线样式|不支持|
+|`>`|有箭头|连接线样式|支持|
+|`-`|无箭头|连接线样式|支持|
+|`双竖线`|右边连接线描述文字|连接线描述文字|支持|
+|`--`|左边实线连接线描述文字|连接线描述文字|支持|
+|`-.`|左边虚线连接线描述文字|连接线描述文字|支持|
+|`==`|左边加粗实线连接线描述文字|连接线描述文字|支持|
+|`=:`|左边加粗虚线连接线描述文字|连接线描述文字|不支持|
+
+- 组合单元
+
+|表示法|含义|类型|备注|
+|:-:|:-:|:-:|
+|`[[]]`|正方形|节点形状|不支持|
+|`[()]`|圆柱体|节点形状|支持|
+|`[{}]`|棱柱体|节点形状|不支持|
+|`(())`|圆形|节点形状|支持|
+|`([])`|体育场|节点形状|支持|
+|`({})`|圆弧|节点形状|不支持|
+|`双大括号`|六边形|节点形状|支持|
+|`{[]}`|正多边形|节点形状|不支持|
+|`{()}`|圆弧|节点形状|不支持|
+|`-->`|实线带箭头|连接线样式|支持|
+|`---`|实线无箭头|连接线样式|支持|
+|`-.>`|虚线带箭头|连接线样式|不支持|
+|`-.->`|虚线带箭头|连接线样式|支持|
+|`.->`|虚线带箭头|连接线样式|支持|
+|`-.-`|虚线无箭头|连接线样式|支持|
+|`.-`|虚线无箭头|连接线样式|支持|
+|`==>`|加粗实线带箭头|连接线样式|支持|
+|`===`|加粗实线无箭头|连接线样式|支持|
+|`=:>`|加粗虚线带箭头|连接线样式|不支持|
+|`=:=>`|加粗虚线带箭头|连接线样式|不支持|
+|`=:=`|加粗虚线无箭头|连接线样式|不支持|
+|`:=`|加粗虚线无箭头|连接线样式|不支持|
+|`双竖线`|右边连接线描述文字|连接线描述文字|支持|
+|`--connection line description-->`|左边实线带箭头连接线描述文字|连接线描述文字|支持|
+|`-.connection line description-.->`|左边虚线带箭头连接线描述文字|连接线描述文字|支持|
+|`--connection line description---`|左边实线无箭头连接线描述文字|连接线描述文字|支持|
+|`-.connection line description-.-`|左边虚线无箭头连接线描述文字|连接线描述文字|支持|
+|`==connection line description==>`|左边加粗实线带箭头连接线描述文字|连接线描述文字|支持|
+|`=:connection line description=:=>`|左边加粗虚线带箭头连接线描述文字|连接线描述文字|不支持|
+|`==connection line description===`|左边加粗实线无箭头连接线描述文字|连接线描述文字|支持|
+|`=:connection line description=:=`|左边加粗虚线无箭头连接线描述文字|连接线描述文字|不支持|
+
 ### 有限语法
 
-
+不论是节点形状还是连接线样式,语法支持是有限的,并不是随意组合的叠加状态,也可能随着后续更新会支持更多,一切以官方文档为主.
 
 除了提供最基础的操作节点的能力之外,还可以根据 `JS` 和 `CSS` 相关知识高度自定义流程图行为表现,具体可参考官方文档.
+
+> 官方文档: [https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes](https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes)
 
 - 交互能力 Interaction : [https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction](https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction)
 - 外观样式 Styling and classes : [https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction](https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction)
 - 字体支持 Basic support for fontawesome: [https://mermaid-js.github.io/mermaid/#/flowchart?id=basic-support-for-fontawesome](https://mermaid-js.github.io/mermaid/#/flowchart?id=basic-support-for-fontawesome)
 - 空格分隔 [https://mermaid-js.github.io/mermaid/#/flowchart?id=graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon](https://mermaid-js.github.io/mermaid/#/flowchart?id=graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon)
 
-> 官方文档: [https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes](https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes)
 
 
