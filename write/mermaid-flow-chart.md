@@ -429,10 +429,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    A-->B
-```
+![mermaid-flow-chart-solid-line-arrow-mermaid.png](./images/mermaid-flow-chart-solid-line-arrow-mermaid.png)
 
 - 无箭头实线
 
@@ -447,10 +444,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    A --- B
-```
+![mermaid-flow-chart-solid-line-noarrow-mermaid.png](./images/mermaid-flow-chart-solid-line-noarrow-mermaid.png)
 
 - 带描述的有箭头实线
 
@@ -465,10 +459,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    A-- text -->B
-```
+![mermaid-flow-chart-solid-line-arrow-left-desc-mermaid.png](./images/mermaid-flow-chart-solid-line-arrow-left-desc-mermaid.png)
 
 > 一般格式: `|connection line description|` ,其中 `||` 添加到**连接线右边位置**.
 
@@ -481,10 +472,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    A-->|text|B
-```
+![mermaid-flow-chart-solid-line-arrow-right-desc-mermaid.png](./images/mermaid-flow-chart-solid-line-arrow-right-desc-mermaid.png)
 
 - 带描述的无箭头实线
 
@@ -499,10 +487,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    A-- This is the text ---B
-```
+![mermaid-flow-chart-solid-line-noarrow-left-desc-mermaid.png](./images/mermaid-flow-chart-solid-line-noarrow-left-desc-mermaid.png)
 
 > 一般格式: `|connection line description|` ,其中 `||` 添加到**连接线右边位置**.
 
@@ -515,10 +500,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-    A---|This is the text|B
-```
+![mermaid-flow-chart-solid-line-noarrow-right-desc-mermaid.png](./images/mermaid-flow-chart-solid-line-noarrow-right-desc-mermaid.png)
 
 - 有箭头虚线
 
@@ -533,10 +515,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-   A-. text .-> B
-```
+![mermaid-flow-chart-dotted-line-arrow-left-desc-mermaid.png](./images/mermaid-flow-chart-dotted-line-arrow-left-desc-mermaid.png)
 
 - 有箭头加粗实线
 
@@ -551,10 +530,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-   A ==> B
-```
+![mermaid-flow-chart-bold-solid-line-arrow-mermaid.png](./images/mermaid-flow-chart-bold-solid-line-arrow-mermaid.png)
 
 - 带描述的有箭头加粗实线
 
@@ -568,6 +544,8 @@ graph LR
 ```
 
 **效果**
+
+![mermaid-flow-chart-bold-solid-line-arrow-left-desc-mermaid.png](./images/mermaid-flow-chart-bold-solid-line-arrow-left-desc-mermaid.png)
 
 ```mermaid
 graph LR
@@ -587,10 +565,7 @@ graph LR
 
 **效果**
 
-```mermaid
-graph LR
-   A ==>|text| B
-```
+![mermaid-flow-chart-bold-solid-line-arrow-right-desc-mermaid.png](./images/mermaid-flow-chart-bold-solid-line-arrow-right-desc-mermaid.png)
 
 ### 高级用法
 
