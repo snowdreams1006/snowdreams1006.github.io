@@ -281,11 +281,6 @@ graph LR
 
 ![mermaid-flow-chart-diamond-mermaid.png](./images/mermaid-flow-chart-diamond-mermaid.png)
 
-```mermaid
-graph LR
-    id1{This is the text in the box}
-```
-
 - 六角形
 
 > 一般格式: `{`{`node description`}`}` ,`{}` 大括号嵌套 `{}` 大括号表示**六角形**形状,`node description` 是节点的描述文本.
@@ -546,11 +541,6 @@ graph LR
 **效果**
 
 ![mermaid-flow-chart-bold-solid-line-arrow-left-desc-mermaid.png](./images/mermaid-flow-chart-bold-solid-line-arrow-left-desc-mermaid.png)
-
-```mermaid
-graph LR
-   A == text ==> B
-```
 
 - 带描述的有箭头加粗实线
 
