@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 21 Apr 2020 04:58:29 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 05 May 2020 01:32:38 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -876,6 +876,13 @@
 []]></description>
             <link>https://snowdreams1006.github.io/write/jianshu-optimize-static.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/write/jianshu-optimize-static.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[快速上手Mermaid流程图]]></title>
+            <description><![CDATA[本文主要介绍了如何快速上手 Mermaid 流程图,不用贴图上传也不用拖拉点拽绘制,基于源码实时渲染流程图,操作简单易上手,广泛被集成于主流编辑器,包括 markdown 写作环境.]]></description>
+            <link>https://snowdreams1006.github.io/write/mermaid-flow-chart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/write/mermaid-flow-chart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

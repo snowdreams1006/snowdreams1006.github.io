@@ -785,6 +785,3 @@ graph LR
 - 外观样式 Styling and classes : [https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction](https://mermaid-js.github.io/mermaid/#/flowchart?id=interaction)
 - 字体支持 Basic support for fontawesome: [https://mermaid-js.github.io/mermaid/#/flowchart?id=basic-support-for-fontawesome](https://mermaid-js.github.io/mermaid/#/flowchart?id=basic-support-for-fontawesome)
 - 空格分隔 [https://mermaid-js.github.io/mermaid/#/flowchart?id=graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon](https://mermaid-js.github.io/mermaid/#/flowchart?id=graph-declarations-with-spaces-between-vertices-and-link-and-without-semicolon)
-
-
-
