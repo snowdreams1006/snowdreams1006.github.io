@@ -920,4 +920,6 @@ $ gitbook serve
 - 视频播放 : [gitbook-plugin-html5-video](https://www.npmjs.com/package/gitbook-plugin-html5-video)
 - 音频播放 : [gitbook-plugin-audio_image](https://www.npmjs.com/package/gitbook-plugin-audio_image)
 - 文件压缩 : [gitbook-plugin-minifier](https://www.npmjs.com/package/gitbook-plugin-minifier)
-- 添加css|js : [gitbook-plugin-addcssjs](https://www.npmjs.com/package/gitbook-plugin-addcssjs)
+- 隐藏元素 : [gitbook-plugin-hide-element](https://www.npmjs.com/package/gitbook-plugin-hide-element)
+- Gitbook 百度统计插件 : [gitbook-plugin-gitbook-plugin-baidu-tongji-with-multiple-channel](https://www.npmjs.com/package/gitbook-plugin-gitbook-plugin-baidu-tongji-with-multiple-channel)
+

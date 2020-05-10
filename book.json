@@ -39,7 +39,7 @@
         "hide-element",
         "audio_image",
         "mermaid-gb3",
-        "statistics"
+        "baidu-tongji-with-multiple-channel"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -157,8 +157,28 @@
         "simple-mind-map":{
             "preset": "colorful"
         },
-        "statistics": {
-          "bd_token": "5273b2f99de3bc190886abb53f62267e"
+        "baidu-tongji-with-multiple-channel": {
+            "url": "https://hm.baidu.com/hm.js",
+            "multipleChannelConfig": {
+                "snowdreams1006.tech":{
+                    "token": "468a97b20b79bc025d27afbee73d2f39"
+                },
+                "blog.snowdreams1006.cn":{
+                    "token": "606f5db455f771889dcfd16bb2bd313b"
+                },
+                "snowdreams1006.github.io":{
+                    "token": "5273b2f99de3bc190886abb53f62267e"
+                },
+                "snowdreams1006.gitee.io":{
+                    "token": "60ec676f32be4579eb53a430e153f677"
+                },
+                "snowdreams1006.gitlab.io":{
+                    "token": "187a0e5601c4e4987cdb5b8df09c9b21"
+                },
+                "snowdreams1006.gitbook.io":{
+                    "token": "6e2ee1b7bea146b2d6d9382bbf803083"
+                }
+            }
         }
     }
 }
