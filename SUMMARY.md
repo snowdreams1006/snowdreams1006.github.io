@@ -151,6 +151,7 @@
     * [gitbook-plugin-simple-mind-map](https://snowdreams1006.github.io/gitbook-plugin-simple-mind-map/)
     * [gitbook-plugin-punctuation-converter](https://snowdreams1006.github.io/gitbook-plugin-punctuation-converter/)
     * [gitbook-plugin-baidu-tongji-with-multiple-channel](https://snowdreams1006.github.io/gitbook-plugin-baidu-tongji-with-multiple-channel/)
+    * [gitbook-plugin-google-tongji-with-multiple-channel](https://snowdreams1006.github.io/gitbook-plugin-google-tongji-with-multiple-channel/)
 * [hexo 插件项目](opensource/hexo/README.md)
     * [hexo-plugin-gitalk](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
     * [hexo-plugin-readmore](https://snowdreams1006.github.io/hexo-plugin-readmore/)

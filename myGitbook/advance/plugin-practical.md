@@ -921,5 +921,7 @@ $ gitbook serve
 - 音频播放 : [gitbook-plugin-audio_image](https://www.npmjs.com/package/gitbook-plugin-audio_image)
 - 文件压缩 : [gitbook-plugin-minifier](https://www.npmjs.com/package/gitbook-plugin-minifier)
 - 隐藏元素 : [gitbook-plugin-hide-element](https://www.npmjs.com/package/gitbook-plugin-hide-element)
-- Gitbook 百度统计插件 : [gitbook-plugin-gitbook-plugin-baidu-tongji-with-multiple-channel](https://www.npmjs.com/package/gitbook-plugin-gitbook-plugin-baidu-tongji-with-multiple-channel)
+- 百度统计 : [gitbook-plugin-baidu-tongji-with-multiple-channel](https://www.npmjs.com/package/gitbook-plugin-baidu-tongji-with-multiple-channel)
+- 谷歌分析 : [gitbook-plugin-google-tongji-with-multiple-channel](https://www.npmjs.com/package/gitbook-plugin-google-tongji-with-multiple-channel)
+
 

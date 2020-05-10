@@ -39,7 +39,8 @@
         "hide-element",
         "audio_image",
         "mermaid-gb3",
-        "baidu-tongji-with-multiple-channel"
+        "baidu-tongji-with-multiple-channel",
+        "google-tongji-with-multiple-channel"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -177,6 +178,29 @@
                 },
                 "snowdreams1006.gitbook.io":{
                     "token": "6e2ee1b7bea146b2d6d9382bbf803083"
+                }
+            }
+        },
+        "google-tongji-with-multiple-channel": {
+            "url": "https://www.googletagmanager.com/gtag/js",
+            "multipleChannelConfig": {
+                 "snowdreams1006.gitbook.io":{
+                    "token": "UA-140787039-1"
+                },
+                "snowdreams1006.github.io":{
+                    "token": "UA-140787039-2"
+                },
+                "snowdreams1006.gitee.io":{
+                    "token": "UA-140787039-3"
+                },
+                "snowdreams1006.gitlab.io":{
+                    "token": "UA-140787039-4"
+                },
+                "snowdreams1006.tech":{
+                    "token": "UA-140787039-5"
+                },
+                "blog.snowdreams1006.cn":{
+                    "token": "UA-140787039-6"
                 }
             }
         }
