@@ -38,7 +38,8 @@
         "simple-mind-map",
         "hide-element",
         "audio_image",
-        "mermaid-gb3"
+        "mermaid-gb3",
+        "statistics"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -155,6 +156,9 @@
         },
         "simple-mind-map":{
             "preset": "colorful"
+        },
+        "statistics": {
+          "bd_token": "5273b2f99de3bc190886abb53f62267e"
         }
     }
 }
