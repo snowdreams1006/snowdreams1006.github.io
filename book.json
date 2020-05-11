@@ -161,6 +161,9 @@
         "baidu-tongji-with-multiple-channel": {
             "url": "https://hm.baidu.com/hm.js",
             "multipleChannelConfig": {
+                "localhost":{
+                    "token": "5273b2f99de3bc190886abb53f62267e"
+                },
                 "snowdreams1006.tech":{
                     "token": "468a97b20b79bc025d27afbee73d2f39"
                 },
@@ -184,7 +187,10 @@
         "google-tongji-with-multiple-channel": {
             "url": "https://www.googletagmanager.com/gtag/js",
             "multipleChannelConfig": {
-                 "snowdreams1006.gitbook.io":{
+                "localhost":{
+                    "token": "UA-140787039-2"
+                },
+                "snowdreams1006.gitbook.io":{
                     "token": "UA-140787039-1"
                 },
                 "snowdreams1006.github.io":{

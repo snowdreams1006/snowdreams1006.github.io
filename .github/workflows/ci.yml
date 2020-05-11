@@ -13,6 +13,7 @@ jobs:
     - name: Build blog
       run: |
         npm install -g gitbook-cli
+        rm -rf gitbook/ _book/
         gitbook install
         gitbook build 
     - name: Upload blog

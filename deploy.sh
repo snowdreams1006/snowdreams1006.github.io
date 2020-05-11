@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # remove cache dir
-rm -rf _book/
+rm -rf _book/ gitbook/
 
 # generate docs 
 gitbook build
