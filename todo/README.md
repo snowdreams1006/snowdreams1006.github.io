@@ -10,7 +10,7 @@
 - [Selenium-webdriver基本使用](https://www.cnblogs.com/yxi-liu/p/node-selenium-driver.html)
 - [Selenium Web element](https://www.selenium.dev/documentation/en/webdriver/web_element/)
 - [nodejs爬虫selenium](https://www.cnblogs.com/learnings/p/7772915.html)
-- [https://developer.github.com/webhooks/securing/](https://developer.github.com/webhooks/securing/)
+- [webhook 配置](https://developer.github.com/webhooks/securing/)
 
 ```bash
 $ npm version patch
