@@ -22,7 +22,7 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.KEY }}
       with:
-        source: _book/*
+        source: _book
         target: ~/blog
         rm: true
         strip_components: 1
@@ -40,4 +40,4 @@ jobs:
         access-key-id: ${{ secrets.ALI_ACCESS_KEY_ID }}
         access-key-secret: ${{ secrets.ALI_ACCESS_KEY_SECRET }}
     - name: Upload files to aliyun oss
-      run: ossutil cp -rf ./_book/* oss://snowdreams1006/
+      run: ossutil cp -rf ./_book oss://snowdreams1006/
