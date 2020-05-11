@@ -1,13 +1,13 @@
 #! /bin/bash
 
 # remove cache dir
-rm -rf _book/ gitbook/
+rm -rf _book/
 
 # generate docs 
 gitbook build
 
 # copy to docs
-cp -rf _book/ .
+cp -rf _book/* .
 
 # add commits
 git add .

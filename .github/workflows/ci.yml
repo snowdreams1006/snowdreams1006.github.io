@@ -13,7 +13,6 @@ jobs:
     - name: Build blog
       run: |
         npm install -g gitbook-cli
-        rm -rf gitbook/ _book/
         gitbook install
         gitbook build 
     - name: Upload blog
@@ -41,4 +40,4 @@ jobs:
         access-key-id: ${{ secrets.ALI_ACCESS_KEY_ID }}
         access-key-secret: ${{ secrets.ALI_ACCESS_KEY_SECRET }}
     - name: Upload files to aliyun oss
-      run: ossutil cp -rf ./_book oss://snowdreams1006/
+      run: ossutil cp -rf ./_book/* oss://snowdreams1006/
