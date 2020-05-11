@@ -17,3 +17,10 @@ git commit -m "auto deploy website"
 
 # push to github and others
 git push origin master
+
+# push to gitee
+git push gitee master
+
+# push to gitlab
+git push gitlab master
+
