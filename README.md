@@ -177,10 +177,10 @@ git remote set-url --add git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.
 
 ```bash
 # 添加 Gitee 远程仓库地址,拉取或推送时需要指定仓库名称,例如: git push gitee master
-git remote set-url gitee git@gitee.com:snowdreams1006/snowdreams1006.git
+git remote add gitee git@gitee.com:snowdreams1006/snowdreams1006.git
 
 # 添加 Gitlab 远程仓库地址,拉取或推送时需要指定仓库名称,例如: git push gitlab master
-git remote set-url gitlab git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git
+git remote add gitlab git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git
 ```
 
 上述两种方式并不冲突,如果愿意的话也可以两者同时设置,好处是一般情况下拉取源码时从 `Github` 下载,推送源码时自动同步到多个远程仓库.
