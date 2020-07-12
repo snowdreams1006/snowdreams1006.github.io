@@ -85,4 +85,19 @@ yarn install
 
 自动生成 `yarn.lock` 文件并纳入版本控制,确保其他人运行 `yarn` 命令的效果保持一致.
 
+从`1.7.0` 版本后可以使用 `yarn import` 命令导入由 `npm` 生成 `package-lock.json` 文件依赖.
+
+其他人可以保持不变,不强制要求所有人同时从 `npm` 前移到 `yarn`.
+
+如果决定 `yarn` 不适合可以删除 `yarn.lock` 文件而继续使用原来的 `npm`.
+
+如果正在使用 `npm-shrinkwrap.json` 文件可能导致不同的依赖环境,所有人同时前移到 `yarn` 可能比较方便,只需要删除`npm-shrinkwrap.json` 并自动生成`yarn.lock`文件.
+
+|npm|yarn|
+|-:-|-:-|
+|`npm install`|`yarn add`|
+|`npm install --no-package-lock`|`yarn add --no-lockfile`|
+|`npm install [package] --save`|`yarn add [package]`|
+|`npm install [package] --save-dev`|`yarn add [package] --dev`|
+
 
