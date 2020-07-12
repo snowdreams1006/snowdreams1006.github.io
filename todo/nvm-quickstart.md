@@ -34,8 +34,44 @@ command -v nvm
 
 ## 基本用法
 
-- 下载最新版
+- 下载最新版本
 
 ```bash
 nvm install node
 ```
+
+- 下载指定版本
+
+```bash
+nvm install 8
+```
+
+- 列出全部远程可用版本
+
+``` bash
+nvm ls-remote
+```
+
+> `nvm ls available`
+
+- 使用最新版本
+
+``` bash
+nvm use node
+```
+
+- 使用指定版本
+
+```bash
+nvm use 8
+```
+
+- 列出已安装版本
+
+```bash
+nvm ls
+```
+
+## 参考资料
+
+- [使用 nvm 管理不同版本的 node 与 npm](https://www.runoob.com/w3cnote/nvm-manager-node-versions.html)
