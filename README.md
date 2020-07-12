@@ -163,10 +163,10 @@ git push
 
 ```bash
 # 添加 Gitee 推送地址
-git remote set-url --add git@gitee.com:snowdreams1006/snowdreams1006.git
+git remote set-url --add origin git@gitee.com:snowdreams1006/snowdreams1006.git
 
 # 添加 Gitlab 推送地址
-git remote set-url --add git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git
+git remote set-url --add origin git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git
 ```
 
 设置完成后,以后使用 `git push` 进行推送就会一次性同步到多个远程仓库,当然需要先确保已将该项目导入到相应的仓库并且能正常通讯.
