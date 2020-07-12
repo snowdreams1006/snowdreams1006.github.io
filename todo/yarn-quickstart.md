@@ -112,4 +112,6 @@ yarn install
 |`npm version patch`|`yarn version --patch`|
 
 
+## 持续集成
 
+> [Continuous Integration](https://yarn.bootcss.com/docs/install-ci/)
