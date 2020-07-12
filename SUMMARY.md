@@ -128,6 +128,7 @@
 ## 程序人生
 * [待完成清单](todo/README.md)
     * [yarn快速入门](todo/yarn-quickstart.md)
+    * [gulp快速入门](todo/gulp-quickstart.md)
     * [regexper快速入门](todo/regexper-quickstart.md)
 * [其他](other/README.md)
     * [重装开发环境](other/dev-env-install.md)
