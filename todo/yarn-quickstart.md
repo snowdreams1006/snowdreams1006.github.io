@@ -68,3 +68,11 @@ yarn upgrade [package]@[tag]
 ```
 yarn remove [package]
 ```
+
+- 安装依赖包
+
+```bash
+yarn install
+```
+
+> yarn
