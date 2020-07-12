@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 03 Jun 2020 00:45:17 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 12 Jul 2020 19:24:13 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -900,9 +900,46 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[晚安]]></title>
-            <link>https://snowdreams1006.github.io/greet/README.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/greet/README.html</guid>
+            <title><![CDATA[TODO清单]]></title>
+            <description><![CDATA[INFO  Install dependencies
+npm WARN deprecated core-js@1.2.7: core-js@<2.6.8 is no longer maintained. Please, upgrade to core-js@3 or at least to actual version of core-js@2.
+npm ERR! code EACCES
+npm ERR! syscall open
+npm ERR! path /Users/sunpo/.npm/_cacache/index-v5/51/d3/7697273802dffa158119427da833e251b88e0e9d4c73d8f5f964476884f4
+npm ERR! errno -13
+npm ERR!
+npm ERR! Your cache folder contains root-owned files, due to a bug in
+npm ERR! previous versions of npm which has since been addressed.
+npm ERR!
+npm ERR! To permanently fix this problem, please run:
+npm ERR!   sudo chown -R 501:20 "/Users/sunpo/.npm"]]></description>
+            <link>https://snowdreams1006.github.io/todo/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[yarn快速入门]]></title>
+            <description><![CDATA[package.json 配置文件,尝试运行 yarn 命令重新生成 node_modules 模块依赖.]]></description>
+            <link>https://snowdreams1006.github.io/todo/yarn-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/yarn-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[gulp快速入门]]></title>
+            <link>https://snowdreams1006.github.io/todo/gulp-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/gulp-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[nvm快速入门]]></title>
+            <link>https://snowdreams1006.github.io/todo/nvm-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/nvm-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[regexper快速入门]]></title>
+            <link>https://snowdreams1006.github.io/todo/regexper-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/regexper-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
