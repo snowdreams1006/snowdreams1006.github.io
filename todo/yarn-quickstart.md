@@ -110,8 +110,3 @@ yarn install
 |`npm version major`|`yarn version --major`|
 |`npm version minor`|`yarn version --minor`|
 |`npm version patch`|`yarn version --patch`|
-
-
-## 持续集成
-
-> [Continuous Integration](https://yarn.bootcss.com/docs/install-ci/)
