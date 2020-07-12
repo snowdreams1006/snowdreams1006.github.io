@@ -76,3 +76,13 @@ yarn install
 ```
 
 > yarn
+
+## npm 迁移到 yarn
+
+> [从 npm 迁移到 yarn](https://yarn.bootcss.com/docs/migrating-from-npm/)
+
+`package.json` 配置文件,尝试运行 `yarn` 命令重新生成 `node_modules` 模块依赖.
+
+自动生成 `yarn.lock` 文件并纳入版本控制,确保其他人运行 `yarn` 命令的效果保持一致.
+
+
