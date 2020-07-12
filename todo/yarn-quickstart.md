@@ -31,3 +31,40 @@ source ~/.bash_profile
 ```bash
 brew upgrade yarn
 ```
+
+## 快速入门
+
+- 初始化新项目
+
+```bash
+yarn init
+```
+
+- 添加依赖包
+
+```bash
+# devDependencies
+yarn add [package] --dev
+
+# peerDependencies
+yarn add [package] --peer
+
+# optionalDependencies
+yarn add [package] --optional
+```
+
+- 升级依赖包
+
+```bash
+yarn upgrade [package]
+
+yarn upgrade [package]@[version]
+
+yarn upgrade [package]@[tag]
+```
+
+- 移除依赖包
+
+```
+yarn remove [package]
+```
