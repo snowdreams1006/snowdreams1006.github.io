@@ -58,5 +58,6 @@ var curryN = require('lodash/fp/curryN');
 |`_.chunk(array, [size=1])`|将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组。|大数组拆分成多个小数组|
 |`_.compact(array)`|创建一个新数组，包含原数组中所有的非假值元素。|非 false 数组|
 |`_.concat(array, [values])`|创建一个新数组，将array与任何数组 或 值连接在一起。|数组连接|
-
+|`_.difference(array, [values])`|创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。|数组差集,直接比较.|
+|`_.differenceBy(array, [values], [iteratee=_.identity])`|创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。|数组差集,迭代器比较.|
 
