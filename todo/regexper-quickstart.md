@@ -25,3 +25,20 @@ yarn install
 ```bash
 yarn start
 ```
+
+## 二次开发项目
+
+- 定位解析正则表达式源码入口
+
+> regexper-static/src/js/main.js
+
+```js
+_.each(document.querySelectorAll('[data-expr]'), element => {
+    new Parser(element, { keepContent: true })
+      .parse(element.getAttribute('data-expr'))
+      .then(parser => {
+        parser.render();
+      })
+      .catch(util.exposeError);
+  });
+```
