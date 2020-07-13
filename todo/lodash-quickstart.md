@@ -62,3 +62,8 @@ var curryN = require('lodash/fp/curryN');
 |&#9733;&#9733;&#9733;&#9733;&#9733;|`_.differenceBy(array, [values], [iteratee=_.identity])`|创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。|数组差集,迭代器比较.|[lodash.differenceBy](https://www.lodashjs.com/docs/lodash.differenceBy)|
 |&#9733;&#9733;&#9733;&#9733;&#9733;|`_.differenceWith(array, [values], [comparator])`|创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。|数组差集,迭代器比较.|[lodash.differenceWith](https://www.lodashjs.com/docs/lodash.differenceWith)|
 ||`_.drop(array, [n=1])`|创建一个切片数组，去除array前面的n个元素。|数组子集.|[lodash.drop](https://www.lodashjs.com/docs/lodash.drop)|
+||`_.dropRight(array, [n=1])`|创建一个切片数组，去除array尾部的n个元素。|数组子集.|[lodash.dropRight](https://www.lodashjs.com/docs/lodash.dropRight)|
+||`_.dropRightWhile(array, [predicate=_.identity])`|创建一个切片数组，去除array中从 predicate 返回假值开始到尾部的部分。|数组子集.|[lodash.dropRightWhile](https://www.lodashjs.com/docs/lodash.dropRightWhile)|
+||`_.dropWhile(array, [predicate=_.identity])`|创建一个切片数组，去除array中从起点开始到 predicate 返回假值结束部分。|数组子集.|[lodash.dropWhile](https://www.lodashjs.com/docs/lodash.dropWhile)|
+
+
