@@ -72,4 +72,5 @@ var curryN = require('lodash/fp/curryN');
 ||`_.indexOf(array, value, [fromIndex=0])`|使用 SameValueZero 等值比较，返回首次 value 在数组array中被找到的 索引值， 如果 fromIndex 为负值，将从数组array尾端索引进行匹配。||[lodash.indexOf](https://www.lodashjs.com/docs/lodash.indexOf)|
 ||`_.initial(array)`|获取数组array中除了最后一个元素之外的所有元素（注：去除数组array中的最后一个元素）。||[lodash.initial](https://www.lodashjs.com/docs/lodash.initial)|
 |&#9733;&#9733;&#9733;&#9733;&#9733;|`_.intersection([arrays])`|创建唯一值的数组，这个数组包含所有给定数组都包含的元素，使用 SameValueZero进行相等性比较。|数组交集.|[lodash.intersection](https://www.lodashjs.com/docs/lodash.intersection)|
-
+|&#9733;&#9733;&#9733;&#9733;&#9733;|`_.intersectionBy([arrays], [iteratee=_.identity])`|创建唯一值的数组，这个数组包含所有给定数组都包含的元素，使用 SameValueZero进行相等性比较。|数组交集.|[lodash.intersectionBy](https://www.lodashjs.com/docs/lodash.intersectionBy)|
+|&#9733;&#9733;&#9733;&#9733;&#9733;|`_.intersectionWith([arrays], [comparator])`|创建唯一值的数组，这个数组包含所有给定数组都包含的元素，使用 SameValueZero进行相等性比较。|数组交集.|[lodash.intersectionWith](https://www.lodashjs.com/docs/lodash.intersectionWith)|
