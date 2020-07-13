@@ -60,4 +60,4 @@ var curryN = require('lodash/fp/curryN');
 |`_.concat(array, [values])`|创建一个新数组，将array与任何数组 或 值连接在一起。|数组连接|[lodash.difference](https://www.lodashjs.com/docs/lodash.difference)|
 |`_.difference(array, [values])`|创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。|数组差集,直接比较.|[lodash.difference](https://www.lodashjs.com/docs/lodash.difference)|
 |`_.differenceBy(array, [values], [iteratee=_.identity])`|创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。|数组差集,迭代器比较.|[lodash.differenceBy](https://www.lodashjs.com/docs/lodash.differenceBy)|
-
+|`_.differenceWith(array, [values], [comparator])`|创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。|数组差集,迭代器比较.|[lodash.differenceWith](https://www.lodashjs.com/docs/lodash.differenceWith)|
