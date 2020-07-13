@@ -67,4 +67,7 @@ var curryN = require('lodash/fp/curryN');
 ||`_.dropWhile(array, [predicate=_.identity])`|创建一个切片数组，去除array中从起点开始到 predicate 返回假值结束部分。|数组子集.|[lodash.dropWhile](https://www.lodashjs.com/docs/lodash.dropWhile)|
 ||`_.fill(array, value, [start=0], [end=array.length])`|使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。|填充数组.|[lodash.fill](https://www.lodashjs.com/docs/lodash.fill)|
 |&#9733;&#9733;&#9733;&#9733;&#9733;|`_.findIndex(array, [predicate=_.identity], [fromIndex=0])`|返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身。|填充数组.|[lodash.findIndex](https://www.lodashjs.com/docs/lodash.findIndex)|
+|&#9733;&#9733;&#9733;&#9733;&#9733;|`_.findLastIndex(array, [predicate=_.identity], [fromIndex=array.length-1])`|返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身。|填充数组.|[lodash.findLastIndex](https://www.lodashjs.com/docs/lodash.findLastIndex)|
+||`_.head(array)`|获取数组 array 的第一个元素。||[lodash.head](https://www.lodashjs.com/docs/lodash.head)|
+
 
