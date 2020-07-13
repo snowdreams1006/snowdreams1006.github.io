@@ -53,63 +53,10 @@ var curryN = require('lodash/fp/curryN');
 
 ### 数组 Array
 
-- `_.chunk(array, [size=1])`
+|方法|描述|备注|
+|-:-|-:-|-:-|
+|`_.chunk(array, [size=1])`|将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组。|大数组拆分成多个小数组|
+|`_.compact(array)`|创建一个新数组，包含原数组中所有的非假值元素。|非 false 数组|
+|`_.concat(array, [values])`|创建一个新数组，将array与任何数组 或 值连接在一起。|数组连接|
 
-将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组。 如果array 无法被分割成全部等长的区块，那么最后剩余的元素将组成一个区块。
-
-**一般形式**
-
-```js
-_.chunk(array, [size=1])
-```
-
-**相关示例**
-
-```js
-_.chunk(['a', 'b', 'c', 'd'], 2);
-// => [['a', 'b'], ['c', 'd']]
- 
-_.chunk(['a', 'b', 'c', 'd'], 3);
-// => [['a', 'b', 'c'], ['d']]
-```
-
-- `_.compact(array)`
-
-创建一个新数组，包含原数组中所有的非假值元素。例如false, null, 0, "", undefined, 和 NaN 都是被认为是“假值”。
-
-**一般形式**
-
-```js
-_.compact(array)
-```
-
-**相关示例**
-
-```js
-_.compact([0, 1, false, 2, '', 3]);
-// => [1, 2, 3]
-```
-
-- `_.concat(array, [values])`
-
-创建一个新数组，将array与任何数组 或 值连接在一起。
-
-**一般形式**
-
-```js
-_.concat(array, [values])
-```
-
-**相关示例**
-
-```js
-var array = [1];
-var other = _.concat(array, 2, [3], [[4]]);
- 
-console.log(other);
-// => [1, 2, 3, [4]]
- 
-console.log(array);
-// => [1]
-```
 
