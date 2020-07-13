@@ -69,5 +69,7 @@ var curryN = require('lodash/fp/curryN');
 |&#9733;&#9733;&#9733;&#9733;&#9733;|`_.findIndex(array, [predicate=_.identity], [fromIndex=0])`|返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身。|填充数组.|[lodash.findIndex](https://www.lodashjs.com/docs/lodash.findIndex)|
 |&#9733;&#9733;&#9733;&#9733;&#9733;|`_.findLastIndex(array, [predicate=_.identity], [fromIndex=array.length-1])`|返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身。|填充数组.|[lodash.findLastIndex](https://www.lodashjs.com/docs/lodash.findLastIndex)|
 ||`_.head(array)`|获取数组 array 的第一个元素。||[lodash.head](https://www.lodashjs.com/docs/lodash.head)|
+||`_.indexOf(array, value, [fromIndex=0])`|使用 SameValueZero 等值比较，返回首次 value 在数组array中被找到的 索引值， 如果 fromIndex 为负值，将从数组array尾端索引进行匹配。||[lodash.indexOf](https://www.lodashjs.com/docs/lodash.indexOf)|
+||`_.initial(array)`|获取数组array中除了最后一个元素之外的所有元素（注：去除数组array中的最后一个元素）。||[lodash.initial](https://www.lodashjs.com/docs/lodash.initial)|
 
 
