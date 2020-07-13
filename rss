@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 12 Jul 2020 19:24:13 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 13 Jul 2020 23:25:16 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -934,6 +934,14 @@ npm ERR!   sudo chown -R 501:20 "/Users/sunpo/.npm"]]></description>
             <title><![CDATA[nvm快速入门]]></title>
             <link>https://snowdreams1006.github.io/todo/nvm-quickstart.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/todo/nvm-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[lodash快速入门]]></title>
+            <description><![CDATA[Lodash 通过降低 array、number、objects、string 等等的使用难度从而让 JavaScript 变得更简单。
+Lodash 的模块化方法 非常适用于：]]></description>
+            <link>https://snowdreams1006.github.io/todo/lodash-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/lodash-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
