@@ -65,5 +65,6 @@ var curryN = require('lodash/fp/curryN');
 ||`_.dropRight(array, [n=1])`|创建一个切片数组，去除array尾部的n个元素。|数组子集.|[lodash.dropRight](https://www.lodashjs.com/docs/lodash.dropRight)|
 ||`_.dropRightWhile(array, [predicate=_.identity])`|创建一个切片数组，去除array中从 predicate 返回假值开始到尾部的部分。|数组子集.|[lodash.dropRightWhile](https://www.lodashjs.com/docs/lodash.dropRightWhile)|
 ||`_.dropWhile(array, [predicate=_.identity])`|创建一个切片数组，去除array中从起点开始到 predicate 返回假值结束部分。|数组子集.|[lodash.dropWhile](https://www.lodashjs.com/docs/lodash.dropWhile)|
+||`_.fill(array, value, [start=0], [end=array.length])`|使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。|填充数组.|[lodash.fill](https://www.lodashjs.com/docs/lodash.fill)|
 
 
