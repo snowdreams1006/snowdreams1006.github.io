@@ -30,7 +30,7 @@ yarn start
 
 - 定位解析正则表达式源码入口
 
-> regexper-static/src/js/main.js
+> `regexper-static/src/js/main.js`
 
 ```js
 _.each(document.querySelectorAll('[data-expr]'), element => {
@@ -42,3 +42,10 @@ _.each(document.querySelectorAll('[data-expr]'), element => {
       .catch(util.exposeError);
   });
 ```
+
+> `regexper-static/src/js/parser/javascript/node.js`
+
+```
+```
+
+> `regexper-static/src/js/parser/javascript/parser_state.js`
