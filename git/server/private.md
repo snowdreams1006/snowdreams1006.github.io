@@ -100,6 +100,23 @@ chown -R git:git git-demo.git
 经过上述操作,我们成功在远程服务器部署了 `git` 服务,并且创建了 `git-demo` 测试项目,实际访问路径大概是这样的
 `git@snowdreams1006.cn:/home/git/repos/git-demo.git`
 
+如果下次想要继续新建更多仓库,继续初始化本地仓库,客户端克隆完成最简单的工作流程.
+
+```bash
+# 初始化 git 裸仓库
+git init --bare git-demo-again.git
+
+# 更改 git-demo.git 仓库属主
+chown -R git:git git-demo-again.git
+```
+
+作为服务端的远程仓库只需要初始化本地仓库即可,剩下的工作交由客户端克隆.
+
+
+```bash
+git clone git@snowdreams1006.cn:git-demo-again.git
+```
+
 ## 访问授权
 
 总是存在一些公司不仅视源代码为生命,还视员工为窃贼,抑或是深受`svn`毒害,要求在版本控制系统中设置一套完善的权限控制体系,具体到每个账号对每个项目的每个目录是否有读写权限.
