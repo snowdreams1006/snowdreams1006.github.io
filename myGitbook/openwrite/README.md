@@ -156,42 +156,16 @@ $ npm install gitbook-plugin-openwrite
 
 核心代码如下,修改模板文件,在文章内容外面包裹一层 `div` 作为目标区域并运行集成 `Js` 代码片段.
 
-```html
-{% extends template.self %}
+![gitbook-openwrite-template-code.png](../images/gitbook-openwrite-template-code.png)
 
-{% block page %}
-<div id="vip-container">
-    {{ page.content|safe }}
-</div>
-{% endblock %}
-
-{% block javascript %}
-{{ super() }}
-<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
-<script>
-    const btw = new BTWPlugin();
-    btw.init({
-        "id": "vip-container",
-        "blogId": "{{ config.pluginsConfig.openwrite.blogId }}",
-        "name": "{{ config.pluginsConfig.openwrite.name }}",
-        "qrcode": "{{ config.pluginsConfig.openwrite.qrcode }}",
-        "keyword": "{{ config.pluginsConfig.openwrite.keyword }}"
-    });
-</script>
-{% endblock %}
-```
 
 实现思路还是比较简单明确的,这里简单对其中的细节做些解释说明.
 
 - 构建目标区域
 
-```html
-{% block page %}
-<div id="vip-container">
-    {{ page.content|safe }}
-</div>
-{% endblock %}
-```
+![gitbook-openwrite-template-start-code.png](../images/gitbook-openwrite-template-start-code.png)
+
+> 其中 `myblock` 和 `myendblock` 是随意添加的标签,防止被解析.
 
 `page.content` 是每个页面当前的文件内容,不再是原生的 `markdown` 类型而是 `html` 类型,这一点非常重要,因为 `gitbook` 并不会处理 `div` 内嵌的 `markdown` 内容!
 
