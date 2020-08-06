@@ -1,4 +1,4 @@
-name: blog.snowdreams1006.cn and snowdreams1006.tech
+name: blog
 
 on: [push]
 
@@ -12,8 +12,8 @@ jobs:
         node-version: "12.x"
     - name: Build blog
       run: |
-        npm install -g gitbook-cli
-        gitbook install
+        npm install -g gitbook-cli &
+        gitbook install &
         gitbook build 
     - name: Upload blog
       uses: appleboy/scp-action@master
