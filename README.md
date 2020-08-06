@@ -1,37 +1,29 @@
 <p align="center">
- <img width="100px" src="https://res.cloudinary.com/anuraghazra/image/upload/v1594908242/logo_ccswme.svg" align="center" alt="GitHub Readme Stats" />
+ <img width="100px" src="./snowdreams1006.png" align="center" alt="snowdreams1006's github logo" />
  <h2 align="center">雪之梦技术驿站</h2>
  <p align="center">你在互联网的路上匆匆而来,雪之梦技术驿站助你满载而去.</p>
 </p>
   <p align="center">
-    <a href="https://github.com/anuraghazra/github-readme-stats/actions">
-      <img alt="Tests Passing" src="https://github.com/anuraghazra/github-readme-stats/workflows/Test/badge.svg" />
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+      <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/snowdreams1006/snowdreams1006.github.io/blog.snowdreams1006.cn%20and%20snowdreams1006.tech">
     </a>
-    <a href="https://codecov.io/gh/anuraghazra/github-readme-stats">
-      <img src="https://codecov.io/gh/anuraghazra/github-readme-stats/branch/master/graph/badge.svg" />
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+      <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/snowdreams1006/snowdreams1006.github.io">
     </a>
-    <a href="https://github.com/anuraghazra/github-readme-stats/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/anuraghazra/github-readme-stats?color=0088ff" />
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io/issues" target="_blank">
+      <img alt="Issues" src="https://img.shields.io/github/issues/snowdreams1006/snowdreams1006.github.io" />
     </a>
-    <a href="https://github.com/anuraghazra/github-readme-stats/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/anuraghazra/github-readme-stats?color=0088ff" />
-    </a>
-    <br />
-    <br />
-    <a href="https://a.paddle.com/v2/click/16413/119403?link=1227">
-      <img src="https://img.shields.io/badge/Supported%20by-VSCode%20Power%20User%20%E2%86%92-gray.svg?colorA=655BE1&colorB=4F44D6&style=for-the-badge"/>
-    </a>
-    <a href="https://a.paddle.com/v2/click/16413/119403?link=2345">
-      <img src="https://img.shields.io/badge/Supported%20by-Node%20Cli.com%20%E2%86%92-gray.svg?colorA=61c265&colorB=4CAF50&style=for-the-badge"/>
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io/pulls" target="_blank">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/snowdreams1006/snowdreams1006.github.io" />
     </a>
   </p>
   <p align="center">
-    <a href="https://github.com/anuraghazra/github-readme-stats/issues/new/choose">报告 bug</a>
+    <a href="https://github.com/anuraghazra/github-readme-stats/issues/new/choose" target="_blank">报告 bug</a>
     ·
-    <a href="https://github.com/anuraghazra/github-readme-stats/issues/new/choose">请求增加功能</a>
+    <a href="https://github.com/anuraghazra/github-readme-stats/issues/new/choose" target="_blank">请求增加功能</a>
   </p>
 </p>
-<p align="center">喜欢这个项目？请考虑<a href="https://www.paypal.me/anuraghazra">捐赠</a>来帮助它完善！</p>
+<p align="center">喜欢这个项目？请考虑<a href="./snowdreams1006-wechat-donate.jpg" target="_blank">捐赠</a>来帮助它完善！</p>
 
 ## 简介
 
