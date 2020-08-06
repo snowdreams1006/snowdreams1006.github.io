@@ -1,6 +1,6 @@
 <p align="center">
  <img width="100px" src="./snowdreams1006.png" align="center" alt="snowdreams1006's github logo" />
- <h2 align="center">雪之梦技术驿站</h2>
+ <h1 align="center">雪之梦技术驿站</h1>
  <p align="center">你在互联网的路上匆匆而来,雪之梦技术驿站助你满载而去.</p>
 </p>
   <p align="center">
@@ -15,6 +15,23 @@
     </a>
     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io/pulls" target="_blank">
       <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/snowdreams1006/snowdreams1006.github.io" />
+    </a>
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+      <img alt="GitHub" src="https://img.shields.io/github/license/snowdreams1006/snowdreams1006.github.io">
+    </a>
+    <br/>
+    <br/>
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+      <img alt="GitHub followers" src="https://img.shields.io/github/followers/snowdreams1006?style=social">
+    </a>
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+      <img alt="GitHub forks" src="https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io?style=social">
+    </a>
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+      <img alt="GitHub stars" src="https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io?style=social">
+    </a>
+     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+      <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io?style=social">
     </a>
   </p>
   <p align="center">
@@ -231,9 +248,13 @@ origin  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (push)
 
 本教程源码托管在 [snowdreams1006.github.io](https://github.com/snowdreams1006/snowdreams1006.github.io) ,在线阅读请访问 [snowdreams1006.github.io](http://snowdreams1006.github.io/).
 
+**感谢支持**
+
 如果你觉得本教程对你有所帮助,请不吝 `Star`.
 如果你想贡献一份力量,欢迎提交 `Pull Request`.
 
-<!-- **感谢支持**
+**赞赏捐助**
 
-如果本文对你有所帮助,欢迎点赞留言告诉我一声,你的支持和鼓励将会是我继续创作的动力! -->
+![snowdreams1006](./snowdreams1006-wechat-donate.jpg)
+
+> 赞赏不赞赏无所谓,有则喝茶,无则喝水.安得广厦千万间,大庇天下寒士俱欢颜!
