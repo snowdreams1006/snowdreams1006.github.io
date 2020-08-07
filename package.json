@@ -41,14 +41,6 @@
     "type": "git",
     "url": "git+https://github.com/snowdreams1006/snowdreams1006.github.io.git"
   },
-  "keywords": [
-      "gitbook",
-      "go"
-      "python"
-      "nodejs",
-      "java",
-      "web"
-  ],
   "author": "snowdreams1006",
   "language": "zh-hans",
   "license": "MIT",
