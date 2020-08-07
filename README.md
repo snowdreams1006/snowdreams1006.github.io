@@ -5,7 +5,7 @@
 </p>
   <p align="center">
     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
-      <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/snowdreams1006/snowdreams1006.github.io/blog.snowdreams1006.cn%20and%20snowdreams1006.tech">
+      <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/snowdreams1006/snowdreams1006.github.io/blog">
     </a>
     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
       <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/snowdreams1006/snowdreams1006.github.io">
