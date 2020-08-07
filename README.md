@@ -119,7 +119,7 @@
 
 **核心思路** 
 
-如果以 `Github` 作为远程仓库,全量下载项目代码时切换到 `Gitee` 远程仓库地址进行下载,增量更新时切换回 `Github` 远程仓库地址进行更新,以此保持最新代码状态.
+如果以 `Github` 作为主要远程仓库,全量下载项目代码时首先切换到 `Gitee` 远程仓库地址进行下载,然后增量更新时再切换回 `Github` 远程仓库地址进行更新,以此保持最新代码状态.
 
 - 全量下载 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
 
@@ -127,18 +127,17 @@
 # 使用 https 方式下载 Gitee 源码
 git clone https://gitee.com/snowdreams1006/snowdreams1006.git
 
+# 重命名
+mv snowdreams1006/ snowdreams1006.github.io/
+
+# 切换到项目
+cd snowdreams1006.github.io
+
 # 切换回 Github 远程仓库地址
 git remote set-url origin https://github.com/snowdreams1006/snowdreams1006.github.io.git
-```
-
-- 增量更新 [Github](https://github.com/snowdreams1006/snowdreams1006.github.io.git)
-
-```bash
-# 切换远程仓库地址为 Gitee 地址
-git remote set-url origin https://gitee.com/snowdreams1006/snowdreams1006.git
 
 # 更新项目源码
-git Pull
+git pull
 
 # 切换回 Github 远程仓库地址
 git remote set-url origin https://github.com/snowdreams1006/snowdreams1006.github.io.git
@@ -146,18 +145,12 @@ git remote set-url origin https://github.com/snowdreams1006/snowdreams1006.githu
 
 如果以 `Gitee` 作为远程仓库,无论下载还是更新均无需切换远程项目地址,正常下载更新即可.
 
-- 全量下载 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
-
 ```bash
 # 使用 https 方式下载 Gitee 源码
 git clone https://gitee.com/snowdreams1006/snowdreams1006.git
-```
 
-- 增量更新 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
-
-```bash
-# 更新项目源码
-git Pull
+# 切换到项目
+cd snowdreams1006
 ```
 
 ### 部署项目
@@ -220,6 +213,9 @@ git remote set-url --add origin git@gitlab.com:snowdreams1006/snowdreams1006.git
 如果希望拉取地址和推送地址是对应的,可以使用下面这种方式建立多套远程仓库地址.
 
 ```bash
+# 添加 Github 远程仓库地址,拉取或推送时需要指定仓库名称,例如: git push github master
+git remote add github git@github.com:snowdreams1006/snowdreams1006.github.io.git
+
 # 添加 Gitee 远程仓库地址,拉取或推送时需要指定仓库名称,例如: git push gitee master
 git remote add gitee git@gitee.com:snowdreams1006/snowdreams1006.git
 
@@ -236,6 +232,8 @@ git remote add gitlab git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git
 $ git remote -v
 gitee   git@gitee.com:snowdreams1006/snowdreams1006.git (fetch)
 gitee   git@gitee.com:snowdreams1006/snowdreams1006.git (push)
+github  git@github.com:snowdreams1006/snowdreams1006.github.io.git (fetch)
+github  git@github.com:snowdreams1006/snowdreams1006.github.io.git (push)
 gitlab  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (fetch)
 gitlab  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (push)
 origin  git@github.com:snowdreams1006/snowdreams1006.github.io.git (fetch)
