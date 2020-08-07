@@ -2,6 +2,7 @@
   "name": "snowdreams1006.github.io",
   "version": "1.0.0",
   "private": true,
+  "title": "雪之梦技术驿站",
   "description": "<p align=\"center\">\r  <img width=\"100px\" src=\"./snowdreams1006.png\" align=\"center\" alt=\"snowdreams1006's github logo\" />\r  <h1 align=\"center\">雪之梦技术驿站</h1>\r  <p align=\"center\">你在互联网的路上匆匆而来,雪之梦技术驿站助你满载而去.</p>\r </p>\r   <p align=\"center\">\r     <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io\" target=\"_blank\">\r       <img alt=\"GitHub Workflow Status\" src=\"https://img.shields.io/github/workflow/status/snowdreams1006/snowdreams1006.github.io/blog.snowdreams1006.cn%20and%20snowdreams1006.tech\">\r     </a>\r     <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io\" target=\"_blank\">\r       <img alt=\"GitHub repo size\" src=\"https://img.shields.io/github/repo-size/snowdreams1006/snowdreams1006.github.io\">\r     </a>\r     <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io/issues\" target=\"_blank\">\r       <img alt=\"Issues\" src=\"https://img.shields.io/github/issues/snowdreams1006/snowdreams1006.github.io\" />\r     </a>\r     <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io/pulls\" target=\"_blank\">\r       <img alt=\"GitHub pull requests\" src=\"https://img.shields.io/github/issues-pr/snowdreams1006/snowdreams1006.github.io\" />\r     </a>\r     <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io\" target=\"_blank\">\r       <img alt=\"GitHub\" src=\"https://img.shields.io/github/license/snowdreams1006/snowdreams1006.github.io\">\r     </a>\r     <br/>\r     <br/>\r     <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io\" target=\"_blank\">\r       <img alt=\"GitHub followers\" src=\"https://img.shields.io/github/followers/snowdreams1006?style=social\">\r     </a>\r     <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io\" target=\"_blank\">\r       <img alt=\"GitHub forks\" src=\"https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io?style=social\">\r     </a>\r     <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io\" target=\"_blank\">\r       <img alt=\"GitHub stars\" src=\"https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io?style=social\">\r     </a>\r      <a href=\"https://github.com/snowdreams1006/snowdreams1006.github.io\" target=\"_blank\">\r       <img alt=\"GitHub watchers\" src=\"https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io?style=social\">\r     </a>\r   </p>\r   <p align=\"center\">\r     <a href=\"https://github.com/anuraghazra/github-readme-stats/issues/new/choose\" target=\"_blank\">报告 bug</a>\r     ·\r     <a href=\"https://github.com/anuraghazra/github-readme-stats/issues/new/choose\" target=\"_blank\">请求增加功能</a>\r   </p>\r </p>\r <p align=\"center\">喜欢这个项目？请考虑<a href=\"./snowdreams1006-wechat-donate.jpg\" target=\"_blank\">捐赠</a>来帮助它完善！</p>",
   "main": "index.js",
   "dependencies": {
@@ -23,7 +24,6 @@
     "gitbook-plugin-icp": "^0.1.2",
     "gitbook-plugin-mermaid-gb3": "^2.1.0",
     "gitbook-plugin-mygitalk": "^0.2.6",
-    "gitbook-plugin-pageview-count": "^1.0.1",
     "gitbook-plugin-rss": "^3.0.2",
     "gitbook-plugin-search-plus": "^1.0.3",
     "gitbook-plugin-sharing-plus": "^0.0.2",
@@ -41,9 +41,17 @@
     "type": "git",
     "url": "git+https://github.com/snowdreams1006/snowdreams1006.github.io.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+      "gitbook",
+      "go"
+      "python"
+      "nodejs",
+      "java",
+      "web"
+  ],
+  "author": "snowdreams1006",
+  "language": "zh-hans",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/snowdreams1006/snowdreams1006.github.io/issues"
   },
