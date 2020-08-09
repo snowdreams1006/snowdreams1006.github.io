@@ -117,11 +117,13 @@
 
 `Github` 作为远程项目服务器时下载速度感人,而国内用户使用 `Gitee` 进行下载时速度明显提升,因此下载项目时推荐使用 `Gitee` 作为远程项目仓库.
 
-**核心思路** 
+**核心思路**
+
+- [Github](https://github.com/snowdreams1006/snowdreams1006.github.io)
+- [Gitlab](https://gitlab.com/snowdreams1006/snowdreams1006.gitlab.io)
+- [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
 
 如果以 `Github` 作为主要远程仓库,全量下载项目代码时首先切换到 `Gitee` 远程仓库地址进行下载,然后增量更新时再切换回 `Github` 远程仓库地址进行更新,以此保持最新代码状态.
-
-- 全量下载 [Gitee](https://gitee.com/snowdreams1006/snowdreams1006)
 
 ```bash
 # 使用 https 方式下载 Gitee 源码
@@ -138,9 +140,6 @@ git remote set-url origin https://github.com/snowdreams1006/snowdreams1006.githu
 
 # 更新项目源码
 git pull
-
-# 切换回 Github 远程仓库地址
-git remote set-url origin https://github.com/snowdreams1006/snowdreams1006.github.io.git
 ```
 
 如果以 `Gitee` 作为远程仓库,无论下载还是更新均无需切换远程项目地址,正常下载更新即可.
