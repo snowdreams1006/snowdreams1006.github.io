@@ -239,3 +239,7 @@ $
 185.199.108.153 pages.github.com  
 34.196.237.103 classroom.github.com
 ```
+
+**更新版本**
+
+- [让你的GitHub下载飞速提升到2M/s以上](https://blog.csdn.net/hcy1026/article/details/107644836)
