@@ -10,6 +10,12 @@
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
+- NVM配置国内镜像
+
+```
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+```
+
 - 刷新环境变量
 
 ```bash
@@ -75,3 +81,4 @@ nvm ls
 ## 参考资料
 
 - [使用 nvm 管理不同版本的 node 与 npm](https://www.runoob.com/w3cnote/nvm-manager-node-versions.html)
+- [nvm使用taobao镜像](https://segmentfault.com/a/1190000020149792)
