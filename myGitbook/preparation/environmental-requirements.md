@@ -14,8 +14,8 @@
 
 如果打印出 `git` 版本信息,则表示本机已安装 `git` 环境,跳过此步骤.
 
-```
-$ git --version
+```bash
+git --version
 ```
 
 >`git` 安装配置教程请参考[初识 git](https://snowdreams1006.github.io/git/base/about.html)
@@ -26,8 +26,8 @@ $ git --version
 
 如果打印出 `node.js` 版本信息,则表示本机已安装 `node.js` 环境,跳过此步骤.
 
-```
-$ node --version
+```bash
+node --version
 ```
 
 > `nodejs` 默认的包安装工具 `npm` 国内访问速度有点慢,安装完毕后建议 `npm install cnpm -g --registry=https://registry.npm.taobao.org
@@ -39,8 +39,8 @@ $ node --version
 
 如果打印出 `gitbook` 和 `cli` 版本信息,则表示本机已安装 `gitbook` 环境,跳过此步骤.
 
-```
-$ gitbook --version
+```bash
+gitbook --version
 ```
 
 否则的话,本机可能并没有安装 `gitbook` 环境,则需要安装 `gitbook` 相关工具.
@@ -51,8 +51,8 @@ $ gitbook --version
 
 假设你已经搭建好 `node.js` 环境,现在我们开始安装 `gitbook` 相关工具了!
 
-```
-$ sudo npm install -g gitbook-cli
+```bash
+sudo npm install -g gitbook-cli
 ```
 
 > 如果使用 `cnpm` 安装的话,使用 `cnpm install -g gitbook-cli` 命令.
