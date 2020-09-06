@@ -19,8 +19,8 @@
     "gitbook-plugin-expandable-chapters-small": "^0.1.7",
     "gitbook-plugin-favicon-absolute": "^0.1.1",
     "gitbook-plugin-github-buttons": "^3.0.0",
-    "gitbook-plugin-hide-element": "^0.0.4",
     "gitbook-plugin-google-tongji-with-multiple-channel": "^0.1.0",
+    "gitbook-plugin-hide-element": "^0.0.4",
     "gitbook-plugin-icp": "^0.1.2",
     "gitbook-plugin-mermaid-gb3": "^2.1.0",
     "gitbook-plugin-mygitalk": "^0.2.6",
@@ -31,11 +31,13 @@
     "gitbook-plugin-sitemap-general": "^0.1.1",
     "gitbook-plugin-splitter": "^0.0.8",
     "gitbook-plugin-tbfed-pagefooter": "^0.0.1",
-    "gitbook-plugin-toc": "^0.0.2"
+    "gitbook-plugin-toc": "0.0.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gitbook serve",
+    "build": "gitbook build",
+    "deploy": "./deploy.sh"
   },
   "repository": {
     "type": "git",
