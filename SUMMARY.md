@@ -134,6 +134,7 @@
     * [regexper快速入门](todo/regexper-quickstart.md)
     * [sublime快速入门](todo/sublime-quickstart.md)
     * [github 快速入门](todo/github-quickstart.md)
+    * [svn 快速入门](todo/svn-quickstart.md)
 * [其他](other/README.md)
     * [重装开发环境](other/dev-env-install.md)
     * [钉钉签到提醒](other/dingtalk-reminder.md)
