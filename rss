@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 06 Sep 2020 03:58:48 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 06 Sep 2020 08:39:22 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -948,6 +948,25 @@ Lodash 的模块化方法 非常适用于：]]></description>
             <title><![CDATA[regexper快速入门]]></title>
             <link>https://snowdreams1006.github.io/todo/regexper-quickstart.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/todo/regexper-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[sublime快速入门]]></title>
+            <link>https://snowdreams1006.github.io/todo/sublime-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/sublime-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[github 快速入门]]></title>
+            <description><![CDATA[Quick setup — if you’ve done this kind of thing before]]></description>
+            <link>https://snowdreams1006.github.io/todo/github-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/github-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[svn 快速入门]]></title>
+            <link>https://snowdreams1006.github.io/todo/svn-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/todo/svn-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
