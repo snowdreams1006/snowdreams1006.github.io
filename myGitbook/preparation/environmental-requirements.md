@@ -52,19 +52,18 @@ gitbook --version
 假设你已经搭建好 `node.js` 环境,现在我们开始安装 `gitbook` 相关工具了!
 
 ```bash
-sudo npm install -g gitbook-cli
+npm install -g gitbook-cli
 ```
 
-> 如果使用 `cnpm` 安装的话,使用 `cnpm install -g gitbook-cli` 命令.
+> 全局安装可能要有超级管理员权限: `sudo npm install -g gitbook-cli` ,如果使用 `cnpm` 安装的话,使用 `cnpm install -g gitbook-cli` 命令.
 
 安装成功后会带有 `gitbook` 命令,现在再次运行下 `gitbook --version` 查看版本信息.
 
-```
+```bash
 # 打印出 `CLI` 和 `GitBook` 版本信息即可,安装版本可能已经大于 `2.3.2`
-$ gitbook --version
+gitbook --version
 CLI version: 2.3.2
 GitBook version: 3.2.3
-$ 
 ```
 
 #### 安装 `GitBook Editor` 编辑器[可选]
@@ -89,4 +88,99 @@ $
 
 至此 `gitbook` 的必要开发环境已经准备妥当,接下来让我们赶紧体验一下 `gitbook` 的魅力吧!
 
+**更新补充**
 
+- 基本命令
+
+```bash
+# 安装Gitbook需要node.js作为前提依赖, 安装时确保主机已经存在node.js
+node -v
+
+# 安装Gitbook多版本托管工具, 可同时托管多个Gitbook版本, 且下载最新版的Gitbook驱动
+npm install gitbook-cli -g
+
+# 验证下载是否成功
+gitbook -V
+
+# 下载历史版本[下载3.0.0版本]
+# 3.2.3版本确保为不可用版本, 推荐使用3.0.0
+gitbook fetch 3.0.0
+
+# 进入到你的项目文件夹, 初始化一个Gitbook项目
+gitbook init
+
+# 生成README.md 和 SUMMARY.md 两个基本文件
+
+# 启动服务
+gitbook serve
+
+# 指定gitbook版本启动
+gitbook serve --gitbook=3.0.0
+
+# 获取帮助
+gitbook --help
+
+# 卸载指定版本Gitbook[卸载3.2.3版本]
+gitbook uninstall 3.2.3
+
+# 生成静态网页
+gitbook build
+
+# 指定gitbook版本生成静态文件，如果本地没有将先下载
+gitbook build --gitbook=3.0.0
+
+# 列出本地所有的gitbook版本
+gitbook ls
+
+# 列出远程可用的gitbook版本
+gitbook ls-remote
+
+# 更新到gitbook的最新版本
+gitbook update
+
+# 安装配置依赖插件
+gitbook install
+
+# 指定log的级别
+gitbook build --log=debug
+
+# 输出错误信息
+gitbook builid --debug
+
+# 将 Gitbook 输出为 PDF 文件
+gitbook pdf . [PDF_Name]
+```
+
+- 热加载失败
+
+> 修复文件位置: `~/.gitbook/versions/[version]/lib/cli/serve.js`
+
+```js
+/* 代码首行 */
+const fs=require("fs");
+
+/* 任意空白位置 */
+function deleteFolder(path) {
+let files = [];
+if( fs.existsSync(path) ) {
+    files = fs.readdirSync(path);
+    files.forEach(function(file,index){
+        let curPath = path + "/" + file;
+        if(fs.statSync(curPath).isDirectory()) {
+            deleteFolder(curPath);
+        } else {
+            fs.unlinkSync(curPath);
+        }
+    });
+    fs.rmdirSync(path);
+    }
+}
+```
+
+> 找到函数体 `generateBook` ,在 `var outputFolder = getOutputFolder(args);` 下面另起一行写入:
+
+```js
+if (server.isRunning()) deleteFolder(outputFolder)
+```
+
+- [Gitbook的实用技巧专栏](https://juejin.im/post/6844903991814406158)

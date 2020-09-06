@@ -83,7 +83,7 @@ nvm ls
 - 临时使用
 
 ```bash
-npm install express --registry https://registry.npm.taobao.org
+npm install gitbook -g --registry https://registry.npm.taobao.org
 ```
 
 - 永久使用
@@ -95,6 +95,12 @@ npm config set registry https://registry.npm.taobao.org
 
 ```bash
 npm config set registry https://registry.npmjs.org
+```
+
+-  当前镜像
+
+```bash
+npm config get registry
 ```
 
 ## 参考资料
