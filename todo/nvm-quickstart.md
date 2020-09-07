@@ -103,8 +103,15 @@ npm config set registry https://registry.npmjs.org
 npm config get registry
 ```
 
+## fad
+
+- nvm is not compatible with the npm config "prefix" option: currently set to ""
+
+
+
 ## 参考资料
 
 - [使用 nvm 管理不同版本的 node 与 npm](https://www.runoob.com/w3cnote/nvm-manager-node-versions.html)
 - [nvm使用taobao镜像](https://segmentfault.com/a/1190000020149792)
 - [npm太慢， 淘宝npm镜像使用方法](https://blog.csdn.net/quuqu/article/details/64121812)
+- [解决 nvm is not compatible with the npm config "prefix"](https://juejin.im/post/6844904006511230990)
