@@ -4,11 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-<<<<<<< HEAD
-        <lastBuildDate>Tue, 08 Sep 2020 12:39:28 GMT</lastBuildDate>
-=======
-        <lastBuildDate>Tue, 08 Sep 2020 01:40:09 GMT</lastBuildDate>
->>>>>>> b0a8b0e164054a4284f47eb3b0d010e64d0bb1b8
+        <lastBuildDate>Wed, 09 Sep 2020 00:02:50 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
