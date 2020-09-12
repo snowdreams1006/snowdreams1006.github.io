@@ -20,3 +20,6 @@ git commit -m "auto deploy website"
 
 # push to github and others
 git push origin master
+
+# push to aliyun
+# scp -r _book/* sn:~/blog

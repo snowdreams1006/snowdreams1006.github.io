@@ -139,6 +139,7 @@
     * [mysql 快速入门](todo/mysql-quickstart.md)
     * [maven 快速入门](todo/maven-quickstart.md)
     * [tomcat 快速入门](todo/tomcat-quickstart.md)
+    * [gitignore 快速入门](todo/gitignore-quickstart.md)
 * [其他](other/README.md)
     * [重装开发环境](other/dev-env-install.md)
     * [钉钉签到提醒](other/dingtalk-reminder.md)
