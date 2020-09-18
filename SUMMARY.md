@@ -141,6 +141,7 @@
     * [tomcat 快速入门](todo/tomcat-quickstart.md)
     * [gitignore 快速入门](todo/gitignore-quickstart.md)
     * [android studio 快速入门](todo/gitignore-as.md)
+    * [npm 快速入门](todo/npm.md)
 * [其他](other/README.md)
     * [重装开发环境](other/dev-env-install.md)
     * [钉钉签到提醒](other/dingtalk-reminder.md)
