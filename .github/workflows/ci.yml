@@ -27,7 +27,11 @@ jobs:
         rm: true
         strip_components: 1
     - name: Deploy blog
+<<<<<<< HEAD
       uses: appleboy/ssh-action@v0.1.3
+=======
+      uses: appleboy/ssh-action@v0.1.1
+>>>>>>> 71b6ac5f279ce4ff644457985e24b237f6a4e574
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
