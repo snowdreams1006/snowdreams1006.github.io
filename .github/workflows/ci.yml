@@ -10,7 +10,6 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: "8.x"
-    - name: Build blog with gitbook
       run: |
         npm install -g gitbook-cli
         gitbook install
@@ -37,5 +36,4 @@ jobs:
         endpoint: oss-cn-hangzhou.aliyuncs.com
         access-key-id: ${{ secrets.ALI_ACCESS_KEY_ID }}
         access-key-secret: ${{ secrets.ALI_ACCESS_KEY_SECRET }}
-    - name: Upload files to aliyun oss
       run: ossutil cp -rf ./_book oss://snowdreams1006/
