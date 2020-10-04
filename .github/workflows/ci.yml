@@ -10,13 +10,12 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: "8.x"
-    - name: Build blog
+    - name: Build blog with gitbook
       run: |
         npm install -g gitbook-cli
         gitbook install
         gitbook build 
-    - name: Upload blog
-      uses: appleboy/scp-action@v0.1.1
+    - uses: appleboy/scp-action@v0.1.1
       env:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
@@ -26,8 +25,7 @@ jobs:
         target: ~/blog
         rm: true
         strip_components: 1
-    - name: Deploy blog
-      uses: appleboy/ssh-action@v0.1.3
+    - uses: appleboy/ssh-action@v0.1.3
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
