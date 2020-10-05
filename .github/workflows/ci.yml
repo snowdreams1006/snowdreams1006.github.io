@@ -10,6 +10,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: "8.x"
+    - name: Build blog with gitbook
       run: |
         npm install -g gitbook-cli
         gitbook install
