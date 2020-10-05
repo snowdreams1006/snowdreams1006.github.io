@@ -15,7 +15,8 @@ jobs:
         npm install -g gitbook-cli
         gitbook install
         gitbook build 
-    - uses: appleboy/scp-action@v0.1.1
+    - name: Upload blog with scp
+      uses: appleboy/scp-action@v0.1.1
       env:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
@@ -25,7 +26,8 @@ jobs:
         target: ~/blog
         rm: true
         strip_components: 1
-    - uses: appleboy/ssh-action@v0.1.3
+    - name: Deploy blog with ssh
+      uses: appleboy/ssh-action@v0.1.3
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
@@ -37,4 +39,5 @@ jobs:
         endpoint: oss-cn-hangzhou.aliyuncs.com
         access-key-id: ${{ secrets.ALI_ACCESS_KEY_ID }}
         access-key-secret: ${{ secrets.ALI_ACCESS_KEY_SECRET }}
+    - name: Upload files to aliyun oss
       run: ossutil cp -rf ./_book oss://snowdreams1006/
