@@ -12,6 +12,9 @@ gitbook build
 # copy to docs
 cp -rf _book/* .
 
+# push to server,only for myself
+scp -r _book/* sn:~/blog
+
 # add commits
 git add .
 
@@ -20,6 +23,3 @@ git commit -m "auto deploy website"
 
 # push to github and others
 git push origin master
-
-# push to server,only for myself
-scp -r _book/* sn:~/blog
