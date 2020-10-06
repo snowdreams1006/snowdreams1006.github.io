@@ -14,8 +14,7 @@ jobs:
         key: ${{ secrets.KEY }}
         script: |
           docker restart blog
-          curl -i -X GET \
-            'https://webhook.snowdreams1006.cn/hooks/query?token=${{ secrets.WEBHOOK_QUERY_TOKEN }}&title=${{ secrets.BLOG_QUERY_TITLE }}&body=${{ secrets.BLOG_QUERY_BODY }}'
+          curl -i -X GET 'https://webhook.snowdreams1006.cn/hooks/query?token=${{ secrets.WEBHOOK_QUERY_TOKEN }}&title=${{ secrets.BLOG_QUERY_TITLE }}&body=${{ secrets.BLOG_QUERY_BODY }}'
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
@@ -33,5 +32,4 @@ jobs:
     - name: Upload blog to oss
       run: |
         ossutil cp -rf ./_book oss://snowdreams1006/
-        curl -i -X GET \
-            'https://webhook.snowdreams1006.cn/hooks/query?token=${{ secrets.WEBHOOK_QUERY_TOKEN }}&title=${{ secrets.OSS_QUERY_TITLE }}&body=${{ secrets.OSS_QUERY_BODY }}'
+        curl -i -X GET 'https://webhook.snowdreams1006.cn/hooks/query?token=${{ secrets.WEBHOOK_QUERY_TOKEN }}&title=${{ secrets.OSS_QUERY_TITLE }}&body=${{ secrets.OSS_QUERY_BODY }}'
