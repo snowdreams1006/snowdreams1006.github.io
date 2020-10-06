@@ -6,9 +6,6 @@ git pull
 # remove cache dir
 rm -rf _book/
 
-# use gitbook nodejs,only for myself
-nvm use v8.17.0 
-
 # generate docs 
 gitbook build
 
