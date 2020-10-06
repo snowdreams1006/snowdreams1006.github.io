@@ -148,6 +148,7 @@
     * [钉钉签到提醒](other/dingtalk-reminder.md)
     * [倒计时提醒](other/reminder.md)
     * [微信防撤回](other/anti-withdrawback-wechat.md)
+    * [关注网站](other/focus-website.md)
     * [转型之路](other/transformation.md)
     * [历史统计](other/static.md)
     * [关于作者](other/me.md)
