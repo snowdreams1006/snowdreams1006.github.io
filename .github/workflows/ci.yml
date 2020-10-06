@@ -15,12 +15,12 @@ jobs:
         npm install -g gitbook-cli
         gitbook install
         gitbook build
-    - name: Upload blog to oss
-      uses: manyuanrong/setup-ossutil@v1.0
+    - uses: manyuanrong/setup-ossutil@v1.0
       with:
         endpoint: oss-cn-hangzhou.aliyuncs.com
         access-key-id: ${{ secrets.ALI_ACCESS_KEY_ID }}
         access-key-secret: ${{ secrets.ALI_ACCESS_KEY_SECRET }}
+    - name: Upload blog to oss
       run: ossutil cp -rf ./_book oss://snowdreams1006/
     - name: restart blog with docker
       uses: appleboy/ssh-action@v0.1.3
