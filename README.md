@@ -54,7 +54,7 @@
 - [![GitLab](https://img.shields.io/badge/GitLab-snowdreams1006.gitlab.io-brightgreen.svg)](https://snowdreams1006.gitlab.io/)
 - [![Gitbook](https://img.shields.io/badge/Gitbook-snowdreams1006.gitbook.io-brightgreen.svg)](https://snowdreams1006.gitbook.io/)
 
-> 国内用户推荐访问 [snowdreams1006.tech](https://snowdreams1006.tech/) ,速度非常快并且和 [snowdreams1006.github.io](https://snowdreams1006.github.io/) **保持同步更新**.
+> 国内用户推荐访问 [tech.snowdreams1006.cn](https://tech.snowdreams1006.cn/) ,速度非常快并且和 [snowdreams1006.github.io](https://snowdreams1006.github.io/) **保持同步更新**.
 
 ## 教程特点
 
