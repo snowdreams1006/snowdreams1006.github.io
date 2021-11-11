@@ -44,7 +44,7 @@
 - [git 官网][git-scm.com]
 - [github 官网][github.com]
 
->`gitbook` 新版需要FQ,~~旧版不需要FQ~~,旧版暂不可用,可访问[压箱底存货][gitbook-official]. 
+> `gitbook` 新版需要FQ,~~旧版不需要FQ~~,旧版暂不可用,可访问[压箱底存货][gitbook-official]. 
 
 <!-- 链接引用 -->
 [www.gitbook.com]: https://www.gitbook.com/ "https://www.gitbook.com/"
