@@ -8,6 +8,8 @@
 
 如果直接运行 `gitbook pdf` 相关命令,可能会报错,提示需要安装 `ebook-convert` 插件,根据提示本地需要安装 `calibre` 软件,这样 `gitbook` 才能正常导出电子书.
 
+> [3.46.0](https://download.calibre-ebook.com/3.46.0/)
+
 [calibre 官网](https://calibre-ebook.com/): https://calibre-ebook.com/
 
 ![gitbook-export-calibre-preview.png](./images/gitbook-export-calibre-preview.png)
