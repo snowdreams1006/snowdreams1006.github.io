@@ -32,7 +32,7 @@ node --version
 
 > `nodejs` 默认的包安装工具 `npm` 国内访问速度有点慢,安装完毕后建议 `npm install cnpm -g --registry=https://registry.npm.taobao.org
 ` 使用淘宝镜像源代替默认的 `npm` ,详细教程请参考官方 [https://nodejs.org/](https://nodejs.org/en/)
-> `windows` 推荐版本: [v8.17.0](https://nodejs.org/download/release/v8.17.0/)
+> 推荐版本: [v10.22.0](https://nodejs.org/download/release/v10.22.0/)
 
 ### 检查 `gitbook` 环境[必须]
 
@@ -185,3 +185,28 @@ if (server.isRunning()) deleteFolder(outputFolder)
 ```
 
 - [Gitbook的实用技巧专栏](https://juejin.im/post/6844903991814406158)
+
+- Error: Missing required argument #1
+
+`gitbook install` 安装插件失败,建议尝试直接使用 `npm install gitbook-plugin-*` 安装插件.
+
+> `npm install gitbook-plugin-mygitalk` 安装出错插件后,再次运行 `gitbook install` 安装所需插件,重复该过程直至全部安装成功.
+
+```
+info: install plugin "mygitalk" (*) from NPM with version 0.2.6
+C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\aproba\index.js:25
+    if (args[ii] == null) throw missingRequiredArg(ii)
+                          ^
+
+Error: Missing required argument #1
+    at andLogAndFinish (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:31:3)
+    at fetchPackageMetadata (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:51:22)
+    at resolveWithNewModule (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\install\deps.js:490:12)
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\install\deps.js:491:7
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\iferr\index.js:13:50
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:37:12
+    at addRequestedAndFinish (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:67:5)
+    at returnAndAddMetadata (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:121:7)
+    at pickVersionFromRegistryDocument (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:138:20)
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\iferr\index.js:13:50
+```
