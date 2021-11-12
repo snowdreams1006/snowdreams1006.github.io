@@ -91,7 +91,7 @@ GitBook version: 3.2.3
 
 **更新补充**
 
-- 基本命令
+> 常用命令快速预览
 
 ```bash
 # 安装Gitbook需要node.js作为前提依赖, 安装时确保主机已经存在node.js
@@ -148,9 +148,11 @@ gitbook build --log=debug
 # 输出错误信息
 gitbook builid --debug
 
-# 将 Gitbook 输出为 PDF 文件
+# 将 Gitbook 输出为 PDF 文件(注意需要提前安装软件) 例如: gitbook pdf . snowdreams1006.pdf
 gitbook pdf . [PDF_Name]
 ```
+
+## 常见问题
 
 - 热加载失败
 
@@ -186,13 +188,13 @@ if (server.isRunning()) deleteFolder(outputFolder)
 
 - [Gitbook的实用技巧专栏](https://juejin.im/post/6844903991814406158)
 
-- Error: Missing required argument #1
+- `Error: Missing required argument #1`
 
 `gitbook install` 安装插件失败,建议尝试直接使用 `npm install gitbook-plugin-*` 安装插件.
 
 > `npm install gitbook-plugin-mygitalk` 安装出错插件后,再次运行 `gitbook install` 安装所需插件,重复该过程直至全部安装成功.
 
-```
+```bash
 info: install plugin "mygitalk" (*) from NPM with version 0.2.6
 C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\aproba\index.js:25
     if (args[ii] == null) throw missingRequiredArg(ii)
@@ -209,4 +211,15 @@ Error: Missing required argument #1
     at returnAndAddMetadata (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:121:7)
     at pickVersionFromRegistryDocument (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:138:20)
     at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\iferr\index.js:13:50
+```
+
+- `ENOENT: no such file or directory, stat`
+
+> 修复文件位置: `~/.gitbook/versions/3.2.3/lib/output/website/copyPluginAssets.js`
+
+搜索并全部替换: 将 `confirm: true` 全部替换为 `confirm: false` (无需询问,直接操作)
+
+```bash
+Error: ENOENT: no such file or directory, stat 'F:\dev\snowdreams1006.github.io\
+_book\gitbook\gitbook-plugin-edit-link-plus\plugin.js'
 ```

@@ -67,10 +67,10 @@ $ ebook-convert --version
 示例:
 
 ```bash
-Administrator@snowdreams1006 MINGW64 /f/workspace/snowdreams1006.github.io (master)
+# Administrator@snowdreams1006 MINGW64 /f/workspace/snowdreams1006.github.io (master)
 $ ebook-convert --version
-ebook-convert.exe (calibre 3.46.0)
-Created by: Kovid Goyal <kovid@kovidgoyal.net>
+# ebook-convert.exe (calibre 3.46.0)
+# Created by: Kovid Goyal <kovid@kovidgoyal.net>
 ```
 
 ## 配置封面
