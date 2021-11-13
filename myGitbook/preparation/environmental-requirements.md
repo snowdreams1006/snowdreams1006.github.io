@@ -34,6 +34,12 @@ node --version
 ` 使用淘宝镜像源代替默认的 `npm` ,详细教程请参考官方 [https://nodejs.org/](https://nodejs.org/en/)
 > 推荐版本: [v10.22.0](https://nodejs.org/download/release/v10.22.0/)
 
+```bash
+npm config set registry=http://registry.npm.taobao.org
+```
+
+> `npm` 安装依赖的默认地址是国外服务器,如果速度过慢的话,建议切换到国内镜像源.
+
 ### 检查 `gitbook` 环境[必须]
 
 `gitbook-cli` 是 `gitbook` 的脚手架工具,帮助我们更方便构建 `gitbook` 应用,当然也可以直接安装 `gitbook` ,只不过那样的话,略显麻烦,不推荐.
@@ -156,7 +162,7 @@ gitbook pdf . [PDF_Name]
 
 - 热加载失败
 
-> 修复文件位置: `~/.gitbook/versions/[version]/lib/cli/serve.js`
+> `gitbook serve` 命令报错,修复文件位置: `~/.gitbook/versions/[version]/lib/cli/serve.js`
 
 ```js
 /* 代码首行 */
@@ -215,11 +221,45 @@ Error: Missing required argument #1
 
 - `ENOENT: no such file or directory, stat`
 
-> 修复文件位置: `~/.gitbook/versions/3.2.3/lib/output/website/copyPluginAssets.js`
+> `gitbook serve` 启动服务命令报错,修复文件位置: `~/.gitbook/versions/3.2.3/lib/output/website/copyPluginAssets.js`
 
 搜索并全部替换: 将 `confirm: true` 全部替换为 `confirm: false` (无需询问,直接操作)
 
 ```bash
 Error: ENOENT: no such file or directory, stat 'F:\dev\snowdreams1006.github.io\
 _book\gitbook\gitbook-plugin-edit-link-plus\plugin.js'
+```
+
+- `internal/streams/legacy.js:57`
+
+> `gitbook pdf` 导出pdf命令报错,更改为 `gitbook pdf --log=debug` 定位离出错位置最近的 `markdown` 源文件,二分法定位不支持的语法.
+
+```bash
+internal/streams/legacy.js:57
+      throw er; // Unhandled stream error in pipe.
+      ^
+
+Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\AppData\Local\Temp\tmp-1347263bR7fdRUaDK\fbb7753c.io?style=social'
+
+
+Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\AppData\Local\Temp\tmp-57481QhkMFHfkZyo\5ad938ff.svg?style=shield'
+
+```
+
+- `gitbook pdf` 导出pdf命令出错,重新安装 `svgexport`
+
+> 先使用 `npm uninstall svgexport -g` 卸载旧版本,再使用 `npm install --unsafe-perm -g svgexport` 安装新版本.
+
+```bash
+Error: Error with command "svgexport"
+```
+
+- `Error: Client network socket disconnected before secure TLS connection was established`
+
+> 确认上网环境正常后多尝试几次
+
+```bash
+error: error while generating page "devops/README.md":
+
+Error: Client network socket disconnected before secure TLS connection was established
 ```
