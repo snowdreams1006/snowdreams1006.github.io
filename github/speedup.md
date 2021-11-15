@@ -240,6 +240,57 @@ $
 34.196.237.103 classroom.github.com
 ```
 
-**更新版本**
+**更新日志**
 
 - [让你的GitHub下载飞速提升到2M/s以上](https://blog.csdn.net/hcy1026/article/details/107644836)
+- [修改 Hosts 解决 Github 访问失败马克](https://zhuanlan.zhihu.com/p/107334179)
+
+```bash
+# Github Hosts
+# Update 20210925
+# domain: github.com
+140.82.112.4 github.com
+140.82.112.10 nodeload.github.com
+140.82.114.5 api.github.com
+140.82.113.10 codeload.github.com
+185.199.108.133 raw.github.com
+185.199.108.153 training.github.com
+185.199.108.153 assets-cdn.github.com
+185.199.108.153 documentcloud.github.com
+185.199.108.154 help.github.com
+
+# domain: githubstatus.com
+185.199.108.153 githubstatus.com
+
+# domain: fastly.net
+199.232.69.194 github.global.ssl.fastly.net
+
+# domain: githubusercontent.com
+185.199.108.133 raw.githubusercontent.com
+185.199.108.154 pkg-containers.githubusercontent.com
+185.199.108.133 cloud.githubusercontent.com
+185.199.108.133 gist.githubusercontent.com
+185.199.108.133 marketplace-screenshots.githubusercontent.com
+185.199.108.133 repository-images.githubusercontent.com
+185.199.108.133 user-images.githubusercontent.com
+185.199.108.133 desktop.githubusercontent.com
+185.199.108.133 avatars.githubusercontent.com
+185.199.108.133 avatars0.githubusercontent.com
+185.199.108.133 avatars1.githubusercontent.com
+185.199.108.133 avatars2.githubusercontent.com
+185.199.108.133 avatars3.githubusercontent.com
+185.199.108.133 avatars4.githubusercontent.com
+185.199.108.133 avatars5.githubusercontent.com
+185.199.108.133 avatars6.githubusercontent.com
+185.199.108.133 avatars7.githubusercontent.com
+185.199.108.133 avatars8.githubusercontent.com
+# End of the section
+```
+
+```bash
+# 添加 Github 相关域名的绑定
+sudo vi /etc/hosts
+
+# 刷新网络 DNS 缓存
+sudo killall -HUP mDNSResponder
+```
