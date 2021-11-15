@@ -246,6 +246,40 @@ Error: ENOENT: no such file or directory, open 'C:\Users\Administrator\AppData\L
 
 ```
 
+经过二分法不断定位出错位置,最终发现部分html标签语法不支持,仅供参考:
+
+```html
+<a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+  <img alt="GitHub followers" src="https://img.shields.io/github/followers/snowdreams1006?style=social">
+</a>
+<a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io?style=social">
+</a>
+<a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io?style=social">
+</a>
+ <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io?style=social">
+</a>
+```
+
+`<img alt="GitHub stars" src="https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io?style=social">` 去掉 `?style=social` 即可,修成后的html如下:
+
+```html
+<a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+  <img alt="GitHub followers" src="https://img.shields.io/github/followers/snowdreams1006">
+</a>
+<a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io">
+</a>
+<a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io">
+</a>
+<a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io">
+</a>
+```
+
 - `gitbook pdf` 导出pdf命令出错,重新安装 `svgexport`
 
 > 先使用 `npm uninstall svgexport -g` 卸载旧版本,再使用 `npm install --unsafe-perm -g svgexport` 安装新版本.
@@ -262,4 +296,14 @@ Error: Error with command "svgexport"
 error: error while generating page "devops/README.md":
 
 Error: Client network socket disconnected before secure TLS connection was established
+```
+
+- `Error: read ECONNRESET`
+
+> 多次尝试恢复正常
+
+```
+error: error while generating page "other/anti-withdrawback-wechat.md":
+
+Error: read ECONNRESET
 ```
