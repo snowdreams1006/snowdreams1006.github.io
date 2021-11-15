@@ -3,7 +3,8 @@
  <h1 align="center">雪之梦技术驿站</h1>
  <p align="center">你在互联网的路上匆匆而来,雪之梦技术驿站助你满载而去.</p>
 </p>
-  <p align="center">
+<p align="center">
+   <p align="center">
     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
       <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/snowdreams1006/snowdreams1006.github.io/blog">
     </a>
@@ -22,16 +23,16 @@
     <br/>
     <br/>
     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
-      <img alt="GitHub followers" src="https://img.shields.io/github/followers/snowdreams1006?style=social">
+      <img alt="GitHub followers" src="https://img.shields.io/github/followers/snowdreams1006">
     </a>
     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
-      <img alt="GitHub forks" src="https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io?style=social">
+      <img alt="GitHub forks" src="https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io">
     </a>
     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
-      <img alt="GitHub stars" src="https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io?style=social">
+      <img alt="GitHub stars" src="https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io">
     </a>
-     <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
-      <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io?style=social">
+    <a href="https://github.com/snowdreams1006/snowdreams1006.github.io" target="_blank">
+      <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io">
     </a>
   </p>
   <p align="center">
