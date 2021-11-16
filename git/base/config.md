@@ -49,6 +49,19 @@ cat /etc/gitconfig
 git config user.name
 ```
 
+**小结**
 
+> 本地配置请参考如下格式,注意修改成**自己的数据**
 
+```bash
+git config --global user.name "snowdreams1006"
+git config --global user.email "snowdreams1006@163.com"
+```
 
+> 网络配置请参考如下格式,注意修改成**自己的数据**
+
+```bash
+ssh-keygen -t rsa -C "snowdreams1006@163.com"
+
+cat ~/.ssh/id_rsa.pub
+```
