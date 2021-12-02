@@ -294,3 +294,11 @@ sudo vi /etc/hosts
 # 刷新网络 DNS 缓存
 sudo killall -HUP mDNSResponder
 ```
+
+- [加速国内 Github 访问，下载，的9种方案！](https://www.cnblogs.com/tc310/p/14432137.html)
+
+```bash
+https://github.com.cnpmjs.org
+
+https://hub.fastgit.org
+```

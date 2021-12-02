@@ -104,9 +104,15 @@ AZ3NH-DQX9N-488RP-15ZXC-Q68VA
 
 值得注意的是,虚拟机虽好,不要贪多哟,毕竟虚拟机很占资源,如果宿主机本身不给力的话,虚拟机也很难流畅地运行.
 
+```bash
+# vmware 下载链接:
+https://www.vmware.com/go/getworkstation-win
+
+# KeyGen.exe 注册机,关注'雪之梦技术驿站'回复vmware
+```
+
 下节预告:
 
 -  给 windows 虚拟机装个 windows
 -  给 windows 虚拟机装个 centos
 -  给 windows 虚拟机装个 ubantu
-        
