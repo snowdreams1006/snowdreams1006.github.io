@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 15 Nov 2021 13:19:48 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 13 Dec 2021 04:33:13 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -303,7 +303,7 @@
         </item>
         <item>
             <title><![CDATA[github 徽章从何而来]]></title>
-            <description><![CDATA[平时大家在在逛 github 时或多或少都看到过项目首页各式各样的小徽章,不知道你是否和我一样好奇这些小徽章都是哪来的呢?]]></description>
+            <description><![CDATA[徽章是一种小巧精美的小图标,一般配有相关文字进行辅助说明,富有表现力.]]></description>
             <link>https://snowdreams1006.github.io/github/badge.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/github/badge.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
@@ -428,6 +428,7 @@
         </item>
         <item>
             <title><![CDATA[常见问题]]></title>
+            <description><![CDATA[gitbook install 安装插件失败,建议尝试直接使用 npm install gitbook-plugin-* 安装插件.]]></description>
             <link>https://snowdreams1006.github.io/myGitbook/issue/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/issue/README.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
@@ -1042,13 +1043,6 @@ Lodash 的模块化方法 非常适用于：]]></description>
             <title><![CDATA[倒计时提醒]]></title>
             <link>https://snowdreams1006.github.io/other/reminder.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/other/reminder.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[微信防撤回]]></title>
-            <description><![CDATA[下面是在iOS逆向分析中使用到的一些工具，大家可以先看看了解下，在后面的课程中会给大家讲解一些工具的使用及其原理。]]></description>
-            <link>https://snowdreams1006.github.io/other/anti-withdrawback-wechat.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/other/anti-withdrawback-wechat.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

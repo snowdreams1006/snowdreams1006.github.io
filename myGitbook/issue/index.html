@@ -71,7 +71,7 @@
 
     
         
-    
+        <link rel="stylesheet" href="../../assets/css/mourn.css">
         
     
         
@@ -2119,20 +2119,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2.4" data-path="../../other/anti-withdrawback-wechat.html">
-            
-                <a href="../../other/anti-withdrawback-wechat.html">
-            
-                    
-                    微信防撤回
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2.5" data-path="../../other/focus-website.html">
+        <li class="chapter " data-level="6.2.4" data-path="../../other/focus-website.html">
             
                 <a href="../../other/focus-website.html">
             
@@ -2145,7 +2132,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2.6" data-path="../../other/transformation.html">
+        <li class="chapter " data-level="6.2.5" data-path="../../other/transformation.html">
             
                 <a href="../../other/transformation.html">
             
@@ -2158,7 +2145,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2.7" data-path="../../other/static.html">
+        <li class="chapter " data-level="6.2.6" data-path="../../other/static.html">
             
                 <a href="../../other/static.html">
             
@@ -2171,7 +2158,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2.8" data-path="../../other/me.html">
+        <li class="chapter " data-level="6.2.7" data-path="../../other/me.html">
             
                 <a href="../../other/me.html">
             
@@ -2184,7 +2171,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2.9" data-path="../../other/donate.html">
+        <li class="chapter " data-level="6.2.8" data-path="../../other/donate.html">
             
                 <a href="../../other/donate.html">
             
@@ -2515,6 +2502,178 @@
                                 <section class="normal markdown-section">
                                 
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x89C1;&#x95EE;&#x9898;"><b>1. </b>&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li></ul></div><a href="#&#x5E38;&#x89C1;&#x95EE;&#x9898;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5E38;&#x89C1;&#x95EE;&#x9898;"><a name="&#x5E38;&#x89C1;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x89C1;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5E38;&#x89C1;&#x95EE;&#x9898;</h1>
+<ul>
+<li>&#x70ED;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</li>
+</ul>
+<blockquote>
+<p><code>gitbook serve</code> &#x547D;&#x4EE4;&#x62A5;&#x9519;,&#x4FEE;&#x590D;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;: <code>~/.gitbook/versions/[version]/lib/cli/serve.js</code></p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-comment">/* &#x4EE3;&#x7801;&#x9996;&#x884C; */</span>
+<span class="hljs-keyword">const</span> fs=<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);
+
+<span class="hljs-comment">/* &#x4EFB;&#x610F;&#x7A7A;&#x767D;&#x4F4D;&#x7F6E; */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">deleteFolder</span>(<span class="hljs-params">path</span>) </span>{
+    <span class="hljs-keyword">let</span> files = [];
+    <span class="hljs-keyword">if</span>( fs.existsSync(path) ) {
+        files = fs.readdirSync(path);
+        files.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">file,index</span>)</span>{
+            <span class="hljs-keyword">let</span> curPath = path + <span class="hljs-string">&quot;/&quot;</span> + file;
+            <span class="hljs-keyword">if</span>(fs.statSync(curPath).isDirectory()) {
+                deleteFolder(curPath);
+            } <span class="hljs-keyword">else</span> {
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x627E;&#x5230;&#x51FD;&#x6570;&#x4F53; <code>generateBook</code> ,&#x5728; <code>var outputFolder = getOutputFolder(args);</code> &#x4E0B;&#x9762;&#x53E6;&#x8D77;&#x4E00;&#x884C;&#x5199;&#x5165;:</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (server.isRunning()) deleteFolder(outputFolder)
+</code></pre>
+<ul>
+<li><p><a href="https://juejin.im/post/6844903991814406158" target="_blank">Gitbook&#x7684;&#x5B9E;&#x7528;&#x6280;&#x5DE7;&#x4E13;&#x680F;</a></p>
+</li>
+<li><p><code>Error: Missing required argument #1</code></p>
+</li>
+</ul>
+<p><code>gitbook install</code> &#x5B89;&#x88C5;&#x63D2;&#x4EF6;&#x5931;&#x8D25;,&#x5EFA;&#x8BAE;&#x5C1D;&#x8BD5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; <code>npm install gitbook-plugin-*</code> &#x5B89;&#x88C5;&#x63D2;&#x4EF6;.</p>
+<blockquote>
+<p><code>npm install gitbook-plugin-mygitalk</code> &#x5B89;&#x88C5;&#x51FA;&#x9519;&#x63D2;&#x4EF6;&#x540E;,&#x518D;&#x6B21;&#x8FD0;&#x884C; <code>gitbook install</code> &#x5B89;&#x88C5;&#x6240;&#x9700;&#x63D2;&#x4EF6;,&#x91CD;&#x590D;&#x8BE5;&#x8FC7;&#x7A0B;&#x76F4;&#x81F3;&#x5168;&#x90E8;&#x5B89;&#x88C5;&#x6210;&#x529F;.</p>
+</blockquote>
+<pre><code class="lang-bash">info: install plugin <span class="hljs-string">&quot;mygitalk&quot;</span> (*) from NPM with version 0.2.6
+C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\aproba\index.js:25
+    <span class="hljs-keyword">if</span> (args[ii] == null) throw missingRequiredArg(ii)
+                          ^
+
+Error: Missing required argument <span class="hljs-comment">#1</span>
+    at andLogAndFinish (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:31:3)
+    at fetchPackageMetadata (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:51:22)
+    at resolveWithNewModule (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\install\deps.js:490:12)
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\install\deps.js:491:7
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\iferr\index.js:13:50
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:37:12
+    at addRequestedAndFinish (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:67:5)
+    at <span class="hljs-built_in">return</span>AndAddMetadata (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:121:7)
+    at pickVersionFromRegistryDocument (C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\lib\fetch-package-metadata.js:138:20)
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\iferr\index.js:13:50
+</code></pre>
+<ul>
+<li><code>ENOENT: no such file or directory</code></li>
+</ul>
+<blockquote>
+<p><code>gitbook serve</code> &#x542F;&#x52A8;&#x670D;&#x52A1;&#x547D;&#x4EE4;&#x62A5;&#x9519;,&#x4FEE;&#x590D;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;: <code>~/.gitbook/versions/3.2.3/lib/output/website/copyPluginAssets.js</code></p>
+</blockquote>
+<p>&#x641C;&#x7D22;&#x5E76;&#x5168;&#x90E8;&#x66FF;&#x6362;: &#x5C06; <code>confirm: true</code> &#x5168;&#x90E8;&#x66FF;&#x6362;&#x4E3A; <code>confirm: false</code> (&#x65E0;&#x9700;&#x8BE2;&#x95EE;,&#x76F4;&#x63A5;&#x64CD;&#x4F5C;)</p>
+<pre><code class="lang-bash">Error: ENOENT: no such file or directory, <span class="hljs-built_in">stat</span> <span class="hljs-string">&apos;F:\dev\snowdreams1006.github.io\
+_book\gitbook\gitbook-plugin-edit-link-plus\plugin.js&apos;</span>
+</code></pre>
+<ul>
+<li><code>internal/streams/legacy.js:57</code></li>
+</ul>
+<blockquote>
+<p><code>gitbook pdf</code> &#x5BFC;&#x51FA;pdf&#x547D;&#x4EE4;&#x62A5;&#x9519;,&#x66F4;&#x6539;&#x4E3A; <code>gitbook pdf --log=debug</code> &#x5B9A;&#x4F4D;&#x79BB;&#x51FA;&#x9519;&#x4F4D;&#x7F6E;&#x6700;&#x8FD1;&#x7684; <code>markdown</code> &#x6E90;&#x6587;&#x4EF6;,&#x4E8C;&#x5206;&#x6CD5;&#x5B9A;&#x4F4D;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x8BED;&#x6CD5;.</p>
+</blockquote>
+<pre><code class="lang-bash">internal/streams/legacy.js:57
+      throw er; // Unhandled stream error <span class="hljs-keyword">in</span> pipe.
+      ^
+
+Error: ENOENT: no such file or directory, open <span class="hljs-string">&apos;C:\Users\Administrator\AppData\Local\Temp\tmp-1347263bR7fdRUaDK\fbb7753c.io?style=social&apos;</span>
+
+
+Error: ENOENT: no such file or directory, open <span class="hljs-string">&apos;C:\Users\Administrator\AppData\Local\Temp\tmp-57481QhkMFHfkZyo\5ad938ff.svg?style=shield&apos;</span>
+</code></pre>
+<p>&#x7ECF;&#x8FC7;&#x4E8C;&#x5206;&#x6CD5;&#x4E0D;&#x65AD;&#x5B9A;&#x4F4D;&#x51FA;&#x9519;&#x4F4D;&#x7F6E;,&#x6700;&#x7EC8;&#x53D1;&#x73B0;&#x90E8;&#x5206;html&#x6807;&#x7B7E;&#x8BED;&#x6CD5;&#x4E0D;&#x652F;&#x6301;,&#x4EC5;&#x4F9B;&#x53C2;&#x8003;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/snowdreams1006/snowdreams1006.github.io&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;GitHub followers&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.shields.io/github/followers/snowdreams1006?style=social&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/snowdreams1006/snowdreams1006.github.io&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;GitHub forks&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io?style=social&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/snowdreams1006/snowdreams1006.github.io&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;GitHub stars&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io?style=social&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/snowdreams1006/snowdreams1006.github.io&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;GitHub watchers&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io?style=social&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p><code>&lt;img alt=&quot;GitHub stars&quot; src=&quot;https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io?style=social&quot;&gt;</code> &#x53BB;&#x6389; <code>?style=social</code> &#x5373;&#x53EF;,&#x4FEE;&#x6210;&#x540E;&#x7684;html&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/snowdreams1006/snowdreams1006.github.io&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;GitHub followers&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.shields.io/github/followers/snowdreams1006&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/snowdreams1006/snowdreams1006.github.io&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;GitHub forks&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.shields.io/github/forks/snowdreams1006/snowdreams1006.github.io&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/snowdreams1006/snowdreams1006.github.io&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;GitHub stars&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.shields.io/github/stars/snowdreams1006/snowdreams1006.github.io&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/snowdreams1006/snowdreams1006.github.io&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;GitHub watchers&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://img.shields.io/github/watchers/snowdreams1006/snowdreams1006.github.io&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<ul>
+<li><code>gitbook pdf</code> &#x5BFC;&#x51FA;pdf&#x547D;&#x4EE4;&#x51FA;&#x9519;,&#x91CD;&#x65B0;&#x5B89;&#x88C5; <code>svgexport</code></li>
+</ul>
+<blockquote>
+<p>&#x5148;&#x4F7F;&#x7528; <code>npm uninstall svgexport -g</code> &#x5378;&#x8F7D;&#x65E7;&#x7248;&#x672C;,&#x518D;&#x4F7F;&#x7528; <code>npm install --unsafe-perm -g svgexport</code> &#x5B89;&#x88C5;&#x65B0;&#x7248;&#x672C;.</p>
+</blockquote>
+<pre><code class="lang-bash">Error: Error with <span class="hljs-built_in">command</span> <span class="hljs-string">&quot;svgexport&quot;</span>
+</code></pre>
+<ul>
+<li><code>Error: Client network socket disconnected before secure TLS connection was established</code></li>
+</ul>
+<blockquote>
+<p>&#x786E;&#x8BA4;&#x4E0A;&#x7F51;&#x73AF;&#x5883;&#x6B63;&#x5E38;&#x540E;&#x591A;&#x5C1D;&#x8BD5;&#x51E0;&#x6B21;</p>
+</blockquote>
+<pre><code class="lang-bash">error: error <span class="hljs-keyword">while</span> generating page <span class="hljs-string">&quot;devops/README.md&quot;</span>:
+
+Error: Client network socket disconnected before secure TLS connection was established
+</code></pre>
+<ul>
+<li><code>Error: read ECONNRESET</code></li>
+</ul>
+<blockquote>
+<p>&#x591A;&#x6B21;&#x5C1D;&#x8BD5;&#x6062;&#x590D;&#x6B63;&#x5E38;</p>
+</blockquote>
+<pre><code>error: error while generating page &quot;other/anti-withdrawback-wechat.md&quot;:
+
+Error: read ECONNRESET
+</code></pre><ul>
+<li><code>Error: EPERM: operation not permitted</code> &#x65E0;&#x6743;&#x64CD;&#x4F5C;</li>
+</ul>
+<blockquote>
+<p>&#x6682;&#x672A;&#x5BFB;&#x627E;&#x5230;&#x66F4;&#x597D;&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;,&#x6709;&#x65F6;&#x5019;&#x91CD;&#x8BD5;&#x51E0;&#x6B21;&#x5C31;&#x6B63;&#x5E38;&#x4E86;.</p>
+</blockquote>
+<pre><code>events.js:174
+      throw er; // Unhandled &apos;error&apos; event
+      ^
+
+Error: EPERM: operation not permitted, open &apos;F:\dev\snowdreams1006.github.io\_book\gitbook\images\favicon.ico&apos;
+Emitted &apos;error&apos; event at:
+    at errorOrDestroy (internal/streams/destroy.js:107:12)
+    at WriteStream.onerror (_stream_readable.js:734:7)
+    at WriteStream.emit (events.js:198:13)
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:202:14
+    at C:\Users\Administrator\.gitbook\versions\3.2.3\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:232:16
+    at F:\nodejs\node_global\node_modules\gitbook-cli\node_modules\_npm@5.1.0@npm\node_modules\graceful-fs\graceful-fs.js:241:16
+    at F:\nodejs\node_global\node_modules\gitbook-cli\node_modules\_npm@2.15.12@npm\node_modules\graceful-fs\graceful-fs.js:232:16
+    at FSReqWrap.args [as oncomplete] (fs.js:140:20)
+</code></pre><ul>
+<li>&#x7F51;&#x7AD9;&#x7F6E;&#x7070;</li>
+</ul>
+<pre><code class="lang-json">    <span class="hljs-string">&quot;styles&quot;</span>: {
+        <span class="hljs-string">&quot;website&quot;</span>: <span class="hljs-string">&quot;assets/css/mourn.css&quot;</span>,
+        <span class="hljs-string">&quot;ebook&quot;</span>: <span class="hljs-string">&quot;assets/css/mourn.css&quot;</span>,
+        <span class="hljs-string">&quot;pdf&quot;</span>: <span class="hljs-string">&quot;assets/css/mourn.css&quot;</span>,
+        <span class="hljs-string">&quot;mobi&quot;</span>: <span class="hljs-string">&quot;assets/css/mourn.css&quot;</span>,
+        <span class="hljs-string">&quot;epub&quot;</span>: <span class="hljs-string">&quot;assets/css/mourn.css&quot;</span>
+     },
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;toc&quot;</span>,
+    ]
+</code></pre>
 <script type="text/javascript">var targetUl = document.getElementsByClassName('page-inner')[0].getElementsByTagName('ul')[0];if(targetUl.getElementsByTagName('a').length>0){targetUl.className='toc';}</script>
 
 <pre><code class="lang-html">&#x4F5C;&#x8005;: &#x96EA;&#x4E4B;&#x68A6;&#x6280;&#x672F;&#x9A7F;&#x7AD9;
@@ -2524,7 +2683,7 @@
 </code></pre>
 <p><img src="https://snowdreams1006.github.io/snowdreams1006-wechat-open.png" alt="https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"> </p>
 <p><footer class="page-footer"><span class="copyright">&#xA9; snowdreams1006 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;: 
-2020-09-05 22:33:58
+2021-12-13 12:30:41
 </span></footer></p>
 <div id="gitalk-container"></div>
                                 
@@ -2569,7 +2728,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常见问题","level":"2.4.6","depth":2,"next":{"title":"热加载失败治标之法","level":"2.4.6.1","depth":3,"path":"myGitbook/issue/rm-output-directory.md","ref":"myGitbook/issue/rm-output-directory.md","articles":[]},"previous":{"title":"优化搜索","level":"2.4.5","depth":2,"path":"myGitbook/seo/README.md","ref":"myGitbook/seo/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toc","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","rss","sitemap-general","copyright","tbfed-pagefooter","mygitalk","donate","icp","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"diff":{"type":"markdown","method":"diffChars","options":{}},"baidu-tongji-with-multiple-channel":{"url":"https://hm.baidu.com/hm.js","multipleChannelConfig":{"localhost":{"token":"5273b2f99de3bc190886abb53f62267e"},"snowdreams1006.tech":{"token":"468a97b20b79bc025d27afbee73d2f39"},"blog.snowdreams1006.cn":{"token":"606f5db455f771889dcfd16bb2bd313b"},"snowdreams1006.github.io":{"token":"5273b2f99de3bc190886abb53f62267e"},"snowdreams1006.gitee.io":{"token":"60ec676f32be4579eb53a430e153f677"},"snowdreams1006.gitlab.io":{"token":"187a0e5601c4e4987cdb5b8df09c9b21"},"snowdreams1006.gitbook.io":{"token":"6e2ee1b7bea146b2d6d9382bbf803083"}}},"splitter":{},"google-tongji-with-multiple-channel":{"url":"https://www.googletagmanager.com/gtag/js","multipleChannelConfig":{"localhost":{"token":"UA-140787039-2"},"snowdreams1006.gitbook.io":{"token":"UA-140787039-1"},"snowdreams1006.github.io":{"token":"UA-140787039-2"},"snowdreams1006.gitee.io":{"token":"UA-140787039-3"},"snowdreams1006.gitlab.io":{"token":"UA-140787039-4"},"snowdreams1006.tech":{"token":"UA-140787039-5"},"blog.snowdreams1006.cn":{"token":"UA-140787039-6"}}},"copyright":{"copyProtect":false,"site":"https://snowdreams1006.github.io/","author":"雪之梦技术驿站","website":"雪之梦技术驿站","image":"https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"},"toc":{"addClass":true,"className":"toc"},"edit-link-plus":{"label":"编辑本页","base":{"snowdreams1006.github.io":"https://github.com/snowdreams1006/snowdreams1006.github.io/edit/master","snowdreams1006.gitlab.io":"https://gitlab.com/snowdreams1006/snowdreams1006.gitlab.io/edit/master","snowdreams1006.gitee.io":"https://gitee.com/snowdreams1006/snowdreams1006/edit/master"},"defaultBase":"https://github.com/snowdreams1006/snowdreams1006.github.io/edit/master"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"/wechat.jpg","alipay":"/alipay.jpg","wechatText":"微信","alipayText":"支付宝"},"favicon-absolute":{"favicon":"/favicon.ico","appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconMore":{},"appleTouchIconPrecomposedMore":{}},"sitemap-general":{"prefix":"https://snowdreams1006.github.io/"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']"]},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"雪之梦技术驿站","description":"雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io","author":"snowdreams1006","site_url":"https://snowdreams1006.github.io/","feed_url":"https://snowdreams1006.github.io/rss","managingEditor":"snowdreams1006@163.com","webMaster":"snowdreams1006@163.com"},"audio_image":{},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"浙ICP备18042346号"},"github-buttons":{"buttons":[{"user":"snowdreams1006","repo":"snowdreams1006.github.io","type":"star","size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"snowdreams1006.github.io","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"type":"markdown","preset":"colorful","linkShape":"diagonal","autoFit":true,"style":{}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"技术博客":"https://blog.snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006 搭建的 Gitbook 个人博客,详情请访问 https://snowdreams1006.github.io/"},"file":{"path":"myGitbook/issue/README.md","mtime":"2020-09-05T14:33:58.257Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-15T13:18:58.326Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常见问题","level":"2.4.6","depth":2,"next":{"title":"热加载失败治标之法","level":"2.4.6.1","depth":3,"path":"myGitbook/issue/rm-output-directory.md","ref":"myGitbook/issue/rm-output-directory.md","articles":[]},"previous":{"title":"优化搜索","level":"2.4.5","depth":2,"path":"myGitbook/seo/README.md","ref":"myGitbook/seo/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toc","-lunr","-search","search-plus","splitter","-sharing","sharing-plus","expandable-chapters-small","anchor-navigation-ex","edit-link-plus","code","chart","favicon-absolute","github-buttons","advanced-emoji","rss","sitemap-general","copyright","tbfed-pagefooter","mygitalk","donate","icp","diff","simple-mind-map","hide-element","audio_image","mermaid-gb3","baidu-tongji-with-multiple-channel","google-tongji-with-multiple-channel"],"styles":{"website":"assets/css/mourn.css","ebook":"assets/css/mourn.css","pdf":"assets/css/mourn.css","mobi":"assets/css/mourn.css","epub":"assets/css/mourn.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy snowdreams1006","modify_label":"文件修订时间: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"diff":{"type":"markdown","method":"diffChars","options":{}},"baidu-tongji-with-multiple-channel":{"url":"https://hm.baidu.com/hm.js","multipleChannelConfig":{"localhost":{"token":"5273b2f99de3bc190886abb53f62267e"},"snowdreams1006.tech":{"token":"468a97b20b79bc025d27afbee73d2f39"},"blog.snowdreams1006.cn":{"token":"606f5db455f771889dcfd16bb2bd313b"},"snowdreams1006.github.io":{"token":"5273b2f99de3bc190886abb53f62267e"},"snowdreams1006.gitee.io":{"token":"60ec676f32be4579eb53a430e153f677"},"snowdreams1006.gitlab.io":{"token":"187a0e5601c4e4987cdb5b8df09c9b21"},"snowdreams1006.gitbook.io":{"token":"6e2ee1b7bea146b2d6d9382bbf803083"}}},"splitter":{},"google-tongji-with-multiple-channel":{"url":"https://www.googletagmanager.com/gtag/js","multipleChannelConfig":{"localhost":{"token":"UA-140787039-2"},"snowdreams1006.gitbook.io":{"token":"UA-140787039-1"},"snowdreams1006.github.io":{"token":"UA-140787039-2"},"snowdreams1006.gitee.io":{"token":"UA-140787039-3"},"snowdreams1006.gitlab.io":{"token":"UA-140787039-4"},"snowdreams1006.tech":{"token":"UA-140787039-5"},"blog.snowdreams1006.cn":{"token":"UA-140787039-6"}}},"copyright":{"copyProtect":false,"site":"https://snowdreams1006.github.io/","author":"雪之梦技术驿站","website":"雪之梦技术驿站","image":"https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"},"toc":{"addClass":true,"className":"toc"},"edit-link-plus":{"label":"编辑本页","base":{"snowdreams1006.github.io":"https://github.com/snowdreams1006/snowdreams1006.github.io/edit/master","snowdreams1006.gitlab.io":"https://gitlab.com/snowdreams1006/snowdreams1006.gitlab.io/edit/master","snowdreams1006.gitee.io":"https://gitee.com/snowdreams1006/snowdreams1006/edit/master"},"defaultBase":"https://github.com/snowdreams1006/snowdreams1006.github.io/edit/master"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"/wechat.jpg","alipay":"/alipay.jpg","wechatText":"微信","alipayText":"支付宝"},"favicon-absolute":{"favicon":"/favicon.ico","appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconMore":{},"appleTouchIconPrecomposedMore":{}},"sitemap-general":{"prefix":"https://snowdreams1006.github.io/"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']"]},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["markdown","git","github","gitbook","java","php"],"title":"雪之梦技术驿站","description":"雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io","author":"snowdreams1006","site_url":"https://snowdreams1006.github.io/","feed_url":"https://snowdreams1006.github.io/rss","managingEditor":"snowdreams1006@163.com","webMaster":"snowdreams1006@163.com"},"audio_image":{},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"icp":{"link":"http://www.beian.miit.gov.cn/","style":{},"number":"浙ICP备18042346号"},"github-buttons":{"buttons":[{"user":"snowdreams1006","repo":"snowdreams1006.github.io","type":"star","size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"snowdreams1006.github.io","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"type":"markdown","preset":"colorful","linkShape":"diagonal","autoFit":true,"style":{}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"雪之梦技术驿站","language":"zh-hans","links":{"sidebar":{"技术博客":"https://blog.snowdreams1006.cn/"}},"gitbook":"3.2.3","description":"雪之梦技术驿站,snowdreams1006 搭建的 Gitbook 个人博客,详情请访问 https://snowdreams1006.github.io/"},"file":{"path":"myGitbook/issue/README.md","mtime":"2021-12-13T04:30:41.643Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-13T04:32:25.809Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
