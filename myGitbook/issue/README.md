@@ -168,3 +168,18 @@ Emitted 'error' event at:
     at F:\nodejs\node_global\node_modules\gitbook-cli\node_modules\_npm@2.15.12@npm\node_modules\graceful-fs\graceful-fs.js:232:16
     at FSReqWrap.args [as oncomplete] (fs.js:140:20)
 ```
+
+- 网站置灰
+
+```json
+    "styles": {
+        "website": "assets/css/mourn.css",
+        "ebook": "assets/css/mourn.css",
+        "pdf": "assets/css/mourn.css",
+        "mobi": "assets/css/mourn.css",
+        "epub": "assets/css/mourn.css"
+     },
+    "plugins": [
+        "toc",
+    ]
+```

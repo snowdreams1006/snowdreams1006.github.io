@@ -9,6 +9,13 @@
             "技术博客": "https://blog.snowdreams1006.cn/"
         }
     },
+    "styles": {
+        "website": "assets/css/mourn.css",
+        "ebook": "assets/css/mourn.css",
+        "pdf": "assets/css/mourn.css",
+        "mobi": "assets/css/mourn.css",
+        "epub": "assets/css/mourn.css"
+     },
     "plugins": [
         "toc",
         "-lunr",
