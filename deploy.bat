@@ -2,7 +2,7 @@
 
 git pull
 
-rm -rf _book/
+RD /S /Q _book
 
 gitbook build
 
