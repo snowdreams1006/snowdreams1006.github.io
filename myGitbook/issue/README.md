@@ -171,6 +171,8 @@ Emitted 'error' event at:
 
 - 网站置灰
 
+> 特殊纪念日全站置灰
+
 ```json
     "styles": {
         "website": "assets/css/mourn.css",
@@ -178,8 +180,5 @@ Emitted 'error' event at:
         "pdf": "assets/css/mourn.css",
         "mobi": "assets/css/mourn.css",
         "epub": "assets/css/mourn.css"
-     },
-    "plugins": [
-        "toc",
-    ]
+     }
 ```
