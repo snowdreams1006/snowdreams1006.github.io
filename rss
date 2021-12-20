@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 19 Dec 2021 15:44:39 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 20 Dec 2021 14:28:39 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -708,17 +708,20 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[雪之梦技术驿站]]></title>
+            <description><![CDATA[可惜的是, git 是别人家的孩子, windows 看到 git 在隔壁 linux 家玩的那么欢快,自然有些嫉妒.]]></description>
+            <link>https://snowdreams1006.github.io/tools/wechat-backup-xuezhimengjishuyizhan.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/wechat-backup-xuezhimengjishuyizhan.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[No title]]></title>
-            <description><![CDATA[最近还是不断有人在后台和加微信问我下载百度文库和道客巴巴的问题，我在文章里都写得非常清楚了 2021 一键下载百度文库/豆丁/道客巴巴文档 ，操作很简单，仔细看下就明白。]]></description>
             <link>https://snowdreams1006.github.io/tools/wechat-backup-sushengbuhuo.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/wechat-backup-sushengbuhuo.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
-            <description><![CDATA[1、定投改变命运？python 帮你解答
-2、用 Python 爬取 QQ 空间说说和相册
-3、一文讲懂数据库隔离级别]]></description>
             <link>https://snowdreams1006.github.io/tools/wechat-backup-pythonjishu.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/wechat-backup-pythonjishu.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>

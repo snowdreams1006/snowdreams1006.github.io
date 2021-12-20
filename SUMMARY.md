@@ -112,6 +112,7 @@
         * [给 windows 虚拟机装个 centos](tools/windows-vmware-install-centos.md)
         * [给 windows 虚拟机装个 ubuntu](tools/windows-vmware-install-ubuntu.md)
     * [公众号历史文章备份](tools/wechat-history-article-backup.md)
+        * [雪之梦技术驿站](tools/wechat-backup-xuezhimengjishuyizhan.md)
         * [苏生不惑](tools/wechat-backup-sushengbuhuo.md)
         * [Python技术](tools/wechat-backup-pythonjishu.md)
     * [学会开发专属 chrome 插件](tools/chrome-extend-learn.md)
