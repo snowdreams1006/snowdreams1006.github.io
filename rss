@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 20 Dec 2021 14:28:39 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 22 Dec 2021 01:07:43 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -709,19 +709,21 @@
         </item>
         <item>
             <title><![CDATA[雪之梦技术驿站]]></title>
-            <description><![CDATA[可惜的是, git 是别人家的孩子, windows 看到 git 在隔壁 linux 家玩的那么欢快,自然有些嫉妒.]]></description>
+            <description><![CDATA[点击查看]]></description>
             <link>https://snowdreams1006.github.io/tools/wechat-backup-xuezhimengjishuyizhan.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/wechat-backup-xuezhimengjishuyizhan.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
+            <description><![CDATA[点击查看]]></description>
             <link>https://snowdreams1006.github.io/tools/wechat-backup-sushengbuhuo.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/wechat-backup-sushengbuhuo.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
+            <description><![CDATA[点击查看]]></description>
             <link>https://snowdreams1006.github.io/tools/wechat-backup-pythonjishu.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/wechat-backup-pythonjishu.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
