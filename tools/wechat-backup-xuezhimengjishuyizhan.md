@@ -20,7 +20,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.tech/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakJoa4vIeCvc3aeguZVPRPgzTUxntTxq25odOiak4UVQOPMZS0wcVmqquPibzumCEInT4NoEh659KDbQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakJoa4vIeCvc3aeguZVPRPgzTUxntTxq25odOiak4UVQOPMZS0wcVmqquPibzumCEInT4NoEh659KDbQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484311&idx=1&sn=bf9813bbc53c59f8639e76bd711ee28a&chksm=fd1f2a5dca68a34bab1d9abf5b7a0a228133a6ded5609412fef8f6175197ffd2b2a2c1e55bd6&scene=27#wechat_redirect)
 
 ### 2020年04月文章汇总
 
@@ -36,7 +36,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.tech/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLBVRYoq6aIQHTobWUy4Z0kicRGic366hFQjhHdsSic7HcN6DxyhcuhO7SBw5sRLwibQRcEZSRRG50Rjw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLBVRYoq6aIQHTobWUy4Z0kicRGic366hFQjhHdsSic7HcN6DxyhcuhO7SBw5sRLwibQRcEZSRRG50Rjw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484303&idx=1&sn=4201ae3475080476a8207dedef86717c&chksm=fd1f2a45ca68a35346f0f7f39b3266ff70988629e3e5722331e45abbba52ec9d84decd5f7b28&scene=27#wechat_redirect)
 
 ### 2020年03月文章汇总
 
@@ -52,7 +52,7 @@
 > 
 > 来源: [阅读原文](https://github.com/snowdreams1006/gitbook-plugin-diff)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakKZw7r3ALoIxEBmaNvORmcUicKZYnTpyZwCxaPfj4TYVbzojFbd2mT5gZdS8KpG2S51oDpUc8GpbyQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakKZw7r3ALoIxEBmaNvORmcUicKZYnTpyZwCxaPfj4TYVbzojFbd2mT5gZdS8KpG2S51oDpUc8GpbyQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484297&idx=1&sn=9ade243c61ef0cc4712dc13b5b3ea0ba&chksm=fd1f2a43ca68a355abf27cb073195ef0a8d39abf7821d10b1d944bdcfca2f0c1bd440bbb448a&scene=27#wechat_redirect)
 
 96. 2020年03月18日#雪之梦技术驿站#[gitbook 入门教程之超高颜值的思维导图simple-mind-map插件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484286&idx=1&sn=8284ed3e2e29ecc61a83490620e70a99&chksm=fd1f2ab4ca68a3a28448d1b3a73900eff615ae32c5e774eb233852b0c54827ccad67f8886f37&scene=27#wechat_redirect)
 
@@ -66,7 +66,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-simple-mind-map/zh/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLlibnibZDrsRfJneibDMIQYEibdh23elib703hf5trKtKBAAHonqwY3fjXIR4xNjv0NNUFWVUBicw8KhGg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLlibnibZDrsRfJneibDMIQYEibdh23elib703hf5trKtKBAAHonqwY3fjXIR4xNjv0NNUFWVUBicw8KhGg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484286&idx=1&sn=8284ed3e2e29ecc61a83490620e70a99&chksm=fd1f2ab4ca68a3a28448d1b3a73900eff615ae32c5e774eb233852b0c54827ccad67f8886f37&scene=27#wechat_redirect)
 
 ### 2020年02月文章汇总
 
@@ -82,7 +82,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/learn-python/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLMM9BDFTmD2QlXH0v9FudkOlYfCFmJjr4NQ5dq1yd1L8asjMboMCfiaTDiaEFZoRTiaxiagSyyzmEQ8A/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLMM9BDFTmD2QlXH0v9FudkOlYfCFmJjr4NQ5dq1yd1L8asjMboMCfiaTDiaEFZoRTiaxiagSyyzmEQ8A/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484280&idx=1&sn=346aa1532a556c2588f3afea6cf4efb7&chksm=fd1f2ab2ca68a3a45d989a782f148d7bbffcfb59c0dd2fa020abff9ff171bd308399c840e2da&scene=27#wechat_redirect)
 
 94. 2020年02月17日#雪之梦技术驿站#[12306 抢票系列之只要搞定RAIL_DEVICEID的来源,从此抢票不再掉线(中)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484276&idx=1&sn=2ed59b59339855bac0c9d493b975fb57&chksm=fd1f2abeca68a3a83d54e92e17192395fd87e99c8e2d2aab8252cb8cd4df0d623a49e7fbb6c6&scene=27#wechat_redirect)
 
@@ -94,7 +94,7 @@
 > 
 > 简介: 承接上文分析并整理 12306 前端加密算法到底是如何生成RAIL_DEVICEID的值,搞定它也就攻克了爬虫最难部分,从此爬虫不再掉线!
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakJRNZc3ub2cHhwrlDvurIaPicjfHicnyByNUTbiciaTLQiaG5t5R1lMv5Pz3V4aNjib2dJSRIWxI4Ymj5FQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakJRNZc3ub2cHhwrlDvurIaPicjfHicnyByNUTbiciaTLQiaG5t5R1lMv5Pz3V4aNjib2dJSRIWxI4Ymj5FQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484276&idx=1&sn=2ed59b59339855bac0c9d493b975fb57&chksm=fd1f2abeca68a3a83d54e92e17192395fd87e99c8e2d2aab8252cb8cd4df0d623a49e7fbb6c6&scene=27#wechat_redirect)
 
 93. 2020年02月16日#雪之梦技术驿站#[12306 抢票系列之只要搞定RAIL_DEVICEID的来源,从此抢票不再掉线(上)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484272&idx=1&sn=dca4f294430d49054f3b7acc6bc75db9&chksm=fd1f2abaca68a3ac62509e6b68cbfe441ea3fb2dd5d794e8cf4b9f67dd16d57da644b6324798&scene=27#wechat_redirect)
 
@@ -108,7 +108,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.tech/tools/12306-algorithm-web-js.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLeaVR55CVMmmEI0PDeWr83OGBg04o8ulMianX1qY10W0c8dr5o7ctmiaJZaIre5icUbWBXR4aNojCFA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLeaVR55CVMmmEI0PDeWr83OGBg04o8ulMianX1qY10W0c8dr5o7ctmiaJZaIre5icUbWBXR4aNojCFA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484272&idx=1&sn=dca4f294430d49054f3b7acc6bc75db9&chksm=fd1f2abaca68a3ac62509e6b68cbfe441ea3fb2dd5d794e8cf4b9f67dd16d57da644b6324798&scene=27#wechat_redirect)
 
 ### 2020年01月文章汇总
 
@@ -124,7 +124,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/learn-python/url/urllib/teaching.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakILtkmCL1Zb5It1ZfGdhsnD9qibFQvpGhicibYicjHMMd45U799INLsCGnVW8woFrWye7qyKQYNkMWKGw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakILtkmCL1Zb5It1ZfGdhsnD9qibFQvpGhicibYicjHMMd45U799INLsCGnVW8woFrWye7qyKQYNkMWKGw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484268&idx=1&sn=9c302079c7d5ab1a6b2dbc1775a7945c&chksm=fd1f2aa6ca68a3b0353e819ec66c8a827fa9488f72be0ddd3455bebf2b4cb0bf8a1ea769710d&scene=27#wechat_redirect)
 
 ### 2019年12月文章汇总
 
@@ -140,7 +140,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-icp/zh/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLicun32HwkLR0aCnGU8fwafibZvja59P32NxszpjKU2OQBpQvAWFjGXx16zib6raEIUDNG33Vpyia49g/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLicun32HwkLR0aCnGU8fwafibZvja59P32NxszpjKU2OQBpQvAWFjGXx16zib6raEIUDNG33Vpyia49g/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484264&idx=1&sn=0fddea4085c7af187a627f47cd3b285e&chksm=fd1f2aa2ca68a3b402afefcacd82298e91fbc175040837e0a403f9f14de8385c02602c5ba461&scene=27#wechat_redirect)
 
 90. 2019年12月11日#雪之梦技术驿站#[gitbook 入门教程之自定义不一样的多语言首页插件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484257&idx=1&sn=ba838ae501fecdc5bac3240cc74cbc77&chksm=fd1f2aabca68a3bdf82624d85b8d6c0473ab98b7ab4b6cbea9e21cea71529de0dea5735d8abe&scene=27#wechat_redirect)
 
@@ -154,7 +154,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-multilingual-index/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakJT683oF2ztccibfsEOJfLSd1LcxEGSp0muuHPFg1YoV8G87xrIrbkObGHIB5aqt9MDUjyialqibRQibA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakJT683oF2ztccibfsEOJfLSd1LcxEGSp0muuHPFg1YoV8G87xrIrbkObGHIB5aqt9MDUjyialqibRQibA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484257&idx=1&sn=ba838ae501fecdc5bac3240cc74cbc77&chksm=fd1f2aabca68a3bdf82624d85b8d6c0473ab98b7ab4b6cbea9e21cea71529de0dea5735d8abe&scene=27#wechat_redirect)
 
 89. 2019年12月10日#雪之梦技术驿站#[gitbook 入门教程之增强版 edit-link-plus 编辑此页插件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484253&idx=1&sn=67ae8b271620bb779fee115471a9493f&chksm=fd1f2a97ca68a381806c05b9c20494878aa74acfbc7490ee60ec1e513ade571e495e3bc9c516&scene=27#wechat_redirect)
 
@@ -168,7 +168,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-edit-link-plus/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLZvicoawGpWjyIWKQ0OnRic8M3CkxDwbnZALg4guN6iajAK1oA0XCA9dcI6JqPOOOl59kUU5qgfKwTw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLZvicoawGpWjyIWKQ0OnRic8M3CkxDwbnZALg4guN6iajAK1oA0XCA9dcI6JqPOOOl59kUU5qgfKwTw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484253&idx=1&sn=67ae8b271620bb779fee115471a9493f&chksm=fd1f2a97ca68a381806c05b9c20494878aa74acfbc7490ee60ec1e513ade571e495e3bc9c516&scene=27#wechat_redirect)
 
 88. 2019年12月01日#雪之梦技术驿站#[从零开始搭建服务器之更加优雅地部署项目](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484249&idx=1&sn=5cfd244f7912cb31db0f9e9bbe97c9ff&chksm=fd1f2a93ca68a3856dcc9a0cd414c3d9948cd0c50840ab37c8e474c8a17f9f946e13eaff8f9a&scene=27#wechat_redirect)
 
@@ -182,7 +182,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.tech/zero2devops/docker.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLibTjGhJ7UtQY7ClXibTP6v7uu8sor5fUsAgWqn2DaicxXjRFNU4mEkCjsRPWkNl8rG8yND5Z11OstA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLibTjGhJ7UtQY7ClXibTP6v7uu8sor5fUsAgWqn2DaicxXjRFNU4mEkCjsRPWkNl8rG8yND5Z11OstA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484249&idx=1&sn=5cfd244f7912cb31db0f9e9bbe97c9ff&chksm=fd1f2a93ca68a3856dcc9a0cd414c3d9948cd0c50840ab37c8e474c8a17f9f946e13eaff8f9a&scene=27#wechat_redirect)
 
 ### 2019年11月文章汇总
 
@@ -198,7 +198,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.tech/zero2devops/login-and-logout.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLibTjGhJ7UtQY7ClXibTP6v7eVX2OLsRUZTIOibicLqVvjCTL2Kye7sfZFP66ib0t7nwtaH8cLRZ6yD7g/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLibTjGhJ7UtQY7ClXibTP6v7eVX2OLsRUZTIOibicLqVvjCTL2Kye7sfZFP66ib0t7nwtaH8cLRZ6yD7g/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484244&idx=1&sn=176982de3b50252102a9f909c8654338&chksm=fd1f2a9eca68a3889138fe9727374f75670a4126e12f1f1225e86b21b6ad5dd43f9abc638105&scene=27#wechat_redirect)
 
 86. 2019年11月22日#雪之梦技术驿站#[gitbook 入门教程之一招彻底解决 favicon 图标失效问题](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484240&idx=1&sn=3c1c8b8434951b415afa9948905b7960&chksm=fd1f2a9aca68a38c96dfacd2dfd7b9b20df47c87c6ec61c093616a5d76475c20136f21f57558&scene=27#wechat_redirect)
 
@@ -212,7 +212,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-favicon-absolute/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLO730icayDiaN2gJaN0J7pZgia3QkkJXQkmVeJpefCMaTct3eDch6OFEF1k62lsEHZSEf8bdoIzxeQg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLO730icayDiaN2gJaN0J7pZgia3QkkJXQkmVeJpefCMaTct3eDch6OFEF1k62lsEHZSEf8bdoIzxeQg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484240&idx=1&sn=3c1c8b8434951b415afa9948905b7960&chksm=fd1f2a9aca68a38c96dfacd2dfd7b9b20df47c87c6ec61c093616a5d76475c20136f21f57558&scene=27#wechat_redirect)
 
 85. 2019年11月19日#雪之梦技术驿站#[go 学习笔记之咬文嚼字带你弄清楚 defer 延迟函数](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484235&idx=1&sn=81a693d2d741d04bc9b3c9bf16583e10&chksm=fd1f2a81ca68a39704e5f07751f0f01f2544005f8e6df8a31eeeee8adbc2c97862242f1b6f25&scene=27#wechat_redirect)
 
@@ -226,7 +226,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/go/error/defer.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakI3cb6LNSNiaURmxl5n6OvicaibKUGzDHMoibK8tQxiasCjicTZSbsO98cblyoNojkX0Vmtegib6yRNGiaqFA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakI3cb6LNSNiaURmxl5n6OvicaibKUGzDHMoibK8tQxiasCjicTZSbsO98cblyoNojkX0Vmtegib6yRNGiaqFA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484235&idx=1&sn=81a693d2d741d04bc9b3c9bf16583e10&chksm=fd1f2a81ca68a39704e5f07751f0f01f2544005f8e6df8a31eeeee8adbc2c97862242f1b6f25&scene=27#wechat_redirect)
 
 84. 2019年11月10日#雪之梦技术驿站#[翻遍互联网都找不到的解决方案,一行代码轻松实现 Gitbook 默认折叠左侧菜单效果](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484227&idx=1&sn=37d19cac70e2290515eb81a0eda7a4b6&chksm=fd1f2a89ca68a39f1a65997bf5c96b416d353c180f2bea72809432071dba5c549257567cdcd4&scene=27#wechat_redirect)
 
@@ -240,7 +240,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/myGitbook/issue/modify-default-fold.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ9nyU4DcZZZCuyAzFZwse6ountVPe4aOa2l0yLgeB88ILxSOFrhZ0ic0uEGQmvhLp87vfGtXjJgKQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ9nyU4DcZZZCuyAzFZwse6ountVPe4aOa2l0yLgeB88ILxSOFrhZ0ic0uEGQmvhLp87vfGtXjJgKQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484227&idx=1&sn=37d19cac70e2290515eb81a0eda7a4b6&chksm=fd1f2a89ca68a39f1a65997bf5c96b416d353c180f2bea72809432071dba5c549257567cdcd4&scene=27#wechat_redirect)
 
 ### 2019年10月文章汇总
 
@@ -256,7 +256,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/go/error/about.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIHSmhYbOudDOBicAoOncNUWxnNxTqSsiaZbEU5DIws7iaD9eR6c7UtDKjkqtlHgUaqNe5Nt4ZDXMQpQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIHSmhYbOudDOBicAoOncNUWxnNxTqSsiaZbEU5DIws7iaD9eR6c7UtDKjkqtlHgUaqNe5Nt4ZDXMQpQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484222&idx=1&sn=12c75e8f5b60b3feef76347fcd6c2333&chksm=fd1f2af4ca68a3e2f524063f8240974c3eb7d4cb4d890efcd526c3bbda4ee3c2f10e6c5e4339&scene=27#wechat_redirect)
 
 82. 2019年10月16日#雪之梦技术驿站#[Hexo 博客快速整合gitalk组件,给静态博客添加动态评论功能!](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484217&idx=1&sn=eeceeb4c8458635fa6d7c5fd7af07c50&chksm=fd1f2af3ca68a3e574af104db181bcded0de32df4c0bc3df613927f88fbaab33ab5b9ae498f6&scene=27#wechat_redirect)
 
@@ -270,7 +270,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/hexo-plugin-gitalk/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJbb6xCA4P7Sl6trze3Eibe1VZXjEdlv3eMAX8aOHmKIeBSckNHGsOnoOsickia8DkAYmAOP7I5IxmdQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJbb6xCA4P7Sl6trze3Eibe1VZXjEdlv3eMAX8aOHmKIeBSckNHGsOnoOsickia8DkAYmAOP7I5IxmdQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484217&idx=1&sn=eeceeb4c8458635fa6d7c5fd7af07c50&chksm=fd1f2af3ca68a3e574af104db181bcded0de32df4c0bc3df613927f88fbaab33ab5b9ae498f6&scene=27#wechat_redirect)
 
 81. 2019年10月11日#雪之梦技术驿站#[Hexo 博客快速整合公众号导流工具,不用互推也能实现粉丝躺增!](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484208&idx=1&sn=fd5fa31d270efc791792888f78b6f760&chksm=fd1f2afaca68a3ec33526ac7aab8f713a96d041ffcb36a0c11fa4abba5081231bb2a0f468790&scene=27#wechat_redirect)
 
@@ -284,7 +284,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/hexo-plugin-readmore/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ8YCN4k8JxM4Kk8Krgciclv60EaLZcZCY5UfPD7lwS3PEsh3m8j70icicuVaRakHPZS7s34FZ1EP9Zg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ8YCN4k8JxM4Kk8Krgciclv60EaLZcZCY5UfPD7lwS3PEsh3m8j70icicuVaRakHPZS7s34FZ1EP9Zg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484208&idx=1&sn=fd5fa31d270efc791792888f78b6f760&chksm=fd1f2afaca68a3ec33526ac7aab8f713a96d041ffcb36a0c11fa4abba5081231bb2a0f468790&scene=27#wechat_redirect)
 
 80. 2019年10月08日#雪之梦技术驿站#[gitbook 入门教程之从零到壹发布自己的插件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484201&idx=1&sn=b40154d0f3df6fca429eef678c003d24&chksm=fd1f2ae3ca68a3f581b53f47c926e2ac02daccd3fbffb9a98c51f1811b061d96a617331df12a&scene=27#wechat_redirect)
 
@@ -298,7 +298,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-copyright/dev/dev/zero2one.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ4lwQhaXWOaCNYIibTPevZUz42hx476373blGm2Rhx3kMK9o7dv5WA5Hwzib5A4XyDLcqMTUcc13DA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ4lwQhaXWOaCNYIibTPevZUz42hx476373blGm2Rhx3kMK9o7dv5WA5Hwzib5A4XyDLcqMTUcc13DA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484201&idx=1&sn=b40154d0f3df6fca429eef678c003d24&chksm=fd1f2ae3ca68a3f581b53f47c926e2ac02daccd3fbffb9a98c51f1811b061d96a617331df12a&scene=27#wechat_redirect)
 
 79. 2019年10月07日#雪之梦技术驿站#[gitbook-plugin-readmore 阅读更多插件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484193&idx=2&sn=624204f66142ba22107cb70c78477391&chksm=fd1f2aebca68a3fd670bb0bff353641a788e1f3d82e6eb5f2ce4e73ced3dcfc94e1f69739e97&scene=27#wechat_redirect)
 
@@ -312,7 +312,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-readmore/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIUoKELyxAt71wlEd0V0AX2SiaGrDMUer7IXKzibQU1b9b6XzebsaXiaDrPQX2UY6oUR1c51HFIWcXHA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIUoKELyxAt71wlEd0V0AX2SiaGrDMUer7IXKzibQU1b9b6XzebsaXiaDrPQX2UY6oUR1c51HFIWcXHA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484193&idx=2&sn=624204f66142ba22107cb70c78477391&chksm=fd1f2aebca68a3fd670bb0bff353641a788e1f3d82e6eb5f2ce4e73ced3dcfc94e1f69739e97&scene=27#wechat_redirect)
 
 78. 2019年10月07日#雪之梦技术驿站#[gitbook-plugin-mygitalk 评论插件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484193&idx=3&sn=5fcf873090dd72efe10546160ab56a6e&chksm=fd1f2aebca68a3fd97489b3b5badc61cbd41aff053e6c20049fc679588fed03c2668ba798f5a&scene=27#wechat_redirect)
 
@@ -326,7 +326,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-mygitalk/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIUoKELyxAt71wlEd0V0AX2iaTTAsW1LtCWeVJVBQewJhPX2vYviccakQ2WiaXAquFxuXRrELgx63bYw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIUoKELyxAt71wlEd0V0AX2iaTTAsW1LtCWeVJVBQewJhPX2vYviccakQ2WiaXAquFxuXRrELgx63bYw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484193&idx=3&sn=5fcf873090dd72efe10546160ab56a6e&chksm=fd1f2aebca68a3fd97489b3b5badc61cbd41aff053e6c20049fc679588fed03c2668ba798f5a&scene=27#wechat_redirect)
 
 77. 2019年10月07日#雪之梦技术驿站#[gitbook-plugin-copyright 版权保护插件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484193&idx=1&sn=98aaa2c735462ed57cb44fe20003f99a&chksm=fd1f2aebca68a3fd4a501b3a6cbd9a8ab31ef0dc3e92a65844c09921addd1b746e7daa6ebc7c&scene=27#wechat_redirect)
 
@@ -340,7 +340,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/gitbook-plugin-copyright/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIUoKELyxAt71wlEd0V0AX2flicib0ZJlsjMXLDIazKn51icyOakiawNm7QTJjOdy5bGicYrZEgibYruibwg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIUoKELyxAt71wlEd0V0AX2flicib0ZJlsjMXLDIazKn51icyOakiawNm7QTJjOdy5bGicYrZEgibYruibwg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484193&idx=1&sn=98aaa2c735462ed57cb44fe20003f99a&chksm=fd1f2aebca68a3fd4a501b3a6cbd9a8ab31ef0dc3e92a65844c09921addd1b746e7daa6ebc7c&scene=27#wechat_redirect)
 
 76. 2019年10月04日#雪之梦技术驿站#[gitbook 入门教程之小白都能看懂的 Gitbook 插件开发全流程](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484181&idx=1&sn=c8646adc1eaaa2bb17b4dd61acb19e11&chksm=fd1f2adfca68a3c96259ee911805a7f6266a225bd6b7d460b15f52472a9b67fa0290d14609aa&scene=27#wechat_redirect)
 
@@ -354,7 +354,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/myGitbook/advance/plugin-develop.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIM2eRwXJIGHzYpKYvK4s4dtibwzbltPJw7b9KBARvymlq8hFJufCia2091TibkZIp3vWAf36iaxJImQw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIM2eRwXJIGHzYpKYvK4s4dtibwzbltPJw7b9KBARvymlq8hFJufCia2091TibkZIp3vWAf36iaxJImQw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484181&idx=1&sn=c8646adc1eaaa2bb17b4dd61acb19e11&chksm=fd1f2adfca68a3c96259ee911805a7f6266a225bd6b7d460b15f52472a9b67fa0290d14609aa&scene=27#wechat_redirect)
 
 75. 2019年10月01日#雪之梦技术驿站#[go 学习笔记之10 分钟简要理解 go 语言闭包技术](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484177&idx=1&sn=e95d52bf1b075ea4ad35d65342a56c05&chksm=fd1f2adbca68a3cd54715b03a210a1be2e08794b723f379d36512ccc56bd437ee4b7e76153e1&scene=27#wechat_redirect)
 
@@ -368,7 +368,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/go/functional/closure.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLexPNBtUIsXLVJHBVma0O506snXvX7eqa8EwVc8XpVicY5STs5KXiaA6tt8Ciae1Lb4pHzqiaFSZArSQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLexPNBtUIsXLVJHBVma0O506snXvX7eqa8EwVc8XpVicY5STs5KXiaA6tt8Ciae1Lb4pHzqiaFSZArSQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484177&idx=1&sn=e95d52bf1b075ea4ad35d65342a56c05&chksm=fd1f2adbca68a3cd54715b03a210a1be2e08794b723f379d36512ccc56bd437ee4b7e76153e1&scene=27#wechat_redirect)
 
 ### 2019年09月文章汇总
 
@@ -384,7 +384,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/myGitbook/openwrite/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLNDlXGcrLeQGFs7dC7ZcAQuOktvHbjdSiaLA5cucMckbnlyvDVRljW9hjLibIk5He3YqHUW6VkVaicQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLNDlXGcrLeQGFs7dC7ZcAQuOktvHbjdSiaLA5cucMckbnlyvDVRljW9hjLibIk5He3YqHUW6VkVaicQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484163&idx=1&sn=19ebe2bd609899d193621026497fe1a8&chksm=fd1f2ac9ca68a3df5167300636e887046d6c32c59f54f8a693b76d2c69c587900daf595a71a8&scene=27#wechat_redirect)
 
 73. 2019年09月23日#雪之梦技术驿站#[go 学习笔记之仅仅需要一个示例就能讲清楚什么闭包](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484156&idx=1&sn=88efde784e2a143821298258b6d089ee&chksm=fd1f2b36ca68a220d61bba1a38d860546395b589b7877365731e8c1f9ff32a86f7622e962524&scene=27#wechat_redirect)
 
@@ -398,7 +398,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/292725)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLyRIiaFbvZB6Tu5k6Zg9u1z5TOl4ZGy26F6tav7Ria8WpGS1hHjTmUFAdmFMqy2ghUF4EnwqScoiaxA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLyRIiaFbvZB6Tu5k6Zg9u1z5TOl4ZGy26F6tav7Ria8WpGS1hHjTmUFAdmFMqy2ghUF4EnwqScoiaxA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484156&idx=1&sn=88efde784e2a143821298258b6d089ee&chksm=fd1f2b36ca68a220d61bba1a38d860546395b589b7877365731e8c1f9ff32a86f7622e962524&scene=27#wechat_redirect)
 
 72. 2019年09月16日#雪之梦技术驿站#[go 学习笔记之学习函数式编程前不要忘了函数基础](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484151&idx=1&sn=21720d329b8eee7fa2fdc9f29805ebd8&chksm=fd1f2b3dca68a22bfb13d3b85ff5953fade35ea35bcb50d03c623ca24d0dc18e8fbd6ef9eefe&scene=27#wechat_redirect)
 
@@ -412,7 +412,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/292449)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLL5MYMia7UWOjk6b08vpEsiaApMz60AqtGeics8H05LFjhfxG7rKEGJLZ5b3rrEAWZ76JmILkhjIToQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLL5MYMia7UWOjk6b08vpEsiaApMz60AqtGeics8H05LFjhfxG7rKEGJLZ5b3rrEAWZ76JmILkhjIToQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484151&idx=1&sn=21720d329b8eee7fa2fdc9f29805ebd8&chksm=fd1f2b3dca68a22bfb13d3b85ff5953fade35ea35bcb50d03c623ca24d0dc18e8fbd6ef9eefe&scene=27#wechat_redirect)
 
 71. 2019年09月10日#雪之梦技术驿站#[go 学习笔记之无心插柳柳成荫的接口和无为而治的空接口](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484146&idx=1&sn=bf69a909d55afac1c9e54269e9cdcc89&chksm=fd1f2b38ca68a22e5fb82f0a5faa55d114b8c7e804c20081460fc31adc3765d936afa622d94b&scene=27#wechat_redirect)
 
@@ -426,7 +426,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/292257)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJEr1TURPjkLyvicRlbLf4jtzW9xf8IoU4AMJsy4edesYp85WqZ2BMmjW7PAawgxRYqdAEmGq0If2w/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJEr1TURPjkLyvicRlbLf4jtzW9xf8IoU4AMJsy4edesYp85WqZ2BMmjW7PAawgxRYqdAEmGq0If2w/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484146&idx=1&sn=bf69a909d55afac1c9e54269e9cdcc89&chksm=fd1f2b38ca68a22e5fb82f0a5faa55d114b8c7e804c20081460fc31adc3765d936afa622d94b&scene=27#wechat_redirect)
 
 ### 2019年08月文章汇总
 
@@ -440,7 +440,7 @@
 > 
 > 简介: 曾几何时,内存卡和移动硬盘无限风光,享尽人世间的繁华与推崇,慢慢的,开始听不到这方便的讨论了,但江湖上的人知道,关于他们的故事并没有真正消失.
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIHLZ2YQeGWPxy7ENav34HLqw5n0jPrGo0UgbibeiboB15l7ib3MhllC6sXFJ4PEkFEUicFhrlSpA9Cmg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIHLZ2YQeGWPxy7ENav34HLqw5n0jPrGo0UgbibeiboB15l7ib3MhllC6sXFJ4PEkFEUicFhrlSpA9Cmg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484142&idx=1&sn=a75dbdb67e115b49e9ef2320283a18dc&chksm=fd1f2b24ca68a2326b6b80937f50da0c1310a3566bddd279130dc9388197b43d1986ca1da1ad&scene=27#wechat_redirect)
 
 69. 2019年08月28日#雪之梦技术驿站#[go 学习笔记之万万没想到宠物店竟然催生出面向接口编程?](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484138&idx=1&sn=1f84ee3714345b3df0cd0a550c5c5c57&chksm=fd1f2b20ca68a2360034e4b3a736614a9df4a8f8d84908626ef3ce700b7414c8e3f445ea01a1&scene=27#wechat_redirect)
 
@@ -452,7 +452,7 @@
 > 
 > 简介: 自从宠物市场提出了继承的管理理论,很长一段时间一直顺顺利利,这种安定和谐的局面近来被一群急性子的顾客所打破.快点给我准备一批宠物,不管是猫还是狗,只要是宠物就行,快点!
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJtNoGVfojQ6rBhmm4J8NuKPP5X52DrvibRzFn5hfR6frq3bvPMSMGqiaxvpKab9BV8sAb4o7EBQOAg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJtNoGVfojQ6rBhmm4J8NuKPP5X52DrvibRzFn5hfR6frq3bvPMSMGqiaxvpKab9BV8sAb4o7EBQOAg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484138&idx=1&sn=1f84ee3714345b3df0cd0a550c5c5c57&chksm=fd1f2b20ca68a2360034e4b3a736614a9df4a8f8d84908626ef3ce700b7414c8e3f445ea01a1&scene=27#wechat_redirect)
 
 68. 2019年08月25日#雪之梦技术驿站#[go 学习笔记之是否支持以及如何实现继承](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484134&idx=1&sn=6673bd4d46342d1f7c9d367596314f6a&chksm=fd1f2b2cca68a23a89d116abcbff9e40d957d102f9366adc4bfa3fccd7a15376c64431cbec10&scene=27#wechat_redirect)
 
@@ -466,7 +466,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/291577)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIADgZckmt9ylnp1ibF0OejUAmgl457iatWpUK9jSLKPb2ictkP7O9pUU01kuD4um4SB2ztkT2fozygQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIADgZckmt9ylnp1ibF0OejUAmgl457iatWpUK9jSLKPb2ictkP7O9pUU01kuD4um4SB2ztkT2fozygQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484134&idx=1&sn=6673bd4d46342d1f7c9d367596314f6a&chksm=fd1f2b2cca68a23a89d116abcbff9e40d957d102f9366adc4bfa3fccd7a15376c64431cbec10&scene=27#wechat_redirect)
 
 67. 2019年08月24日#雪之梦技术驿站#[go 学习笔记之详细说一说封装是怎么回事](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484127&idx=1&sn=f8e03506b8e47293ae986ac5951e9d47&chksm=fd1f2b15ca68a20358aaa7265a189c95905906a4316e7220c5fbcc8c76c03a5f42ace20a0cff&scene=27#wechat_redirect)
 
@@ -480,7 +480,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/291543)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIiaog8uU9VPr4f6n6iaODml8SSsNicfeYsAtY4vXhwyRVO5FQ6rjicbdBib10tWRjdK3NHnjSjXiaNJrcQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIiaog8uU9VPr4f6n6iaODml8SSsNicfeYsAtY4vXhwyRVO5FQ6rjicbdBib10tWRjdK3NHnjSjXiaNJrcQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484127&idx=1&sn=f8e03506b8e47293ae986ac5951e9d47&chksm=fd1f2b15ca68a20358aaa7265a189c95905906a4316e7220c5fbcc8c76c03a5f42ace20a0cff&scene=27#wechat_redirect)
 
 66. 2019年08月21日#雪之梦技术驿站#[猜猜看go是不是面向对象语言？能不能面向对象编程？](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484122&idx=1&sn=e54845063bd1205ab2fcc5f4407b42b8&chksm=fd1f2b10ca68a2064e47a3b193939e8c00792e9c0bcb9c4d750467991b18ff1fcfe33e334808&scene=27#wechat_redirect)
 
@@ -494,7 +494,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/291442)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakI42prnXfAWu6iakle4ctBnJYrujWP2YTXTAMQUvzmzbedhsic4xGShZZ7bia8iaRI2iaQ1bK4dTxTqNyQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakI42prnXfAWu6iakle4ctBnJYrujWP2YTXTAMQUvzmzbedhsic4xGShZZ7bia8iaRI2iaQ1bK4dTxTqNyQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484122&idx=1&sn=e54845063bd1205ab2fcc5f4407b42b8&chksm=fd1f2b10ca68a2064e47a3b193939e8c00792e9c0bcb9c4d750467991b18ff1fcfe33e334808&scene=27#wechat_redirect)
 
 65. 2019年08月18日#雪之梦技术驿站#[go 的数组还是切片都没有什么不一样](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484117&idx=1&sn=55a1e48bf313c167d3315acd3ffcf2eb&chksm=fd1f2b1fca68a2094085817fdd2da4a721e706480f88013144cf6b5f24c5b63f832027f2686a&scene=27#wechat_redirect)
 
@@ -508,7 +508,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/291262)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKibosg2Q5qSDWrFzsHuYqdsAw3gZUoHWtsehQDQyCEXhStsiaZKeIIFlaDclSuAOk4C9OJNQvM35pg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKibosg2Q5qSDWrFzsHuYqdsAw3gZUoHWtsehQDQyCEXhStsiaZKeIIFlaDclSuAOk4C9OJNQvM35pg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484117&idx=1&sn=55a1e48bf313c167d3315acd3ffcf2eb&chksm=fd1f2b1fca68a2094085817fdd2da4a721e706480f88013144cf6b5f24c5b63f832027f2686a&scene=27#wechat_redirect)
 
 64. 2019年08月17日#雪之梦技术驿站#[go 学习笔记之值得特别关注的基础语法有哪些](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484109&idx=1&sn=d8484f5413ebbdff8971be83ae1e2017&chksm=fd1f2b07ca68a2115888be08602f632f5f112358a9c75c45527efc0f6277d1f8127b088658e0&scene=27#wechat_redirect)
 
@@ -522,7 +522,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/291205)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLDfytGRtAGeBbIjX3oqibbHdzwdSFcytS9cWAxH8KpliaY0rcgXSdgicgHU7vQCGsV49LnIia14rL35A/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLDfytGRtAGeBbIjX3oqibbHdzwdSFcytS9cWAxH8KpliaY0rcgXSdgicgHU7vQCGsV49LnIia14rL35A/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484109&idx=1&sn=d8484f5413ebbdff8971be83ae1e2017&chksm=fd1f2b07ca68a2115888be08602f632f5f112358a9c75c45527efc0f6277d1f8127b088658e0&scene=27#wechat_redirect)
 
 63. 2019年08月12日#雪之梦技术驿站#[go 学习笔记之有意思的变量和不安分的常量](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484101&idx=1&sn=e93944978b6b88d2594e40d8ca9527fa&chksm=fd1f2b0fca68a219f619ee72332754b70acd8b9e3abaf67c4efe867fbcf4e0b321c34e7ce53d&scene=27#wechat_redirect)
 
@@ -536,7 +536,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/290903)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIP5GrrsoeymiaLyYV9Ux1sxsxYicSdHgsdJhmYEKkqp4qxkSQCsJ71UtejVme5vLdakRa7WmnESfcg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIP5GrrsoeymiaLyYV9Ux1sxsxYicSdHgsdJhmYEKkqp4qxkSQCsJ71UtejVme5vLdakRa7WmnESfcg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484101&idx=1&sn=e93944978b6b88d2594e40d8ca9527fa&chksm=fd1f2b0fca68a219f619ee72332754b70acd8b9e3abaf67c4efe867fbcf4e0b321c34e7ce53d&scene=27#wechat_redirect)
 
 62. 2019年08月07日#雪之梦技术驿站#[go 学习笔记之走进Goland编辑器](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484094&idx=1&sn=48133a1eaaea8550bff35acccca79a01&chksm=fd1f2b74ca68a26250687991c1d620da7c252353f22f14bcb6395817361dcd98b1c6155ae11e&scene=27#wechat_redirect)
 
@@ -550,7 +550,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/290592)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJQrPaWvFqmWjteEyJ6oLoO7IrxRftY2EEgl9Err5cNian6MiaO9ia1IibzBDPDrLT3PFbYEOveQsiceJA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJQrPaWvFqmWjteEyJ6oLoO7IrxRftY2EEgl9Err5cNian6MiaO9ia1IibzBDPDrLT3PFbYEOveQsiceJA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484094&idx=1&sn=48133a1eaaea8550bff35acccca79a01&chksm=fd1f2b74ca68a26250687991c1d620da7c252353f22f14bcb6395817361dcd98b1c6155ae11e&scene=27#wechat_redirect)
 
 61. 2019年08月02日#雪之梦技术驿站#[go 学习笔记之工作空间](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484088&idx=1&sn=444136d78e1e5dc28275d77c218cd1c2&chksm=fd1f2b72ca68a26469144be521c8c48cb30267d6e75dd12febb1e0a5ad494172ee2a23e7122d&scene=27#wechat_redirect)
 
@@ -564,7 +564,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/290329)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIEWRkU8hTFz9vAbvA68WS9Oplusic0bMaIaF3icOdU5yzg4HibbicWIxkA19MKFJ1iaHFElglYJc0w6ibQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIEWRkU8hTFz9vAbvA68WS9Oplusic0bMaIaF3icOdU5yzg4HibbicWIxkA19MKFJ1iaHFElglYJc0w6ibQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484088&idx=1&sn=444136d78e1e5dc28275d77c218cd1c2&chksm=fd1f2b72ca68a26469144be521c8c48cb30267d6e75dd12febb1e0a5ad494172ee2a23e7122d&scene=27#wechat_redirect)
 
 60. 2019年08月01日#雪之梦技术驿站#[go 学习笔记之环境搭建](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484083&idx=1&sn=6dd86be99f68ea4e9a11b2a14812d16e&chksm=fd1f2b79ca68a26f4c11888ae3a22751769be04a561ae27a35936cbd9fc60a3162faaa1c7fc8&scene=27#wechat_redirect)
 
@@ -578,7 +578,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/290281)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIp3vYRZ5VbyCiaaW8LQmticIJ7rsFaiaOWJ3BQ4lA89OkrkCF0IzwxSO1NTlWXUA8vT43fYjChnzs4g/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIp3vYRZ5VbyCiaaW8LQmticIJ7rsFaiaOWJ3BQ4lA89OkrkCF0IzwxSO1NTlWXUA8vT43fYjChnzs4g/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484083&idx=1&sn=6dd86be99f68ea4e9a11b2a14812d16e&chksm=fd1f2b79ca68a26f4c11888ae3a22751769be04a561ae27a35936cbd9fc60a3162faaa1c7fc8&scene=27#wechat_redirect)
 
 ### 2019年07月文章汇总
 
@@ -594,7 +594,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/289735)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLBqib3X9g1a07QgnRoPu1y1IWZjm4AgOY1iaIZpPS9Wexr912Ofx9BIbkVclBoFa5qILlSBagEaOkQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLBqib3X9g1a07QgnRoPu1y1IWZjm4AgOY1iaIZpPS9Wexr912Ofx9BIbkVclBoFa5qILlSBagEaOkQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484075&idx=1&sn=189f38e159e0a7924c6f9b64e3923f1f&chksm=fd1f2b61ca68a2776e92df0b52e443a8b7e03f4e402b2e4f3810dd781e30ac2e9ccb17edbb37&scene=27#wechat_redirect)
 
 58. 2019年07月13日#雪之梦技术驿站#[Windows用户福音 | 这里有最新版的MacBook,确定不来体验一下?](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484058&idx=1&sn=cd21f27303f281a057cfe01afe5075df&chksm=fd1f2b50ca68a246da8129a8ed7b741431a42efa1ce1f9f6398b5fa50b16131d29848c195740&scene=27#wechat_redirect)
 
@@ -610,7 +610,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/289315)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakL8WBP4iajXXqMUu2xqYZGKb8R70KsYRHj1qMBIpOicPLVRguDooqTiaDJWMMlPGjTpe3eOeuUEHLMEA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakL8WBP4iajXXqMUu2xqYZGKb8R70KsYRHj1qMBIpOicPLVRguDooqTiaDJWMMlPGjTpe3eOeuUEHLMEA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484058&idx=1&sn=cd21f27303f281a057cfe01afe5075df&chksm=fd1f2b50ca68a246da8129a8ed7b741431a42efa1ce1f9f6398b5fa50b16131d29848c195740&scene=27#wechat_redirect)
 
 ### 2019年06月文章汇总
 
@@ -626,7 +626,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/tools/badge.html)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIWo8CVobicJiaupFnicjybzNrMicdUkEicws2xKkFJZRrYEsxHbLibLHu9GOS1h78ibBIS2ib6zMSRiaG4WQQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIWo8CVobicJiaupFnicjybzNrMicdUkEicws2xKkFJZRrYEsxHbLibLHu9GOS1h78ibBIS2ib6zMSRiaG4WQQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484008&idx=1&sn=a346b0bb6f210bf44c4c8933419e6e45&chksm=fd1f2ba2ca68a2b4a7b87b177247f5a56963cf7f0af41cfb1a8394a3c1263c735ed8a850d336&scene=27#wechat_redirect)
 
 ### 2019年05月文章汇总
 
@@ -642,7 +642,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/287413)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ5e1wa8nzicbPclHyPj66QibtsY4NS5V5qwY8UHiakeOZ4eDQj0eA8QaFBCMkWIOT4VLJ2XZRZXVCRg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ5e1wa8nzicbPclHyPj66QibtsY4NS5V5qwY8UHiakeOZ4eDQj0eA8QaFBCMkWIOT4VLJ2XZRZXVCRg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483933&idx=1&sn=4433912a851a36fb6e6bf226c42ae298&chksm=fd1f2bd7ca68a2c1a9b778470a34bf4276bdddaad5cd5f42795fa5ca42966af0bd571cf83f67&scene=27#wechat_redirect)
 
 55. 2019年05月30日#雪之梦技术驿站#[php 中关于时区的那点事](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483926&idx=1&sn=bdc1bdabaa421b32e8869b090f4b748b&chksm=fd1f2bdcca68a2ca5ed24dd93b0776bc7cd61260fb529902bd439bf0b379f5f661782502ed11&scene=27#wechat_redirect)
 
@@ -656,7 +656,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/287361)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIic7nZySZibun2ibib2OEIDFp766QL2icoUNUQpkuLiaqNVy8icYGqNuia7zsdVkCmBvKHgP82DRtVemmwWg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIic7nZySZibun2ibib2OEIDFp766QL2icoUNUQpkuLiaqNVy8icYGqNuia7zsdVkCmBvKHgP82DRtVemmwWg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483926&idx=1&sn=bdc1bdabaa421b32e8869b090f4b748b&chksm=fd1f2bdcca68a2ca5ed24dd93b0776bc7cd61260fb529902bd439bf0b379f5f661782502ed11&scene=27#wechat_redirect)
 
 54. 2019年05月19日#雪之梦技术驿站#[mac系统快速搭建 php 开发环境](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483921&idx=1&sn=67762a235f0c7f4a2ef801aec46615a6&chksm=fd1f2bdbca68a2cd0eb1594c58540c7911fc060d7627284d94642648174a6bf1cbb887bebc30&scene=27#wechat_redirect)
 
@@ -671,7 +671,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/286864)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakInLpQib48zWExIeDdXzDeiaGBfWrr7pic7hlUrKU3Zsgx2YoWByYmqUMgnZGYS2XlHNNhh0jpomclPQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakInLpQib48zWExIeDdXzDeiaGBfWrr7pic7hlUrKU3Zsgx2YoWByYmqUMgnZGYS2XlHNNhh0jpomclPQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483921&idx=1&sn=67762a235f0c7f4a2ef801aec46615a6&chksm=fd1f2bdbca68a2cd0eb1594c58540c7911fc060d7627284d94642648174a6bf1cbb887bebc30&scene=27#wechat_redirect)
 
 53. 2019年05月15日#雪之梦技术驿站#[给 windows 虚拟机装个 windows](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483910&idx=2&sn=865dc0281165c58d9abdc73039078edb&chksm=fd1f2bccca68a2dab431126f618bcda3b2fa5a08719dee2a375d469089072acebaac414b5141&scene=27#wechat_redirect)
 
@@ -685,7 +685,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/286676)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ4sHw04y5xLAYFSvH1hy2KDZSMQA9hnnP8OV7aMhttCLeBQhriclVW26tjAv6wbzwU0Z88qcnJj1Q/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ4sHw04y5xLAYFSvH1hy2KDZSMQA9hnnP8OV7aMhttCLeBQhriclVW26tjAv6wbzwU0Z88qcnJj1Q/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483910&idx=2&sn=865dc0281165c58d9abdc73039078edb&chksm=fd1f2bccca68a2dab431126f618bcda3b2fa5a08719dee2a375d469089072acebaac414b5141&scene=27#wechat_redirect)
 
 52. 2019年05月15日#雪之梦技术驿站#[给 windows 虚拟机装个 centos](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483910&idx=3&sn=6659dcd4298ecd457bbf049ef99283b1&chksm=fd1f2bccca68a2daa58421f0deefc830a7cc33c49f798ea83663287660fe68f0d92e6cbc36c7&scene=27#wechat_redirect)
 
@@ -699,7 +699,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/286684)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJDZfpabic85t9aahUBibu6OlDUHselTXbJqeSpria5xUrwB1QofdrRcicUTjicNDicKick2YWficD033Z6yw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJDZfpabic85t9aahUBibu6OlDUHselTXbJqeSpria5xUrwB1QofdrRcicUTjicNDicKick2YWficD033Z6yw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483910&idx=3&sn=6659dcd4298ecd457bbf049ef99283b1&chksm=fd1f2bccca68a2daa58421f0deefc830a7cc33c49f798ea83663287660fe68f0d92e6cbc36c7&scene=27#wechat_redirect)
 
 51. 2019年05月15日#雪之梦技术驿站#[给 windows 虚拟机装个 ubuntu](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483910&idx=4&sn=449febb34739536c311b499664d7faac&chksm=fd1f2bccca68a2da49adede99ffe0274410672fb150c885d4f2db115186621c212200313d29f&scene=27#wechat_redirect)
 
@@ -713,7 +713,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/286692)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJDZfpabic85t9aahUBibu6Ol7DSgDDULLWUrWnicEhoqNBMDoia4kJ56qKZXKpJ0nR2wiacpf0poAZk9g/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJDZfpabic85t9aahUBibu6Ol7DSgDDULLWUrWnicEhoqNBMDoia4kJ56qKZXKpJ0nR2wiacpf0poAZk9g/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483910&idx=4&sn=449febb34739536c311b499664d7faac&chksm=fd1f2bccca68a2da49adede99ffe0274410672fb150c885d4f2db115186621c212200313d29f&scene=27#wechat_redirect)
 
 50. 2019年05月13日#雪之梦技术驿站#[给你的计算机一种全新的体验](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483900&idx=1&sn=0fd1211ee571e8962f37dd1c795a390a&chksm=fd1f2836ca68a120fa6a17c91378feb77e98b52856e0372503df62db59bb94302c8a303196a5&scene=27#wechat_redirect)
 
@@ -728,7 +728,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/286618)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLpm3r257ceSvBlbsDibD30cZKQaMsHptUibUicI8hu3UBztcHUlvozTic9Z7URsItOqyWNNAmYvBPB5w/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLpm3r257ceSvBlbsDibD30cZKQaMsHptUibUicI8hu3UBztcHUlvozTic9Z7URsItOqyWNNAmYvBPB5w/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483900&idx=1&sn=0fd1211ee571e8962f37dd1c795a390a&chksm=fd1f2836ca68a120fa6a17c91378feb77e98b52856e0372503df62db59bb94302c8a303196a5&scene=27#wechat_redirect)
 
 49. 2019年05月12日#雪之梦技术驿站#[github 入门教程之 github 访问速度太慢怎么办](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483895&idx=1&sn=1eb573cc826f006b83c398326c512064&chksm=fd1f283dca68a12b02177ed030782c6f487b891e7326af33be2292e12dabe4390a81bdcf910a&scene=27#wechat_redirect)
 
@@ -742,7 +742,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/286582)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLicHWo0THuTXibO0Shbl5z9F7ReLen61WTwU2QEyDEbNLELEDGxaHk3xiaR4yGzUhar0lyH1BzoEYyg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLicHWo0THuTXibO0Shbl5z9F7ReLen61WTwU2QEyDEbNLELEDGxaHk3xiaR4yGzUhar0lyH1BzoEYyg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483895&idx=1&sn=1eb573cc826f006b83c398326c512064&chksm=fd1f283dca68a12b02177ed030782c6f487b891e7326af33be2292e12dabe4390a81bdcf910a&scene=27#wechat_redirect)
 
 48. 2019年05月05日#雪之梦技术驿站#[git bash 如何扩展支持tree命令](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483868&idx=2&sn=d7b978341474016b76e7ef89d661d1d3&chksm=fd1f2816ca68a1002107baf6518cf4517bb0acc194c68a83ad35e121f82c0768f8854d86796c&scene=27#wechat_redirect)
 
@@ -754,7 +754,7 @@
 > 
 > 简介: git bash 只是精简的虚拟小窝,某些好用的第三方命令居然没有提供,连 cmd 那家伙都支持的 tree 命令,堂堂的 git bash 居然都不支持?
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIHUglBLs2zTDvmmbuvLAPKE1TOF5aqFTtsxKF2cSUGeYa4xiavscjHyhesFbicaJvSFib57nJtClI3A/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIHUglBLs2zTDvmmbuvLAPKE1TOF5aqFTtsxKF2cSUGeYa4xiavscjHyhesFbicaJvSFib57nJtClI3A/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483868&idx=2&sn=d7b978341474016b76e7ef89d661d1d3&chksm=fd1f2816ca68a1002107baf6518cf4517bb0acc194c68a83ad35e121f82c0768f8854d86796c&scene=27#wechat_redirect)
 
 47. 2019年05月05日#雪之梦技术驿站#[git本是别人家的孩子,windows用户却不干了](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483868&idx=1&sn=c570375d7168cb391887a94cc72d3214&chksm=fd1f2816ca68a100523753f235e8341961e91b919590b341471987df974b14debe791f441322&scene=27#wechat_redirect)
 
@@ -768,7 +768,7 @@
 
 可惜的是, git 是别人家的孩子, windows 看到 git 在隔壁 linux 家玩的那么欢快,自然有些嫉妒.
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIHUglBLs2zTDvmmbuvLAPKre4ic44QlrrOTvGRA6L8LXmey0gEnyGS5rS1hyATsqV4o6b9a9WonJQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIHUglBLs2zTDvmmbuvLAPKre4ic44QlrrOTvGRA6L8LXmey0gEnyGS5rS1hyATsqV4o6b9a9WonJQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483868&idx=1&sn=c570375d7168cb391887a94cc72d3214&chksm=fd1f2816ca68a100523753f235e8341961e91b919590b341471987df974b14debe791f441322&scene=27#wechat_redirect)
 
 ### 2019年04月文章汇总
 
@@ -785,7 +785,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/285552)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKKJzjgNicxfl6WSZI4UkLB71cD8fI3m0l3HdhJCic2prTkxG078icAbzc0J3P1DqAqsWpQ3eMhCqBcg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKKJzjgNicxfl6WSZI4UkLB71cD8fI3m0l3HdhJCic2prTkxG078icAbzc0J3P1DqAqsWpQ3eMhCqBcg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483858&idx=2&sn=03b479cf7141e770fec473108dfd7e74&chksm=fd1f2818ca68a10e6b1afb1ea22a13d5905c00ae2bb32791eae5e5943fa97a86486350e14a44&scene=27#wechat_redirect)
 
 45. 2019年04月22日#雪之梦技术驿站#[工具资源系列之给虚拟机装个ubantu](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483858&idx=3&sn=83f2e5e42b15eec5f9de97d1edbabaaf&chksm=fd1f2818ca68a10e113ba6a31e6dc0e3b0ca079e824affa1e97a29026b844f2c89e8747b5e28&scene=27#wechat_redirect)
 
@@ -800,7 +800,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/285554)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKKJzjgNicxfl6WSZI4UkLB7zEoKbz4pWsibX7o3dz8jALnlWhq1ZrGIgffa5wsBbH2UIcscPHPDTqQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKKJzjgNicxfl6WSZI4UkLB7zEoKbz4pWsibX7o3dz8jALnlWhq1ZrGIgffa5wsBbH2UIcscPHPDTqQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483858&idx=3&sn=83f2e5e42b15eec5f9de97d1edbabaaf&chksm=fd1f2818ca68a10e113ba6a31e6dc0e3b0ca079e824affa1e97a29026b844f2c89e8747b5e28&scene=27#wechat_redirect)
 
 44. 2019年04月22日#雪之梦技术驿站#[工具资源系列之给虚拟机装个windows](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483858&idx=1&sn=6e4b2d8d3b4baee27fee752ba1520a50&chksm=fd1f2818ca68a10e8c30f449438d052287d429ea77e6ef8ebd47095e5076efb3fcc3943deebe&scene=27#wechat_redirect)
 
@@ -814,7 +814,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/285537)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKKJzjgNicxfl6WSZI4UkLB7pWSw8VecunJjVDKFIdDIgGgJq8l2bDo6DR1EouNrGQXCyRVvBOGztw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKKJzjgNicxfl6WSZI4UkLB7pWSw8VecunJjVDKFIdDIgGgJq8l2bDo6DR1EouNrGQXCyRVvBOGztw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483858&idx=1&sn=6e4b2d8d3b4baee27fee752ba1520a50&chksm=fd1f2818ca68a10e8c30f449438d052287d429ea77e6ef8ebd47095e5076efb3fcc3943deebe&scene=27#wechat_redirect)
 
 43. 2019年04月21日#雪之梦技术驿站#[工具资源系列之给mac装个虚拟机](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483848&idx=1&sn=e54238f7d849e203dbaa672b242e9f87&chksm=fd1f2802ca68a114222b3b98727dd8ae066fbe9b9a83175e0c25478010c27ff1da161cab1327&scene=27#wechat_redirect)
 
@@ -828,7 +828,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/285531)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKKJzjgNicxfl6WSZI4UkLB7eqv1hdeaTU5tzouFv1JQRIhj1ZD3UnWibcYkVa4PqU15plB4CCqick1Q/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKKJzjgNicxfl6WSZI4UkLB7eqv1hdeaTU5tzouFv1JQRIhj1ZD3UnWibcYkVa4PqU15plB4CCqick1Q/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483848&idx=1&sn=e54238f7d849e203dbaa672b242e9f87&chksm=fd1f2802ca68a114222b3b98727dd8ae066fbe9b9a83175e0c25478010c27ff1da161cab1327&scene=27#wechat_redirect)
 
 42. 2019年04月18日#雪之梦技术驿站#[gitbook 入门教程之主题插件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483843&idx=1&sn=f85c077aca71278230d250fecc5b7b86&chksm=fd1f2809ca68a11f334b1906c359c2bd49d4800a67e24fb5a907bc2ed69c7252c8181d44e53b&scene=27#wechat_redirect)
 
@@ -843,7 +843,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284805)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJAzlgsD8kynwictpRqGxKNCsviaxQZ20UoL0wHYXyEBveLTgMicncVCeBFOEgaT9ia6NvUgEJmsssHbA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJAzlgsD8kynwictpRqGxKNCsviaxQZ20UoL0wHYXyEBveLTgMicncVCeBFOEgaT9ia6NvUgEJmsssHbA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483843&idx=1&sn=f85c077aca71278230d250fecc5b7b86&chksm=fd1f2809ca68a11f334b1906c359c2bd49d4800a67e24fb5a907bc2ed69c7252c8181d44e53b&scene=27#wechat_redirect)
 
 41. 2019年04月15日#雪之梦技术驿站#[关于写作那些事之我该选择哪种格式](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483838&idx=1&sn=a20a7ca6c8659bfcdc72f0477ff3a449&chksm=fd1f2874ca68a162658aa11722271ba11a66052e547631118836b545a19aed78835cb9783676&scene=27#wechat_redirect)
 
@@ -858,7 +858,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/285245)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ7kEBUVLaL4Fxx2edcY4mTl1rWK9543o4dVeacBksWxJqOSEopy7s4iaVEY50UU3aRd4IUVXiaKtxQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ7kEBUVLaL4Fxx2edcY4mTl1rWK9543o4dVeacBksWxJqOSEopy7s4iaVEY50UU3aRd4IUVXiaKtxQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483838&idx=1&sn=a20a7ca6c8659bfcdc72f0477ff3a449&chksm=fd1f2874ca68a162658aa11722271ba11a66052e547631118836b545a19aed78835cb9783676&scene=27#wechat_redirect)
 
 40. 2019年04月14日#雪之梦技术驿站#[github告诉我构建失败,然后呢?](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483830&idx=1&sn=f573d5c257da9c48ebab5dd40b4cafc1&chksm=fd1f287cca68a16a53d061304bff72df20568bc0524eff556d282018a8534910f11ee14ebb98&scene=27#wechat_redirect)
 
@@ -872,7 +872,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/285014)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLribI5hySKzFYYRwFcqvXC9CibMaUoplfuetibDlOUOdQjdcFBqsmbUDc3aGj4ibCusOpibDNYPfzJPdg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLribI5hySKzFYYRwFcqvXC9CibMaUoplfuetibDlOUOdQjdcFBqsmbUDc3aGj4ibCusOpibDNYPfzJPdg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483830&idx=1&sn=f573d5c257da9c48ebab5dd40b4cafc1&chksm=fd1f287cca68a16a53d061304bff72df20568bc0524eff556d282018a8534910f11ee14ebb98&scene=27#wechat_redirect)
 
 39. 2019年04月12日#雪之梦技术驿站#[关于写作那些事之终于还是无法忍受纯人工统计数据](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483818&idx=1&sn=c41c4075c9683e043d9ecdeaaa9c7360&chksm=fd1f2860ca68a176f69a370786810169fa1ee61aa296bcea0a26927575ea7b9cfd57a567aed0&scene=27#wechat_redirect)
 
@@ -887,7 +887,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284937)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakItNDLFXWPyVyNicQYutibXCsIvNyou4YI9QcbKofzfQqCsfJf8uBzEwbOE7JcLok68Q2uFXiccPyNBQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakItNDLFXWPyVyNicQYutibXCsIvNyou4YI9QcbKofzfQqCsfJf8uBzEwbOE7JcLok68Q2uFXiccPyNBQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483818&idx=1&sn=c41c4075c9683e043d9ecdeaaa9c7360&chksm=fd1f2860ca68a176f69a370786810169fa1ee61aa296bcea0a26927575ea7b9cfd57a567aed0&scene=27#wechat_redirect)
 
 38. 2019年04月07日#雪之梦技术驿站#[gitbook 入门教程之导出电子书](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483808&idx=1&sn=56bab25603850ba9943124188cf79024&chksm=fd1f286aca68a17c1839015e2baf7602fb8294cfb39486af4176a897e1236da910e9befe2e05&scene=27#wechat_redirect)
 
@@ -901,7 +901,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284625)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakI7xFKUEZS4bMrLEx5c6iaibzlYr5TWLjU61WvjouhDydcKxSrf4hInebkIQq9Lic9l6EDcIUPJH8ia4A/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakI7xFKUEZS4bMrLEx5c6iaibzlYr5TWLjU61WvjouhDydcKxSrf4hInebkIQq9Lic9l6EDcIUPJH8ia4A/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483808&idx=1&sn=56bab25603850ba9943124188cf79024&chksm=fd1f286aca68a17c1839015e2baf7602fb8294cfb39486af4176a897e1236da910e9befe2e05&scene=27#wechat_redirect)
 
 37. 2019年04月06日#雪之梦技术驿站#[gitbook 入门教程之实用插件(持续更新)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483804&idx=2&sn=8c84d2046503876c5e36f467ccce9c25&chksm=fd1f2856ca68a140611529779486dd3c2625e32b0362ba45c3e13af9dea1290ff9f09d2e0b6f&scene=27#wechat_redirect)
 
@@ -915,7 +915,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284556)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakL40lyK7qY0hXhA2m59ibBbZBUeHo8sibsnm0DbNu3a80hicpiafRA8CXyokO9fiblV4nVgsPzLzlfvKDw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakL40lyK7qY0hXhA2m59ibBbZBUeHo8sibsnm0DbNu3a80hicpiafRA8CXyokO9fiblV4nVgsPzLzlfvKDw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483804&idx=2&sn=8c84d2046503876c5e36f467ccce9c25&chksm=fd1f2856ca68a140611529779486dd3c2625e32b0362ba45c3e13af9dea1290ff9f09d2e0b6f&scene=27#wechat_redirect)
 
 36. 2019年04月06日#雪之梦技术驿站#[gitbook 入门教程之插件介绍](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483804&idx=1&sn=5dddbee81783fecc81f98f3457a05d14&chksm=fd1f2856ca68a140373e3985b4a967b9bc59722d0ab0c893d457fba5f3705ade925b2ab869c9&scene=27#wechat_redirect)
 
@@ -929,7 +929,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284506)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ1zaPNJRwcqibRhsorhpWPesicBWYol7EjeRZS7poqhHYmfWj9iatq3yQjXx88kpw0SeiaE68trGl5VQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ1zaPNJRwcqibRhsorhpWPesicBWYol7EjeRZS7poqhHYmfWj9iatq3yQjXx88kpw0SeiaE68trGl5VQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483804&idx=1&sn=5dddbee81783fecc81f98f3457a05d14&chksm=fd1f2856ca68a140373e3985b4a967b9bc59722d0ab0c893d457fba5f3705ade925b2ab869c9&scene=27#wechat_redirect)
 
 35. 2019年04月05日#雪之梦技术驿站#[gitbook 入门教程之常用命令详解](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483799&idx=2&sn=5f1dc74936ad4f060ed7d2a58f064b85&chksm=fd1f285dca68a14bd1b929467a46061ecb25cccaf56d4e40dc739719ffedcb67e4acaba4fee0&scene=27#wechat_redirect)
 
@@ -943,7 +943,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284494)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ1zaPNJRwcqibRhsorhpWPe0v0TGMw78OEfn5d2pJwaBrDGJM7KQ3z8pJ7LyfAWw8pQH9CCpPAwLg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ1zaPNJRwcqibRhsorhpWPe0v0TGMw78OEfn5d2pJwaBrDGJM7KQ3z8pJ7LyfAWw8pQH9CCpPAwLg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483799&idx=2&sn=5f1dc74936ad4f060ed7d2a58f064b85&chksm=fd1f285dca68a14bd1b929467a46061ecb25cccaf56d4e40dc739719ffedcb67e4acaba4fee0&scene=27#wechat_redirect)
 
 34. 2019年04月05日#雪之梦技术驿站#[使用 gitbook.com 在线开发电子书](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483799&idx=1&sn=18c5ca2cdc98bd0bcb145ae71389d659&chksm=fd1f285dca68a14b61f9a10deb4187f629eadb8f9734b4c2d1bcc5a8e335b5401f7616480232&scene=27#wechat_redirect)
 
@@ -957,7 +957,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284482)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJOwUMPysFXIKIN2Vn1VSyTtNU0VX4tsfx4kJXGiceG2cXBeEdSKwWbVnDeribISKzeGYpIDbzQLNIQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJOwUMPysFXIKIN2Vn1VSyTtNU0VX4tsfx4kJXGiceG2cXBeEdSKwWbVnDeribISKzeGYpIDbzQLNIQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483799&idx=1&sn=18c5ca2cdc98bd0bcb145ae71389d659&chksm=fd1f285dca68a14b61f9a10deb4187f629eadb8f9734b4c2d1bcc5a8e335b5401f7616480232&scene=27#wechat_redirect)
 
 33. 2019年04月03日#雪之梦技术驿站#[使用 gitbook-cli 开发电子书](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483786&idx=1&sn=2aeac7de986705d7168a421d88efb67c&chksm=fd1f2840ca68a15608d4d4faef1382613993359d56f0eac0ac28d16e40e8ab7e2b6f4c0f7049&scene=27#wechat_redirect)
 
@@ -971,7 +971,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284372)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJaZEia79Ij8JLeVcicDMzQ3alicDjTT1JX2L1FahibKIwYeBCGkT4rx8wciaic2Um0icKHrVkyGEmFetobQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJaZEia79Ij8JLeVcicDMzQ3alicDjTT1JX2L1FahibKIwYeBCGkT4rx8wciaic2Um0icKHrVkyGEmFetobQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483786&idx=1&sn=2aeac7de986705d7168a421d88efb67c&chksm=fd1f2840ca68a15608d4d4faef1382613993359d56f0eac0ac28d16e40e8ab7e2b6f4c0f7049&scene=27#wechat_redirect)
 
 32. 2019年04月02日#雪之梦技术驿站#[gitbook 入门教程之快速体验](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483779&idx=1&sn=3164babfd1e9cdb5d01211b276607253&chksm=fd1f2849ca68a15fb423ae0021956f2d19e05319c6c4c0310c736a469c5cd4a33869109153bd&scene=27#wechat_redirect)
 
@@ -987,7 +987,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284247)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIu9uTmYcHCV53eqDcdPL0oJlLJkicv2hGPmROEyFWSthvHVRxpxiaVnl9xW4U9qwicdbMYRPsTibAWbQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIu9uTmYcHCV53eqDcdPL0oJlLJkicv2hGPmROEyFWSthvHVRxpxiaVnl9xW4U9qwicdbMYRPsTibAWbQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483779&idx=1&sn=3164babfd1e9cdb5d01211b276607253&chksm=fd1f2849ca68a15fb423ae0021956f2d19e05319c6c4c0310c736a469c5cd4a33869109153bd&scene=27#wechat_redirect)
 
 31. 2019年04月01日#雪之梦技术驿站#[gitbook 入门教程之环境要求](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483775&idx=1&sn=fd40aeb3eff639ff2a3a50165147150f&chksm=fd1f28b5ca68a1a3c37c3f990559ddbd2166cb6606e76b89c0fd88c2c7794934316d7f4c464a&scene=27#wechat_redirect)
 
@@ -1001,7 +1001,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284186)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIu9uTmYcHCV53eqDcdPL0oGFSNutzrzXf99GkliaU0zgQFM8RKlzmYUaPuichrAiaSmhng4JnhmIZRg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIu9uTmYcHCV53eqDcdPL0oGFSNutzrzXf99GkliaU0zgQFM8RKlzmYUaPuichrAiaSmhng4JnhmIZRg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483775&idx=1&sn=fd40aeb3eff639ff2a3a50165147150f&chksm=fd1f28b5ca68a1a3c37c3f990559ddbd2166cb6606e76b89c0fd88c2c7794934316d7f4c464a&scene=27#wechat_redirect)
 
 ### 2019年03月文章汇总
 
@@ -1018,7 +1018,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284135)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ8bEXxJHzWHleq7LlB96bUQGV7v01ahqFicg6MYXxdH9fAkjc0HRP2dOTcA3N5GSL9ff7sTgMMt8A/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJ8bEXxJHzWHleq7LlB96bUQGV7v01ahqFicg6MYXxdH9fAkjc0HRP2dOTcA3N5GSL9ff7sTgMMt8A/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483769&idx=1&sn=edacd2a4326252c36fa537ad55e51727&chksm=fd1f28b3ca68a1a53795a484d448a617e590a8450c345e0b0609ca3ce61336cd4a364c8e312d&scene=27#wechat_redirect)
 
 29. 2019年03月30日#雪之梦技术驿站#[gitbook 入门教程之 gitbook 简介](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483762&idx=2&sn=a4430de8d89f9c06897f2d2d49b440a8&chksm=fd1f28b8ca68a1aedaff60afe2b84ce870520b53bfbfc14c4198347d739b1aed0fc4a43ccd57&scene=27#wechat_redirect)
 
@@ -1032,7 +1032,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284104)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakI1aV7nxy1KNEEicEnB7kQQSgNeIQSa608ficibItZ2men0QVKjPKZIO8aesYywcScFic6Z5Myk3ee0ew/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakI1aV7nxy1KNEEicEnB7kQQSgNeIQSa608ficibItZ2men0QVKjPKZIO8aesYywcScFic6Z5Myk3ee0ew/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483762&idx=2&sn=a4430de8d89f9c06897f2d2d49b440a8&chksm=fd1f28b8ca68a1aedaff60afe2b84ce870520b53bfbfc14c4198347d739b1aed0fc4a43ccd57&scene=27#wechat_redirect)
 
 28. 2019年03月30日#雪之梦技术驿站#[git 入门教程之知识速查](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483762&idx=1&sn=80edee8550b2aebd094317de277f9963&chksm=fd1f28b8ca68a1ae844d477c65c862f5d45ffb7fb69aef76a7d2839575947124f25e136e3d53&scene=27#wechat_redirect)
 
@@ -1046,7 +1046,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284042)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakK4EDFkLLb0HGuRciarwEIaicnFKmelPNibaUQHkJ9Jqiaicdcabk3FY7TQMuX1bSJm4tH7sLGiaGianIjBQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakK4EDFkLLb0HGuRciarwEIaicnFKmelPNibaUQHkJ9Jqiaicdcabk3FY7TQMuX1bSJm4tH7sLGiaGianIjBQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483762&idx=1&sn=80edee8550b2aebd094317de277f9963&chksm=fd1f28b8ca68a1ae844d477c65c862f5d45ffb7fb69aef76a7d2839575947124f25e136e3d53&scene=27#wechat_redirect)
 
 27. 2019年03月29日#雪之梦技术驿站#[git 入门教程之 git 私服搭建教程](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483752&idx=2&sn=9f55dfc5f484467f838cc5aa5b6900a9&chksm=fd1f28a2ca68a1b441b8d4ec51b2cd89a44a1ca05885367062981cd3bcc16a60c8b346a6b326&scene=27#wechat_redirect)
 
@@ -1060,7 +1060,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284024)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakK4EDFkLLb0HGuRciarwEIaictOaLSARQ1bp2UKeeqht0VH6iarcJzP1m6cb5r6cGgINiaTmQdEAzxb2A/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakK4EDFkLLb0HGuRciarwEIaictOaLSARQ1bp2UKeeqht0VH6iarcJzP1m6cb5r6cGgINiaTmQdEAzxb2A/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483752&idx=2&sn=9f55dfc5f484467f838cc5aa5b6900a9&chksm=fd1f28a2ca68a1b441b8d4ec51b2cd89a44a1ca05885367062981cd3bcc16a60c8b346a6b326&scene=27#wechat_redirect)
 
 26. 2019年03月29日#雪之梦技术驿站#[git 入门教程之github 教程](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483752&idx=1&sn=e4b70b72cafdb52a069140c7d25357fa&chksm=fd1f28a2ca68a1b4ca57e81397ff7ae6e975469d4edadb1198a2567fd2f38387b79e975de279&scene=27#wechat_redirect)
 
@@ -1074,7 +1074,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/284010)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakK4EDFkLLb0HGuRciarwEIaicIpjEeV9DALtcjjuaIzdcSgccuKUdJmyU4xPFzqRfjr1M1qMtEBlCiaA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakK4EDFkLLb0HGuRciarwEIaicIpjEeV9DALtcjjuaIzdcSgccuKUdJmyU4xPFzqRfjr1M1qMtEBlCiaA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483752&idx=1&sn=e4b70b72cafdb52a069140c7d25357fa&chksm=fd1f28a2ca68a1b4ca57e81397ff7ae6e975469d4edadb1198a2567fd2f38387b79e975de279&scene=27#wechat_redirect)
 
 25. 2019年03月28日#雪之梦技术驿站#[git 入门教程之忽略文件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483747&idx=1&sn=d26929f31afdfaf28fc1f3c87affcca1&chksm=fd1f28a9ca68a1bf241b646cccfa5d5d8b4df54310693a28c8322dc1e088aa1df760c4af0e5c&scene=27#wechat_redirect)
 
@@ -1088,7 +1088,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/283990)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIyibHWZGwd9ccKpb6CDBa9zia4r6L5xnYbiaK3PVvNBMRWJwI6ukfoJRmUeK1E5o5oAibEBhUGjNicicJw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIyibHWZGwd9ccKpb6CDBa9zia4r6L5xnYbiaK3PVvNBMRWJwI6ukfoJRmUeK1E5o5oAibEBhUGjNicicJw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483747&idx=1&sn=d26929f31afdfaf28fc1f3c87affcca1&chksm=fd1f28a9ca68a1bf241b646cccfa5d5d8b4df54310693a28c8322dc1e088aa1df760c4af0e5c&scene=27#wechat_redirect)
 
 24. 2019年03月27日#雪之梦技术驿站#[git 入门教程之个性化 git](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483743&idx=2&sn=b7b5ece8fbc31ee945ebdc90502db609&chksm=fd1f2895ca68a1838b75dc6da498b0236798e0428b3a9c1deae79f41fc2ba7370b58346a90e2&scene=27#wechat_redirect)
 
@@ -1102,7 +1102,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/283900)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIvB9iaR7tT6lzh9dPhia5dOT4yLwe3xcoZxoYgcgVLhQ163AHem95umlWp26sp8lgoib0icsHXZNkVBA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIvB9iaR7tT6lzh9dPhia5dOT4yLwe3xcoZxoYgcgVLhQ163AHem95umlWp26sp8lgoib0icsHXZNkVBA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483743&idx=2&sn=b7b5ece8fbc31ee945ebdc90502db609&chksm=fd1f2895ca68a1838b75dc6da498b0236798e0428b3a9c1deae79f41fc2ba7370b58346a90e2&scene=27#wechat_redirect)
 
 23. 2019年03月27日#雪之梦技术驿站#[git 入门教程之里程碑式标签](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483743&idx=1&sn=b32d0ead85a3475e91cbf35f3d734068&chksm=fd1f2895ca68a183d15362e01ef335be78d5ef1aeb298b9c7547f552568e1e350bb1f46eb12a&scene=27#wechat_redirect)
 
@@ -1116,7 +1116,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/283846)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKMrkia9dTOQyLQTtKZyeuPRAIeuKib8jKoNh3HDwvmWtKPj4mBWAXD98SOMH6RqZ3YWFZ7LRcOjfNg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKMrkia9dTOQyLQTtKZyeuPRAIeuKib8jKoNh3HDwvmWtKPj4mBWAXD98SOMH6RqZ3YWFZ7LRcOjfNg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483743&idx=1&sn=b32d0ead85a3475e91cbf35f3d734068&chksm=fd1f2895ca68a183d15362e01ef335be78d5ef1aeb298b9c7547f552568e1e350bb1f46eb12a&scene=27#wechat_redirect)
 
 22. 2019年03月25日#雪之梦技术驿站#[git 入门教程之本地和远程仓库的本质](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483738&idx=1&sn=b1bc5102b55ec43b1e7acca864a3dd43&chksm=fd1f2890ca68a186d71d414eafd3e6ec5ea40767fd85f5e0b9d47a7a19cf3a17197bfe14556c&scene=27#wechat_redirect)
 
@@ -1130,7 +1130,7 @@
 > 
 > 来源: [阅读原文](https://www.imooc.com/article/283776)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLEfcZcq0bxiamFjyvJoBgC0oUicvXibpJQKL5wKsd9Bib8So12hBNmibUcZDVicdS5EMPLGXum58cBFd9A/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLEfcZcq0bxiamFjyvJoBgC0oUicvXibpJQKL5wKsd9Bib8So12hBNmibUcZDVicdS5EMPLGXum58cBFd9A/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483738&idx=1&sn=b1bc5102b55ec43b1e7acca864a3dd43&chksm=fd1f2890ca68a186d71d414eafd3e6ec5ea40767fd85f5e0b9d47a7a19cf3a17197bfe14556c&scene=27#wechat_redirect)
 
 21. 2019年03月24日#雪之梦技术驿站#[git 入门教程之协同开发](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483734&idx=1&sn=93d33b81e71b434adfa93bd77d7565ec&chksm=fd1f289cca68a18ad9d2f31f264edf76d2a73153dc03a6ab9056d8bbe0bf31342260303ff23b&scene=27#wechat_redirect)
 
@@ -1144,7 +1144,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/8386f89907c5)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKl3bwmtuiaXcwth5bLsOFNvIaRaZHf76Enaia3xxf6VUASwfk3HdgvVg5KLuyNQvp36Qf9jibsQK2eA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakKl3bwmtuiaXcwth5bLsOFNvIaRaZHf76Enaia3xxf6VUASwfk3HdgvVg5KLuyNQvp36Qf9jibsQK2eA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483734&idx=1&sn=93d33b81e71b434adfa93bd77d7565ec&chksm=fd1f289cca68a18ad9d2f31f264edf76d2a73153dc03a6ab9056d8bbe0bf31342260303ff23b&scene=27#wechat_redirect)
 
 20. 2019年03月23日#snowdreams1006#[git 入门教程之变基合并](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483730&idx=1&sn=b69af050511ef532ddf999da47be059e&chksm=fd1f2898ca68a18eae635303ec3d56d40b8712d26a99a70ed7e40b48c2795d6230e7eb9a19ce&scene=27#wechat_redirect)
 
@@ -1158,7 +1158,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/068ad3b9b874)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIc9pAuEDYN6E5ncqXjqYI4rSYuoXjD8iaRrIicAuRcU2EfjEnLQVpibXHFz1Lt64pKnUOTmyOzaOHIw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIc9pAuEDYN6E5ncqXjqYI4rSYuoXjD8iaRrIicAuRcU2EfjEnLQVpibXHFz1Lt64pKnUOTmyOzaOHIw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483730&idx=1&sn=b69af050511ef532ddf999da47be059e&chksm=fd1f2898ca68a18eae635303ec3d56d40b8712d26a99a70ed7e40b48c2795d6230e7eb9a19ce&scene=27#wechat_redirect)
 
 19. 2019年03月22日#snowdreams1006#[git 入门教程之紧急修复](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483726&idx=2&sn=78bb832ea90f5137a9dbcc25f96ca471&chksm=fd1f2884ca68a192832ddd73ab445196453ff3d9647471d2da13f723819575d6acbee52d6c6b&scene=27#wechat_redirect)
 
@@ -1172,7 +1172,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/e530fff00a8d)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLWwPayEHf4iaicXzEHh2kN9X7NouRrzRiaYzRWBLCjHnREPZpRCsGdVmM3wSGQDlKwqLFpeWsDYSt3w/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakLWwPayEHf4iaicXzEHh2kN9X7NouRrzRiaYzRWBLCjHnREPZpRCsGdVmM3wSGQDlKwqLFpeWsDYSt3w/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483726&idx=2&sn=78bb832ea90f5137a9dbcc25f96ca471&chksm=fd1f2884ca68a192832ddd73ab445196453ff3d9647471d2da13f723819575d6acbee52d6c6b&scene=27#wechat_redirect)
 
 18. 2019年03月22日#snowdreams1006#[git 入门教程之分支策略](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483726&idx=1&sn=11b5746a9a882e13851cd8be76fb9e55&chksm=fd1f2884ca68a192f7fc263658d34161c5c621b12086881ee4354a22c5e705d9222abc92989c&scene=27#wechat_redirect)
 
@@ -1186,7 +1186,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/576830c1955c)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJSp8TAEYe1wHb8GRnWQt6CHmtX5wPhLXnauxhVjNb5hIgqI63e8Tt8AArjzQ3lWnG1osz6jpsteA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJSp8TAEYe1wHb8GRnWQt6CHmtX5wPhLXnauxhVjNb5hIgqI63e8Tt8AArjzQ3lWnG1osz6jpsteA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483726&idx=1&sn=11b5746a9a882e13851cd8be76fb9e55&chksm=fd1f2884ca68a192f7fc263658d34161c5c621b12086881ee4354a22c5e705d9222abc92989c&scene=27#wechat_redirect)
 
 17. 2019年03月21日#snowdreams1006#[git 入门教程之版本控制](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=2&sn=6ec7fa57041953469889ab1e5311000f&chksm=fd1f2883ca68a1956f6c389a073c6cd028a5110518fb5837a048d6f16e0063eab4450cbb1fd9&scene=27#wechat_redirect)
 
@@ -1200,7 +1200,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/f9f737bf37b7)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4gg7PfXgaVkqJE5YXibQpxEZZIFoU4BZ8HoS98n2Kcauweg1fEwoyKU76w/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4gg7PfXgaVkqJE5YXibQpxEZZIFoU4BZ8HoS98n2Kcauweg1fEwoyKU76w/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=2&sn=6ec7fa57041953469889ab1e5311000f&chksm=fd1f2883ca68a1956f6c389a073c6cd028a5110518fb5837a048d6f16e0063eab4450cbb1fd9&scene=27#wechat_redirect)
 
 16. 2019年03月21日#snowdreams1006#[git 入门教程之撤销更改](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=3&sn=6f2e5aa5f441ed6182933f17c72c17d2&chksm=fd1f2883ca68a19562191ff50ccc26649fff88e2d30e19774d80e74dd34c7cd99c8fd47bb48d&scene=27#wechat_redirect)
 
@@ -1214,7 +1214,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/8386035b7ff1)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggicVEF8o7rDyaEY8XPtkcFVYYiaRicIYdYrXGAznepNZNgYYibC9IyBIllw/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggicVEF8o7rDyaEY8XPtkcFVYYiaRicIYdYrXGAznepNZNgYYibC9IyBIllw/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=3&sn=6f2e5aa5f441ed6182933f17c72c17d2&chksm=fd1f2883ca68a19562191ff50ccc26649fff88e2d30e19774d80e74dd34c7cd99c8fd47bb48d&scene=27#wechat_redirect)
 
 15. 2019年03月21日#snowdreams1006#[git 入门教程之删除文件](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=4&sn=28a44ba66b5268d9bc48a1a92c6b687c&chksm=fd1f2883ca68a1958b49622a1014ca096a3a4f2bc499780d363961f7a71a1e4a2c0c0e3d87b9&scene=27#wechat_redirect)
 
@@ -1228,7 +1228,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/3f4b60fd0ce0)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggPITB5BoQxicCGXosicsRibd4un4x5yZxibPbzIqFTE46jr9eHHuL8xoj3g/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggPITB5BoQxicCGXosicsRibd4un4x5yZxibPbzIqFTE46jr9eHHuL8xoj3g/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=4&sn=28a44ba66b5268d9bc48a1a92c6b687c&chksm=fd1f2883ca68a1958b49622a1014ca096a3a4f2bc499780d363961f7a71a1e4a2c0c0e3d87b9&scene=27#wechat_redirect)
 
 14. 2019年03月21日#snowdreams1006#[git 入门教程之远程仓库](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=5&sn=d8357366be73f43d08aa6708e110e261&chksm=fd1f2883ca68a195d7083202c18715df0244aaf25b62c1c41eba2f08380e1e430f74227a1c5f&scene=27#wechat_redirect)
 
@@ -1242,7 +1242,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/f67a8173d982)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggW9Zgu2JmsNMHldI7SAyf7ekyx7V6beoRiakwzYKgZguPJKTSAEI2dVQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggW9Zgu2JmsNMHldI7SAyf7ekyx7V6beoRiakwzYKgZguPJKTSAEI2dVQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=5&sn=d8357366be73f43d08aa6708e110e261&chksm=fd1f2883ca68a195d7083202c18715df0244aaf25b62c1c41eba2f08380e1e430f74227a1c5f&scene=27#wechat_redirect)
 
 13. 2019年03月21日#snowdreams1006#[git 入门教程之分支管理](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=6&sn=baddb4af191703c0652836036ff24e59&chksm=fd1f2883ca68a19527447dcd4b6c80fd34cc7597ac4c298f3db7b9f647dd1cee713b33a3ca43&scene=27#wechat_redirect)
 
@@ -1256,7 +1256,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/ffefd7d6e9b5)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJX9Aiagic4qr7eFtymBwk2ZanOAXkUokmLKKG99qug7XJGVc0MbL1PqtVhDcENTM3sdqcs9ibuxlZTQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJX9Aiagic4qr7eFtymBwk2ZanOAXkUokmLKKG99qug7XJGVc0MbL1PqtVhDcENTM3sdqcs9ibuxlZTQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=6&sn=baddb4af191703c0652836036ff24e59&chksm=fd1f2883ca68a19527447dcd4b6c80fd34cc7597ac4c298f3db7b9f647dd1cee713b33a3ca43&scene=27#wechat_redirect)
 
 12. 2019年03月21日#snowdreams1006#[git 入门教程之分支总览](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=7&sn=f059e24b35420abafb7da0e413fcffd2&chksm=fd1f2883ca68a1955e511d39801853f846d151a75d63da2870fc4b4f8943d81e36e2a4833c12&scene=27#wechat_redirect)
 
@@ -1270,7 +1270,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/e76cfcf6e019)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJX9Aiagic4qr7eFtymBwk2ZazZpAIic9vMXUcTLv40kJJB2vbkpkQia0SkAWhS8A3H171MCIjibJrqTeg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJX9Aiagic4qr7eFtymBwk2ZazZpAIic9vMXUcTLv40kJJB2vbkpkQia0SkAWhS8A3H171MCIjibJrqTeg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=7&sn=f059e24b35420abafb7da0e413fcffd2&chksm=fd1f2883ca68a1955e511d39801853f846d151a75d63da2870fc4b4f8943d81e36e2a4833c12&scene=27#wechat_redirect)
 
 11. 2019年03月21日#snowdreams1006#[git 入门教程之冲突合并](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=8&sn=541f67887a8cc3ba159568aa65e1263b&chksm=fd1f2883ca68a19529e8685ff610747e1eff79a6480737b6042575bc6b1077d475cd362795a3&scene=27#wechat_redirect)
 
@@ -1284,7 +1284,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/aa7ff6b3e068)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJSp8TAEYe1wHb8GRnWQt6C4E9aZ3owG2y0yAQvNO1pchRud0KicFajIjhXuJGS5gv452sXz0ngagA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJSp8TAEYe1wHb8GRnWQt6C4E9aZ3owG2y0yAQvNO1pchRud0KicFajIjhXuJGS5gv452sXz0ngagA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=8&sn=541f67887a8cc3ba159568aa65e1263b&chksm=fd1f2883ca68a19529e8685ff610747e1eff79a6480737b6042575bc6b1077d475cd362795a3&scene=27#wechat_redirect)
 
 10. 2019年03月21日#snowdreams1006#[git 入门教程之基本概念](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=1&sn=d70d5dd851d26f1b2f6bfc246698c46f&chksm=fd1f2883ca68a1955419662f827f31bf640291fc42847283a9c7a719a66314873942b34cf800&scene=27#wechat_redirect)
 
@@ -1298,7 +1298,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/ab8857cff897)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggx5TOVwY611568meGdhxPiazHicEyP3M9gM04s7iaXJr86FeOHkiapVlajA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggx5TOVwY611568meGdhxPiazHicEyP3M9gM04s7iaXJr86FeOHkiapVlajA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483721&idx=1&sn=d70d5dd851d26f1b2f6bfc246698c46f&chksm=fd1f2883ca68a1955419662f827f31bf640291fc42847283a9c7a719a66314873942b34cf800&scene=27#wechat_redirect)
 
 9. 2019年03月20日#snowdreams1006#[git 入门教程之版本管理](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483717&idx=2&sn=a508de952daae45a7f7e0673c54e0559&chksm=fd1f288fca68a1996b293450c5c64500d2b810e02b073b38d98d7bb27cf6725b39607388c26a&scene=27#wechat_redirect)
 
@@ -1312,7 +1312,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/86f09cb22bea)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggLmWo53aFiaLbibAFC588l7lQkC4UDZ3NFvhjuNECXMhOsNgNDKhDkAhA/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggLmWo53aFiaLbibAFC588l7lQkC4UDZ3NFvhjuNECXMhOsNgNDKhDkAhA/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483717&idx=2&sn=a508de952daae45a7f7e0673c54e0559&chksm=fd1f288fca68a1996b293450c5c64500d2b810e02b073b38d98d7bb27cf6725b39607388c26a&scene=27#wechat_redirect)
 
 8. 2019年03月20日#snowdreams1006#[git 入门教程之回到过去](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483717&idx=3&sn=561d8f35544d3638a1a0709a4dabf443&chksm=fd1f288fca68a199081eadb3db6b59a301d5ca3117990606d58da1df261de68ffbe893ab5798&scene=27#wechat_redirect)
 
@@ -1327,7 +1327,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/df8a80e832b6)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggACnQheEIIXtBcDWsPYxc6IHxAweI2CQY0ib1qAMKlXOvwGlH1tVLTtQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggACnQheEIIXtBcDWsPYxc6IHxAweI2CQY0ib1qAMKlXOvwGlH1tVLTtQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483717&idx=3&sn=561d8f35544d3638a1a0709a4dabf443&chksm=fd1f288fca68a199081eadb3db6b59a301d5ca3117990606d58da1df261de68ffbe893ab5798&scene=27#wechat_redirect)
 
 7. 2019年03月20日#snowdreams1006#[git 入门教程之创建本地仓库](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483717&idx=1&sn=1b722ba807b97660941965ddc9ac3926&chksm=fd1f288fca68a19959626c4da03d64522ea10109967a391b9b7ce78aa7c50e0ecd09887c90d9&scene=27#wechat_redirect)
 
@@ -1341,7 +1341,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/b9a996635bbd)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggg9r7egFpickdsJ1ISaiclWrcutnmheDeEr8zicKpmmkQic4OZwBibGic52WQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggg9r7egFpickdsJ1ISaiclWrcutnmheDeEr8zicKpmmkQic4OZwBibGic52WQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483717&idx=1&sn=1b722ba807b97660941965ddc9ac3926&chksm=fd1f288fca68a19959626c4da03d64522ea10109967a391b9b7ce78aa7c50e0ecd09887c90d9&scene=27#wechat_redirect)
 
 6. 2019年03月19日#snowdreams1006#[git 入门教程之安装 git](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483710&idx=2&sn=318535c77b80d197b0f472b3dc678f42&chksm=fd1f28f4ca68a1e22cfd5fcc39e4abd4f9f5e3305f0baf8ffe87f3744cca2943b4a428fe2ba8&scene=27#wechat_redirect)
 
@@ -1355,7 +1355,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/5c5864ecb386)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggF5YG3EAGyepADbfKLFD4RJkxvlU11iag1MP2scnFqvZ407O6fRLNBew/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggF5YG3EAGyepADbfKLFD4RJkxvlU11iag1MP2scnFqvZ407O6fRLNBew/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483710&idx=2&sn=318535c77b80d197b0f472b3dc678f42&chksm=fd1f28f4ca68a1e22cfd5fcc39e4abd4f9f5e3305f0baf8ffe87f3744cca2943b4a428fe2ba8&scene=27#wechat_redirect)
 
 5. 2019年03月19日#snowdreams1006#[git 入门教程之配置 git](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483710&idx=3&sn=8e1d6dc4fc1790c9299bb96e87e8d1b1&chksm=fd1f28f4ca68a1e2e81c80d54576f4e097d040929c6e06d30b22cd33a287d6e9a9821a345d19&scene=27#wechat_redirect)
 
@@ -1369,7 +1369,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/f98618a8da8d)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggozTbSaEoGlWZw5yzMOYHMBMfjvpJQRwffD1T76kXUoSrhwPpKRYDbQ/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggozTbSaEoGlWZw5yzMOYHMBMfjvpJQRwffD1T76kXUoSrhwPpKRYDbQ/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483710&idx=3&sn=8e1d6dc4fc1790c9299bb96e87e8d1b1&chksm=fd1f28f4ca68a1e2e81c80d54576f4e097d040929c6e06d30b22cd33a287d6e9a9821a345d19&scene=27#wechat_redirect)
 
 4. 2019年03月19日#snowdreams1006#[git 入门教程之初识git](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483710&idx=1&sn=a505a2d01f6b29e4e882dd7ea485422a&chksm=fd1f28f4ca68a1e28beb6255d3688e09f3b3e33eff4e6a954e2eee5573ea475f5c6e406f4881&scene=27#wechat_redirect)
 
@@ -1385,7 +1385,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/e3a80a5c3872)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggFOsNicfPo3V7VOOeqgOVKwQKnRqk7sfnR3ZZIsPDsIaeHMAyp903r2g/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakIkA0mjaeBkhkkZLicvtG4ggFOsNicfPo3V7VOOeqgOVKwQKnRqk7sfnR3ZZIsPDsIaeHMAyp903r2g/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483710&idx=1&sn=a505a2d01f6b29e4e882dd7ea485422a&chksm=fd1f28f4ca68a1e28beb6255d3688e09f3b3e33eff4e6a954e2eee5573ea475f5c6e406f4881&scene=27#wechat_redirect)
 
 3. 2019年03月18日#snowdreams1006#[git 入门教程之1分钟快速了解 git](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483664&idx=1&sn=29ecbc3681fef9a29ff15c16ff80d23a&chksm=fd1f28daca68a1cc87d39cd43ed5caba18aff6dfdbaa7b2b04a424fbc4f94580346c4d2b8521&scene=27#wechat_redirect)
 
@@ -1399,7 +1399,7 @@
 > 
 > 来源: [阅读原文](https://www.jianshu.com/p/563fa2702381)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJP5ib8Ff4NtIZYfqbOMvWXxJWYdQxRONHDaT1IDS0gFBictBicGqxucXA7c8vEZDlyLD9GK7FTicQ1Fg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakJP5ib8Ff4NtIZYfqbOMvWXxJWYdQxRONHDaT1IDS0gFBictBicGqxucXA7c8vEZDlyLD9GK7FTicQ1Fg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483664&idx=1&sn=29ecbc3681fef9a29ff15c16ff80d23a&chksm=fd1f28daca68a1cc87d39cd43ed5caba18aff6dfdbaa7b2b04a424fbc4f94580346c4d2b8521&scene=27#wechat_redirect)
 
 2. 2019年03月17日#snowdreams1006#[markdown 快速入门](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483658&idx=1&sn=173b851c5c982755db11f402fa86db51&chksm=fd1f28c0ca68a1d6fa2329de0f43529fda78a431c980a68c1f70df282ea514bdc5ee127b77f3&scene=27#wechat_redirect)
 
@@ -1413,7 +1413,7 @@
 > 
 > 来源: [阅读原文](https://snowdreams1006.github.io/markdown/)
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakL7hVNqG52Y7scibEOfSq4TpRewOO8TcVic3rnLrZcyk5InPq7OlbOe4u9WgialXQ46IvzueicJDZzs2w/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakL7hVNqG52Y7scibEOfSq4TpRewOO8TcVic3rnLrZcyk5InPq7OlbOe4u9WgialXQ46IvzueicJDZzs2w/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483658&idx=1&sn=173b851c5c982755db11f402fa86db51&chksm=fd1f28c0ca68a1d6fa2329de0f43529fda78a431c980a68c1f70df282ea514bdc5ee127b77f3&scene=27#wechat_redirect)
 
 1. 2019年03月08日#snowdreams1006#[markdown语法不能发表文章吗](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483657&idx=1&sn=53017c5b8ccbcd2878161325bcb0400d&chksm=fd1f28c3ca68a1d50ede6c89de92fa3de07b4719d3cdf5ba9b7d427d1a67ca02f95aaa1a9949&scene=27#wechat_redirect)
 
@@ -1423,5 +1423,11 @@
 > 
 > 作者: snowdreams1006
 > 
-> 封面: [点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakL7hVNqG52Y7scibEOfSq4TpskRZE6ibDetcwI4c7ZWWZpcCUtvdDCJOFkqJbCnLhDgIQpIQDibicgsZg/0?wx_fmt=jpeg)
+[![点击查看](http://mmbiz.qpic.cn/mmbiz_jpg/aEPult10iakL7hVNqG52Y7scibEOfSq4TpskRZE6ibDetcwI4c7ZWWZpcCUtvdDCJOFkqJbCnLhDgIQpIQDibicgsZg/0?wx_fmt=jpeg)](http://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247483657&idx=1&sn=53017c5b8ccbcd2878161325bcb0400d&chksm=fd1f28c3ca68a1d50ede6c89de92fa3de07b4719d3cdf5ba9b7d427d1a67ca02f95aaa1a9949&scene=27#wechat_redirect)
+
+**赞赏捐助**
+
+![snowdreams1006](https://snowdreams1006.cn/snowdreams1006-wechat-donate.jpg)
+
+> 如果你觉得本文对你有所帮助,希望得到您的支持,如需进一步帮助请留言!
 
