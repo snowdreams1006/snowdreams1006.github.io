@@ -120,11 +120,6 @@
             "image": "https://snowdreams1006.github.io/snowdreams1006-wechat-open.png",
             "copyProtect": false
         },
-        "tbfed-pagefooter": {
-            "copyright": "&copy 2009-2021 snowdreams1006.cn 版权所有 ICP证: <a href='https://beian.miit.gov.cn/' target='_blank'>浙ICP备18042346号</a>",
-            "modify_label": "文件修订时间: ",
-            "modify_format": "YYYY-MM-DD HH:mm:ss"
-        },
         "mygitalk": {
             "clientID": "3f62415a283d19cbd696",
             "clientSecret": "aed0e1db0620bf5d0e3a3f0225f801997ad74e58",
