@@ -121,7 +121,7 @@
             "copyProtect": false
         },
         "tbfed-pagefooter": {
-            "copyright": "&copy snowdreams1006",
+            "copyright": "&copy snowdreams1006 ICP证: <a href='https://beian.miit.gov.cn/' target='_blank'>浙ICP备18042346号</a>",
             "modify_label": "文件修订时间: ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
@@ -142,7 +142,8 @@
             "wechatText": "微信"
         },
         "icp": {
-            "number": "浙ICP备18042346号"
+            "number": "浙ICP备18042346号",
+            "link": "https://beian.miit.gov.cn/"
         },
         "hide-element": {
             "elements": ["a.gitbook-link[href='https://www.gitbook.com']"]
