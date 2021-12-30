@@ -1,7 +1,7 @@
 <p align="center">
  <img width="100px" src="./snowdreams1006.png" align="center" alt="snowdreams1006's github logo" />
- <h1 align="center">雪之梦技术驿站</h1>
- <p align="center">你在互联网的路上匆匆而来,雪之梦技术驿站助你满载而去.</p>
+ <h1 align="center">雪之梦</h1>
+ <p align="center">你在互联网的路上匆匆而来,雪之梦助你满载而去.</p>
 </p>
 <p align="center">
    <p align="center">
@@ -94,7 +94,7 @@
 
 ### 微信公众号 
 
-> 名称 : `雪之梦技术驿站`,微信号 : `snowdreams1006` 
+> 名称 : `雪之梦`,微信号 : `snowdreams1006` 
 
 关注理由:
 
@@ -104,7 +104,7 @@
 
 ### 个人微信号
 
-> 名称 : `雪之梦技术驿站`,微信号 : `snowdreams1109`
+> 名称 : `雪之梦`,微信号 : `snowdreams1109`
 
 适用场景:
 
