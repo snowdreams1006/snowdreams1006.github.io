@@ -490,5 +490,26 @@ url = git@git.dev.tencent.com:snowdreams1006/snowdreams1006.git
 
 - [JS:SVG转图片的完美方法](https://my.oschina.net/xmqywx/blog/1923732)
 - [js svg转图片格式 - Marydon - 博客园](https://www.cnblogs.com/Marydon20170307/p/11187571.html)
+- [Gitbook v3.2.3 报错 cb.apply is not a function 的解决办法](https://baijiahao.baidu.com/s?id=1756412322958841000&wfr=spider&for=pc)
+
+```bash
+snowdreams1006@192 snowdreams1006.github.io % gitbook serve 
+Live reload server started on port: 35729
+Press CTRL+C to quit ...
+
+/Users/snowdreams1006/.nvm/versions/node/v12.18.3/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287
+      if (cb) cb.apply(this, arguments)
+                 ^
+
+TypeError: cb.apply is not a function
+    at /Users/snowdreams1006/.nvm/versions/node/v12.18.3/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287:18
+    at FSReqCallback.oncomplete (fs.js:169:5)
+```
+
+```js
+  // fs.stat = statFix(fs.stat)
+  // fs.fstat = statFix(fs.fstat)
+  // fs.lstat = statFix(fs.lstat)
+```
 
 

@@ -33,7 +33,6 @@
     "gitbook-plugin-tbfed-pagefooter": "^0.0.1",
     "gitbook-plugin-toc": "0.0.2"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "gitbook serve",
     "build": "gitbook build",
