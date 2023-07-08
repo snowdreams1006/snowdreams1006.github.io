@@ -1,41 +1,58 @@
+# robots.txt generated at http://tool.chinaz.com/robots
 User-agent: Baiduspider
+Disallow: 
+User-agent: Bytespider
 Disallow: 
 User-agent: Sosospider
 Disallow: 
-User-agent: sogou spider
+User-agent: Sogou
 Disallow: 
 User-agent: YodaoBot
 Disallow: 
 User-agent: Googlebot
 Disallow: 
-User-agent: Bingbot
+User-agent: Googlebot-Image
+Disallow: 
+User-agent: bingbot
 Disallow: 
 User-agent: Slurp
-Disallow: 
+Disallow: /
 User-agent: Teoma
-Disallow: 
+Disallow: /
 User-agent: ia_archiver
-Disallow: 
+Disallow: /
 User-agent: twiceler
-Disallow: 
+Disallow: /
 User-agent: MSNBot
-Disallow: 
+Disallow: /
 User-agent: Scrubby
-Disallow: 
+Disallow: /
 User-agent: Robozilla
-Disallow: 
+Disallow: /
 User-agent: Gigabot
-Disallow: 
-User-agent: googlebot-image
-Disallow: 
-User-agent: googlebot-mobile
-Disallow: 
+Disallow: /
 User-agent: yahoo-mmcrawler
-Disallow: 
-User-agent: yahoo-blogs/v3.9
-Disallow: 
+Disallow: /
+User-agent: yahoo-blogs
+Disallow: /
 User-agent: psbot
-Disallow: 
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: InternetMeasurement
+Disallow: /
+User-agent: masscan
+Disallow: /
+User-agent: PetalBot
+Disallow: /
+User-agent: Applebot
+Disallow: /
+User-agent: CensysInspect
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
 Crawl-delay: 120
 Disallow: /bin/
 Disallow: /admin
+Disallow: /api/
+
