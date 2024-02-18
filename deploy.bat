@@ -6,9 +6,9 @@ RD /S /Q _book
 
 gitbook build
 
-scp -r _book/* ali:~/nginx/html/blog
-
 cp -rf _book/* .
+
+scp -r _book/* ali:~/nginx/html/blog
 
 git add .
 

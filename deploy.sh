@@ -9,11 +9,11 @@ rm -rf _book/
 # generate docs 
 gitbook build
 
-# push to server,only for myself
-scp -r _book/* ali:~/nginx/html/blog
-
 # copy to docs
 cp -rf _book/* .
+
+# push to server,only for myself
+scp -r _book/* ali:~/nginx/html/blog
 
 # add commits
 git add .
