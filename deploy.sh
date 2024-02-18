@@ -10,7 +10,7 @@ rm -rf _book/
 gitbook build
 
 # push to server,only for myself
-scp -r _book/* sn:~/blog
+scp -r _book/* ali:~/nginx/html/blog
 
 # copy to docs
 cp -rf _book/* .
@@ -22,4 +22,4 @@ git add .
 git commit -m "auto deploy website"
 
 # push to github and others
-git push origin 
+git push origin

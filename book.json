@@ -37,7 +37,8 @@
         "audio_image",
         "mermaid-gb3",
         "baidu-tongji-with-multiple-channel",
-        "google-tongji-with-multiple-channel"
+        "google-tongji-with-multiple-channel",
+        "ad"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -136,7 +137,7 @@
             "wechatText": "微信"
         },
         "icp": {
-            "label": "&copy 2009-2023 snowdreams1006.cn 版权所有 ",
+            "label": "&copy 2009-2024 snowdreams1006.cn 版权所有",
             "number": "浙ICP备18042346号",
             "link": "https://beian.miit.gov.cn/"
         },
@@ -197,6 +198,9 @@
                     "token": "UA-140787039-6"
                 }
             }
+        },
+        "ad": {
+          "contentTop": "%3Cmeta%20name%3D%22google-adsense-account%22%20content%3D%22ca-pub-7787441319194104%22%3E"
         }
     }
 }
