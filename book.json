@@ -200,7 +200,7 @@
             }
         },
         "ad": {
-          "contentTop": "%3Cmeta%20name%3D%22google-adsense-account%22%20content%3D%22ca-pub-7787441319194104%22%3E"
+          "content": "%3Cmeta%20name%3D%22google-adsense-account%22%20content%3D%22ca-pub-7787441319194104%22%3E"
         }
     }
 }
