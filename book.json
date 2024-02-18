@@ -37,8 +37,7 @@
         "audio_image",
         "mermaid-gb3",
         "baidu-tongji-with-multiple-channel",
-        "google-tongji-with-multiple-channel",
-        "ad"
+        "google-tongji-with-multiple-channel"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -153,7 +152,7 @@
                 "localhost":{
                     "token": "5273b2f99de3bc190886abb53f62267e"
                 },
-                "snowdreams1006.tech":{
+                "tech.snowdreams1006.cn":{
                     "token": "468a97b20b79bc025d27afbee73d2f39"
                 },
                 "blog.snowdreams1006.cn":{
@@ -179,8 +178,11 @@
                 "localhost":{
                     "token": "UA-140787039-2"
                 },
-                "snowdreams1006.gitbook.io":{
-                    "token": "UA-140787039-1"
+                "tech.snowdreams1006.cn":{
+                    "token": "UA-140787039-5"
+                },
+                "blog.snowdreams1006.cn":{
+                    "token": "UA-140787039-6"
                 },
                 "snowdreams1006.github.io":{
                     "token": "UA-140787039-2"
@@ -191,16 +193,10 @@
                 "snowdreams1006.gitlab.io":{
                     "token": "UA-140787039-4"
                 },
-                "snowdreams1006.tech":{
-                    "token": "UA-140787039-5"
-                },
-                "blog.snowdreams1006.cn":{
-                    "token": "UA-140787039-6"
+                "snowdreams1006.gitbook.io":{
+                    "token": "UA-140787039-1"
                 }
             }
-        },
-        "ad": {
-          "content": "%3Cmeta%20name%3D%22google-adsense-account%22%20content%3D%22ca-pub-7787441319194104%22%3E"
         }
     }
 }
