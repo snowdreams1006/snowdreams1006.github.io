@@ -41,6 +41,7 @@
     ],
     "pluginsConfig": {
         "favicon-absolute": {
+            "adsense": "ca-pub-7787441319194104",
             "favicon": "/favicon.ico",
             "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png"
         },
