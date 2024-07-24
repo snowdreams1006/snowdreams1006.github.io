@@ -82,6 +82,7 @@
     * [免费实现https访问网站](zero2devops/nginx-https.md)
     * [webhook](zero2devops/webhook.md)
 * [运维部署](devops/README.md)
+    * [GoAccess日志分析神器](devops/GoAccess-quickstart.md)
     * [docker 环境](devops/docker-env.md)
     * [docker 操作](devops/docker-ops.md)
     * [docker compose](devops/docker-compose.md)
