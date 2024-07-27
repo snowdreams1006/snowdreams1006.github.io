@@ -69,8 +69,8 @@ npm install -g gitbook-cli
 ```bash
 # 打印出 `CLI` 和 `GitBook` 版本信息即可,安装版本可能已经大于 `2.3.2`
 gitbook --version
-CLI version: 2.3.2
-GitBook version: 3.2.3
+# CLI version: 2.3.2
+# GitBook version: 3.2.3
 ```
 
 #### 安装 `GitBook Editor` 编辑器[可选]
