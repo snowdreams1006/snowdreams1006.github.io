@@ -73,6 +73,21 @@ gitbook --version
 # GitBook version: 3.2.3
 ```
 
+按照上述脚本,安装出错,尝试解决中...
+
+```bash
+$ gitbook --version
+# CLI version: 2.3.2
+# Installing GitBook 3.2.3
+# I:\nodejs\node_modules\gitbook-cli\node_modules\npm\node_modules\graceful-fs\polyfills.js:287
+#       if (cb) cb.apply(this, arguments)
+#                  ^
+
+# TypeError: cb.apply is not a function
+#     at I:\nodejs\node_modules\gitbook-cli\node_modules\npm\node_modules\graceful-fs\polyfills.js:287:18
+#     at FSReqCallback.oncomplete (node:fs:203:5)
+```
+
 #### 安装 `GitBook Editor` 编辑器[可选]
 
 `gitbook` 官方客户端编辑器,支持 `windows`, `mac` 和 `linux` ,主要用于可视化编辑文档,组织文档结构.
