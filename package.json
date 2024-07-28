@@ -24,6 +24,7 @@
     "gitbook-plugin-icp": "^0.1.2",
     "gitbook-plugin-mermaid-gb3": "^2.1.0",
     "gitbook-plugin-mygitalk": "^0.2.6",
+    "gitbook-plugin-readmore": "^1.1.1",
     "gitbook-plugin-rss": "^3.0.2",
     "gitbook-plugin-search-plus": "^1.0.3",
     "gitbook-plugin-sharing-plus": "^0.0.2",
