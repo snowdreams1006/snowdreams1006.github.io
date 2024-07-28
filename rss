@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 19 Feb 2024 01:06:50 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 28 Jul 2024 16:58:45 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -511,6 +511,13 @@
             <description><![CDATA[知识共享许可协议 Figure: 知识共享许可协议]]></description>
             <link>https://snowdreams1006.github.io/devops/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/devops/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[解锁Nginx日志的宝藏：GoAccess——你的实时、交互式Web日志分析神器！]]></title>
+            <description><![CDATA[在当今数字化的时代，网站的流量和用户行为数据就像是一座蕴藏着无尽秘密的宝藏。而如何有效地挖掘和分析这些数据，成为了许多网站管理者和开发者头疼的问题。GoAccess，一款开源的实时Web日志分析工具，或许能为我们提供一扇窥探这些秘密的窗口。]]></description>
+            <link>https://snowdreams1006.github.io/devops/GoAccess-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/devops/GoAccess-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
