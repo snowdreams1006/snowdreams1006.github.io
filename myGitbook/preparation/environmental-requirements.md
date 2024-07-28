@@ -69,8 +69,23 @@ npm install -g gitbook-cli
 ```bash
 # 打印出 `CLI` 和 `GitBook` 版本信息即可,安装版本可能已经大于 `2.3.2`
 gitbook --version
-CLI version: 2.3.2
-GitBook version: 3.2.3
+# CLI version: 2.3.2
+# GitBook version: 3.2.3
+```
+
+按照上述脚本,安装出错,尝试解决中...
+
+```bash
+$ gitbook --version
+# CLI version: 2.3.2
+# Installing GitBook 3.2.3
+# I:\nodejs\node_modules\gitbook-cli\node_modules\npm\node_modules\graceful-fs\polyfills.js:287
+#       if (cb) cb.apply(this, arguments)
+#                  ^
+
+# TypeError: cb.apply is not a function
+#     at I:\nodejs\node_modules\gitbook-cli\node_modules\npm\node_modules\graceful-fs\polyfills.js:287:18
+#     at FSReqCallback.oncomplete (node:fs:203:5)
 ```
 
 #### 安装 `GitBook Editor` 编辑器[可选]
