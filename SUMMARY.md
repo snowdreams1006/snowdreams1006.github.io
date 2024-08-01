@@ -86,7 +86,8 @@
 <!--     * [GoAccess地理位置](devops/GoAccess-ws.md)
     * [GoAccess实时日志](devops/GoAccess-ip.md)
     * [GoAccess常见问题](devops/GoAccess-issue.md)
-    * [GoAccess日期格式化](devops/GoAccess-datetime-format.md) -->
+    * [GoAccess日期格式化](devops/GoAccess-datetime-format.md)
+    * [GoAccess爬虫黑名单](devops/GoAccess-blacklist-ua.md) -->
     * [docker 环境](devops/docker-env.md)
     * [docker 操作](devops/docker-ops.md)
     * [docker compose](devops/docker-compose.md)
