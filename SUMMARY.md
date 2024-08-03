@@ -83,11 +83,11 @@
     * [webhook](zero2devops/webhook.md)
 * [运维部署](devops/README.md)
     * [GoAccess日志分析神器](devops/GoAccess-quickstart.md)
-<!--     * [GoAccess地理位置](devops/GoAccess-ws.md)
-    * [GoAccess实时日志](devops/GoAccess-ip.md)
-    * [GoAccess常见问题](devops/GoAccess-issue.md)
+    * [GoAccess实时日志](devops/GoAccess-ws.md)
+    <!-- * [GoAccess地理位置](devops/GoAccess-ip.md)
     * [GoAccess日期格式化](devops/GoAccess-datetime-format.md)
-    * [GoAccess爬虫黑名单](devops/GoAccess-blacklist-ua.md) -->
+    * [GoAccess爬虫黑名单](devops/GoAccess-blacklist-ua.md)
+    * [GoAccess常见问题](devops/GoAccess-issue.md) -->
     * [docker 环境](devops/docker-env.md)
     * [docker 操作](devops/docker-ops.md)
     * [docker compose](devops/docker-compose.md)
