@@ -1,5 +1,7 @@
 # [GoAccess：解锁Web日志的宝藏，你的实时分析神器！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484441&idx=1&sn=12996994a835aba76076d0b749ef9aaf&chksm=fd1f2dd3ca68a4c5417ff3b2d02cedf1f6f721db1616f2f8824b9824c000a28226901888f6b5&token=1289104885&lang=zh_CN#rd)
 
+> [GoAccess：解锁Web日志的宝藏，你的实时分析神器！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484441&idx=1&sn=12996994a835aba76076d0b749ef9aaf&chksm=fd1f2dd3ca68a4c5417ff3b2d02cedf1f6f721db1616f2f8824b9824c000a28226901888f6b5&token=1289104885&lang=zh_CN#rd)
+
 ![微信公众号: 雪之梦技术驿站](https://snowdreams1006.github.io/assets/picgo/640.gif)
 
 ---
@@ -18,11 +20,11 @@
 
 1.  **实时分析**：GoAccess能够实时读取日志文件，并在终端或Web浏览器中动态展示分析结果。这种实时性确保了网站管理者能够随时掌握网站的最新动态，快速响应各种变化。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLJLjf1bfibmaIPWoSlCTlLGp2KkiamsJYc88VDpTVyUeQcaUibAAVO2KZUbhKoBH1tCrmy0D61icUhSA/640?wx_fmt=png&from=appmsg)
+![](https://snowdreams1006.github.io/assets/picgo/640)
 
 2.  **多格式支持**：它支持Apache、Nginx、Amazon S3、Elastic Load Balancing、CloudFront等多种日志格式，几乎覆盖了所有主流的Web服务器和云服务。这使得GoAccess在不同环境下都能发挥出色的作用。
 
-![](https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLJLjf1bfibmaIPWoSlCTlLGRESEWgtWH9Brq7YP21UibG2gt8QicIM7Iz3UavSuB1RbMAuGqib6fYiaeA/640?wx_fmt=png&from=appmsg)
+![](https://snowdreams1006.github.io/assets/picgo/640)
 
 3.  **深度分析**：除了基本的统计数据（如独立访客、请求的文件、404错误等），GoAccess还能提供更深层次的分析，如操作系统、浏览器、搜索引擎和HTTP响应代码等。这些详细的数据分析有助于网站管理者更全面地了解用户行为。
 
