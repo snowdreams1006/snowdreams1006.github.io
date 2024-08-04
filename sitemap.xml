@@ -69,6 +69,7 @@
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-datetime-format.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-blacklist-ua.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-issue.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/tools/chrome-extend-learn.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/login-and-logout.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/docker.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -102,10 +103,9 @@
 <url> <loc>https://snowdreams1006.github.io/write/jianshu-optimize-static.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/write/mermaid-flow-chart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/static.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://snowdreams1006.github.io/write/faq.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/bigDataWave/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/write/faq.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://snowdreams1006.github.io/tools/chrome-extend-learn.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/dingtalk-reminder.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/12306-algorithm-web-js.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/reminder.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

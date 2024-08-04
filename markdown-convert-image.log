@@ -1,0 +1,1420 @@
+2024-08-04 14:38:23.983 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://eladmin.snowdreams1006.cn/file/image/29c71c8735b74bd2ae8ceb6fa6ec5771.gif -> https://eladmin.snowdreams1006.cn/file/image/29c71c8735b74bd2ae8ceb6fa6ec5771.gif
+2024-08-04 14:38:25.003 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/MrWHCALBV63jcf1.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/MrWHCALBV63jcf1.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:25.817 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/MrWHCALBV63jcf1.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/MrWHCALBV63jcf1.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:26.602 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/MrWHCALBV63jcf1.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/MrWHCALBV63jcf1.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:26.607 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/MrWHCALBV63jcf1.png
+2024-08-04 14:38:27.481 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wF3bjHDAqUm9s1z.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wF3bjHDAqUm9s1z.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:28.257 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wF3bjHDAqUm9s1z.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wF3bjHDAqUm9s1z.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:29.114 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wF3bjHDAqUm9s1z.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wF3bjHDAqUm9s1z.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:29.118 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/wF3bjHDAqUm9s1z.png
+2024-08-04 14:38:29.917 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wZLpnh4CzGQSt1y.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wZLpnh4CzGQSt1y.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:30.735 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wZLpnh4CzGQSt1y.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wZLpnh4CzGQSt1y.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:31.556 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wZLpnh4CzGQSt1y.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wZLpnh4CzGQSt1y.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:31.560 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/wZLpnh4CzGQSt1y.png
+2024-08-04 14:38:32.374 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/4Z8F2mEawXxoYrH.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/4Z8F2mEawXxoYrH.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:33.297 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/4Z8F2mEawXxoYrH.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/4Z8F2mEawXxoYrH.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:34.115 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/4Z8F2mEawXxoYrH.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/4Z8F2mEawXxoYrH.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:34.121 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/4Z8F2mEawXxoYrH.png
+2024-08-04 14:38:34.935 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/3YmAesCRlu7KWpE.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/3YmAesCRlu7KWpE.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:35.753 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/3YmAesCRlu7KWpE.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/3YmAesCRlu7KWpE.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:36.573 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/3YmAesCRlu7KWpE.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/3YmAesCRlu7KWpE.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:36.579 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/3YmAesCRlu7KWpE.png
+2024-08-04 14:38:37.393 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/yS9VYOM4BxWRoUa.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/yS9VYOM4BxWRoUa.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:38.211 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/yS9VYOM4BxWRoUa.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/yS9VYOM4BxWRoUa.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:39.030 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/yS9VYOM4BxWRoUa.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/yS9VYOM4BxWRoUa.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:39.034 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/yS9VYOM4BxWRoUa.png
+2024-08-04 14:38:39.774 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/qLtAca4PWMUxoZz.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/qLtAca4PWMUxoZz.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:40.567 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/qLtAca4PWMUxoZz.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/qLtAca4PWMUxoZz.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:41.386 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/qLtAca4PWMUxoZz.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/qLtAca4PWMUxoZz.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:41.391 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/qLtAca4PWMUxoZz.png
+2024-08-04 14:38:42.308 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/dntG25vVMqlNFKL.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/dntG25vVMqlNFKL.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:43.123 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/dntG25vVMqlNFKL.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/dntG25vVMqlNFKL.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:43.947 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/dntG25vVMqlNFKL.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/dntG25vVMqlNFKL.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:43.951 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/dntG25vVMqlNFKL.png
+2024-08-04 14:38:44.765 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/aVFgZNpnIqMYQ8X.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/aVFgZNpnIqMYQ8X.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:45.585 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/aVFgZNpnIqMYQ8X.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/aVFgZNpnIqMYQ8X.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:46.403 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/aVFgZNpnIqMYQ8X.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/aVFgZNpnIqMYQ8X.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:46.406 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/aVFgZNpnIqMYQ8X.png
+2024-08-04 14:38:47.222 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wsk3AYeuM9Gi2WF.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wsk3AYeuM9Gi2WF.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:48.041 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wsk3AYeuM9Gi2WF.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wsk3AYeuM9Gi2WF.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:48.825 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/wsk3AYeuM9Gi2WF.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/wsk3AYeuM9Gi2WF.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:48.830 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/wsk3AYeuM9Gi2WF.png
+2024-08-04 14:38:49.679 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/WUTzIM4xmjvdHRS.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/WUTzIM4xmjvdHRS.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:50.603 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/WUTzIM4xmjvdHRS.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/WUTzIM4xmjvdHRS.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:51.422 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/WUTzIM4xmjvdHRS.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/WUTzIM4xmjvdHRS.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:51.427 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/WUTzIM4xmjvdHRS.png
+2024-08-04 14:38:52.241 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/Ev2F5d9GtxizqZo.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/Ev2F5d9GtxizqZo.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:53.056 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/Ev2F5d9GtxizqZo.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/Ev2F5d9GtxizqZo.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:53.790 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/Ev2F5d9GtxizqZo.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/Ev2F5d9GtxizqZo.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:53.793 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/Ev2F5d9GtxizqZo.png
+2024-08-04 14:38:54.606 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/Q7a1ViAZgj8usIS.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/Q7a1ViAZgj8usIS.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:55.720 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/Q7a1ViAZgj8usIS.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/Q7a1ViAZgj8usIS.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:56.609 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/Q7a1ViAZgj8usIS.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/Q7a1ViAZgj8usIS.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:56.613 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/Q7a1ViAZgj8usIS.png
+2024-08-04 14:38:57.403 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/sEhwaBmQ3NW5oMT.png 剩余尝试次数: 3
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/sEhwaBmQ3NW5oMT.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:58.282 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/sEhwaBmQ3NW5oMT.png 剩余尝试次数: 2
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/sEhwaBmQ3NW5oMT.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:59.096 | ERROR    | __main__:upload_image:113 - 上传图片异常: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage 图片: https://s2.loli.net/2024/07/30/sEhwaBmQ3NW5oMT.png 剩余尝试次数: 1
+Traceback (most recent call last):
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 140, in <module>
+    process_markdown_images(file_path=file_path, output_path=output_path)
+    │                                 │                      └ None
+    │                                 └ '/Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md'
+    └ <function process_markdown_images at 0x105f5ba60>
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 50, in process_markdown_images
+    new_content = image_pattern.sub(replace_image_url, content)
+                  │             │   │                  └ '# GoAccess常见问题\n\n> [GoAccess实战秘籍：从新手到高手，跨越那些“坑”与“惑”！](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247484472&idx=...
+                  │             │   └ <function replace_image_url at 0x105f5bba0>
+                  │             └ <method 'sub' of 're.Pattern' objects>
+                  └ re.compile('!\\[.*?\\]\\((.*?)\\)')
+
+  File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 67, in replace_image_url
+    new_url = upload_image(original_url)
+              │            └ 'https://s2.loli.net/2024/07/30/sEhwaBmQ3NW5oMT.png'
+              └ <function upload_image at 0x105f5bc40>
+
+> File "/Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py", line 104, in upload_image
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x105019260>
+    └ <Response [400]>
+
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [400]>
+          │         └ '400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage'
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://eladmin.snowdreams1006.cn/api/free/uploadImage
+2024-08-04 14:38:59.100 | WARNING  | __main__:replace_image_url:69 - 替换图片失败: https://s2.loli.net/2024/07/30/sEhwaBmQ3NW5oMT.png
+2024-08-04 14:38:59.180 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://eladmin.snowdreams1006.cn/file/other/gidnr39eTmzqvDY.webp -> https://eladmin.snowdreams1006.cn/file/other/gidnr39eTmzqvDY.webp
+2024-08-04 14:38:59.257 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://eladmin.snowdreams1006.cn/file/image/G1JLeUsXThgWFwP.jpg -> https://eladmin.snowdreams1006.cn/file/image/G1JLeUsXThgWFwP.jpg
+2024-08-04 14:47:08.762 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://eladmin.snowdreams1006.cn/file/image/29c71c8735b74bd2ae8ceb6fa6ec5771.gif -> https://eladmin.snowdreams1006.cn/file/image/29c71c8735b74bd2ae8ceb6fa6ec5771.gif
+2024-08-04 14:47:09.216 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYRcNrYBEqFnMWwE8YichlRWCR5FWotac9hjtgfV2tWHpCcZB0XeIWPNQ/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/a780541a093cfd17cc6e4d239f8c4e0a.png
+2024-08-04 14:47:09.673 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYcM0zQAgHAKSP3hS5xBHg4xNQ48XSu6f6jgpA0tibUJmLR3pGHRicW2ag/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/b6e4ef67eb16798f55f859c4233a7c91.png
+2024-08-04 14:47:09.980 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYiaATjyyIcOuKViasXgvUyvQ6NiaQ1NKhpynJa2s8kUCwfVc38Mn5y8AMw/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/17180091722029f92cf363d568f5004f.png
+2024-08-04 14:47:10.539 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYroyjrG0XPu4Bd0GlCChK151YJ4OzwD7PdWDKHZb7AD0oY11uDkrtsQ/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/6feb5b7a81c6400375aee9f0be470b0b.png
+2024-08-04 14:47:10.863 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZY9cV1xfsW7HVTD7BAsnP0zxhLpZBYvOh6JOE5oLoliafySP7ARJ84Dicw/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/501322963beae699cacd528ddf5d8dc9.png
+2024-08-04 14:47:11.262 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYbYkgiaoOnIBgLgbjq32uURNAnMDCTJ78C3LHrwcUSCJeZJDLspFib4Tg/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/413503d0e6a8afbeedf7d0c4c08ff8f7.png
+2024-08-04 14:47:11.674 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYNKFoyvUCziaTpxBGXpCddudl4Bgg1EfaofXIr3n0rHic9FiaTwywJSWJA/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/583daee9e9ab186920cbf837d9fb8019.png
+2024-08-04 14:47:12.007 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZY1tFibPcTicpQKJfbP6482niasVUA7wFyFiayxica7WmLt2ODastZUzMu3hQ/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/09b9708664e9368670fca07e4d9c0261.png
+2024-08-04 14:47:12.365 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYIoOiaRbnjXRBJNia8cEX1V7pCo7m941zqoCWoaAdTqqPuohd9PbwUaMw/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/6a2b39b39cb22283f20218c0917b6086.png
+2024-08-04 14:47:12.579 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZY5uYpz4Fib1wuvAepvpCyBNibAuCjrd8wictfFl9A0YPDe6Uk8BRUAj2Ew/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/dcaed98f28484a57bbcbe3286bb61453.png
+2024-08-04 14:47:13.000 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYicfNGgf0e4gMdr5cYHpfHqR1QqP9XnHJKIwMpOXibTFsib3aVpcVibdNkA/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/1fff065dbd8ce750418b48470ff0c4c0.png
+2024-08-04 14:47:13.312 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYJ92y2XSdZ1kUfMIs2KrfiaYaZMaXjJTiagzu91HEiblXuFjeeSsqnhDdg/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/2d852a720a8b8ea5fb168a514fb9f1a9.png
+2024-08-04 14:47:13.547 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYOSZEmCTElDZw6mOYPX6g3OcrRFEX2DEzfu5DBo0DWZWN2njHvjib5MA/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/fc8959390b9c799b1ce0c3867239a802.png
+2024-08-04 14:47:13.936 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_png/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYKicLjvIZXbFdhicRZXclPcWASr6XEL8OicI530B1F6BVsnW8n1OW3ayaQ/640?wx_fmt=png&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/e9e1de7a269853b874eb26f3fbbab520.png
+2024-08-04 14:47:14.178 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYCysPrRvFV6ibPWYZic3KstVw03DWCyNmYiag1GceekZe7hOJ2viapgSeSg/640?wx_fmt=other&from=appmsg -> https://eladmin.snowdreams1006.cn/file/other/7bd8b8032fc4a46b9cc92385271c924c.other
+2024-08-04 14:47:14.517 | SUCCESS  | __main__:replace_image_url:72 - 替换图片成功: https://mmbiz.qpic.cn/sz_mmbiz_jpg/aEPult10iakLtMvsKFk3MldWDBrA0ibLZYRMOarLEvDEtiboibOicf4xgJiaIpnEawIJSrfub3dJRjyFeg1abPJ8HwUw/640?wx_fmt=jpeg&from=appmsg -> https://eladmin.snowdreams1006.cn/file/image/a0da60bf062d9f39cd4620b1047d59c6.jpeg

@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 03 Aug 2024 08:45:47 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 04 Aug 2024 07:12:38 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -496,6 +496,12 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[学习开发自己的 chrome 插件]]></title>
+            <link>https://snowdreams1006.github.io/tools/chrome-extend-learn.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/chrome-extend-learn.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[从零开始搭建个人服务器]]></title>
             <link>https://snowdreams1006.github.io/zero2devops/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/README.html</guid>
@@ -903,13 +909,6 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[常见问题]]></title>
-            <description><![CDATA[faq-github-build-failed-issue01.png]]></description>
-            <link>https://snowdreams1006.github.io/write/faq.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/write/faq.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
             <title><![CDATA[大数据浪潮之巅:新技术商业制胜之道]]></title>
             <description><![CDATA[这本书讲述了大数据的发展史,描述了一幅波澜壮阔的宏大场面,有的公司迎难而上抓住机遇,有的公司错失良机失之交臂,看到的不是技术而是一系列的历史事件.]]></description>
             <link>https://snowdreams1006.github.io/bigDataWave/README.html</link>
@@ -917,15 +916,16 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[其他]]></title>
-            <link>https://snowdreams1006.github.io/other/README.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/other/README.html</guid>
+            <title><![CDATA[常见问题]]></title>
+            <description><![CDATA[faq-github-build-failed-issue01.png]]></description>
+            <link>https://snowdreams1006.github.io/write/faq.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/write/faq.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[学习开发自己的 chrome 插件]]></title>
-            <link>https://snowdreams1006.github.io/tools/chrome-extend-learn.html</link>
-            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/chrome-extend-learn.html</guid>
+            <title><![CDATA[其他]]></title>
+            <link>https://snowdreams1006.github.io/other/README.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/other/README.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
