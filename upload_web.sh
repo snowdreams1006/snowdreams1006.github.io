@@ -22,7 +22,7 @@ git add .
 # commit 
 git commit -m "auto deploy website"
 # push to github and others
-git pull origin master
+git pull origin master --force
 
 # cd blog
 cd ../blog
