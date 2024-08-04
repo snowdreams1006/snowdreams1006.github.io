@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# python3 /Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md
+
 # pull latest 
 git pull
 
