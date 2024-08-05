@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 05 Aug 2024 00:10:50 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 05 Aug 2024 02:01:39 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -461,8 +461,8 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[GoAccess实时日志]]></title>
-            <description><![CDATA[微信公众号: 雪之梦技术驿站]]></description>
+            <title><![CDATA[GoAccess爬虫黑名单]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://snowdreams1006.github.io/GoAccess/GoAccess-ws.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/GoAccess/GoAccess-ws.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
