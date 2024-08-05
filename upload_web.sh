@@ -1,6 +1,22 @@
 #!/bin/bash
 
-# python3 /Users/snowdreams1006/Documents/workspace/git/myserver/platform/mac/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/GoAccess/GoAccess-issue.md
+# cd snowdreams1006.github.io
+cd ../snowdreams1006.github.io
+
+# pull latest 
+git pull
+# add commits
+git add .
+# commit 
+git commit -m "auto deploy website"
+# push to github and others
+git push
+
+# copy to blog
+cp -rf assets/picgo/* ../blog/assets/picgo
+
+# cd blog
+cd ../blog
 
 # pull latest 
 git pull
@@ -14,26 +30,27 @@ scp -r _book/* ali:~/nginx/html/blog
 # copy to snowdreams1006.github.io
 cp -rf _book/* ../snowdreams1006.github.io
 
+# add commits
+git add .
+
+# commit 
+git commit -m "build website and update"
+
+# push to github and others
+git push
+
 # cd snowdreams1006.github.io
 cd ../snowdreams1006.github.io
 
 # pull latest 
-git pull origin master
+git pull
 # add commits
 git add .
 # commit 
 git commit -m "auto deploy website"
 # push to github and others
-git pull origin master --force
+git push
 
 # cd blog
 cd ../blog
 
-# add commits
-git add .
-
-# commit 
-git commit -m "automatic update"
-
-# push to github and others
-git push
