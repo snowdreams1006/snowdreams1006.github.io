@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# status latest 
+git status
+
 # pull latest 
 git pull
 
@@ -7,7 +10,10 @@ git pull
 git add .
 
 # commit 
-git commit -m "auto deploy website"
+git commit -m "auto pull and push"
 
 # push to github and others
 git push
+
+# status latest 
+git status
