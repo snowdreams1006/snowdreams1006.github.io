@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 05 Aug 2024 03:31:35 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 05 Aug 2024 06:08:14 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -580,7 +580,7 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[No title]]></title>
+            <title><![CDATA[重装系统之必备软件]]></title>
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://snowdreams1006.github.io/tools/recommend-tools.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/recommend-tools.html</guid>
