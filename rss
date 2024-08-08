@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦静态网站,源码托管于 https://github.com/snowdreams1006/snowdreams1006.github.io]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 05 Aug 2024 06:08:14 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 08 Aug 2024 07:03:26 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -587,10 +587,23 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[【技术干货】一探究竟：揭秘 Charles 让数据“原形毕露”的神器功能！]]></title>
+            <description><![CDATA[大家好，今天我们要探讨的是那个让程序猿们梦寐以求的网络调试捕手 —— Charles。你是否还在为网页加载慢、APP 数据传输异常这些问题头疼不已？那么，就让 Charles 来助你一臂之力，让我们的数据问题迎刃而解！]]></description>
+            <link>https://snowdreams1006.github.io/tools/charles-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/charles-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[重装系统之后端开发]]></title>
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://snowdreams1006.github.io/tools/env-config.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/env-config.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[设置终端代理环境]]></title>
+            <link>https://snowdreams1006.github.io/tools/cmd-proxy.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/tools/cmd-proxy.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
