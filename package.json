@@ -12,6 +12,7 @@
     "gitbook-plugin-baidu-tongji-with-multiple-channel": "^0.1.0",
     "gitbook-plugin-chart": "^0.2.2",
     "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-copy-code-button": "^0.0.2",
     "gitbook-plugin-copyright": "^0.4.1",
     "gitbook-plugin-diff": "^0.1.0",
     "gitbook-plugin-donate": "^1.0.2",

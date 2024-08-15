@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦静态网站]]></description>
         <link>https://snowdreams1006.github.io/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 08 Aug 2024 08:06:34 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 15 Aug 2024 08:08:01 GMT</lastBuildDate>
         <atom:link href="https://snowdreams1006.github.io/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -448,6 +448,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[gitbook安装出错]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://snowdreams1006.github.io/myGitbook/issue/gitbook-install-issue.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/issue/gitbook-install-issue.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[更多学习笔记]]></title>
             <link>https://snowdreams1006.github.io/myGitbook/reference/README.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/myGitbook/reference/README.html</guid>
@@ -495,9 +502,64 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[微信公众号开发指南之从入门到弃坑]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/mp-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/mp-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信公众号开发原来如此简单呐!]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/mp-test.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/mp-test.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[申请个人订阅号兴趣认证]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/mp-interest-certification.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/mp-interest-certification.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[你敢取关我就拉黑防白嫖]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/mp-add-blacklist.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/mp-add-blacklist.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[没想到永久素材还能这么玩]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/mp-permanent-assets.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/mp-permanent-assets.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[我倒是要看看是谁在白嫖]]></title>
+            <link>https://snowdreams1006.github.io/zero2devops/mp-show-loser.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/mp-show-loser.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[学习开发自己的 chrome 插件]]></title>
             <link>https://snowdreams1006.github.io/tools/chrome-extend-learn.html</link>
             <guid isPermaLink="true">https://snowdreams1006.github.io/tools/chrome-extend-learn.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[重置npm双重因素认证]]></title>
+            <description><![CDATA[很早以前注册登录npm官网,需要开启双重因素认证,多年前的子弹刚好落在了此时此刻的自己.]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/npm-reset-2FA.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/npm-reset-2FA.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[npm更新发布插件体验]]></title>
+            <description><![CDATA[在Node.js的生态系统中，npm（Node Package Manager）是不可或缺的一部分，它不仅是获取和管理Node.js项目依赖的核心工具，也是分享和发布自己开发的模块或库的关键平台。]]></description>
+            <link>https://snowdreams1006.github.io/zero2devops/npm-publish-quickstart.html</link>
+            <guid isPermaLink="true">https://snowdreams1006.github.io/zero2devops/npm-publish-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
