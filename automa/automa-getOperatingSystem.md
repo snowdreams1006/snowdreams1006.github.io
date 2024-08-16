@@ -1,6 +1,6 @@
 # JavaScript code获取操作系统
 
-> Automa插件之js脚本小技巧：在浏览器环境下轻松判断操作系统
+> [Automa插件之js脚本小技巧：在浏览器环境下轻松判断操作系统](https://mp.weixin.qq.com/s?__biz=MzU3NTc1MDMwOQ==&mid=2247485303&idx=1&sn=c1313f02dd5d5fe026c0df24ea993fc0&chksm=fd1f2ebdca68a7ab1857dada18197666db99d0dc8c2311faa5505fd871da62eb04765629b483&token=391761210&lang=zh_CN#rd)
 
 ![微信公众号「雪之梦技术驿站」](/assets/picgo/de68dbb1ee06fe6cf066645411cb5579.gif)
 
