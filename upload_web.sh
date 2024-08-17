@@ -30,10 +30,10 @@ git pull
 # generate docs 
 gitbook build
 
-# push to blog.snowdreams1006.cn
-scp -r _book/* ali:~/nginx/html/blog
 # copy to snowdreams1006.github.io
 cp -rf _book/* ../snowdreams1006.github.io
+# push to blog.snowdreams1006.cn
+scp -r _book/* ali:~/nginx/html/blog
 
 # add commits
 git add .
