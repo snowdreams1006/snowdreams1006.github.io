@@ -17,7 +17,7 @@ require(["gitbook"], function(gitbook) {
                 }
             }
         }
-        
+
         // Automatically insert Google analysis code
         if(url !== "" && token !== ""){
             // Reference js
