@@ -17,10 +17,10 @@ require(["gitbook"], function(gitbook) {
                 }
             }
         }
-
-        // <!-- Google tag (gtag.js) -->
+        
+        // Automatically insert Google analysis code
         if(url !== "" && token !== ""){
-            // gtag.js
+            // Reference js
             var hm = document.createElement("script");
             hm.async = true;
             hm.src = url + '?id=' + token;
