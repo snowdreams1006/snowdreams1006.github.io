@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 21 Aug 2024 08:55:34 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 24 Aug 2024 02:32:08 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -564,6 +564,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[两处改动升级到多公众号]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/zero2devops/mp-multi-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/mp-multi-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[automa浏览器自动化]]></title>
             <link>https://blog.snowdreams1006.cn/automa/README.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/README.html</guid>
@@ -784,6 +791,13 @@
 最近在学习如何写博客,分享下创作经历,避免走弯路.]]></description>
             <link>https://blog.snowdreams1006.cn/write/README.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/write/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[新手如何注册微信公众号,保姆级教程包教包会!]]></title>
+            <description><![CDATA[微信公众号「情感食街」]]></description>
+            <link>https://blog.snowdreams1006.cn/write/register-mp-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/write/register-mp-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -1077,247 +1091,17 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[运维部署]]></title>
-            <description><![CDATA[知识共享许可协议 Figure: 知识共享许可协议]]></description>
-            <link>https://blog.snowdreams1006.cn/devops/README.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/README.html</guid>
+            <title><![CDATA[教你两步实现个人网站被谷歌快速收录]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/other/baidu-urlsubmit-waring.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/baidu-urlsubmit-waring.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[docker 环境]]></title>
-            <description><![CDATA[ Docker 官方文档, CentOS 官方安装文档.]]></description>
-            <link>https://blog.snowdreams1006.cn/devops/docker-env.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-env.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker 操作]]></title>
-            <description><![CDATA[sudo docker logs -f -t --tail 10 s12]]></description>
-            <link>https://blog.snowdreams1006.cn/devops/docker-ops.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-ops.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker compose]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-compose.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-compose.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + nginx]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-nginx.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-nginx.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + blog]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-blog.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-blog.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + resume]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-resume.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-resume.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + gitbook]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-gitbook.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-gitbook.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + Bark]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-bark.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-bark.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + py12306]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-py12306.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-py12306.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + mojo-Weixin]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-mojo-Weixin.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-mojo-Weixin.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + wechat-work-message-push-go]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-wechat-work-message-push-go.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-wechat-work-message-push-go.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + email]]></title>
-            <description><![CDATA[scp /Users/snowdreams1006/Downloads/docker-compose.yml root@snowdreams1006.cn:/root/mail]]></description>
-            <link>https://blog.snowdreams1006.cn/devops/docker-email.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-email.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + mysql]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-mysql.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-mysql.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + springboot]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-springboot.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-springboot.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + redis]]></title>
-            <description><![CDATA[// 注意，这个是容器运行的ip，可通过 docker inspect redis_s | grep IPAddress 查看]]></description>
-            <link>https://blog.snowdreams1006.cn/devops/docker-redis.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-redis.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + gogs]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-gogs.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-gogs.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + gitlab]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-gitlab.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-gitlab.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + gitea]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-gitea.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-gitea.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[docker + crawlab]]></title>
-            <link>https://blog.snowdreams1006.cn/devops/docker-crawlab.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/devops/docker-crawlab.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[TODO清单]]></title>
-            <description><![CDATA[INFO  Install dependencies
-npm WARN deprecated core-js@1.2.7: core-js@<2.6.8 is no longer maintained. Please, upgrade to core-js@3 or at least to actual version of core-js@2.
-npm ERR! code EACCES
-npm ERR! syscall open
-npm ERR! path /Users/sunpo/.npm/_cacache/index-v5/51/d3/7697273802dffa158119427da833e251b88e0e9d4c73d8f5f964476884f4
-npm ERR! errno -13
-npm ERR!
-npm ERR! Your cache folder contains root-owned files, due to a bug in
-npm ERR! previous versions of npm which has since been addressed.
-npm ERR!
-npm ERR! To permanently fix this problem, please run:
-npm ERR!   sudo chown -R 501:20 "/Users/sunpo/.npm"]]></description>
-            <link>https://blog.snowdreams1006.cn/todo/README.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/README.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[yarn快速入门]]></title>
-            <description><![CDATA[package.json 配置文件,尝试运行 yarn 命令重新生成 node_modules 模块依赖.]]></description>
-            <link>https://blog.snowdreams1006.cn/todo/yarn-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/yarn-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[gulp快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/gulp-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/gulp-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[nvm快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/nvm-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/nvm-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[lodash快速入门]]></title>
-            <description><![CDATA[Lodash 通过降低 array、number、objects、string 等等的使用难度从而让 JavaScript 变得更简单。
-Lodash 的模块化方法 非常适用于：]]></description>
-            <link>https://blog.snowdreams1006.cn/todo/lodash-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/lodash-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[regexper快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/regexper-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/regexper-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[sublime快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/sublime-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/sublime-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[github 快速入门]]></title>
-            <description><![CDATA[Quick setup — if you’ve done this kind of thing before]]></description>
-            <link>https://blog.snowdreams1006.cn/todo/github-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/github-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[svn 快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/svn-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/svn-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[java 快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/java-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/java-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[mysql 快速入门]]></title>
-            <description><![CDATA[SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');]]></description>
-            <link>https://blog.snowdreams1006.cn/todo/mysql-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/mysql-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[maven 快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/maven-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/maven-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[tomcat 快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/tomcat-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/tomcat-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[gitignore 快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/gitignore-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/gitignore-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[android studio 快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/gitignore-as.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/gitignore-as.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[npm 快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/npm.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/npm.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[nginx 快速入门]]></title>
-            <link>https://blog.snowdreams1006.cn/todo/nginx.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/todo/nginx.html</guid>
+            <title><![CDATA[教你两步实现个人网站被谷歌快速收录]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/other/google-sitemap-analytics.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/google-sitemap-analytics.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
