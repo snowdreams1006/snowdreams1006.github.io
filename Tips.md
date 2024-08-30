@@ -6,7 +6,7 @@ winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/
 
 ```bash
 scp -r *.html ali:~/nginx/html/blog
-# https://blog.snowdreams1006.cn/google6d7287d38f6f92b5.html
+scp -r assets/js/* ali:~/nginx/html/blog/assets/js
 ```
 
 ```bash
@@ -23,4 +23,48 @@ origin  git@github.com:snowdreams1006/snowdreams1006.github.io.git (fetch)
 origin  git@github.com:snowdreams1006/snowdreams1006.github.io.git (push)
 origin  git@gitee.com:snowdreams1006/snowdreams1006.git (push)
 origin  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (push)
+```
+
+```js
+// https://zhuanlan.zhihu.com/p/689707885
+// https://blog.csdn.net/y662225dd/article/details/135742404
+
+// 禁止右键菜单
+document.oncontextmenu = function(event) {
+    event.preventDefault();
+    return false;
+};
+// 恢复右键菜单
+document.oncontextmenu = function(event) {
+    return true;
+};
+
+// 禁止F12快捷键
+document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
+    let e = event || window.event || arguments.callee.caller.arguments[0];
+    if (e && e.keyCode == 123) {
+        e.returnValue = false;
+        return false;
+    }
+};
+// 恢复F12快捷键
+document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
+    let e = event || window.event || arguments.callee.caller.arguments[0];
+    if (e && e.keyCode == 123) {
+        e.returnValue = true;
+        return true;
+    }
+};
+
+// 禁止开发者控制台
+(() => {
+  function ban() {
+    setInterval(() => {
+      Function('debugger').call();
+    }, 50);
+  }
+  try {
+    ban();
+  } catch (err) { }
+})();
 ```

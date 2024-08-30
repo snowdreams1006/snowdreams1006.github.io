@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 25 Aug 2024 14:51:34 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 30 Aug 2024 11:05:27 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -650,6 +650,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[白嫖一年亚马逊 aws-ec2 服务器]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/zero2devops/aws-free-ec2.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/aws-free-ec2.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[gitbook 插件项目]]></title>
             <link>https://blog.snowdreams1006.cn/opensource/gitbook/README.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/opensource/gitbook/README.html</guid>
@@ -693,6 +700,38 @@
             <title><![CDATA[设置终端代理环境]]></title>
             <link>https://blog.snowdreams1006.cn/tools/cmd-proxy.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/cmd-proxy.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信一键长截图]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/wechat-long-shot.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/wechat-long-shot.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[工具推荐汇总]]></title>
+            <description><![CDATA[自媒体工具合集]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/media-tools-summary.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/media-tools-summary.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[rpa自动化机器人]]></title>
+            <description><![CDATA[我用夸克网盘分享了「10款RPA案例工具」，点击链接即可保存（若保存失败，建议下载app免费转存）。链接：https://pan.quark.cn/s/daf7efdb2392提取码：1JGF
+--- 包含以下RPA工具： ---
+批量生产小红薯爆款笔记文案
+自动给女朋友/老婆发士味情话
+一键下载抖因视频
+一键打开多平台写文章
+一键采集小红薯爆款标题
+一键下载公粽号文章里的图片
+一键下载公粽号文章
+一键下载块手视频
+一键采集小红薯作品的评论列表
+抖因搜索结果随机点赞(养号)]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/rpa-tools-summary.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/rpa-tools-summary.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -1048,6 +1087,26 @@
             <title><![CDATA[其他]]></title>
             <link>https://blog.snowdreams1006.cn/other/README.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[反爬之禁止右键菜单]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/other/anti-crawl-contextmenu.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/anti-crawl-contextmenu.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[反爬之禁止F12]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/other/anti-crawl-f12.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/anti-crawl-f12.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[反爬之禁止开发者控制台]]></title>
+            <link>https://blog.snowdreams1006.cn/other/anti-crawl-debugger.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/anti-crawl-debugger.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
