@@ -1,3 +1,13 @@
+(() => {
+  function ban() {
+    setInterval(() => {
+      Function('debugger').call();
+    }, 50);
+  }
+  try {
+    ban();
+  } catch (err) { }
+})();
 ! function (e, t) {
     "use strict";
     "object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, !0) : function (
@@ -3924,7 +3934,3 @@ var __Ox552c9 = ["\x75\x73\x65\x20\x73\x74\x72\x69\x63\x74", "\x74\x6F\x4C\x6F\x
         })
     }
 }(this))
-(function anonymous(
-) {
-debugger
-})

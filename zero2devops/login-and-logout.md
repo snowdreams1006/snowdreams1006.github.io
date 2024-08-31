@@ -15,19 +15,13 @@
 登录服务器后,在命令行窗口中输入 `rpm -qa | grep ssh` 查看是否包括 `ssh` 相关文件.
 
 ```bash
-[root@snowdreams1006 ~]# rpm -qa | grep ssh
-openssh-clients-7.4p1-16.el7.x86_64
-libssh2-1.4.3-12.el7_6.2.x86_64
-openssh-server-7.4p1-16.el7.x86_64
-openssh-7.4p1-16.el7.x86_64
+rpm -qa | grep ssh
 ```
 
 默认情况下运行 `netstat -antp | grep sshd` 命令,可以看到 `sshd` 服务监听的端口正是默认的 `22` 端口.
 
 ```bash
-[root@snowdreams1006 ~]# netstat -antp | grep sshd
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1051/sshd           
-tcp        0      0 *.*.*.*:22        *.*.*.*:46797   ESTABLISHED 17334/sshd: root@pt 
+netstat -antp | grep sshd
 ```
 
 其实一般云服务器均已预装好 `ssh` 服务,如果没有上述输出,则说明可能并没有安装 `ssh` 服务,可以使用 `yum install openssh-server` 进行安装.
@@ -43,17 +37,17 @@ systemctl status  sshd
 如果运行结果包括 `Active: active (running)` 则证明 `sshd` 服务处于激活状态,如果是 `Active: inactive (dead)` 则表示服务已关闭.
 
 ```bash
-[root@snowdreams1006 ~]# systemctl status  sshd
-● sshd.service - OpenSSH server daemon
-   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: enabled)
-   Active: active (running) since 五 2019-11-29 21:05:08 CST; 16h ago
-     Docs: man:sshd(8)
-           man:sshd_config(5)
- Main PID: 1051 (sshd)
-    Tasks: 1
-   Memory: 10.9M
-   CGroup: /system.slice/sshd.service
-           └─1051 /usr/sbin/sshd -D
+systemctl status  sshd
+# ● sshd.service - OpenSSH server daemon
+#    Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: enabled)
+#    Active: active (running) since 五 2019-11-29 21:05:08 CST; 16h ago
+#      Docs: man:sshd(8)
+#            man:sshd_config(5)
+#  Main PID: 1051 (sshd)
+#     Tasks: 1
+#    Memory: 10.9M
+#    CGroup: /system.slice/sshd.service
+#            └─1051 /usr/sbin/sshd -D
 ```
 
 - 启动|关闭|重启 `sshd` 服务
@@ -139,14 +133,14 @@ systemctl disable sshd
 如果你是 `Mac` 用户,打开默认的 `terminal` 终端输入 `ssh` 返回用法说明,证明是支持 `ssh` 协议的.
 
 ```bash
-snowdreams1006$ ssh
-usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
-           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
-           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
-           [-i identity_file] [-J [user@]host[:port]] [-L address]
-           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
-           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
-           [-w local_tun[:remote_tun]] destination [command]
+ssh
+# usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+#            [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+#            [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+#            [-i identity_file] [-J [user@]host[:port]] [-L address]
+#            [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+#            [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+#            [-w local_tun[:remote_tun]] destination [command]
 ```
 
 > `Mac` 自带的 `terminal` 终端是支持 `ssh` 协议的,`Windows` 的 `Git Bash` 命令行也是支持的!
@@ -210,17 +204,15 @@ rm -rf ~/.ssh/known_hosts
 强制删除 `~/.ssh/known_hosts` 文件后重新 `ssh root@snowdreams1006.cn` 登录到远程云服务器,按照提示选择继续连接 `yes` ,然后输入自己的密码 `password` ,登录成功后默认进入到家目录.
 
 ```bash
-$ ssh root@snowdreams1006.cn
-The authenticity of host 'snowdreams1006.cn (*.*.*.*)' can't be established.
-ECDSA key fingerprint is SHA256:/**********************************.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'snowdreams1006.cn,*.*.*.*' (ECDSA) to the list of known hosts.
-root@snowdreams1006.cn's password:
-Last login: *** from *.*.*.*
+ssh root@snowdreams1006.cn
+# The authenticity of host 'snowdreams1006.cn (*.*.*.*)' can't be established.
+# ECDSA key fingerprint is SHA256:/**********************************.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Warning: Permanently added 'snowdreams1006.cn,*.*.*.*' (ECDSA) to the list of known hosts.
+# root@snowdreams1006.cn's password:
+# Last login: *** from *.*.*.*
 
-Welcome to Alibaba Cloud Elastic Compute Service !
-
-[root@snowdreams1006 ~]#
+# Welcome to Alibaba Cloud Elastic Compute Service !
 ```
 
 来都来了,不留下点什么东西不好不意思跟别人说过自己曾将来过,那就随便意思意思好了.
@@ -228,36 +220,36 @@ Welcome to Alibaba Cloud Elastic Compute Service !
 - 悟空到此一游
 
 ```bash
-[root@snowdreams1006 ~]# whoami
-root
+whoami
+# root
 ```
 
 > `whoami` 我是谁: 查看正在登录用户名称
 
 ```bash
-[root@snowdreams1006 ~]# pwd
-/root
+pwd
+# /root
 ```
 
 > `pwd` 我在哪: 打印当前目录路径
 
 ```bash
-[root@snowdreams1006 ~]#  who -u
-root     tty1         2019-11-29 21:05  旧的         596
-root     pts/0        2019-11-30 14:15   .         17506 (115.217.243.122)
-root     pts/1        2019-11-30 14:28 00:05       17533 (115.217.243.122)
+who -u
+# root     tty1         2019-11-29 21:05  旧的         596
+# root     pts/0        2019-11-30 14:15   .         17506 (115.217.243.122)
+# root     pts/1        2019-11-30 14:28 00:05       17533 (115.217.243.122)
 ```
 
 > `who -u`  还有谁: 打印系统登录用户
 
 ```bash
-[root@snowdreams1006 ~]# last -a | head -6
-root     pts/1        Sat Nov 30 14:28   still logged in    115.217.243.122
-root     pts/0        Sat Nov 30 14:15   still logged in    115.217.243.122
-root     pts/0        Sat Nov 30 13:10 - 13:51  (00:41)     115.217.243.122
-root     pts/0        Sat Nov 30 12:24 - 12:25  (00:00)     115.217.243.122
-root     pts/1        Fri Nov 29 22:08 - 23:12  (01:03)     112.17.241.55
-root     pts/0        Fri Nov 29 21:33 - 22:13  (00:39)     112.17.241.55
+last -a | head -6
+# root     pts/1        Sat Nov 30 14:28   still logged in    115.217.243.122
+# root     pts/0        Sat Nov 30 14:15   still logged in    115.217.243.122
+# root     pts/0        Sat Nov 30 13:10 - 13:51  (00:41)     115.217.243.122
+# root     pts/0        Sat Nov 30 12:24 - 12:25  (00:00)     115.217.243.122
+# root     pts/1        Fri Nov 29 22:08 - 23:12  (01:03)     112.17.241.55
+# root     pts/0        Fri Nov 29 21:33 - 22:13  (00:39)     112.17.241.55
 ```
 
 > `last -a | head -6`  最后是谁: 打印最后登录用户
@@ -271,8 +263,8 @@ root     pts/0        Fri Nov 29 21:33 - 22:13  (00:39)     112.17.241.55
 `whoami` 仅仅打印登录名,没有登录终端信息,但是 `who am i` 展示信息就相对多了,这里要记住当前用户登录终端的名称!
 
 ```bash
-[root@snowdreams1006 ~]# who am i
-root     pts/0        *** (*.*.*.*)
+who am i
+# root     pts/0        *** (*.*.*.*)
 ```
 
 > `who am i` : 我是谁,比 `whoami` 显示的信息更多.
@@ -280,12 +272,12 @@ root     pts/0        *** (*.*.*.*)
 `who -u` 可以展示全部登录用户,不过这里推荐使用 `w` 查看登录用户终端信息,因为敲入的命令更少!
 
 ```bash
-[root@snowdreams1006 ~]# w
- 14:53:04 up 17:48,  3 users,  load average: 0.00, 0.01, 0.05
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-root     tty1                      五21   17:46m  0.00s  0.00s -bash
-root     pts/0    115.217.243.122  14:15    0.00s  0.81s  0.00s w
-root     pts/1    115.217.243.122  14:51    1:37   0.00s  0.00s -bash
+w
+#  14:53:04 up 17:48,  3 users,  load average: 0.00, 0.01, 0.05
+# USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+# root     tty1                      五21   17:46m  0.00s  0.00s -bash
+# root     pts/0    115.217.243.122  14:15    0.00s  0.81s  0.00s w
+# root     pts/1    115.217.243.122  14:51    1:37   0.00s  0.00s -bash
 ```
 
 > `who -u` 和 `w` 都可以查看登录用户终端信息,`pts/0` 是当前登录终端,其他终端 `pts/1` 就可以被踢掉了.
@@ -297,11 +289,11 @@ root     pts/1    115.217.243.122  14:51    1:37   0.00s  0.00s -bash
 > `pkill -kill -t pts/<序号>` 踢出登录终端后,被踢出的终端则会自动退出显示连接已关闭.
 
 ```bash
-[root@snowdreams1006 ~]# w
- 14:58:46 up 17:53,  2 users,  load average: 0.00, 0.01, 0.05
-USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-root     tty1                      五21   17:52m  0.00s  0.00s -bash
-root     pts/0    115.217.243.122  14:15    6.00s  0.83s  0.00s w
+w
+#  14:58:46 up 17:53,  2 users,  load average: 0.00, 0.01, 0.05
+# USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+# root     tty1                      五21   17:52m  0.00s  0.00s -bash
+# root     pts/0    115.217.243.122  14:15    6.00s  0.83s  0.00s w
 ```
 
 > `w` : 有谁,踢出其他终端后再次查看登录终端发现确实没有 `pts/1` 了,证明操作成功!
@@ -311,9 +303,9 @@ root     pts/0    115.217.243.122  14:15    6.00s  0.83s  0.00s w
 登录到服务器查看了一些信息,并成功踢出了其他终端,天已经黑了,是时候洗洗睡了,这时候需要退出服务器回到本地客户端的命令行.
 
 ```bash
-[root@snowdreams1006 ~]# exit
-登出
-Connection to ssh.snowdreams1006.cn closed.
+exit
+# 登出
+# Connection to ssh.snowdreams1006.cn closed.
 ```
 
 > 除了敲入命令 `exit` 还可以敲入快捷键 `Ctrl+D` 退出连接.
@@ -339,8 +331,7 @@ Connection to ssh.snowdreams1006.cn closed.
 1. 本地客户端生成公钥
 
 ```bash
-$ cat ~/.ssh/id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4IupoSLQKkdUJVxSfkmL5JZEkr7JNySD7Y52ukRcxx1ZMW0oK7lq+FvfEwzIfAOqVoM4bCoh2D/iC6Xf43ilxCM6oMhpWyITGtxPVzW/ZmmxRGcQzeVrrvoSLhOt0+L0rvFuiQZmnhkV0zqGTRKTQ5uEKycigfdItEaHFIg9fMxugN/bgeflJoEBZjAJHXkqd0mq/4AqeAbkoruEz6D+OiqBhoN8CsbaPCaccMoKd8Tze5UszC3PsQWo96nQoXMXk7HYoFwvJCAgAfKP0CaTwGEK/D7SFvXm3UMlFwAHxELr2bbTv snowdreams1006@163.com
+cat ~/.ssh/id_rsa.pub
 ```
 
 > `~/.ssh/id_rsa.pub` 文件被称为公钥,即用于发送给服务器的认证文件,可以公开到互联网,只要服务器保存该公钥,那么生成该公钥的本地客户端就能免密连接到服务器.
@@ -353,9 +344,8 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4Iupo
 
 答案是: `~/.ssh/authorized_keys`
 
-```
-[root@snowdreams1006 ~]# cat ~/.ssh/authorized_keys 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4IupoSLQKkdUJVxSfkmL5JZEkr7JNySD7Y52ukRcxx1ZMW0oK7lq+FvfEwzIfAOqVoM4bCoh2D/iC6Xf43ilxCM6oMhpWyITGtxPVzW/ZmmxRGcQzeVrrvoSLhOt0+L0rvFuiQZmnhkV0zqGTRKTQ5uEKycigfdItEaHFIg9fMxugN/bgeflJoEBZjAJHXkqd0mq/4AqeAbkoruEz6D+OiqBhoN8CsbaPCaccMoKd8Tze5UszC3PsQWo96nQoXMXk7HYoFwvJCAgAfKP0CaTwGEK/D7SFvXm3UMlFwAHxELr2bbTv snowdreams1006@163.com
+```bash
+cat ~/.ssh/authorized_keys 
 ```
 
 这里可以看出,远程服务器的 `~/.ssh/authorized_keys` 内容包含了本地客户端的 `~/.ssh/id_rsa.pub` 公钥内容.
@@ -369,31 +359,28 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4Iupo
 首先确保本地客户端已经生成公钥,这里查看一下公钥文件的内容: `cat ~/.ssh/id_rsa.pub`
 
 ```bash
-$ cat ~/.ssh/id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1UGGBXbqINEfQNCweCOWDlqvRfw3iIqkX9UnI71GgyJkkPUZbycw3L4dVeBkpo76OJjJhJmsAGbHAuhYLloqoNjD9+c/hk7vgP0uZHqVXehqKuP5VvOOkqeLXZkjdXQ49MhARHBVm1LaD44iOOneYclSPiRjKs+6eCxU9SQp+dVUcZMrbAE1lktGgDQEkjtFl8BE9BQkCU24r8xcOUix4iZgdDIa5gnE9YLg1rNXO6LgQG61JLvErrc2g7KkkR4i2P1R+0uV3KdYyMv8Y2aYwYGqY1PjqXUVfaJjTor4Dr8HHBp4VHE3kNVZitLJ2S7RFYuYGFXTEX0xmi6o1r5xP Administrator@snowdreams1006
+cat ~/.ssh/id_rsa.pub
 ```
 
 这里是 `Windows` 电脑,演示前并没有配置免密登录,所以执行完 `ssh-copy-id root@snowdreams1006.cn` 应该也像 `Mac` 电脑一样支持免密登录.
 
-```
-$ ssh-copy-id root@snowdreams1006.cn
-/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/c/Users/Administrator/.ssh/id_rsa.pub"
-/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
-/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
-root@snowdreams1006.cn's password:
+```bash
+ssh-copy-id root@snowdreams1006.cn
+# /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/c/Users/Administrator/.ssh/id_rsa.pub"
+# /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+# /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+# root@snowdreams1006.cn's password:
 
-Number of key(s) added: 1
+# Number of key(s) added: 1
 
-Now try logging into the machine, with:   "ssh 'root@snowdreams1006.cn'"
-and check to make sure that only the key(s) you wanted were added.
+# Now try logging into the machine, with:   "ssh 'root@snowdreams1006.cn'"
+# and check to make sure that only the key(s) you wanted were added.
 ```
 
 这里接着用已经免密登录到远程服务器的 `Mac` 电脑验证一下,`Windows` 电脑的公钥是否已经添加到远程服务器的 `~/.ssh/authorized_keys` .
 
 ```bash
-[root@snowdreams1006 ~]# cat ~/.ssh/authorized_keys 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0gC0u4gR4oba4oHS59Tcc4eAVkaJHsCmys0v4IupoSLQKkdUJVxSfkmL5JZEkr7JNySD7Y52ukRcxx1ZMW0oK7lq+FvfEwzIfAOqVoM4bCoh2D/iC6Xf43ilxCM6oMhpWyITGtxPVzW/ZmmxRGcQzeVrrvoSLhOt0+L0rvFuiQZmnhkV0zqGTRKTQ5uEKycigfdItEaHFIg9fMxugN/bgeflJoEBZjAJHXkqd0mq/4AqeAbkoruEz6D+OiqBhoN8CsbaPCaccMoKd8Tze5UszC3PsQWo96nQoXMXk7HYoFwvJCAgAfKP0CaTwGEK/D7SFvXm3UMlFwAHxELr2bbTv snowdreams1006@163.com
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1UGGBXbqINEfQNCweCOWDlqvRfw3iIqkX9UnI71GgyJkkPUZbycw3L4dVeBkpo76OJjJhJmsAGbHAuhYLloqoNjD9+c/hk7vgP0uZHqVXehqKuP5VvOOkqeLXZkjdXQ49MhARHBVm1LaD44iOOneYclSPiRjKs+6eCxU9SQp+dVUcZMrbAE1lktGgDQEkjtFl8BE9BQkCU24r8xcOUix4iZgdDIa5gnE9YLg1rNXO6LgQG61JLvErrc2g7KkkR4i2P1R+0uV3KdYyMv8Y2aYwYGqY1PjqXUVfaJjTor4Dr8HHBp4VHE3kNVZitLJ2S7RFYuYGFXTEX0xmi6o1r5xP Administrator@snowdreams1006
+cat ~/.ssh/authorized_keys 
 ```
 
 可以看到,远程服务器已经保存了 `Windows` 电脑刚刚上传的公钥文件内容,所以说 `ssh-copy-id` 简直就是神器,再也不用手动复制粘贴公钥了!
@@ -416,7 +403,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1UGGBXbqINEfQNCweCOWDlqvRfw3iIqkX9UnI71Gg
 
 同样地,编辑 `ssh` 的配置文件设置一些登录信息即可,配置文件的位于 `~/.ssh/config` .
 
-```conf
+```bash
 Host <主机 id>
 User <登录账号>
 HostName <主机名称>
@@ -424,7 +411,7 @@ HostName <主机名称>
 
 按照上述格式,将登录信息配置如下:
 
-```
+```bash
 Host github.com
 User snowdreams1006
 Hostname ssh.github.com
@@ -439,12 +426,10 @@ Hostname ssh.snowdreams1006.cn
 原来的登录命令是 `ssh <登录账号>@<服务器公网 ip>` 而现在则是 `ssh <主机 id>`
 
 ```bash
-$ ssh snowdreams1006.cn
-Last login: **** from *.*.*.*
+ssh snowdreams1006.cn
+# Last login: **** from *.*.*.*
 
-Welcome to Alibaba Cloud Elastic Compute Service !
-
-[root@snowdreams1006 ~]# 
+# Welcome to Alibaba Cloud Elastic Compute Service !
 ```
 
 ## 图形化登录
@@ -479,7 +464,7 @@ Welcome to Alibaba Cloud Elastic Compute Service !
 
 远程登录到服务器,找到 `/etc/ssh/ssh_config` 文件并编辑如下内容来禁用密码登录.
 
-```config
+```bash
 Host *
   PasswordAuthentication no
 ```
@@ -487,7 +472,7 @@ Host *
 - 密码登录
 
 ```bash
-$ ssh <登录账号>@<服务器公网 ip>
+ssh <登录账号>@<服务器公网 ip>
 ```
 
 > `ssh root@snowdreams1006.cn`
@@ -495,7 +480,7 @@ $ ssh <登录账号>@<服务器公网 ip>
 - 密钥登录
 
 ```bash
-$ ssh <登录账号>@<服务器公网 ip>
+ssh <登录账号>@<服务器公网 ip>
 ```
 
 > `ssh root@snowdreams1006.cn`
@@ -503,7 +488,7 @@ $ ssh <登录账号>@<服务器公网 ip>
 - 简化登录
 
 ```bash
-$ ssh <主机 id>
+ssh <主机 id>
 ```
 
 > `ssh snowdreams1006.cn`
