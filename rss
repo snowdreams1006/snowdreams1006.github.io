@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 31 Aug 2024 02:41:34 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Sep 2024 09:45:08 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -742,6 +742,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[网站运行时间监控]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/uptime-kuma-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/uptime-kuma-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[给mac装个vmware虚拟机]]></title>
             <description><![CDATA[mac 系统安装虚拟机目前有两种主流软件,一种是 Parallels Desktop ,另一种是 vmware.]]></description>
             <link>https://blog.snowdreams1006.cn/tools/mac-install-vmware.html</link>
@@ -1112,6 +1119,7 @@
         </item>
         <item>
             <title><![CDATA[反爬之禁止开发者控制台]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/other/anti-crawl-debugger.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/anti-crawl-debugger.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
