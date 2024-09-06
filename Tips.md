@@ -28,6 +28,7 @@ origin  git@gitlab.com:snowdreams1006/snowdreams1006.gitlab.io.git (push)
 ```js
 // https://zhuanlan.zhihu.com/p/689707885
 // https://blog.csdn.net/y662225dd/article/details/135742404
+window.open("about:blank", "_self");
 
 // 禁止右键菜单
 document.oncontextmenu = function(event) {

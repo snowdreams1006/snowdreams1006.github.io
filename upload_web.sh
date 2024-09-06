@@ -24,7 +24,6 @@ git status
 scp -r _book/* ali:~/nginx/html/blog
 
 # copy to snowdreams1006.github.io
-rm -rf ../snowdreams1006.github.io/*
 cp -rf _book/* ../snowdreams1006.github.io
 
 # cd snowdreams1006.github.io

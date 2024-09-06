@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 30 Aug 2024 11:21:51 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Sep 2024 01:23:29 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -710,6 +710,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[录屏转gif动图工具]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/screenToGif-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/screenToGif-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[工具推荐汇总]]></title>
             <description><![CDATA[自媒体工具合集]]></description>
             <link>https://blog.snowdreams1006.cn/tools/media-tools-summary.html</link>
@@ -732,6 +739,13 @@
 抖因搜索结果随机点赞(养号)]]></description>
             <link>https://blog.snowdreams1006.cn/tools/rpa-tools-summary.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/rpa-tools-summary.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[网站运行时间监控]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/uptime-kuma-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/uptime-kuma-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
