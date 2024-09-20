@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 20 Sep 2024 10:52:48 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 20 Sep 2024 11:18:11 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -870,6 +870,13 @@
             <description><![CDATA[微信公众号「情感食街」]]></description>
             <link>https://blog.snowdreams1006.cn/write/register-mp-quickstart.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/write/register-mp-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信服务号消息被折叠]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/write/mp-server-fold.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/write/mp-server-fold.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
