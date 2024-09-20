@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 12 Sep 2024 07:31:52 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 20 Sep 2024 10:52:48 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -400,20 +400,6 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[重置npm双重因素认证]]></title>
-            <description><![CDATA[很早以前注册登录npm官网,需要开启双重因素认证,多年前的子弹刚好落在了此时此刻的自己.]]></description>
-            <link>https://blog.snowdreams1006.cn/zero2devops/npm-reset-2FA.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/npm-reset-2FA.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[npm更新发布插件体验]]></title>
-            <description><![CDATA[在Node.js的生态系统中，npm（Node Package Manager）是不可或缺的一部分，它不仅是获取和管理Node.js项目依赖的核心工具，也是分享和发布自己开发的模块或库的关键平台。]]></description>
-            <link>https://blog.snowdreams1006.cn/zero2devops/npm-publish-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/npm-publish-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
             <title><![CDATA[导出电子书]]></title>
             <description><![CDATA[gitbook 既可以将源码文件单独输出,也可以仅输出单个文件,常见的导出电子书格式主要有三种(ePub, Mobi, PDF),而这三种格式都依赖于系统本身提供的 ebook-convert 工具.]]></description>
             <link>https://blog.snowdreams1006.cn/myGitbook/advance/export.html</link>
@@ -584,6 +570,33 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[nodejs 系列教程]]></title>
+            <link>https://blog.snowdreams1006.cn/nodejs/README.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[重置npm双重因素认证]]></title>
+            <description><![CDATA[很早以前注册登录npm官网,需要开启双重因素认证,多年前的子弹刚好落在了此时此刻的自己.]]></description>
+            <link>https://blog.snowdreams1006.cn/nodejs/npm-reset-2FA.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/npm-reset-2FA.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[npm更新发布插件体验]]></title>
+            <description><![CDATA[在Node.js的生态系统中，npm（Node Package Manager）是不可或缺的一部分，它不仅是获取和管理Node.js项目依赖的核心工具，也是分享和发布自己开发的模块或库的关键平台。]]></description>
+            <link>https://blog.snowdreams1006.cn/nodejs/npm-publish-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/npm-publish-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[版本切换管理]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/nodejs/npm-nvm-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/npm-nvm-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[学习开发自己的 chrome 插件]]></title>
             <link>https://blog.snowdreams1006.cn/tools/chrome-extend-learn.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/chrome-extend-learn.html</guid>
@@ -707,6 +720,12 @@
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/tools/wechat-long-shot.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/wechat-long-shot.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信一键长截图]]></title>
+            <link>https://blog.snowdreams1006.cn/tools/wechat-service-fold.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/wechat-service-fold.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

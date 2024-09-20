@@ -69,3 +69,14 @@ document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
   } catch (err) { }
 })();
 ```
+
+```bash
+node -v 
+# v10.24.1
+npm -v 
+# 6.14.12
+
+sudo npm install -g gitbook-cli
+gitbook install
+gitbook serve
+```

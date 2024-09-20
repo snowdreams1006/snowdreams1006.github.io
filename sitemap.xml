@@ -55,8 +55,6 @@
 <url> <loc>https://snowdreams1006.github.io/myGitbook/advance/plugin-practical.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/myGitbook/advance/plugin-theme.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/myGitbook/advance/plugin-develop.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://snowdreams1006.github.io/zero2devops/npm-reset-2FA.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://snowdreams1006.github.io/zero2devops/npm-publish-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/myGitbook/advance/export.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/myGitbook/advance/publish.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/myGitbook/openwrite/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -82,6 +80,10 @@
 <url> <loc>https://snowdreams1006.github.io/zero2devops/mp-multi-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/automa/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/automa/automa-getOperatingSystem.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/nodejs/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/nodejs/npm-reset-2FA.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/nodejs/npm-publish-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/nodejs/npm-nvm-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/chrome-extend-learn.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/login-and-logout.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -101,6 +103,7 @@
 <url> <loc>https://snowdreams1006.github.io/tools/env-config.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/cmd-proxy.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/wechat-long-shot.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/tools/wechat-service-fold.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/screenToGif-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/media-tools-summary.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/rpa-tools-summary.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
