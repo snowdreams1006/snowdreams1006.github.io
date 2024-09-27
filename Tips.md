@@ -2,6 +2,10 @@
 # markdown文件图片处理器
 python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/
 winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/
+
+
+python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/tools/raylink-quickstart.md
+
 ```
 
 ```bash
