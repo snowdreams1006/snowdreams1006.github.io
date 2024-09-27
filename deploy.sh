@@ -7,18 +7,17 @@ cp -rf ../snowdreams1006.github.io/assets/picgo/* assets/picgo
 git status
 # pull latest
 git pull
-
-# generate docs 
-gitbook build
-
 # add commits
 git add .
 # commit 
-git commit -m "build website and update"
+git commit -m "upload changes"
 # push to github and others
 git push
 # status latest 
 git status
+
+# generate docs 
+gitbook build
 
 # push to blog.snowdreams1006.cn
 scp -r _book/* ali:~/nginx/html/blog
@@ -31,12 +30,12 @@ cd ../snowdreams1006.github.io
 
 # status latest 
 git status
-# pull latest 
+# pull latest
 git pull
 # add commits
 git add .
 # commit 
-git commit -m "auto deploy website"
+git commit -m "deploy website"
 # push to github and others
 git push
 # status latest 
