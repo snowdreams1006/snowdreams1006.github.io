@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 10 Oct 2024 08:50:17 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 11 Oct 2024 03:06:48 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -576,7 +576,8 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[JavaScript code日期时间格式化]]></title>
+            <title><![CDATA[Automa 系列教程之 Javascript Code 日期时间格式化]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/automa/automa-datetime-format.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/automa-datetime-format.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
