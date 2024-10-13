@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 11 Oct 2024 03:09:33 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 13 Oct 2024 13:32:53 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -583,8 +583,8 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[微信公众号留言自动回复并提醒]]></title>
-            <description><![CDATA[流程大纲]]></description>
+            <title><![CDATA[rpa 流程化机器人系列之从 0 到 1 开发自动回复公众号留言机器人]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/automa/automa-reply-comment.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/automa-reply-comment.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
