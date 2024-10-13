@@ -4,7 +4,7 @@ python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-c
 winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/
 
 
-python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/automa/automa-datetime-format.md
+python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/automa/automa-reply-comment.md
 
 ```
 
