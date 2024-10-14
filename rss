@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 14 Oct 2024 08:52:03 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Oct 2024 09:10:44 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -817,7 +817,7 @@
         </item>
         <item>
             <title><![CDATA[免登录在线下载谷歌浏览器插件]]></title>
-            <description><![CDATA[国内因为无法访问 Chrome 应用商店的缘故,导致很多优秀的扩展程序无法正常下载与安装.]]></description>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/tools/google-plugin-install.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/google-plugin-install.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
