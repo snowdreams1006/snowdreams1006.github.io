@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 14 Oct 2024 02:30:23 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Oct 2024 06:08:06 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -799,6 +799,12 @@
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/tools/navcat-quickstart.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/navcat-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Jetbrains 激活教程]]></title>
+            <link>https://blog.snowdreams1006.cn/tools/Jetbrains-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/Jetbrains-quickstart.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
