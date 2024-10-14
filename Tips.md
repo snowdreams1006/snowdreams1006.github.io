@@ -3,7 +3,7 @@
 python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/
 winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/
 
-python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/tools/Jetbrains-quickstart.md
+python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/tools/google-plugin-install.md
 ```
 
 ```bash
