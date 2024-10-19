@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 06 Sep 2024 09:45:08 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 19 Oct 2024 09:46:31 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -400,20 +400,6 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[重置npm双重因素认证]]></title>
-            <description><![CDATA[很早以前注册登录npm官网,需要开启双重因素认证,多年前的子弹刚好落在了此时此刻的自己.]]></description>
-            <link>https://blog.snowdreams1006.cn/zero2devops/npm-reset-2FA.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/npm-reset-2FA.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
-            <title><![CDATA[npm更新发布插件体验]]></title>
-            <description><![CDATA[在Node.js的生态系统中，npm（Node Package Manager）是不可或缺的一部分，它不仅是获取和管理Node.js项目依赖的核心工具，也是分享和发布自己开发的模块或库的关键平台。]]></description>
-            <link>https://blog.snowdreams1006.cn/zero2devops/npm-publish-quickstart.html</link>
-            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/npm-publish-quickstart.html</guid>
-            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
-        </item>
-        <item>
             <title><![CDATA[导出电子书]]></title>
             <description><![CDATA[gitbook 既可以将源码文件单独输出,也可以仅输出单个文件,常见的导出电子书格式主要有三种(ePub, Mobi, PDF),而这三种格式都依赖于系统本身提供的 ebook-convert 工具.]]></description>
             <link>https://blog.snowdreams1006.cn/myGitbook/advance/export.html</link>
@@ -584,6 +570,53 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[JavaScript code下载图片文件]]></title>
+            <link>https://blog.snowdreams1006.cn/automa/automa-downloadImgeFIle.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/automa-downloadImgeFIle.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Automa 系列教程之 Javascript Code 日期时间格式化]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/automa/automa-datetime-format.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/automa-datetime-format.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[rpa 流程化机器人系列之从 0 到 1 开发自动回复公众号留言机器人]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/automa/automa-reply-comment.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/automa-reply-comment.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[nodejs 系列教程]]></title>
+            <link>https://blog.snowdreams1006.cn/nodejs/README.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[重置npm双重因素认证]]></title>
+            <description><![CDATA[很早以前注册登录npm官网,需要开启双重因素认证,多年前的子弹刚好落在了此时此刻的自己.]]></description>
+            <link>https://blog.snowdreams1006.cn/nodejs/npm-reset-2FA.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/npm-reset-2FA.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[npm更新发布插件体验]]></title>
+            <description><![CDATA[在Node.js的生态系统中，npm（Node Package Manager）是不可或缺的一部分，它不仅是获取和管理Node.js项目依赖的核心工具，也是分享和发布自己开发的模块或库的关键平台。]]></description>
+            <link>https://blog.snowdreams1006.cn/nodejs/npm-publish-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/npm-publish-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[版本切换管理]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/nodejs/npm-nvm-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/npm-nvm-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[学习开发自己的 chrome 插件]]></title>
             <link>https://blog.snowdreams1006.cn/tools/chrome-extend-learn.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/chrome-extend-learn.html</guid>
@@ -710,6 +743,12 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[微信一键长截图]]></title>
+            <link>https://blog.snowdreams1006.cn/tools/wechat-service-fold.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/wechat-service-fold.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[录屏转gif动图工具]]></title>
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/tools/screenToGif-quickstart.html</link>
@@ -746,6 +785,41 @@
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/tools/uptime-kuma-quickstart.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/uptime-kuma-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Bash脚本判断操作系统]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/bash-system.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/bash-system.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Navicat安装教程]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/navcat-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/navcat-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Jetbrains 全家桶激活码,配合补丁一起,亲测好用!]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/Jetbrains-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/Jetbrains-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[RayLink远程控制软件]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/raylink-quickstart.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/raylink-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[免登录在线下载谷歌浏览器插件]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/google-plugin-install.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/google-plugin-install.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -851,6 +925,13 @@
             <description><![CDATA[微信公众号「情感食街」]]></description>
             <link>https://blog.snowdreams1006.cn/write/register-mp-quickstart.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/write/register-mp-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[微信服务号消息被折叠]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/write/mp-server-fold.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/write/mp-server-fold.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -1104,6 +1185,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[反爬之拉黑癫狂的爬虫]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/other/anti-crawl-ip.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/anti-crawl-ip.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[反爬之禁止右键菜单]]></title>
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/other/anti-crawl-contextmenu.html</link>
@@ -1176,6 +1264,20 @@
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/other/google-sitemap-analytics.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/google-sitemap-analytics.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[开通谷歌广告]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/other/google-ad.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/google-ad.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[注册说明]]></title>
+            <description><![CDATA[注册说明：安装好软件，关闭杀软，右键以管理员运行(PatchNavicat.exe)，弹窗提示完成注册即可！]]></description>
+            <link>https://blog.snowdreams1006.cn/other/zip-info.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/zip-info.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

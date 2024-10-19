@@ -2,6 +2,8 @@
 # markdown文件图片处理器
 python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/
 winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/
+
+python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/other/anti-crawl-ip.md
 ```
 
 ```bash
@@ -68,4 +70,15 @@ document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
     ban();
   } catch (err) { }
 })();
+```
+
+```bash
+node -v 
+# v10.24.1
+npm -v 
+# 6.14.12
+
+sudo npm install -g gitbook-cli
+gitbook install
+gitbook serve
 ```
