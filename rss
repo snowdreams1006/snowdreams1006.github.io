@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 22 Oct 2024 07:09:07 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Oct 2024 08:00:12 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -506,6 +506,12 @@
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/GoAccess/anti-crawl-ip.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/GoAccess/anti-crawl-ip.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[GoAccess设置标签页icon]]></title>
+            <link>https://blog.snowdreams1006.cn/GoAccess/GoAccess-favicon-title.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/GoAccess/GoAccess-favicon-title.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>

@@ -71,6 +71,7 @@
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-blacklist-ua.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-all-ua.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GoAccess/anti-crawl-ip.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-favicon-title.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-issue.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/mp-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/mp-test.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
