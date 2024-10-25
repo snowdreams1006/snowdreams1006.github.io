@@ -70,6 +70,9 @@
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-datetime-format.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-blacklist-ua.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-all-ua.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/GoAccess/anti-crawl-ip.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-favicon-title.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-anti-crawler-work.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/GoAccess/GoAccess-issue.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/mp-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/zero2devops/mp-test.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -116,6 +119,7 @@
 <url> <loc>https://snowdreams1006.github.io/tools/Jetbrains-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/raylink-quickstart.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/google-plugin-install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://snowdreams1006.github.io/tools/remove-bg-tools.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/mac-install-vmware.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/mac-vmware-install-windows.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/tools/mac-vmware-install-centos.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -142,7 +146,6 @@
 <url> <loc>https://snowdreams1006.github.io/bigDataWave/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/write/faq.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://snowdreams1006.github.io/other/anti-crawl-ip.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/anti-crawl-contextmenu.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/anti-crawl-f12.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://snowdreams1006.github.io/other/anti-crawl-debugger.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
