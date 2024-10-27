@@ -2,7 +2,7 @@
 # markdown文件图片处理器
 winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/
 
-python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/tools/news-tools.md
+python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/automa/ozon-seller-excel.md
 ```
 
 ```bash
