@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 25 Oct 2024 02:04:23 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 07 Nov 2024 05:42:22 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -611,6 +611,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[ozon 卖家中心如何导出数据分析]]></title>
+            <description><![CDATA[你是否为 ozon 卖家中心后台数据分析无法导出而烦恼？]]></description>
+            <link>https://blog.snowdreams1006.cn/automa/ozon-seller-excel.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/ozon-seller-excel.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[nodejs 系列教程]]></title>
             <link>https://blog.snowdreams1006.cn/nodejs/README.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/README.html</guid>
@@ -848,6 +855,27 @@
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/tools/remove-bg-tools.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/remove-bg-tools.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[这些好用的自媒体工具]]></title>
+            <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/news-tools.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/news-tools.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Burpsuite下载安装超详细教程]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/burpsuite-install.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/burpsuite-install.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Burpsuite-Mac下载安装超详细教程]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/burpsuite-install-mac.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/burpsuite-install-mac.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
