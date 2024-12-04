@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 13 Nov 2024 07:41:22 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 04 Dec 2024 02:12:33 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -642,6 +642,19 @@
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/nodejs/npm-nvm-quickstart.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/npm-nvm-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[ozon俄罗斯跨境电商]]></title>
+            <link>https://blog.snowdreams1006.cn/ozon/README.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/ozon/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Ozon俄罗斯跨境电商卖家必看：一键跟卖神器及其他高效管理工具揭秘！]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/ozon/follow.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/ozon/follow.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
