@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 05 Dec 2024 07:27:56 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Dec 2024 12:59:05 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -951,6 +951,13 @@
             <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
             <link>https://blog.snowdreams1006.cn/tools/map-url.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/map-url.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[一行代码激活windows]]></title>
+            <description><![CDATA[一行代码永久激活Windows操作系统,赶紧收藏备用!]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/windows-activate.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/windows-activate.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
