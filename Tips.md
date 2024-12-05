@@ -1,6 +1,6 @@
 ```bash
 # markdown文件图片处理器
-winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/tools/speedtest.md
+winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/tools/map-url.md
 
 python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/tools/uptime-kuma-update.md
 ```
