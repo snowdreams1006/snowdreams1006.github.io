@@ -1,8 +1,8 @@
 ```bash
 # markdown文件图片处理器
-winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/zero2devops/mp-get-red-envelope-cover.md
+winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/tools/96156.md
 
-python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/zero2devops/mp-get-red-envelope-cover.md
+python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/tools/96156.md
 ```
 
 ```bash
