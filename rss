@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 07 Nov 2024 07:27:12 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Jan 2025 15:10:06 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -578,6 +578,34 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[只需要三步,你的公众号也能像我这样免费同时拥有自定义菜单和接入开发权限]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/zero2devops/mp-menu-free.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/mp-menu-free.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[免费领取红包封面]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/zero2devops/mp-get-red-envelope-cover.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/mp-get-red-envelope-cover.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[ai制作红包封面]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/zero2devops/mp-ai-red-envelope-cover.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/mp-ai-red-envelope-cover.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[统一发放红包封面]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/zero2devops/mp-all-red-envelope-cover.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/zero2devops/mp-all-red-envelope-cover.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[automa浏览器自动化]]></title>
             <link>https://blog.snowdreams1006.cn/automa/README.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/README.html</guid>
@@ -618,6 +646,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[自动签到]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/automa/auto-sign.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/automa/auto-sign.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[nodejs 系列教程]]></title>
             <link>https://blog.snowdreams1006.cn/nodejs/README.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/README.html</guid>
@@ -642,6 +677,46 @@
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/nodejs/npm-nvm-quickstart.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/nodejs/npm-nvm-quickstart.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[易语言系列教程]]></title>
+            <link>https://blog.snowdreams1006.cn/e/README.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/e/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[你好易语言]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/e/e-install-hello.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/e/e-install-hello.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[修改打包图标]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/e/e-ico.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/e/e-ico.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[一键提取小程序token]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/miniapp-vip-code.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/miniapp-vip-code.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[ozon俄罗斯跨境电商]]></title>
+            <link>https://blog.snowdreams1006.cn/ozon/README.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/ozon/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Ozon俄罗斯跨境电商卖家必看：一键跟卖神器及其他高效管理工具揭秘！]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/ozon/follow.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/ozon/follow.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -816,6 +891,13 @@
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
+            <title><![CDATA[uptime监控工具更新]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/uptime-kuma-update.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/uptime-kuma-update.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
             <title><![CDATA[Bash脚本判断操作系统]]></title>
             <description><![CDATA[微信公众号「雪之梦技术驿站」]]></description>
             <link>https://blog.snowdreams1006.cn/tools/bash-system.html</link>
@@ -876,6 +958,62 @@
             <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
             <link>https://blog.snowdreams1006.cn/tools/burpsuite-install-mac.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/burpsuite-install-mac.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[C盘爆满飘红教你释放空间]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/window-clean.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/window-clean.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[无浏览器环境下测试网速]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/speedtest.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/speedtest.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[给你一个坐标告诉我在哪]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/map-url.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/map-url.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[一行代码激活windows]]></title>
+            <description><![CDATA[一行代码永久激活Windows操作系统,赶紧收藏备用!]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/windows-activate.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/windows-activate.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[白嫖福利微信提现立即到账]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/96156.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/96156.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[同款96156社服活动提现2毛]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/96156-service.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/96156-service.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[好宝贝母婴每日签到赚积分]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/linkkids.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/linkkids.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python防止多开重复启动应用]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/kill-repetitive-exe.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/kill-repetitive-exe.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
@@ -1238,6 +1376,13 @@
             <title><![CDATA[其他]]></title>
             <link>https://blog.snowdreams1006.cn/other/README.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/README.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[selenium免登录剔除爬虫特征]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/other/selenium-connect-chrome.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/other/selenium-connect-chrome.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
