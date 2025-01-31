@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 30 Jan 2025 08:31:44 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 31 Jan 2025 01:55:11 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -1021,6 +1021,13 @@
             <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
             <link>https://blog.snowdreams1006.cn/tools/ollama-deepseek.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/ollama-deepseek.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[个性化定制专属deepseek应用]]></title>
+            <description><![CDATA[Ollama 是一个专为简化大型语言模型部署和服务而设计的工具.]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/ollama-app.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/ollama-app.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
