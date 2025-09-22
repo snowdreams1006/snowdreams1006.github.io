@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 22 Sep 2025 06:33:45 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Sep 2025 06:40:22 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -1035,6 +1035,13 @@
             <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
             <link>https://blog.snowdreams1006.cn/tools/ollama-rebot.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/ollama-rebot.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[超算互联网上线了DeepSeek]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/tools/deepseek-backup.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/tools/deepseek-backup.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
