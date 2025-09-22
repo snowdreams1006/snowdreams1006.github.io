@@ -1,6 +1,6 @@
 ```bash
 # markdown文件图片处理器
-winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/tools/96156-service.md
+winpty python /g/git/myserver/python/markdown-convert-image.py /g/git/blog/tools/eval-idea.md
 
 python3 /Users/snowdreams1006/Documents/workspace/git/myserver/python/markdown-convert-image.py /Users/snowdreams1006/Documents/workspace/git/blog/tools/ollama-rebot.md
 ```
@@ -80,4 +80,19 @@ npm -v
 sudo npm install -g gitbook-cli
 gitbook install
 gitbook serve
+```
+
+移除readmore
+
+```
+
+        "readmore",
+        
+        "readmore":{
+            "blogId": "15702-1569305559839-744",
+            "name": "雪之梦技术驿站",
+            "qrcode": "/snowdreams1006-wechat-public.jpeg",
+            "keyword": "vip",
+            "btnText": "原创不易，完成人机检测，阅读全文"
+        },
 ```
