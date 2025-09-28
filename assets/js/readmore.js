@@ -3629,7 +3629,7 @@ var __Ox552c9 = [
     '      <span id="btw-modal-close-btn">×</span>',
     '      <p id="btw-modal-header">扫码关注公众号：<strong>',
     '</strong><br>发送：<strong> ',
-    '</strong><br>免费获取当前文章的验证码</p>',
+    '</strong><br>免费获取当前网站的验证码</p>',
     '      <img src=', 
     ' />',
     '      <div id="btw-modal-input-code">',
