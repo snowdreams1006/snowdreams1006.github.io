@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 05 Mar 2026 04:57:32 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 07 Mar 2026 13:59:10 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -718,6 +718,20 @@
             <description><![CDATA[OpenClaw 是一个开源的 AI Agent 网关，让你的 Mac 瞬间变成智能体控制中心！支持多种 LLM 和工具集成，今天分享完整部署流程。]]></description>
             <link>https://blog.snowdreams1006.cn/openclaw/openclaw_mac_deploy.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/openclaw/openclaw_mac_deploy.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[飞书推出OpenClaw AI官方插件]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/openclaw/openclaw_feishu_plugin.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/openclaw/openclaw_feishu_plugin.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[个人QQ也能使用OpenClaw插件]]></title>
+            <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
+            <link>https://blog.snowdreams1006.cn/openclaw/openclaw_qq_plugin.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/openclaw/openclaw_qq_plugin.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
