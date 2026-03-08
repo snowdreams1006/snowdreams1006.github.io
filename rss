@@ -4,7 +4,7 @@
         <description><![CDATA[雪之梦技术驿站博客网站]]></description>
         <link>https://blog.snowdreams1006.cn/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 07 Mar 2026 16:10:48 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 08 Mar 2026 15:27:41 GMT</lastBuildDate>
         <atom:link href="https://blog.snowdreams1006.cn/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[snowdreams1006]]></author>
         <managingEditor><![CDATA[snowdreams1006@163.com]]></managingEditor>
@@ -732,6 +732,13 @@
             <description><![CDATA[现在只对常读和星标的公众号才展示大图推送,建议大家把「雪之梦技术驿站」“设为星标”,否则下次可能看不到了！]]></description>
             <link>https://blog.snowdreams1006.cn/openclaw/openclaw_qq_plugin.html</link>
             <guid isPermaLink="true">https://blog.snowdreams1006.cn/openclaw/openclaw_qq_plugin.html</guid>
+            <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[🦞 告别“钱包刺客”！给你的小龙虾（OpenClaw）装个“免费无限油箱”]]></title>
+            <description><![CDATA[4ca3a0aa027c13763d1084373dd6126d]]></description>
+            <link>https://blog.snowdreams1006.cn/openclaw/openclaw_free_plugin.html</link>
+            <guid isPermaLink="true">https://blog.snowdreams1006.cn/openclaw/openclaw_free_plugin.html</guid>
             <dc:creator><![CDATA[snowdreams1006]]></dc:creator>
         </item>
         <item>
